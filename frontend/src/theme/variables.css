@@ -1,0 +1,38 @@
+:root {
+  /* Background */
+  --bg-primary: #0a0c10;
+  --bg-secondary: #0c0e14;
+  --bg-surface: #12151c;
+
+  /* Borders */
+  --border: rgba(100, 170, 136, 0.15);
+
+  /* Text */
+  --text-primary: #66aa88;
+  --text-secondary: #556677;
+  --text-data: #aabbcc;
+  --accent-active: #00ffaa;
+
+  /* Scan effects */
+  --scan-line: rgba(255, 255, 255, 0.04);
+
+  /* Mode-specific colors */
+  --t1-base: #8899aa;
+  --t1-accent: #e0e0e0;
+  --t2-base: #4488cc;
+  --t2-accent: #aaccee;
+  --fmri-cold: #1a2a5a;
+  --fmri-warm: #cc8830;
+  --fmri-hot: #ff4420;
+  --dti-green: #44ddaa;
+  --dti-purple: #8866ff;
+  --flair-normal: #334455;
+  --flair-hot: #ff4466;
+
+  /* Typography */
+  --font-primary: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  --font-size-xs: 9px;
+  --font-size-sm: 10px;
+  --font-size-md: 11px;
+  --font-size-lg: 14px;
+}

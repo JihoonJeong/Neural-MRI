@@ -1,0 +1,37 @@
+[project]
+name = "neural-mri-backend"
+version = "0.1.0"
+description = "Neural MRI Scanner — Model Resonance Imaging backend"
+requires-python = ">=3.11,<3.13"
+license = { text = "MIT" }
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.34",
+    "transformer-lens>=2.0",
+    "torch>=2.2",
+    "transformers>=4.40,<5",
+    "accelerate>=0.28",
+    "orjson>=3.10",
+    "numpy>=1.26",
+    "pydantic>=2.6",
+    "pydantic-settings>=2.2",
+    "websockets>=12.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "httpx>=0.27",
+    "ruff>=0.4",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"

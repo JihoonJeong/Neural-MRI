@@ -1,0 +1,71 @@
+@import './variables.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-data);
+  font-family: var(--font-primary);
+  margin: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar styling for medical dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 170, 136, 0.3);
+  border-radius: 3px;
+}
+
+/* Selection */
+::selection {
+  background: rgba(0, 255, 170, 0.2);
+  color: #fff;
+}
+
+/* Tooltip / modal fade-in */
+@keyframes nmri-fade-in {
+  from { opacity: 0; transform: translateY(2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* CRT scan bar sweeping top to bottom */
+@keyframes scan-sweep {
+  0% { top: -2px; }
+  100% { top: 100%; }
+}
+
+/* Subtle CRT brightness flicker */
+@keyframes crt-flicker {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Scanning button pulse */
+@keyframes scan-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Loading dots animation */
+.loading-dots .dot {
+  animation: dot-blink 1.4s infinite;
+}
+.loading-dots .dot2 {
+  animation-delay: 0.2s;
+}
+.loading-dots .dot3 {
+  animation-delay: 0.4s;
+}
+@keyframes dot-blink {
+  0%, 20% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
