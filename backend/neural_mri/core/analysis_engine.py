@@ -404,13 +404,13 @@ class AnalysisEngine:
         with torch.no_grad():
             logits, cache = model.run_with_cache(tokens)
 
-        # Final prediction distribution (reference)
-        final_logits = logits[0]  # [seq_len, d_vocab]
+        # Final prediction distribution (reference) — upcast to float32 for numerical stability
+        final_logits = logits[0].float()  # [seq_len, d_vocab]
         final_probs = torch.softmax(final_logits, dim=-1)
 
         # Unembed matrix + final LayerNorm (critical for Logit Lens)
-        W_U = model.W_U  # [d_model, d_vocab]
-        b_U = model.b_U if model.b_U is not None else 0
+        W_U = model.W_U.float()  # [d_model, d_vocab]
+        b_U = model.b_U.float() if model.b_U is not None else 0
         ln_final = model.ln_final
 
         all_kl: list[torch.Tensor] = []
@@ -419,8 +419,8 @@ class AnalysisEngine:
         for i in range(cfg.n_layers):
             resid = cache[f"blocks.{i}.hook_resid_post"]  # [1, seq, d_model]
 
-            # Logit Lens: apply final LayerNorm then unembed
-            ln_resid = ln_final(resid[0])  # [seq, d_model]
+            # Logit Lens: apply final LayerNorm then unembed (float32 for log stability)
+            ln_resid = ln_final(resid[0]).float()  # [seq, d_model]
             intermediate_logits = ln_resid @ W_U + b_U  # [seq, d_vocab]
             intermediate_probs = torch.softmax(intermediate_logits, dim=-1)
 
