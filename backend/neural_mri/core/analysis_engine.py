@@ -241,29 +241,39 @@ class AnalysisEngine:
             return [round((v - norm_min) / rng, 4) for v in vals]
 
         # Build layer activation list (same order as T1 structural)
-        layers.append(LayerActivation(
-            layer_id="embed",
-            activations=normalize(embed_norms),
-        ))
+        layers.append(
+            LayerActivation(
+                layer_id="embed",
+                activations=normalize(embed_norms),
+            )
+        )
         for i in range(cfg.n_layers):
-            layers.append(LayerActivation(
-                layer_id=f"blocks.{i}.attn",
-                activations=normalize(block_attn_norms[i]),
-                per_head=block_attn_heads[i],
-            ))
-            layers.append(LayerActivation(
-                layer_id=f"blocks.{i}.mlp",
-                activations=normalize(block_mlp_norms[i]),
-            ))
-        layers.append(LayerActivation(
-            layer_id="unembed",
-            activations=normalize(unembed_norms),
-        ))
+            layers.append(
+                LayerActivation(
+                    layer_id=f"blocks.{i}.attn",
+                    activations=normalize(block_attn_norms[i]),
+                    per_head=block_attn_heads[i],
+                )
+            )
+            layers.append(
+                LayerActivation(
+                    layer_id=f"blocks.{i}.mlp",
+                    activations=normalize(block_mlp_norms[i]),
+                )
+            )
+        layers.append(
+            LayerActivation(
+                layer_id="unembed",
+                activations=normalize(unembed_norms),
+            )
+        )
 
         elapsed_ms = (time.time() - start) * 1000
         logger.info(
             "fMRI scan: %d tokens, %d layers, %.1fms",
-            seq_len, len(layers), elapsed_ms,
+            seq_len,
+            len(layers),
+            elapsed_ms,
         )
 
         return ActivationData(
@@ -302,11 +312,13 @@ class AnalysisEngine:
         for i in range(cfg.n_layers):
             pattern = cache[f"blocks.{i}.attn.hook_pattern"]  # [1, heads, seq, seq]
             for h in range(cfg.n_heads):
-                attention_heads.append(AttentionHead(
-                    layer_idx=i,
-                    head_idx=h,
-                    pattern=pattern[0, h].tolist(),
-                ))
+                attention_heads.append(
+                    AttentionHead(
+                        layer_idx=i,
+                        head_idx=h,
+                        pattern=pattern[0, h].tolist(),
+                    )
+                )
 
         # --- (3) Zero-ablation importance for each component ---
         # Components: embed + (attn + mlp) * n_layers + unembed = 2 + 2*n_layers
@@ -345,11 +357,13 @@ class AnalysisEngine:
         components: list[ComponentImportance] = []
         for comp_id, raw_imp in zip(component_ids, raw_importances):
             norm_imp = round((raw_imp - imp_min) / imp_rng, 4)
-            components.append(ComponentImportance(
-                layer_id=comp_id,
-                importance=norm_imp,
-                is_pathway=norm_imp >= threshold,
-            ))
+            components.append(
+                ComponentImportance(
+                    layer_id=comp_id,
+                    importance=norm_imp,
+                    is_pathway=norm_imp >= threshold,
+                )
+            )
 
         # Build connections between sequential components with importance-based strength
         comp_map = {c.layer_id: c for c in components}
@@ -358,17 +372,20 @@ class AnalysisEngine:
             from_id = component_ids[i]
             to_id = component_ids[i + 1]
             strength = (comp_map[from_id].importance + comp_map[to_id].importance) / 2
-            connections.append(PathwayConnection(
-                from_id=from_id,
-                to_id=to_id,
-                strength=round(strength, 4),
-                is_pathway=strength >= threshold,
-            ))
+            connections.append(
+                PathwayConnection(
+                    from_id=from_id,
+                    to_id=to_id,
+                    strength=round(strength, 4),
+                    is_pathway=strength >= threshold,
+                )
+            )
 
         elapsed_ms = (time.time() - start) * 1000
         logger.info(
             "DTI scan: %d tokens, %d components, %d pathways, %.1fms",
-            seq_len, len(components),
+            seq_len,
+            len(components),
             sum(1 for c in connections if c.is_pathway),
             elapsed_ms,
         )
@@ -426,7 +443,8 @@ class AnalysisEngine:
 
             # KL divergence: KL(final || intermediate) per token
             kl = torch.sum(
-                final_probs * (torch.log(final_probs + 1e-10) - torch.log(intermediate_probs + 1e-10)),
+                final_probs
+                * (torch.log(final_probs + 1e-10) - torch.log(intermediate_probs + 1e-10)),
                 dim=-1,
             )  # [seq_len]
             all_kl.append(kl)
@@ -456,17 +474,21 @@ class AnalysisEngine:
 
         layers: list[LayerAnomaly] = []
         for i in range(cfg.n_layers):
-            layers.append(LayerAnomaly(
-                layer_id=f"blocks.{i}",
-                anomaly_scores=[round(v, 4) for v in anomaly[i].tolist()],
-                kl_scores=[round(v, 4) for v in kl_norm[i].tolist()],
-                entropy_scores=[round(v, 4) for v in ent_norm[i].tolist()],
-            ))
+            layers.append(
+                LayerAnomaly(
+                    layer_id=f"blocks.{i}",
+                    anomaly_scores=[round(v, 4) for v in anomaly[i].tolist()],
+                    kl_scores=[round(v, 4) for v in kl_norm[i].tolist()],
+                    entropy_scores=[round(v, 4) for v in ent_norm[i].tolist()],
+                )
+            )
 
         elapsed_ms = (time.time() - start) * 1000
         logger.info(
             "FLAIR scan: %d tokens, %d layers, %.1fms",
-            seq_len, len(layers), elapsed_ms,
+            seq_len,
+            len(layers),
+            elapsed_ms,
         )
 
         return AnomalyData(

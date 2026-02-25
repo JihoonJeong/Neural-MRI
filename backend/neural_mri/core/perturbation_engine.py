@@ -41,7 +41,9 @@ class PerturbationEngine:
         raise ValueError(f"Unknown component: {component}")
 
     def _get_predictions(
-        self, logits_at_pos: torch.Tensor, k: int = 5,
+        self,
+        logits_at_pos: torch.Tensor,
+        k: int = 5,
     ) -> tuple[TokenPrediction, list[TokenPrediction]]:
         """Extract top-k token predictions from logits at a single position."""
         probs = torch.softmax(logits_at_pos, dim=-1)
@@ -51,11 +53,13 @@ class PerturbationEngine:
         results = []
         for i in range(k):
             idx = topk.indices[i].item()
-            results.append(TokenPrediction(
-                token=tokenizer.decode([idx]),
-                logit=round(logits_at_pos[idx].item(), 4),
-                prob=round(topk.values[i].item(), 4),
-            ))
+            results.append(
+                TokenPrediction(
+                    token=tokenizer.decode([idx]),
+                    logit=round(logits_at_pos[idx].item(), 4),
+                    prob=round(topk.values[i].item(), 4),
+                )
+            )
 
         return results[0], results
 
@@ -115,14 +119,19 @@ class PerturbationEngine:
 
         with torch.no_grad():
             perturbed_logits = model.run_with_hooks(
-                tokens, fwd_hooks=[(hook_name, zero_hook)],
+                tokens,
+                fwd_hooks=[(hook_name, zero_hook)],
             )
 
         elapsed_ms = (time.time() - start) * 1000
         logger.info("Perturbation zero_out on %s: %.1fms", req.component, elapsed_ms)
         return self._compare(
-            original_logits, perturbed_logits, target_idx,
-            req.component, "zero_out", elapsed_ms,
+            original_logits,
+            perturbed_logits,
+            target_idx,
+            req.component,
+            "zero_out",
+            elapsed_ms,
         )
 
     def amplify(self, req: AmplifyRequest) -> PerturbResult:
@@ -142,14 +151,19 @@ class PerturbationEngine:
 
         with torch.no_grad():
             perturbed_logits = model.run_with_hooks(
-                tokens, fwd_hooks=[(hook_name, amplify_hook)],
+                tokens,
+                fwd_hooks=[(hook_name, amplify_hook)],
             )
 
         elapsed_ms = (time.time() - start) * 1000
         logger.info("Perturbation amplify(%.1fx) on %s: %.1fms", factor, req.component, elapsed_ms)
         return self._compare(
-            original_logits, perturbed_logits, target_idx,
-            req.component, "amplify", elapsed_ms,
+            original_logits,
+            perturbed_logits,
+            target_idx,
+            req.component,
+            "amplify",
+            elapsed_ms,
         )
 
     def ablate(self, req: AblateRequest) -> PerturbResult:
@@ -171,14 +185,19 @@ class PerturbationEngine:
 
         with torch.no_grad():
             perturbed_logits = model.run_with_hooks(
-                tokens, fwd_hooks=[(hook_name, ablate_hook)],
+                tokens,
+                fwd_hooks=[(hook_name, ablate_hook)],
             )
 
         elapsed_ms = (time.time() - start) * 1000
         logger.info("Perturbation ablate on %s: %.1fms", req.component, elapsed_ms)
         return self._compare(
-            original_logits, perturbed_logits, target_idx,
-            req.component, "ablate", elapsed_ms,
+            original_logits,
+            perturbed_logits,
+            target_idx,
+            req.component,
+            "ablate",
+            elapsed_ms,
         )
 
     def activation_patch(self, req: PatchRequest) -> PatchResult:
@@ -189,7 +208,9 @@ class PerturbationEngine:
 
         clean_tokens = model.to_tokens(req.clean_prompt)
         corrupt_tokens = model.to_tokens(req.corrupt_prompt)
-        target_idx = req.target_token_idx if req.target_token_idx >= 0 else clean_tokens.shape[1] - 1
+        target_idx = (
+            req.target_token_idx if req.target_token_idx >= 0 else clean_tokens.shape[1] - 1
+        )
 
         with torch.no_grad():
             # Clean run
@@ -212,7 +233,8 @@ class PerturbationEngine:
 
         with torch.no_grad():
             patched_logits = model.run_with_hooks(
-                corrupt_tokens, fwd_hooks=[(hook_name, patch_hook)],
+                corrupt_tokens,
+                fwd_hooks=[(hook_name, patch_hook)],
             )
 
         # Get predictions
@@ -232,7 +254,12 @@ class PerturbationEngine:
         recovery = max(0.0, min(1.0, recovery))
 
         elapsed_ms = (time.time() - start) * 1000
-        logger.info("Activation patch on %s: recovery=%.3f, %.1fms", req.component, recovery, elapsed_ms)
+        logger.info(
+            "Activation patch on %s: recovery=%.3f, %.1fms",
+            req.component,
+            recovery,
+            elapsed_ms,
+        )
 
         return PatchResult(
             model_id=self._mm.model_id,

@@ -92,13 +92,15 @@ async def _handle_scan_stream(ws: WebSocket, msg: dict) -> None:
     logits, cache = await asyncio.to_thread(_run_cache)
 
     # Send scan_start
-    await ws.send_json({
-        "type": "scan_start",
-        "mode": mode,
-        "tokens": [str(t) for t in str_tokens],
-        "n_layers": cfg.n_layers,
-        "seq_len": seq_len,
-    })
+    await ws.send_json(
+        {
+            "type": "scan_start",
+            "mode": mode,
+            "tokens": [str(t) for t in str_tokens],
+            "n_layers": cfg.n_layers,
+            "seq_len": seq_len,
+        }
+    )
 
     if mode == "fMRI":
         await _stream_fmri_frames(ws, model, cfg, cache, seq_len)
@@ -106,10 +108,12 @@ async def _handle_scan_stream(ws: WebSocket, msg: dict) -> None:
         await _stream_dti_frames(ws, model, cfg, cache, tokens, logits, seq_len)
 
     elapsed_ms = (time.time() - start) * 1000
-    await ws.send_json({
-        "type": "scan_complete",
-        "compute_time_ms": round(elapsed_ms, 1),
-    })
+    await ws.send_json(
+        {
+            "type": "scan_complete",
+            "compute_time_ms": round(elapsed_ms, 1),
+        }
+    )
 
 
 async def _stream_fmri_frames(ws, model, cfg, cache, seq_len: int) -> None:
@@ -149,15 +153,19 @@ async def _stream_fmri_frames(ws, model, cfg, cache, seq_len: int) -> None:
         layers = []
         layers.append({"layer_id": "embed", "activation": norm(embed_norms[t])})
         for i in range(cfg.n_layers):
-            layers.append({"layer_id": f"blocks.{i}.attn", "activation": norm(block_attn_norms[i][t])})
-            layers.append({"layer_id": f"blocks.{i}.mlp", "activation": norm(block_mlp_norms[i][t])})
+            attn_val = norm(block_attn_norms[i][t])
+            mlp_val = norm(block_mlp_norms[i][t])
+            layers.append({"layer_id": f"blocks.{i}.attn", "activation": attn_val})
+            layers.append({"layer_id": f"blocks.{i}.mlp", "activation": mlp_val})
         layers.append({"layer_id": "unembed", "activation": norm(unembed_norms[t])})
 
-        await ws.send_json({
-            "type": "activation_frame",
-            "token_idx": t,
-            "layers": layers,
-        })
+        await ws.send_json(
+            {
+                "type": "activation_frame",
+                "token_idx": t,
+                "layers": layers,
+            }
+        )
         # Small yield to allow client to process
         await asyncio.sleep(0.01)
 
@@ -170,12 +178,14 @@ async def _stream_dti_frames(ws, model, cfg, cache, tokens, logits, seq_len: int
     for i in range(cfg.n_layers):
         pattern = cache[f"blocks.{i}.attn.hook_pattern"]  # [1, heads, seq, seq]
         for h in range(cfg.n_heads):
-            await ws.send_json({
-                "type": "attention_pattern",
-                "layer_idx": i,
-                "head_idx": h,
-                "pattern": pattern[0, h].tolist(),
-            })
+            await ws.send_json(
+                {
+                    "type": "attention_pattern",
+                    "layer_idx": i,
+                    "head_idx": h,
+                    "pattern": pattern[0, h].tolist(),
+                }
+            )
         await asyncio.sleep(0.01)
 
     # Component importance via zero-ablation (streamed per component)
@@ -190,6 +200,7 @@ async def _stream_dti_frames(ws, model, cfg, cache, tokens, logits, seq_len: int
 
     raw_importances = []
     for comp_id, hook_name in zip(component_ids, hook_points):
+
         def zero_hook(value, hook):
             return torch.zeros_like(value)
 
@@ -209,9 +220,11 @@ async def _stream_dti_frames(ws, model, cfg, cache, tokens, logits, seq_len: int
 
     for comp_id, raw_imp in zip(component_ids, raw_importances):
         norm_imp = round((raw_imp - imp_min) / imp_rng, 4)
-        await ws.send_json({
-            "type": "component_importance",
-            "layer_id": comp_id,
-            "importance": norm_imp,
-            "is_pathway": norm_imp >= threshold,
-        })
+        await ws.send_json(
+            {
+                "type": "component_importance",
+                "layer_id": comp_id,
+                "importance": norm_imp,
+                "is_pathway": norm_imp >= threshold,
+            }
+        )
