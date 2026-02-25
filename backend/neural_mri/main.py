@@ -7,8 +7,10 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import ORJSONResponse
 
+from neural_mri.api.routes_battery import router as battery_router
 from neural_mri.api.routes_model import router as model_router
 from neural_mri.api.routes_perturb import router as perturb_router
+from neural_mri.api.routes_report import router as report_router
 from neural_mri.api.routes_scan import router as scan_router
 from neural_mri.api.ws_stream import router as ws_router
 from neural_mri.config import Settings
@@ -61,6 +63,8 @@ app.add_middleware(
 app.include_router(model_router, prefix="/api/model", tags=["model"])
 app.include_router(scan_router, prefix="/api/scan", tags=["scan"])
 app.include_router(perturb_router, prefix="/api/perturb", tags=["perturb"])
+app.include_router(report_router, prefix="/api/report", tags=["report"])
+app.include_router(battery_router, prefix="/api/battery", tags=["battery"])
 app.include_router(ws_router, tags=["websocket"])
 
 

@@ -1,6 +1,8 @@
 import type { ModelInfo } from '../types/model';
 import type { ActivationData, AnomalyData, CircuitData, StructuralData, WeightData } from '../types/scan';
 import type { PerturbResult, PatchResult } from '../types/perturb';
+import type { DiagnosticReport, ReportRequest } from '../types/report';
+import type { BatteryResult, TestCase } from '../types/battery';
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
 
@@ -98,5 +100,20 @@ export const api = {
       }),
     reset: () =>
       request<{ status: string }>('/perturb/reset', { method: 'POST' }),
+  },
+  report: {
+    generate: (req: ReportRequest = {}) =>
+      request<DiagnosticReport>('/report/generate', {
+        method: 'POST',
+        body: JSON.stringify(req),
+      }),
+  },
+  battery: {
+    run: (categories?: string[], locale?: string) =>
+      request<BatteryResult>('/battery/run', {
+        method: 'POST',
+        body: JSON.stringify({ categories: categories ?? null, locale: locale ?? 'en' }),
+      }),
+    tests: () => request<TestCase[]>('/battery/tests'),
   },
 };

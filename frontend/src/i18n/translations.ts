@@ -24,7 +24,33 @@ export type TranslationKey =
   | 'guide.perturbation.title'
   | 'guide.perturbation.body'
   | 'guide.shortcuts.title'
-  | 'guide.shortcuts.body';
+  | 'guide.shortcuts.body'
+  // Report modal
+  | 'report.title'
+  | 'report.technique'
+  | 'report.findings'
+  | 'report.impression'
+  | 'report.recommendation'
+  | 'report.patient'
+  | 'report.date'
+  | 'report.prompt'
+  | 'report.button'
+  | 'report.generating'
+  // Battery
+  | 'battery.title'
+  | 'battery.detailTitle'
+  | 'battery.run'
+  | 'battery.running'
+  | 'battery.passed'
+  | 'battery.failed'
+  | 'battery.total'
+  | 'battery.viewDetails'
+  | 'battery.noResult'
+  | 'battery.peak'
+  | 'battery.activeLayers'
+  | 'battery.compare'
+  | 'battery.model'
+  | 'report.explain';
 
 export const translations: Record<Locale, Record<TranslationKey, string>> = {
   en: {
@@ -110,6 +136,34 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
       '\u2190 \u2192    Step through tokens (fMRI / DTI / FLAIR)\n' +
       'ESC       Close this guide\n' +
       'H         Toggle this guide',
+
+    // ── Report ──
+    'report.title': 'DIAGNOSTIC REPORT',
+    'report.technique': 'TECHNIQUE',
+    'report.findings': 'FINDINGS',
+    'report.impression': 'IMPRESSION',
+    'report.recommendation': 'RECOMMENDATION',
+    'report.patient': 'Patient',
+    'report.date': 'Date',
+    'report.prompt': 'Prompt',
+    'report.button': 'REPORT',
+    'report.generating': 'GENERATING...',
+
+    // ── Battery ──
+    'battery.title': 'FUNCTIONAL BATTERY',
+    'battery.detailTitle': 'FUNCTIONAL TEST BATTERY',
+    'battery.run': 'RUN',
+    'battery.running': 'RUNNING...',
+    'battery.passed': 'PASSED',
+    'battery.failed': 'FAILED',
+    'battery.total': 'total',
+    'battery.viewDetails': 'View details',
+    'battery.noResult': 'Run battery to test model capabilities',
+    'battery.peak': 'Peak',
+    'battery.activeLayers': 'Active layers',
+    'battery.compare': 'Compare',
+    'battery.model': 'Model',
+    'report.explain': 'Explanation',
   },
 
   ko: {
@@ -195,5 +249,33 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
       '\u2190 \u2192    \ud1a0\ud070 \ud0d0\uc0c9 (fMRI / DTI / FLAIR)\n' +
       'ESC       \uac00\uc774\ub4dc \ub2eb\uae30\n' +
       'H         \uac00\uc774\ub4dc \uc5f4\uae30/\ub2eb\uae30',
+
+    // ── Report ──
+    'report.title': '\uc9c4\ub2e8 \ub9ac\ud3ec\ud2b8',
+    'report.technique': '\uac80\uc0ac \uae30\ubc95',
+    'report.findings': '\uc18c\uacac',
+    'report.impression': '\uc885\ud569 \ud310\ub3c5',
+    'report.recommendation': '\uad8c\uace0 \uc0ac\ud56d',
+    'report.patient': '\ud658\uc790',
+    'report.date': '\ub0a0\uc9dc',
+    'report.prompt': '\ud504\ub86c\ud504\ud2b8',
+    'report.button': '\ub9ac\ud3ec\ud2b8',
+    'report.generating': '\uc0dd\uc131 \uc911...',
+
+    // ── Battery ──
+    'battery.title': '\uae30\ub2a5 \uac80\uc0ac',
+    'battery.detailTitle': '\uae30\ub2a5 \uac80\uc0ac \ubc30\ud130\ub9ac',
+    'battery.run': '\uc2e4\ud589',
+    'battery.running': '\uc2e4\ud589 \uc911...',
+    'battery.passed': '\ud1b5\uacfc',
+    'battery.failed': '\uc2e4\ud328',
+    'battery.total': '\uc804\uccb4',
+    'battery.viewDetails': '\uc0c1\uc138 \ubcf4\uae30',
+    'battery.noResult': '\ubc30\ud130\ub9ac\ub97c \uc2e4\ud589\ud558\uc5ec \ubaa8\ub378 \ub2a5\ub825\uc744 \ud14c\uc2a4\ud2b8\ud558\uc138\uc694',
+    'battery.peak': '\ud53c\ud06c',
+    'battery.activeLayers': '\ud65c\uc131 \ub808\uc774\uc5b4',
+    'battery.compare': '\ube44\uad50',
+    'battery.model': '\ubaa8\ub378',
+    'report.explain': '\ud574\uc124',
   },
 };

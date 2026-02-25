@@ -2,11 +2,14 @@ import { useEffect, useState } from 'react';
 import { useModelStore } from '../store/useModelStore';
 import { useScanStore } from '../store/useScanStore';
 import { useLocaleStore } from '../store/useLocaleStore';
+import type { TranslationKey } from '../i18n/translations';
+import { useReportStore } from '../store/useReportStore';
 
 export function TopBar() {
   const { modelInfo, isLoading, error, availableModels, loadModel } = useModelStore();
   const addLog = useScanStore((s) => s.addLog);
-  const { locale, toggleLocale, openGuide } = useLocaleStore();
+  const { locale, toggleLocale, openGuide, t } = useLocaleStore();
+  const { generateReport, isGenerating } = useReportStore();
   const [showError, setShowError] = useState(false);
 
   // Show error message briefly then auto-dismiss
@@ -124,6 +127,23 @@ export function TopBar() {
             {modelInfo.device.toUpperCase()}
           </span>
         )}
+        <button
+          onClick={generateReport}
+          disabled={isGenerating || isLoading || !modelInfo}
+          className="rounded"
+          style={{
+            background: isGenerating ? 'rgba(255,255,255,0.04)' : 'rgba(0,255,170,0.08)',
+            border: '1px solid rgba(0,255,170,0.2)',
+            color: isGenerating ? 'var(--text-secondary)' : 'var(--accent-active)',
+            padding: '2px 8px',
+            fontSize: 'var(--font-size-xs)',
+            fontFamily: 'var(--font-primary)',
+            cursor: isGenerating || isLoading || !modelInfo ? 'not-allowed' : 'pointer',
+            letterSpacing: '1px',
+          }}
+        >
+          {isGenerating ? t('report.generating' as TranslationKey) : t('report.button' as TranslationKey)}
+        </button>
         <button
           onClick={toggleLocale}
           className="rounded"

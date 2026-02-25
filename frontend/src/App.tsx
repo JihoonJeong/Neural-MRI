@@ -11,6 +11,9 @@ import { StimPanel } from './components/Panels/StimPanel';
 import { ComparisonPanel } from './components/Panels/ComparisonPanel';
 import { LogPanel } from './components/Panels/LogPanel';
 import { GuideModal } from './components/GuideModal';
+import { ReportModal } from './components/ReportModal';
+import { BatteryDetailModal } from './components/BatteryDetailModal';
+import { BatteryPanel } from './components/Panels/BatteryPanel';
 import { useModelStore } from './store/useModelStore';
 import { useScanStore } from './store/useScanStore';
 
@@ -67,9 +70,14 @@ export default function App() {
           <div style={{ borderTop: '1px solid var(--border)' }}>
             <ComparisonPanel />
           </div>
+          <div style={{ borderTop: '1px solid var(--border)' }}>
+            <BatteryPanel />
+          </div>
         </aside>
       </div>
       <GuideModal />
+      <ReportModal />
+      <BatteryDetailModal />
     </div>
   );
 }
