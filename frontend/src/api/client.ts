@@ -31,6 +31,7 @@ export interface ModelListEntry {
   family: string;
   params: string;
   tl_compat: boolean;
+  gated: boolean;
   is_loaded: boolean;
 }
 

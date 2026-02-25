@@ -19,6 +19,14 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(name)s] %(levelna
 logger = logging.getLogger(__name__)
 
 settings = Settings()
+
+# Propagate HF token to huggingface_hub so gated models can be downloaded
+if settings.hf_token:
+    import os
+
+    os.environ.setdefault("HF_TOKEN", settings.hf_token)
+    logger.info("HuggingFace token configured for gated model access.")
+
 model_manager = ModelManager()
 scan_cache = ScanCache(max_entries=settings.max_cache_entries)
 

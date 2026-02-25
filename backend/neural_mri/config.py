@@ -13,6 +13,7 @@ class Settings(BaseSettings):
     default_model: str = "gpt2"
     device: str = "auto"  # "auto" | "cpu" | "cuda" | "mps"
     model_cache_dir: str | None = None
+    hf_token: str | None = None  # HuggingFace token for gated models (Gemma, Llama, etc.)
 
     # Cache
     max_cache_entries: int = 5  # LRU scan result cache size

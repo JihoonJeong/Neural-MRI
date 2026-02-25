@@ -36,7 +36,7 @@ export function TopBar() {
   // Use dynamic model list, fallback to basic list if API hasn't responded yet
   const models = availableModels.length > 0
     ? availableModels
-    : [{ model_id: 'gpt2', display_name: 'GPT-2 Small', params: '124M', family: 'gpt2', tl_compat: true, is_loaded: false }];
+    : [{ model_id: 'gpt2', display_name: 'GPT-2 Small', params: '124M', family: 'gpt2', tl_compat: true, gated: false, is_loaded: false }];
 
   return (
     <div
@@ -93,7 +93,7 @@ export function TopBar() {
         >
           {models.map((m) => (
             <option key={m.model_id} value={m.model_id}>
-              {m.display_name} ({m.params})
+              {m.gated ? '\u{1F512} ' : ''}{m.display_name} ({m.params})
             </option>
           ))}
         </select>
