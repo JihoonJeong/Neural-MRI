@@ -4,11 +4,13 @@ import { ModeTabs } from './components/ModeTabs';
 import { DicomHeader } from './components/DicomHeader';
 import { ScanCanvas } from './components/ScanCanvas/ScanCanvas';
 import { ScanLineOverlay } from './components/ScanCanvas/ScanLineOverlay';
+import { CompareView } from './components/CompareView';
 import { TokenStepper } from './components/TokenStepper';
 import { PromptInput } from './components/PromptInput';
 import { LayerSummary } from './components/Panels/LayerSummary';
 import { StimPanel } from './components/Panels/StimPanel';
 import { ComparisonPanel } from './components/Panels/ComparisonPanel';
+import { DiffPanel } from './components/Panels/DiffPanel';
 import { LogPanel } from './components/Panels/LogPanel';
 import { GuideModal } from './components/GuideModal';
 import { ReportModal } from './components/ReportModal';
@@ -16,11 +18,13 @@ import { BatteryDetailModal } from './components/BatteryDetailModal';
 import { BatteryPanel } from './components/Panels/BatteryPanel';
 import { useModelStore } from './store/useModelStore';
 import { useScanStore } from './store/useScanStore';
+import { useCompareStore } from './store/useCompareStore';
 
 export default function App() {
   const fetchModelInfo = useModelStore((s) => s.fetchModelInfo);
   const fetchModels = useModelStore((s) => s.fetchModels);
   const addLog = useScanStore((s) => s.addLog);
+  const isCompareMode = useCompareStore((s) => s.isCompareMode);
 
   // Fetch model info and available models on mount
   useEffect(() => {
@@ -47,7 +51,7 @@ export default function App() {
           <DicomHeader />
           <div className="flex-1 flex justify-center items-start relative overflow-hidden">
             <ScanLineOverlay />
-            <ScanCanvas />
+            {isCompareMode ? <CompareView /> : <ScanCanvas />}
           </div>
           <TokenStepper />
           <PromptInput />
@@ -63,7 +67,7 @@ export default function App() {
             background: 'var(--bg-secondary)',
           }}
         >
-          <LayerSummary />
+          {isCompareMode ? <DiffPanel /> : <LayerSummary />}
           <div style={{ borderTop: '1px solid var(--border)' }}>
             <StimPanel />
           </div>

@@ -5,7 +5,7 @@ import { useModelStore } from '../../store/useModelStore';
 import { usePerturbStore } from '../../store/usePerturbStore';
 import { useAnimationFrame } from '../../hooks/useAnimationFrame';
 import { getNodeColor, getEdgeStyle } from './colorMaps';
-import type { LayerStructure, ConnectionInfo, LayerWeightStats } from '../../types/scan';
+import type { ActivationData, AnomalyData, CircuitData, LayerStructure, ConnectionInfo, LayerWeightStats, StructuralData, WeightData } from '../../types/scan';
 import type { ScanMode } from '../../types/model';
 
 export interface CanvasNode {
@@ -26,14 +26,34 @@ export interface CanvasEdge {
   isPathway?: boolean; // DTI: true for important circuit paths
 }
 
-const CANVAS_WIDTH = 560;
-const CANVAS_HEIGHT = 620;
+const DEFAULT_WIDTH = 560;
+const DEFAULT_HEIGHT = 620;
 const PADDING_Y = 40;
 const PADDING_X = 60;
+
+export interface ScanCanvasProps {
+  width?: number;
+  height?: number;
+  dataOverride?: {
+    mode: ScanMode;
+    structuralData: StructuralData | null;
+    weightData: WeightData | null;
+    activationData: ActivationData | null;
+    circuitData: CircuitData | null;
+    anomalyData: AnomalyData | null;
+    selectedTokenIdx: number;
+    selectedLayerId?: string | null;
+  };
+  label?: string;
+  onLayerSelect?: (id: string | null) => void;
+  hideEmptyStates?: boolean;
+}
 
 function buildLayout(
   layers: LayerStructure[],
   connections: ConnectionInfo[],
+  canvasWidth: number,
+  canvasHeight: number,
   weightLayers?: LayerWeightStats[],
 ): { nodes: CanvasNode[]; edges: CanvasEdge[] } {
   const maxParam = Math.max(...layers.map((l) => l.param_count), 1);
@@ -55,7 +75,7 @@ function buildLayout(
     }
   }
 
-  const yStep = (CANVAS_HEIGHT - PADDING_Y * 2) / Math.max(layers.length - 1, 1);
+  const yStep = (canvasHeight - PADDING_Y * 2) / Math.max(layers.length - 1, 1);
 
   const nodes: CanvasNode[] = layers.map((layer, i) => {
     const paramRatio = layer.param_count / maxParam;
@@ -66,7 +86,7 @@ function buildLayout(
 
     return {
       id: layer.layer_id,
-      x: CANVAS_WIDTH / 2,
+      x: canvasWidth / 2,
       y: PADDING_Y + i * yStep,
       radius: baseRadius,
       layerType: layer.layer_type,
@@ -77,11 +97,12 @@ function buildLayout(
   });
 
   // Spread nodes horizontally by type within the same block index
+  const spread = Math.min(50, canvasWidth * 0.09);
   for (const node of nodes) {
     if (node.layerType === 'attention') {
-      node.x = CANVAS_WIDTH / 2 - 50;
+      node.x = canvasWidth / 2 - spread;
     } else if (node.layerType === 'mlp') {
-      node.x = CANVAS_WIDTH / 2 + 50;
+      node.x = canvasWidth / 2 + spread;
     }
   }
 
@@ -111,17 +132,32 @@ function nodeLabel(node: CanvasNode): string {
   return node.id;
 }
 
-export function ScanCanvas() {
+export function ScanCanvas(props: ScanCanvasProps = {}) {
+  const canvasWidth = props.width ?? DEFAULT_WIDTH;
+  const canvasHeight = props.height ?? DEFAULT_HEIGHT;
+
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const nodesRef = useRef<d3.Selection<SVGGElement, CanvasNode, SVGSVGElement, unknown> | null>(null);
   const edgesRef = useRef<d3.Selection<SVGPathElement, CanvasEdge, SVGSVGElement, unknown> | null>(null);
   const glowsRef = useRef<d3.Selection<SVGCircleElement, CanvasNode, SVGSVGElement, unknown> | null>(null);
 
-  const { mode, structuralData, weightData, activationData, circuitData, anomalyData, selectedLayerId, selectedTokenIdx, selectLayer } = useScanStore();
+  // Read from store (used when no dataOverride)
+  const storeData = useScanStore();
   const modelInfo = useModelStore((s) => s.modelInfo);
   const isModelLoading = useModelStore((s) => s.isLoading);
   const isRescanAnimating = usePerturbStore((s) => s.isRescanAnimating);
+
+  // Merge: dataOverride wins if provided
+  const mode = props.dataOverride?.mode ?? storeData.mode;
+  const structuralData = props.dataOverride?.structuralData ?? storeData.structuralData;
+  const weightData = props.dataOverride?.weightData ?? storeData.weightData;
+  const activationData = props.dataOverride?.activationData ?? storeData.activationData;
+  const circuitData = props.dataOverride?.circuitData ?? storeData.circuitData;
+  const anomalyData = props.dataOverride?.anomalyData ?? storeData.anomalyData;
+  const selectedTokenIdx = props.dataOverride?.selectedTokenIdx ?? storeData.selectedTokenIdx;
+  const selectedLayerId = props.dataOverride?.selectedLayerId ?? storeData.selectedLayerId;
+  const handleSelectLayer = props.onLayerSelect ?? storeData.selectLayer;
 
   // --- Crossfade state ---
   const prevModeRef = useRef<ScanMode>(mode);
@@ -145,9 +181,11 @@ export function ScanCanvas() {
     return buildLayout(
       structuralData.layers,
       structuralData.connections,
+      canvasWidth,
+      canvasHeight,
       weightData?.layers,
     );
-  }, [structuralData, weightData]);
+  }, [structuralData, weightData, canvasWidth, canvasHeight]);
 
   // Compute final nodes/edges with mode-specific overlays
   const { nodes, edges } = useMemo(() => {
@@ -304,7 +342,7 @@ export function ScanCanvas() {
       .attr('transform', (d) => `translate(${d.x},${d.y})`)
       .style('cursor', 'pointer')
       .on('click', (_event, d) => {
-        selectLayer(selectedLayerId === d.id ? null : d.id);
+        handleSelectLayer(selectedLayerId === d.id ? null : d.id);
       })
       .on('mouseenter', (_event, d) => {
         const svgEl = svgRef.current;
@@ -339,38 +377,41 @@ export function ScanCanvas() {
       .attr('stroke-width', 1)
       .attr('opacity', 0.4);
 
-    // Left-side labels
-    svg
-      .selectAll<SVGTextElement, CanvasNode>('text.label')
-      .data(nodes)
-      .join('text')
-      .attr('class', 'label')
-      .attr('x', PADDING_X - 10)
-      .attr('y', (d) => d.y + 4)
-      .attr('text-anchor', 'end')
-      .attr('fill', 'rgba(100,180,140,0.5)')
-      .attr('font-size', 'var(--font-size-xs)')
-      .attr('font-family', 'var(--font-primary)')
-      .text((d) => nodeLabel(d));
+    // Left-side labels (hide in small canvases)
+    if (canvasWidth >= 400) {
+      svg
+        .selectAll<SVGTextElement, CanvasNode>('text.label')
+        .data(nodes)
+        .join('text')
+        .attr('class', 'label')
+        .attr('x', PADDING_X - 10)
+        .attr('y', (d) => d.y + 4)
+        .attr('text-anchor', 'end')
+        .attr('fill', 'rgba(100,180,140,0.5)')
+        .attr('font-size', 'var(--font-size-xs)')
+        .attr('font-family', 'var(--font-primary)')
+        .text((d) => nodeLabel(d));
+    }
 
     // Vignette overlay
     svg
       .append('rect')
-      .attr('width', CANVAS_WIDTH)
-      .attr('height', CANVAS_HEIGHT)
+      .attr('width', canvasWidth)
+      .attr('height', canvasHeight)
       .attr('fill', 'url(#vignette)')
       .attr('pointer-events', 'none');
-  }, [nodes, edges, mode, selectedLayerId, selectLayer]);
+  }, [nodes, edges, mode, selectedLayerId, handleSelectLayer, canvasWidth, canvasHeight]);
 
   // Animation frame: update node colors, radii, glow, edge dash offset
   const isAnimated = mode === 'fMRI' || mode === 'DTI' || mode === 'FLAIR';
   const rescanStartRef = useRef<number | null>(null);
+  const skipRescan = !!props.dataOverride; // no rescan animation for compare canvases
 
   const animate = useCallback((time: number) => {
     if (!nodesRef.current || !edgesRef.current) return;
 
     // Rescan flash: 300ms opacity dip when perturbation completes
-    if (isRescanAnimating) {
+    if (!skipRescan && isRescanAnimating) {
       if (rescanStartRef.current === null) rescanStartRef.current = time;
       const elapsed = time - rescanStartRef.current;
       const flash = elapsed < 150 ? 1 - elapsed / 150 : (elapsed - 150) / 150;
@@ -462,64 +503,66 @@ export function ScanCanvas() {
           return base + pulse;
         });
     }
-  }, [mode, isRescanAnimating]);
+  }, [mode, isRescanAnimating, skipRescan]);
 
-  useAnimationFrame(animate, isAnimated || isRescanAnimating);
+  useAnimationFrame(animate, isAnimated || (!skipRescan && isRescanAnimating));
 
-  // --- Empty states ---
-  if (isModelLoading) {
-    return (
-      <div
-        className="flex items-center justify-center"
-        style={{ width: CANVAS_WIDTH, height: CANVAS_HEIGHT, color: 'var(--text-secondary)' }}
-      >
-        <div className="text-center">
-          <div
-            style={{
-              fontSize: 'var(--font-size-lg)',
-              color: 'var(--accent-active)',
-              marginBottom: 8,
-              animation: 'scan-pulse 1.5s ease-in-out infinite',
-            }}
-          >
-            LOADING MODEL...
+  // --- Empty states (skip when used as compare sub-canvas) ---
+  if (!props.hideEmptyStates) {
+    if (isModelLoading) {
+      return (
+        <div
+          className="flex items-center justify-center"
+          style={{ width: canvasWidth, height: canvasHeight, color: 'var(--text-secondary)' }}
+        >
+          <div className="text-center">
+            <div
+              style={{
+                fontSize: 'var(--font-size-lg)',
+                color: 'var(--accent-active)',
+                marginBottom: 8,
+                animation: 'scan-pulse 1.5s ease-in-out infinite',
+              }}
+            >
+              LOADING MODEL...
+            </div>
+            <div style={{ fontSize: 'var(--font-size-sm)' }}>Initializing neural pathways</div>
           </div>
-          <div style={{ fontSize: 'var(--font-size-sm)' }}>Initializing neural pathways</div>
         </div>
-      </div>
-    );
-  }
+      );
+    }
 
-  if (!modelInfo) {
-    return (
-      <div
-        className="flex items-center justify-center"
-        style={{ width: CANVAS_WIDTH, height: CANVAS_HEIGHT, color: 'var(--text-secondary)' }}
-      >
-        <div className="text-center">
-          <div style={{ fontSize: 'var(--font-size-lg)', color: 'var(--text-primary)', marginBottom: 8 }}>
-            NO MODEL LOADED
+    if (!modelInfo) {
+      return (
+        <div
+          className="flex items-center justify-center"
+          style={{ width: canvasWidth, height: canvasHeight, color: 'var(--text-secondary)' }}
+        >
+          <div className="text-center">
+            <div style={{ fontSize: 'var(--font-size-lg)', color: 'var(--text-primary)', marginBottom: 8 }}>
+              NO MODEL LOADED
+            </div>
+            <div style={{ fontSize: 'var(--font-size-sm)' }}>Select a model to begin scanning</div>
           </div>
-          <div style={{ fontSize: 'var(--font-size-sm)' }}>Select a model to begin scanning</div>
         </div>
-      </div>
-    );
-  }
+      );
+    }
 
-  if (!structuralData) {
-    return (
-      <div
-        className="flex items-center justify-center"
-        style={{ width: CANVAS_WIDTH, height: CANVAS_HEIGHT, color: 'var(--text-secondary)' }}
-      >
-        <div className="text-center">
-          <div style={{ fontSize: 'var(--font-size-lg)', color: 'var(--text-primary)', marginBottom: 8 }}>
-            READY TO SCAN
+    if (!structuralData) {
+      return (
+        <div
+          className="flex items-center justify-center"
+          style={{ width: canvasWidth, height: canvasHeight, color: 'var(--text-secondary)' }}
+        >
+          <div className="text-center">
+            <div style={{ fontSize: 'var(--font-size-lg)', color: 'var(--text-primary)', marginBottom: 8 }}>
+              READY TO SCAN
+            </div>
+            <div style={{ fontSize: 'var(--font-size-sm)' }}>Press SCAN to begin</div>
           </div>
-          <div style={{ fontSize: 'var(--font-size-sm)' }}>Press SCAN to begin</div>
         </div>
-      </div>
-    );
+      );
+    }
   }
 
   /** Mode-specific value label for tooltip */
@@ -533,10 +576,27 @@ export function ScanCanvas() {
 
   return (
     <div ref={containerRef} style={{ position: 'relative' }}>
+      {props.label && (
+        <div
+          style={{
+            position: 'absolute',
+            top: 8,
+            right: 12,
+            fontSize: 'var(--font-size-sm)',
+            color: 'var(--text-secondary)',
+            fontWeight: 'bold',
+            letterSpacing: '2px',
+            opacity: 0.6,
+            zIndex: 5,
+          }}
+        >
+          {props.label}
+        </div>
+      )}
       <svg
         ref={svgRef}
-        width={CANVAS_WIDTH}
-        height={CANVAS_HEIGHT}
+        width={canvasWidth}
+        height={canvasHeight}
         style={{
           display: 'block',
           opacity: fadeOpacity,

@@ -50,7 +50,14 @@ export type TranslationKey =
   | 'battery.activeLayers'
   | 'battery.compare'
   | 'battery.model'
-  | 'report.explain';
+  | 'report.explain'
+  // Compare
+  | 'compare.title'
+  | 'compare.promptA'
+  | 'compare.promptB'
+  | 'compare.diff'
+  | 'compare.scan'
+  | 'compare.stronger';
 
 export const translations: Record<Locale, Record<TranslationKey, string>> = {
   en: {
@@ -164,6 +171,13 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     'battery.compare': 'Compare',
     'battery.model': 'Model',
     'report.explain': 'Explanation',
+    // ── Compare ──
+    'compare.title': 'COMPARE',
+    'compare.promptA': 'Prompt A',
+    'compare.promptB': 'Prompt B',
+    'compare.diff': 'ACTIVATION DIFF',
+    'compare.scan': 'COMPARE',
+    'compare.stronger': 'stronger',
   },
 
   ko: {
@@ -277,5 +291,12 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     'battery.compare': '\ube44\uad50',
     'battery.model': '\ubaa8\ub378',
     'report.explain': '\ud574\uc124',
+    // ── Compare ──
+    'compare.title': '\ube44\uad50',
+    'compare.promptA': '\ud504\ub86c\ud504\ud2b8 A',
+    'compare.promptB': '\ud504\ub86c\ud504\ud2b8 B',
+    'compare.diff': '\ud65c\uc131\ud654 \ucc28\uc774',
+    'compare.scan': '\ube44\uad50 \uc2a4\uce94',
+    'compare.stronger': '\ub354 \uac15\ud568',
   },
 };
