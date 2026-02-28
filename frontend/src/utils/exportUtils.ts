@@ -1,7 +1,7 @@
 import type { DiagnosticReport } from '../types/report';
 
 // CSS variable → resolved value map (from theme/variables.css)
-const CSS_VAR_MAP: Record<string, string> = {
+export const CSS_VAR_MAP: Record<string, string> = {
   'var(--bg-primary)': '#0a0c10',
   'var(--bg-secondary)': '#0c0e14',
   'var(--bg-surface)': '#12151c',
@@ -17,7 +17,7 @@ const CSS_VAR_MAP: Record<string, string> = {
   'var(--font-size-lg)': '14px',
 };
 
-function downloadFile(blob: Blob, filename: string) {
+export function downloadFile(blob: Blob, filename: string) {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
@@ -28,7 +28,7 @@ function downloadFile(blob: Blob, filename: string) {
   URL.revokeObjectURL(url);
 }
 
-function resolveCssVars(svgStr: string): string {
+export function resolveCssVars(svgStr: string): string {
   let resolved = svgStr;
   for (const [cssVar, value] of Object.entries(CSS_VAR_MAP)) {
     resolved = resolved.replaceAll(cssVar, value);
@@ -36,7 +36,7 @@ function resolveCssVars(svgStr: string): string {
   return resolved;
 }
 
-function prepareSvgClone(svgEl: SVGSVGElement): string {
+export function prepareSvgClone(svgEl: SVGSVGElement): string {
   const clone = svgEl.cloneNode(true) as SVGSVGElement;
   clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
 

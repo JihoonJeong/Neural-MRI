@@ -68,6 +68,16 @@ export type TranslationKey =
   | 'export.svg'
   | 'export.json'
   | 'export.report'
+  | 'export.gif'
+  | 'export.webm'
+  // Recording
+  | 'recording.rec'
+  | 'recording.stop'
+  | 'recording.play'
+  | 'recording.pause'
+  | 'recording.save'
+  | 'recording.load'
+  | 'recording.speed'
   // SAE
   | 'sae.title'
   | 'sae.noSae'
@@ -212,6 +222,16 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     'export.svg': 'SVG Image',
     'export.json': 'Scan Data (JSON)',
     'export.report': 'Report (Markdown)',
+    'export.gif': 'GIF Animation',
+    'export.webm': 'WebM Video',
+    // ── Recording ──
+    'recording.rec': 'REC',
+    'recording.stop': 'STOP',
+    'recording.play': 'PLAY',
+    'recording.pause': 'PAUSE',
+    'recording.save': 'SAVE',
+    'recording.load': 'LOAD',
+    'recording.speed': 'Speed',
     // ── SAE ──
     'sae.title': 'SAE FEATURES',
     'sae.noSae': 'No SAE available for this model',
@@ -356,6 +376,16 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     'export.svg': 'SVG \uc774\ubbf8\uc9c0',
     'export.json': '\uc2a4\uce94 \ub370\uc774\ud130 (JSON)',
     'export.report': '\ub9ac\ud3ec\ud2b8 (Markdown)',
+    'export.gif': 'GIF \uc560\ub2c8\uba54\uc774\uc158',
+    'export.webm': 'WebM \ub3d9\uc601\uc0c1',
+    // ── Recording ──
+    'recording.rec': '\ub179\ud654',
+    'recording.stop': '\uc815\uc9c0',
+    'recording.play': '\uc7ac\uc0dd',
+    'recording.pause': '\uc77c\uc2dc\uc815\uc9c0',
+    'recording.save': '\uc800\uc7a5',
+    'recording.load': '\ubd88\ub7ec\uc624\uae30',
+    'recording.speed': '\uc18d\ub3c4',
     // ── SAE ──
     'sae.title': 'SAE \ud2b9\uc9d5',
     'sae.noSae': '\uc774 \ubaa8\ub378\uc5d0\ub294 SAE\uac00 \uc5c6\uc2b5\ub2c8\ub2e4',

@@ -19,10 +19,12 @@ import { BatteryPanel } from './components/Panels/BatteryPanel';
 import { SAEPanel } from './components/Panels/SAEPanel';
 import { CollabPanel } from './components/Panels/CollabPanel';
 import { PeerCursors } from './components/PeerCursors';
+import { RecordingBar } from './components/RecordingBar';
 import { useModelStore } from './store/useModelStore';
 import { useScanStore } from './store/useScanStore';
 import { useCompareStore } from './store/useCompareStore';
 import { useCollabStore } from './store/useCollabStore';
+import { useRecordingStore } from './store/useRecordingStore';
 
 export default function App() {
   const fetchModelInfo = useModelStore((s) => s.fetchModelInfo);
@@ -33,6 +35,7 @@ export default function App() {
   const remoteScanState = useCollabStore((s) => s.remoteScanState);
   const joinSession = useCollabStore((s) => s.joinSession);
   const sendCursor = useCollabStore((s) => s.sendCursor);
+  const playbackFrame = useRecordingStore((s) => s.currentFrame);
 
   // Fetch model info and available models on mount
   useEffect(() => {
@@ -54,7 +57,17 @@ export default function App() {
     }
   }, [joinSession]);
 
-  // Build dataOverride for viewers
+  // Build dataOverride: playback > collab viewer > none
+  const playbackOverride = playbackFrame ? {
+    mode: playbackFrame.mode,
+    structuralData: playbackFrame.structuralData,
+    weightData: playbackFrame.weightData,
+    activationData: playbackFrame.activationData,
+    circuitData: playbackFrame.circuitData,
+    anomalyData: playbackFrame.anomalyData,
+    selectedTokenIdx: playbackFrame.selectedTokenIdx,
+  } : undefined;
+
   const viewerOverride = collabRole === 'viewer' && remoteScanState ? {
     mode: remoteScanState.mode,
     structuralData: remoteScanState.structuralData,
@@ -64,6 +77,8 @@ export default function App() {
     anomalyData: remoteScanState.anomalyData,
     selectedTokenIdx: remoteScanState.selectedTokenIdx,
   } : undefined;
+
+  const dataOverride = playbackOverride ?? viewerOverride;
 
   return (
     <div
@@ -87,10 +102,11 @@ export default function App() {
             }}
           >
             <ScanLineOverlay />
-            {isCompareMode ? <CompareView /> : <ScanCanvas dataOverride={viewerOverride} />}
+            {isCompareMode ? <CompareView /> : <ScanCanvas dataOverride={dataOverride} />}
             <PeerCursors />
           </div>
           <TokenStepper />
+          <RecordingBar />
           <PromptInput />
           <LogPanel />
         </main>

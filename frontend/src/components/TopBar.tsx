@@ -4,7 +4,9 @@ import { useScanStore } from '../store/useScanStore';
 import { useLocaleStore } from '../store/useLocaleStore';
 import type { TranslationKey } from '../i18n/translations';
 import { useReportStore } from '../store/useReportStore';
+import { useRecordingStore } from '../store/useRecordingStore';
 import { exportPng, exportSvg, exportJson, exportReport } from '../utils/exportUtils';
+import { exportGif, exportWebM } from '../utils/videoExport';
 
 export function TopBar() {
   const { modelInfo, isLoading, error, availableModels, loadModel } = useModelStore();
@@ -12,8 +14,10 @@ export function TopBar() {
   const addLog = scanStore.addLog;
   const { locale, toggleLocale, openGuide, t } = useLocaleStore();
   const { report, generateReport, isGenerating } = useReportStore();
+  const recording = useRecordingStore((s) => s.recording);
   const [showError, setShowError] = useState(false);
   const [exportOpen, setExportOpen] = useState(false);
+  const [videoExporting, setVideoExporting] = useState<string | null>(null);
   const exportRef = useRef<HTMLDivElement>(null);
 
   const hasScanData = !!(scanStore.structuralData || scanStore.activationData || scanStore.circuitData || scanStore.anomalyData);
@@ -50,7 +54,7 @@ export function TopBar() {
     }
   };
 
-  const handleExport = (type: 'png' | 'svg' | 'json' | 'report') => {
+  const handleExport = (type: 'png' | 'svg' | 'json' | 'report' | 'gif' | 'webm') => {
     setExportOpen(false);
     const ts = new Date().toISOString().slice(0, 10);
     const modelId = modelInfo?.model_id ?? 'scan';
@@ -78,6 +82,32 @@ export function TopBar() {
     } else if (type === 'report' && report) {
       exportReport(report, `nmri-report-${modelId}-${ts}.md`);
       addLog('Exported Report');
+    } else if (type === 'gif' && recording) {
+      setVideoExporting('GIF');
+      addLog('Exporting GIF...');
+      exportGif(recording, {
+        fps: 5,
+        onProgress: (p) => { if (p >= 1) setVideoExporting(null); },
+      }).then(() => {
+        addLog('GIF exported');
+        setVideoExporting(null);
+      }).catch(() => {
+        addLog('GIF export failed');
+        setVideoExporting(null);
+      });
+    } else if (type === 'webm' && recording) {
+      setVideoExporting('WebM');
+      addLog('Exporting WebM...');
+      exportWebM(recording, {
+        fps: 10,
+        onProgress: (p) => { if (p >= 1) setVideoExporting(null); },
+      }).then(() => {
+        addLog('WebM exported');
+        setVideoExporting(null);
+      }).catch(() => {
+        addLog('WebM export failed');
+        setVideoExporting(null);
+      });
     }
   };
 
@@ -279,6 +309,29 @@ export function TopBar() {
                 >
                   {t('export.report' as TranslationKey)}
                 </button>
+              )}
+              {recording && (
+                <>
+                  <div style={{ borderTop: '1px solid var(--border)', margin: '2px 0' }} />
+                  <button
+                    onClick={() => handleExport('gif')}
+                    disabled={!!videoExporting}
+                    style={menuItemStyle(!!videoExporting)}
+                    onMouseEnter={(e) => { if (!videoExporting) (e.target as HTMLElement).style.background = 'rgba(255,255,255,0.05)'; }}
+                    onMouseLeave={(e) => { (e.target as HTMLElement).style.background = 'none'; }}
+                  >
+                    {videoExporting === 'GIF' ? 'Exporting GIF...' : t('export.gif' as TranslationKey)}
+                  </button>
+                  <button
+                    onClick={() => handleExport('webm')}
+                    disabled={!!videoExporting}
+                    style={menuItemStyle(!!videoExporting)}
+                    onMouseEnter={(e) => { if (!videoExporting) (e.target as HTMLElement).style.background = 'rgba(255,255,255,0.05)'; }}
+                    onMouseLeave={(e) => { (e.target as HTMLElement).style.background = 'none'; }}
+                  >
+                    {videoExporting === 'WebM' ? 'Exporting WebM...' : t('export.webm' as TranslationKey)}
+                  </button>
+                </>
               )}
             </div>
           )}
