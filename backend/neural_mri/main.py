@@ -8,16 +8,19 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import ORJSONResponse
 
 from neural_mri.api.routes_battery import router as battery_router
+from neural_mri.api.routes_collab import router as collab_router
 from neural_mri.api.routes_model import router as model_router
 from neural_mri.api.routes_perturb import router as perturb_router
 from neural_mri.api.routes_report import router as report_router
 from neural_mri.api.routes_sae import router as sae_router
 from neural_mri.api.routes_scan import router as scan_router
+from neural_mri.api.ws_collab import router as ws_collab_router
 from neural_mri.api.ws_stream import router as ws_router
 from neural_mri.config import Settings
 from neural_mri.core.model_manager import ModelManager
 from neural_mri.core.sae_manager import SAEManager
 from neural_mri.core.scan_cache import ScanCache
+from neural_mri.core.session_manager import SessionManager
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(name)s] %(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
@@ -34,6 +37,7 @@ if settings.hf_token:
 model_manager = ModelManager()
 sae_manager = SAEManager()
 scan_cache = ScanCache(max_entries=settings.max_cache_entries)
+session_manager = SessionManager()
 
 
 @asynccontextmanager
@@ -70,7 +74,9 @@ app.include_router(perturb_router, prefix="/api/perturb", tags=["perturb"])
 app.include_router(report_router, prefix="/api/report", tags=["report"])
 app.include_router(battery_router, prefix="/api/battery", tags=["battery"])
 app.include_router(sae_router, prefix="/api/sae", tags=["sae"])
+app.include_router(collab_router, prefix="/api/collab", tags=["collab"])
 app.include_router(ws_router, tags=["websocket"])
+app.include_router(ws_collab_router, tags=["websocket"])
 
 
 @app.get("/")

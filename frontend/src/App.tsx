@@ -17,15 +17,22 @@ import { ReportModal } from './components/ReportModal';
 import { BatteryDetailModal } from './components/BatteryDetailModal';
 import { BatteryPanel } from './components/Panels/BatteryPanel';
 import { SAEPanel } from './components/Panels/SAEPanel';
+import { CollabPanel } from './components/Panels/CollabPanel';
+import { PeerCursors } from './components/PeerCursors';
 import { useModelStore } from './store/useModelStore';
 import { useScanStore } from './store/useScanStore';
 import { useCompareStore } from './store/useCompareStore';
+import { useCollabStore } from './store/useCollabStore';
 
 export default function App() {
   const fetchModelInfo = useModelStore((s) => s.fetchModelInfo);
   const fetchModels = useModelStore((s) => s.fetchModels);
   const addLog = useScanStore((s) => s.addLog);
   const isCompareMode = useCompareStore((s) => s.isCompareMode);
+  const collabRole = useCollabStore((s) => s.role);
+  const remoteScanState = useCollabStore((s) => s.remoteScanState);
+  const joinSession = useCollabStore((s) => s.joinSession);
+  const sendCursor = useCollabStore((s) => s.sendCursor);
 
   // Fetch model info and available models on mount
   useEffect(() => {
@@ -37,6 +44,26 @@ export default function App() {
       }
     });
   }, [fetchModelInfo, fetchModels, addLog]);
+
+  // Auto-join session from ?session= URL param
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const sessionParam = params.get('session');
+    if (sessionParam) {
+      joinSession(sessionParam).catch(() => {});
+    }
+  }, [joinSession]);
+
+  // Build dataOverride for viewers
+  const viewerOverride = collabRole === 'viewer' && remoteScanState ? {
+    mode: remoteScanState.mode,
+    structuralData: remoteScanState.structuralData,
+    weightData: remoteScanState.weightData,
+    activationData: remoteScanState.activationData,
+    circuitData: remoteScanState.circuitData,
+    anomalyData: remoteScanState.anomalyData,
+    selectedTokenIdx: remoteScanState.selectedTokenIdx,
+  } : undefined;
 
   return (
     <div
@@ -50,9 +77,18 @@ export default function App() {
         {/* Left: Main canvas area */}
         <main className="flex-1 flex flex-col">
           <DicomHeader />
-          <div className="flex-1 flex justify-center items-start relative overflow-hidden">
+          <div
+            className="flex-1 flex justify-center items-start relative overflow-hidden"
+            onMouseMove={(e) => {
+              if (useCollabStore.getState().isInSession) {
+                const rect = e.currentTarget.getBoundingClientRect();
+                sendCursor(e.clientX - rect.left, e.clientY - rect.top);
+              }
+            }}
+          >
             <ScanLineOverlay />
-            {isCompareMode ? <CompareView /> : <ScanCanvas />}
+            {isCompareMode ? <CompareView /> : <ScanCanvas dataOverride={viewerOverride} />}
+            <PeerCursors />
           </div>
           <TokenStepper />
           <PromptInput />
@@ -80,6 +116,9 @@ export default function App() {
           </div>
           <div style={{ borderTop: '1px solid var(--border)' }}>
             <SAEPanel />
+          </div>
+          <div style={{ borderTop: '1px solid var(--border)' }}>
+            <CollabPanel />
           </div>
         </aside>
       </div>

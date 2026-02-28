@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useScanStore } from '../store/useScanStore';
 import { useCompareStore } from '../store/useCompareStore';
 import { useLocaleStore } from '../store/useLocaleStore';
+import { useCollabStore } from '../store/useCollabStore';
 import type { TranslationKey } from '../i18n/translations';
 
 const inputStyle = {
@@ -20,6 +21,7 @@ export function PromptInput() {
   const t = useLocaleStore((s) => s.t);
   const [scanFailed, setScanFailed] = useState(false);
 
+  const isViewer = useCollabStore((s) => s.role) === 'viewer';
   const isPromptMode = mode === 'fMRI' || mode === 'DTI' || mode === 'FLAIR';
   const busy = isScanning || isScanningB;
 
@@ -93,18 +95,19 @@ export function PromptInput() {
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           onKeyDown={handleKeyDown}
+          disabled={isViewer}
           className="flex-1 rounded"
-          style={inputStyle}
+          style={{ ...inputStyle, opacity: isViewer ? 0.5 : 1 }}
         />
         {!isCompareMode && (
           <button
             onClick={handleScan}
-            disabled={busy}
+            disabled={busy || isViewer}
             className="rounded tracking-wide"
             style={{
               background: scanFailed
                 ? 'rgba(255,68,102,0.2)'
-                : busy
+                : busy || isViewer
                   ? '#1a1c22'
                   : 'rgba(0,255,170,0.12)',
               border: scanFailed
@@ -114,12 +117,13 @@ export function PromptInput() {
               padding: '6px 16px',
               fontSize: 'var(--font-size-sm)',
               fontFamily: 'var(--font-primary)',
-              cursor: busy ? 'default' : 'pointer',
+              cursor: busy || isViewer ? 'default' : 'pointer',
               letterSpacing: '1px',
               animation: busy ? 'scan-pulse 1.5s ease-in-out infinite' : 'none',
+              opacity: isViewer ? 0.5 : 1,
             }}
           >
-            {busy ? 'SCANNING...' : 'SCAN'}
+            {isViewer ? 'VIEW ONLY' : busy ? 'SCANNING...' : 'SCAN'}
           </button>
         )}
       </div>

@@ -130,4 +130,29 @@ export const api = {
         body: JSON.stringify({ prompt, layer_idx: layerIdx, top_k: topK }),
       }),
   },
+  collab: {
+    create: (displayName = 'Host') =>
+      request<{ session_id: string; host_id: string; join_url: string }>(
+        `/collab/create?display_name=${encodeURIComponent(displayName)}`,
+        { method: 'POST' },
+      ),
+    get: (sessionId: string) =>
+      request<{
+        session_id: string;
+        host_id: string;
+        host_name: string;
+        participant_count: number;
+      }>(`/collab/${sessionId}`),
+    delete: (sessionId: string) =>
+      request<{ status: string }>(`/collab/${sessionId}`, { method: 'DELETE' }),
+    list: () =>
+      request<
+        Array<{
+          session_id: string;
+          host_name: string;
+          participant_count: number;
+          created_at: string;
+        }>
+      >('/collab/list'),
+  },
 };
