@@ -57,7 +57,16 @@ export type TranslationKey =
   | 'compare.promptB'
   | 'compare.diff'
   | 'compare.scan'
-  | 'compare.stronger';
+  | 'compare.stronger'
+  // Export
+  | 'export.button'
+  | 'export.png'
+  | 'export.svg'
+  | 'export.json'
+  | 'export.report'
+  // Layout
+  | 'layout.vertical'
+  | 'layout.brain';
 
 export const translations: Record<Locale, Record<TranslationKey, string>> = {
   en: {
@@ -178,6 +187,15 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     'compare.diff': 'ACTIVATION DIFF',
     'compare.scan': 'COMPARE',
     'compare.stronger': 'stronger',
+    // ── Export ──
+    'export.button': 'EXPORT',
+    'export.png': 'PNG Image',
+    'export.svg': 'SVG Image',
+    'export.json': 'Scan Data (JSON)',
+    'export.report': 'Report (Markdown)',
+    // ── Layout ──
+    'layout.vertical': 'Stack View',
+    'layout.brain': 'Brain View',
   },
 
   ko: {
@@ -298,5 +316,14 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     'compare.diff': '\ud65c\uc131\ud654 \ucc28\uc774',
     'compare.scan': '\ube44\uad50 \uc2a4\uce94',
     'compare.stronger': '\ub354 \uac15\ud568',
+    // ── Export ──
+    'export.button': '\ub0b4\ubcf4\ub0b4\uae30',
+    'export.png': 'PNG \uc774\ubbf8\uc9c0',
+    'export.svg': 'SVG \uc774\ubbf8\uc9c0',
+    'export.json': '\uc2a4\uce94 \ub370\uc774\ud130 (JSON)',
+    'export.report': '\ub9ac\ud3ec\ud2b8 (Markdown)',
+    // ── Layout ──
+    'layout.vertical': '\uc2a4\ud0dd \ubdf0',
+    'layout.brain': '\ub1cc \ubdf0',
   },
 };

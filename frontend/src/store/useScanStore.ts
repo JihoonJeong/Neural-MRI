@@ -8,8 +8,11 @@ interface LogEntry {
   msg: string;
 }
 
+export type LayoutMode = 'vertical' | 'brain';
+
 interface ScanState {
   mode: ScanMode;
+  layoutMode: LayoutMode;
   structuralData: StructuralData | null;
   weightData: WeightData | null;
   activationData: ActivationData | null;
@@ -23,6 +26,7 @@ interface ScanState {
   logs: LogEntry[];
 
   setMode: (mode: ScanMode) => void;
+  setLayoutMode: (mode: LayoutMode) => void;
   setPrompt: (prompt: string) => void;
   runScan: () => Promise<void>;
   selectLayer: (layerId: string | null) => void;
@@ -38,6 +42,7 @@ function timestamp(): string {
 
 export const useScanStore = create<ScanState>((set, get) => ({
   mode: 'T1',
+  layoutMode: 'vertical',
   structuralData: null,
   weightData: null,
   activationData: null,
@@ -54,6 +59,8 @@ export const useScanStore = create<ScanState>((set, get) => ({
     set({ mode });
     get().addLog(`Mode: ${mode}`);
   },
+
+  setLayoutMode: (layoutMode) => set({ layoutMode }),
 
   setPrompt: (prompt) => set({ prompt }),
 

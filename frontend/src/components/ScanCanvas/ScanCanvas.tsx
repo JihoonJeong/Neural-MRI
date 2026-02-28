@@ -5,6 +5,7 @@ import { useModelStore } from '../../store/useModelStore';
 import { usePerturbStore } from '../../store/usePerturbStore';
 import { useAnimationFrame } from '../../hooks/useAnimationFrame';
 import { getNodeColor, getEdgeStyle } from './colorMaps';
+import { buildBrainLayout } from './brainLayout';
 import type { ActivationData, AnomalyData, CircuitData, LayerStructure, ConnectionInfo, LayerWeightStats, StructuralData, WeightData } from '../../types/scan';
 import type { ScanMode } from '../../types/model';
 
@@ -138,9 +139,10 @@ export function ScanCanvas(props: ScanCanvasProps = {}) {
 
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const nodesRef = useRef<d3.Selection<SVGGElement, CanvasNode, SVGSVGElement, unknown> | null>(null);
-  const edgesRef = useRef<d3.Selection<SVGPathElement, CanvasEdge, SVGSVGElement, unknown> | null>(null);
-  const glowsRef = useRef<d3.Selection<SVGCircleElement, CanvasNode, SVGSVGElement, unknown> | null>(null);
+  const nodesRef = useRef<d3.Selection<SVGGElement, CanvasNode, SVGGElement, unknown> | null>(null);
+  const edgesRef = useRef<d3.Selection<SVGPathElement, CanvasEdge, SVGGElement, unknown> | null>(null);
+  const glowsRef = useRef<d3.Selection<SVGCircleElement, CanvasNode, SVGGElement, unknown> | null>(null);
+  const zoomRef = useRef<d3.ZoomBehavior<SVGSVGElement, unknown> | null>(null);
 
   // Read from store (used when no dataOverride)
   const storeData = useScanStore();
@@ -158,6 +160,8 @@ export function ScanCanvas(props: ScanCanvasProps = {}) {
   const selectedTokenIdx = props.dataOverride?.selectedTokenIdx ?? storeData.selectedTokenIdx;
   const selectedLayerId = props.dataOverride?.selectedLayerId ?? storeData.selectedLayerId;
   const handleSelectLayer = props.onLayerSelect ?? storeData.selectLayer;
+  const layoutMode = storeData.layoutMode;
+  const prevLayoutRef = useRef(layoutMode);
 
   // --- Crossfade state ---
   const prevModeRef = useRef<ScanMode>(mode);
@@ -176,16 +180,26 @@ export function ScanCanvas(props: ScanCanvasProps = {}) {
   const [tooltip, setTooltip] = useState<{ x: number; y: number; node: CanvasNode } | null>(null);
 
   // Build base layout from structural data
-  const { nodes: baseNodes, edges: baseEdges } = useMemo(() => {
-    if (!structuralData) return { nodes: [], edges: [] };
-    return buildLayout(
+  const { nodes: baseNodes, edges: baseEdges, brainPath } = useMemo(() => {
+    if (!structuralData) return { nodes: [], edges: [], brainPath: '' };
+    if (layoutMode === 'brain') {
+      return buildBrainLayout(
+        structuralData.layers,
+        structuralData.connections,
+        canvasWidth,
+        canvasHeight,
+        weightData?.layers,
+      );
+    }
+    const result = buildLayout(
       structuralData.layers,
       structuralData.connections,
       canvasWidth,
       canvasHeight,
       weightData?.layers,
     );
-  }, [structuralData, weightData, canvasWidth, canvasHeight]);
+    return { ...result, brainPath: '' };
+  }, [structuralData, weightData, canvasWidth, canvasHeight, layoutMode]);
 
   // Compute final nodes/edges with mode-specific overlays
   const { nodes, edges } = useMemo(() => {
@@ -256,6 +270,13 @@ export function ScanCanvas(props: ScanCanvasProps = {}) {
     const svg = d3.select(svgRef.current);
     svg.selectAll('*').remove();
 
+    // Reset zoom on layout mode change
+    if (prevLayoutRef.current !== layoutMode) {
+      prevLayoutRef.current = layoutMode;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (svgRef.current as any).__zoom = d3.zoomIdentity;
+    }
+
     const defs = svg.append('defs');
 
     // Vignette gradient
@@ -284,10 +305,46 @@ export function ScanCanvas(props: ScanCanvasProps = {}) {
       .join('feMergeNode')
       .attr('in', (d) => d);
 
+    // --- Zoom group: all zoomable content goes here ---
+    const g = svg.append('g').attr('class', 'zoom-group');
+
+    // Set up zoom behavior (create once, reuse across re-renders)
+    if (!zoomRef.current) {
+      zoomRef.current = d3.zoom<SVGSVGElement, unknown>()
+        .scaleExtent([0.3, 4])
+        .on('zoom', (event) => {
+          d3.select(svgRef.current!)
+            .select<SVGGElement>('g.zoom-group')
+            .attr('transform', event.transform.toString());
+        });
+    }
+    svg.call(zoomRef.current);
+    svg.on('dblclick.zoom', null); // replace default double-click zoom-in
+
+    // Restore current zoom transform (persists across re-renders)
+    const currentTransform = d3.zoomTransform(svgRef.current);
+    g.attr('transform', currentTransform.toString());
+
+    // Double-click to reset zoom
+    svg.on('dblclick', () => {
+      if (!zoomRef.current) return;
+      svg.transition().duration(300).call(zoomRef.current.transform, d3.zoomIdentity);
+    });
+
+    // Brain silhouette (only in brain layout mode)
+    if (brainPath) {
+      g.append('path')
+        .attr('d', brainPath)
+        .attr('fill', 'rgba(100, 170, 136, 0.04)')
+        .attr('stroke', 'rgba(100, 170, 136, 0.10)')
+        .attr('stroke-width', 1)
+        .attr('pointer-events', 'none');
+    }
+
     const nodeMap = new Map(nodes.map((n) => [n.id, n]));
 
     // Edges — use <path> for DTI (curved), <path> with straight line for others
-    edgesRef.current = svg
+    edgesRef.current = g
       .selectAll<SVGPathElement, CanvasEdge>('path.edge')
       .data(edges)
       .join('path')
@@ -319,7 +376,7 @@ export function ScanCanvas(props: ScanCanvasProps = {}) {
     }
 
     // fMRI glow circles (behind nodes, for high-activation nodes)
-    glowsRef.current = svg
+    glowsRef.current = g
       .selectAll<SVGCircleElement, CanvasNode>('circle.glow')
       .data(nodes)
       .join('circle')
@@ -334,7 +391,7 @@ export function ScanCanvas(props: ScanCanvasProps = {}) {
       .attr('filter', 'url(#fmri-glow)');
 
     // Node groups
-    nodesRef.current = svg
+    nodesRef.current = g
       .selectAll<SVGGElement, CanvasNode>('g.node')
       .data(nodes)
       .join('g')
@@ -350,8 +407,12 @@ export function ScanCanvas(props: ScanCanvasProps = {}) {
         if (!svgEl || !containerEl) return;
         const containerRect = containerEl.getBoundingClientRect();
         const svgRect = svgEl.getBoundingClientRect();
-        const x = svgRect.left - containerRect.left + d.x + d.radius + 12;
-        const y = svgRect.top - containerRect.top + d.y - 10;
+        // Account for zoom transform
+        const transform = d3.zoomTransform(svgEl);
+        const screenX = d.x * transform.k + transform.x;
+        const screenY = d.y * transform.k + transform.y;
+        const x = svgRect.left - containerRect.left + screenX + d.radius * transform.k + 12;
+        const y = svgRect.top - containerRect.top + screenY - 10;
         setTooltip({ x, y, node: d });
       })
       .on('mouseleave', () => {
@@ -377,9 +438,9 @@ export function ScanCanvas(props: ScanCanvasProps = {}) {
       .attr('stroke-width', 1)
       .attr('opacity', 0.4);
 
-    // Left-side labels (hide in small canvases)
-    if (canvasWidth >= 400) {
-      svg
+    // Left-side labels (hide in small canvases and brain layout)
+    if (canvasWidth >= 400 && !brainPath) {
+      g
         .selectAll<SVGTextElement, CanvasNode>('text.label')
         .data(nodes)
         .join('text')
@@ -393,14 +454,14 @@ export function ScanCanvas(props: ScanCanvasProps = {}) {
         .text((d) => nodeLabel(d));
     }
 
-    // Vignette overlay
+    // Vignette overlay (outside zoom group — stays fixed)
     svg
       .append('rect')
       .attr('width', canvasWidth)
       .attr('height', canvasHeight)
       .attr('fill', 'url(#vignette)')
       .attr('pointer-events', 'none');
-  }, [nodes, edges, mode, selectedLayerId, handleSelectLayer, canvasWidth, canvasHeight]);
+  }, [nodes, edges, mode, selectedLayerId, handleSelectLayer, canvasWidth, canvasHeight, brainPath, layoutMode]);
 
   // Animation frame: update node colors, radii, glow, edge dash offset
   const isAnimated = mode === 'fMRI' || mode === 'DTI' || mode === 'FLAIR';
@@ -597,6 +658,7 @@ export function ScanCanvas(props: ScanCanvasProps = {}) {
         ref={svgRef}
         width={canvasWidth}
         height={canvasHeight}
+        data-nmri-canvas={props.label || 'main'}
         style={{
           display: 'block',
           opacity: fadeOpacity,

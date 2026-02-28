@@ -7,8 +7,10 @@ import type { TranslationKey } from '../i18n/translations';
 const MODE_KEYS: ScanMode[] = ['T1', 'T2', 'fMRI', 'DTI', 'FLAIR'];
 
 export function ModeTabs() {
-  const { mode, setMode } = useScanStore();
+  const { mode, setMode, layoutMode, setLayoutMode } = useScanStore();
   const t = useLocaleStore((s) => s.t);
+
+  const isBrain = layoutMode === 'brain';
 
   return (
     <div className="flex" style={{ borderBottom: '1px solid var(--border)', background: 'var(--bg-secondary)' }}>
@@ -43,6 +45,31 @@ export function ModeTabs() {
           </div>
         );
       })}
+
+      {/* Layout toggle */}
+      <div className="flex items-center px-2 shrink-0">
+        <Tooltip
+          text={isBrain ? t('layout.vertical' as TranslationKey) : t('layout.brain' as TranslationKey)}
+          position="bottom"
+        >
+          <button
+            onClick={() => setLayoutMode(isBrain ? 'vertical' : 'brain')}
+            style={{
+              background: isBrain ? 'rgba(0,255,170,0.12)' : 'transparent',
+              border: isBrain ? '1px solid rgba(0,255,170,0.3)' : '1px solid var(--border)',
+              color: isBrain ? 'var(--accent-active)' : 'var(--text-secondary)',
+              padding: '4px 8px',
+              fontSize: 'var(--font-size-sm)',
+              fontFamily: 'var(--font-primary)',
+              cursor: 'pointer',
+              borderRadius: 4,
+              transition: 'all 0.2s ease',
+            }}
+          >
+            {isBrain ? '\u25ce' : '\u2261'}
+          </button>
+        </Tooltip>
+      </div>
     </div>
   );
 }
