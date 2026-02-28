@@ -9,7 +9,6 @@ import pytest
 import torch
 
 from neural_mri.core.model_manager import ModelManager
-from neural_mri.core.scan_cache import ScanCache
 from neural_mri.schemas.model import LayerConfig, ModelInfo
 
 N_LAYERS = 2
@@ -23,9 +22,16 @@ SEQ_LEN = 4
 
 def _make_cfg(**overrides):
     defaults = dict(
-        n_layers=N_LAYERS, n_heads=N_HEADS, d_model=D_MODEL,
-        d_head=D_HEAD, d_mlp=D_MLP, d_vocab=D_VOCAB,
-        n_ctx=64, model_name="mock-gpt2", device="cpu", dtype="float32",
+        n_layers=N_LAYERS,
+        n_heads=N_HEADS,
+        d_model=D_MODEL,
+        d_head=D_HEAD,
+        d_mlp=D_MLP,
+        d_vocab=D_VOCAB,
+        n_ctx=64,
+        model_name="mock-gpt2",
+        device="cpu",
+        dtype="float32",
     )
     defaults.update(overrides)
     return types.SimpleNamespace(**defaults)
@@ -41,7 +47,8 @@ def _build_mock_cache(cfg, seq_len=SEQ_LEN):
         cache[f"blocks.{i}.hook_attn_out"] = torch.randn(1, seq_len, cfg.d_model)
         cache[f"blocks.{i}.hook_mlp_out"] = torch.randn(1, seq_len, cfg.d_model)
         cache[f"blocks.{i}.attn.hook_pattern"] = torch.softmax(
-            torch.randn(1, cfg.n_heads, seq_len, seq_len), dim=-1,
+            torch.randn(1, cfg.n_heads, seq_len, seq_len),
+            dim=-1,
         )
     return cache
 
@@ -62,6 +69,7 @@ def mock_model(mock_cfg):
         if not prepend_bos:
             return torch.randint(0, cfg.d_vocab, (1, 1))
         return torch.randint(0, cfg.d_vocab, (1, SEQ_LEN))
+
     model.to_tokens = MagicMock(side_effect=_to_tokens)
 
     model.to_str_tokens = MagicMock(return_value=["<bos>", "The", " capital", " of"])
@@ -118,9 +126,13 @@ def mock_model_manager(mock_model):
         device="cpu",
         layers=[
             LayerConfig(
-                layer_index=i, layer_type="transformer_block",
-                components=["attn", "mlp"], num_heads=N_HEADS,
-                d_model=D_MODEL, d_head=D_HEAD, d_mlp=D_MLP,
+                layer_index=i,
+                layer_type="transformer_block",
+                components=["attn", "mlp"],
+                num_heads=N_HEADS,
+                d_model=D_MODEL,
+                d_head=D_HEAD,
+                d_mlp=D_MLP,
             )
             for i in range(N_LAYERS)
         ],
@@ -140,10 +152,12 @@ def mock_sae():
     def _encode(x):
         batch_shape = x.shape[:-1]
         return torch.relu(torch.randn(*batch_shape, 32))
+
     sae.encode = MagicMock(side_effect=_encode)
 
     def _decode(x):
         return torch.randn(*x.shape[:-1], D_MODEL)
+
     sae.decode = MagicMock(side_effect=_decode)
     return sae
 

@@ -5,9 +5,9 @@ from unittest.mock import MagicMock
 import pytest
 from httpx import ASGITransport, AsyncClient
 
-from neural_mri.main import app
 from neural_mri.api.routes_sae import get_model_manager, get_sae_manager, get_scan_cache
 from neural_mri.core.scan_cache import ScanCache
+from neural_mri.main import app
 
 
 @pytest.fixture

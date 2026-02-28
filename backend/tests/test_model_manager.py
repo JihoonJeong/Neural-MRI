@@ -1,6 +1,6 @@
 """Tests for ModelManager."""
 
-from unittest.mock import MagicMock, patch
+from unittest.mock import MagicMock
 
 from neural_mri.core.model_manager import ModelManager, _parse_param_str
 

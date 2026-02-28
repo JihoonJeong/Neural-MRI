@@ -10,12 +10,14 @@ from neural_mri.main import app
 
 def _get_deps():
     from neural_mri.api.routes_scan import get_model_manager, get_scan_cache
+
     return get_model_manager, get_scan_cache
 
 
 @pytest.fixture
 def _override_deps(mock_model_manager):
     from neural_mri.core.scan_cache import ScanCache
+
     get_mm, get_cache = _get_deps()
     app.dependency_overrides[get_mm] = lambda: mock_model_manager
     app.dependency_overrides[get_cache] = lambda: ScanCache(max_entries=5)

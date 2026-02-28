@@ -5,8 +5,8 @@ from unittest.mock import MagicMock
 import pytest
 from httpx import ASGITransport, AsyncClient
 
-from neural_mri.main import app
 from neural_mri.api.routes_battery import get_model_manager, get_sae_manager
+from neural_mri.main import app
 from neural_mri.schemas.battery import (
     ActivationSummary,
     BatteryResult,
@@ -17,14 +17,24 @@ from neural_mri.schemas.battery import (
 
 def _make_battery_result(**overrides):
     defaults = dict(
-        model_id="gpt2", total_tests=7, passed=4, failed=3,
+        model_id="gpt2",
+        total_tests=7,
+        passed=4,
+        failed=3,
         results=[
             TestResult(
-                test_id="t1", category="factual_recall", name="Test",
-                prompt="p", passed=True, top_k=[TestPrediction(token="x", prob=0.5)],
-                actual_token="x", actual_prob=0.5,
+                test_id="t1",
+                category="factual_recall",
+                name="Test",
+                prompt="p",
+                passed=True,
+                top_k=[TestPrediction(token="x", prob=0.5)],
+                actual_token="x",
+                actual_prob=0.5,
                 activation_summary=ActivationSummary(
-                    peak_layers=[0], peak_activation=1.0, active_layer_count=1,
+                    peak_layers=[0],
+                    peak_activation=1.0,
+                    active_layer_count=1,
                 ),
                 interpretation="ok",
             ),

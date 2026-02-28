@@ -37,6 +37,7 @@ def test_scan_weights_returns_stats(mock_model_manager):
 def test_scan_activation_returns_normalized(mock_model_manager):
     engine = AnalysisEngine(mock_model_manager)
     from neural_mri.schemas.scan import ActivationScanRequest
+
     data = engine.scan_activation(ActivationScanRequest(prompt="test"))
     for layer in data.layers:
         for val in layer.activations:
@@ -46,5 +47,6 @@ def test_scan_activation_returns_normalized(mock_model_manager):
 def test_scan_anomaly_layer_count(mock_model_manager):
     engine = AnalysisEngine(mock_model_manager)
     from neural_mri.schemas.scan import AnomalyScanRequest
+
     data = engine.scan_anomaly(AnomalyScanRequest(prompt="test"))
     assert len(data.layers) == 2  # n_layers=2

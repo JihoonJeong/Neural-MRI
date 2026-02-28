@@ -1,7 +1,5 @@
 """Tests for BatteryEngine — mock model + torch tensors."""
 
-import torch
-
 from neural_mri.core.battery_engine import BatteryEngine
 from neural_mri.schemas.battery import SAEFeatureBrief
 
@@ -48,9 +46,7 @@ def test_battery_summary_locale_en(mock_model_manager):
 def test_battery_summary_locale_ko(mock_model_manager):
     engine = BatteryEngine(mock_model_manager)
     result = engine.run_battery(locale="ko")
-    # Korean summary should differ from English
-    en_result = engine.run_battery(locale="en")
-    # Both should contain the count
+    # Should contain the count
     assert str(result.total_tests) in result.summary
 
 
@@ -74,22 +70,40 @@ def test_build_cross_test_summary(mock_model_manager):
         SAEFeatureBrief(feature_idx=30, activation=2.0, activation_normalized=0.4),
     ]
 
-    from neural_mri.schemas.battery import TestResult, ActivationSummary
+    from neural_mri.schemas.battery import ActivationSummary, TestResult
 
     results = [
         TestResult(
-            test_id="test_a", category="factual_recall", name="A",
-            prompt="p", passed=True, top_k=[], actual_token="x",
-            actual_prob=0.5, activation_summary=ActivationSummary(
-                peak_layers=[0], peak_activation=1.0, active_layer_count=1,
-            ), interpretation="ok",
+            test_id="test_a",
+            category="factual_recall",
+            name="A",
+            prompt="p",
+            passed=True,
+            top_k=[],
+            actual_token="x",
+            actual_prob=0.5,
+            activation_summary=ActivationSummary(
+                peak_layers=[0],
+                peak_activation=1.0,
+                active_layer_count=1,
+            ),
+            interpretation="ok",
         ),
         TestResult(
-            test_id="test_b", category="syntactic", name="B",
-            prompt="p", passed=True, top_k=[], actual_token="y",
-            actual_prob=0.5, activation_summary=ActivationSummary(
-                peak_layers=[1], peak_activation=1.0, active_layer_count=1,
-            ), interpretation="ok",
+            test_id="test_b",
+            category="syntactic",
+            name="B",
+            prompt="p",
+            passed=True,
+            top_k=[],
+            actual_token="y",
+            actual_prob=0.5,
+            activation_summary=ActivationSummary(
+                peak_layers=[1],
+                peak_activation=1.0,
+                active_layer_count=1,
+            ),
+            interpretation="ok",
         ),
     ]
 
@@ -100,7 +114,10 @@ def test_build_cross_test_summary(mock_model_manager):
 
     summary = engine._build_cross_test_summary(
         {"test_a": features_a, "test_b": features_b},
-        results, layer_idx=5, sae_info=sae_info, loc="en",
+        results,
+        layer_idx=5,
+        sae_info=sae_info,
+        loc="en",
     )
 
     assert summary.layer_idx == 5

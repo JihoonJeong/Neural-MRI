@@ -10,6 +10,7 @@ from neural_mri.main import app
 
 def _get_model_manager_dep():
     from neural_mri.api.routes_model import get_model_manager
+
     return get_model_manager
 
 
