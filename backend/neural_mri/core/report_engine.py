@@ -423,13 +423,15 @@ class ReportEngine:
             cross_features = sae_summary.get("cross_test_features", [])
             if cross_features:
                 top = cross_features[0]
-                details.append(T(
-                    loc,
-                    "report.battery_sae_cross",
-                    idx=top["feature_idx"],
-                    count=top["count"],
-                    total=total,
-                ))
+                details.append(
+                    T(
+                        loc,
+                        "report.battery_sae_cross",
+                        idx=top["feature_idx"],
+                        count=top["count"],
+                        total=total,
+                    )
+                )
 
         if failed > 0:
             cats_str = ", ".join(categories_failed.keys())
@@ -546,11 +548,7 @@ class ReportEngine:
             details.append(T(loc, "report.sae_low_recon"))
 
         # Neuronpedia availability
-        has_np = any(
-            f.neuronpedia_url
-            for tf in data.token_features
-            for f in tf.top_features
-        )
+        has_np = any(f.neuronpedia_url for tf in data.token_features for f in tf.top_features)
         if has_np:
             details.append(T(loc, "report.sae_neuronpedia"))
 

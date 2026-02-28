@@ -69,8 +69,12 @@ class BatteryEngine:
                     resolved_layer = sae_info["layers"][len(sae_info["layers"]) // 2]
                 device = str(model.cfg.device)
                 sae = self._sae_mgr.get_sae(self._mm.model_id, resolved_layer, device)
-                hook_name_from_meta = sae.cfg.metadata.get("hook_name") if sae.cfg.metadata else None
-                hook_name = hook_name_from_meta or sae_info["sae_id_template"].format(layer=resolved_layer)
+                hook_name_from_meta = (
+                    sae.cfg.metadata.get("hook_name") if sae.cfg.metadata else None
+                )
+                hook_name = hook_name_from_meta or sae_info["sae_id_template"].format(
+                    layer=resolved_layer
+                )
 
         tests = get_all_tests() if categories is None else get_tests_by_categories(categories)
         results: list[TestResult] = []
@@ -78,9 +82,13 @@ class BatteryEngine:
 
         for tc in tests:
             result = self._run_single_test(
-                model, tc, loc,
-                sae=sae, hook_name=hook_name,
-                sae_layer=resolved_layer, sae_info=sae_info,
+                model,
+                tc,
+                loc,
+                sae=sae,
+                hook_name=hook_name,
+                sae_layer=resolved_layer,
+                sae_info=sae_info,
             )
             results.append(result)
             if result.sae_features is not None:
@@ -88,9 +96,18 @@ class BatteryEngine:
 
         # Cross-test SAE summary
         sae_summary = None
-        if sae is not None and all_test_sae_features and sae_info is not None and resolved_layer is not None:
+        if (
+            sae is not None
+            and all_test_sae_features
+            and sae_info is not None
+            and resolved_layer is not None
+        ):
             sae_summary = self._build_cross_test_summary(
-                all_test_sae_features, results, resolved_layer, sae_info, loc,
+                all_test_sae_features,
+                results,
+                resolved_layer,
+                sae_info,
+                loc,
             )
 
         passed = sum(1 for r in results if r.passed)
@@ -179,9 +196,18 @@ class BatteryEngine:
 
         # SAE feature extraction from the same cache
         sae_result = None
-        if sae is not None and hook_name is not None and sae_layer is not None and sae_info is not None:
+        if (
+            sae is not None
+            and hook_name is not None
+            and sae_layer is not None
+            and sae_info is not None
+        ):
             sae_result = self._extract_sae_features(
-                cache, sae, hook_name, sae_layer, sae_info,
+                cache,
+                sae,
+                hook_name,
+                sae_layer,
+                sae_info,
             )
 
         return TestResult(
@@ -226,12 +252,14 @@ class BatteryEngine:
             np_url = None
             if neuronpedia_template:
                 np_url = neuronpedia_template.format(layer=layer_idx, feature_idx=idx)
-            top_features.append(SAEFeatureBrief(
-                feature_idx=idx,
-                activation=round(val, 4),
-                activation_normalized=round(val / global_max, 4),
-                neuronpedia_url=np_url,
-            ))
+            top_features.append(
+                SAEFeatureBrief(
+                    feature_idx=idx,
+                    activation=round(val, 4),
+                    activation_normalized=round(val / global_max, 4),
+                    neuronpedia_url=np_url,
+                )
+            )
 
         return TestSAEResult(
             layer_idx=layer_idx,
@@ -259,9 +287,7 @@ class BatteryEngine:
             for f in features:
                 if f.activation > 0:
                     all_unique.add(f.feature_idx)
-                    feature_map.setdefault(f.feature_idx, []).append(
-                        (test_id, cat, f.activation)
-                    )
+                    feature_map.setdefault(f.feature_idx, []).append((test_id, cat, f.activation))
 
         # Cross-test features (appearing in 2+ tests)
         neuronpedia_template = sae_info.get("neuronpedia_url_template")
@@ -275,15 +301,17 @@ class BatteryEngine:
             np_url = None
             if neuronpedia_template:
                 np_url = neuronpedia_template.format(layer=layer_idx, feature_idx=feat_idx)
-            cross_features.append(CrossTestFeature(
-                feature_idx=feat_idx,
-                neuronpedia_url=np_url,
-                test_ids=test_ids,
-                categories=categories,
-                count=len(test_ids),
-                avg_activation=round(sum(activations) / len(activations), 4),
-                max_activation=round(max(activations), 4),
-            ))
+            cross_features.append(
+                CrossTestFeature(
+                    feature_idx=feat_idx,
+                    neuronpedia_url=np_url,
+                    test_ids=test_ids,
+                    categories=categories,
+                    count=len(test_ids),
+                    avg_activation=round(sum(activations) / len(activations), 4),
+                    max_activation=round(max(activations), 4),
+                )
+            )
 
         # Per-category top features (top 3 per category)
         cat_features: dict[str, dict[int, float]] = {}
@@ -293,7 +321,8 @@ class BatteryEngine:
             for f in features:
                 if f.activation > 0:
                     cat_features[cat][f.feature_idx] = max(
-                        cat_features[cat].get(f.feature_idx, 0), f.activation,
+                        cat_features[cat].get(f.feature_idx, 0),
+                        f.activation,
                     )
         per_category_top: dict[str, list[int]] = {
             cat: [idx for idx, _ in sorted(feats.items(), key=lambda x: -x[1])[:3]]

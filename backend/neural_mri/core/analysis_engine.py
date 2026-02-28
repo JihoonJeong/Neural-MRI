@@ -582,9 +582,7 @@ class AnalysisEngine:
             for val, idx in zip(topk_vals.tolist(), topk_idxs.tolist()):
                 np_url = None
                 if neuronpedia_template:
-                    np_url = neuronpedia_template.format(
-                        layer=req.layer_idx, feature_idx=idx
-                    )
+                    np_url = neuronpedia_template.format(layer=req.layer_idx, feature_idx=idx)
                 feat_infos.append(
                     SAEFeatureInfo(
                         feature_idx=idx,

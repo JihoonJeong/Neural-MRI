@@ -22,11 +22,7 @@ class SAEManager:
     def get_sae(self, model_id: str, layer_idx: int, device: str) -> SAE:
         """Return cached SAE or load a new one for the given model+layer."""
         # Cache hit
-        if (
-            self._sae is not None
-            and self._model_id == model_id
-            and self._layer_idx == layer_idx
-        ):
+        if self._sae is not None and self._model_id == model_id and self._layer_idx == layer_idx:
             return self._sae
 
         # Different model or layer — unload first
@@ -37,9 +33,7 @@ class SAEManager:
             raise ValueError(f"No SAE available for model: {model_id}")
 
         if layer_idx not in info["layers"]:
-            raise ValueError(
-                f"Layer {layer_idx} not available for SAE. Valid: {info['layers']}"
-            )
+            raise ValueError(f"Layer {layer_idx} not available for SAE. Valid: {info['layers']}")
 
         release = info["release"]
         sae_id = info["sae_id_template"].format(layer=layer_idx)

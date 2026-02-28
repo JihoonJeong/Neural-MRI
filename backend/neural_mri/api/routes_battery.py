@@ -45,7 +45,11 @@ async def run_battery(
 ) -> BatteryResult:
     _require_model(mm)
     result = await asyncio.to_thread(
-        engine.run_battery, req.categories, req.locale, req.include_sae, req.sae_layer,
+        engine.run_battery,
+        req.categories,
+        req.locale,
+        req.include_sae,
+        req.sae_layer,
     )
     return result
 

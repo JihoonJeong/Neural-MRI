@@ -415,7 +415,10 @@ _STRINGS: dict[str, dict[str, str]] = {
         "ko": "레이어 {layer} SAE 분석: {n_unique}개 고유 특징 활성화",
     },
     "report.battery_sae_cross": {
-        "en": "Feature #{idx} appeared in {count}/{total} tests — likely a general computation feature",
+        "en": (
+            "Feature #{idx} appeared in {count}/{total} tests"
+            " — likely a general computation feature"
+        ),
         "ko": "특징 #{idx}이(가) {count}/{total}개 테스트에 출현 — 일반적 연산 특징일 가능성",
     },
     # ------------------------------------------------------------------ #
@@ -442,11 +445,14 @@ _STRINGS: dict[str, dict[str, str]] = {
         "ko": "{t}개 토큰에서 {n}개 고유 특징 활성화",
     },
     "report.sae_top_feature": {
-        "en": "Token \"{token}\": strongest feature #{idx} (activation {act:.1f})",
-        "ko": "토큰 \"{token}\": 최강 특징 #{idx} (활성화 {act:.1f})",
+        "en": 'Token "{token}": strongest feature #{idx} (activation {act:.1f})',
+        "ko": '토큰 "{token}": 최강 특징 #{idx} (활성화 {act:.1f})',
     },
     "report.sae_dominant": {
-        "en": "Feature #{idx} dominates ({ratio:.0%} of max activation) — potential monosemantic concept",
+        "en": (
+            "Feature #{idx} dominates ({ratio:.0%} of max activation)"
+            " — potential monosemantic concept"
+        ),
         "ko": "특징 #{idx}이(가) 지배적 (최대 활성화의 {ratio:.0%}) — 단일의미 개념 가능",
     },
     "report.sae_high_recon": {
@@ -524,7 +530,7 @@ _STRINGS: dict[str, dict[str, str]] = {
     "report.explain_sae_dominant": {
         "en": (
             "Feature #{idx} activates dramatically stronger than other features "
-            "for token \"{token}\" ({ratio:.0%} of the global max). A dominant feature "
+            'for token "{token}" ({ratio:.0%} of the global max). A dominant feature '
             "often represents a highly specific concept that the model has "
             "dedicated a clean computational direction to. This is a hallmark of "
             "successful feature learning — the model has likely allocated this "
@@ -532,7 +538,7 @@ _STRINGS: dict[str, dict[str, str]] = {
             "Check its Neuronpedia page to see what concept it encodes."
         ),
         "ko": (
-            "특징 #{idx}이(가) 토큰 \"{token}\"에서 다른 특징들보다 극적으로 "
+            '특징 #{idx}이(가) 토큰 "{token}"에서 다른 특징들보다 극적으로 '
             "강하게 활성화됩니다 (전역 최대값의 {ratio:.0%}). 지배적 특징은 모델이 "
             "깨끗한 연산 방향을 할당한 매우 구체적인 개념을 나타내는 경우가 많습니다. "
             "이는 성공적인 특징 학습의 특징으로, 모델이 특정 단어, 주제 또는 구문적 "
