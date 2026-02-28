@@ -1,5 +1,6 @@
 import { useBatteryStore } from '../../store/useBatteryStore';
 import { useModelStore } from '../../store/useModelStore';
+import { useSAEStore } from '../../store/useSAEStore';
 import { useLocaleStore } from '../../store/useLocaleStore';
 import type { TranslationKey } from '../../i18n/translations';
 
@@ -13,9 +14,11 @@ const CATEGORY_COLORS: Record<string, string> = {
 };
 
 export function BatteryPanel() {
-  const { result, isRunning, error, runBattery, openDetail } = useBatteryStore();
+  const { result, isRunning, error, runBattery, openDetail, includeSAE, saeLayer, setIncludeSAE, setSaeLayer } = useBatteryStore();
   const isModelLoaded = useModelStore((s) => s.modelInfo !== null);
+  const saeInfo = useSAEStore((s) => s.saeInfo);
   const t = useLocaleStore((s) => s.t);
+  const saeAvailable = saeInfo?.available ?? false;
 
   return (
     <div className="px-3 py-2">
@@ -44,6 +47,45 @@ export function BatteryPanel() {
         </button>
       </div>
 
+      {/* SAE toggle */}
+      {saeAvailable && (
+        <div className="flex items-center gap-2 mb-2" style={{ fontSize: 'var(--font-size-xs)' }}>
+          <label
+            className="flex items-center gap-1"
+            style={{ color: includeSAE ? '#aa88ff' : 'var(--text-secondary)', cursor: 'pointer' }}
+          >
+            <input
+              type="checkbox"
+              checked={includeSAE}
+              onChange={(e) => setIncludeSAE(e.target.checked)}
+              style={{ accentColor: '#aa88ff' }}
+            />
+            {t('battery.includeSae' as TranslationKey)}
+          </label>
+          {includeSAE && saeInfo && (
+            <select
+              value={saeLayer ?? ''}
+              onChange={(e) => setSaeLayer(e.target.value ? Number(e.target.value) : null)}
+              style={{
+                background: 'var(--bg-primary)',
+                color: 'var(--text-data)',
+                border: '1px solid var(--border)',
+                borderRadius: 3,
+                fontSize: 'var(--font-size-xs)',
+                fontFamily: 'var(--font-primary)',
+                padding: '1px 4px',
+                width: 52,
+              }}
+            >
+              <option value="">{t('battery.autoLayer' as TranslationKey)}</option>
+              {saeInfo.layers.map((l) => (
+                <option key={l} value={l}>{l}</option>
+              ))}
+            </select>
+          )}
+        </div>
+      )}
+
       {error && (
         <div style={{ fontSize: 'var(--font-size-xs)', color: '#ff4466', marginBottom: 4 }}>
           {error.length > 40 ? error.slice(0, 40) + '...' : error}
@@ -67,6 +109,11 @@ export function BatteryPanel() {
             {result.failed > 0 && (
               <span style={{ color: '#ff4466', marginLeft: 8 }}>
                 {t('battery.failed' as TranslationKey)}: {result.failed}
+              </span>
+            )}
+            {result.sae_summary && (
+              <span style={{ color: '#aa88ff', marginLeft: 8, fontSize: 'var(--font-size-xs)', fontWeight: 'normal' }}>
+                SAE L{result.sae_summary.layer_idx}
               </span>
             )}
           </div>
@@ -106,6 +153,9 @@ export function BatteryPanel() {
                 >
                   {r.name}
                 </span>
+                {r.sae_features && (
+                  <span style={{ color: '#aa88ff', flexShrink: 0, fontSize: 9 }}>SAE</span>
+                )}
                 <span style={{ color: r.passed ? '#44ddaa' : '#ff4466', flexShrink: 0 }}>
                   {r.passed ? '\u2713' : '\u2717'}
                 </span>

@@ -35,4 +35,5 @@ export interface ReportRequest {
   cached_dti?: Record<string, unknown>;
   cached_flair?: Record<string, unknown>;
   cached_battery?: Record<string, unknown>;
+  cached_sae?: Record<string, unknown>;
 }

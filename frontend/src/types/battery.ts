@@ -26,6 +26,38 @@ export interface CompareResult {
   pronoun_probs?: Record<string, number>;
 }
 
+export interface SAEFeatureBrief {
+  feature_idx: number;
+  activation: number;
+  activation_normalized: number;
+  neuronpedia_url: string | null;
+}
+
+export interface TestSAEResult {
+  layer_idx: number;
+  hook_name: string;
+  top_features: SAEFeatureBrief[];
+}
+
+export interface CrossTestFeature {
+  feature_idx: number;
+  neuronpedia_url: string | null;
+  test_ids: string[];
+  categories: string[];
+  count: number;
+  avg_activation: number;
+  max_activation: number;
+}
+
+export interface BatterySAESummary {
+  layer_idx: number;
+  d_sae: number;
+  total_unique_features: number;
+  cross_test_features: CrossTestFeature[];
+  per_category_top_features: Record<string, number[]>;
+  interpretation: string;
+}
+
 export interface TestResult {
   test_id: string;
   category: string;
@@ -39,6 +71,7 @@ export interface TestResult {
   activation_summary: ActivationSummary;
   interpretation: string;
   compare_results?: CompareResult[];
+  sae_features?: TestSAEResult;
 }
 
 export interface BatteryResult {
@@ -48,4 +81,5 @@ export interface BatteryResult {
   failed: number;
   results: TestResult[];
   summary: string;
+  sae_summary?: BatterySAESummary;
 }

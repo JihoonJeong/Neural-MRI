@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useBatteryStore } from '../store/useBatteryStore';
 import { useLocaleStore } from '../store/useLocaleStore';
 import type { TranslationKey } from '../i18n/translations';
-import type { TestResult, CompareResult } from '../types/battery';
+import type { TestResult, CompareResult, BatterySAESummary } from '../types/battery';
 
 const CATEGORY_COLORS: Record<string, string> = {
   factual_recall: '#44ddaa',
@@ -57,6 +57,92 @@ function CompareSection({ compare, t }: { compare: CompareResult; t: (key: Trans
             <span key={pron} style={{ color: '#ffaa44' }}>
               {pron.trim()}: {(prob * 100).toFixed(1)}%
             </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function SAEFeaturesSection({ result, t }: { result: TestResult; t: (key: TranslationKey) => string }) {
+  if (!result.sae_features) return null;
+
+  return (
+    <div className="ml-5 mt-2">
+      <div style={{ fontSize: 'var(--font-size-xs)', color: '#aa88ff', marginBottom: 2 }}>
+        {t('battery.saeFeatures' as TranslationKey)} (L{result.sae_features.layer_idx})
+      </div>
+      {result.sae_features.top_features.map((f) => (
+        <div key={f.feature_idx} className="flex items-center gap-1 py-0.5" style={{ fontSize: 'var(--font-size-xs)' }}>
+          <span style={{ color: '#aa88ff', width: 50, flexShrink: 0, textAlign: 'right', fontFamily: 'var(--font-primary)' }}>
+            #{f.feature_idx}
+          </span>
+          <div style={{
+            flex: 1, maxWidth: 80, height: 5, background: 'rgba(255,255,255,0.05)',
+            borderRadius: 3, overflow: 'hidden',
+          }}>
+            <div style={{
+              width: `${Math.min(f.activation_normalized * 100, 100)}%`,
+              height: '100%',
+              background: 'linear-gradient(90deg, #7c3aed, #06b6d4)',
+              borderRadius: 3,
+            }} />
+          </div>
+          <span style={{ color: 'var(--text-data)', width: 40, flexShrink: 0, textAlign: 'right' }}>
+            {f.activation.toFixed(1)}
+          </span>
+          {f.neuronpedia_url && (
+            <a
+              href={f.neuronpedia_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              style={{ color: '#06b6d4', textDecoration: 'none', flexShrink: 0, fontSize: 10 }}
+              title="Neuronpedia"
+            >
+              NP
+            </a>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function CrossTestSAESection({ summary, totalTests, t }: { summary: BatterySAESummary; totalTests: number; t: (key: TranslationKey) => string }) {
+  return (
+    <div className="mb-4 pb-3" style={{ borderBottom: '1px solid var(--border)' }}>
+      <div style={{ fontSize: 'var(--font-size-sm)', fontWeight: 'bold', color: '#aa88ff', marginBottom: 6 }}>
+        {t('battery.crossTestSae' as TranslationKey)} (L{summary.layer_idx})
+      </div>
+      <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--text-data)', marginBottom: 6, lineHeight: 1.6 }}>
+        {summary.interpretation}
+      </div>
+      {summary.cross_test_features.length > 0 && (
+        <div style={{ fontSize: 'var(--font-size-xs)' }}>
+          {summary.cross_test_features.slice(0, 5).map((cf) => (
+            <div key={cf.feature_idx} className="flex items-center gap-2 py-0.5">
+              <span style={{ color: '#aa88ff', fontFamily: 'var(--font-primary)' }}>#{cf.feature_idx}</span>
+              <span style={{ color: 'var(--text-secondary)' }}>
+                {cf.count}/{totalTests} tests
+              </span>
+              <span style={{ color: 'var(--text-data)' }}>
+                [{cf.categories.join(', ')}]
+              </span>
+              <span style={{ color: 'var(--text-data)' }}>
+                avg: {cf.avg_activation.toFixed(1)}
+              </span>
+              {cf.neuronpedia_url && (
+                <a
+                  href={cf.neuronpedia_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#06b6d4', textDecoration: 'none', fontSize: 10 }}
+                >
+                  NP
+                </a>
+              )}
+            </div>
           ))}
         </div>
       )}
@@ -121,6 +207,9 @@ function TestResultCard({ result, t }: { result: TestResult; t: (key: Translatio
       {result.compare_results?.map((cr, i) => (
         <CompareSection key={i} compare={cr} t={t} />
       ))}
+
+      {/* SAE Features */}
+      <SAEFeaturesSection result={result} t={t} />
     </div>
   );
 }
@@ -221,6 +310,11 @@ export function BatteryDetailModal() {
           <span style={{ color: 'var(--text-secondary)', fontSize: 'var(--font-size-xs)' }}>
             {result.total_tests} {t('battery.total' as TranslationKey)}
           </span>
+          {result.sae_summary && (
+            <span style={{ color: '#aa88ff', fontSize: 'var(--font-size-xs)' }}>
+              SAE L{result.sae_summary.layer_idx}
+            </span>
+          )}
         </div>
 
         {/* Results */}
@@ -228,6 +322,15 @@ export function BatteryDetailModal() {
           {result.results.map((r) => (
             <TestResultCard key={r.test_id} result={r} t={t} />
           ))}
+
+          {/* Cross-test SAE summary */}
+          {result.sae_summary && (
+            <CrossTestSAESection
+              summary={result.sae_summary}
+              totalTests={result.total_tests}
+              t={t}
+            />
+          )}
 
           {/* Summary */}
           <div

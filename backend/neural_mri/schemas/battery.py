@@ -31,6 +31,46 @@ class CompareResult(BaseModel):
     pronoun_probs: dict[str, float] | None = None  # e.g. {" he": 0.3, " she": 0.1}
 
 
+class SAEFeatureBrief(BaseModel):
+    """Compact SAE feature for battery context (top-5)."""
+
+    feature_idx: int
+    activation: float
+    activation_normalized: float  # 0-1
+    neuronpedia_url: str | None = None
+
+
+class TestSAEResult(BaseModel):
+    """SAE features at the prediction (last) token for one test."""
+
+    layer_idx: int
+    hook_name: str
+    top_features: list[SAEFeatureBrief]
+
+
+class CrossTestFeature(BaseModel):
+    """A feature appearing across multiple tests."""
+
+    feature_idx: int
+    neuronpedia_url: str | None = None
+    test_ids: list[str]
+    categories: list[str]
+    count: int
+    avg_activation: float
+    max_activation: float
+
+
+class BatterySAESummary(BaseModel):
+    """Cross-test SAE analysis summary."""
+
+    layer_idx: int
+    d_sae: int
+    total_unique_features: int
+    cross_test_features: list[CrossTestFeature]
+    per_category_top_features: dict[str, list[int]]
+    interpretation: str
+
+
 class TestResult(BaseModel):
     test_id: str
     category: str
@@ -44,6 +84,7 @@ class TestResult(BaseModel):
     activation_summary: ActivationSummary
     interpretation: str
     compare_results: list[CompareResult] | None = None
+    sae_features: TestSAEResult | None = None
 
 
 class BatteryResult(BaseModel):
@@ -53,8 +94,11 @@ class BatteryResult(BaseModel):
     failed: int
     results: list[TestResult]
     summary: str
+    sae_summary: BatterySAESummary | None = None
 
 
 class BatteryRunRequest(BaseModel):
     categories: list[str] | None = None  # None = all categories
     locale: str = "en"
+    include_sae: bool = False
+    sae_layer: int | None = None

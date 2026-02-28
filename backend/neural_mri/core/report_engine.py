@@ -20,6 +20,7 @@ from neural_mri.schemas.scan import (
     AnomalyScanRequest,
     CircuitData,
     CircuitScanRequest,
+    SAEData,
     StructuralData,
     WeightData,
 )
@@ -64,6 +65,13 @@ class ReportEngine:
             findings.extend(self._analyze_dti(dti, loc))
         if flair:
             findings.extend(self._analyze_flair(flair, loc))
+
+        # SAE findings (if provided)
+        if req.cached_sae:
+            sae_data = SAEData(**req.cached_sae)
+            findings.extend(self._analyze_sae(sae_data, loc))
+            if "SAE" not in technique:
+                technique.append("SAE")
 
         # Battery findings (if provided)
         if req.cached_battery:
@@ -405,6 +413,24 @@ class ReportEngine:
         for cat, count in categories_failed.items():
             details.append(T(loc, "report.battery_cat_fail", cat=cat, n=count))
 
+        # SAE insights if present
+        sae_summary = battery_data.get("sae_summary")
+        if sae_summary:
+            layer_idx = sae_summary.get("layer_idx", "?")
+            n_unique = sae_summary.get("total_unique_features", 0)
+            details.append(T(loc, "report.battery_sae_layer", layer=layer_idx, n_unique=n_unique))
+
+            cross_features = sae_summary.get("cross_test_features", [])
+            if cross_features:
+                top = cross_features[0]
+                details.append(T(
+                    loc,
+                    "report.battery_sae_cross",
+                    idx=top["feature_idx"],
+                    count=top["count"],
+                    total=total,
+                ))
+
         if failed > 0:
             cats_str = ", ".join(categories_failed.keys())
             explanation = T(
@@ -422,6 +448,119 @@ class ReportEngine:
                 scan_mode="battery",
                 severity=severity,
                 title=T(loc, "report.battery_title"),
+                details=details,
+                explanation=explanation,
+            )
+        ]
+
+    # ------------------------------------------------------------------ #
+    # SAE Analysis
+    # ------------------------------------------------------------------ #
+
+    @staticmethod
+    def _analyze_sae(data: SAEData, loc: str) -> list[ReportFinding]:
+        n_tokens = len(data.tokens)
+        n_active = len(data.heatmap_feature_indices)
+
+        details = [
+            T(loc, "report.sae_layer", layer=data.layer_idx, d_sae=data.d_sae),
+            T(loc, "report.sae_sparsity", pct=data.sparsity),
+            T(loc, "report.sae_recon", loss=data.reconstruction_loss),
+            T(loc, "report.sae_active", n=n_active, t=n_tokens),
+        ]
+
+        severity = "normal"
+        explanation_key = "report.explain_sae_normal"
+        explain_kwargs: dict = {
+            "layer": data.layer_idx,
+            "d_sae": data.d_sae,
+            "pct": data.sparsity,
+        }
+
+        # Find the strongest feature across all tokens (skip BOS)
+        max_act = 0.0
+        max_feat_idx = 0
+        max_token_str = ""
+        second_max_act = 0.0
+
+        for tf in data.token_features:
+            if tf.top_features:
+                top = tf.top_features[0]
+                if top.activation > max_act:
+                    second_max_act = max_act
+                    max_act = top.activation
+                    max_feat_idx = top.feature_idx
+                    max_token_str = tf.token_str.strip() or " "
+                elif top.activation > second_max_act:
+                    second_max_act = top.activation
+
+        # Report top feature per non-trivial token (skip BOS, limit to 3)
+        reported = 0
+        for tf in data.token_features:
+            if reported >= 3:
+                break
+            tok_str = tf.token_str.strip()
+            if not tok_str or tok_str in ("<|endoftext|>", "<s>", "<bos>"):
+                continue
+            if tf.top_features:
+                top = tf.top_features[0]
+                if top.activation > 0:
+                    details.append(
+                        T(
+                            loc,
+                            "report.sae_top_feature",
+                            token=tok_str,
+                            idx=top.feature_idx,
+                            act=top.activation,
+                        )
+                    )
+                    reported += 1
+
+        # Check for dominant feature
+        if max_act > 0 and second_max_act > 0:
+            dominance_ratio = max_act / (max_act + second_max_act)
+            if dominance_ratio > 0.7:
+                severity = "notable"
+                details.append(
+                    T(
+                        loc,
+                        "report.sae_dominant",
+                        idx=max_feat_idx,
+                        ratio=dominance_ratio,
+                    )
+                )
+                explanation_key = "report.explain_sae_dominant"
+                explain_kwargs = {
+                    "idx": max_feat_idx,
+                    "token": max_token_str,
+                    "ratio": dominance_ratio,
+                }
+
+        # Check reconstruction loss quality
+        if data.reconstruction_loss > 1.0:
+            severity = "notable"
+            details.append(T(loc, "report.sae_high_recon"))
+            explanation_key = "report.explain_sae_high_recon"
+            explain_kwargs = {"loss": data.reconstruction_loss, "d_sae": data.d_sae}
+        elif data.reconstruction_loss < 0.01:
+            details.append(T(loc, "report.sae_low_recon"))
+
+        # Neuronpedia availability
+        has_np = any(
+            f.neuronpedia_url
+            for tf in data.token_features
+            for f in tf.top_features
+        )
+        if has_np:
+            details.append(T(loc, "report.sae_neuronpedia"))
+
+        explanation = T(loc, explanation_key, **explain_kwargs)
+
+        return [
+            ReportFinding(
+                scan_mode="SAE",
+                severity=severity,
+                title=T(loc, "report.sae_title"),
                 details=details,
                 explanation=explanation,
             )
@@ -508,6 +647,8 @@ class ReportEngine:
                     recs.append(T(loc, "report.rec_fmri"))
                 elif f.scan_mode == "DTI":
                     recs.append(T(loc, "report.rec_dti"))
+                elif f.scan_mode == "SAE":
+                    recs.append(T(loc, "report.rec_sae"))
 
         if not recs:
             recs.append(T(loc, "report.rec_default"))

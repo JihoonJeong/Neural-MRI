@@ -39,4 +39,5 @@ class ReportRequest(BaseModel):
     cached_dti: dict | None = None
     cached_flair: dict | None = None
     cached_battery: dict | None = None
+    cached_sae: dict | None = None
     locale: str = "en"

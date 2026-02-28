@@ -6,6 +6,8 @@ import time
 import torch
 
 from neural_mri.core.model_manager import ModelManager
+from neural_mri.core.sae_manager import SAEManager
+from neural_mri.core.sae_registry import get_sae_info
 from neural_mri.schemas.scan import (
     ActivationData,
     ActivationScanRequest,
@@ -21,6 +23,10 @@ from neural_mri.schemas.scan import (
     LayerStructure,
     LayerWeightStats,
     PathwayConnection,
+    SAEData,
+    SAEFeatureInfo,
+    SAEScanRequest,
+    SAETokenFeatures,
     StructuralData,
     WeightData,
 )
@@ -500,6 +506,143 @@ class AnalysisEngine:
                 "n_layers": cfg.n_layers,
                 "alpha_kl": 0.6,
                 "beta_entropy": 0.4,
+                "compute_time_ms": round(elapsed_ms, 1),
+            },
+        )
+
+    # ------------------------------------------------------------------ #
+    # SAE: Sparse Autoencoder Feature Scan
+    # ------------------------------------------------------------------ #
+
+    def scan_sae(self, req: SAEScanRequest, sae_mgr: SAEManager) -> SAEData:
+        """Decode residual stream into sparse SAE features for a given layer."""
+        start = time.time()
+        model = self._mm.get_model()
+        model_id = self._mm.model_id
+        device = str(model.cfg.device)
+
+        sae_info = get_sae_info(model_id)
+        if sae_info is None:
+            raise ValueError(f"No SAE available for model: {model_id}")
+
+        # Load SAE for the target layer
+        sae = sae_mgr.get_sae(model_id, req.layer_idx, device)
+        # SAE-Lens >=4: hook_name is in metadata, not cfg directly
+        hook_name = sae.cfg.metadata.get("hook_name") if sae.cfg.metadata else None
+        if not hook_name:
+            # Fallback: derive from sae_id_template
+            hook_name = sae_info["sae_id_template"].format(layer=req.layer_idx)
+
+        # Tokenize
+        tokens = model.to_tokens(req.prompt)  # [1, seq_len]
+        str_tokens = model.to_str_tokens(req.prompt)
+
+        # Forward pass with cache
+        with torch.no_grad():
+            _, cache = model.run_with_cache(tokens)
+
+        # Extract activations at the SAE hook point
+        activations = cache[hook_name]  # [1, seq_len, d_model]
+
+        # float16 models need upcast for SAE (which expects float32)
+        activations = activations.float()
+
+        # Encode → sparse features [1, seq_len, d_sae]
+        features = sae.encode(activations)
+
+        # Decode → reconstruction [1, seq_len, d_model]
+        reconstruction = sae.decode(features)
+
+        # Reconstruction loss (MSE per token, averaged)
+        recon_loss = torch.mean((activations - reconstruction) ** 2).item()
+
+        # Sparsity: fraction of features with activation > 0
+        features_2d = features[0]  # [seq_len, d_sae]
+        active_mask = features_2d > 0
+        sparsity = active_mask.float().mean().item()
+
+        # Per-token top-K features
+        seq_len = features_2d.shape[0]
+        top_k = min(req.top_k, features_2d.shape[1])
+
+        neuronpedia_template = sae_info.get("neuronpedia_url_template")
+
+        token_features_list: list[SAETokenFeatures] = []
+        all_active_indices: set[int] = set()
+
+        # Find global max for normalization
+        global_max = features_2d.max().item() if features_2d.numel() > 0 else 1.0
+        global_max = max(global_max, 1e-8)
+
+        for t_idx in range(seq_len):
+            tok_feats = features_2d[t_idx]  # [d_sae]
+            topk_vals, topk_idxs = torch.topk(tok_feats, top_k)
+
+            feat_infos: list[SAEFeatureInfo] = []
+            for val, idx in zip(topk_vals.tolist(), topk_idxs.tolist()):
+                np_url = None
+                if neuronpedia_template:
+                    np_url = neuronpedia_template.format(
+                        layer=req.layer_idx, feature_idx=idx
+                    )
+                feat_infos.append(
+                    SAEFeatureInfo(
+                        feature_idx=idx,
+                        activation=round(val, 4),
+                        activation_normalized=round(val / global_max, 4),
+                        neuronpedia_url=np_url,
+                    )
+                )
+                if val > 0:
+                    all_active_indices.add(idx)
+
+            token_features_list.append(
+                SAETokenFeatures(
+                    token_idx=t_idx,
+                    token_str=str(str_tokens[t_idx]),
+                    top_features=feat_infos,
+                )
+            )
+
+        # Heatmap: rows = tokens, cols = union of active feature indices
+        heatmap_feature_indices = sorted(all_active_indices)
+        idx_to_col = {idx: col for col, idx in enumerate(heatmap_feature_indices)}
+        n_feats = len(heatmap_feature_indices)
+
+        heatmap_values: list[list[float]] = []
+        for t_idx in range(seq_len):
+            row = [0.0] * n_feats
+            tok_feats = features_2d[t_idx]
+            for feat_idx in heatmap_feature_indices:
+                col = idx_to_col[feat_idx]
+                row[col] = round(tok_feats[feat_idx].item() / global_max, 4)
+            heatmap_values.append(row)
+
+        elapsed_ms = (time.time() - start) * 1000
+        logger.info(
+            "SAE scan: layer %d, %d tokens, %d active features, %.1fms",
+            req.layer_idx,
+            seq_len,
+            n_feats,
+            elapsed_ms,
+        )
+
+        return SAEData(
+            model_id=model_id,
+            prompt=req.prompt,
+            layer_idx=req.layer_idx,
+            hook_name=hook_name,
+            d_sae=sae.cfg.d_sae,
+            tokens=[str(t) for t in str_tokens],
+            token_features=token_features_list,
+            reconstruction_loss=round(recon_loss, 6),
+            sparsity=round(sparsity, 4),
+            heatmap_feature_indices=heatmap_feature_indices,
+            heatmap_values=heatmap_values,
+            metadata={
+                "seq_len": seq_len,
+                "top_k": top_k,
+                "total_active_features": n_feats,
                 "compute_time_ms": round(elapsed_ms, 1),
             },
         )

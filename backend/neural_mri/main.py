@@ -11,10 +11,12 @@ from neural_mri.api.routes_battery import router as battery_router
 from neural_mri.api.routes_model import router as model_router
 from neural_mri.api.routes_perturb import router as perturb_router
 from neural_mri.api.routes_report import router as report_router
+from neural_mri.api.routes_sae import router as sae_router
 from neural_mri.api.routes_scan import router as scan_router
 from neural_mri.api.ws_stream import router as ws_router
 from neural_mri.config import Settings
 from neural_mri.core.model_manager import ModelManager
+from neural_mri.core.sae_manager import SAEManager
 from neural_mri.core.scan_cache import ScanCache
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(name)s] %(levelname)s: %(message)s")
@@ -30,6 +32,7 @@ if settings.hf_token:
     logger.info("HuggingFace token configured for gated model access.")
 
 model_manager = ModelManager()
+sae_manager = SAEManager()
 scan_cache = ScanCache(max_entries=settings.max_cache_entries)
 
 
@@ -41,6 +44,7 @@ async def lifespan(app: FastAPI):
         model_manager.load_model(settings.default_model, device=settings.device)
     yield
     # Shutdown: free GPU memory
+    sae_manager.unload()
     model_manager.unload_model()
     logger.info("Neural MRI Scanner shut down.")
 
@@ -65,6 +69,7 @@ app.include_router(scan_router, prefix="/api/scan", tags=["scan"])
 app.include_router(perturb_router, prefix="/api/perturb", tags=["perturb"])
 app.include_router(report_router, prefix="/api/report", tags=["report"])
 app.include_router(battery_router, prefix="/api/battery", tags=["battery"])
+app.include_router(sae_router, prefix="/api/sae", tags=["sae"])
 app.include_router(ws_router, tags=["websocket"])
 
 

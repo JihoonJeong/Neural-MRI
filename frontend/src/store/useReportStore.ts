@@ -4,6 +4,7 @@ import type { ReportRequest } from '../types/report';
 import { api } from '../api/client';
 import { useScanStore } from './useScanStore';
 import { useBatteryStore } from './useBatteryStore';
+import { useSAEStore } from './useSAEStore';
 import { useLocaleStore } from './useLocaleStore';
 
 interface ReportState {
@@ -57,6 +58,12 @@ export const useReportStore = create<ReportState>((set) => ({
       // Include battery results if available
       if (batteryState.result) {
         req.cached_battery = batteryState.result as unknown as Record<string, unknown>;
+      }
+
+      // Include SAE results if available
+      const saeState = useSAEStore.getState();
+      if (saeState.saeData) {
+        req.cached_sae = saeState.saeData as unknown as Record<string, unknown>;
       }
 
       const report = await api.report.generate(req);

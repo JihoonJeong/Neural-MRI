@@ -50,6 +50,10 @@ export type TranslationKey =
   | 'battery.activeLayers'
   | 'battery.compare'
   | 'battery.model'
+  | 'battery.includeSae'
+  | 'battery.autoLayer'
+  | 'battery.saeFeatures'
+  | 'battery.crossTestSae'
   | 'report.explain'
   // Compare
   | 'compare.title'
@@ -64,6 +68,17 @@ export type TranslationKey =
   | 'export.svg'
   | 'export.json'
   | 'export.report'
+  // SAE
+  | 'sae.title'
+  | 'sae.noSae'
+  | 'sae.layer'
+  | 'sae.scan'
+  | 'sae.scanning'
+  | 'sae.features'
+  | 'sae.heatmap'
+  | 'sae.reconstruction'
+  | 'sae.sparsity'
+  | 'sae.neuronpedia'
   // Layout
   | 'layout.vertical'
   | 'layout.brain';
@@ -179,6 +194,10 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     'battery.activeLayers': 'Active layers',
     'battery.compare': 'Compare',
     'battery.model': 'Model',
+    'battery.includeSae': '+ SAE',
+    'battery.autoLayer': 'Auto',
+    'battery.saeFeatures': 'SAE Features',
+    'battery.crossTestSae': 'CROSS-TEST SAE ANALYSIS',
     'report.explain': 'Explanation',
     // ── Compare ──
     'compare.title': 'COMPARE',
@@ -193,6 +212,17 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     'export.svg': 'SVG Image',
     'export.json': 'Scan Data (JSON)',
     'export.report': 'Report (Markdown)',
+    // ── SAE ──
+    'sae.title': 'SAE FEATURES',
+    'sae.noSae': 'No SAE available for this model',
+    'sae.layer': 'Layer',
+    'sae.scan': 'DECODE',
+    'sae.scanning': 'DECODING...',
+    'sae.features': 'Top Features',
+    'sae.heatmap': 'Activation Heatmap',
+    'sae.reconstruction': 'Recon. Loss',
+    'sae.sparsity': 'Sparsity',
+    'sae.neuronpedia': 'Neuronpedia',
     // ── Layout ──
     'layout.vertical': 'Stack View',
     'layout.brain': 'Brain View',
@@ -308,6 +338,10 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     'battery.activeLayers': '\ud65c\uc131 \ub808\uc774\uc5b4',
     'battery.compare': '\ube44\uad50',
     'battery.model': '\ubaa8\ub378',
+    'battery.includeSae': '+ SAE',
+    'battery.autoLayer': '\uc790\ub3d9',
+    'battery.saeFeatures': 'SAE \ud2b9\uc9d5',
+    'battery.crossTestSae': '\uad50\ucc28 \ud14c\uc2a4\ud2b8 SAE \ubd84\uc11d',
     'report.explain': '\ud574\uc124',
     // ── Compare ──
     'compare.title': '\ube44\uad50',
@@ -322,6 +356,17 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     'export.svg': 'SVG \uc774\ubbf8\uc9c0',
     'export.json': '\uc2a4\uce94 \ub370\uc774\ud130 (JSON)',
     'export.report': '\ub9ac\ud3ec\ud2b8 (Markdown)',
+    // ── SAE ──
+    'sae.title': 'SAE \ud2b9\uc9d5',
+    'sae.noSae': '\uc774 \ubaa8\ub378\uc5d0\ub294 SAE\uac00 \uc5c6\uc2b5\ub2c8\ub2e4',
+    'sae.layer': '\ub808\uc774\uc5b4',
+    'sae.scan': '\ub514\ucf54\ub4dc',
+    'sae.scanning': '\ub514\ucf54\ub529 \uc911...',
+    'sae.features': '\uc0c1\uc704 \ud2b9\uc9d5',
+    'sae.heatmap': '\ud65c\uc131\ud654 \ud788\ud2b8\ub9f5',
+    'sae.reconstruction': '\uc7ac\uad6c\uc131 \uc190\uc2e4',
+    'sae.sparsity': '\ud76c\uc18c\uc131',
+    'sae.neuronpedia': 'Neuronpedia',
     // ── Layout ──
     'layout.vertical': '\uc2a4\ud0dd \ubdf0',
     'layout.brain': '\ub1cc \ubdf0',

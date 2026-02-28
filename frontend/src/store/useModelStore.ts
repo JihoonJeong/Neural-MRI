@@ -2,6 +2,7 @@ import { create } from 'zustand';
 import type { ModelInfo } from '../types/model';
 import { api } from '../api/client';
 import type { ModelListEntry } from '../api/client';
+import { useSAEStore } from './useSAEStore';
 
 interface ModelState {
   modelInfo: ModelInfo | null;
@@ -31,6 +32,9 @@ export const useModelStore = create<ModelState>((set) => ({
       } catch {
         // non-critical
       }
+      // Fetch SAE availability for the new model
+      useSAEStore.getState().reset();
+      useSAEStore.getState().fetchInfo();
     } catch (e) {
       set({ error: (e as Error).message, isLoading: false });
     }
@@ -40,6 +44,8 @@ export const useModelStore = create<ModelState>((set) => ({
     try {
       const info = await api.model.info();
       set({ modelInfo: info, error: null });
+      // Fetch SAE availability
+      useSAEStore.getState().fetchInfo();
     } catch {
       // Model not yet loaded — that's ok on initial load
     }

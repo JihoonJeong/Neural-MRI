@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import logging
 import time
+from typing import TYPE_CHECKING
 
 import torch
 
@@ -11,38 +12,86 @@ from neural_mri.i18n import T
 from neural_mri.schemas.battery import (
     ActivationSummary,
     BatteryResult,
+    BatterySAESummary,
     CompareResult,
+    CrossTestFeature,
+    SAEFeatureBrief,
     TestCase,
     TestPrediction,
     TestResult,
+    TestSAEResult,
 )
+
+if TYPE_CHECKING:
+    from neural_mri.core.sae_manager import SAEManager
 
 logger = logging.getLogger(__name__)
 
 TOP_K = 5
+SAE_BATTERY_TOP_K = 5
 
 
 class BatteryEngine:
     """Executes standardized functional test battery on loaded model."""
 
-    def __init__(self, model_manager: ModelManager) -> None:
+    def __init__(
+        self,
+        model_manager: ModelManager,
+        sae_manager: SAEManager | None = None,
+    ) -> None:
         self._mm = model_manager
+        self._sae_mgr = sae_manager
 
     def run_battery(
         self,
         categories: list[str] | None = None,
         locale: str = "en",
+        include_sae: bool = False,
+        sae_layer: int | None = None,
     ) -> BatteryResult:
         start = time.time()
         model = self._mm.get_model()
         loc = locale
 
+        # Resolve SAE availability
+        sae = None
+        sae_info: dict | None = None
+        resolved_layer: int | None = None
+        hook_name: str | None = None
+
+        if include_sae and self._sae_mgr is not None:
+            from neural_mri.core.sae_registry import get_sae_info
+
+            sae_info = get_sae_info(self._mm.model_id)
+            if sae_info is not None:
+                resolved_layer = sae_layer if sae_layer is not None else model.cfg.n_layers // 2
+                if resolved_layer not in sae_info["layers"]:
+                    resolved_layer = sae_info["layers"][len(sae_info["layers"]) // 2]
+                device = str(model.cfg.device)
+                sae = self._sae_mgr.get_sae(self._mm.model_id, resolved_layer, device)
+                hook_name_from_meta = sae.cfg.metadata.get("hook_name") if sae.cfg.metadata else None
+                hook_name = hook_name_from_meta or sae_info["sae_id_template"].format(layer=resolved_layer)
+
         tests = get_all_tests() if categories is None else get_tests_by_categories(categories)
         results: list[TestResult] = []
+        all_test_sae_features: dict[str, list[SAEFeatureBrief]] = {}
 
         for tc in tests:
-            result = self._run_single_test(model, tc, loc)
+            result = self._run_single_test(
+                model, tc, loc,
+                sae=sae, hook_name=hook_name,
+                sae_layer=resolved_layer, sae_info=sae_info,
+            )
             results.append(result)
+            if result.sae_features is not None:
+                all_test_sae_features[result.test_id] = result.sae_features.top_features
+
+        # Cross-test SAE summary
+        sae_summary = None
+        if sae is not None and all_test_sae_features and sae_info is not None and resolved_layer is not None:
+            sae_summary = self._build_cross_test_summary(
+                all_test_sae_features, results, resolved_layer, sae_info, loc,
+            )
 
         passed = sum(1 for r in results if r.passed)
         failed = len(results) - passed
@@ -65,10 +114,11 @@ class BatteryEngine:
             )
 
         logger.info(
-            "Battery complete: %d/%d passed, %.1fms",
+            "Battery complete: %d/%d passed, %.1fms%s",
             passed,
             len(results),
             elapsed_ms,
+            f", SAE layer {resolved_layer}" if sae is not None else "",
         )
 
         return BatteryResult(
@@ -78,9 +128,19 @@ class BatteryEngine:
             failed=failed,
             results=results,
             summary=summary,
+            sae_summary=sae_summary,
         )
 
-    def _run_single_test(self, model, tc: TestCase, loc: str) -> TestResult:
+    def _run_single_test(
+        self,
+        model,
+        tc: TestCase,
+        loc: str,
+        sae=None,
+        hook_name: str | None = None,
+        sae_layer: int | None = None,
+        sae_info: dict | None = None,
+    ) -> TestResult:
         """Run a single test case and evaluate pass/fail."""
         tokens = model.to_tokens(tc.prompt)
 
@@ -117,6 +177,13 @@ class BatteryEngine:
                     tc, top_k, probs, compare_results, model, loc
                 )
 
+        # SAE feature extraction from the same cache
+        sae_result = None
+        if sae is not None and hook_name is not None and sae_layer is not None and sae_info is not None:
+            sae_result = self._extract_sae_features(
+                cache, sae, hook_name, sae_layer, sae_info,
+            )
+
         return TestResult(
             test_id=tc.test_id,
             category=tc.category,
@@ -130,6 +197,137 @@ class BatteryEngine:
             activation_summary=activation_summary,
             interpretation=interpretation,
             compare_results=compare_results,
+            sae_features=sae_result,
+        )
+
+    def _extract_sae_features(
+        self,
+        cache,
+        sae,
+        hook_name: str,
+        layer_idx: int,
+        sae_info: dict,
+    ) -> TestSAEResult:
+        """Extract top SAE features at the last (prediction) token position."""
+        activations = cache[hook_name]  # [1, seq_len, d_model]
+        last_token_act = activations[0, -1:].float()  # [1, d_model]
+
+        features = sae.encode(last_token_act)  # [1, d_sae]
+        features_1d = features[0]  # [d_sae]
+
+        topk_vals, topk_idxs = torch.topk(features_1d, SAE_BATTERY_TOP_K)
+        global_max = features_1d.max().item()
+        global_max = max(global_max, 1e-8)
+
+        neuronpedia_template = sae_info.get("neuronpedia_url_template")
+
+        top_features: list[SAEFeatureBrief] = []
+        for val, idx in zip(topk_vals.tolist(), topk_idxs.tolist()):
+            np_url = None
+            if neuronpedia_template:
+                np_url = neuronpedia_template.format(layer=layer_idx, feature_idx=idx)
+            top_features.append(SAEFeatureBrief(
+                feature_idx=idx,
+                activation=round(val, 4),
+                activation_normalized=round(val / global_max, 4),
+                neuronpedia_url=np_url,
+            ))
+
+        return TestSAEResult(
+            layer_idx=layer_idx,
+            hook_name=hook_name,
+            top_features=top_features,
+        )
+
+    def _build_cross_test_summary(
+        self,
+        all_test_sae_features: dict[str, list[SAEFeatureBrief]],
+        results: list[TestResult],
+        layer_idx: int,
+        sae_info: dict,
+        loc: str,
+    ) -> BatterySAESummary:
+        """Analyze which SAE features appear across multiple tests."""
+        test_category: dict[str, str] = {r.test_id: r.category for r in results}
+
+        # feature_idx -> [(test_id, category, activation)]
+        feature_map: dict[int, list[tuple[str, str, float]]] = {}
+        all_unique: set[int] = set()
+
+        for test_id, features in all_test_sae_features.items():
+            cat = test_category.get(test_id, "unknown")
+            for f in features:
+                if f.activation > 0:
+                    all_unique.add(f.feature_idx)
+                    feature_map.setdefault(f.feature_idx, []).append(
+                        (test_id, cat, f.activation)
+                    )
+
+        # Cross-test features (appearing in 2+ tests)
+        neuronpedia_template = sae_info.get("neuronpedia_url_template")
+        cross_features: list[CrossTestFeature] = []
+        for feat_idx, appearances in sorted(feature_map.items(), key=lambda x: -len(x[1])):
+            if len(appearances) < 2:
+                continue
+            test_ids = [a[0] for a in appearances]
+            categories = sorted(set(a[1] for a in appearances))
+            activations = [a[2] for a in appearances]
+            np_url = None
+            if neuronpedia_template:
+                np_url = neuronpedia_template.format(layer=layer_idx, feature_idx=feat_idx)
+            cross_features.append(CrossTestFeature(
+                feature_idx=feat_idx,
+                neuronpedia_url=np_url,
+                test_ids=test_ids,
+                categories=categories,
+                count=len(test_ids),
+                avg_activation=round(sum(activations) / len(activations), 4),
+                max_activation=round(max(activations), 4),
+            ))
+
+        # Per-category top features (top 3 per category)
+        cat_features: dict[str, dict[int, float]] = {}
+        for test_id, features in all_test_sae_features.items():
+            cat = test_category.get(test_id, "unknown")
+            cat_features.setdefault(cat, {})
+            for f in features:
+                if f.activation > 0:
+                    cat_features[cat][f.feature_idx] = max(
+                        cat_features[cat].get(f.feature_idx, 0), f.activation,
+                    )
+        per_category_top: dict[str, list[int]] = {
+            cat: [idx for idx, _ in sorted(feats.items(), key=lambda x: -x[1])[:3]]
+            for cat, feats in cat_features.items()
+        }
+
+        # Build interpretation
+        total_tests = len(all_test_sae_features)
+        if cross_features:
+            top_cross = cross_features[0]
+            interpretation = T(
+                loc,
+                "battery.sae_cross_summary",
+                n_cross=len(cross_features),
+                top_idx=top_cross.feature_idx,
+                top_count=top_cross.count,
+                total=total_tests,
+                n_unique=len(all_unique),
+            )
+        else:
+            interpretation = T(
+                loc,
+                "battery.sae_no_cross",
+                n_unique=len(all_unique),
+                total=total_tests,
+            )
+
+        return BatterySAESummary(
+            layer_idx=layer_idx,
+            d_sae=sae_info["d_sae"],
+            total_unique_features=len(all_unique),
+            cross_test_features=cross_features,
+            per_category_top_features=per_category_top,
+            interpretation=interpretation,
         )
 
     def _extract_activation_summary(self, model, cache) -> ActivationSummary:

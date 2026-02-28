@@ -4,6 +4,7 @@ from fastapi import APIRouter, Depends, HTTPException
 
 from neural_mri.core.model_manager import ModelManager
 from neural_mri.core.model_registry import list_models
+from neural_mri.core.sae_manager import SAEManager
 from neural_mri.core.scan_cache import ScanCache
 from neural_mri.schemas.model import ModelInfo, ModelLoadRequest
 
@@ -14,6 +15,12 @@ def get_model_manager() -> ModelManager:
     from neural_mri.main import model_manager
 
     return model_manager
+
+
+def get_sae_manager() -> SAEManager:
+    from neural_mri.main import sae_manager
+
+    return sae_manager
 
 
 def get_scan_cache() -> ScanCache:
@@ -34,11 +41,13 @@ async def load_model(
     req: ModelLoadRequest,
     mm: ModelManager = Depends(get_model_manager),
     cache: ScanCache = Depends(get_scan_cache),
+    sae_mgr: SAEManager = Depends(get_sae_manager),
 ) -> ModelInfo:
     try:
-        # Invalidate cache for the old model if switching
+        # Invalidate cache and SAE for the old model if switching
         if mm.model_id and mm.model_id != req.model_id:
             cache.invalidate_model(mm.model_id)
+            sae_mgr.unload()
         result = mm.load_model(req.model_id, req.device)
         return result
     except Exception as e:

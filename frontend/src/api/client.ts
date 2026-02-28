@@ -1,5 +1,5 @@
 import type { ModelInfo } from '../types/model';
-import type { ActivationData, AnomalyData, CircuitData, StructuralData, WeightData } from '../types/scan';
+import type { ActivationData, AnomalyData, CircuitData, SAEData, SAEInfoResponse, StructuralData, WeightData } from '../types/scan';
 import type { PerturbResult, PatchResult } from '../types/perturb';
 import type { DiagnosticReport, ReportRequest } from '../types/report';
 import type { BatteryResult, TestCase } from '../types/battery';
@@ -109,11 +109,25 @@ export const api = {
       }),
   },
   battery: {
-    run: (categories?: string[], locale?: string) =>
+    run: (categories?: string[], locale?: string, includeSae?: boolean, saeLayer?: number | null) =>
       request<BatteryResult>('/battery/run', {
         method: 'POST',
-        body: JSON.stringify({ categories: categories ?? null, locale: locale ?? 'en' }),
+        body: JSON.stringify({
+          categories: categories ?? null,
+          locale: locale ?? 'en',
+          include_sae: includeSae ?? false,
+          sae_layer: saeLayer ?? null,
+        }),
       }),
     tests: () => request<TestCase[]>('/battery/tests'),
+  },
+  sae: {
+    info: () => request<SAEInfoResponse>('/sae/info'),
+    support: () => request<Record<string, boolean>>('/sae/support'),
+    scan: (prompt: string, layerIdx: number, topK = 20) =>
+      request<SAEData>('/sae/scan', {
+        method: 'POST',
+        body: JSON.stringify({ prompt, layer_idx: layerIdx, top_k: topK }),
+      }),
   },
 };

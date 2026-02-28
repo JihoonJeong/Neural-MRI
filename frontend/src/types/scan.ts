@@ -106,6 +106,46 @@ export interface AnomalyData {
   metadata: Record<string, unknown>;
 }
 
+// --- SAE: Sparse Autoencoder Feature Scan ---
+
+export interface SAEFeatureInfo {
+  feature_idx: number;
+  activation: number;
+  activation_normalized: number;
+  neuronpedia_url: string | null;
+}
+
+export interface SAETokenFeatures {
+  token_idx: number;
+  token_str: string;
+  top_features: SAEFeatureInfo[];
+}
+
+export interface SAEData {
+  model_id: string;
+  scan_mode: 'SAE';
+  prompt: string;
+  layer_idx: number;
+  hook_name: string;
+  d_sae: number;
+  tokens: string[];
+  token_features: SAETokenFeatures[];
+  reconstruction_loss: number;
+  sparsity: number;
+  heatmap_feature_indices: number[];
+  heatmap_values: number[][];
+  metadata: Record<string, unknown>;
+}
+
+export interface SAEInfoResponse {
+  available: boolean;
+  model_id: string | null;
+  release?: string;
+  layers: number[];
+  d_sae: number;
+  has_neuronpedia?: boolean;
+}
+
 // --- WebSocket Messages ---
 
 export type WsMessageIn =

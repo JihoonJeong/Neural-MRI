@@ -140,3 +140,41 @@ class AnomalyData(BaseModel):
     tokens: list[str]
     layers: list[LayerAnomaly]
     metadata: dict
+
+
+# --- SAE: Sparse Autoencoder Feature Scan ---
+
+
+class SAEScanRequest(BaseModel):
+    prompt: str
+    layer_idx: int
+    top_k: int = 20
+
+
+class SAEFeatureInfo(BaseModel):
+    feature_idx: int
+    activation: float
+    activation_normalized: float  # 0-1
+    neuronpedia_url: str | None = None
+
+
+class SAETokenFeatures(BaseModel):
+    token_idx: int
+    token_str: str
+    top_features: list[SAEFeatureInfo]
+
+
+class SAEData(BaseModel):
+    model_id: str
+    scan_mode: str = "SAE"
+    prompt: str
+    layer_idx: int
+    hook_name: str
+    d_sae: int
+    tokens: list[str]
+    token_features: list[SAETokenFeatures]
+    reconstruction_loss: float
+    sparsity: float
+    heatmap_feature_indices: list[int]  # union of active features across all tokens
+    heatmap_values: list[list[float]]  # [n_tokens][n_features]
+    metadata: dict

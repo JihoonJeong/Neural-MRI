@@ -17,6 +17,7 @@ const MODE_COLORS: Record<string, string> = {
   DTI: '#44ddaa',
   FLAIR: '#ff4466',
   battery: '#aa88ff',
+  SAE: '#7c3aed',
 };
 
 function SeverityBadge({ severity }: { severity: string }) {

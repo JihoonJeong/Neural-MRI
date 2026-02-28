@@ -382,6 +382,165 @@ _STRINGS: dict[str, dict[str, str]] = {
         "ko": " \ube44\uad50 '{prompt}': he={he:.1%}, she={she:.1%}.",
     },
     # ------------------------------------------------------------------ #
+    # Battery + SAE integration
+    # ------------------------------------------------------------------ #
+    "battery.sae_cross_summary": {
+        "en": (
+            "{n_cross} feature(s) appeared across multiple tests. "
+            "Feature #{top_idx} was active in {top_count}/{total} tests — "
+            "likely represents a general concept. "
+            "{n_unique} unique features total across all tests."
+        ),
+        "ko": (
+            "{n_cross}개 특징이 여러 테스트에서 발견됨. "
+            "특징 #{top_idx}이(가) {top_count}/{total}개 테스트에서 활성화 — "
+            "일반적인 개념을 나타낼 가능성. "
+            "전체 {n_unique}개 고유 특징."
+        ),
+    },
+    "battery.sae_no_cross": {
+        "en": (
+            "No shared features across tests. "
+            "{n_unique} unique features active across {total} tests — "
+            "each test activates distinct feature directions."
+        ),
+        "ko": (
+            "테스트 간 공유 특징 없음. "
+            "{total}개 테스트에서 {n_unique}개 고유 특징 활성화 — "
+            "각 테스트가 별개의 특징 방향을 활성화함."
+        ),
+    },
+    "report.battery_sae_layer": {
+        "en": "SAE analysis at layer {layer}: {n_unique} unique features active",
+        "ko": "레이어 {layer} SAE 분석: {n_unique}개 고유 특징 활성화",
+    },
+    "report.battery_sae_cross": {
+        "en": "Feature #{idx} appeared in {count}/{total} tests — likely a general computation feature",
+        "ko": "특징 #{idx}이(가) {count}/{total}개 테스트에 출현 — 일반적 연산 특징일 가능성",
+    },
+    # ------------------------------------------------------------------ #
+    # Report Engine — SAE
+    # ------------------------------------------------------------------ #
+    "report.sae_title": {
+        "en": "Sparse Autoencoder Features",
+        "ko": "희소 오토인코더 특징",
+    },
+    "report.sae_layer": {
+        "en": "Layer {layer} residual stream decoded ({d_sae}-dim SAE)",
+        "ko": "레이어 {layer} 잔차 스트림 디코딩 ({d_sae}차원 SAE)",
+    },
+    "report.sae_sparsity": {
+        "en": "Sparsity: {pct:.2%} of features active",
+        "ko": "희소성: 전체 특징 중 {pct:.2%} 활성화",
+    },
+    "report.sae_recon": {
+        "en": "Reconstruction loss (MSE): {loss:.4f}",
+        "ko": "재구성 손실 (MSE): {loss:.4f}",
+    },
+    "report.sae_active": {
+        "en": "{n} unique features active across {t} tokens",
+        "ko": "{t}개 토큰에서 {n}개 고유 특징 활성화",
+    },
+    "report.sae_top_feature": {
+        "en": "Token \"{token}\": strongest feature #{idx} (activation {act:.1f})",
+        "ko": "토큰 \"{token}\": 최강 특징 #{idx} (활성화 {act:.1f})",
+    },
+    "report.sae_dominant": {
+        "en": "Feature #{idx} dominates ({ratio:.0%} of max activation) — potential monosemantic concept",
+        "ko": "특징 #{idx}이(가) 지배적 (최대 활성화의 {ratio:.0%}) — 단일의미 개념 가능",
+    },
+    "report.sae_high_recon": {
+        "en": "High reconstruction loss — SAE may miss important features in this layer",
+        "ko": "높은 재구성 손실 — SAE가 이 레이어의 중요 특징을 놓칠 수 있음",
+    },
+    "report.sae_low_recon": {
+        "en": "Low reconstruction loss — SAE captures this layer's representations well",
+        "ko": "낮은 재구성 손실 — SAE가 이 레이어의 표현을 잘 포착함",
+    },
+    "report.sae_neuronpedia": {
+        "en": "Neuronpedia links available for feature interpretation",
+        "ko": "Neuronpedia 링크로 특징 해석 가능",
+    },
+    "report.rec_sae": {
+        "en": (
+            "Notable SAE findings — explore top features on Neuronpedia "
+            "and compare across layers to identify concept localization."
+        ),
+        "ko": (
+            "주목할 SAE 소견 — Neuronpedia에서 주요 특징을 탐색하고 "
+            "레이어 간 비교를 통해 개념 위치를 파악하세요."
+        ),
+    },
+    "report.rec_sae_recon": {
+        "en": (
+            "High SAE reconstruction loss detected — consider using a "
+            "larger SAE or scanning adjacent layers for better coverage."
+        ),
+        "ko": (
+            "높은 SAE 재구성 손실 감지 — 더 큰 SAE를 사용하거나 "
+            "인접 레이어 스캔으로 더 나은 커버리지를 확보하세요."
+        ),
+    },
+    # ------------------------------------------------------------------ #
+    # SAE Explanations
+    # ------------------------------------------------------------------ #
+    "report.explain_sae_normal": {
+        "en": (
+            "The Sparse Autoencoder decomposed layer {layer}'s residual stream "
+            "into {d_sae} interpretable features. Sparsity of {pct:.2%} means "
+            "only a handful of features activate per token — this is expected "
+            "and indicates the SAE successfully found monosemantic directions. "
+            "The top features likely correspond to specific concepts (words, "
+            "syntax patterns, or semantic categories) that the model represents "
+            "at this depth. Use Neuronpedia links to explore what each feature means."
+        ),
+        "ko": (
+            "희소 오토인코더가 레이어 {layer}의 잔차 스트림을 {d_sae}개의 "
+            "해석 가능한 특징으로 분해했습니다. 희소성 {pct:.2%}는 토큰당 "
+            "소수의 특징만 활성화됨을 의미하며, 이는 SAE가 단일의미 방향을 "
+            "성공적으로 찾았음을 나타냅니다. 상위 특징들은 모델이 이 깊이에서 "
+            "표현하는 특정 개념(단어, 구문 패턴, 의미 범주)에 해당할 가능성이 "
+            "높습니다. Neuronpedia 링크를 통해 각 특징의 의미를 탐색하세요."
+        ),
+    },
+    "report.explain_sae_high_recon": {
+        "en": (
+            "The reconstruction loss of {loss:.4f} is relatively high, meaning "
+            "the SAE cannot fully reconstruct the original activations from its "
+            "sparse features. This suggests the layer contains information that "
+            "doesn't align well with the SAE's learned dictionary — possibly due to "
+            "polysemantic neurons or features at a different scale than the SAE's "
+            "capacity ({d_sae} features). Consider scanning adjacent layers or "
+            "using a wider SAE for more complete coverage."
+        ),
+        "ko": (
+            "재구성 손실 {loss:.4f}은(는) 상대적으로 높으며, SAE가 희소 특징으로부터 "
+            "원본 활성화를 완전히 재구성할 수 없음을 의미합니다. 이 레이어에 SAE의 "
+            "학습된 사전과 잘 맞지 않는 정보가 포함되어 있음을 시사합니다 — "
+            "다의미 뉴런이나 SAE 용량({d_sae}개 특징)과 다른 스케일의 특징 때문일 수 "
+            "있습니다. 인접 레이어 스캔이나 더 넓은 SAE 사용을 고려하세요."
+        ),
+    },
+    "report.explain_sae_dominant": {
+        "en": (
+            "Feature #{idx} activates dramatically stronger than other features "
+            "for token \"{token}\" ({ratio:.0%} of the global max). A dominant feature "
+            "often represents a highly specific concept that the model has "
+            "dedicated a clean computational direction to. This is a hallmark of "
+            "successful feature learning — the model has likely allocated this "
+            "direction to represent a specific word, topic, or syntactic role. "
+            "Check its Neuronpedia page to see what concept it encodes."
+        ),
+        "ko": (
+            "특징 #{idx}이(가) 토큰 \"{token}\"에서 다른 특징들보다 극적으로 "
+            "강하게 활성화됩니다 (전역 최대값의 {ratio:.0%}). 지배적 특징은 모델이 "
+            "깨끗한 연산 방향을 할당한 매우 구체적인 개념을 나타내는 경우가 많습니다. "
+            "이는 성공적인 특징 학습의 특징으로, 모델이 특정 단어, 주제 또는 구문적 "
+            "역할을 표현하기 위해 이 방향을 할당했을 가능성이 높습니다. "
+            "Neuronpedia 페이지에서 어떤 개념을 인코딩하는지 확인하세요."
+        ),
+    },
+    # ------------------------------------------------------------------ #
     # Finding Explanations
     # ------------------------------------------------------------------ #
     "report.explain_t1_normal": {
