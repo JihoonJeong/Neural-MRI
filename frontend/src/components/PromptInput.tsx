@@ -3,6 +3,7 @@ import { useScanStore } from '../store/useScanStore';
 import { useCompareStore } from '../store/useCompareStore';
 import { useLocaleStore } from '../store/useLocaleStore';
 import { useCollabStore } from '../store/useCollabStore';
+import { useStreamStore } from '../store/useStreamStore';
 import { TemplateSelector } from './TemplateSelector';
 import type { TranslationKey } from '../i18n/translations';
 
@@ -22,8 +23,13 @@ export function PromptInput() {
   const t = useLocaleStore((s) => s.t);
   const [scanFailed, setScanFailed] = useState(false);
 
+  const { isStreamPreferred, setStreamPreferred, startStream, cancelStream, status: streamStatus } =
+    useStreamStore();
+
   const isViewer = useCollabStore((s) => s.role) === 'viewer';
   const isPromptMode = mode === 'fMRI' || mode === 'DTI' || mode === 'FLAIR';
+  const isStreamableMode = mode === 'fMRI' || mode === 'DTI';
+  const isStreaming = streamStatus === 'streaming' || streamStatus === 'connecting';
   const busy = isScanning || isScanningB;
 
   // Watch for scan failure: transition from scanning to not-scanning with error
@@ -40,8 +46,14 @@ export function PromptInput() {
   }, [isScanning, logs]);
 
   const handleScan = () => {
+    if (isStreaming) {
+      cancelStream();
+      return;
+    }
     if (isCompareMode) {
       runCompare();
+    } else if (isStreamPreferred && isStreamableMode) {
+      startStream(mode as 'fMRI' | 'DTI', prompt);
     } else {
       runScan();
     }
@@ -65,6 +77,29 @@ export function PromptInput() {
       <div className="flex items-center gap-2 px-3 py-2">
         {/* Template selector */}
         <TemplateSelector />
+
+        {/* LIVE toggle (fMRI/DTI only) */}
+        {isStreamableMode && (
+          <button
+            onClick={() => setStreamPreferred(!isStreamPreferred)}
+            title={t('stream.live' as TranslationKey)}
+            style={{
+              background: isStreamPreferred ? 'rgba(0,170,255,0.12)' : 'none',
+              border: isStreamPreferred
+                ? '1px solid rgba(0,170,255,0.4)'
+                : '1px solid var(--border)',
+              color: isStreamPreferred ? '#00aaff' : 'var(--text-secondary)',
+              padding: '4px 8px',
+              fontSize: 'var(--font-size-xs)',
+              fontFamily: 'var(--font-primary)',
+              cursor: 'pointer',
+              borderRadius: 4,
+              letterSpacing: '1px',
+            }}
+          >
+            {t('stream.live' as TranslationKey)}
+          </button>
+        )}
 
         {/* Compare toggle */}
         {isPromptMode && (
@@ -106,28 +141,38 @@ export function PromptInput() {
         {!isCompareMode && (
           <button
             onClick={handleScan}
-            disabled={busy || isViewer}
+            disabled={(busy && !isStreaming) || isViewer}
             className="rounded tracking-wide"
             style={{
               background: scanFailed
                 ? 'rgba(255,68,102,0.2)'
-                : busy || isViewer
-                  ? '#1a1c22'
-                  : 'rgba(0,255,170,0.12)',
+                : isStreaming
+                  ? 'rgba(0,170,255,0.12)'
+                  : busy || isViewer
+                    ? '#1a1c22'
+                    : 'rgba(0,255,170,0.12)',
               border: scanFailed
                 ? '1px solid rgba(255,68,102,0.5)'
-                : '1px solid rgba(0,255,170,0.3)',
-              color: scanFailed ? '#ff4466' : 'var(--accent-active)',
+                : isStreaming
+                  ? '1px solid rgba(0,170,255,0.4)'
+                  : '1px solid rgba(0,255,170,0.3)',
+              color: scanFailed ? '#ff4466' : isStreaming ? '#00aaff' : 'var(--accent-active)',
               padding: '6px 16px',
               fontSize: 'var(--font-size-sm)',
               fontFamily: 'var(--font-primary)',
-              cursor: busy || isViewer ? 'default' : 'pointer',
+              cursor: (busy && !isStreaming) || isViewer ? 'default' : 'pointer',
               letterSpacing: '1px',
-              animation: busy ? 'scan-pulse 1.5s ease-in-out infinite' : 'none',
+              animation: busy || isStreaming ? 'scan-pulse 1.5s ease-in-out infinite' : 'none',
               opacity: isViewer ? 0.5 : 1,
             }}
           >
-            {isViewer ? 'VIEW ONLY' : busy ? 'SCANNING...' : 'SCAN'}
+            {isViewer
+              ? 'VIEW ONLY'
+              : isStreaming
+                ? t('stream.streaming' as TranslationKey)
+                : busy
+                  ? 'SCANNING...'
+                  : 'SCAN'}
           </button>
         )}
       </div>

@@ -130,6 +130,12 @@ export type TranslationKey =
   | 'settings.cache'
   | 'settings.cacheEntries'
   | 'settings.cacheClear'
+  // Stream
+  | 'stream.live'
+  | 'stream.streaming'
+  | 'stream.connecting'
+  | 'stream.cancel'
+  | 'stream.complete'
   // Model Picker
   | 'modelPicker.searchPlaceholder'
   | 'modelPicker.recommended'
@@ -338,6 +344,12 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     'settings.cache': 'SCAN CACHE',
     'settings.cacheEntries': 'entries',
     'settings.cacheClear': 'CLEAR CACHE',
+    // ── Stream ──
+    'stream.live': 'LIVE',
+    'stream.streaming': 'STREAMING...',
+    'stream.connecting': 'CONNECTING...',
+    'stream.cancel': 'CANCEL',
+    'stream.complete': 'STREAM COMPLETE',
     // ── Model Picker ──
     'modelPicker.searchPlaceholder': 'Search HuggingFace models...',
     'modelPicker.recommended': 'RECOMMENDED',
@@ -546,6 +558,12 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     'settings.cache': '\uc2a4\uce94 \uce90\uc2dc',
     'settings.cacheEntries': '\ud56d\ubaa9',
     'settings.cacheClear': '\uce90\uc2dc \uc0ad\uc81c',
+    // ── Stream ──
+    'stream.live': '\uc2e4\uc2dc\uac04',
+    'stream.streaming': '\uc2a4\ud2b8\ub9ac\ubc0d...',
+    'stream.connecting': '\uc5f0\uacb0 \uc911...',
+    'stream.cancel': '\ucde8\uc18c',
+    'stream.complete': '\uc2a4\ud2b8\ub9ac\ubc0d \uc644\ub8cc',
     // ── Model Picker ──
     'modelPicker.searchPlaceholder': 'HuggingFace \ubaa8\ub378 \uac80\uc0c9...',
     'modelPicker.recommended': '\ucd94\ucc9c',

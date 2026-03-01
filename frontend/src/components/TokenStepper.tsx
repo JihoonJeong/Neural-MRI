@@ -4,6 +4,7 @@ import type { LayoutMode } from '../store/useScanStore';
 import { useCompareStore } from '../store/useCompareStore';
 import { useCrossModelStore } from '../store/useCrossModelStore';
 import { useRecordingStore } from '../store/useRecordingStore';
+import { useStreamStore } from '../store/useStreamStore';
 import type { ScanMode } from '../types/model';
 
 const LAYOUT_ORDER: LayoutMode[] = ['vertical', 'brain', 'network', 'radial'];
@@ -11,6 +12,10 @@ const LAYOUT_ORDER: LayoutMode[] = ['vertical', 'brain', 'network', 'radial'];
 export function TokenStepper() {
   const { mode, activationData, circuitData, anomalyData, selectedTokenIdx, setSelectedTokenIdx, stepToken } =
     useScanStore();
+  const streamStatus = useStreamStore((s) => s.status);
+  const streamCurrentToken = useStreamStore((s) => s.currentToken);
+
+  const isStreaming = streamStatus === 'streaming' || streamStatus === 'connecting';
 
   // Show for fMRI/DTI/FLAIR modes
   const visible = mode === 'fMRI' || mode === 'DTI' || mode === 'FLAIR';
@@ -25,8 +30,8 @@ export function TokenStepper() {
       const tag = (e.target as HTMLElement).tagName;
       if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
 
-      // Token stepping
-      if (visible && tokens) {
+      // Token stepping (disabled during streaming)
+      if (visible && tokens && !isStreaming) {
         if (e.key === 'ArrowLeft') { e.preventDefault(); stepToken(-1); return; }
         if (e.key === 'ArrowRight') { e.preventDefault(); stepToken(1); return; }
       }
@@ -79,7 +84,7 @@ export function TokenStepper() {
         return;
       }
     },
-    [visible, tokens, stepToken],
+    [visible, tokens, stepToken, isStreaming],
   );
 
   useEffect(() => {
@@ -102,16 +107,16 @@ export function TokenStepper() {
       </span>
       <button
         onClick={() => stepToken(-1)}
-        disabled={selectedTokenIdx <= 0}
+        disabled={isStreaming || selectedTokenIdx <= 0}
         className="shrink-0 rounded"
         style={{
           width: 22,
           height: 22,
           background: 'rgba(255,255,255,0.04)',
           border: '1px solid var(--border)',
-          color: selectedTokenIdx > 0 ? 'var(--text-primary)' : 'var(--text-secondary)',
+          color: !isStreaming && selectedTokenIdx > 0 ? 'var(--text-primary)' : 'var(--text-secondary)',
           fontSize: 'var(--font-size-xs)',
-          cursor: selectedTokenIdx > 0 ? 'pointer' : 'default',
+          cursor: !isStreaming && selectedTokenIdx > 0 ? 'pointer' : 'default',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -123,22 +128,40 @@ export function TokenStepper() {
         {tokens.map((token, idx) => {
           const isSelected = idx === selectedTokenIdx;
           const displayToken = token.replace(/^▁/, ' ').replace(/^Ġ/, ' ');
+
+          // Streaming awareness
+          const arrived = !isStreaming || idx < streamCurrentToken;
+          const isCurrent = isStreaming && idx === streamCurrentToken - 1;
+
           return (
             <button
               key={idx}
-              onClick={() => setSelectedTokenIdx(idx)}
+              onClick={() => !isStreaming && setSelectedTokenIdx(idx)}
               className="shrink-0 rounded"
               style={{
                 padding: '2px 6px',
                 fontSize: 'var(--font-size-xs)',
                 fontFamily: 'var(--font-primary)',
-                background: isSelected ? 'rgba(0,255,170,0.15)' : 'rgba(255,255,255,0.04)',
-                border: isSelected
-                  ? '1px solid rgba(0,255,170,0.5)'
-                  : '1px solid var(--border)',
-                color: isSelected ? 'var(--accent-active)' : 'var(--text-data)',
-                cursor: 'pointer',
+                background: isCurrent
+                  ? 'rgba(0,170,255,0.15)'
+                  : isSelected && !isStreaming
+                    ? 'rgba(0,255,170,0.15)'
+                    : 'rgba(255,255,255,0.04)',
+                border: isCurrent
+                  ? '1px solid rgba(0,170,255,0.5)'
+                  : isSelected && !isStreaming
+                    ? '1px solid rgba(0,255,170,0.5)'
+                    : '1px solid var(--border)',
+                color: isCurrent
+                  ? '#00aaff'
+                  : isSelected && !isStreaming
+                    ? 'var(--accent-active)'
+                    : 'var(--text-data)',
+                cursor: isStreaming ? 'default' : 'pointer',
                 whiteSpace: 'nowrap',
+                opacity: arrived ? 1 : 0.3,
+                animation: isCurrent ? 'scan-pulse 1.5s ease-in-out infinite' : 'none',
+                transition: 'opacity 0.2s ease',
               }}
             >
               {displayToken}
@@ -148,16 +171,16 @@ export function TokenStepper() {
       </div>
       <button
         onClick={() => stepToken(1)}
-        disabled={selectedTokenIdx >= tokens.length - 1}
+        disabled={isStreaming || selectedTokenIdx >= tokens.length - 1}
         className="shrink-0 rounded"
         style={{
           width: 22,
           height: 22,
           background: 'rgba(255,255,255,0.04)',
           border: '1px solid var(--border)',
-          color: selectedTokenIdx < tokens.length - 1 ? 'var(--text-primary)' : 'var(--text-secondary)',
+          color: !isStreaming && selectedTokenIdx < tokens.length - 1 ? 'var(--text-primary)' : 'var(--text-secondary)',
           fontSize: 'var(--font-size-xs)',
-          cursor: selectedTokenIdx < tokens.length - 1 ? 'pointer' : 'default',
+          cursor: !isStreaming && selectedTokenIdx < tokens.length - 1 ? 'pointer' : 'default',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',

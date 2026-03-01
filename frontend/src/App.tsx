@@ -6,6 +6,7 @@ import { ScanCanvas } from './components/ScanCanvas/ScanCanvas';
 import { ScanLineOverlay } from './components/ScanCanvas/ScanLineOverlay';
 import { CompareView } from './components/CompareView';
 import { TokenStepper } from './components/TokenStepper';
+import { StreamProgressBar } from './components/StreamProgressBar';
 import { PromptInput } from './components/PromptInput';
 import { LayerSummary } from './components/Panels/LayerSummary';
 import { StimPanel } from './components/Panels/StimPanel';
@@ -114,6 +115,7 @@ export default function App() {
             {(isCompareMode || isCrossModelMode) ? <CompareView /> : <ScanCanvas dataOverride={dataOverride} />}
             <PeerCursors />
           </div>
+          <StreamProgressBar />
           <TokenStepper />
           <RecordingBar />
           <PromptInput />
