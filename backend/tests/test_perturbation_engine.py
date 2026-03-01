@@ -129,4 +129,5 @@ def test_kl_divergence_is_finite(mock_model_manager):
 
     assert result.kl_divergence is not None
     import math
+
     assert math.isfinite(result.kl_divergence)

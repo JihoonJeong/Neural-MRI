@@ -36,10 +36,13 @@ def client_no_model():
 
 
 def test_perturb_zero_200(client):
-    resp = client.post("/api/perturb/zero", json={
-        "component": "blocks.0.attn",
-        "prompt": "The capital of France is",
-    })
+    resp = client.post(
+        "/api/perturb/zero",
+        json={
+            "component": "blocks.0.attn",
+            "prompt": "The capital of France is",
+        },
+    )
     assert resp.status_code == 200
     data = resp.json()
     assert data["model_id"] == "gpt2"
@@ -57,11 +60,14 @@ def test_perturb_zero_200(client):
 
 
 def test_perturb_amplify_200(client):
-    resp = client.post("/api/perturb/amplify", json={
-        "component": "blocks.0.mlp",
-        "factor": 3.0,
-        "prompt": "Hello world",
-    })
+    resp = client.post(
+        "/api/perturb/amplify",
+        json={
+            "component": "blocks.0.mlp",
+            "factor": 3.0,
+            "prompt": "Hello world",
+        },
+    )
     assert resp.status_code == 200
     data = resp.json()
     assert data["perturbation_type"] == "amplify"
@@ -72,10 +78,13 @@ def test_perturb_amplify_200(client):
 
 
 def test_perturb_ablate_200(client):
-    resp = client.post("/api/perturb/ablate", json={
-        "component": "blocks.1.attn",
-        "prompt": "test input",
-    })
+    resp = client.post(
+        "/api/perturb/ablate",
+        json={
+            "component": "blocks.1.attn",
+            "prompt": "test input",
+        },
+    )
     assert resp.status_code == 200
     data = resp.json()
     assert data["perturbation_type"] == "ablate"
@@ -85,11 +94,14 @@ def test_perturb_ablate_200(client):
 
 
 def test_perturb_patch_200(client):
-    resp = client.post("/api/perturb/patch", json={
-        "clean_prompt": "The capital of France is",
-        "corrupt_prompt": "The capital of Germany is",
-        "component": "blocks.0.attn",
-    })
+    resp = client.post(
+        "/api/perturb/patch",
+        json={
+            "clean_prompt": "The capital of France is",
+            "corrupt_prompt": "The capital of Germany is",
+            "component": "blocks.0.attn",
+        },
+    )
     assert resp.status_code == 200
     data = resp.json()
     assert data["component"] == "blocks.0.attn"
@@ -104,10 +116,13 @@ def test_perturb_patch_200(client):
 
 
 def test_perturb_causal_trace_200(client):
-    resp = client.post("/api/perturb/causal-trace", json={
-        "clean_prompt": "The capital of France is",
-        "corrupt_prompt": "The capital of Germany is",
-    })
+    resp = client.post(
+        "/api/perturb/causal-trace",
+        json={
+            "clean_prompt": "The capital of France is",
+            "corrupt_prompt": "The capital of Germany is",
+        },
+    )
     assert resp.status_code == 200
     data = resp.json()
     assert data["n_layers"] == 2
@@ -117,10 +132,13 @@ def test_perturb_causal_trace_200(client):
 
 
 def test_perturb_causal_trace_cell_types(client):
-    resp = client.post("/api/perturb/causal-trace", json={
-        "clean_prompt": "A",
-        "corrupt_prompt": "B",
-    })
+    resp = client.post(
+        "/api/perturb/causal-trace",
+        json={
+            "clean_prompt": "A",
+            "corrupt_prompt": "B",
+        },
+    )
     data = resp.json()
     types = [c["component_type"] for c in data["cells"]]
     assert types.count("embed") == 1
@@ -141,10 +159,13 @@ def test_perturb_reset_200(client):
 
 
 def test_perturb_no_model_400(client_no_model):
-    resp = client_no_model.post("/api/perturb/zero", json={
-        "component": "blocks.0.attn",
-        "prompt": "test",
-    })
+    resp = client_no_model.post(
+        "/api/perturb/zero",
+        json={
+            "component": "blocks.0.attn",
+            "prompt": "test",
+        },
+    )
     assert resp.status_code == 400
     assert "No model loaded" in resp.json()["detail"]
 
@@ -154,20 +175,26 @@ def test_perturb_no_model_400(client_no_model):
 
 def test_perturb_kl_nonnegative(client):
     """KL divergence should be non-negative (with some float tolerance)."""
-    resp = client.post("/api/perturb/zero", json={
-        "component": "blocks.0.attn",
-        "prompt": "test",
-    })
+    resp = client.post(
+        "/api/perturb/zero",
+        json={
+            "component": "blocks.0.attn",
+            "prompt": "test",
+        },
+    )
     data = resp.json()
     # KL divergence >= 0 (allow small float imprecision)
     assert data["kl_divergence"] >= -0.01
 
 
 def test_perturb_patch_recovery_bounded(client):
-    resp = client.post("/api/perturb/patch", json={
-        "clean_prompt": "A B C",
-        "corrupt_prompt": "D E F",
-        "component": "blocks.0.mlp",
-    })
+    resp = client.post(
+        "/api/perturb/patch",
+        json={
+            "clean_prompt": "A B C",
+            "corrupt_prompt": "D E F",
+            "component": "blocks.0.mlp",
+        },
+    )
     data = resp.json()
     assert 0 <= data["recovery_score"] <= 1
