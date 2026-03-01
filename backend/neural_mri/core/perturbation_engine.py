@@ -6,6 +6,11 @@ import time
 import torch
 
 from neural_mri.core.model_manager import ModelManager
+from neural_mri.schemas.causal_trace import (
+    CausalTraceCell,
+    CausalTraceRequest,
+    CausalTraceResult,
+)
 from neural_mri.schemas.perturb import (
     AblateRequest,
     AmplifyRequest,
@@ -270,5 +275,113 @@ class PerturbationEngine:
             corrupt_prediction=corrupt_pred,
             patched_prediction=patched_pred,
             recovery_score=round(recovery, 4),
+            metadata={"compute_time_ms": round(elapsed_ms, 1)},
+        )
+
+    def causal_trace(self, req: CausalTraceRequest) -> CausalTraceResult:
+        """Full causal tracing sweep: patch each component and measure recovery.
+
+        Runs clean and corrupt forward passes once, then iterates over all
+        components (embed + blocks.N.attn + blocks.N.mlp) patching clean
+        activations into the corrupt run to compute recovery scores.
+        """
+        start = time.time()
+        model = self._mm.get_model()
+        n_layers = model.cfg.n_layers
+
+        clean_tokens = model.to_tokens(req.clean_prompt)
+        corrupt_tokens = model.to_tokens(req.corrupt_prompt)
+        target_idx = (
+            req.target_token_idx if req.target_token_idx >= 0 else clean_tokens.shape[1] - 1
+        )
+
+        # Build component list
+        components = ["embed"]
+        for layer_i in range(n_layers):
+            components.append(f"blocks.{layer_i}.attn")
+            components.append(f"blocks.{layer_i}.mlp")
+
+        with torch.no_grad():
+            # Single clean forward pass with full cache
+            clean_logits, clean_cache = model.run_with_cache(clean_tokens)
+            # Single corrupt baseline
+            corrupt_logits = model(corrupt_tokens)
+
+        # Reference values for recovery computation
+        clean_top_idx = torch.argmax(
+            torch.softmax(clean_logits[0, target_idx], dim=-1)
+        ).item()
+        clean_l = clean_logits[0, target_idx, clean_top_idx].item()
+        corrupt_l = corrupt_logits[0, target_idx, clean_top_idx].item()
+        denom = clean_l - corrupt_l
+
+        # Get predictions for summary
+        tokenizer = model.tokenizer
+        clean_prediction = tokenizer.decode([clean_top_idx])
+        corrupt_top_idx = torch.argmax(
+            torch.softmax(corrupt_logits[0, target_idx], dim=-1)
+        ).item()
+        corrupt_prediction = tokenizer.decode([corrupt_top_idx])
+
+        cells: list[CausalTraceCell] = []
+
+        for comp in components:
+            hook_name = self._resolve_hook(comp)
+            clean_activation = clean_cache[hook_name].clone()
+
+            def make_patch_hook(clean_act: torch.Tensor):
+                def hook_fn(value, hook):
+                    if value.shape == clean_act.shape:
+                        return clean_act
+                    min_seq = min(value.shape[1], clean_act.shape[1])
+                    patched = value.clone()
+                    patched[:, :min_seq] = clean_act[:, :min_seq]
+                    return patched
+                return hook_fn
+
+            with torch.no_grad():
+                patched_logits = model.run_with_hooks(
+                    corrupt_tokens,
+                    fwd_hooks=[(hook_name, make_patch_hook(clean_activation))],
+                )
+
+            patched_l = patched_logits[0, target_idx, clean_top_idx].item()
+            recovery = (patched_l - corrupt_l) / denom if abs(denom) > 1e-6 else 0.0
+            recovery = max(0.0, min(1.0, recovery))
+
+            # Parse component type and layer index
+            if comp == "embed":
+                comp_type = "embed"
+                layer_idx = -1
+            elif comp.endswith(".attn"):
+                comp_type = "attn"
+                layer_idx = int(comp.split(".")[1])
+            else:
+                comp_type = "mlp"
+                layer_idx = int(comp.split(".")[1])
+
+            cells.append(
+                CausalTraceCell(
+                    component=comp,
+                    layer_idx=layer_idx,
+                    component_type=comp_type,
+                    recovery_score=round(recovery, 4),
+                )
+            )
+
+        elapsed_ms = (time.time() - start) * 1000
+        logger.info(
+            "Causal trace: %d components, %.1fms", len(cells), elapsed_ms,
+        )
+
+        return CausalTraceResult(
+            model_id=self._mm.model_id,
+            clean_prompt=req.clean_prompt,
+            corrupt_prompt=req.corrupt_prompt,
+            target_token_idx=target_idx,
+            clean_prediction=clean_prediction,
+            corrupt_prediction=corrupt_prediction,
+            cells=cells,
+            n_layers=n_layers,
             metadata={"compute_time_ms": round(elapsed_ms, 1)},
         )

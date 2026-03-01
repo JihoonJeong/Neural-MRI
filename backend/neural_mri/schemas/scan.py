@@ -127,11 +127,17 @@ class AnomalyScanRequest(BaseModel):
     prompt: str
 
 
+class TokenPredictionLens(BaseModel):
+    token: str
+    prob: float
+
+
 class LayerAnomaly(BaseModel):
     layer_id: str
     anomaly_scores: list[float]  # per-token anomaly score (0-1)
     kl_scores: list[float]  # per-token KL divergence (0-1 normalized)
     entropy_scores: list[float]  # per-token entropy (0-1 normalized)
+    top_predictions: list[list[TokenPredictionLens]] | None = None  # [seq_len][top_k]
 
 
 class AnomalyData(BaseModel):

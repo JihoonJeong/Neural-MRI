@@ -18,8 +18,12 @@ import { BatteryDetailModal } from './components/BatteryDetailModal';
 import { BatteryPanel } from './components/Panels/BatteryPanel';
 import { SAEPanel } from './components/Panels/SAEPanel';
 import { CollabPanel } from './components/Panels/CollabPanel';
+import { CausalTracePanel } from './components/Panels/CausalTracePanel';
+import { AttentionPanel } from './components/Panels/AttentionPanel';
+import { LogitLensPanel } from './components/Panels/LogitLensPanel';
 import { PeerCursors } from './components/PeerCursors';
 import { RecordingBar } from './components/RecordingBar';
+import { useCrossModelStore } from './store/useCrossModelStore';
 import { useModelStore } from './store/useModelStore';
 import { useScanStore } from './store/useScanStore';
 import { useCompareStore } from './store/useCompareStore';
@@ -31,6 +35,7 @@ export default function App() {
   const fetchModels = useModelStore((s) => s.fetchModels);
   const addLog = useScanStore((s) => s.addLog);
   const isCompareMode = useCompareStore((s) => s.isCompareMode);
+  const isCrossModelMode = useCrossModelStore((s) => s.isCrossModelMode);
   const collabRole = useCollabStore((s) => s.role);
   const remoteScanState = useCollabStore((s) => s.remoteScanState);
   const joinSession = useCollabStore((s) => s.joinSession);
@@ -102,7 +107,7 @@ export default function App() {
             }}
           >
             <ScanLineOverlay />
-            {isCompareMode ? <CompareView /> : <ScanCanvas dataOverride={dataOverride} />}
+            {(isCompareMode || isCrossModelMode) ? <CompareView /> : <ScanCanvas dataOverride={dataOverride} />}
             <PeerCursors />
           </div>
           <TokenStepper />
@@ -120,12 +125,21 @@ export default function App() {
             background: 'var(--bg-secondary)',
           }}
         >
-          {isCompareMode ? <DiffPanel /> : <LayerSummary />}
+          {(isCompareMode || isCrossModelMode) ? <DiffPanel /> : <LayerSummary />}
           <div style={{ borderTop: '1px solid var(--border)' }}>
             <StimPanel />
           </div>
           <div style={{ borderTop: '1px solid var(--border)' }}>
             <ComparisonPanel />
+          </div>
+          <div style={{ borderTop: '1px solid var(--border)' }}>
+            <CausalTracePanel />
+          </div>
+          <div style={{ borderTop: '1px solid var(--border)' }}>
+            <AttentionPanel />
+          </div>
+          <div style={{ borderTop: '1px solid var(--border)' }}>
+            <LogitLensPanel />
           </div>
           <div style={{ borderTop: '1px solid var(--border)' }}>
             <BatteryPanel />

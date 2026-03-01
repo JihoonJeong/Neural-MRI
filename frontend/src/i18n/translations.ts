@@ -93,7 +93,26 @@ export type TranslationKey =
   | 'layout.vertical'
   | 'layout.brain'
   | 'layout.network'
-  | 'layout.radial';
+  | 'layout.radial'
+  // Cross-model
+  | 'crossModel.title'
+  | 'crossModel.selectModel'
+  | 'crossModel.compare'
+  // Causal Trace
+  | 'causalTrace.title'
+  | 'causalTrace.clean'
+  | 'causalTrace.corruptPlaceholder'
+  | 'causalTrace.trace'
+  | 'causalTrace.tracing'
+  // Attention
+  | 'attention.title'
+  | 'attention.needDTI'
+  // Logit Lens
+  | 'logitLens.title'
+  | 'logitLens.needFLAIR'
+  // Templates
+  | 'templates.title'
+  | 'templates.button';
 
 export const translations: Record<Locale, Record<TranslationKey, string>> = {
   en: {
@@ -177,8 +196,14 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     'guide.shortcuts.title': 'KEYBOARD SHORTCUTS',
     'guide.shortcuts.body':
       '\u2190 \u2192    Step through tokens (fMRI / DTI / FLAIR)\n' +
-      'ESC       Close this guide\n' +
-      'H         Toggle this guide',
+      '1-5       Switch scan mode (T1/T2/fMRI/DTI/FLAIR)\n' +
+      'R         Toggle recording\n' +
+      'Space     Play/pause playback\n' +
+      'L         Cycle layout mode\n' +
+      'C         Toggle multi-prompt compare\n' +
+      'Shift+C   Toggle cross-model compare\n' +
+      'H         Toggle this guide\n' +
+      'ESC       Close this guide',
 
     // ── Report ──
     'report.title': 'DIAGNOSTIC REPORT',
@@ -250,6 +275,25 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     'layout.brain': 'Brain View',
     'layout.network': 'Network View',
     'layout.radial': 'Radial View',
+    // ── Cross-model ──
+    'crossModel.title': 'X-MODEL',
+    'crossModel.selectModel': 'Select model...',
+    'crossModel.compare': 'COMPARE',
+    // ── Causal Trace ──
+    'causalTrace.title': 'CAUSAL TRACE',
+    'causalTrace.clean': 'Clean',
+    'causalTrace.corruptPlaceholder': 'Corrupt prompt...',
+    'causalTrace.trace': 'TRACE',
+    'causalTrace.tracing': 'TRACING...',
+    // ── Attention ──
+    'attention.title': 'ATTENTION HEADS',
+    'attention.needDTI': 'Run DTI scan first',
+    // ── Logit Lens ──
+    'logitLens.title': 'LOGIT LENS',
+    'logitLens.needFLAIR': 'Run FLAIR scan first',
+    // ── Templates ──
+    'templates.title': 'Prompt Templates',
+    'templates.button': '\u25A4',
   },
 
   ko: {
@@ -333,8 +377,14 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     'guide.shortcuts.title': 'KEYBOARD SHORTCUTS',
     'guide.shortcuts.body':
       '\u2190 \u2192    \ud1a0\ud070 \ud0d0\uc0c9 (fMRI / DTI / FLAIR)\n' +
-      'ESC       \uac00\uc774\ub4dc \ub2eb\uae30\n' +
-      'H         \uac00\uc774\ub4dc \uc5f4\uae30/\ub2eb\uae30',
+      '1-5       \uc2a4\uce94 \ubaa8\ub4dc \uc804\ud658 (T1/T2/fMRI/DTI/FLAIR)\n' +
+      'R         \ub179\ud654 \ud1a0\uae00\n' +
+      'Space     \uc7ac\uc0dd/\uc77c\uc2dc\uc815\uc9c0\n' +
+      'L         \ub808\uc774\uc544\uc6c3 \uc21c\ud658\n' +
+      'C         \ub2e4\uc911 \ud504\ub86c\ud504\ud2b8 \ube44\uad50 \ud1a0\uae00\n' +
+      'Shift+C   \uad50\ucc28 \ubaa8\ub378 \ube44\uad50 \ud1a0\uae00\n' +
+      'H         \uac00\uc774\ub4dc \uc5f4\uae30/\ub2eb\uae30\n' +
+      'ESC       \uac00\uc774\ub4dc \ub2eb\uae30',
 
     // ── Report ──
     'report.title': '\uc9c4\ub2e8 \ub9ac\ud3ec\ud2b8',
@@ -406,5 +456,24 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     'layout.brain': '\ub1cc \ubdf0',
     'layout.network': '\ub124\ud2b8\uc6cc\ud06c \ubdf0',
     'layout.radial': '\ubc29\uc0ac\ud615 \ubdf0',
+    // ── Cross-model ──
+    'crossModel.title': 'X-MODEL',
+    'crossModel.selectModel': '\ubaa8\ub378 \uc120\ud0dd...',
+    'crossModel.compare': '\ube44\uad50',
+    // ── Causal Trace ──
+    'causalTrace.title': 'CAUSAL TRACE',
+    'causalTrace.clean': '\uc815\uc0c1',
+    'causalTrace.corruptPlaceholder': '\uc190\uc0c1 \ud504\ub86c\ud504\ud2b8...',
+    'causalTrace.trace': '\ucd94\uc801',
+    'causalTrace.tracing': '\ucd94\uc801 \uc911...',
+    // ── Attention ──
+    'attention.title': 'ATTENTION HEADS',
+    'attention.needDTI': 'DTI \uc2a4\uce94\uc744 \uba3c\uc800 \uc2e4\ud589\ud558\uc138\uc694',
+    // ── Logit Lens ──
+    'logitLens.title': 'LOGIT LENS',
+    'logitLens.needFLAIR': 'FLAIR \uc2a4\uce94\uc744 \uba3c\uc800 \uc2e4\ud589\ud558\uc138\uc694',
+    // ── Templates ──
+    'templates.title': '\ud504\ub86c\ud504\ud2b8 \ud15c\ud50c\ub9bf',
+    'templates.button': '\u25A4',
   },
 };

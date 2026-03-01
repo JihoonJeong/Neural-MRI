@@ -6,6 +6,10 @@ from fastapi import APIRouter, Depends, HTTPException
 
 from neural_mri.core.model_manager import ModelManager
 from neural_mri.core.perturbation_engine import PerturbationEngine
+from neural_mri.schemas.causal_trace import (
+    CausalTraceRequest,
+    CausalTraceResult,
+)
 from neural_mri.schemas.perturb import (
     AblateRequest,
     AmplifyRequest,
@@ -73,6 +77,16 @@ async def perturb_patch(
 ) -> PatchResult:
     _require_model(mm)
     return await asyncio.to_thread(engine.activation_patch, req)
+
+
+@router.post("/causal-trace", response_model=CausalTraceResult)
+async def causal_trace(
+    req: CausalTraceRequest,
+    mm: ModelManager = Depends(get_model_manager),
+    engine: PerturbationEngine = Depends(get_perturbation_engine),
+) -> CausalTraceResult:
+    _require_model(mm)
+    return await asyncio.to_thread(engine.causal_trace, req)
 
 
 @router.post("/reset")

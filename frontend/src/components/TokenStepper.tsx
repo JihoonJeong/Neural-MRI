@@ -1,5 +1,12 @@
 import { useEffect, useCallback } from 'react';
 import { useScanStore } from '../store/useScanStore';
+import type { LayoutMode } from '../store/useScanStore';
+import { useCompareStore } from '../store/useCompareStore';
+import { useCrossModelStore } from '../store/useCrossModelStore';
+import { useRecordingStore } from '../store/useRecordingStore';
+import type { ScanMode } from '../types/model';
+
+const LAYOUT_ORDER: LayoutMode[] = ['vertical', 'brain', 'network', 'radial'];
 
 export function TokenStepper() {
   const { mode, activationData, circuitData, anomalyData, selectedTokenIdx, setSelectedTokenIdx, stepToken } =
@@ -14,13 +21,62 @@ export function TokenStepper() {
 
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
-      if (!visible || !tokens) return;
-      if (e.key === 'ArrowLeft') {
+      // Skip when typing in input/textarea/select
+      const tag = (e.target as HTMLElement).tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+
+      // Token stepping
+      if (visible && tokens) {
+        if (e.key === 'ArrowLeft') { e.preventDefault(); stepToken(-1); return; }
+        if (e.key === 'ArrowRight') { e.preventDefault(); stepToken(1); return; }
+      }
+
+      // Mode switching: 1-5
+      const modeMap: Record<string, ScanMode> = { '1': 'T1', '2': 'T2', '3': 'fMRI', '4': 'DTI', '5': 'FLAIR' };
+      if (modeMap[e.key]) {
         e.preventDefault();
-        stepToken(-1);
-      } else if (e.key === 'ArrowRight') {
+        useScanStore.getState().setMode(modeMap[e.key]);
+        return;
+      }
+
+      // R: toggle recording
+      if (e.key === 'r' || e.key === 'R') {
         e.preventDefault();
-        stepToken(1);
+        const rec = useRecordingStore.getState();
+        if (rec.isRecording) rec.stopRecording();
+        else rec.startRecording();
+        return;
+      }
+
+      // Space: play/pause playback
+      if (e.key === ' ') {
+        const rec = useRecordingStore.getState();
+        if (rec.recording) {
+          e.preventDefault();
+          if (rec.isPlaying) rec.pause();
+          else rec.play();
+        }
+        return;
+      }
+
+      // L: cycle layout
+      if (e.key === 'l' || e.key === 'L') {
+        e.preventDefault();
+        const s = useScanStore.getState();
+        const idx = LAYOUT_ORDER.indexOf(s.layoutMode);
+        s.setLayoutMode(LAYOUT_ORDER[(idx + 1) % LAYOUT_ORDER.length]);
+        return;
+      }
+
+      // C: toggle compare
+      if (e.key === 'c' || e.key === 'C') {
+        e.preventDefault();
+        if (e.shiftKey) {
+          useCrossModelStore.getState().toggleCrossModel();
+        } else {
+          useCompareStore.getState().toggleCompare();
+        }
+        return;
       }
     },
     [visible, tokens, stepToken],

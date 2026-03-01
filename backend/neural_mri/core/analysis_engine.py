@@ -28,6 +28,7 @@ from neural_mri.schemas.scan import (
     SAEScanRequest,
     SAETokenFeatures,
     StructuralData,
+    TokenPredictionLens,
     WeightData,
 )
 from neural_mri.utils.tensor_summary import tensor_stats
@@ -436,8 +437,12 @@ class AnalysisEngine:
         b_U = model.b_U.float() if model.b_U is not None else 0
         ln_final = model.ln_final
 
+        tokenizer = model.tokenizer
+        top_k_lens = 5
+
         all_kl: list[torch.Tensor] = []
         all_ent: list[torch.Tensor] = []
+        all_top_preds: list[list[list[TokenPredictionLens]]] = []
 
         for i in range(cfg.n_layers):
             resid = cache[f"blocks.{i}.hook_resid_post"]  # [1, seq, d_model]
@@ -446,6 +451,22 @@ class AnalysisEngine:
             ln_resid = ln_final(resid[0]).float()  # [seq, d_model]
             intermediate_logits = ln_resid @ W_U + b_U  # [seq, d_vocab]
             intermediate_probs = torch.softmax(intermediate_logits, dim=-1)
+
+            # Top-k predictions per token for Logit Lens dashboard
+            topk_probs, topk_indices = torch.topk(intermediate_probs, top_k_lens, dim=-1)  # [seq, k]
+            layer_preds: list[list[TokenPredictionLens]] = []
+            for t_idx in range(seq_len):
+                token_preds = []
+                for k_idx in range(top_k_lens):
+                    tok_id = topk_indices[t_idx, k_idx].item()
+                    token_preds.append(
+                        TokenPredictionLens(
+                            token=tokenizer.decode([tok_id]),
+                            prob=round(topk_probs[t_idx, k_idx].item(), 4),
+                        )
+                    )
+                layer_preds.append(token_preds)
+            all_top_preds.append(layer_preds)
 
             # KL divergence: KL(final || intermediate) per token
             kl = torch.sum(
@@ -486,6 +507,7 @@ class AnalysisEngine:
                     anomaly_scores=[round(v, 4) for v in anomaly[i].tolist()],
                     kl_scores=[round(v, 4) for v in kl_norm[i].tolist()],
                     entropy_scores=[round(v, 4) for v in ent_norm[i].tolist()],
+                    top_predictions=all_top_preds[i],
                 )
             )
 

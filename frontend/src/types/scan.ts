@@ -91,11 +91,17 @@ export interface CircuitData {
 
 // --- FLAIR: Anomaly Scan ---
 
+export interface TokenPredictionLens {
+  token: string;
+  prob: number;
+}
+
 export interface LayerAnomaly {
   layer_id: string;
   anomaly_scores: number[];
   kl_scores: number[];
   entropy_scores: number[];
+  top_predictions?: TokenPredictionLens[][] | null; // [seq_len][top_k]
 }
 
 export interface AnomalyData {

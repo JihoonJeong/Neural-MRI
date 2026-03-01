@@ -5,6 +5,7 @@ import { useLocaleStore } from '../store/useLocaleStore';
 import type { TranslationKey } from '../i18n/translations';
 import { useReportStore } from '../store/useReportStore';
 import { useRecordingStore } from '../store/useRecordingStore';
+import { useCrossModelStore } from '../store/useCrossModelStore';
 import { exportPng, exportSvg, exportJson, exportReport } from '../utils/exportUtils';
 import { exportGif, exportWebM } from '../utils/videoExport';
 
@@ -15,6 +16,7 @@ export function TopBar() {
   const { locale, toggleLocale, openGuide, t } = useLocaleStore();
   const { report, generateReport, isGenerating } = useReportStore();
   const recording = useRecordingStore((s) => s.recording);
+  const { isCrossModelMode, toggleCrossModel } = useCrossModelStore();
   const [showError, setShowError] = useState(false);
   const [exportOpen, setExportOpen] = useState(false);
   const [videoExporting, setVideoExporting] = useState<string | null>(null);
@@ -220,6 +222,22 @@ export function TopBar() {
             {modelInfo.device.toUpperCase()}
           </span>
         )}
+        <button
+          onClick={toggleCrossModel}
+          className="rounded"
+          style={{
+            background: isCrossModelMode ? 'rgba(0,255,170,0.2)' : 'rgba(255,255,255,0.04)',
+            border: `1px solid ${isCrossModelMode ? 'rgba(0,255,170,0.4)' : 'var(--border)'}`,
+            color: isCrossModelMode ? 'var(--accent-active)' : 'var(--text-secondary)',
+            padding: '2px 8px',
+            fontSize: 'var(--font-size-xs)',
+            fontFamily: 'var(--font-primary)',
+            cursor: 'pointer',
+            letterSpacing: '1px',
+          }}
+        >
+          {t('crossModel.title' as TranslationKey)}
+        </button>
         <button
           onClick={generateReport}
           disabled={isGenerating || isLoading || !modelInfo}

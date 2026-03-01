@@ -3,6 +3,7 @@ import { useScanStore } from '../store/useScanStore';
 import { useCompareStore } from '../store/useCompareStore';
 import { useLocaleStore } from '../store/useLocaleStore';
 import { useCollabStore } from '../store/useCollabStore';
+import { TemplateSelector } from './TemplateSelector';
 import type { TranslationKey } from '../i18n/translations';
 
 const inputStyle = {
@@ -62,6 +63,9 @@ export function PromptInput() {
     <div style={{ borderTop: '1px solid var(--border)' }}>
       {/* Row A */}
       <div className="flex items-center gap-2 px-3 py-2">
+        {/* Template selector */}
+        <TemplateSelector />
+
         {/* Compare toggle */}
         {isPromptMode && (
           <button

@@ -1,6 +1,7 @@
 import type { ModelInfo } from '../types/model';
 import type { ActivationData, AnomalyData, CircuitData, SAEData, SAEInfoResponse, StructuralData, WeightData } from '../types/scan';
 import type { PerturbResult, PatchResult } from '../types/perturb';
+import type { CausalTraceResult } from '../types/causalTrace';
 import type { DiagnosticReport, ReportRequest } from '../types/report';
 import type { BatteryResult, TestCase } from '../types/battery';
 
@@ -95,6 +96,15 @@ export const api = {
           clean_prompt: cleanPrompt,
           corrupt_prompt: corruptPrompt,
           component,
+          target_token_idx: targetIdx,
+        }),
+      }),
+    causalTrace: (cleanPrompt: string, corruptPrompt: string, targetIdx = -1) =>
+      request<CausalTraceResult>('/perturb/causal-trace', {
+        method: 'POST',
+        body: JSON.stringify({
+          clean_prompt: cleanPrompt,
+          corrupt_prompt: corruptPrompt,
           target_token_idx: targetIdx,
         }),
       }),

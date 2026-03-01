@@ -1,10 +1,15 @@
 import { useCompareStore } from '../../store/useCompareStore';
+import { useCrossModelStore } from '../../store/useCrossModelStore';
 import { useLocaleStore } from '../../store/useLocaleStore';
 import type { TranslationKey } from '../../i18n/translations';
 
 export function DiffPanel() {
-  const diffData = useCompareStore((s) => s.diffData);
+  const compareDiff = useCompareStore((s) => s.diffData);
+  const crossModelDiff = useCrossModelStore((s) => s.diffData);
+  const isCrossModel = useCrossModelStore((s) => s.isCrossModelMode);
   const t = useLocaleStore((s) => s.t);
+
+  const diffData = isCrossModel ? crossModelDiff : compareDiff;
 
   if (!diffData) return null;
 
@@ -19,7 +24,7 @@ export function DiffPanel() {
         {layerDiffs.map((d) => {
           const pct = maxAbsDelta > 0 ? d.delta / maxAbsDelta : 0;
           const isPositive = d.delta >= 0;
-          const barWidth = Math.abs(pct) * 50; // max 50% of width each side
+          const barWidth = Math.abs(pct) * 50;
           const label = d.layer_id.length > 12 ? d.layer_id.replace('blocks.', 'B') : d.layer_id;
 
           return (
@@ -34,7 +39,6 @@ export function DiffPanel() {
                 className="flex-1 relative"
                 style={{ height: 7, background: 'rgba(255,255,255,0.03)' }}
               >
-                {/* Center line */}
                 <div
                   style={{
                     position: 'absolute',
@@ -45,7 +49,6 @@ export function DiffPanel() {
                     background: 'rgba(255,255,255,0.1)',
                   }}
                 />
-                {/* Bar */}
                 <div
                   className="absolute h-full rounded-sm transition-all duration-300"
                   style={{
@@ -70,7 +73,6 @@ export function DiffPanel() {
           );
         })}
       </div>
-      {/* Legend */}
       <div
         className="flex justify-between mt-2"
         style={{ fontSize: 'var(--font-size-xs)', color: 'var(--text-secondary)' }}
