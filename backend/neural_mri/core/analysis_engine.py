@@ -454,7 +454,9 @@ class AnalysisEngine:
 
             # Top-k predictions per token for Logit Lens dashboard
             topk_probs, topk_indices = torch.topk(
-                intermediate_probs, top_k_lens, dim=-1,
+                intermediate_probs,
+                top_k_lens,
+                dim=-1,
             )  # [seq, k]
             layer_preds: list[list[TokenPredictionLens]] = []
             for t_idx in range(seq_len):

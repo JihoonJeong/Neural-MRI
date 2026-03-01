@@ -39,12 +39,16 @@ def test_causal_trace_result_fields():
         corrupt_prediction=" the",
         cells=[
             CausalTraceCell(
-                component="embed", layer_idx=-1,
-                component_type="embed", recovery_score=0.1,
+                component="embed",
+                layer_idx=-1,
+                component_type="embed",
+                recovery_score=0.1,
             ),
             CausalTraceCell(
-                component="blocks.0.attn", layer_idx=0,
-                component_type="attn", recovery_score=0.5,
+                component="blocks.0.attn",
+                layer_idx=0,
+                component_type="attn",
+                recovery_score=0.5,
             ),
         ],
         n_layers=12,

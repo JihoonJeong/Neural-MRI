@@ -308,9 +308,7 @@ class PerturbationEngine:
             corrupt_logits = model(corrupt_tokens)
 
         # Reference values for recovery computation
-        clean_top_idx = torch.argmax(
-            torch.softmax(clean_logits[0, target_idx], dim=-1)
-        ).item()
+        clean_top_idx = torch.argmax(torch.softmax(clean_logits[0, target_idx], dim=-1)).item()
         clean_l = clean_logits[0, target_idx, clean_top_idx].item()
         corrupt_l = corrupt_logits[0, target_idx, clean_top_idx].item()
         denom = clean_l - corrupt_l
@@ -318,9 +316,7 @@ class PerturbationEngine:
         # Get predictions for summary
         tokenizer = model.tokenizer
         clean_prediction = tokenizer.decode([clean_top_idx])
-        corrupt_top_idx = torch.argmax(
-            torch.softmax(corrupt_logits[0, target_idx], dim=-1)
-        ).item()
+        corrupt_top_idx = torch.argmax(torch.softmax(corrupt_logits[0, target_idx], dim=-1)).item()
         corrupt_prediction = tokenizer.decode([corrupt_top_idx])
 
         cells: list[CausalTraceCell] = []
@@ -337,6 +333,7 @@ class PerturbationEngine:
                     patched = value.clone()
                     patched[:, :min_seq] = clean_act[:, :min_seq]
                     return patched
+
                 return hook_fn
 
             with torch.no_grad():
@@ -371,7 +368,9 @@ class PerturbationEngine:
 
         elapsed_ms = (time.time() - start) * 1000
         logger.info(
-            "Causal trace: %d components, %.1fms", len(cells), elapsed_ms,
+            "Causal trace: %d components, %.1fms",
+            len(cells),
+            elapsed_ms,
         )
 
         return CausalTraceResult(
