@@ -56,27 +56,31 @@ export const api = {
       ),
   },
   scan: {
-    structural: () =>
-      request<StructuralData>('/scan/structural', { method: 'POST' }),
-    weights: (layers?: string[]) =>
+    structural: (signal?: AbortSignal) =>
+      request<StructuralData>('/scan/structural', { method: 'POST', signal }),
+    weights: (layers?: string[], signal?: AbortSignal) =>
       request<WeightData>('/scan/weights', {
         method: 'POST',
         body: JSON.stringify({ layers: layers ?? null }),
+        signal,
       }),
-    activation: (prompt: string) =>
+    activation: (prompt: string, signal?: AbortSignal) =>
       request<ActivationData>('/scan/activation', {
         method: 'POST',
         body: JSON.stringify({ prompt }),
+        signal,
       }),
-    circuits: (prompt: string, targetTokenIdx = -1) =>
+    circuits: (prompt: string, targetTokenIdx = -1, signal?: AbortSignal) =>
       request<CircuitData>('/scan/circuits', {
         method: 'POST',
         body: JSON.stringify({ prompt, target_token_idx: targetTokenIdx }),
+        signal,
       }),
-    anomaly: (prompt: string) =>
+    anomaly: (prompt: string, signal?: AbortSignal) =>
       request<AnomalyData>('/scan/anomaly', {
         method: 'POST',
         body: JSON.stringify({ prompt }),
+        signal,
       }),
   },
   perturb: {

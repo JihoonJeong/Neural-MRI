@@ -3,6 +3,9 @@ import type { ModelInfo } from '../types/model';
 import { api } from '../api/client';
 import type { ModelListEntry } from '../api/client';
 import { useSAEStore } from './useSAEStore';
+import { useScanStore } from './useScanStore';
+import { useCompareStore } from './useCompareStore';
+import { useCrossModelStore } from './useCrossModelStore';
 import { useSettingsStore } from './useSettingsStore';
 import { useModelSearchStore } from './useModelSearchStore';
 
@@ -23,11 +26,17 @@ export const useModelStore = create<ModelState>((set) => ({
   availableModels: [],
 
   loadModel: async (modelId) => {
+    // Guard against concurrent loads
+    if (useModelStore.getState().isLoading) return;
     set({ isLoading: true, error: null });
     try {
       const device = useSettingsStore.getState().devicePreference;
       const info = await api.model.load(modelId, device);
       set({ modelInfo: info, isLoading: false });
+      // Clear stale data from previous model
+      useScanStore.getState().clearScanData();
+      useCompareStore.getState().clear();
+      useCrossModelStore.getState().clear();
       // Register as recent model
       useModelSearchStore.getState().addRecentModel(modelId);
       // Refresh model list to update is_loaded flags
