@@ -3,7 +3,7 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends, HTTPException
 
 from neural_mri.core.model_manager import ModelManager
-from neural_mri.core.model_registry import list_models
+from neural_mri.core.model_registry import add_recent_model, list_models
 from neural_mri.core.sae_manager import SAEManager
 from neural_mri.core.scan_cache import ScanCache
 from neural_mri.schemas.model import ModelInfo, ModelLoadRequest
@@ -49,7 +49,11 @@ async def load_model(
             cache.invalidate_model(mm.model_id)
             sae_mgr.unload()
         result = mm.load_model(req.model_id, req.device)
+        # Register dynamic model (no-op if already in registry)
+        add_recent_model(req.model_id, n_params=result.n_params)
         return result
+    except RuntimeError as e:
+        raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

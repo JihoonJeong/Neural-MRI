@@ -6,11 +6,13 @@ import type { TranslationKey } from '../i18n/translations';
 import { useReportStore } from '../store/useReportStore';
 import { useRecordingStore } from '../store/useRecordingStore';
 import { useCrossModelStore } from '../store/useCrossModelStore';
+import { useSettingsStore } from '../store/useSettingsStore';
 import { exportPng, exportSvg, exportJson, exportReport } from '../utils/exportUtils';
 import { exportGif, exportWebM } from '../utils/videoExport';
+import { ModelPicker } from './ModelPicker';
 
 export function TopBar() {
-  const { modelInfo, isLoading, error, availableModels, loadModel } = useModelStore();
+  const { modelInfo, isLoading, error } = useModelStore();
   const scanStore = useScanStore();
   const addLog = scanStore.addLog;
   const { locale, toggleLocale, openGuide, t } = useLocaleStore();
@@ -45,16 +47,6 @@ export function TopBar() {
     document.addEventListener('mousedown', handler);
     return () => document.removeEventListener('mousedown', handler);
   }, [exportOpen]);
-
-  const handleModelChange = async (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const modelId = e.target.value;
-    addLog(`Loading model: ${modelId}...`);
-    await loadModel(modelId);
-    const info = useModelStore.getState().modelInfo;
-    if (info) {
-      addLog(`Model loaded: ${modelId}`);
-    }
-  };
 
   const handleExport = (type: 'png' | 'svg' | 'json' | 'report' | 'gif' | 'webm') => {
     setExportOpen(false);
@@ -117,11 +109,6 @@ export function TopBar() {
     ? `${(modelInfo.n_params / 1e6).toFixed(0)}M params`
     : '';
 
-  // Use dynamic model list, fallback to basic list if API hasn't responded yet
-  const models = availableModels.length > 0
-    ? availableModels
-    : [{ model_id: 'gpt2', display_name: 'GPT-2 Small', params: '124M', family: 'gpt2', tl_compat: true, gated: false, is_loaded: false }];
-
   const menuItemStyle = (disabled = false) => ({
     display: 'block' as const,
     width: '100%',
@@ -175,26 +162,7 @@ export function TopBar() {
             {paramStr}
           </span>
         )}
-        <select
-          value={modelInfo?.model_id ?? 'gpt2'}
-          onChange={handleModelChange}
-          disabled={isLoading}
-          className="rounded"
-          style={{
-            background: 'var(--bg-surface)',
-            border: '1px solid var(--border)',
-            color: 'var(--text-primary)',
-            padding: '4px 8px',
-            fontSize: 'var(--font-size-sm)',
-            fontFamily: 'var(--font-primary)',
-          }}
-        >
-          {models.map((m) => (
-            <option key={m.model_id} value={m.model_id}>
-              {m.gated ? '\u{1F512} ' : ''}{m.display_name} ({m.params})
-            </option>
-          ))}
-        </select>
+        <ModelPicker />
         {isLoading && (
           <span
             className="loading-dots"
@@ -355,6 +323,22 @@ export function TopBar() {
           )}
         </div>
 
+        <button
+          onClick={() => useSettingsStore.getState().openSettings()}
+          className="rounded"
+          style={{
+            background: 'rgba(255,255,255,0.04)',
+            border: '1px solid var(--border)',
+            color: 'var(--text-secondary)',
+            padding: '2px 6px',
+            fontSize: 'var(--font-size-xs)',
+            fontFamily: 'var(--font-primary)',
+            cursor: 'pointer',
+            letterSpacing: '1px',
+          }}
+        >
+          {t('settings.button' as TranslationKey)}
+        </button>
         <button
           onClick={toggleLocale}
           className="rounded"

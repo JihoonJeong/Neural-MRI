@@ -112,7 +112,34 @@ export type TranslationKey =
   | 'logitLens.needFLAIR'
   // Templates
   | 'templates.title'
-  | 'templates.button';
+  | 'templates.button'
+  // Settings
+  | 'settings.button'
+  | 'settings.title'
+  | 'settings.token'
+  | 'settings.tokenPlaceholder'
+  | 'settings.tokenSet'
+  | 'settings.tokenClear'
+  | 'settings.tokenValid'
+  | 'settings.tokenInvalid'
+  | 'settings.tokenNotSet'
+  | 'settings.tokenFromEnv'
+  | 'settings.tokenFromSession'
+  | 'settings.device'
+  | 'settings.deviceAuto'
+  | 'settings.cache'
+  | 'settings.cacheEntries'
+  | 'settings.cacheClear'
+  // Model Picker
+  | 'modelPicker.searchPlaceholder'
+  | 'modelPicker.recommended'
+  | 'modelPicker.recent'
+  | 'modelPicker.results'
+  | 'modelPicker.tlCompat'
+  | 'modelPicker.tlUnknown'
+  | 'modelPicker.tlIncompat'
+  | 'modelPicker.noResults'
+  | 'modelPicker.tlOnly';
 
 export const translations: Record<Locale, Record<TranslationKey, string>> = {
   en: {
@@ -294,6 +321,33 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     // ── Templates ──
     'templates.title': 'Prompt Templates',
     'templates.button': '\u25A4',
+    // ── Settings ──
+    'settings.button': 'SETTINGS',
+    'settings.title': 'SETTINGS',
+    'settings.token': 'HUGGINGFACE TOKEN',
+    'settings.tokenPlaceholder': 'hf_...',
+    'settings.tokenSet': 'SET',
+    'settings.tokenClear': 'CLEAR',
+    'settings.tokenValid': 'Valid',
+    'settings.tokenInvalid': 'Invalid',
+    'settings.tokenNotSet': 'Not set',
+    'settings.tokenFromEnv': 'from env',
+    'settings.tokenFromSession': 'session',
+    'settings.device': 'DEVICE',
+    'settings.deviceAuto': 'Auto',
+    'settings.cache': 'SCAN CACHE',
+    'settings.cacheEntries': 'entries',
+    'settings.cacheClear': 'CLEAR CACHE',
+    // ── Model Picker ──
+    'modelPicker.searchPlaceholder': 'Search HuggingFace models...',
+    'modelPicker.recommended': 'RECOMMENDED',
+    'modelPicker.recent': 'RECENT',
+    'modelPicker.results': 'SEARCH RESULTS',
+    'modelPicker.tlCompat': 'TL',
+    'modelPicker.tlUnknown': 'TL?',
+    'modelPicker.tlIncompat': 'No TL',
+    'modelPicker.noResults': 'No models found',
+    'modelPicker.tlOnly': 'TL only',
   },
 
   ko: {
@@ -475,5 +529,32 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     // ── Templates ──
     'templates.title': '\ud504\ub86c\ud504\ud2b8 \ud15c\ud50c\ub9bf',
     'templates.button': '\u25A4',
+    // ── Settings ──
+    'settings.button': '\uc124\uc815',
+    'settings.title': '\uc124\uc815',
+    'settings.token': 'HUGGINGFACE \ud1a0\ud070',
+    'settings.tokenPlaceholder': 'hf_...',
+    'settings.tokenSet': '\uc124\uc815',
+    'settings.tokenClear': '\uc0ad\uc81c',
+    'settings.tokenValid': '\uc720\ud6a8',
+    'settings.tokenInvalid': '\ubb34\ud6a8',
+    'settings.tokenNotSet': '\ubbf8\uc124\uc815',
+    'settings.tokenFromEnv': '\ud658\uacbd\ubcc0\uc218',
+    'settings.tokenFromSession': '\uc138\uc158',
+    'settings.device': '\uc7a5\uce58',
+    'settings.deviceAuto': '\uc790\ub3d9',
+    'settings.cache': '\uc2a4\uce94 \uce90\uc2dc',
+    'settings.cacheEntries': '\ud56d\ubaa9',
+    'settings.cacheClear': '\uce90\uc2dc \uc0ad\uc81c',
+    // ── Model Picker ──
+    'modelPicker.searchPlaceholder': 'HuggingFace \ubaa8\ub378 \uac80\uc0c9...',
+    'modelPicker.recommended': '\ucd94\ucc9c',
+    'modelPicker.recent': '\ucd5c\uadfc',
+    'modelPicker.results': '\uac80\uc0c9 \uacb0\uacfc',
+    'modelPicker.tlCompat': 'TL',
+    'modelPicker.tlUnknown': 'TL?',
+    'modelPicker.tlIncompat': 'TL \ubd88\uac00',
+    'modelPicker.noResults': '\ubaa8\ub378\uc744 \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4',
+    'modelPicker.tlOnly': 'TL\ub9cc',
   },
 };

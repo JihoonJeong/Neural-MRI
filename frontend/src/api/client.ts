@@ -4,6 +4,7 @@ import type { PerturbResult, PatchResult } from '../types/perturb';
 import type { CausalTraceResult } from '../types/causalTrace';
 import type { DiagnosticReport, ReportRequest } from '../types/report';
 import type { BatteryResult, TestCase } from '../types/battery';
+import type { TokenStatus, CacheStatus, HubSearchResult } from '../types/settings';
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
 
@@ -36,6 +37,7 @@ export interface ModelListEntry {
   tl_compat: boolean;
   gated: boolean;
   is_loaded: boolean;
+  source?: 'registry' | 'dynamic';
 }
 
 export const api = {
@@ -48,6 +50,10 @@ export const api = {
       }),
     info: () => request<ModelInfo>('/model/info'),
     unload: () => request<{ status: string }>('/model/unload', { method: 'DELETE' }),
+    search: (q: string, limit = 20, tlOnly = false) =>
+      request<HubSearchResult[]>(
+        `/model/search?q=${encodeURIComponent(q)}&limit=${limit}&tl_only=${tlOnly}`,
+      ),
   },
   scan: {
     structural: () =>
@@ -164,5 +170,18 @@ export const api = {
           created_at: string;
         }>
       >('/collab/list'),
+  },
+  settings: {
+    updateToken: (token: string) =>
+      request<TokenStatus>('/settings/token', {
+        method: 'POST',
+        body: JSON.stringify({ token }),
+      }),
+    clearToken: () =>
+      request<TokenStatus>('/settings/token', { method: 'DELETE' }),
+    tokenStatus: () => request<TokenStatus>('/settings/token/status'),
+    cacheStatus: () => request<CacheStatus>('/settings/cache'),
+    clearCache: () =>
+      request<{ status: string }>('/settings/cache', { method: 'DELETE' }),
   },
 };

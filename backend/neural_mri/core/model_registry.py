@@ -60,6 +60,26 @@ MODEL_REGISTRY: dict[str, dict] = {
 }
 
 
+_recent_models: dict[str, dict] = {}
+
+
+def add_recent_model(model_id: str, n_params: int = 0) -> None:
+    """Register a dynamically loaded model in the recent models list."""
+    if model_id not in MODEL_REGISTRY and model_id not in _recent_models:
+        if n_params >= 1_000_000_000:
+            params = f"{n_params / 1e9:.1f}B"
+        else:
+            params = f"{n_params / 1e6:.0f}M"
+        _recent_models[model_id] = {
+            "family": "dynamic",
+            "display_name": model_id.split("/")[-1],
+            "params": params,
+            "tl_compat": True,  # loaded successfully
+            "gated": False,
+            "source": "dynamic",
+        }
+
+
 def list_models(loaded_model_id: str | None = None) -> list[dict]:
     """Return model list for frontend, with current load status."""
     result = []
@@ -73,6 +93,20 @@ def list_models(loaded_model_id: str | None = None) -> list[dict]:
                 "tl_compat": meta["tl_compat"],
                 "gated": meta.get("gated", False),
                 "is_loaded": model_id == loaded_model_id,
+                "source": "registry",
+            }
+        )
+    for model_id, meta in _recent_models.items():
+        result.append(
+            {
+                "model_id": model_id,
+                "display_name": meta["display_name"],
+                "family": meta["family"],
+                "params": meta["params"],
+                "tl_compat": meta["tl_compat"],
+                "gated": meta.get("gated", False),
+                "is_loaded": model_id == loaded_model_id,
+                "source": "dynamic",
             }
         )
     return result

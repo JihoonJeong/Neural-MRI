@@ -3,6 +3,8 @@ import type { ModelInfo } from '../types/model';
 import { api } from '../api/client';
 import type { ModelListEntry } from '../api/client';
 import { useSAEStore } from './useSAEStore';
+import { useSettingsStore } from './useSettingsStore';
+import { useModelSearchStore } from './useModelSearchStore';
 
 interface ModelState {
   modelInfo: ModelInfo | null;
@@ -23,8 +25,11 @@ export const useModelStore = create<ModelState>((set) => ({
   loadModel: async (modelId) => {
     set({ isLoading: true, error: null });
     try {
-      const info = await api.model.load(modelId);
+      const device = useSettingsStore.getState().devicePreference;
+      const info = await api.model.load(modelId, device);
       set({ modelInfo: info, isLoading: false });
+      // Register as recent model
+      useModelSearchStore.getState().addRecentModel(modelId);
       // Refresh model list to update is_loaded flags
       try {
         const models = await api.model.list();

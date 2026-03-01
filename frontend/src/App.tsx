@@ -23,7 +23,9 @@ import { AttentionPanel } from './components/Panels/AttentionPanel';
 import { LogitLensPanel } from './components/Panels/LogitLensPanel';
 import { PeerCursors } from './components/PeerCursors';
 import { RecordingBar } from './components/RecordingBar';
+import { SettingsModal } from './components/SettingsModal';
 import { useCrossModelStore } from './store/useCrossModelStore';
+import { useSettingsStore } from './store/useSettingsStore';
 import { useModelStore } from './store/useModelStore';
 import { useScanStore } from './store/useScanStore';
 import { useCompareStore } from './store/useCompareStore';
@@ -42,9 +44,11 @@ export default function App() {
   const sendCursor = useCollabStore((s) => s.sendCursor);
   const playbackFrame = useRecordingStore((s) => s.currentFrame);
 
-  // Fetch model info and available models on mount
+  // Fetch model info, available models, and settings on mount
   useEffect(() => {
     fetchModels();
+    useSettingsStore.getState().fetchTokenStatus();
+    useSettingsStore.getState().fetchCacheStatus();
     fetchModelInfo().then(() => {
       const info = useModelStore.getState().modelInfo;
       if (info) {
@@ -155,6 +159,7 @@ export default function App() {
       <GuideModal />
       <ReportModal />
       <BatteryDetailModal />
+      <SettingsModal />
     </div>
   );
 }

@@ -76,8 +76,28 @@ class ModelManager:
         if use_fp16:
             load_kwargs["dtype"] = torch.float16
 
+        if not registry_meta:
+            logger.info(
+                "Model %s not in registry, attempting dynamic load...",
+                model_id,
+            )
+
         try:
             self._model = HookedTransformer.from_pretrained(model_id, **load_kwargs)
+        except ValueError as exc:
+            # TransformerLens raises ValueError for unsupported architectures
+            raise RuntimeError(
+                f"TransformerLens does not support this model architecture: {exc}"
+            ) from exc
+        except OSError as exc:
+            err_msg = str(exc).lower()
+            if "401" in err_msg or "unauthorized" in err_msg or "token" in err_msg:
+                raise RuntimeError(
+                    f"Authentication required for {model_id}. Set an HF token in Settings."
+                ) from exc
+            if "404" in err_msg or "not found" in err_msg:
+                raise RuntimeError(f"Model '{model_id}' not found on HuggingFace Hub.") from exc
+            raise
         except (RuntimeError, torch.cuda.OutOfMemoryError) as exc:
             # GPU out of memory — fallback to CPU
             if resolved_device != "cpu":

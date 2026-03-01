@@ -14,6 +14,8 @@ from neural_mri.api.routes_perturb import router as perturb_router
 from neural_mri.api.routes_report import router as report_router
 from neural_mri.api.routes_sae import router as sae_router
 from neural_mri.api.routes_scan import router as scan_router
+from neural_mri.api.routes_search import router as search_router
+from neural_mri.api.routes_settings import router as settings_router
 from neural_mri.api.ws_collab import router as ws_collab_router
 from neural_mri.api.ws_stream import router as ws_router
 from neural_mri.config import Settings
@@ -75,6 +77,8 @@ app.include_router(report_router, prefix="/api/report", tags=["report"])
 app.include_router(battery_router, prefix="/api/battery", tags=["battery"])
 app.include_router(sae_router, prefix="/api/sae", tags=["sae"])
 app.include_router(collab_router, prefix="/api/collab", tags=["collab"])
+app.include_router(settings_router, prefix="/api/settings", tags=["settings"])
+app.include_router(search_router, prefix="/api/model", tags=["model"])
 app.include_router(ws_router, tags=["websocket"])
 app.include_router(ws_collab_router, tags=["websocket"])
 
