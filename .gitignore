@@ -39,5 +39,8 @@ models/
 test-results/
 playwright-report/
 
+# Docs build
+site/
+
 # Misc
 *.log
