@@ -70,7 +70,7 @@ colorTo: blue
 sdk: docker
 app_port: 7860
 license: mit
-short_description: Model Resonance Imaging — visualize LLM internals like a brain MRI
+short_description: Visualize LLM internals like a brain MRI
 ---
 
 # Neural MRI Scanner

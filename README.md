@@ -8,6 +8,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
   <img src="https://img.shields.io/badge/python-3.11+-3776AB.svg?logo=python&logoColor=white" alt="Python 3.11+">
   <img src="https://img.shields.io/badge/node-20+-339933.svg?logo=node.js&logoColor=white" alt="Node 20+">
+  <a href="https://huggingface.co/spaces/Hiconcep/Neural-MRI"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Spaces-Live%20Demo-yellow.svg" alt="HF Spaces"></a>
 </p>
 
 ---
