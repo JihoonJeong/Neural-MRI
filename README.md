@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/jihoon/Neural-MRI/actions/workflows/ci.yml"><img src="https://github.com/jihoon/Neural-MRI/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/JihoonJeong/Neural-MRI/actions/workflows/ci.yml"><img src="https://github.com/JihoonJeong/Neural-MRI/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
   <img src="https://img.shields.io/badge/python-3.11+-3776AB.svg?logo=python&logoColor=white" alt="Python 3.11+">
   <img src="https://img.shields.io/badge/node-20+-339933.svg?logo=node.js&logoColor=white" alt="Node 20+">
@@ -13,6 +13,10 @@
 ---
 
 Neural MRI Scanner visualizes the internals of open-source LLMs like a **brain MRI** — mapping five medical imaging modalities to AI model analysis techniques. Feed a model and a prompt, get back a full diagnostic scan of what's happening inside.
+
+<p align="center">
+  <img src="docs/screenshots/fmri-scan.png" alt="Neural MRI — fMRI activation scan" width="800">
+</p>
 
 ## Scan Modes
 
@@ -23,6 +27,11 @@ Neural MRI Scanner visualizes the internals of open-source LLMs like a **brain M
 | **fMRI** | functional Model Resonance Imaging | Activation patterns for a given prompt |
 | **DTI** | Data Tractography Imaging | Information flow pathways & circuits |
 | **FLAIR** | Feature-Level Anomaly Identification & Reporting | Bias, hallucination & anomaly detection |
+
+<p align="center">
+  <img src="docs/screenshots/dti-scan.png" alt="DTI circuit tracing" width="400">
+  <img src="docs/screenshots/flair-scan.png" alt="FLAIR anomaly detection" width="400">
+</p>
 
 ## Features
 
