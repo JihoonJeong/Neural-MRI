@@ -34,3 +34,10 @@ models/
 
 # HuggingFace cache
 .cache/
+
+# Test artifacts
+test-results/
+playwright-report/
+
+# Misc
+*.log

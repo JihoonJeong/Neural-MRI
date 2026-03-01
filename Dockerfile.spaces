@@ -1,0 +1,99 @@
+# HuggingFace Spaces — single container (backend + frontend)
+# Port 7860 (Spaces default)
+
+# --- Stage 1: Build frontend ---
+FROM node:22-alpine AS frontend-build
+WORKDIR /app
+RUN corepack enable
+COPY frontend/package.json frontend/pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
+COPY frontend/ .
+RUN pnpm build
+
+# --- Stage 2: Runtime ---
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install nginx + supervisor
+RUN apt-get update && apt-get install -y --no-install-recommends nginx supervisor \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install uv
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
+
+# Install Python dependencies
+COPY backend/pyproject.toml backend/uv.lock ./
+RUN uv sync --frozen --no-dev
+
+# Copy backend code
+COPY backend/neural_mri/ neural_mri/
+
+# Copy frontend build
+COPY --from=frontend-build /app/dist /usr/share/nginx/html
+
+# Nginx config: serve frontend + proxy API/WS to backend
+RUN cat > /etc/nginx/conf.d/default.conf <<'NGINX'
+server {
+    listen 7860;
+    root /usr/share/nginx/html;
+    index index.html;
+    client_max_body_size 10M;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+    location /api/ {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_read_timeout 300;
+    }
+    location /ws/ {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_read_timeout 300;
+    }
+}
+NGINX
+# Remove default site
+RUN rm -f /etc/nginx/sites-enabled/default
+
+# Supervisor config: run nginx + uvicorn together
+RUN cat > /etc/supervisor/conf.d/app.conf <<'SUPER'
+[supervisord]
+nodaemon=true
+logfile=/dev/stdout
+logfile_maxbytes=0
+
+[program:backend]
+command=uv run uvicorn neural_mri.main:app --host 127.0.0.1 --port 8000
+directory=/app
+autostart=true
+autorestart=true
+stdout_logfile=/dev/stdout
+stdout_logfile_maxbytes=0
+stderr_logfile=/dev/stderr
+stderr_logfile_maxbytes=0
+
+[program:nginx]
+command=nginx -g "daemon off;"
+autostart=true
+autorestart=true
+stdout_logfile=/dev/stdout
+stdout_logfile_maxbytes=0
+stderr_logfile=/dev/stderr
+stderr_logfile_maxbytes=0
+SUPER
+
+# Pre-download GPT-2 to avoid first-load delay
+RUN uv run python -c "from transformers import AutoTokenizer, AutoModelForCausalLM; AutoTokenizer.from_pretrained('gpt2'); AutoModelForCausalLM.from_pretrained('gpt2')"
+
+ENV NMRI_DEVICE=cpu
+ENV NMRI_DEFAULT_MODEL=gpt2
+ENV NMRI_ENVIRONMENT=huggingface
+ENV NMRI_CORS_ORIGINS='["*"]'
+
+EXPOSE 7860
+
+CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
