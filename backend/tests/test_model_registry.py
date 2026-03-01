@@ -3,8 +3,8 @@
 from neural_mri.core.model_registry import get_model_info, list_models
 
 
-def test_list_models_returns_5():
-    assert len(list_models()) == 5
+def test_list_models_returns_8():
+    assert len(list_models()) == 8
 
 
 def test_list_models_marks_loaded():

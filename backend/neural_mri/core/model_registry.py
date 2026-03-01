@@ -36,6 +36,27 @@ MODEL_REGISTRY: dict[str, dict] = {
         "tl_compat": True,
         "gated": True,
     },
+    "Qwen/Qwen2.5-3B": {
+        "family": "qwen",
+        "display_name": "Qwen 2.5 3B",
+        "params": "3B",
+        "tl_compat": True,
+        "gated": False,
+    },
+    "mistralai/Mistral-7B-v0.3": {
+        "family": "mistral",
+        "display_name": "Mistral 7B v0.3",
+        "params": "7.2B",
+        "tl_compat": True,
+        "gated": True,
+    },
+    "microsoft/Phi-3-mini-4k-instruct": {
+        "family": "phi",
+        "display_name": "Phi-3 Mini 3.8B",
+        "params": "3.8B",
+        "tl_compat": True,
+        "gated": False,
+    },
 }
 
 

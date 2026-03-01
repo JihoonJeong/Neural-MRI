@@ -1,4 +1,5 @@
 import { useScanStore } from '../store/useScanStore';
+import type { LayoutMode } from '../store/useScanStore';
 import { useLocaleStore } from '../store/useLocaleStore';
 import { SCAN_MODES, type ScanMode } from '../types/model';
 import { Tooltip } from './Tooltip';
@@ -6,11 +7,27 @@ import type { TranslationKey } from '../i18n/translations';
 
 const MODE_KEYS: ScanMode[] = ['T1', 'T2', 'fMRI', 'DTI', 'FLAIR'];
 
+const LAYOUT_ORDER: LayoutMode[] = ['vertical', 'brain', 'network', 'radial'];
+const LAYOUT_ICONS: Record<LayoutMode, string> = {
+  vertical: '\u2261',   // ≡ stack
+  brain: '\u25ce',      // ◎ brain
+  network: '\u2b2f',    // ⬯ hexagon (network)
+  radial: '\u25c9',     // ◉ bullseye (radial)
+};
+
 export function ModeTabs() {
   const { mode, setMode, layoutMode, setLayoutMode } = useScanStore();
   const t = useLocaleStore((s) => s.t);
 
-  const isBrain = layoutMode === 'brain';
+  const isNonDefault = layoutMode !== 'vertical';
+
+  const cycleLayout = () => {
+    const idx = LAYOUT_ORDER.indexOf(layoutMode);
+    const next = LAYOUT_ORDER[(idx + 1) % LAYOUT_ORDER.length];
+    setLayoutMode(next);
+  };
+
+  const layoutKey = `layout.${layoutMode}` as TranslationKey;
 
   return (
     <div className="flex" style={{ borderBottom: '1px solid var(--border)', background: 'var(--bg-secondary)' }}>
@@ -46,18 +63,15 @@ export function ModeTabs() {
         );
       })}
 
-      {/* Layout toggle */}
+      {/* Layout cycle button */}
       <div className="flex items-center px-2 shrink-0">
-        <Tooltip
-          text={isBrain ? t('layout.vertical' as TranslationKey) : t('layout.brain' as TranslationKey)}
-          position="bottom"
-        >
+        <Tooltip text={t(layoutKey)} position="bottom">
           <button
-            onClick={() => setLayoutMode(isBrain ? 'vertical' : 'brain')}
+            onClick={cycleLayout}
             style={{
-              background: isBrain ? 'rgba(0,255,170,0.12)' : 'transparent',
-              border: isBrain ? '1px solid rgba(0,255,170,0.3)' : '1px solid var(--border)',
-              color: isBrain ? 'var(--accent-active)' : 'var(--text-secondary)',
+              background: isNonDefault ? 'rgba(0,255,170,0.12)' : 'transparent',
+              border: isNonDefault ? '1px solid rgba(0,255,170,0.3)' : '1px solid var(--border)',
+              color: isNonDefault ? 'var(--accent-active)' : 'var(--text-secondary)',
               padding: '4px 8px',
               fontSize: 'var(--font-size-sm)',
               fontFamily: 'var(--font-primary)',
@@ -66,7 +80,7 @@ export function ModeTabs() {
               transition: 'all 0.2s ease',
             }}
           >
-            {isBrain ? '\u25ce' : '\u2261'}
+            {LAYOUT_ICONS[layoutMode]}
           </button>
         </Tooltip>
       </div>

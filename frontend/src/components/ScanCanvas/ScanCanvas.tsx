@@ -6,6 +6,8 @@ import { usePerturbStore } from '../../store/usePerturbStore';
 import { useAnimationFrame } from '../../hooks/useAnimationFrame';
 import { getNodeColor, getEdgeStyle } from './colorMaps';
 import { buildBrainLayout } from './brainLayout';
+import { buildNetworkLayout } from './networkLayout';
+import { buildRadialLayout } from './radialLayout';
 import type { ActivationData, AnomalyData, CircuitData, LayerStructure, ConnectionInfo, LayerWeightStats, StructuralData, WeightData } from '../../types/scan';
 import type { ScanMode } from '../../types/model';
 
@@ -190,6 +192,26 @@ export function ScanCanvas(props: ScanCanvasProps = {}) {
         canvasHeight,
         weightData?.layers,
       );
+    }
+    if (layoutMode === 'network') {
+      const result = buildNetworkLayout(
+        structuralData.layers,
+        structuralData.connections,
+        canvasWidth,
+        canvasHeight,
+        weightData?.layers,
+      );
+      return { ...result, brainPath: '' };
+    }
+    if (layoutMode === 'radial') {
+      const result = buildRadialLayout(
+        structuralData.layers,
+        structuralData.connections,
+        canvasWidth,
+        canvasHeight,
+        weightData?.layers,
+      );
+      return { ...result, brainPath: '' };
     }
     const result = buildLayout(
       structuralData.layers,
@@ -438,8 +460,8 @@ export function ScanCanvas(props: ScanCanvasProps = {}) {
       .attr('stroke-width', 1)
       .attr('opacity', 0.4);
 
-    // Left-side labels (hide in small canvases and brain layout)
-    if (canvasWidth >= 400 && !brainPath) {
+    // Left-side labels (only in vertical stack layout)
+    if (canvasWidth >= 400 && layoutMode === 'vertical') {
       g
         .selectAll<SVGTextElement, CanvasNode>('text.label')
         .data(nodes)

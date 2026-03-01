@@ -27,7 +27,7 @@ def test_list_sae_support_has_all_registry_models():
     support = list_sae_support()
     assert "gpt2" in support
     assert "gpt2-medium" in support
-    assert len(support) == 5
+    assert len(support) == 8
 
 
 def test_list_sae_support_gpt2_true():

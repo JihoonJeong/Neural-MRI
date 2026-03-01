@@ -8,7 +8,7 @@ interface LogEntry {
   msg: string;
 }
 
-export type LayoutMode = 'vertical' | 'brain';
+export type LayoutMode = 'vertical' | 'brain' | 'network' | 'radial';
 
 interface ScanState {
   mode: ScanMode;

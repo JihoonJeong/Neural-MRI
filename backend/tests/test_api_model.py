@@ -39,7 +39,7 @@ async def test_model_list_returns_array(_override_deps):
     assert resp.status_code == 200
     data = resp.json()
     assert isinstance(data, list)
-    assert len(data) == 5
+    assert len(data) == 8
 
 
 async def test_model_info_loaded(_override_deps):

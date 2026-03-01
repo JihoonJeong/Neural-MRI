@@ -91,7 +91,9 @@ export type TranslationKey =
   | 'sae.neuronpedia'
   // Layout
   | 'layout.vertical'
-  | 'layout.brain';
+  | 'layout.brain'
+  | 'layout.network'
+  | 'layout.radial';
 
 export const translations: Record<Locale, Record<TranslationKey, string>> = {
   en: {
@@ -246,6 +248,8 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     // ── Layout ──
     'layout.vertical': 'Stack View',
     'layout.brain': 'Brain View',
+    'layout.network': 'Network View',
+    'layout.radial': 'Radial View',
   },
 
   ko: {
@@ -400,5 +404,7 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     // ── Layout ──
     'layout.vertical': '\uc2a4\ud0dd \ubdf0',
     'layout.brain': '\ub1cc \ubdf0',
+    'layout.network': '\ub124\ud2b8\uc6cc\ud06c \ubdf0',
+    'layout.radial': '\ubc29\uc0ac\ud615 \ubdf0',
   },
 };
