@@ -1,0 +1,2311 @@
+{
+  "gemma_base": {
+    "perturbResults": [
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.0.attn",
+        "type": "zero",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.1982,
+        "logit_diff": -0.8125,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.0.attn",
+        "type": "amplify",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.219,
+        "logit_diff": -0.1562,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.0.attn",
+        "type": "ablate",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.2191,
+        "logit_diff": -0.0781,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.0.mlp",
+        "type": "zero",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.2355,
+        "logit_diff": -0.4375,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.0.mlp",
+        "type": "amplify",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.2134,
+        "logit_diff": 0.1875,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.0.mlp",
+        "type": "ablate",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.2332,
+        "logit_diff": -0.1875,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.5.attn",
+        "type": "zero",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.2104,
+        "logit_diff": 0.1406,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.5.attn",
+        "type": "amplify",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.2056,
+        "logit_diff": -0.4844,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.5.attn",
+        "type": "ablate",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.2072,
+        "logit_diff": 0.1406,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.5.mlp",
+        "type": "zero",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.2241,
+        "logit_diff": -0.0469,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.5.mlp",
+        "type": "amplify",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.1801,
+        "logit_diff": -0.1719,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.5.mlp",
+        "type": "ablate",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.2137,
+        "logit_diff": -0.0156,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.13.attn",
+        "type": "zero",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.2385,
+        "logit_diff": 0.3906,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.13.attn",
+        "type": "amplify",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.1719,
+        "logit_diff": -0.6875,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.13.attn",
+        "type": "ablate",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.2117,
+        "logit_diff": 0.0781,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.13.mlp",
+        "type": "zero",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.2074,
+        "logit_diff": 0.0156,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.13.mlp",
+        "type": "amplify",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.2098,
+        "logit_diff": -0.0156,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.13.mlp",
+        "type": "ablate",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.2083,
+        "logit_diff": 0.1094,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.22.attn",
+        "type": "zero",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.2198,
+        "logit_diff": 0.8438,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.22.attn",
+        "type": "amplify",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.2112,
+        "logit_diff": -1.5625,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.22.attn",
+        "type": "ablate",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.2053,
+        "logit_diff": 0.0469,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.22.mlp",
+        "type": "zero",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.182,
+        "logit_diff": -1.3438,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.22.mlp",
+        "type": "amplify",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.2322,
+        "logit_diff": 0.5781,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b",
+        "variant": "gemma-base",
+        "component": "blocks.22.mlp",
+        "type": "ablate",
+        "original_token": " a",
+        "original_prob": 0.207,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.1768,
+        "logit_diff": -0.5625,
+        "prediction_changed": false
+      }
+    ],
+    "trace": {
+      "model_id": "google/gemma-2-2b",
+      "clean_prompt": "The capital of France is",
+      "corrupt_prompt": "The capital of Poland is",
+      "target_token_idx": 5,
+      "clean_prediction": " a",
+      "corrupt_prediction": " a",
+      "cells": [
+        {
+          "component": "embed",
+          "layer_idx": -1,
+          "component_type": "embed",
+          "recovery_score": 1
+        },
+        {
+          "component": "blocks.0.attn",
+          "layer_idx": 0,
+          "component_type": "attn",
+          "recovery_score": 0.1163
+        },
+        {
+          "component": "blocks.0.mlp",
+          "layer_idx": 0,
+          "component_type": "mlp",
+          "recovery_score": 0.1163
+        },
+        {
+          "component": "blocks.1.attn",
+          "layer_idx": 1,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.1.mlp",
+          "layer_idx": 1,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.2.attn",
+          "layer_idx": 2,
+          "component_type": "attn",
+          "recovery_score": 0.4651
+        },
+        {
+          "component": "blocks.2.mlp",
+          "layer_idx": 2,
+          "component_type": "mlp",
+          "recovery_score": 0.2791
+        },
+        {
+          "component": "blocks.3.attn",
+          "layer_idx": 3,
+          "component_type": "attn",
+          "recovery_score": 0.3256
+        },
+        {
+          "component": "blocks.3.mlp",
+          "layer_idx": 3,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.4.attn",
+          "layer_idx": 4,
+          "component_type": "attn",
+          "recovery_score": 0.2326
+        },
+        {
+          "component": "blocks.4.mlp",
+          "layer_idx": 4,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.5.attn",
+          "layer_idx": 5,
+          "component_type": "attn",
+          "recovery_score": 0.093
+        },
+        {
+          "component": "blocks.5.mlp",
+          "layer_idx": 5,
+          "component_type": "mlp",
+          "recovery_score": 0.1163
+        },
+        {
+          "component": "blocks.6.attn",
+          "layer_idx": 6,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.6.mlp",
+          "layer_idx": 6,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.7.attn",
+          "layer_idx": 7,
+          "component_type": "attn",
+          "recovery_score": 0.0233
+        },
+        {
+          "component": "blocks.7.mlp",
+          "layer_idx": 7,
+          "component_type": "mlp",
+          "recovery_score": 0.2093
+        },
+        {
+          "component": "blocks.8.attn",
+          "layer_idx": 8,
+          "component_type": "attn",
+          "recovery_score": 0.0698
+        },
+        {
+          "component": "blocks.8.mlp",
+          "layer_idx": 8,
+          "component_type": "mlp",
+          "recovery_score": 0.2791
+        },
+        {
+          "component": "blocks.9.attn",
+          "layer_idx": 9,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.9.mlp",
+          "layer_idx": 9,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.10.attn",
+          "layer_idx": 10,
+          "component_type": "attn",
+          "recovery_score": 0.093
+        },
+        {
+          "component": "blocks.10.mlp",
+          "layer_idx": 10,
+          "component_type": "mlp",
+          "recovery_score": 0.2791
+        },
+        {
+          "component": "blocks.11.attn",
+          "layer_idx": 11,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.11.mlp",
+          "layer_idx": 11,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.12.attn",
+          "layer_idx": 12,
+          "component_type": "attn",
+          "recovery_score": 0.0465
+        },
+        {
+          "component": "blocks.12.mlp",
+          "layer_idx": 12,
+          "component_type": "mlp",
+          "recovery_score": 0.1163
+        },
+        {
+          "component": "blocks.13.attn",
+          "layer_idx": 13,
+          "component_type": "attn",
+          "recovery_score": 0.3256
+        },
+        {
+          "component": "blocks.13.mlp",
+          "layer_idx": 13,
+          "component_type": "mlp",
+          "recovery_score": 0.186
+        },
+        {
+          "component": "blocks.14.attn",
+          "layer_idx": 14,
+          "component_type": "attn",
+          "recovery_score": 0.2326
+        },
+        {
+          "component": "blocks.14.mlp",
+          "layer_idx": 14,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.15.attn",
+          "layer_idx": 15,
+          "component_type": "attn",
+          "recovery_score": 0.1163
+        },
+        {
+          "component": "blocks.15.mlp",
+          "layer_idx": 15,
+          "component_type": "mlp",
+          "recovery_score": 0.0465
+        },
+        {
+          "component": "blocks.16.attn",
+          "layer_idx": 16,
+          "component_type": "attn",
+          "recovery_score": 0.1395
+        },
+        {
+          "component": "blocks.16.mlp",
+          "layer_idx": 16,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.17.attn",
+          "layer_idx": 17,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.17.mlp",
+          "layer_idx": 17,
+          "component_type": "mlp",
+          "recovery_score": 0.1163
+        },
+        {
+          "component": "blocks.18.attn",
+          "layer_idx": 18,
+          "component_type": "attn",
+          "recovery_score": 0.3256
+        },
+        {
+          "component": "blocks.18.mlp",
+          "layer_idx": 18,
+          "component_type": "mlp",
+          "recovery_score": 0.6977
+        },
+        {
+          "component": "blocks.19.attn",
+          "layer_idx": 19,
+          "component_type": "attn",
+          "recovery_score": 0.1163
+        },
+        {
+          "component": "blocks.19.mlp",
+          "layer_idx": 19,
+          "component_type": "mlp",
+          "recovery_score": 0.4884
+        },
+        {
+          "component": "blocks.20.attn",
+          "layer_idx": 20,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.20.mlp",
+          "layer_idx": 20,
+          "component_type": "mlp",
+          "recovery_score": 0.1163
+        },
+        {
+          "component": "blocks.21.attn",
+          "layer_idx": 21,
+          "component_type": "attn",
+          "recovery_score": 0.0698
+        },
+        {
+          "component": "blocks.21.mlp",
+          "layer_idx": 21,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.22.attn",
+          "layer_idx": 22,
+          "component_type": "attn",
+          "recovery_score": 0.2326
+        },
+        {
+          "component": "blocks.22.mlp",
+          "layer_idx": 22,
+          "component_type": "mlp",
+          "recovery_score": 0.7674
+        },
+        {
+          "component": "blocks.23.attn",
+          "layer_idx": 23,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.23.mlp",
+          "layer_idx": 23,
+          "component_type": "mlp",
+          "recovery_score": 0.3256
+        },
+        {
+          "component": "blocks.24.attn",
+          "layer_idx": 24,
+          "component_type": "attn",
+          "recovery_score": 0.0233
+        },
+        {
+          "component": "blocks.24.mlp",
+          "layer_idx": 24,
+          "component_type": "mlp",
+          "recovery_score": 0.3023
+        },
+        {
+          "component": "blocks.25.attn",
+          "layer_idx": 25,
+          "component_type": "attn",
+          "recovery_score": 0.1395
+        },
+        {
+          "component": "blocks.25.mlp",
+          "layer_idx": 25,
+          "component_type": "mlp",
+          "recovery_score": 0.2326
+        }
+      ],
+      "n_layers": 26,
+      "metadata": {
+        "compute_time_ms": 11595.8
+      }
+    }
+  },
+  "gemma_instruct": {
+    "perturbResults": [
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.0.attn",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.3494,
+        "logit_diff": 0.7635,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.0.attn",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": ":",
+        "perturbed_prob": 0.2345,
+        "logit_diff": -0.2631,
+        "prediction_changed": true
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.0.attn",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2706,
+        "logit_diff": 0.1393,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.0.mlp",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": " **",
+        "perturbed_prob": 0.2992,
+        "logit_diff": 0.0417,
+        "prediction_changed": true
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.0.mlp",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.1775,
+        "logit_diff": 0.3484,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.0.mlp",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2398,
+        "logit_diff": 0.0518,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.5.attn",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2454,
+        "logit_diff": -0.008,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.5.attn",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2265,
+        "logit_diff": 0.2145,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.5.attn",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": ":",
+        "perturbed_prob": 0.2189,
+        "logit_diff": -0.0514,
+        "prediction_changed": true
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.5.mlp",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.348,
+        "logit_diff": 0.717,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.5.mlp",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2135,
+        "logit_diff": 0.2794,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.5.mlp",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2447,
+        "logit_diff": 0.2418,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.13.attn",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.337,
+        "logit_diff": 0.5828,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.13.attn",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": ":",
+        "perturbed_prob": 0.2402,
+        "logit_diff": -0.5053,
+        "prediction_changed": true
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.13.attn",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2351,
+        "logit_diff": 0.2366,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.13.mlp",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.177,
+        "logit_diff": -0.1964,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.13.mlp",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.3276,
+        "logit_diff": 0.4947,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.13.mlp",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.1831,
+        "logit_diff": -0.1402,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.22.attn",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": ":",
+        "perturbed_prob": 0.2101,
+        "logit_diff": -1.2667,
+        "prediction_changed": true
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.22.attn",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.3824,
+        "logit_diff": 2.3503,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.22.attn",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": ":",
+        "perturbed_prob": 0.1907,
+        "logit_diff": -0.2737,
+        "prediction_changed": true
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.22.mlp",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": ":",
+        "perturbed_prob": 0.2155,
+        "logit_diff": -1.2513,
+        "prediction_changed": true
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.22.mlp",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2726,
+        "logit_diff": 1.1738,
+        "prediction_changed": false
+      },
+      {
+        "model": "google/gemma-2-2b-it",
+        "variant": "gemma-instruct",
+        "component": "blocks.22.mlp",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.2015,
+        "perturbed_token": " **",
+        "perturbed_prob": 0.2144,
+        "logit_diff": -0.793,
+        "prediction_changed": true
+      }
+    ],
+    "trace": null
+  },
+  "llama_base": {
+    "perturbResults": [
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.0.attn",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.5317,
+        "logit_diff": -0.2812,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.0.attn",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2267,
+        "logit_diff": -0.1406,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.0.attn",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.4128,
+        "logit_diff": 0.3125,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.0.mlp",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": "\n",
+        "perturbed_prob": 0.1565,
+        "logit_diff": -15.7871,
+        "prediction_changed": true
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.0.mlp",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2703,
+        "logit_diff": 0.0781,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.0.mlp",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": "Question",
+        "perturbed_prob": 0.9468,
+        "logit_diff": -17.6079,
+        "prediction_changed": true
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.5.attn",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.1334,
+        "logit_diff": -1.0625,
+        "prediction_changed": true
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.5.attn",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.3586,
+        "logit_diff": 0.3906,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.5.attn",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2076,
+        "logit_diff": -0.1406,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.5.mlp",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2812,
+        "logit_diff": 0.1094,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.5.mlp",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.3904,
+        "logit_diff": 0.1094,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.5.mlp",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.186,
+        "logit_diff": -0.3594,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.14.attn",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2681,
+        "logit_diff": 0.0625,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.14.attn",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.1829,
+        "logit_diff": -0.3906,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.14.attn",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2761,
+        "logit_diff": 0.1719,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.14.mlp",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2429,
+        "logit_diff": 0.0781,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.14.mlp",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2273,
+        "logit_diff": -0.4062,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.14.mlp",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2029,
+        "logit_diff": -0.2344,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.24.attn",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.243,
+        "logit_diff": -0.0156,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.24.attn",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2385,
+        "logit_diff": -0.0312,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.24.attn",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2372,
+        "logit_diff": -0.0625,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.24.mlp",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " the",
+        "perturbed_prob": 0.106,
+        "logit_diff": -2.2969,
+        "prediction_changed": true
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.24.mlp",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.3459,
+        "logit_diff": 0.7969,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B",
+        "variant": "llama-base",
+        "component": "blocks.24.mlp",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.2439,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.1849,
+        "logit_diff": -0.6719,
+        "prediction_changed": false
+      }
+    ],
+    "trace": {
+      "model_id": "meta-llama/Llama-3.2-3B",
+      "clean_prompt": "The capital of France is",
+      "corrupt_prompt": "The capital of Poland is",
+      "target_token_idx": 5,
+      "clean_prediction": " Paris",
+      "corrupt_prediction": " Warsaw",
+      "cells": [
+        {
+          "component": "embed",
+          "layer_idx": -1,
+          "component_type": "embed",
+          "recovery_score": 1
+        },
+        {
+          "component": "blocks.0.attn",
+          "layer_idx": 0,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.0.mlp",
+          "layer_idx": 0,
+          "component_type": "mlp",
+          "recovery_score": 1
+        },
+        {
+          "component": "blocks.1.attn",
+          "layer_idx": 1,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.1.mlp",
+          "layer_idx": 1,
+          "component_type": "mlp",
+          "recovery_score": 0.019
+        },
+        {
+          "component": "blocks.2.attn",
+          "layer_idx": 2,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.2.mlp",
+          "layer_idx": 2,
+          "component_type": "mlp",
+          "recovery_score": 1
+        },
+        {
+          "component": "blocks.3.attn",
+          "layer_idx": 3,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.3.mlp",
+          "layer_idx": 3,
+          "component_type": "mlp",
+          "recovery_score": 0.0224
+        },
+        {
+          "component": "blocks.4.attn",
+          "layer_idx": 4,
+          "component_type": "attn",
+          "recovery_score": 0.0224
+        },
+        {
+          "component": "blocks.4.mlp",
+          "layer_idx": 4,
+          "component_type": "mlp",
+          "recovery_score": 0.056
+        },
+        {
+          "component": "blocks.5.attn",
+          "layer_idx": 5,
+          "component_type": "attn",
+          "recovery_score": 0.0112
+        },
+        {
+          "component": "blocks.5.mlp",
+          "layer_idx": 5,
+          "component_type": "mlp",
+          "recovery_score": 0.0397
+        },
+        {
+          "component": "blocks.6.attn",
+          "layer_idx": 6,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.6.mlp",
+          "layer_idx": 6,
+          "component_type": "mlp",
+          "recovery_score": 0.0888
+        },
+        {
+          "component": "blocks.7.attn",
+          "layer_idx": 7,
+          "component_type": "attn",
+          "recovery_score": 0.0103
+        },
+        {
+          "component": "blocks.7.mlp",
+          "layer_idx": 7,
+          "component_type": "mlp",
+          "recovery_score": 0.0009
+        },
+        {
+          "component": "blocks.8.attn",
+          "layer_idx": 8,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.8.mlp",
+          "layer_idx": 8,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.9.attn",
+          "layer_idx": 9,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.9.mlp",
+          "layer_idx": 9,
+          "component_type": "mlp",
+          "recovery_score": 0.0155
+        },
+        {
+          "component": "blocks.10.attn",
+          "layer_idx": 10,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.10.mlp",
+          "layer_idx": 10,
+          "component_type": "mlp",
+          "recovery_score": 0.0078
+        },
+        {
+          "component": "blocks.11.attn",
+          "layer_idx": 11,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.11.mlp",
+          "layer_idx": 11,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.12.attn",
+          "layer_idx": 12,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.12.mlp",
+          "layer_idx": 12,
+          "component_type": "mlp",
+          "recovery_score": 0.1672
+        },
+        {
+          "component": "blocks.13.attn",
+          "layer_idx": 13,
+          "component_type": "attn",
+          "recovery_score": 0.1284
+        },
+        {
+          "component": "blocks.13.mlp",
+          "layer_idx": 13,
+          "component_type": "mlp",
+          "recovery_score": 0.0741
+        },
+        {
+          "component": "blocks.14.attn",
+          "layer_idx": 14,
+          "component_type": "attn",
+          "recovery_score": 0.0009
+        },
+        {
+          "component": "blocks.14.mlp",
+          "layer_idx": 14,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.15.attn",
+          "layer_idx": 15,
+          "component_type": "attn",
+          "recovery_score": 0.7284
+        },
+        {
+          "component": "blocks.15.mlp",
+          "layer_idx": 15,
+          "component_type": "mlp",
+          "recovery_score": 0.0431
+        },
+        {
+          "component": "blocks.16.attn",
+          "layer_idx": 16,
+          "component_type": "attn",
+          "recovery_score": 0.0362
+        },
+        {
+          "component": "blocks.16.mlp",
+          "layer_idx": 16,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.17.attn",
+          "layer_idx": 17,
+          "component_type": "attn",
+          "recovery_score": 0.2776
+        },
+        {
+          "component": "blocks.17.mlp",
+          "layer_idx": 17,
+          "component_type": "mlp",
+          "recovery_score": 0.356
+        },
+        {
+          "component": "blocks.18.attn",
+          "layer_idx": 18,
+          "component_type": "attn",
+          "recovery_score": 0.0078
+        },
+        {
+          "component": "blocks.18.mlp",
+          "layer_idx": 18,
+          "component_type": "mlp",
+          "recovery_score": 0.6914
+        },
+        {
+          "component": "blocks.19.attn",
+          "layer_idx": 19,
+          "component_type": "attn",
+          "recovery_score": 0.0336
+        },
+        {
+          "component": "blocks.19.mlp",
+          "layer_idx": 19,
+          "component_type": "mlp",
+          "recovery_score": 0.1466
+        },
+        {
+          "component": "blocks.20.attn",
+          "layer_idx": 20,
+          "component_type": "attn",
+          "recovery_score": 0.0302
+        },
+        {
+          "component": "blocks.20.mlp",
+          "layer_idx": 20,
+          "component_type": "mlp",
+          "recovery_score": 0.0259
+        },
+        {
+          "component": "blocks.21.attn",
+          "layer_idx": 21,
+          "component_type": "attn",
+          "recovery_score": 0.7845
+        },
+        {
+          "component": "blocks.21.mlp",
+          "layer_idx": 21,
+          "component_type": "mlp",
+          "recovery_score": 0.0828
+        },
+        {
+          "component": "blocks.22.attn",
+          "layer_idx": 22,
+          "component_type": "attn",
+          "recovery_score": 0.0034
+        },
+        {
+          "component": "blocks.22.mlp",
+          "layer_idx": 22,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.23.attn",
+          "layer_idx": 23,
+          "component_type": "attn",
+          "recovery_score": 0.0155
+        },
+        {
+          "component": "blocks.23.mlp",
+          "layer_idx": 23,
+          "component_type": "mlp",
+          "recovery_score": 0.0905
+        },
+        {
+          "component": "blocks.24.attn",
+          "layer_idx": 24,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.24.mlp",
+          "layer_idx": 24,
+          "component_type": "mlp",
+          "recovery_score": 0.1241
+        },
+        {
+          "component": "blocks.25.attn",
+          "layer_idx": 25,
+          "component_type": "attn",
+          "recovery_score": 0.0483
+        },
+        {
+          "component": "blocks.25.mlp",
+          "layer_idx": 25,
+          "component_type": "mlp",
+          "recovery_score": 0.1078
+        },
+        {
+          "component": "blocks.26.attn",
+          "layer_idx": 26,
+          "component_type": "attn",
+          "recovery_score": 0.0086
+        },
+        {
+          "component": "blocks.26.mlp",
+          "layer_idx": 26,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.27.attn",
+          "layer_idx": 27,
+          "component_type": "attn",
+          "recovery_score": 0.3181
+        },
+        {
+          "component": "blocks.27.mlp",
+          "layer_idx": 27,
+          "component_type": "mlp",
+          "recovery_score": 0
+        }
+      ],
+      "n_layers": 28,
+      "metadata": {
+        "compute_time_ms": 20937.2
+      }
+    }
+  },
+  "qwen_base": {
+    "perturbResults": [
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.0.attn",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": "N",
+        "perturbed_prob": 0.0567,
+        "logit_diff": -18.3467,
+        "prediction_changed": true
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.0.attn",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.4231,
+        "logit_diff": 0.0781,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.0.attn",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " up",
+        "perturbed_prob": 0.0825,
+        "logit_diff": -13.5469,
+        "prediction_changed": true
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.0.mlp",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.2357,
+        "logit_diff": -1.1562,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.0.mlp",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " a",
+        "perturbed_prob": 0.1882,
+        "logit_diff": -5.4297,
+        "prediction_changed": true
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.0.mlp",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.4824,
+        "logit_diff": -0.7656,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.5.attn",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.4341,
+        "logit_diff": 0.0312,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.5.attn",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.3911,
+        "logit_diff": -0.0625,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.5.attn",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.4573,
+        "logit_diff": 0.0625,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.5.mlp",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.4958,
+        "logit_diff": -0.0625,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.5.mlp",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.4492,
+        "logit_diff": 0.0312,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.5.mlp",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.5093,
+        "logit_diff": 0,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.18.attn",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.4136,
+        "logit_diff": -0.375,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.18.attn",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.4878,
+        "logit_diff": 0.2344,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.18.attn",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.4468,
+        "logit_diff": -0.1406,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.18.mlp",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.4988,
+        "logit_diff": 0.0938,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.18.mlp",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.4958,
+        "logit_diff": -0.0156,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.18.mlp",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.5312,
+        "logit_diff": 0.2656,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.32.attn",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.3352,
+        "logit_diff": -0.9062,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.32.attn",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.5342,
+        "logit_diff": 0.5625,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.32.attn",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.4248,
+        "logit_diff": -0.1562,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.32.mlp",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.3694,
+        "logit_diff": -0.2188,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.32.mlp",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.4709,
+        "logit_diff": -0.25,
+        "prediction_changed": false
+      },
+      {
+        "model": "Qwen/Qwen2.5-3B",
+        "variant": "qwen-base",
+        "component": "blocks.32.mlp",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.4512,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.4807,
+        "logit_diff": 0.0469,
+        "prediction_changed": false
+      }
+    ],
+    "trace": {
+      "model_id": "Qwen/Qwen2.5-3B",
+      "clean_prompt": "The capital of France is",
+      "corrupt_prompt": "The capital of Poland is",
+      "target_token_idx": 4,
+      "clean_prediction": " Paris",
+      "corrupt_prediction": " Warsaw",
+      "cells": [
+        {
+          "component": "embed",
+          "layer_idx": -1,
+          "component_type": "embed",
+          "recovery_score": 1
+        },
+        {
+          "component": "blocks.0.attn",
+          "layer_idx": 0,
+          "component_type": "attn",
+          "recovery_score": 0.9981
+        },
+        {
+          "component": "blocks.0.mlp",
+          "layer_idx": 0,
+          "component_type": "mlp",
+          "recovery_score": 0.0837
+        },
+        {
+          "component": "blocks.1.attn",
+          "layer_idx": 1,
+          "component_type": "attn",
+          "recovery_score": 0.0019
+        },
+        {
+          "component": "blocks.1.mlp",
+          "layer_idx": 1,
+          "component_type": "mlp",
+          "recovery_score": 0.0048
+        },
+        {
+          "component": "blocks.2.attn",
+          "layer_idx": 2,
+          "component_type": "attn",
+          "recovery_score": 0.0019
+        },
+        {
+          "component": "blocks.2.mlp",
+          "layer_idx": 2,
+          "component_type": "mlp",
+          "recovery_score": 0.0192
+        },
+        {
+          "component": "blocks.3.attn",
+          "layer_idx": 3,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.3.mlp",
+          "layer_idx": 3,
+          "component_type": "mlp",
+          "recovery_score": 0.0106
+        },
+        {
+          "component": "blocks.4.attn",
+          "layer_idx": 4,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.4.mlp",
+          "layer_idx": 4,
+          "component_type": "mlp",
+          "recovery_score": 0.001
+        },
+        {
+          "component": "blocks.5.attn",
+          "layer_idx": 5,
+          "component_type": "attn",
+          "recovery_score": 0.0019
+        },
+        {
+          "component": "blocks.5.mlp",
+          "layer_idx": 5,
+          "component_type": "mlp",
+          "recovery_score": 0.0106
+        },
+        {
+          "component": "blocks.6.attn",
+          "layer_idx": 6,
+          "component_type": "attn",
+          "recovery_score": 0.001
+        },
+        {
+          "component": "blocks.6.mlp",
+          "layer_idx": 6,
+          "component_type": "mlp",
+          "recovery_score": 0.0183
+        },
+        {
+          "component": "blocks.7.attn",
+          "layer_idx": 7,
+          "component_type": "attn",
+          "recovery_score": 0.0077
+        },
+        {
+          "component": "blocks.7.mlp",
+          "layer_idx": 7,
+          "component_type": "mlp",
+          "recovery_score": 0.9673
+        },
+        {
+          "component": "blocks.8.attn",
+          "layer_idx": 8,
+          "component_type": "attn",
+          "recovery_score": 0.0135
+        },
+        {
+          "component": "blocks.8.mlp",
+          "layer_idx": 8,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.9.attn",
+          "layer_idx": 9,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.9.mlp",
+          "layer_idx": 9,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.10.attn",
+          "layer_idx": 10,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.10.mlp",
+          "layer_idx": 10,
+          "component_type": "mlp",
+          "recovery_score": 0.0683
+        },
+        {
+          "component": "blocks.11.attn",
+          "layer_idx": 11,
+          "component_type": "attn",
+          "recovery_score": 0.0346
+        },
+        {
+          "component": "blocks.11.mlp",
+          "layer_idx": 11,
+          "component_type": "mlp",
+          "recovery_score": 0.1654
+        },
+        {
+          "component": "blocks.12.attn",
+          "layer_idx": 12,
+          "component_type": "attn",
+          "recovery_score": 0.0173
+        },
+        {
+          "component": "blocks.12.mlp",
+          "layer_idx": 12,
+          "component_type": "mlp",
+          "recovery_score": 0.0712
+        },
+        {
+          "component": "blocks.13.attn",
+          "layer_idx": 13,
+          "component_type": "attn",
+          "recovery_score": 0.0125
+        },
+        {
+          "component": "blocks.13.mlp",
+          "layer_idx": 13,
+          "component_type": "mlp",
+          "recovery_score": 0.0337
+        },
+        {
+          "component": "blocks.14.attn",
+          "layer_idx": 14,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.14.mlp",
+          "layer_idx": 14,
+          "component_type": "mlp",
+          "recovery_score": 0.0048
+        },
+        {
+          "component": "blocks.15.attn",
+          "layer_idx": 15,
+          "component_type": "attn",
+          "recovery_score": 0.0019
+        },
+        {
+          "component": "blocks.15.mlp",
+          "layer_idx": 15,
+          "component_type": "mlp",
+          "recovery_score": 0.0067
+        },
+        {
+          "component": "blocks.16.attn",
+          "layer_idx": 16,
+          "component_type": "attn",
+          "recovery_score": 0.0048
+        },
+        {
+          "component": "blocks.16.mlp",
+          "layer_idx": 16,
+          "component_type": "mlp",
+          "recovery_score": 0.0077
+        },
+        {
+          "component": "blocks.17.attn",
+          "layer_idx": 17,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.17.mlp",
+          "layer_idx": 17,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.18.attn",
+          "layer_idx": 18,
+          "component_type": "attn",
+          "recovery_score": 0.0038
+        },
+        {
+          "component": "blocks.18.mlp",
+          "layer_idx": 18,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.19.attn",
+          "layer_idx": 19,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.19.mlp",
+          "layer_idx": 19,
+          "component_type": "mlp",
+          "recovery_score": 0.0365
+        },
+        {
+          "component": "blocks.20.attn",
+          "layer_idx": 20,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.20.mlp",
+          "layer_idx": 20,
+          "component_type": "mlp",
+          "recovery_score": 0.0452
+        },
+        {
+          "component": "blocks.21.attn",
+          "layer_idx": 21,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.21.mlp",
+          "layer_idx": 21,
+          "component_type": "mlp",
+          "recovery_score": 0.0058
+        },
+        {
+          "component": "blocks.22.attn",
+          "layer_idx": 22,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.22.mlp",
+          "layer_idx": 22,
+          "component_type": "mlp",
+          "recovery_score": 0.0202
+        },
+        {
+          "component": "blocks.23.attn",
+          "layer_idx": 23,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.23.mlp",
+          "layer_idx": 23,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.24.attn",
+          "layer_idx": 24,
+          "component_type": "attn",
+          "recovery_score": 0.0029
+        },
+        {
+          "component": "blocks.24.mlp",
+          "layer_idx": 24,
+          "component_type": "mlp",
+          "recovery_score": 0.0538
+        },
+        {
+          "component": "blocks.25.attn",
+          "layer_idx": 25,
+          "component_type": "attn",
+          "recovery_score": 0.0077
+        },
+        {
+          "component": "blocks.25.mlp",
+          "layer_idx": 25,
+          "component_type": "mlp",
+          "recovery_score": 0.0529
+        },
+        {
+          "component": "blocks.26.attn",
+          "layer_idx": 26,
+          "component_type": "attn",
+          "recovery_score": 0.025
+        },
+        {
+          "component": "blocks.26.mlp",
+          "layer_idx": 26,
+          "component_type": "mlp",
+          "recovery_score": 0.2712
+        },
+        {
+          "component": "blocks.27.attn",
+          "layer_idx": 27,
+          "component_type": "attn",
+          "recovery_score": 0.7904
+        },
+        {
+          "component": "blocks.27.mlp",
+          "layer_idx": 27,
+          "component_type": "mlp",
+          "recovery_score": 0.0788
+        },
+        {
+          "component": "blocks.28.attn",
+          "layer_idx": 28,
+          "component_type": "attn",
+          "recovery_score": 0.0019
+        },
+        {
+          "component": "blocks.28.mlp",
+          "layer_idx": 28,
+          "component_type": "mlp",
+          "recovery_score": 0.0077
+        },
+        {
+          "component": "blocks.29.attn",
+          "layer_idx": 29,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.29.mlp",
+          "layer_idx": 29,
+          "component_type": "mlp",
+          "recovery_score": 0.1702
+        },
+        {
+          "component": "blocks.30.attn",
+          "layer_idx": 30,
+          "component_type": "attn",
+          "recovery_score": 0.0231
+        },
+        {
+          "component": "blocks.30.mlp",
+          "layer_idx": 30,
+          "component_type": "mlp",
+          "recovery_score": 0.2221
+        },
+        {
+          "component": "blocks.31.attn",
+          "layer_idx": 31,
+          "component_type": "attn",
+          "recovery_score": 0.8442
+        },
+        {
+          "component": "blocks.31.mlp",
+          "layer_idx": 31,
+          "component_type": "mlp",
+          "recovery_score": 0.7692
+        },
+        {
+          "component": "blocks.32.attn",
+          "layer_idx": 32,
+          "component_type": "attn",
+          "recovery_score": 0.1462
+        },
+        {
+          "component": "blocks.32.mlp",
+          "layer_idx": 32,
+          "component_type": "mlp",
+          "recovery_score": 0.4837
+        },
+        {
+          "component": "blocks.33.attn",
+          "layer_idx": 33,
+          "component_type": "attn",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.33.mlp",
+          "layer_idx": 33,
+          "component_type": "mlp",
+          "recovery_score": 0
+        },
+        {
+          "component": "blocks.34.attn",
+          "layer_idx": 34,
+          "component_type": "attn",
+          "recovery_score": 0.0673
+        },
+        {
+          "component": "blocks.34.mlp",
+          "layer_idx": 34,
+          "component_type": "mlp",
+          "recovery_score": 0.0183
+        },
+        {
+          "component": "blocks.35.attn",
+          "layer_idx": 35,
+          "component_type": "attn",
+          "recovery_score": 0.0106
+        },
+        {
+          "component": "blocks.35.mlp",
+          "layer_idx": 35,
+          "component_type": "mlp",
+          "recovery_score": 0
+        }
+      ],
+      "n_layers": 36,
+      "metadata": {
+        "compute_time_ms": 16114.6
+      }
+    }
+  }
+}
