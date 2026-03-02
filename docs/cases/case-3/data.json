@@ -1,0 +1,2618 @@
+{
+  "perturbResults": [
+    {
+      "component": "blocks.0.attn",
+      "type": "zero",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.1982,
+      "logit_diff": -0.8125,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 27.5938,
+          "prob": 0.1982
+        },
+        {
+          "token": " Paris",
+          "logit": 27.125,
+          "prob": 0.124
+        },
+        {
+          "token": " the",
+          "logit": 27.0781,
+          "prob": 0.1183
+        },
+        {
+          "token": " located",
+          "logit": 26.375,
+          "prob": 0.0586
+        },
+        {
+          "token": " also",
+          "logit": 26.0781,
+          "prob": 0.0435
+        }
+      ]
+    },
+    {
+      "component": "blocks.0.attn",
+      "type": "amplify",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.219,
+      "logit_diff": -0.1562,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.25,
+          "prob": 0.219
+        },
+        {
+          "token": " the",
+          "logit": 27.5469,
+          "prob": 0.1084
+        },
+        {
+          "token": " also",
+          "logit": 27.4062,
+          "prob": 0.0942
+        },
+        {
+          "token": " one",
+          "logit": 27.0469,
+          "prob": 0.0657
+        },
+        {
+          "token": " Paris",
+          "logit": 26.7188,
+          "prob": 0.0474
+        }
+      ]
+    },
+    {
+      "component": "blocks.0.attn",
+      "type": "ablate",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.2191,
+      "logit_diff": -0.0781,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.3281,
+          "prob": 0.2191
+        },
+        {
+          "token": " the",
+          "logit": 27.6094,
+          "prob": 0.1068
+        },
+        {
+          "token": " one",
+          "logit": 27.25,
+          "prob": 0.0745
+        },
+        {
+          "token": " also",
+          "logit": 27.2188,
+          "prob": 0.0723
+        },
+        {
+          "token": " Paris",
+          "logit": 26.9219,
+          "prob": 0.0537
+        }
+      ]
+    },
+    {
+      "component": "blocks.0.mlp",
+      "type": "zero",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.2355,
+      "logit_diff": -0.4375,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 27.9688,
+          "prob": 0.2355
+        },
+        {
+          "token": " the",
+          "logit": 27.3438,
+          "prob": 0.126
+        },
+        {
+          "token": " also",
+          "logit": 26.8594,
+          "prob": 0.0776
+        },
+        {
+          "token": " Paris",
+          "logit": 26.8438,
+          "prob": 0.0764
+        },
+        {
+          "token": " one",
+          "logit": 26.5,
+          "prob": 0.0542
+        }
+      ]
+    },
+    {
+      "component": "blocks.0.mlp",
+      "type": "amplify",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.2134,
+      "logit_diff": 0.1875,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.5938,
+          "prob": 0.2134
+        },
+        {
+          "token": " the",
+          "logit": 27.7656,
+          "prob": 0.0932
+        },
+        {
+          "token": " also",
+          "logit": 27.75,
+          "prob": 0.0918
+        },
+        {
+          "token": " one",
+          "logit": 27.6875,
+          "prob": 0.0862
+        },
+        {
+          "token": " home",
+          "logit": 27.2344,
+          "prob": 0.0548
+        }
+      ]
+    },
+    {
+      "component": "blocks.0.mlp",
+      "type": "ablate",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.2332,
+      "logit_diff": -0.1875,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.2188,
+          "prob": 0.2332
+        },
+        {
+          "token": " the",
+          "logit": 27.5312,
+          "prob": 0.1172
+        },
+        {
+          "token": " also",
+          "logit": 27.0781,
+          "prob": 0.0745
+        },
+        {
+          "token": " one",
+          "logit": 27.0312,
+          "prob": 0.0711
+        },
+        {
+          "token": " Paris",
+          "logit": 26.8906,
+          "prob": 0.0618
+        }
+      ]
+    },
+    {
+      "component": "blocks.5.attn",
+      "type": "zero",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.2104,
+      "logit_diff": 0.1406,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.5469,
+          "prob": 0.2104
+        },
+        {
+          "token": " the",
+          "logit": 27.8594,
+          "prob": 0.1058
+        },
+        {
+          "token": " one",
+          "logit": 27.7812,
+          "prob": 0.0978
+        },
+        {
+          "token": " also",
+          "logit": 27.2812,
+          "prob": 0.0594
+        },
+        {
+          "token": " known",
+          "logit": 27.1406,
+          "prob": 0.0516
+        }
+      ]
+    },
+    {
+      "component": "blocks.5.attn",
+      "type": "amplify",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.2056,
+      "logit_diff": -0.4844,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 27.9219,
+          "prob": 0.2056
+        },
+        {
+          "token": " the",
+          "logit": 27.1875,
+          "prob": 0.0986
+        },
+        {
+          "token": " Paris",
+          "logit": 26.7812,
+          "prob": 0.0657
+        },
+        {
+          "token": " also",
+          "logit": 26.7188,
+          "prob": 0.0617
+        },
+        {
+          "token": " one",
+          "logit": 26.7031,
+          "prob": 0.0608
+        }
+      ]
+    },
+    {
+      "component": "blocks.5.attn",
+      "type": "ablate",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.2072,
+      "logit_diff": 0.1406,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.5469,
+          "prob": 0.2072
+        },
+        {
+          "token": " the",
+          "logit": 27.9062,
+          "prob": 0.1091
+        },
+        {
+          "token": " one",
+          "logit": 27.6562,
+          "prob": 0.085
+        },
+        {
+          "token": " also",
+          "logit": 27.4844,
+          "prob": 0.0716
+        },
+        {
+          "token": " known",
+          "logit": 27.0469,
+          "prob": 0.0462
+        }
+      ]
+    },
+    {
+      "component": "blocks.5.mlp",
+      "type": "zero",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.2241,
+      "logit_diff": -0.0469,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.3594,
+          "prob": 0.2241
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1144
+        },
+        {
+          "token": " also",
+          "logit": 27.4531,
+          "prob": 0.0905
+        },
+        {
+          "token": " one",
+          "logit": 27.1562,
+          "prob": 0.0673
+        },
+        {
+          "token": " Paris",
+          "logit": 26.7188,
+          "prob": 0.0435
+        }
+      ]
+    },
+    {
+      "component": "blocks.5.mlp",
+      "type": "amplify",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.1801,
+      "logit_diff": -0.1719,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.2344,
+          "prob": 0.1801
+        },
+        {
+          "token": " the",
+          "logit": 27.5625,
+          "prob": 0.092
+        },
+        {
+          "token": " one",
+          "logit": 27.3906,
+          "prob": 0.0775
+        },
+        {
+          "token": " known",
+          "logit": 27.1406,
+          "prob": 0.0603
+        },
+        {
+          "token": " home",
+          "logit": 27.0625,
+          "prob": 0.0558
+        }
+      ]
+    },
+    {
+      "component": "blocks.5.mlp",
+      "type": "ablate",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.2137,
+      "logit_diff": -0.0156,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.3906,
+          "prob": 0.2137
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1058
+        },
+        {
+          "token": " also",
+          "logit": 27.5312,
+          "prob": 0.0905
+        },
+        {
+          "token": " one",
+          "logit": 27.4219,
+          "prob": 0.0811
+        },
+        {
+          "token": " home",
+          "logit": 26.7969,
+          "prob": 0.0434
+        }
+      ]
+    },
+    {
+      "component": "blocks.12.attn",
+      "type": "zero",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.1816,
+      "logit_diff": -0.0781,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.3281,
+          "prob": 0.1816
+        },
+        {
+          "token": " one",
+          "logit": 27.625,
+          "prob": 0.0899
+        },
+        {
+          "token": " the",
+          "logit": 27.6094,
+          "prob": 0.0886
+        },
+        {
+          "token": " also",
+          "logit": 27.5312,
+          "prob": 0.0819
+        },
+        {
+          "token": " not",
+          "logit": 26.9844,
+          "prob": 0.0474
+        }
+      ]
+    },
+    {
+      "component": "blocks.12.attn",
+      "type": "amplify",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.2401,
+      "logit_diff": 0,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.2401
+        },
+        {
+          "token": " the",
+          "logit": 27.6562,
+          "prob": 0.1134
+        },
+        {
+          "token": " one",
+          "logit": 27.0938,
+          "prob": 0.0646
+        },
+        {
+          "token": " home",
+          "logit": 27.0938,
+          "prob": 0.0646
+        },
+        {
+          "token": " also",
+          "logit": 27.0625,
+          "prob": 0.0626
+        }
+      ]
+    },
+    {
+      "component": "blocks.12.attn",
+      "type": "ablate",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.191,
+      "logit_diff": -0.0625,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.3438,
+          "prob": 0.191
+        },
+        {
+          "token": " the",
+          "logit": 27.6406,
+          "prob": 0.0945
+        },
+        {
+          "token": " one",
+          "logit": 27.6406,
+          "prob": 0.0945
+        },
+        {
+          "token": " also",
+          "logit": 27.4531,
+          "prob": 0.0784
+        },
+        {
+          "token": " known",
+          "logit": 26.9062,
+          "prob": 0.0454
+        }
+      ]
+    },
+    {
+      "component": "blocks.12.mlp",
+      "type": "zero",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.207,
+      "logit_diff": -0.2656,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.1406,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.5,
+          "prob": 0.1091
+        },
+        {
+          "token": " also",
+          "logit": 27.0781,
+          "prob": 0.0715
+        },
+        {
+          "token": " Paris",
+          "logit": 26.9531,
+          "prob": 0.0631
+        },
+        {
+          "token": " one",
+          "logit": 26.8906,
+          "prob": 0.0593
+        }
+      ]
+    },
+    {
+      "component": "blocks.12.mlp",
+      "type": "amplify",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.1736,
+      "logit_diff": 0.0312,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.4375,
+          "prob": 0.1736
+        },
+        {
+          "token": " one",
+          "logit": 27.9219,
+          "prob": 0.1036
+        },
+        {
+          "token": " the",
+          "logit": 27.8906,
+          "prob": 0.1005
+        },
+        {
+          "token": " also",
+          "logit": 27.375,
+          "prob": 0.06
+        },
+        {
+          "token": " home",
+          "logit": 27.2344,
+          "prob": 0.0521
+        }
+      ]
+    },
+    {
+      "component": "blocks.12.mlp",
+      "type": "ablate",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.2167,
+      "logit_diff": -0.125,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.2812,
+          "prob": 0.2167
+        },
+        {
+          "token": " the",
+          "logit": 27.5625,
+          "prob": 0.1056
+        },
+        {
+          "token": " also",
+          "logit": 27.2031,
+          "prob": 0.0737
+        },
+        {
+          "token": " one",
+          "logit": 27.0625,
+          "prob": 0.064
+        },
+        {
+          "token": " Paris",
+          "logit": 26.8125,
+          "prob": 0.0499
+        }
+      ]
+    },
+    {
+      "component": "blocks.20.attn",
+      "type": "zero",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.2106,
+      "logit_diff": 0.0469,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.4531,
+          "prob": 0.2106
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.0979
+        },
+        {
+          "token": " also",
+          "logit": 27.5312,
+          "prob": 0.0837
+        },
+        {
+          "token": " one",
+          "logit": 27.4219,
+          "prob": 0.0751
+        },
+        {
+          "token": " home",
+          "logit": 27.0312,
+          "prob": 0.0508
+        }
+      ]
+    },
+    {
+      "component": "blocks.20.attn",
+      "type": "amplify",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.1989,
+      "logit_diff": -0.7656,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 27.6406,
+          "prob": 0.1989
+        },
+        {
+          "token": " the",
+          "logit": 27,
+          "prob": 0.1048
+        },
+        {
+          "token": " one",
+          "logit": 26.8125,
+          "prob": 0.0869
+        },
+        {
+          "token": " also",
+          "logit": 26.6719,
+          "prob": 0.0755
+        },
+        {
+          "token": " known",
+          "logit": 26.3438,
+          "prob": 0.0544
+        }
+      ]
+    },
+    {
+      "component": "blocks.20.attn",
+      "type": "ablate",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.2106,
+      "logit_diff": 0.0625,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.4688,
+          "prob": 0.2106
+        },
+        {
+          "token": " the",
+          "logit": 27.7344,
+          "prob": 0.101
+        },
+        {
+          "token": " one",
+          "logit": 27.5312,
+          "prob": 0.0825
+        },
+        {
+          "token": " also",
+          "logit": 27.4688,
+          "prob": 0.0775
+        },
+        {
+          "token": " known",
+          "logit": 27.0156,
+          "prob": 0.0492
+        }
+      ]
+    },
+    {
+      "component": "blocks.20.mlp",
+      "type": "zero",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.2474,
+      "logit_diff": -0.9062,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 27.5,
+          "prob": 0.2474
+        },
+        {
+          "token": " the",
+          "logit": 26.5625,
+          "prob": 0.0969
+        },
+        {
+          "token": " home",
+          "logit": 26.4219,
+          "prob": 0.0842
+        },
+        {
+          "token": " one",
+          "logit": 26.375,
+          "prob": 0.0803
+        },
+        {
+          "token": " known",
+          "logit": 26.0938,
+          "prob": 0.0606
+        }
+      ]
+    },
+    {
+      "component": "blocks.20.mlp",
+      "type": "amplify",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.1788,
+      "logit_diff": 0.2969,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.7031,
+          "prob": 0.1788
+        },
+        {
+          "token": " also",
+          "logit": 28.3125,
+          "prob": 0.121
+        },
+        {
+          "token": " the",
+          "logit": 28.2344,
+          "prob": 0.1119
+        },
+        {
+          "token": " one",
+          "logit": 27.9375,
+          "prob": 0.0832
+        },
+        {
+          "token": " not",
+          "logit": 27.25,
+          "prob": 0.0418
+        }
+      ]
+    },
+    {
+      "component": "blocks.20.mlp",
+      "type": "ablate",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.2278,
+      "logit_diff": -0.1562,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.25,
+          "prob": 0.2278
+        },
+        {
+          "token": " the",
+          "logit": 27.4531,
+          "prob": 0.1027
+        },
+        {
+          "token": " one",
+          "logit": 27.1406,
+          "prob": 0.0751
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.0643
+        },
+        {
+          "token": " known",
+          "logit": 26.8438,
+          "prob": 0.0558
+        }
+      ]
+    },
+    {
+      "component": "blocks.25.attn",
+      "type": "zero",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.1835,
+      "logit_diff": 0.4062,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.8125,
+          "prob": 0.1835
+        },
+        {
+          "token": " the",
+          "logit": 28.1406,
+          "prob": 0.0938
+        },
+        {
+          "token": " one",
+          "logit": 28.0156,
+          "prob": 0.0827
+        },
+        {
+          "token": " also",
+          "logit": 27.9688,
+          "prob": 0.0789
+        },
+        {
+          "token": " home",
+          "logit": 27.5312,
+          "prob": 0.051
+        }
+      ]
+    },
+    {
+      "component": "blocks.25.attn",
+      "type": "amplify",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.2087,
+      "logit_diff": -0.4688,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 27.9375,
+          "prob": 0.2087
+        },
+        {
+          "token": " Paris",
+          "logit": 27.2656,
+          "prob": 0.1066
+        },
+        {
+          "token": " the",
+          "logit": 27.1875,
+          "prob": 0.0986
+        },
+        {
+          "token": " also",
+          "logit": 26.8594,
+          "prob": 0.071
+        },
+        {
+          "token": " one",
+          "logit": 26.8438,
+          "prob": 0.0699
+        }
+      ]
+    },
+    {
+      "component": "blocks.25.attn",
+      "type": "ablate",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.2297,
+      "logit_diff": 0.4531,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.8594,
+          "prob": 0.2297
+        },
+        {
+          "token": " the",
+          "logit": 28.0312,
+          "prob": 0.1003
+        },
+        {
+          "token": " one",
+          "logit": 27.9219,
+          "prob": 0.09
+        },
+        {
+          "token": " also",
+          "logit": 27.7812,
+          "prob": 0.0782
+        },
+        {
+          "token": " known",
+          "logit": 27.2969,
+          "prob": 0.0482
+        }
+      ]
+    },
+    {
+      "component": "blocks.25.mlp",
+      "type": "zero",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.1818,
+      "logit_diff": -0.2656,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.1406,
+          "prob": 0.1818
+        },
+        {
+          "token": " Paris",
+          "logit": 27.5,
+          "prob": 0.0958
+        },
+        {
+          "token": " home",
+          "logit": 27.3125,
+          "prob": 0.0794
+        },
+        {
+          "token": " also",
+          "logit": 27.2656,
+          "prob": 0.0757
+        },
+        {
+          "token": " the",
+          "logit": 27.25,
+          "prob": 0.0746
+        }
+      ]
+    },
+    {
+      "component": "blocks.25.mlp",
+      "type": "amplify",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.3198,
+      "logit_diff": -0.7656,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 27.6406,
+          "prob": 0.3198
+        },
+        {
+          "token": " the",
+          "logit": 26.8438,
+          "prob": 0.1442
+        },
+        {
+          "token": " one",
+          "logit": 26.4062,
+          "prob": 0.0931
+        },
+        {
+          "token": " also",
+          "logit": 26.2031,
+          "prob": 0.0759
+        },
+        {
+          "token": " known",
+          "logit": 25.6562,
+          "prob": 0.0439
+        }
+      ]
+    },
+    {
+      "component": "blocks.25.mlp",
+      "type": "ablate",
+      "original_token": " a",
+      "original_prob": 0.207,
+      "perturbed_token": " a",
+      "perturbed_prob": 0.2039,
+      "logit_diff": 0.1406,
+      "kl_divergence": null,
+      "prediction_changed": false,
+      "top_k_original": [
+        {
+          "token": " a",
+          "logit": 28.4062,
+          "prob": 0.207
+        },
+        {
+          "token": " the",
+          "logit": 27.6875,
+          "prob": 0.1009
+        },
+        {
+          "token": " one",
+          "logit": 27.4688,
+          "prob": 0.0811
+        },
+        {
+          "token": " also",
+          "logit": 27.4375,
+          "prob": 0.0786
+        },
+        {
+          "token": " home",
+          "logit": 26.9844,
+          "prob": 0.05
+        }
+      ],
+      "top_k_perturbed": [
+        {
+          "token": " a",
+          "logit": 28.5469,
+          "prob": 0.2039
+        },
+        {
+          "token": " the",
+          "logit": 27.7656,
+          "prob": 0.0933
+        },
+        {
+          "token": " one",
+          "logit": 27.7031,
+          "prob": 0.0876
+        },
+        {
+          "token": " also",
+          "logit": 27.5312,
+          "prob": 0.0738
+        },
+        {
+          "token": " home",
+          "logit": 27.4062,
+          "prob": 0.0651
+        }
+      ]
+    }
+  ],
+  "trace1": {
+    "model_id": "google/gemma-2-2b",
+    "clean_prompt": "The capital of France is",
+    "corrupt_prompt": "The capital of Poland is",
+    "target_token_idx": 5,
+    "clean_prediction": " a",
+    "corrupt_prediction": " a",
+    "cells": [
+      {
+        "component": "embed",
+        "layer_idx": -1,
+        "component_type": "embed",
+        "recovery_score": 1
+      },
+      {
+        "component": "blocks.0.attn",
+        "layer_idx": 0,
+        "component_type": "attn",
+        "recovery_score": 0.1163
+      },
+      {
+        "component": "blocks.0.mlp",
+        "layer_idx": 0,
+        "component_type": "mlp",
+        "recovery_score": 0.1163
+      },
+      {
+        "component": "blocks.1.attn",
+        "layer_idx": 1,
+        "component_type": "attn",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.1.mlp",
+        "layer_idx": 1,
+        "component_type": "mlp",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.2.attn",
+        "layer_idx": 2,
+        "component_type": "attn",
+        "recovery_score": 0.4651
+      },
+      {
+        "component": "blocks.2.mlp",
+        "layer_idx": 2,
+        "component_type": "mlp",
+        "recovery_score": 0.2791
+      },
+      {
+        "component": "blocks.3.attn",
+        "layer_idx": 3,
+        "component_type": "attn",
+        "recovery_score": 0.3256
+      },
+      {
+        "component": "blocks.3.mlp",
+        "layer_idx": 3,
+        "component_type": "mlp",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.4.attn",
+        "layer_idx": 4,
+        "component_type": "attn",
+        "recovery_score": 0.2326
+      },
+      {
+        "component": "blocks.4.mlp",
+        "layer_idx": 4,
+        "component_type": "mlp",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.5.attn",
+        "layer_idx": 5,
+        "component_type": "attn",
+        "recovery_score": 0.093
+      },
+      {
+        "component": "blocks.5.mlp",
+        "layer_idx": 5,
+        "component_type": "mlp",
+        "recovery_score": 0.1163
+      },
+      {
+        "component": "blocks.6.attn",
+        "layer_idx": 6,
+        "component_type": "attn",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.6.mlp",
+        "layer_idx": 6,
+        "component_type": "mlp",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.7.attn",
+        "layer_idx": 7,
+        "component_type": "attn",
+        "recovery_score": 0.0233
+      },
+      {
+        "component": "blocks.7.mlp",
+        "layer_idx": 7,
+        "component_type": "mlp",
+        "recovery_score": 0.2093
+      },
+      {
+        "component": "blocks.8.attn",
+        "layer_idx": 8,
+        "component_type": "attn",
+        "recovery_score": 0.0698
+      },
+      {
+        "component": "blocks.8.mlp",
+        "layer_idx": 8,
+        "component_type": "mlp",
+        "recovery_score": 0.2791
+      },
+      {
+        "component": "blocks.9.attn",
+        "layer_idx": 9,
+        "component_type": "attn",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.9.mlp",
+        "layer_idx": 9,
+        "component_type": "mlp",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.10.attn",
+        "layer_idx": 10,
+        "component_type": "attn",
+        "recovery_score": 0.093
+      },
+      {
+        "component": "blocks.10.mlp",
+        "layer_idx": 10,
+        "component_type": "mlp",
+        "recovery_score": 0.2791
+      },
+      {
+        "component": "blocks.11.attn",
+        "layer_idx": 11,
+        "component_type": "attn",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.11.mlp",
+        "layer_idx": 11,
+        "component_type": "mlp",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.12.attn",
+        "layer_idx": 12,
+        "component_type": "attn",
+        "recovery_score": 0.0465
+      },
+      {
+        "component": "blocks.12.mlp",
+        "layer_idx": 12,
+        "component_type": "mlp",
+        "recovery_score": 0.1163
+      },
+      {
+        "component": "blocks.13.attn",
+        "layer_idx": 13,
+        "component_type": "attn",
+        "recovery_score": 0.3256
+      },
+      {
+        "component": "blocks.13.mlp",
+        "layer_idx": 13,
+        "component_type": "mlp",
+        "recovery_score": 0.186
+      },
+      {
+        "component": "blocks.14.attn",
+        "layer_idx": 14,
+        "component_type": "attn",
+        "recovery_score": 0.2326
+      },
+      {
+        "component": "blocks.14.mlp",
+        "layer_idx": 14,
+        "component_type": "mlp",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.15.attn",
+        "layer_idx": 15,
+        "component_type": "attn",
+        "recovery_score": 0.1163
+      },
+      {
+        "component": "blocks.15.mlp",
+        "layer_idx": 15,
+        "component_type": "mlp",
+        "recovery_score": 0.0465
+      },
+      {
+        "component": "blocks.16.attn",
+        "layer_idx": 16,
+        "component_type": "attn",
+        "recovery_score": 0.1395
+      },
+      {
+        "component": "blocks.16.mlp",
+        "layer_idx": 16,
+        "component_type": "mlp",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.17.attn",
+        "layer_idx": 17,
+        "component_type": "attn",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.17.mlp",
+        "layer_idx": 17,
+        "component_type": "mlp",
+        "recovery_score": 0.1163
+      },
+      {
+        "component": "blocks.18.attn",
+        "layer_idx": 18,
+        "component_type": "attn",
+        "recovery_score": 0.3256
+      },
+      {
+        "component": "blocks.18.mlp",
+        "layer_idx": 18,
+        "component_type": "mlp",
+        "recovery_score": 0.6977
+      },
+      {
+        "component": "blocks.19.attn",
+        "layer_idx": 19,
+        "component_type": "attn",
+        "recovery_score": 0.1163
+      },
+      {
+        "component": "blocks.19.mlp",
+        "layer_idx": 19,
+        "component_type": "mlp",
+        "recovery_score": 0.4884
+      },
+      {
+        "component": "blocks.20.attn",
+        "layer_idx": 20,
+        "component_type": "attn",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.20.mlp",
+        "layer_idx": 20,
+        "component_type": "mlp",
+        "recovery_score": 0.1163
+      },
+      {
+        "component": "blocks.21.attn",
+        "layer_idx": 21,
+        "component_type": "attn",
+        "recovery_score": 0.0698
+      },
+      {
+        "component": "blocks.21.mlp",
+        "layer_idx": 21,
+        "component_type": "mlp",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.22.attn",
+        "layer_idx": 22,
+        "component_type": "attn",
+        "recovery_score": 0.2326
+      },
+      {
+        "component": "blocks.22.mlp",
+        "layer_idx": 22,
+        "component_type": "mlp",
+        "recovery_score": 0.7674
+      },
+      {
+        "component": "blocks.23.attn",
+        "layer_idx": 23,
+        "component_type": "attn",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.23.mlp",
+        "layer_idx": 23,
+        "component_type": "mlp",
+        "recovery_score": 0.3256
+      },
+      {
+        "component": "blocks.24.attn",
+        "layer_idx": 24,
+        "component_type": "attn",
+        "recovery_score": 0.0233
+      },
+      {
+        "component": "blocks.24.mlp",
+        "layer_idx": 24,
+        "component_type": "mlp",
+        "recovery_score": 0.3023
+      },
+      {
+        "component": "blocks.25.attn",
+        "layer_idx": 25,
+        "component_type": "attn",
+        "recovery_score": 0.1395
+      },
+      {
+        "component": "blocks.25.mlp",
+        "layer_idx": 25,
+        "component_type": "mlp",
+        "recovery_score": 0.2326
+      }
+    ],
+    "n_layers": 26,
+    "metadata": {
+      "compute_time_ms": 13102
+    }
+  },
+  "trace2": {
+    "model_id": "google/gemma-2-2b",
+    "clean_prompt": "The capital of France is",
+    "corrupt_prompt": "sdkfj woeir xcvn qpwo is",
+    "target_token_idx": 5,
+    "clean_prediction": " a",
+    "corrupt_prediction": "w",
+    "cells": [
+      {
+        "component": "embed",
+        "layer_idx": -1,
+        "component_type": "embed",
+        "recovery_score": 1
+      },
+      {
+        "component": "blocks.0.attn",
+        "layer_idx": 0,
+        "component_type": "attn",
+        "recovery_score": 0.3099
+      },
+      {
+        "component": "blocks.0.mlp",
+        "layer_idx": 0,
+        "component_type": "mlp",
+        "recovery_score": 0.3802
+      },
+      {
+        "component": "blocks.1.attn",
+        "layer_idx": 1,
+        "component_type": "attn",
+        "recovery_score": 0.1219
+      },
+      {
+        "component": "blocks.1.mlp",
+        "layer_idx": 1,
+        "component_type": "mlp",
+        "recovery_score": 0.1488
+      },
+      {
+        "component": "blocks.2.attn",
+        "layer_idx": 2,
+        "component_type": "attn",
+        "recovery_score": 0.0806
+      },
+      {
+        "component": "blocks.2.mlp",
+        "layer_idx": 2,
+        "component_type": "mlp",
+        "recovery_score": 0.1715
+      },
+      {
+        "component": "blocks.3.attn",
+        "layer_idx": 3,
+        "component_type": "attn",
+        "recovery_score": 0.2521
+      },
+      {
+        "component": "blocks.3.mlp",
+        "layer_idx": 3,
+        "component_type": "mlp",
+        "recovery_score": 0.2955
+      },
+      {
+        "component": "blocks.4.attn",
+        "layer_idx": 4,
+        "component_type": "attn",
+        "recovery_score": 0.2335
+      },
+      {
+        "component": "blocks.4.mlp",
+        "layer_idx": 4,
+        "component_type": "mlp",
+        "recovery_score": 0.0103
+      },
+      {
+        "component": "blocks.5.attn",
+        "layer_idx": 5,
+        "component_type": "attn",
+        "recovery_score": 0.1384
+      },
+      {
+        "component": "blocks.5.mlp",
+        "layer_idx": 5,
+        "component_type": "mlp",
+        "recovery_score": 0.1364
+      },
+      {
+        "component": "blocks.6.attn",
+        "layer_idx": 6,
+        "component_type": "attn",
+        "recovery_score": 0.0537
+      },
+      {
+        "component": "blocks.6.mlp",
+        "layer_idx": 6,
+        "component_type": "mlp",
+        "recovery_score": 0.0661
+      },
+      {
+        "component": "blocks.7.attn",
+        "layer_idx": 7,
+        "component_type": "attn",
+        "recovery_score": 0.0248
+      },
+      {
+        "component": "blocks.7.mlp",
+        "layer_idx": 7,
+        "component_type": "mlp",
+        "recovery_score": 0.0847
+      },
+      {
+        "component": "blocks.8.attn",
+        "layer_idx": 8,
+        "component_type": "attn",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.8.mlp",
+        "layer_idx": 8,
+        "component_type": "mlp",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.9.attn",
+        "layer_idx": 9,
+        "component_type": "attn",
+        "recovery_score": 0.0145
+      },
+      {
+        "component": "blocks.9.mlp",
+        "layer_idx": 9,
+        "component_type": "mlp",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.10.attn",
+        "layer_idx": 10,
+        "component_type": "attn",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.10.mlp",
+        "layer_idx": 10,
+        "component_type": "mlp",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.11.attn",
+        "layer_idx": 11,
+        "component_type": "attn",
+        "recovery_score": 0.0062
+      },
+      {
+        "component": "blocks.11.mlp",
+        "layer_idx": 11,
+        "component_type": "mlp",
+        "recovery_score": 0.0207
+      },
+      {
+        "component": "blocks.12.attn",
+        "layer_idx": 12,
+        "component_type": "attn",
+        "recovery_score": 0.0041
+      },
+      {
+        "component": "blocks.12.mlp",
+        "layer_idx": 12,
+        "component_type": "mlp",
+        "recovery_score": 0.0826
+      },
+      {
+        "component": "blocks.13.attn",
+        "layer_idx": 13,
+        "component_type": "attn",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.13.mlp",
+        "layer_idx": 13,
+        "component_type": "mlp",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.14.attn",
+        "layer_idx": 14,
+        "component_type": "attn",
+        "recovery_score": 0.0021
+      },
+      {
+        "component": "blocks.14.mlp",
+        "layer_idx": 14,
+        "component_type": "mlp",
+        "recovery_score": 0.1054
+      },
+      {
+        "component": "blocks.15.attn",
+        "layer_idx": 15,
+        "component_type": "attn",
+        "recovery_score": 0.093
+      },
+      {
+        "component": "blocks.15.mlp",
+        "layer_idx": 15,
+        "component_type": "mlp",
+        "recovery_score": 0.031
+      },
+      {
+        "component": "blocks.16.attn",
+        "layer_idx": 16,
+        "component_type": "attn",
+        "recovery_score": 0.0537
+      },
+      {
+        "component": "blocks.16.mlp",
+        "layer_idx": 16,
+        "component_type": "mlp",
+        "recovery_score": 0.1033
+      },
+      {
+        "component": "blocks.17.attn",
+        "layer_idx": 17,
+        "component_type": "attn",
+        "recovery_score": 0.0496
+      },
+      {
+        "component": "blocks.17.mlp",
+        "layer_idx": 17,
+        "component_type": "mlp",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.18.attn",
+        "layer_idx": 18,
+        "component_type": "attn",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.18.mlp",
+        "layer_idx": 18,
+        "component_type": "mlp",
+        "recovery_score": 0.1322
+      },
+      {
+        "component": "blocks.19.attn",
+        "layer_idx": 19,
+        "component_type": "attn",
+        "recovery_score": 0.1074
+      },
+      {
+        "component": "blocks.19.mlp",
+        "layer_idx": 19,
+        "component_type": "mlp",
+        "recovery_score": 0.0496
+      },
+      {
+        "component": "blocks.20.attn",
+        "layer_idx": 20,
+        "component_type": "attn",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.20.mlp",
+        "layer_idx": 20,
+        "component_type": "mlp",
+        "recovery_score": 0.2149
+      },
+      {
+        "component": "blocks.21.attn",
+        "layer_idx": 21,
+        "component_type": "attn",
+        "recovery_score": 0.0537
+      },
+      {
+        "component": "blocks.21.mlp",
+        "layer_idx": 21,
+        "component_type": "mlp",
+        "recovery_score": 0.0992
+      },
+      {
+        "component": "blocks.22.attn",
+        "layer_idx": 22,
+        "component_type": "attn",
+        "recovery_score": 0.0021
+      },
+      {
+        "component": "blocks.22.mlp",
+        "layer_idx": 22,
+        "component_type": "mlp",
+        "recovery_score": 0.2397
+      },
+      {
+        "component": "blocks.23.attn",
+        "layer_idx": 23,
+        "component_type": "attn",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.23.mlp",
+        "layer_idx": 23,
+        "component_type": "mlp",
+        "recovery_score": 0.2397
+      },
+      {
+        "component": "blocks.24.attn",
+        "layer_idx": 24,
+        "component_type": "attn",
+        "recovery_score": 0
+      },
+      {
+        "component": "blocks.24.mlp",
+        "layer_idx": 24,
+        "component_type": "mlp",
+        "recovery_score": 0.2376
+      },
+      {
+        "component": "blocks.25.attn",
+        "layer_idx": 25,
+        "component_type": "attn",
+        "recovery_score": 0.0165
+      },
+      {
+        "component": "blocks.25.mlp",
+        "layer_idx": 25,
+        "component_type": "mlp",
+        "recovery_score": 0
+      }
+    ],
+    "n_layers": 26,
+    "metadata": {
+      "compute_time_ms": 13037.7
+    }
+  }
+}
