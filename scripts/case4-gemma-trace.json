@@ -1,0 +1,332 @@
+{
+  "model_id": "google/gemma-2-2b-it",
+  "clean_prompt": "The capital of France is",
+  "corrupt_prompt": "The capital of Poland is",
+  "target_token_idx": 5,
+  "clean_prediction": " Paris",
+  "corrupt_prediction": " Warsaw",
+  "cells": [
+    {
+      "component": "embed",
+      "layer_idx": -1,
+      "component_type": "embed",
+      "recovery_score": 1
+    },
+    {
+      "component": "blocks.0.attn",
+      "layer_idx": 0,
+      "component_type": "attn",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.0.mlp",
+      "layer_idx": 0,
+      "component_type": "mlp",
+      "recovery_score": 0.1382
+    },
+    {
+      "component": "blocks.1.attn",
+      "layer_idx": 1,
+      "component_type": "attn",
+      "recovery_score": 0.0106
+    },
+    {
+      "component": "blocks.1.mlp",
+      "layer_idx": 1,
+      "component_type": "mlp",
+      "recovery_score": 0.0084
+    },
+    {
+      "component": "blocks.2.attn",
+      "layer_idx": 2,
+      "component_type": "attn",
+      "recovery_score": 0.2002
+    },
+    {
+      "component": "blocks.2.mlp",
+      "layer_idx": 2,
+      "component_type": "mlp",
+      "recovery_score": 0.0106
+    },
+    {
+      "component": "blocks.3.attn",
+      "layer_idx": 3,
+      "component_type": "attn",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.3.mlp",
+      "layer_idx": 3,
+      "component_type": "mlp",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.4.attn",
+      "layer_idx": 4,
+      "component_type": "attn",
+      "recovery_score": 0.0074
+    },
+    {
+      "component": "blocks.4.mlp",
+      "layer_idx": 4,
+      "component_type": "mlp",
+      "recovery_score": 0.0582
+    },
+    {
+      "component": "blocks.5.attn",
+      "layer_idx": 5,
+      "component_type": "attn",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.5.mlp",
+      "layer_idx": 5,
+      "component_type": "mlp",
+      "recovery_score": 0.0568
+    },
+    {
+      "component": "blocks.6.attn",
+      "layer_idx": 6,
+      "component_type": "attn",
+      "recovery_score": 0.0042
+    },
+    {
+      "component": "blocks.6.mlp",
+      "layer_idx": 6,
+      "component_type": "mlp",
+      "recovery_score": 0.1048
+    },
+    {
+      "component": "blocks.7.attn",
+      "layer_idx": 7,
+      "component_type": "attn",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.7.mlp",
+      "layer_idx": 7,
+      "component_type": "mlp",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.8.attn",
+      "layer_idx": 8,
+      "component_type": "attn",
+      "recovery_score": 0.0026
+    },
+    {
+      "component": "blocks.8.mlp",
+      "layer_idx": 8,
+      "component_type": "mlp",
+      "recovery_score": 0.1181
+    },
+    {
+      "component": "blocks.9.attn",
+      "layer_idx": 9,
+      "component_type": "attn",
+      "recovery_score": 0.0082
+    },
+    {
+      "component": "blocks.9.mlp",
+      "layer_idx": 9,
+      "component_type": "mlp",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.10.attn",
+      "layer_idx": 10,
+      "component_type": "attn",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.10.mlp",
+      "layer_idx": 10,
+      "component_type": "mlp",
+      "recovery_score": 0.0303
+    },
+    {
+      "component": "blocks.11.attn",
+      "layer_idx": 11,
+      "component_type": "attn",
+      "recovery_score": 0.0141
+    },
+    {
+      "component": "blocks.11.mlp",
+      "layer_idx": 11,
+      "component_type": "mlp",
+      "recovery_score": 0.0108
+    },
+    {
+      "component": "blocks.12.attn",
+      "layer_idx": 12,
+      "component_type": "attn",
+      "recovery_score": 0.0102
+    },
+    {
+      "component": "blocks.12.mlp",
+      "layer_idx": 12,
+      "component_type": "mlp",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.13.attn",
+      "layer_idx": 13,
+      "component_type": "attn",
+      "recovery_score": 0.0285
+    },
+    {
+      "component": "blocks.13.mlp",
+      "layer_idx": 13,
+      "component_type": "mlp",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.14.attn",
+      "layer_idx": 14,
+      "component_type": "attn",
+      "recovery_score": 0.0238
+    },
+    {
+      "component": "blocks.14.mlp",
+      "layer_idx": 14,
+      "component_type": "mlp",
+      "recovery_score": 0.2408
+    },
+    {
+      "component": "blocks.15.attn",
+      "layer_idx": 15,
+      "component_type": "attn",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.15.mlp",
+      "layer_idx": 15,
+      "component_type": "mlp",
+      "recovery_score": 0.0031
+    },
+    {
+      "component": "blocks.16.attn",
+      "layer_idx": 16,
+      "component_type": "attn",
+      "recovery_score": 0.2039
+    },
+    {
+      "component": "blocks.16.mlp",
+      "layer_idx": 16,
+      "component_type": "mlp",
+      "recovery_score": 0.1296
+    },
+    {
+      "component": "blocks.17.attn",
+      "layer_idx": 17,
+      "component_type": "attn",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.17.mlp",
+      "layer_idx": 17,
+      "component_type": "mlp",
+      "recovery_score": 0.1308
+    },
+    {
+      "component": "blocks.18.attn",
+      "layer_idx": 18,
+      "component_type": "attn",
+      "recovery_score": 0.7817
+    },
+    {
+      "component": "blocks.18.mlp",
+      "layer_idx": 18,
+      "component_type": "mlp",
+      "recovery_score": 0.3664
+    },
+    {
+      "component": "blocks.19.attn",
+      "layer_idx": 19,
+      "component_type": "attn",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.19.mlp",
+      "layer_idx": 19,
+      "component_type": "mlp",
+      "recovery_score": 0.8253
+    },
+    {
+      "component": "blocks.20.attn",
+      "layer_idx": 20,
+      "component_type": "attn",
+      "recovery_score": 0.247
+    },
+    {
+      "component": "blocks.20.mlp",
+      "layer_idx": 20,
+      "component_type": "mlp",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.21.attn",
+      "layer_idx": 21,
+      "component_type": "attn",
+      "recovery_score": 0.0016
+    },
+    {
+      "component": "blocks.21.mlp",
+      "layer_idx": 21,
+      "component_type": "mlp",
+      "recovery_score": 0.2699
+    },
+    {
+      "component": "blocks.22.attn",
+      "layer_idx": 22,
+      "component_type": "attn",
+      "recovery_score": 0.6019
+    },
+    {
+      "component": "blocks.22.mlp",
+      "layer_idx": 22,
+      "component_type": "mlp",
+      "recovery_score": 0.1608
+    },
+    {
+      "component": "blocks.23.attn",
+      "layer_idx": 23,
+      "component_type": "attn",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.23.mlp",
+      "layer_idx": 23,
+      "component_type": "mlp",
+      "recovery_score": 0.3099
+    },
+    {
+      "component": "blocks.24.attn",
+      "layer_idx": 24,
+      "component_type": "attn",
+      "recovery_score": 0.0516
+    },
+    {
+      "component": "blocks.24.mlp",
+      "layer_idx": 24,
+      "component_type": "mlp",
+      "recovery_score": 0.0327
+    },
+    {
+      "component": "blocks.25.attn",
+      "layer_idx": 25,
+      "component_type": "attn",
+      "recovery_score": 0.2379
+    },
+    {
+      "component": "blocks.25.mlp",
+      "layer_idx": 25,
+      "component_type": "mlp",
+      "recovery_score": 0
+    }
+  ],
+  "n_layers": 26,
+  "metadata": {
+    "compute_time_ms": 61216.5
+  }
+}

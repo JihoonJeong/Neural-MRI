@@ -1,0 +1,356 @@
+{
+  "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+  "clean_prompt": "The capital of France is",
+  "corrupt_prompt": "The capital of Poland is",
+  "target_token_idx": 5,
+  "clean_prediction": " Paris",
+  "corrupt_prediction": " Warsaw",
+  "cells": [
+    {
+      "component": "embed",
+      "layer_idx": -1,
+      "component_type": "embed",
+      "recovery_score": 1
+    },
+    {
+      "component": "blocks.0.attn",
+      "layer_idx": 0,
+      "component_type": "attn",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.0.mlp",
+      "layer_idx": 0,
+      "component_type": "mlp",
+      "recovery_score": 0.9914
+    },
+    {
+      "component": "blocks.1.attn",
+      "layer_idx": 1,
+      "component_type": "attn",
+      "recovery_score": 0.0017
+    },
+    {
+      "component": "blocks.1.mlp",
+      "layer_idx": 1,
+      "component_type": "mlp",
+      "recovery_score": 0.0206
+    },
+    {
+      "component": "blocks.2.attn",
+      "layer_idx": 2,
+      "component_type": "attn",
+      "recovery_score": 0.0017
+    },
+    {
+      "component": "blocks.2.mlp",
+      "layer_idx": 2,
+      "component_type": "mlp",
+      "recovery_score": 0.9983
+    },
+    {
+      "component": "blocks.3.attn",
+      "layer_idx": 3,
+      "component_type": "attn",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.3.mlp",
+      "layer_idx": 3,
+      "component_type": "mlp",
+      "recovery_score": 0.0378
+    },
+    {
+      "component": "blocks.4.attn",
+      "layer_idx": 4,
+      "component_type": "attn",
+      "recovery_score": 0.0112
+    },
+    {
+      "component": "blocks.4.mlp",
+      "layer_idx": 4,
+      "component_type": "mlp",
+      "recovery_score": 0.0506
+    },
+    {
+      "component": "blocks.5.attn",
+      "layer_idx": 5,
+      "component_type": "attn",
+      "recovery_score": 0.0052
+    },
+    {
+      "component": "blocks.5.mlp",
+      "layer_idx": 5,
+      "component_type": "mlp",
+      "recovery_score": 0.0567
+    },
+    {
+      "component": "blocks.6.attn",
+      "layer_idx": 6,
+      "component_type": "attn",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.6.mlp",
+      "layer_idx": 6,
+      "component_type": "mlp",
+      "recovery_score": 0.085
+    },
+    {
+      "component": "blocks.7.attn",
+      "layer_idx": 7,
+      "component_type": "attn",
+      "recovery_score": 0.0077
+    },
+    {
+      "component": "blocks.7.mlp",
+      "layer_idx": 7,
+      "component_type": "mlp",
+      "recovery_score": 0.0275
+    },
+    {
+      "component": "blocks.8.attn",
+      "layer_idx": 8,
+      "component_type": "attn",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.8.mlp",
+      "layer_idx": 8,
+      "component_type": "mlp",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.9.attn",
+      "layer_idx": 9,
+      "component_type": "attn",
+      "recovery_score": 0.0043
+    },
+    {
+      "component": "blocks.9.mlp",
+      "layer_idx": 9,
+      "component_type": "mlp",
+      "recovery_score": 0.0155
+    },
+    {
+      "component": "blocks.10.attn",
+      "layer_idx": 10,
+      "component_type": "attn",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.10.mlp",
+      "layer_idx": 10,
+      "component_type": "mlp",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.11.attn",
+      "layer_idx": 11,
+      "component_type": "attn",
+      "recovery_score": 0.0129
+    },
+    {
+      "component": "blocks.11.mlp",
+      "layer_idx": 11,
+      "component_type": "mlp",
+      "recovery_score": 0.0223
+    },
+    {
+      "component": "blocks.12.attn",
+      "layer_idx": 12,
+      "component_type": "attn",
+      "recovery_score": 0.006
+    },
+    {
+      "component": "blocks.12.mlp",
+      "layer_idx": 12,
+      "component_type": "mlp",
+      "recovery_score": 0.2815
+    },
+    {
+      "component": "blocks.13.attn",
+      "layer_idx": 13,
+      "component_type": "attn",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.13.mlp",
+      "layer_idx": 13,
+      "component_type": "mlp",
+      "recovery_score": 0.0893
+    },
+    {
+      "component": "blocks.14.attn",
+      "layer_idx": 14,
+      "component_type": "attn",
+      "recovery_score": 0.0146
+    },
+    {
+      "component": "blocks.14.mlp",
+      "layer_idx": 14,
+      "component_type": "mlp",
+      "recovery_score": 0.1348
+    },
+    {
+      "component": "blocks.15.attn",
+      "layer_idx": 15,
+      "component_type": "attn",
+      "recovery_score": 0.4
+    },
+    {
+      "component": "blocks.15.mlp",
+      "layer_idx": 15,
+      "component_type": "mlp",
+      "recovery_score": 0.073
+    },
+    {
+      "component": "blocks.16.attn",
+      "layer_idx": 16,
+      "component_type": "attn",
+      "recovery_score": 0.0644
+    },
+    {
+      "component": "blocks.16.mlp",
+      "layer_idx": 16,
+      "component_type": "mlp",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.17.attn",
+      "layer_idx": 17,
+      "component_type": "attn",
+      "recovery_score": 0.4326
+    },
+    {
+      "component": "blocks.17.mlp",
+      "layer_idx": 17,
+      "component_type": "mlp",
+      "recovery_score": 0.3717
+    },
+    {
+      "component": "blocks.18.attn",
+      "layer_idx": 18,
+      "component_type": "attn",
+      "recovery_score": 0.006
+    },
+    {
+      "component": "blocks.18.mlp",
+      "layer_idx": 18,
+      "component_type": "mlp",
+      "recovery_score": 0.5485
+    },
+    {
+      "component": "blocks.19.attn",
+      "layer_idx": 19,
+      "component_type": "attn",
+      "recovery_score": 0.0215
+    },
+    {
+      "component": "blocks.19.mlp",
+      "layer_idx": 19,
+      "component_type": "mlp",
+      "recovery_score": 0.1373
+    },
+    {
+      "component": "blocks.20.attn",
+      "layer_idx": 20,
+      "component_type": "attn",
+      "recovery_score": 0.0343
+    },
+    {
+      "component": "blocks.20.mlp",
+      "layer_idx": 20,
+      "component_type": "mlp",
+      "recovery_score": 0.1039
+    },
+    {
+      "component": "blocks.21.attn",
+      "layer_idx": 21,
+      "component_type": "attn",
+      "recovery_score": 0.7717
+    },
+    {
+      "component": "blocks.21.mlp",
+      "layer_idx": 21,
+      "component_type": "mlp",
+      "recovery_score": 0.103
+    },
+    {
+      "component": "blocks.22.attn",
+      "layer_idx": 22,
+      "component_type": "attn",
+      "recovery_score": 0
+    },
+    {
+      "component": "blocks.22.mlp",
+      "layer_idx": 22,
+      "component_type": "mlp",
+      "recovery_score": 0.0378
+    },
+    {
+      "component": "blocks.23.attn",
+      "layer_idx": 23,
+      "component_type": "attn",
+      "recovery_score": 0.012
+    },
+    {
+      "component": "blocks.23.mlp",
+      "layer_idx": 23,
+      "component_type": "mlp",
+      "recovery_score": 0.1176
+    },
+    {
+      "component": "blocks.24.attn",
+      "layer_idx": 24,
+      "component_type": "attn",
+      "recovery_score": 0.0137
+    },
+    {
+      "component": "blocks.24.mlp",
+      "layer_idx": 24,
+      "component_type": "mlp",
+      "recovery_score": 0.1039
+    },
+    {
+      "component": "blocks.25.attn",
+      "layer_idx": 25,
+      "component_type": "attn",
+      "recovery_score": 0.0558
+    },
+    {
+      "component": "blocks.25.mlp",
+      "layer_idx": 25,
+      "component_type": "mlp",
+      "recovery_score": 0.0996
+    },
+    {
+      "component": "blocks.26.attn",
+      "layer_idx": 26,
+      "component_type": "attn",
+      "recovery_score": 0.0446
+    },
+    {
+      "component": "blocks.26.mlp",
+      "layer_idx": 26,
+      "component_type": "mlp",
+      "recovery_score": 0.0034
+    },
+    {
+      "component": "blocks.27.attn",
+      "layer_idx": 27,
+      "component_type": "attn",
+      "recovery_score": 0.2429
+    },
+    {
+      "component": "blocks.27.mlp",
+      "layer_idx": 27,
+      "component_type": "mlp",
+      "recovery_score": 0
+    }
+  ],
+  "n_layers": 28,
+  "metadata": {
+    "compute_time_ms": 3863.1
+  }
+}

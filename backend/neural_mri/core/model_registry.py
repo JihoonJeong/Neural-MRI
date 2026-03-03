@@ -36,6 +36,13 @@ MODEL_REGISTRY: dict[str, dict] = {
         "tl_compat": True,
         "gated": True,
     },
+    "meta-llama/Llama-3.2-3B-Instruct": {
+        "family": "llama",
+        "display_name": "Llama 3.2 3B Instruct",
+        "params": "3.2B",
+        "tl_compat": True,
+        "gated": True,
+    },
     "Qwen/Qwen2.5-3B": {
         "family": "qwen",
         "display_name": "Qwen 2.5 3B",
