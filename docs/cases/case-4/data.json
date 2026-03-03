@@ -2307,5 +2307,293 @@
         "compute_time_ms": 16114.6
       }
     }
+  },
+  "llama_instruct": {
+    "perturbResults": [
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.0.attn",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.6555,
+        "logit_diff": -1.117,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.0.attn",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.6533,
+        "logit_diff": -0.1043,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.0.attn",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.6541,
+        "logit_diff": -0.9497,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.0.mlp",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": "}",
+        "perturbed_prob": 0.0066,
+        "logit_diff": -17.1183,
+        "prediction_changed": true
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.0.mlp",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.6653,
+        "logit_diff": -0.2779,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.0.mlp",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": "Question",
+        "perturbed_prob": 0.0192,
+        "logit_diff": -17.424,
+        "prediction_changed": true
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.5.attn",
+        "type": "zero",
+        "error": "The operation was aborted due to timeout"
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.5.attn",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.7278,
+        "logit_diff": 0.1865,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.5.attn",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.6976,
+        "logit_diff": -0.0229,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.5.mlp",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.6333,
+        "logit_diff": -0.1741,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.5.mlp",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.696,
+        "logit_diff": -0.1122,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.5.mlp",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.6782,
+        "logit_diff": -0.2615,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.14.attn",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.6661,
+        "logit_diff": -0.3297,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.14.attn",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.5857,
+        "logit_diff": -0.2575,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.14.attn",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.6862,
+        "logit_diff": -0.002,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.14.mlp",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.7536,
+        "logit_diff": 0.2514,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.14.mlp",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.6251,
+        "logit_diff": -0.52,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.14.mlp",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.6657,
+        "logit_diff": -0.1267,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.24.attn",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.7433,
+        "logit_diff": 0.0836,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.24.attn",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.637,
+        "logit_diff": -0.1427,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.24.attn",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.7141,
+        "logit_diff": 0.0048,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.24.mlp",
+        "type": "zero",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.1566,
+        "logit_diff": -3.2039,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.24.mlp",
+        "type": "amplify",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.8484,
+        "logit_diff": 1.0354,
+        "prediction_changed": false
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "variant": "llama-instruct",
+        "component": "blocks.24.mlp",
+        "type": "ablate",
+        "original_token": " Paris",
+        "original_prob": 0.6978,
+        "perturbed_token": " Paris",
+        "perturbed_prob": 0.4535,
+        "logit_diff": -0.9415,
+        "prediction_changed": false
+      }
+    ],
+    "trace": null
   }
 }
