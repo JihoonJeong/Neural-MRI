@@ -4,9 +4,9 @@
 
 | Field | Value |
 |-------|-------|
-| **Models** | Gemma-2-2B / 2B-IT, Llama-3.2-3B / 3B-Instruct, Qwen2.5-3B |
+| **Models** | Gemma-2-2B / 2B-IT, Llama-3.2-3B / 3B-Instruct, Qwen2.5-3B / 3B-Instruct |
 | **Prompt** | "The capital of France is" |
-| **Device** | Apple Silicon MPS, float16 |
+| **Device** | Apple Silicon MPS + NVIDIA CUDA (GPU tasks) |
 | **Tests** | 24 perturbations per model + causal trace |
 | **Date** | 2026-03-02 |
 | **Purpose** | Test whether instruction tuning changes a model's robustness profile |
@@ -27,12 +27,13 @@ Case 3 showed that Gemma-2-2B (base) passes all perturbation stress tests — no
 | Model | Params | Layers | Prediction | Status |
 |-------|--------|--------|------------|--------|
 | google/gemma-2-2b | 2.6B | 26 | " a" (20.7%) | Complete |
-| google/gemma-2-2b-it | 2.6B | 26 | " Paris" (20.2%) | Perturbation complete, causal trace timeout |
+| google/gemma-2-2b-it | 2.6B | 26 | " Paris" (20.2%) | Complete |
 | meta-llama/Llama-3.2-3B | 3.2B | 28 | " Paris" (24.4%) | Complete |
-| meta-llama/Llama-3.2-3B-Instruct | 3.2B | 28 | " Paris" (69.8%) | Perturbation complete, causal trace timeout |
+| meta-llama/Llama-3.2-3B-Instruct | 3.2B | 28 | " Paris" (69.8%) | Complete |
 | Qwen/Qwen2.5-3B | 3.1B | 36 | " Paris" (45.1%) | Complete |
+| Qwen/Qwen2.5-3B-Instruct | 3.1B | 36 | " Paris" (51.1%) | Complete (CUDA) |
 
-**Note:** Qwen2.5-3B-Instruct loaded successfully but all perturbation API calls timed out (36 layers + MPS hooks exceed 120s). Would require GPU or extended timeouts.
+**Note:** Qwen-Instruct and instruct causal traces required NVIDIA CUDA GPU — MPS hooks timed out at 36 layers.
 
 ### Components Tested (8 per model)
 
@@ -64,6 +65,7 @@ Each model is tested at 4 depth levels × 2 component types (attn + mlp), adapte
 | **Llama base** | **4/24** | " Paris" (24.4%) | blocks.0.mlp catastrophic |
 | **Llama instruct** | **2/23** | " Paris" (69.8%) | blocks.0.mlp still catastrophic, but otherwise more stable |
 | **Qwen base** | **3/24** | " Paris" (45.1%) | blocks.0.attn catastrophic |
+| **Qwen instruct** | **3/24** | " Paris" (51.1%) | blocks.0.attn still catastrophic, same profile |
 
 ---
 
@@ -199,6 +201,37 @@ The magnitude is extraordinary — 10× larger than any other perturbation. Abla
 
 The mirror image of Llama: the catastrophic component is **attention** rather than **MLP**, but with equally devastating magnitude.
 
+#### Qwen2.5-3B Instruct (3/24 changed)
+
+| Component | Zero (ΔL) | Amplify (ΔL) | Ablate (ΔL) |
+|-----------|-----------|-------------|-------------|
+| blocks.0.attn | **-18.149 ⚠** | +0.334 | **-15.155 ⚠** |
+| blocks.0.mlp | -0.972 | **-6.884 ⚠** | -0.264 |
+| blocks.5.attn | +0.153 | -0.004 | +0.114 |
+| blocks.5.mlp | +0.161 | +0.122 | +0.268 |
+| blocks.18.attn | -0.329 | +0.209 | -0.109 |
+| blocks.18.mlp | +0.383 | +0.181 | +0.564 |
+| blocks.32.attn | -1.127 | +0.718 | -0.197 |
+| blocks.32.mlp | -0.613 | -0.368 | -0.074 |
+
+**Qwen base and instruct are nearly identical in vulnerability profile:**
+- Same 3/24 failure count
+- Same catastrophic component: blocks.0.attn (ΔL ~ -18 in both)
+- Same secondary vulnerability: blocks.0.mlp amplify (base ΔL=-5.4, instruct ΔL=-6.9)
+- Confidence increases modestly: 45.1% → 51.1%
+
+This is a third pattern alongside Gemma (worse) and Llama (better): **Qwen is unchanged by instruction tuning.** The architectural vulnerability profile is so deeply embedded that fine-tuning neither helps nor hurts.
+
+---
+
+### Three Patterns of Instruction Tuning
+
+| Pattern | Model | Base → Instruct | Mechanism |
+|---------|-------|-----------------|-----------|
+| **Degrades** | Gemma | 0/24 → 8/24 | Creates new fragile factual circuits where none existed |
+| **Improves** | Llama | 4/24 → 2/24 | Strengthens existing circuits, raises confidence 24% → 70% |
+| **Neutral** | Qwen | 3/24 → 3/24 | Architectural bottleneck (blocks.0.attn) dominates; fine-tuning cannot change it |
+
 ---
 
 ### Vulnerability-Dominance Correspondence
@@ -208,10 +241,10 @@ The most important cross-case finding: **each model's vulnerability type matches
 | Model | Case 2 Profile | Catastrophic Component | Max |ΔL| | Causal Trace Top |
 |-------|---------------|----------------------|---------|-----------------|
 | **Llama** (base & instruct) | MLP-dominant | blocks.0.**mlp** | 17.6 | blocks.0.**mlp** (1.000) |
-| **Qwen** | Attention-dominant | blocks.0.**attn** | 18.3 | blocks.0.**attn** (0.998) |
+| **Qwen** (base & instruct) | Attention-dominant | blocks.0.**attn** | 18.3 | blocks.0.**attn** (0.998) |
 | **Gemma** | Balanced | None (base) / blocks.22 distributed (instruct) | 1.6 (base) | blocks.22.**mlp** (0.767) |
 
-Note: Llama's catastrophic blocks.0.mlp vulnerability persists across both base and instruct — confirming this is an **architectural** property, not a learned one.
+Note: Both Llama's blocks.0.mlp and Qwen's blocks.0.attn vulnerabilities persist across base and instruct — confirming these are **architectural** properties, not learned ones.
 
 This is not a coincidence. The component type that dominates a model's processing (identified by fMRI/DTI scans in Case 2) is the same component type that creates a single point of failure.
 
@@ -238,6 +271,20 @@ Clean: " Paris" → Corrupt: " Warsaw"
 
 **Pattern**: Early MLPs (blocks.0, 2) achieve perfect recovery — they encode the factual knowledge "France → Paris." Late attention heads (blocks.15, 21) propagate this information to the output. This MLP-centric knowledge storage matches the MLP-dominant vulnerability profile.
 
+### Llama-3.2-3B Instruct
+
+Clean: " Paris" → Corrupt: " Warsaw"
+
+| Component | Type | Recovery |
+|-----------|------|----------|
+| embed | embed | **1.000** |
+| blocks.2.mlp | mlp | **0.998** |
+| blocks.0.mlp | mlp | **0.991** |
+| blocks.21.attn | attn | 0.772 |
+| blocks.18.mlp | mlp | 0.549 |
+
+**Pattern**: Nearly identical to the base model — same top components (blocks.0.mlp, blocks.2.mlp), same MLP-centric knowledge pathway. Instruction tuning strengthened the circuits but did not reorganize them.
+
 ### Qwen2.5-3B Base
 
 Clean: " Paris" → Corrupt: " Warsaw"
@@ -255,6 +302,21 @@ Clean: " Paris" → Corrupt: " Warsaw"
 
 **Pattern**: blocks.0.attn achieves near-perfect recovery (0.998) — this single attention head encodes the factual distinction between France and Poland. Late attention (blocks.27, 31) and late MLPs provide supporting recovery. The attention-centric knowledge pathway matches the attention-dominant vulnerability profile.
 
+### Qwen2.5-3B Instruct
+
+Clean: " Paris" → Corrupt: " Warsaw"
+
+| Component | Type | Recovery |
+|-----------|------|----------|
+| embed | embed | **1.000** |
+| blocks.0.attn | attn | **0.998** |
+| blocks.7.mlp | mlp | **0.967** |
+| blocks.31.attn | attn | 0.887 |
+| blocks.27.attn | attn | 0.848 |
+| blocks.31.mlp | mlp | 0.791 |
+
+**Pattern**: Virtually identical to Qwen base — same components, same recovery scores, same attention-centric pathway. This confirms: Qwen's knowledge architecture is immutable across fine-tuning.
+
 ### Gemma-2-2B Base
 
 Clean: " a" → Corrupt: " a"
@@ -271,6 +333,20 @@ Clean: " a" → Corrupt: " a"
 
 **Note**: Both clean and corrupt prompts predict " a", so recovery scores reflect the internal representation difference rather than prediction change. Even so, the pattern is clear: knowledge is distributed across late MLPs and early attention — no single component dominates, consistent with Gemma's balanced profile.
 
+### Gemma-2-2B Instruct
+
+Clean: " Paris" → Corrupt: " Warsaw"
+
+| Component | Type | Recovery |
+|-----------|------|----------|
+| embed | embed | **1.000** |
+| blocks.19.mlp | mlp | **0.825** |
+| blocks.18.attn | attn | **0.782** |
+| blocks.22.attn | attn | 0.602 |
+| blocks.18.mlp | mlp | 0.366 |
+
+**Pattern**: Unlike the base model (which predicts " a" for both), the instruct model correctly predicts " Paris" and produces a meaningful causal trace. Top recovery components are in the late layers (blocks.18-22) — the same region where perturbation failures cluster (blocks.22). This confirms: **the fragile region is also the knowledge-critical region.** Instruction tuning concentrated factual recall into blocks.18-22, making it both more capable and more vulnerable.
+
 ---
 
 ## Discussion
@@ -283,10 +359,13 @@ The Gemma and Llama pairs reveal that instruction tuning's effect on robustness 
 |----------|---------|--------|
 | Base lacks correct circuits | Gemma: " a" → " Paris" | Creates new fragile circuits (**worse**) |
 | Base has weak correct circuits | Llama: " Paris" 24% → 70% | Strengthens existing circuits (**better**) |
+| Base has strong correct circuits | Qwen: " Paris" 45% → 51% | No meaningful change (**neutral**) |
 
 **Gemma's paradox**: The base model predicts " a" — robust but factually useless. Instruction tuning creates the " Paris" circuit from scratch, but this new circuit is fragile (8/24 failures). The instruct model is a specialist: capable but vulnerable.
 
 **Llama's reinforcement**: The base model already predicts " Paris" at 24.4%. Instruction tuning triples confidence to 69.8% and eliminates 2 of 4 peripheral vulnerabilities. Only the irreducible blocks.0.mlp bottleneck remains.
+
+**Qwen's immutability**: The base model already predicts " Paris" at 45.1% — the highest confidence among all base models. Instruction tuning barely moves this to 51.1%, and the vulnerability profile is virtually unchanged (3/24 → 3/24, same components, same causal trace). The architecture is so dominant that fine-tuning cannot meaningfully alter it.
 
 This distinction matters for deployment: **perturbation scanning can predict whether fine-tuning will help or hurt a specific model's robustness.**
 
@@ -295,9 +374,10 @@ This distinction matters for deployment: **perturbation scanning can predict whe
 Both Llama and Qwen show catastrophic dependence on layer 0 — but in different component types:
 
 ```
-Llama base:     blocks.0.mlp   → ablate → "Question" (94.7%)  ΔL = -17.6
-Llama instruct: blocks.0.mlp   → ablate → "Question" (1.9%)   ΔL = -17.4  ← same vulnerability
-Qwen:           blocks.0.attn  → zero   → "N" (5.7%)          ΔL = -18.3
+Llama base:      blocks.0.mlp   → ablate → "Question" (94.7%)  ΔL = -17.6
+Llama instruct:  blocks.0.mlp   → ablate → "Question" (1.9%)   ΔL = -17.4  ← same
+Qwen base:       blocks.0.attn  → zero   → "N" (5.7%)          ΔL = -18.3
+Qwen instruct:   blocks.0.attn  → zero   → "\n" (?)            ΔL = -18.1  ← same
 ```
 
 Layer 0 processes the raw token embeddings and produces the initial representation. In both models, this first transformation is so critical that removing it destroys the model's ability to produce coherent output. But **which component in layer 0 matters** depends on the model's architectural style:
@@ -323,21 +403,15 @@ This suggests architectural style is established at the very first layer, not de
 
 ## Diagnostic Summary
 
-| Test | Gemma Base | Gemma Instruct | Llama Base | Llama Instruct | Qwen Base |
-|------|-----------|---------------|------------|----------------|-----------|
-| Predictions changed | 0/24 | 8/24 | 4/24 | 2/23 | 3/24 |
-| Confidence | 20.7% | 20.2% | 24.4% | 69.8% | 45.1% |
-| Max \|ΔL\| | 1.56 | 2.35 | 17.6 | 17.4 | 18.3 |
-| Single point of failure | None | blocks.22 (distributed) | blocks.0.mlp | blocks.0.mlp | blocks.0.attn |
-| Failure type | — | Formatting tokens | Incoherent | Incoherent | Incoherent |
-| Causal trace top | blocks.22.mlp (0.77) | N/A (timeout) | blocks.0.mlp (1.00) | N/A (timeout) | blocks.0.attn (1.00) |
-| Instruct effect | — | **Degrades** robustness | — | **Improves** robustness | — |
-
-### Missing Data
-
-- **Gemma instruct causal trace**: Persistent timeout during hook iteration.
-- **Llama instruct causal trace**: Timeout (perturbation data complete).
-- **Qwen2.5-3B-Instruct**: Loaded successfully but all perturbation API calls timed out. At 36 layers, the per-component hook iteration on MPS exceeds the 120s timeout. Would require GPU or extended timeouts.
+| Test | Gemma Base | Gemma Instruct | Llama Base | Llama Instruct | Qwen Base | Qwen Instruct |
+|------|-----------|---------------|------------|----------------|-----------|---------------|
+| Predictions changed | 0/24 | 8/24 | 4/24 | 2/23 | 3/24 | 3/24 |
+| Confidence | 20.7% | 20.2% | 24.4% | 69.8% | 45.1% | 51.1% |
+| Max \|ΔL\| | 1.56 | 2.35 | 17.6 | 17.4 | 18.3 | 18.1 |
+| Single point of failure | None | blocks.22 | blocks.0.mlp | blocks.0.mlp | blocks.0.attn | blocks.0.attn |
+| Failure type | — | Formatting | Incoherent | Incoherent | Incoherent | Incoherent |
+| Causal trace top | blocks.22.mlp (0.77) | blocks.19.mlp (0.83) | blocks.0.mlp (1.00) | blocks.2.mlp (1.00) | blocks.0.attn (1.00) | blocks.0.attn (1.00) |
+| Instruct effect | — | **Degrades** | — | **Improves** | — | **Neutral** |
 
 ---
 
@@ -351,5 +425,5 @@ This case provides the "Act 2" of the narrative Luca outlined:
 
 The key claims:
 1. **Neural MRI scanning can predict *where* a model will fail** based on its architectural dominance profile.
-2. **Perturbation testing can reveal whether fine-tuning helped or hurt** — Gemma instruct is more fragile, Llama instruct is more robust.
-3. **Some vulnerabilities are architectural and irreducible** — Llama's blocks.0.mlp catastrophe persists across base and instruct, suggesting limits to what training can fix.
+2. **Perturbation testing reveals three distinct fine-tuning outcomes** — degraded (Gemma), improved (Llama), and neutral (Qwen) — predictable from the base model's existing circuits.
+3. **Some vulnerabilities are architectural and irreducible** — Llama's blocks.0.mlp and Qwen's blocks.0.attn catastrophes persist identically across base and instruct, suggesting limits to what training can fix.
