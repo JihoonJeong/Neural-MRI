@@ -227,7 +227,14 @@ class EmotionEngine:
         tokens = model.to_tokens(req.prompt)
         probe_hook = f"blocks.{probe_layer}.hook_resid_post"
 
-        # --- (1) Original generation ---
+        def steering_hook(value, hook):
+            resid_norm = value.norm(dim=-1, keepdim=True).mean()
+            scaled_dir = steer_dir.to(value.device, value.dtype) * req.strength * resid_norm
+            return value + scaled_dir
+
+        hook_names = [f"blocks.{layer}.hook_resid_post" for layer in steer_layers]
+
+        # --- (1) Original generation (greedy, no hooks) ---
         with torch.no_grad():
             original_output = model.generate(
                 tokens,
@@ -239,39 +246,38 @@ class EmotionEngine:
                 skip_special_tokens=True,
             )
 
-            # Get original emotion activations at last prompt token
+            # Original emotion activations at last prompt token
             _, orig_cache = model.run_with_cache(tokens)
             orig_act = orig_cache[probe_hook][0, -1].float()
             orig_emotions = self._project_activations(orig_act, probes)
 
-        # --- (2) Steered generation ---
-        def steering_hook(value, hook):
-            # Scale steering by residual stream norm at each position
-            resid_norm = value.norm(dim=-1, keepdim=True).mean()
-            scaled_dir = steer_dir.to(value.device, value.dtype) * req.strength * resid_norm
-            return value + scaled_dir
-
-        # Build hook list for all target layers
-        fwd_hooks = [(f"blocks.{layer}.hook_resid_post", steering_hook) for layer in steer_layers]
-
+        # --- (2) Steered generation (manual greedy loop with hooks) ---
         with torch.no_grad():
-            # Steered generation: inject hooks during each forward pass
-            steered_output = model.generate(
-                tokens,
-                max_new_tokens=req.max_new_tokens,
-                do_sample=False,
-                fwd_hooks=fwd_hooks,
-            )
+            steered_ids = tokens.clone()
+            for _ in range(req.max_new_tokens):
+                steered_logits = model.run_with_hooks(
+                    steered_ids,
+                    fwd_hooks=[(name, steering_hook) for name in hook_names],
+                )
+                next_token = steered_logits[0, -1].argmax(dim=-1, keepdim=True)
+                steered_ids = torch.cat([steered_ids, next_token.unsqueeze(0)], dim=-1)
+                if next_token.item() == model.tokenizer.eos_token_id:
+                    break
+
             steered_text = model.tokenizer.decode(
-                steered_output[0, tokens.shape[1] :],
+                steered_ids[0, tokens.shape[1] :],
                 skip_special_tokens=True,
             )
 
-            # Get steered emotion activations
-            steered_logits, steered_cache = model.run_with_cache(
-                tokens,
-                fwd_hooks=fwd_hooks,
-            )
+            # Steered emotion activations (use add_hook since run_with_cache
+            # does not accept fwd_hooks in TransformerLens)
+            hook_handles = []
+            for name in hook_names:
+                hook_handles.append(model.add_hook(name, steering_hook))
+            try:
+                _, steered_cache = model.run_with_cache(tokens)
+            finally:
+                model.reset_hooks()
             steered_act = steered_cache[probe_hook][0, -1].float()
             steered_emotions = self._project_activations(steered_act, probes)
 
