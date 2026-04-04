@@ -40,7 +40,8 @@ Neural MRI Scanner visualizes the internals of open-source LLMs like a **brain M
 - **Token-by-token streaming** via WebSocket — watch activations unfold live
 - **Perturbation engine** — zero, amplify, or ablate individual components and measure impact (KL divergence, logit shift)
 - **Causal tracing** — clean/corrupt prompt comparison with layer-by-layer recovery scores
-- **SAE integration** — Sparse Autoencoder feature analysis via SAE-Lens
+- **SAE integration** — multi-backend Sparse Autoencoder feature analysis (SAELens + EleutherAI)
+- **Emotion vector analysis** — extract emotion probes from model internals and steer behavior with emotion vectors (inspired by [Anthropic's emotion concepts research](https://transformer-circuits.pub/2026/emotions/index.html))
 - **Cross-model comparison** — run two models side-by-side on the same prompt
 - **4 layout modes** — vertical, brain, network, radial
 - **Recording & export** — WebM video, animated GIF, SVG/PNG snapshots, JSON data, Markdown reports
@@ -79,17 +80,41 @@ Open http://localhost
 
 ## Supported Models
 
-Five models are available out of the box:
+| Model | Parameters | SAE | Notes |
+|-------|-----------|-----|-------|
+| GPT-2 | 124M | SAELens | Default |
+| GPT-2 Medium | 355M | — | Built-in |
+| Pythia-1.4B | 1.4B | — | Built-in |
+| Llama-3.2-3B | 3B | — | Gated (requires HF token) |
+| Llama-3.1-8B | 8B | EleutherAI | Gated — SAE on layers 23, 29 (MLP) |
+| Llama-3-8B | 8B | EleutherAI | Gated — SAE on all 32 layers |
+| Qwen-2.5-3B | 3B | — | Built-in |
+| Mistral-7B | 7.2B | — | Gated |
+| Phi-3 Mini | 3.8B | — | Built-in |
 
-| Model | Parameters | Priority |
-|-------|-----------|----------|
-| GPT-2 | 124M | Default |
-| GPT-2 Medium | 355M | Built-in |
-| Pythia-1.4B | 1.4B | Built-in |
-| Gemma-2-2B | 2B | Gated (requires HF token) |
-| Llama-3.2-3B | 3B | Gated (requires HF token) |
+> **Note:** Gemma-2-2B is currently disabled due to a TransformerLens segfault. Gemma-3-1B-PT works.
 
 Additional models can be loaded dynamically via **HuggingFace Hub search** — any model with a TransformerLens-compatible architecture works.
+
+## Emotion Vector Analysis
+
+Neural MRI can extract and manipulate emotion representations inside language models, based on [Anthropic's emotion concepts research](https://transformer-circuits.pub/2026/emotions/index.html).
+
+```bash
+# 1. Extract emotion probes (20 emotions x 3 passages, comprehension mode)
+POST /api/emotion/extract-probes  {"mode": "comprehension"}
+
+# 2. Steer model behavior with an emotion vector
+POST /api/emotion/steer  {
+  "prompt": "I'm going to destroy everything.",
+  "emotion": "calm",
+  "strength": 0.05
+}
+```
+
+The engine supports **comprehension mode** (works on both base and instruct models) using pre-written emotional passages, and returns side-by-side original vs steered outputs with full emotion activation profiles.
+
+Available emotions: happy, sad, calm, desperate, afraid, angry, proud, guilty, nervous, hopeful, brooding, gloomy, reflective, enthusiastic, hostile, loving, exasperated, blissful, anxious, grateful, neutral.
 
 ## Architecture
 
@@ -108,6 +133,9 @@ Additional models can be loaded dynamically via **HuggingFace Hub search** — a
 │  ┌──────────┐ ┌──────────┐ ┌──────────────────┐ │
 │  │  Scanner  │ │  Model   │ │   Perturbation   │ │
 │  │  Engine   │ │ Registry │ │     Engine        │ │
+│  ├──────────┤ ├──────────┤ ├──────────────────┤ │
+│  │  Emotion  │ │   SAE    │ │   SAE Providers  │ │
+│  │  Engine   │ │ Manager  │ │ (Lens+EleutherAI)│ │
 │  └──────────┘ └──────────┘ └──────────────────┘ │
 │            ↕ TransformerLens ↕                   │
 ├─────────────────────────────────────────────────┤
@@ -121,7 +149,7 @@ Additional models can be loaded dynamically via **HuggingFace Hub search** — a
 | Layer | Technology |
 |-------|-----------|
 | Frontend | React 18, TypeScript, D3.js, Zustand, Tailwind CSS v3 |
-| Backend | FastAPI, TransformerLens, PyTorch, SAE-Lens |
+| Backend | FastAPI, TransformerLens, PyTorch, SAE-Lens, EleutherAI Sparsify |
 | Infra | Docker Compose, GitHub Actions CI |
 | Theme | Medical Dark (DICOM viewer aesthetic) |
 
