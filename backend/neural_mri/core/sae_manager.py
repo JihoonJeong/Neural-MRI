@@ -4,28 +4,34 @@ import gc
 import logging
 
 import torch
-from sae_lens import SAE
 
+from neural_mri.core.sae_providers import SAEProvider, load_sae_provider
 from neural_mri.core.sae_registry import get_sae_info
 
 logger = logging.getLogger(__name__)
 
 
 class SAEManager:
-    """Manages SAE loading/caching — one SAE at a time (model+layer)."""
+    """Manages SAE loading/caching — one SAE provider at a time (model+layer)."""
 
     def __init__(self) -> None:
-        self._sae: SAE | None = None
+        self._provider: SAEProvider | None = None
         self._model_id: str | None = None
         self._layer_idx: int | None = None
 
-    def get_sae(self, model_id: str, layer_idx: int, device: str) -> SAE:
-        """Return cached SAE or load a new one for the given model+layer."""
-        # Cache hit
-        if self._sae is not None and self._model_id == model_id and self._layer_idx == layer_idx:
-            return self._sae
+    @property
+    def provider(self) -> SAEProvider | None:
+        return self._provider
 
-        # Different model or layer — unload first
+    def get_provider(self, model_id: str, layer_idx: int, device: str) -> SAEProvider:
+        """Return cached provider or load a new one for the given model+layer."""
+        if (
+            self._provider is not None
+            and self._model_id == model_id
+            and self._layer_idx == layer_idx
+        ):
+            return self._provider
+
         self.unload()
 
         info = get_sae_info(model_id)
@@ -35,28 +41,32 @@ class SAEManager:
         if layer_idx not in info["layers"]:
             raise ValueError(f"Layer {layer_idx} not available for SAE. Valid: {info['layers']}")
 
-        release = info["release"]
-        sae_id = info["sae_id_template"].format(layer=layer_idx)
+        provider_type = info.get("provider", "saelens")
+        provider = load_sae_provider(provider_type, model_id, layer_idx, device, info)
 
-        logger.info("Loading SAE: release=%s, sae_id=%s, device=%s", release, sae_id, device)
-        sae = SAE.from_pretrained(
-            release=release,
-            sae_id=sae_id,
-            device=device,
-        )
-
-        self._sae = sae
+        self._provider = provider
         self._model_id = model_id
         self._layer_idx = layer_idx
-        logger.info("SAE loaded: %s layer %d (d_sae=%d)", model_id, layer_idx, sae.cfg.d_sae)
-        return sae
+        logger.info(
+            "SAE loaded: %s layer %d via %s (d_sae=%d)",
+            model_id,
+            layer_idx,
+            provider.provider_name,
+            provider.d_sae,
+        )
+        return provider
+
+    # Backward-compat alias for existing code paths
+    def get_sae(self, model_id: str, layer_idx: int, device: str) -> SAEProvider:
+        """Alias for get_provider — backward compatibility."""
+        return self.get_provider(model_id, layer_idx, device)
 
     def unload(self) -> None:
         """Free SAE from memory."""
-        if self._sae is not None:
+        if self._provider is not None:
             mid, lid = self._model_id, self._layer_idx
-            del self._sae
-            self._sae = None
+            del self._provider
+            self._provider = None
             self._model_id = None
             self._layer_idx = None
             gc.collect()

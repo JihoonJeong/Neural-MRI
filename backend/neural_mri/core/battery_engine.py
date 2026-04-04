@@ -68,13 +68,8 @@ class BatteryEngine:
                 if resolved_layer not in sae_info["layers"]:
                     resolved_layer = sae_info["layers"][len(sae_info["layers"]) // 2]
                 device = str(model.cfg.device)
-                sae = self._sae_mgr.get_sae(self._mm.model_id, resolved_layer, device)
-                hook_name_from_meta = (
-                    sae.cfg.metadata.get("hook_name") if sae.cfg.metadata else None
-                )
-                hook_name = hook_name_from_meta or sae_info["sae_id_template"].format(
-                    layer=resolved_layer
-                )
+                sae = self._sae_mgr.get_provider(self._mm.model_id, resolved_layer, device)
+                hook_name = sae.hook_name
 
         tests = get_all_tests() if categories is None else get_tests_by_categories(categories)
         results: list[TestResult] = []
@@ -235,14 +230,21 @@ class BatteryEngine:
         sae_info: dict,
     ) -> TestSAEResult:
         """Extract top SAE features at the last (prediction) token position."""
+        from neural_mri.core.sae_providers import SAEProvider
+
         activations = cache[hook_name]  # [1, seq_len, d_model]
-        last_token_act = activations[0, -1:].float()  # [1, d_model]
+        last_token_act = activations[:, -1:, :]  # [1, 1, d_model]
 
-        features = sae.encode(last_token_act)  # [1, d_sae]
-        features_1d = features[0]  # [d_sae]
+        if isinstance(sae, SAEProvider):
+            enc = sae.encode(last_token_act)
+            topk_vals = enc.top_acts[0, 0, :SAE_BATTERY_TOP_K]
+            topk_idxs = enc.top_indices[0, 0, :SAE_BATTERY_TOP_K]
+        else:
+            features = sae.encode(last_token_act.float())  # legacy path
+            features_1d = features[0, 0]
+            topk_vals, topk_idxs = torch.topk(features_1d, SAE_BATTERY_TOP_K)
 
-        topk_vals, topk_idxs = torch.topk(features_1d, SAE_BATTERY_TOP_K)
-        global_max = features_1d.max().item()
+        global_max = topk_vals.max().item() if topk_vals.numel() > 0 else 1.0
         global_max = max(global_max, 1e-8)
 
         neuronpedia_template = sae_info.get("neuronpedia_url_template")
@@ -352,7 +354,7 @@ class BatteryEngine:
 
         return BatterySAESummary(
             layer_idx=layer_idx,
-            d_sae=sae_info["d_sae"],
+            d_sae=sae_info.get("d_sae") or 0,
             total_unique_features=len(all_unique),
             cross_test_features=cross_features,
             per_category_top_features=per_category_top,

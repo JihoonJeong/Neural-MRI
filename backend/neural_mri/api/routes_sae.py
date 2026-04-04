@@ -46,6 +46,7 @@ def _require_model(mm: ModelManager) -> None:
 @router.get("/info")
 async def sae_info(
     mm: ModelManager = Depends(get_model_manager),
+    sae_mgr: SAEManager = Depends(get_sae_manager),
 ) -> dict:
     """Return SAE availability info for the currently loaded model."""
     if not mm.is_loaded:
@@ -55,12 +56,20 @@ async def sae_info(
     if info is None:
         return {"available": False, "model_id": mm.model_id, "layers": [], "d_sae": 0}
 
+    provider_type = info.get("provider", "saelens")
+    d_sae = info.get("d_sae") or 0
+
+    # If d_sae unknown (EleutherAI) and provider is loaded, get it dynamically
+    if d_sae == 0 and sae_mgr.provider is not None:
+        d_sae = sae_mgr.provider.d_sae
+
     return {
         "available": True,
         "model_id": mm.model_id,
-        "release": info["release"],
+        "provider": provider_type,
+        "release": info.get("release") or info.get("hub_id", ""),
         "layers": info["layers"],
-        "d_sae": info["d_sae"],
+        "d_sae": d_sae,
         "has_neuronpedia": info.get("neuronpedia_url_template") is not None,
     }
 

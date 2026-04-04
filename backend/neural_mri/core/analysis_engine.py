@@ -551,13 +551,9 @@ class AnalysisEngine:
         if sae_info is None:
             raise ValueError(f"No SAE available for model: {model_id}")
 
-        # Load SAE for the target layer
-        sae = sae_mgr.get_sae(model_id, req.layer_idx, device)
-        # SAE-Lens >=4: hook_name is in metadata, not cfg directly
-        hook_name = sae.cfg.metadata.get("hook_name") if sae.cfg.metadata else None
-        if not hook_name:
-            # Fallback: derive from sae_id_template
-            hook_name = sae_info["sae_id_template"].format(layer=req.layer_idx)
+        # Load SAE via provider abstraction
+        provider = sae_mgr.get_provider(model_id, req.layer_idx, device)
+        hook_name = provider.hook_name
 
         # Tokenize
         tokens = model.to_tokens(req.prompt)  # [1, seq_len]
@@ -570,42 +566,39 @@ class AnalysisEngine:
         # Extract activations at the SAE hook point
         activations = cache[hook_name]  # [1, seq_len, d_model]
 
-        # float16 models need upcast for SAE (which expects float32)
-        activations = activations.float()
+        # Encode via provider → unified EncodeResult
+        enc = provider.encode(activations)
 
-        # Encode → sparse features [1, seq_len, d_sae]
-        features = sae.encode(activations)
+        # Reconstruction loss
+        reconstruction = provider.decode_from_top(enc.top_acts, enc.top_indices)
+        activations_float = activations.float()
+        recon_loss = torch.mean((activations_float - reconstruction) ** 2).item()
 
-        # Decode → reconstruction [1, seq_len, d_model]
-        reconstruction = sae.decode(features)
+        # Sparsity: computed from top_acts (fraction of non-zero top activations)
+        active_count = (enc.top_acts[0] > 0).sum().item()
+        total_latents = provider.d_sae * enc.top_acts.shape[1]  # d_sae * seq_len
+        sparsity = active_count / max(total_latents, 1)
 
-        # Reconstruction loss (MSE per token, averaged)
-        recon_loss = torch.mean((activations - reconstruction) ** 2).item()
-
-        # Sparsity: fraction of features with activation > 0
-        features_2d = features[0]  # [seq_len, d_sae]
-        active_mask = features_2d > 0
-        sparsity = active_mask.float().mean().item()
-
-        # Per-token top-K features
-        seq_len = features_2d.shape[0]
-        top_k = min(req.top_k, features_2d.shape[1])
+        # Per-token top-K features from encode result
+        seq_len = enc.top_acts.shape[1]
+        top_k = min(req.top_k, enc.top_acts.shape[-1])
 
         neuronpedia_template = sae_info.get("neuronpedia_url_template")
 
         token_features_list: list[SAETokenFeatures] = []
         all_active_indices: set[int] = set()
 
-        # Find global max for normalization
-        global_max = features_2d.max().item() if features_2d.numel() > 0 else 1.0
+        # Global max for normalization
+        global_max = enc.top_acts[0].max().item() if enc.top_acts.numel() > 0 else 1.0
         global_max = max(global_max, 1e-8)
 
         for t_idx in range(seq_len):
-            tok_feats = features_2d[t_idx]  # [d_sae]
-            topk_vals, topk_idxs = torch.topk(tok_feats, top_k)
+            # Already sorted by value from encode; take top_k
+            tok_acts = enc.top_acts[0, t_idx, :top_k]
+            tok_idxs = enc.top_indices[0, t_idx, :top_k]
 
             feat_infos: list[SAEFeatureInfo] = []
-            for val, idx in zip(topk_vals.tolist(), topk_idxs.tolist()):
+            for val, idx in zip(tok_acts.tolist(), tok_idxs.tolist()):
                 np_url = None
                 if neuronpedia_template:
                     np_url = neuronpedia_template.format(layer=req.layer_idx, feature_idx=idx)
@@ -633,22 +626,27 @@ class AnalysisEngine:
         idx_to_col = {idx: col for col, idx in enumerate(heatmap_feature_indices)}
         n_feats = len(heatmap_feature_indices)
 
+        # Build heatmap from top_acts (sparse → indexed lookup)
         heatmap_values: list[list[float]] = []
         for t_idx in range(seq_len):
             row = [0.0] * n_feats
-            tok_feats = features_2d[t_idx]
+            tok_idxs = enc.top_indices[0, t_idx].tolist()
+            tok_acts = enc.top_acts[0, t_idx].tolist()
+            idx_to_act = dict(zip(tok_idxs, tok_acts))
             for feat_idx in heatmap_feature_indices:
-                col = idx_to_col[feat_idx]
-                row[col] = round(tok_feats[feat_idx].item() / global_max, 4)
+                if feat_idx in idx_to_act:
+                    col = idx_to_col[feat_idx]
+                    row[col] = round(idx_to_act[feat_idx] / global_max, 4)
             heatmap_values.append(row)
 
         elapsed_ms = (time.time() - start) * 1000
         logger.info(
-            "SAE scan: layer %d, %d tokens, %d active features, %.1fms",
+            "SAE scan: layer %d, %d tokens, %d active features, %.1fms (%s)",
             req.layer_idx,
             seq_len,
             n_feats,
             elapsed_ms,
+            provider.provider_name,
         )
 
         return SAEData(
@@ -656,7 +654,7 @@ class AnalysisEngine:
             prompt=req.prompt,
             layer_idx=req.layer_idx,
             hook_name=hook_name,
-            d_sae=sae.cfg.d_sae,
+            d_sae=provider.d_sae,
             tokens=[str(t) for t in str_tokens],
             token_features=token_features_list,
             reconstruction_loss=round(recon_loss, 6),
@@ -668,5 +666,6 @@ class AnalysisEngine:
                 "top_k": top_k,
                 "total_active_features": n_feats,
                 "compute_time_ms": round(elapsed_ms, 1),
+                "provider": provider.provider_name,
             },
         )

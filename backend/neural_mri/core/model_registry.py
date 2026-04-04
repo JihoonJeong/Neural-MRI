@@ -50,6 +50,20 @@ MODEL_REGISTRY: dict[str, dict] = {
         "tl_compat": True,
         "gated": False,
     },
+    "meta-llama/Llama-3.1-8B": {
+        "family": "llama",
+        "display_name": "Llama 3.1 8B",
+        "params": "8B",
+        "tl_compat": True,
+        "gated": True,
+    },
+    "meta-llama/Llama-3-8B": {
+        "family": "llama",
+        "display_name": "Llama 3 8B",
+        "params": "8B",
+        "tl_compat": True,
+        "gated": True,
+    },
     "mistralai/Mistral-7B-v0.3": {
         "family": "mistral",
         "display_name": "Mistral 7B v0.3",

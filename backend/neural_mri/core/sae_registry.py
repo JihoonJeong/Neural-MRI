@@ -1,7 +1,11 @@
 from __future__ import annotations
 
 SAE_REGISTRY: dict[str, dict] = {
+    # ------------------------------------------------------------------ #
+    # SAELens provider (Joseph Bloom / Neuronpedia)
+    # ------------------------------------------------------------------ #
     "gpt2": {
+        "provider": "saelens",
         "release": "gpt2-small-res-jb",
         "sae_id_template": "blocks.{layer}.hook_resid_pre",
         "layers": list(range(12)),
@@ -9,11 +13,31 @@ SAE_REGISTRY: dict[str, dict] = {
         "neuronpedia_url_template": "https://neuronpedia.org/gpt2-small/{layer}-res-jb/{feature_idx}",
     },
     "google/gemma-2-2b": {
+        "provider": "saelens",
         "release": "gemma-scope-2b-pt-res-canonical",
         "sae_id_template": "layer_{layer}/width_16k/canonical",
         "layers": list(range(26)),
         "d_sae": 16384,
         "neuronpedia_url_template": "https://neuronpedia.org/gemma-2-2b/{layer}-gemmascope-res-16k/{feature_idx}",
+    },
+    # ------------------------------------------------------------------ #
+    # EleutherAI provider (sparsify)
+    # ------------------------------------------------------------------ #
+    "meta-llama/Llama-3.1-8B": {
+        "provider": "eleutherai",
+        "hub_id": "EleutherAI/sae-llama-3.1-8b-32x",
+        "hookpoint_template": "layers.{layer}",
+        "tl_hook_template": "blocks.{layer}.hook_resid_pre",
+        "layers": list(range(32)),
+        "d_sae": None,  # determined at load time (expansion_factor * d_model)
+    },
+    "meta-llama/Llama-3-8B": {
+        "provider": "eleutherai",
+        "hub_id": "EleutherAI/sae-llama-3-8b-32x",
+        "hookpoint_template": "layers.{layer}",
+        "tl_hook_template": "blocks.{layer}.hook_resid_pre",
+        "layers": list(range(32)),
+        "d_sae": None,
     },
 }
 

@@ -143,27 +143,36 @@ def mock_model_manager(mock_model):
 
 @pytest.fixture
 def mock_sae():
+    """Mock SAE provider with unified interface."""
+    from neural_mri.core.sae_providers import EncodeResult
+
     sae = MagicMock()
-    sae.cfg = types.SimpleNamespace(
-        d_sae=32,
-        metadata={"hook_name": "blocks.1.hook_resid_pre"},
-    )
+    sae.d_sae = 32
+    sae.hook_name = "blocks.1.hook_resid_pre"
+    sae.provider_name = "MockProvider"
 
     def _encode(x):
-        batch_shape = x.shape[:-1]
-        return torch.relu(torch.randn(*batch_shape, 32))
+        batch_shape = x.shape[:-1]  # [batch, seq_len]
+        top_k = min(20, 32)
+        top_acts = torch.relu(torch.randn(*batch_shape, top_k))
+        top_indices = torch.randint(0, 32, (*batch_shape, top_k))
+        full_acts = torch.relu(torch.randn(*batch_shape, 32))
+        return EncodeResult(top_acts=top_acts, top_indices=top_indices, full_acts=full_acts)
 
     sae.encode = MagicMock(side_effect=_encode)
 
-    def _decode(x):
-        return torch.randn(*x.shape[:-1], D_MODEL)
+    def _decode_from_top(top_acts, top_indices):
+        batch_shape = top_acts.shape[:-1]
+        return torch.randn(*batch_shape, D_MODEL)
 
-    sae.decode = MagicMock(side_effect=_decode)
+    sae.decode_from_top = MagicMock(side_effect=_decode_from_top)
     return sae
 
 
 @pytest.fixture
 def mock_sae_manager(mock_sae):
     mgr = MagicMock()
+    mgr.get_provider.return_value = mock_sae
     mgr.get_sae.return_value = mock_sae
+    mgr.provider = mock_sae
     return mgr
