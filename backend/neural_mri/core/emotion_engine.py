@@ -21,7 +21,6 @@ import torch
 from neural_mri.core.model_manager import ModelManager
 from neural_mri.schemas.emotion import (
     EmotionActivation,
-    EmotionProbe,
     ExtractProbesRequest,
     ExtractProbesResponse,
     SteerComparison,
@@ -85,7 +84,6 @@ class EmotionEngine:
         start = time.time()
         model = self._mm.get_model()
         model_id = self._mm.model_id
-        device = str(model.cfg.device)
         layer_idx = self._resolve_layer(req.layer_idx)
         hook_name = f"blocks.{layer_idx}.hook_resid_post"
 

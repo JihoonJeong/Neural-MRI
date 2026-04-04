@@ -8,8 +8,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import ORJSONResponse
 
 from neural_mri.api.routes_battery import router as battery_router
-from neural_mri.api.routes_emotion import router as emotion_router
 from neural_mri.api.routes_collab import router as collab_router
+from neural_mri.api.routes_emotion import router as emotion_router
 from neural_mri.api.routes_model import router as model_router
 from neural_mri.api.routes_perturb import router as perturb_router
 from neural_mri.api.routes_report import router as report_router
