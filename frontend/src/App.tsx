@@ -130,6 +130,7 @@ export default function App() {
             width: 240,
             borderLeft: '1px solid var(--border)',
             background: 'var(--bg-secondary)',
+            overflowY: 'auto',
           }}
         >
           {(isCompareMode || isCrossModelMode) ? <DiffPanel /> : <LayerSummary />}
