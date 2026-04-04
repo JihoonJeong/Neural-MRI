@@ -334,7 +334,7 @@ wheels = [
 [[package]]
 name = "eai-sparsify"
 version = "1.3.0"
-source = { registry = "https://pypi.org/simple" }
+source = { git = "https://github.com/EleutherAI/sparsify.git#2177983136a1447c25115a692a65dac0bd518779" }
 dependencies = [
     { name = "accelerate" },
     { name = "datasets" },
@@ -346,10 +346,6 @@ dependencies = [
     { name = "simple-parsing" },
     { name = "torch" },
     { name = "transformers" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/c4/34/66350d9c4d3da4c9d440ddbaea3b3396c5c4220878d3528d38d6cca7348c/eai_sparsify-1.3.0.tar.gz", hash = "sha256:252c456035e44017e3da43d9b2527af3009242ec2ff8f560c2a16208f350fcf6", size = 28864, upload-time = "2025-11-17T23:06:27.872Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/6c/c9/fab91b11073e6e361852601b79080d4d0616ee6f4615422fd548cf45f6b5/eai_sparsify-1.3.0-py3-none-any.whl", hash = "sha256:9b4134fe39ae60de501e26feee0cd9396ba5b1376f0bf7c7b26f1c80a3153d21", size = 31354, upload-time = "2025-11-17T23:06:26.374Z" },
 ]
 
 [[package]]
@@ -832,7 +828,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "accelerate", specifier = ">=0.28" },
-    { name = "eai-sparsify", specifier = ">=0.1" },
+    { name = "eai-sparsify", git = "https://github.com/EleutherAI/sparsify.git" },
     { name = "fastapi", specifier = ">=0.115" },
     { name = "httpx", marker = "extra == 'dev'", specifier = ">=0.27" },
     { name = "numpy", specifier = ">=1.26" },

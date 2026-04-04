@@ -26,9 +26,9 @@ SAE_REGISTRY: dict[str, dict] = {
     "meta-llama/Llama-3.1-8B": {
         "provider": "eleutherai",
         "hub_id": "EleutherAI/sae-llama-3.1-8b-32x",
-        "hookpoint_template": "layers.{layer}",
-        "tl_hook_template": "blocks.{layer}.hook_resid_pre",
-        "layers": list(range(32)),
+        "hookpoint_template": "layers.{layer}.mlp",
+        "tl_hook_template": "blocks.{layer}.hook_mlp_out",
+        "layers": [23, 29],  # only these layers available in the repo
         "d_sae": None,  # determined at load time (expansion_factor * d_model)
     },
     "meta-llama/Llama-3-8B": {
