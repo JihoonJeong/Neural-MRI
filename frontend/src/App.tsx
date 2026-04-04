@@ -18,6 +18,7 @@ import { ReportModal } from './components/ReportModal';
 import { BatteryDetailModal } from './components/BatteryDetailModal';
 import { BatteryPanel } from './components/Panels/BatteryPanel';
 import { SAEPanel } from './components/Panels/SAEPanel';
+import { EmotionPanel } from './components/Panels/EmotionPanel';
 import { CollabPanel } from './components/Panels/CollabPanel';
 import { CausalTracePanel } from './components/Panels/CausalTracePanel';
 import { AttentionPanel } from './components/Panels/AttentionPanel';
@@ -152,6 +153,9 @@ export default function App() {
           </div>
           <div style={{ borderTop: '1px solid var(--border)' }}>
             <SAEPanel />
+          </div>
+          <div style={{ borderTop: '1px solid var(--border)' }}>
+            <EmotionPanel />
           </div>
           <div style={{ borderTop: '1px solid var(--border)' }}>
             <CollabPanel />

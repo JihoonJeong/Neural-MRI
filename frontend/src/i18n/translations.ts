@@ -89,6 +89,12 @@ export type TranslationKey =
   | 'sae.reconstruction'
   | 'sae.sparsity'
   | 'sae.neuronpedia'
+  // Emotion
+  | 'emotion.title'
+  | 'emotion.extract'
+  | 'emotion.extracting'
+  | 'emotion.steer'
+  | 'emotion.steering'
   // Layout
   | 'layout.vertical'
   | 'layout.brain'
@@ -303,6 +309,12 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     'sae.reconstruction': 'Recon. Loss',
     'sae.sparsity': 'Sparsity',
     'sae.neuronpedia': 'Neuronpedia',
+    // ── Emotion ──
+    'emotion.title': 'EMOTION VECTORS',
+    'emotion.extract': 'EXTRACT',
+    'emotion.extracting': 'EXTRACTING...',
+    'emotion.steer': 'STEER',
+    'emotion.steering': 'STEERING...',
     // ── Layout ──
     'layout.vertical': 'Stack View',
     'layout.brain': 'Brain View',
@@ -517,6 +529,12 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
     'sae.reconstruction': '\uc7ac\uad6c\uc131 \uc190\uc2e4',
     'sae.sparsity': '\ud76c\uc18c\uc131',
     'sae.neuronpedia': 'Neuronpedia',
+    // ── Emotion ──
+    'emotion.title': '\uac10\uc815 \ubca1\ud130',
+    'emotion.extract': '\ucd94\ucd9c',
+    'emotion.extracting': '\ucd94\ucd9c \uc911...',
+    'emotion.steer': '\uc870\uc791',
+    'emotion.steering': '\uc870\uc791 \uc911...',
     // ── Layout ──
     'layout.vertical': '\uc2a4\ud0dd \ubdf0',
     'layout.brain': '\ub1cc \ubdf0',

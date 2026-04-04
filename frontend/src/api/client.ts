@@ -141,6 +141,25 @@ export const api = {
       }),
     tests: () => request<TestCase[]>('/battery/tests'),
   },
+  emotion: {
+    list: () =>
+      request<import('../types/emotion').EmotionListResponse>('/emotion/emotions'),
+    extractProbes: (mode = 'comprehension', layerIdx?: number) =>
+      request<import('../types/emotion').ExtractProbesResponse>('/emotion/extract-probes', {
+        method: 'POST',
+        body: JSON.stringify({ mode, layer_idx: layerIdx ?? null }),
+      }),
+    steer: (prompt: string, emotion: string, strength = 0.05, maxNewTokens = 50) =>
+      request<import('../types/emotion').SteerResponse>('/emotion/steer', {
+        method: 'POST',
+        body: JSON.stringify({
+          prompt,
+          emotion,
+          strength,
+          max_new_tokens: maxNewTokens,
+        }),
+      }),
+  },
   sae: {
     info: () => request<SAEInfoResponse>('/sae/info'),
     support: () => request<Record<string, boolean>>('/sae/support'),
