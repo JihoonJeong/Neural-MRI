@@ -2,6 +2,40 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.0] - 2026-04-04
+
+### SAE Provider Abstraction
+- Multi-backend SAE support via adapter pattern: **SAELens** + **EleutherAI Sparsify**
+- New `sae_providers.py` — `SAEProvider` ABC with `SAELensProvider` and `EleutherAIProvider`
+- SAE registry now includes `provider` field to route loading per model
+- Factory-based loading: `load_sae_provider()` handles both backends transparently
+
+### Emotion Vector Analysis (NEW)
+- **Emotion probe extraction** — comprehension-mode forward pass over 20 emotion categories (3 passages each) with mean subtraction
+- **Emotion steering** — inject emotion vectors into residual stream during generation, compare original vs steered output
+- Bundled dataset: `emotion_comprehension_texts.csv` (20 emotions + neutral baseline)
+- API endpoints: `POST /api/emotion/extract-probes`, `POST /api/emotion/steer`, `GET /api/emotion/emotions`
+- Inspired by [Anthropic's "Emotion Concepts" research](https://transformer-circuits.pub/2026/emotions/index.html), adapted for open-weight SLMs
+
+### Models
+- Added Llama 3.1 8B with EleutherAI SAE support (layers 23, 29 MLP)
+- Added Llama 3 8B with EleutherAI SAE support (all 32 layers)
+- Marked Gemma-2-2B as `tl_compat: false` due to TransformerLens segfault
+- 11 models in registry (up from 5 in v0.1.0)
+
+### Clinical Cases
+- Case 1: Gemma baseline — 5-mode normal anatomy scan
+- Case 2: Cross-model comparison (Gemma vs Llama vs Qwen)
+- Case 3: Perturbation stress test on Gemma-2-2B
+- Case 4: Base vs instruct perturbation comparison (6 models, GPU results)
+
+### Infrastructure
+- HuggingFace Spaces live demo: [Hiconcep/Neural-MRI](https://huggingface.co/spaces/Hiconcep/Neural-MRI)
+- Position paper published
+- GitHub Pages docs site with CODE_OF_CONDUCT and SECURITY policy
+
+---
+
 ## [0.1.0] - 2026-03-01
 
 First public release.
