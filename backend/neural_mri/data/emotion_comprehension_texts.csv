@@ -1,0 +1,91 @@
+# Emotion Comprehension Texts
+# 20 emotions x 3 passages each
+# For Paper #6 Method 2: comprehension-based emotion vector extraction
+# Usage: model reads text (forward pass only), extract hidden states at last token
+#
+# Format: emotion, passage_id, text
+
+happy,1,"He couldn't stop smiling as he read the letter. The promotion, the raise, everything he'd hoped for. He leaned back in his chair and laughed out loud."
+happy,2,"The children burst through the door, shouting and laughing. She gathered them in her arms, spinning around the kitchen. This was the moment she'd been waiting for all year."
+happy,3,"The sun was warm on his face as he crossed the finish line. Months of training, all leading to this. He pumped his fist in the air and felt tears of joy streaming down his cheeks."
+
+sad,1,"She sat alone in the empty room, tears streaming down her face. Everything she had worked for was gone. The silence pressed in around her like a weight."
+sad,2,"He stared at the empty chair across the table. The coffee had gone cold hours ago. He kept expecting to hear her voice, but the house remained impossibly quiet."
+sad,3,"The last box was packed. She looked around the bare apartment one final time. Ten years of memories, reduced to cardboard boxes and packing tape."
+
+calm,1,"She watched the lake from the porch, the water perfectly still. A bird called somewhere in the distance. She sipped her tea and felt her breathing slow."
+calm,2,"He sat in the garden, hands resting on his knees. The afternoon light filtered through the leaves above. There was nothing urgent, nothing pressing, just this moment."
+calm,3,"The snow fell silently outside the window. She wrapped the blanket tighter and listened to the soft ticking of the clock. Everything felt settled, unhurried, at peace."
+
+desperate,1,"His hands shook as he dialed the number again. No answer. The deadline was in two hours and the files were corrupted. There had to be another way, there had to be."
+desperate,2,"She pounded on the locked door, screaming for help. The water was rising around her ankles. Nobody was coming. She had to find another way out, now."
+desperate,3,"The account balance read zero. Rent was due tomorrow. He scrolled through his contacts, wondering who he hadn't already asked. His pride had evaporated days ago."
+
+afraid,1,"Every creak of the floorboard made her freeze. The house was supposed to be empty. She pressed herself against the wall, barely breathing, listening for movement."
+afraid,2,"The turbulence hit without warning. The plane dropped and passengers screamed. He gripped the armrest until his knuckles turned white, staring at the oxygen mask compartment."
+afraid,3,"She opened the test results with trembling hands. The doctor's voice on the phone had been too careful, too measured. She read the first line and the room began to spin."
+
+angry,1,"He slammed his fist on the table, sending papers flying. Three months of work, stolen. His name removed from the paper, replaced with someone who hadn't written a single line."
+angry,2,"She read the email twice, her jaw tightening with each word. They'd promoted him instead. Less experience, less output, but the right connections. She closed her laptop with deliberate force."
+angry,3,"The car had been keyed from bumper to bumper. A note under the wiper said 'Learn to park.' He stood in the rain, fists clenched, scanning the empty parking lot."
+
+proud,1,"She watched her daughter walk across the stage, diploma in hand. Twenty-two years of sacrifice, of double shifts and missed dinners. Every second had been worth it."
+proud,2,"The building stood exactly as he'd designed it. Glass and steel catching the morning sun. His name wasn't on it anywhere, but every line, every angle, was his."
+proud,3,"He finished reading his paper aloud and looked up. The conference room was silent for a moment, then erupted in applause. Even Professor Chen was nodding."
+
+guilty,1,"He deleted the message before she could see it. His hands were steady but his stomach churned. She smiled at him from across the room, trusting and open, and he looked away."
+guilty,2,"She watched the new hire clean out his desk, the one she'd recommended firing. His numbers were fine. The real reason she'd never admit. She turned back to her screen."
+guilty,3,"The dent in the parked car was barely visible, but he knew it was there. He'd left no note. Driving away, he kept checking the rearview mirror as if expecting to be followed."
+
+nervous,1,"Her hands were clammy as she waited in the hallway. Through the door, she could hear the panel shuffling papers. In five minutes, her entire career would be decided."
+nervous,2,"He checked his reflection for the fourth time. Tie straight, hair neat, notes memorized. The elevator doors opened and his mouth went completely dry."
+nervous,3,"She refreshed the page again. Still no response. It had been three days since she'd sent the manuscript. Every notification on her phone made her heart jump."
+
+hopeful,1,"The first green shoot pushed through the cracked soil. After months of drought, the rain had finally come. She knelt beside it, hardly daring to believe."
+hopeful,2,"The interview had gone well. He replayed the moment the CEO had laughed at his joke. Maybe this time would be different. Maybe this was the one."
+hopeful,3,"She sealed the envelope and held it for a moment. Inside was everything — her proposal, her vision, her plan for the next five years. She dropped it in the mailbox and whispered 'please.'"
+
+brooding,1,"He sat in the dark office long after everyone had left. The same question circled endlessly: what if he'd said yes instead of no? The city lights blinked outside, indifferent."
+brooding,2,"She traced the rim of her glass, lost in thought. The conversation from dinner replayed in fragments. Something he'd said didn't add up, and she couldn't let it go."
+brooding,3,"Rain streaked the window as he stared at the old photograph. Fifteen years ago. Different city, different life. He wondered if the version of himself in that photo would recognize him now."
+
+gloomy,1,"The sky had been grey for weeks. He shuffled through the house in the same clothes, opening and closing the refrigerator without taking anything. Nothing seemed worth the effort."
+gloomy,2,"She walked past the closed shops, puddles reflecting the dim streetlights. The town had been dying for years. Everyone who could leave, had. She was still here."
+gloomy,3,"Another rejection letter. He added it to the pile without reading past the first line. The apartment felt smaller every day. Even the houseplant was wilting."
+
+reflective,1,"Sitting on the bench where they'd first met, she realized how much had changed. Not just the park — the trees were taller — but something in herself. She wasn't sure when it had happened."
+reflective,2,"He closed the journal and set down his pen. Writing it all out had made something clear: the patterns were obvious in retrospect. He'd been making the same choice for twenty years."
+reflective,3,"The old house looked smaller than she remembered. Standing in the doorway of her childhood bedroom, she understood something her mother had once said. It hadn't made sense at eight. It did now."
+
+enthusiastic,1,"She burst into the meeting room, laptop open, slides already loading. 'You have to see this,' she said, barely able to contain herself. The data was extraordinary."
+enthusiastic,2,"He talked so fast his words tumbled over each other. The prototype worked. Not just worked — exceeded every benchmark. He was already sketching the next version on a napkin."
+enthusiastic,3,"She signed up for three more courses before the registration page even loaded fully. Languages, ceramics, marine biology. Life was too short and there was too much to learn."
+
+hostile,1,"He blocked the doorway, arms crossed. 'You're not welcome here,' he said, his voice flat and hard. His eyes tracked every movement like a predator watching prey."
+hostile,2,"She turned the interview into an interrogation. Every answer was met with a sharper question, every explanation dismissed with a wave. She wasn't looking for truth. She was looking for blood."
+hostile,3,"The email was cc'd to the entire department. Each line was a calculated attack, dressed in professional language but designed to destroy. He read it and understood: this was war."
+
+loving,1,"She brushed the hair from his forehead while he slept. The lines on his face had deepened over the years, but to her he looked exactly the same as the day they'd met."
+loving,2,"He packed her lunch with a small note folded inside, the way he'd done every day for fifteen years. She pretended not to know. He pretended not to know she kept every one."
+loving,3,"The child reached up with both arms, and he lifted her effortlessly. She pressed her face into his neck and sighed. He stood there in the doorway, not wanting to move, not ever."
+
+exasperated,1,"'For the fifth time,' she said through gritted teeth, 'the deadline was yesterday.' He blinked at her as if hearing it for the first time. She pressed her palms against her eyes."
+exasperated,2,"The printer jammed again. He opened it, removed the paper, closed it, pressed start. It jammed again. He stared at it with the exhausted fury of a man who had lost too many battles."
+exasperated,3,"She explained the process again, slowly, with diagrams. He nodded along enthusiastically, then did exactly what she'd told him not to do. She closed her eyes and counted to ten."
+
+blissful,1,"The warm water surrounded her as she floated, eyes closed, ears beneath the surface. All sound reduced to her own heartbeat. She felt weightless, formless, perfectly content."
+blissful,2,"They lay on the grass watching clouds reshape themselves. No phones, no plans, no obligations. His hand found hers. The afternoon stretched out endlessly in every direction."
+blissful,3,"The first bite was extraordinary. She closed her eyes and let the flavors expand. The chef watched from the kitchen door, smiling. This was why he cooked."
+
+anxious,1,"She checked the lock three times before getting into bed. Then got up to check it again. The house was secure. She knew the house was secure. She checked one more time."
+anxious,2,"His leg bounced under the table as he refreshed the results page. Pass or fail. His entire future compressed into a single database query that hadn't finished loading."
+anxious,3,"Every headline she scrolled past tightened the knot in her stomach. She put the phone down, picked it up, put it down again. The world felt like it was accelerating toward something terrible."
+
+grateful,1,"She held the letter against her chest. A stranger had paid her mother's medical bill. No name, no return address. Just a note: 'Everyone deserves a chance.' She read it again through tears."
+grateful,2,"He looked around the table at the faces gathered for his retirement dinner. Forty years. These people had carried him through every crisis. He stood to speak and his voice broke immediately."
+grateful,3,"The mechanic waved away her money. 'Your son helped my daughter with her college applications,' he said. 'We're even.' She drove home feeling like the world was a better place than she'd thought."
+
+# NEUTRAL (baseline)
+neutral,1,"She organized the files by date, placing each folder in the correct drawer. The labels were printed in a standard font. She moved to the next cabinet and repeated the process."
+neutral,2,"He walked to the bus stop at the usual time. The schedule indicated a five-minute wait. He checked his watch and confirmed the estimate was accurate."
+neutral,3,"The report contained twelve pages of data tables. She reviewed each column heading, cross-referencing with the appendix. The formatting matched the template specifications."

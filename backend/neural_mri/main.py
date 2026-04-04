@@ -8,6 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import ORJSONResponse
 
 from neural_mri.api.routes_battery import router as battery_router
+from neural_mri.api.routes_emotion import router as emotion_router
 from neural_mri.api.routes_collab import router as collab_router
 from neural_mri.api.routes_model import router as model_router
 from neural_mri.api.routes_perturb import router as perturb_router
@@ -19,6 +20,7 @@ from neural_mri.api.routes_settings import router as settings_router
 from neural_mri.api.ws_collab import router as ws_collab_router
 from neural_mri.api.ws_stream import router as ws_router
 from neural_mri.config import Settings
+from neural_mri.core.emotion_engine import EmotionEngine
 from neural_mri.core.model_manager import ModelManager
 from neural_mri.core.sae_manager import SAEManager
 from neural_mri.core.scan_cache import ScanCache
@@ -38,6 +40,7 @@ if settings.hf_token:
 
 model_manager = ModelManager()
 sae_manager = SAEManager()
+emotion_engine = EmotionEngine(model_manager)
 scan_cache = ScanCache(max_entries=settings.max_cache_entries)
 session_manager = SessionManager()
 
@@ -50,6 +53,7 @@ async def lifespan(app: FastAPI):
         model_manager.load_model(settings.default_model, device=settings.device)
     yield
     # Shutdown: free GPU memory
+    emotion_engine.clear_cache()
     sae_manager.unload()
     model_manager.unload_model()
     logger.info("Neural MRI Scanner shut down.")
@@ -76,6 +80,7 @@ app.include_router(perturb_router, prefix="/api/perturb", tags=["perturb"])
 app.include_router(report_router, prefix="/api/report", tags=["report"])
 app.include_router(battery_router, prefix="/api/battery", tags=["battery"])
 app.include_router(sae_router, prefix="/api/sae", tags=["sae"])
+app.include_router(emotion_router, prefix="/api/emotion", tags=["emotion"])
 app.include_router(collab_router, prefix="/api/collab", tags=["collab"])
 app.include_router(settings_router, prefix="/api/settings", tags=["settings"])
 app.include_router(search_router, prefix="/api/model", tags=["model"])
