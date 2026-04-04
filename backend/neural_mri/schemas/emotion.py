@@ -38,6 +38,7 @@ class SteerRequest(BaseModel):
 
 class SteerComparison(BaseModel):
     """Side-by-side: original vs steered output."""
+
     original_text: str
     steered_text: str
     emotion: str

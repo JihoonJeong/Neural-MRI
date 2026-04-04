@@ -212,9 +212,7 @@ class EmotionEngine:
 
         if req.emotion not in probes:
             available = sorted(probes.keys())
-            raise ValueError(
-                f"Emotion '{req.emotion}' not found. Available: {available}"
-            )
+            raise ValueError(f"Emotion '{req.emotion}' not found. Available: {available}")
 
         emotion_vec = probes[req.emotion]
         # Normalize to unit vector, then scale by strength * residual stream norm
@@ -237,7 +235,7 @@ class EmotionEngine:
                 do_sample=False,
             )
             original_text = model.tokenizer.decode(
-                original_output[0, tokens.shape[1]:],
+                original_output[0, tokens.shape[1] :],
                 skip_special_tokens=True,
             )
 
@@ -254,10 +252,7 @@ class EmotionEngine:
             return value + scaled_dir
 
         # Build hook list for all target layers
-        fwd_hooks = [
-            (f"blocks.{layer}.hook_resid_post", steering_hook)
-            for layer in steer_layers
-        ]
+        fwd_hooks = [(f"blocks.{layer}.hook_resid_post", steering_hook) for layer in steer_layers]
 
         with torch.no_grad():
             # Steered generation: inject hooks during each forward pass
@@ -268,7 +263,7 @@ class EmotionEngine:
                 fwd_hooks=fwd_hooks,
             )
             steered_text = model.tokenizer.decode(
-                steered_output[0, tokens.shape[1]:],
+                steered_output[0, tokens.shape[1] :],
                 skip_special_tokens=True,
             )
 
