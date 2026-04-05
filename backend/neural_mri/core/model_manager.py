@@ -53,13 +53,83 @@ class ModelManager:
             except Exception:
                 pass
 
-    def load_model(self, model_id: str, device: str = "auto") -> ModelInfo:
+    @staticmethod
+    def _load_quantized(model_id: str, quantize: str, device: str) -> HookedTransformer:
+        """Attempt to load a quantized model via HuggingFace + TransformerLens.
+
+        Known limitation: BitsAndBytes INT4/INT8 packs weights into shapes
+        incompatible with TransformerLens state_dict loading (e.g. [2097152,1]
+        instead of [8,4096,128]). This will raise an error for 7B+ models.
+        Kept as code path for future TL compatibility or smaller models.
+        """
+        try:
+            from transformers import AutoModelForCausalLM, BitsAndBytesConfig
+        except ImportError as exc:
+            raise RuntimeError(
+                "bitsandbytes + transformers required for quantized loading. "
+                "Install: pip install bitsandbytes"
+            ) from exc
+
+        logger.info("Attempting %s quantized load for %s...", quantize, model_id)
+
+        if quantize == "int4":
+            bnb_config = BitsAndBytesConfig(
+                load_in_4bit=True,
+                bnb_4bit_compute_dtype=torch.float16,
+                bnb_4bit_quant_type="nf4",
+            )
+        elif quantize == "int8":
+            bnb_config = BitsAndBytesConfig(load_in_8bit=True)
+        else:
+            raise ValueError(f"Unknown quantize mode: {quantize}. Use 'int4' or 'int8'.")
+
+        hf_model = AutoModelForCausalLM.from_pretrained(
+            model_id,
+            quantization_config=bnb_config,
+            device_map="auto",
+        )
+
+        # TransformerLens wrapping — may fail due to packed weight shapes
+        model = HookedTransformer.from_pretrained(
+            model_id,
+            hf_model=hf_model,
+            dtype=torch.float16,
+            device=device,
+        )
+        return model
+
+    def load_model(
+        self, model_id: str, device: str = "auto", quantize: str | None = None
+    ) -> ModelInfo:
         """Load a model via TransformerLens HookedTransformer."""
         if self._model is not None:
             self.unload_model()
 
         resolved_device = self._resolve_device(device)
         logger.info("Loading model %s on %s...", model_id, resolved_device)
+
+        # Quantized loading path (INT4/INT8)
+        if quantize:
+            try:
+                self._model = self._load_quantized(model_id, quantize, resolved_device)
+                self._model_id = model_id
+                logger.info("Model %s loaded with %s quantization.", model_id, quantize)
+                return self.get_model_info()
+            except Exception as exc:
+                logger.error(
+                    "Quantized load failed for %s (%s): %s. "
+                    "BitsAndBytes packed weights are incompatible with "
+                    "TransformerLens state_dict for 7B+ models.",
+                    model_id,
+                    quantize,
+                    exc,
+                )
+                raise RuntimeError(
+                    f"Quantized loading ({quantize}) failed for {model_id}. "
+                    f"TransformerLens cannot load BitsAndBytes packed weights "
+                    f"(shape mismatch). Use fp16 with sufficient VRAM, or run "
+                    f"quantized inference outside Neural-MRI. Error: {exc}"
+                ) from exc
 
         # Determine dtype: use float16 for large models to save memory
         from neural_mri.core.model_registry import get_model_info as get_registry_info

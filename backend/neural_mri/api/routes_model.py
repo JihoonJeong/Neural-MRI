@@ -48,7 +48,7 @@ async def load_model(
         if mm.model_id and mm.model_id != req.model_id:
             cache.invalidate_model(mm.model_id)
             sae_mgr.unload()
-        result = mm.load_model(req.model_id, req.device)
+        result = mm.load_model(req.model_id, req.device, quantize=req.quantize)
         # Register dynamic model (no-op if already in registry)
         add_recent_model(req.model_id, n_params=result.n_params)
         return result

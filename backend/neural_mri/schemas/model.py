@@ -6,6 +6,7 @@ from pydantic import BaseModel
 class ModelLoadRequest(BaseModel):
     model_id: str = "gpt2"
     device: str = "auto"
+    quantize: str | None = None  # "int4" or "int8" — currently TL-incompatible for 7B+
 
 
 class LayerConfig(BaseModel):
