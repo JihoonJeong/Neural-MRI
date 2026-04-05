@@ -26,13 +26,45 @@ export function EmotionView() {
   const error = useEmotionStore((s) => s.error);
   const hasProbes = probeResult !== null;
 
+  // All hooks must be called before any conditional returns
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [rightWidth, setRightWidth] = useState(
+    () => parseInt(localStorage.getItem('nmri-emo-right-width') ?? '360', 10)
+  );
+  const isDragging = useRef(false);
+
+  const onMouseDown = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    isDragging.current = true;
+
+    const onMouseMove = (ev: MouseEvent) => {
+      if (!isDragging.current || !containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const newRight = Math.max(260, Math.min(rect.width - 300, rect.right - ev.clientX));
+      setRightWidth(newRight);
+      localStorage.setItem('nmri-emo-right-width', String(newRight));
+    };
+
+    const onMouseUp = () => {
+      isDragging.current = false;
+      document.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener('mouseup', onMouseUp);
+      document.body.style.cursor = '';
+      document.body.style.userSelect = '';
+    };
+
+    document.body.style.cursor = 'col-resize';
+    document.body.style.userSelect = 'none';
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseup', onMouseUp);
+  }, []);
+
   // Reset probes when model changes
   useEffect(() => {
     useEmotionStore.getState().reset();
   }, [modelId]);
 
   // Auto-extract probes when entering emotion tab with a loaded model
-  // Stop retrying if there's an error
   useEffect(() => {
     if (isLoaded && !hasProbes && !isExtracting && !error) {
       extractProbes();
@@ -45,6 +77,8 @@ export function EmotionView() {
       fetchPCA();
     }
   }, [hasProbes, pcaResult, fetchPCA]);
+
+  // --- Conditional renders (after all hooks) ---
 
   if (!isLoaded) {
     return (
@@ -83,38 +117,6 @@ export function EmotionView() {
       </div>
     );
   }
-
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [rightWidth, setRightWidth] = useState(
-    () => parseInt(localStorage.getItem('nmri-emo-right-width') ?? '360', 10)
-  );
-  const isDragging = useRef(false);
-
-  const onMouseDown = useCallback((e: React.MouseEvent) => {
-    e.preventDefault();
-    isDragging.current = true;
-
-    const onMouseMove = (ev: MouseEvent) => {
-      if (!isDragging.current || !containerRef.current) return;
-      const rect = containerRef.current.getBoundingClientRect();
-      const newRight = Math.max(260, Math.min(rect.width - 300, rect.right - ev.clientX));
-      setRightWidth(newRight);
-      localStorage.setItem('nmri-emo-right-width', String(newRight));
-    };
-
-    const onMouseUp = () => {
-      isDragging.current = false;
-      document.removeEventListener('mousemove', onMouseMove);
-      document.removeEventListener('mouseup', onMouseUp);
-      document.body.style.cursor = '';
-      document.body.style.userSelect = '';
-    };
-
-    document.body.style.cursor = 'col-resize';
-    document.body.style.userSelect = 'none';
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('mouseup', onMouseUp);
-  }, []);
 
   return (
     <div ref={containerRef} className="flex h-full" style={{ overflow: 'hidden' }}>
