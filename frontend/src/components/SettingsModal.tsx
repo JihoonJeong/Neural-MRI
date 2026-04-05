@@ -13,6 +13,8 @@ export function SettingsModal() {
     cacheStatus,
     devicePreference,
     setDevicePreference,
+    uiScale,
+    setUiScale,
     isValidating,
     error,
     updateToken,
@@ -259,6 +261,34 @@ export function SettingsModal() {
                 {d === 'auto'
                   ? t('settings.deviceAuto' as TranslationKey)
                   : d.toUpperCase()}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* UI Scale Section */}
+        <div style={sectionStyle}>
+          <div style={labelStyle}>UI Scale</div>
+          <div className="flex gap-2">
+            {(['compact', 'default', 'large'] as const).map((s) => (
+              <button
+                key={s}
+                onClick={() => setUiScale(s)}
+                style={{
+                  background:
+                    uiScale === s ? 'rgba(0,255,170,0.15)' : 'rgba(255,255,255,0.04)',
+                  border:
+                    uiScale === s ? '1px solid rgba(0,255,170,0.4)' : '1px solid var(--border)',
+                  color: uiScale === s ? 'var(--accent-active)' : 'var(--text-data)',
+                  padding: '4px 12px',
+                  fontSize: 'var(--font-size-xs)',
+                  fontFamily: 'var(--font-primary)',
+                  cursor: 'pointer',
+                  borderRadius: 3,
+                  textTransform: 'capitalize',
+                }}
+              >
+                {s}
               </button>
             ))}
           </div>

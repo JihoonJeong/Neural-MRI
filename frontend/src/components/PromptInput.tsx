@@ -60,7 +60,8 @@ export function PromptInput() {
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !busy) {
+    if (e.key === 'Enter' && !e.shiftKey && !busy) {
+      e.preventDefault();
       handleScan();
     }
   };
@@ -130,13 +131,21 @@ export function PromptInput() {
         >
           {isCompareMode ? t('compare.promptA' as TranslationKey) + ':' : 'PROMPT:'}
         </span>
-        <input
+        <textarea
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           onKeyDown={handleKeyDown}
           disabled={isViewer}
+          rows={2}
           className="flex-1 rounded"
-          style={{ ...inputStyle, opacity: isViewer ? 0.5 : 1 }}
+          style={{
+            ...inputStyle,
+            opacity: isViewer ? 0.5 : 1,
+            resize: 'vertical',
+            minHeight: 36,
+            maxHeight: 120,
+            lineHeight: 1.4,
+          }}
         />
         {!isCompareMode && (
           <button
@@ -187,12 +196,13 @@ export function PromptInput() {
           >
             {t('compare.promptB' as TranslationKey)}:
           </span>
-          <input
+          <textarea
             value={promptB}
             onChange={(e) => setPromptB(e.target.value)}
             onKeyDown={handleKeyDown}
+            rows={2}
             className="flex-1 rounded"
-            style={inputStyle}
+            style={{ ...inputStyle, resize: 'vertical', minHeight: 36, maxHeight: 120, lineHeight: 1.4 }}
           />
           <button
             onClick={handleScan}

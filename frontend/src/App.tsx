@@ -49,6 +49,12 @@ export default function App() {
   const sendCursor = useCollabStore((s) => s.sendCursor);
   const playbackFrame = useRecordingStore((s) => s.currentFrame);
 
+  // Apply saved UI scale on mount
+  useEffect(() => {
+    const scale = useSettingsStore.getState().uiScale;
+    useSettingsStore.getState().setUiScale(scale);
+  }, []);
+
   // Fetch model info, available models, and settings on mount
   useEffect(() => {
     fetchModels();

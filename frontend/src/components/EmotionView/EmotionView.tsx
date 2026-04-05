@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import { useEmotionStore } from '../../store/useEmotionStore';
 import { useModelStore } from '../../store/useModelStore';
@@ -55,16 +55,7 @@ export function EmotionView() {
   }
 
   if (isExtracting) {
-    return (
-      <div className="flex items-center justify-center h-full" style={{ color: ACCENT }}>
-        <div>
-          <div style={{ fontSize: 'var(--font-size-lg)', marginBottom: 8 }}>Extracting emotion probes...</div>
-          <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--text-secondary)' }}>
-            21 emotions × 3 passages = 63 forward passes
-          </div>
-        </div>
-      </div>
-    );
+    return <ExtractionProgress />;
   }
 
   if (!hasProbes && error) {
@@ -128,6 +119,63 @@ export function EmotionView() {
         }}
       >
         <SteerControls prompt={prompt} />
+      </div>
+    </div>
+  );
+}
+
+/* ---------- Extraction Progress ---------- */
+
+function ExtractionProgress() {
+  const TOTAL = 63;
+  const [elapsed, setElapsed] = useState(0);
+
+  useEffect(() => {
+    const t = setInterval(() => setElapsed((e) => e + 0.1), 100);
+    return () => clearInterval(t);
+  }, []);
+
+  // Estimate ~50ms per forward pass for GPT-2, scale up for larger models
+  const estimatedPerPass = 0.05; // seconds
+  const estimatedProgress = Math.min(Math.floor(elapsed / estimatedPerPass), TOTAL);
+  const pct = Math.min((estimatedProgress / TOTAL) * 100, 99);
+
+  return (
+    <div className="flex items-center justify-center h-full" style={{ color: ACCENT }}>
+      <div style={{ textAlign: 'center', width: 320 }}>
+        <div style={{ fontSize: 'var(--font-size-lg)', marginBottom: 12 }}>
+          Extracting emotion probes...
+        </div>
+        <div style={{
+          fontSize: 'var(--font-size-sm)',
+          color: 'var(--text-secondary)',
+          marginBottom: 12,
+        }}>
+          {estimatedProgress}/{TOTAL} forward passes
+        </div>
+        {/* Progress bar */}
+        <div style={{
+          width: '100%',
+          height: 4,
+          background: 'var(--bg-primary)',
+          borderRadius: 2,
+          overflow: 'hidden',
+        }}>
+          <div style={{
+            width: `${pct}%`,
+            height: '100%',
+            background: ACCENT,
+            borderRadius: 2,
+            transition: 'width 0.1s linear',
+          }} />
+        </div>
+        <div style={{
+          fontSize: 'var(--font-size-xs)',
+          color: 'var(--text-secondary)',
+          marginTop: 8,
+        }}>
+          21 emotions × 3 passages
+        </div>
       </div>
     </div>
   );

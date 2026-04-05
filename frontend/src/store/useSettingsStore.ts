@@ -2,17 +2,33 @@ import { create } from 'zustand';
 import { api } from '../api/client';
 import type { TokenStatus, CacheStatus } from '../types/settings';
 
+const SCALE_MAP: Record<string, Record<string, string>> = {
+  compact: { '--font-size-xs': '9px', '--font-size-sm': '10px', '--font-size-md': '11px', '--font-size-lg': '14px' },
+  default: { '--font-size-xs': '11px', '--font-size-sm': '12px', '--font-size-md': '13px', '--font-size-lg': '16px' },
+  large: { '--font-size-xs': '13px', '--font-size-sm': '14px', '--font-size-md': '15px', '--font-size-lg': '18px' },
+};
+
+function applyScale(scale: string) {
+  const vars = SCALE_MAP[scale] ?? SCALE_MAP.default;
+  const root = document.documentElement;
+  for (const [key, val] of Object.entries(vars)) {
+    root.style.setProperty(key, val);
+  }
+}
+
 interface SettingsState {
   isOpen: boolean;
   tokenStatus: TokenStatus | null;
   cacheStatus: CacheStatus | null;
   devicePreference: string;
+  uiScale: string;
   isValidating: boolean;
   error: string | null;
 
   openSettings: () => void;
   closeSettings: () => void;
   setDevicePreference: (device: string) => void;
+  setUiScale: (scale: string) => void;
   updateToken: (token: string) => Promise<void>;
   clearToken: () => Promise<void>;
   fetchTokenStatus: () => Promise<void>;
@@ -25,6 +41,7 @@ export const useSettingsStore = create<SettingsState>((set) => ({
   tokenStatus: null,
   cacheStatus: null,
   devicePreference: localStorage.getItem('nmri-device') ?? 'auto',
+  uiScale: localStorage.getItem('nmri-ui-scale') ?? 'default',
   isValidating: false,
   error: null,
 
@@ -39,6 +56,12 @@ export const useSettingsStore = create<SettingsState>((set) => ({
   setDevicePreference: (device) => {
     localStorage.setItem('nmri-device', device);
     set({ devicePreference: device });
+  },
+
+  setUiScale: (scale) => {
+    localStorage.setItem('nmri-ui-scale', scale);
+    applyScale(scale);
+    set({ uiScale: scale });
   },
 
   updateToken: async (token) => {

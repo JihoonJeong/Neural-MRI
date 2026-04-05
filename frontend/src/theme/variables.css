@@ -31,8 +31,8 @@
 
   /* Typography */
   --font-primary: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-  --font-size-xs: 9px;
-  --font-size-sm: 10px;
-  --font-size-md: 11px;
-  --font-size-lg: 14px;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-md: 13px;
+  --font-size-lg: 16px;
 }
