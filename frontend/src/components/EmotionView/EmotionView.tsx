@@ -22,14 +22,16 @@ export function EmotionView() {
     pcaResult,
   } = useEmotionStore();
 
+  const error = useEmotionStore((s) => s.error);
   const hasProbes = probeResult !== null;
 
   // Auto-extract probes when entering emotion tab with a loaded model
+  // Stop retrying if there's an error
   useEffect(() => {
-    if (isLoaded && !hasProbes && !isExtracting) {
+    if (isLoaded && !hasProbes && !isExtracting && !error) {
       extractProbes();
     }
-  }, [isLoaded, hasProbes, isExtracting, extractProbes]);
+  }, [isLoaded, hasProbes, isExtracting, error, extractProbes]);
 
   // Fetch PCA after probes are ready
   useEffect(() => {
@@ -54,6 +56,32 @@ export function EmotionView() {
           <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--text-secondary)' }}>
             21 emotions × 3 passages = 63 forward passes
           </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (!hasProbes && error) {
+    return (
+      <div className="flex items-center justify-center h-full" style={{ color: 'var(--text-secondary)' }}>
+        <div style={{ textAlign: 'center' }}>
+          <div style={{ fontSize: 'var(--font-size-sm)', color: '#f87171', marginBottom: 8 }}>
+            Probe extraction failed: {error}
+          </div>
+          <button
+            onClick={() => { useEmotionStore.getState().reset(); extractProbes(); }}
+            style={{
+              fontSize: 'var(--font-size-xs)',
+              padding: '4px 12px',
+              color: ACCENT,
+              border: `1px solid ${ACCENT}`,
+              borderRadius: 4,
+              background: 'transparent',
+              cursor: 'pointer',
+            }}
+          >
+            RETRY
+          </button>
         </div>
       </div>
     );
