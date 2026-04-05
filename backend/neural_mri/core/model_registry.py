@@ -26,9 +26,15 @@ MODEL_REGISTRY: dict[str, dict] = {
         "family": "gemma",
         "display_name": "Gemma 2 2B",
         "params": "2B",
-        "tl_compat": False,  # segfault in TransformerLens — gemma-2 compat bug
+        "tl_compat": True,  # works with fp16 (segfault was OOM in fp32)
         "gated": True,
-        "warning": "TransformerLens gemma-2 segfault. Use gemma-3-1b-pt instead.",
+    },
+    "google/gemma-2-2b-it": {
+        "family": "gemma",
+        "display_name": "Gemma 2 2B IT",
+        "params": "2B",
+        "tl_compat": True,
+        "gated": True,
     },
     "meta-llama/Llama-3.2-3B": {
         "family": "llama",

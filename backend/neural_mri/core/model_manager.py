@@ -72,15 +72,16 @@ class ModelManager:
                 use_fp16 = True
                 logger.info("Large model (%s) — using float16", registry_meta["params"])
 
+        if not registry_meta:
+            logger.info(
+                "Model %s not in registry, attempting dynamic load with float16...",
+                model_id,
+            )
+            use_fp16 = True  # OOM prevention for unknown models
+
         load_kwargs: dict = {"device": resolved_device}
         if use_fp16:
             load_kwargs["dtype"] = torch.float16
-
-        if not registry_meta:
-            logger.info(
-                "Model %s not in registry, attempting dynamic load...",
-                model_id,
-            )
 
         try:
             self._model = HookedTransformer.from_pretrained(model_id, **load_kwargs)
