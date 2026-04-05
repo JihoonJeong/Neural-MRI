@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.0] - 2026-04-05
+
+### Dedicated Emotion Analysis Tab (EMO)
+- Full-width EMO tab alongside T1/T2/fMRI/DTI/FLAIR scan modes
+- **Zone A — Transcript Heatmap**: Token × emotion diverging color grid (D3, RdBu scale)
+- **Zone B — PCA Scatter**: 2D emotion space visualization (PC1=valence, PC2=arousal)
+- **Zone C — Steering Controls**: Emotion selector, strength slider, original vs steered text comparison with activation diff table
+- **Zone D — Strength Sweep**: Dose-response curve chart with per-point tooltip
+- **Zone E — SAE Feature Diff**: Top-10 SAE features changed by steering (auto-triggered on steer)
+- **Zone F — Layer Evolution**: Emotion activation across all layers per token
+
+### New Backend Endpoints
+- `POST /api/emotion/project` — token-level emotion vector projection (heatmap data)
+- `GET /api/emotion/pca` — 2D PCA of emotion space
+- `POST /api/emotion/sweep` — multi-strength dose-response curve
+- `POST /api/emotion/layer-evolution` — emotion activation across layers
+- `POST /api/emotion/steer-sae` — combined steering + SAE feature diff
+
+### Model Loading
+- Quantized loading path (`int4`/`int8`) with clear error on TransformerLens incompatibility
+- Dynamic model loading defaults to fp16
+- Gemma-2-2B restored (segfault was OOM in fp32, works in fp16)
+- Gemma-2-2B-IT added to registry
+
+---
+
 ## [0.2.0] - 2026-04-04
 
 ### SAE Provider Abstraction
