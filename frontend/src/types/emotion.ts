@@ -94,6 +94,29 @@ export interface LayerEvolutionResponse {
   metadata: Record<string, unknown>;
 }
 
+// --- Steer + SAE ---
+
+export interface SAEFeatureDiff {
+  feature_idx: number;
+  original_activation: number;
+  steered_activation: number;
+  diff: number;
+}
+
+export interface SteerSAEResponse {
+  model_id: string;
+  prompt: string;
+  emotion: string;
+  strength: number;
+  sae_layer_idx: number;
+  sae_hook_name: string;
+  d_sae: number;
+  original_top_features: SAEFeatureDiff[];
+  steered_top_features: SAEFeatureDiff[];
+  top_changed_features: SAEFeatureDiff[];
+  metadata: Record<string, unknown>;
+}
+
 // --- List ---
 
 export interface EmotionListResponse {

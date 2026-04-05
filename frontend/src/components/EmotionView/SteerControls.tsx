@@ -1,5 +1,5 @@
 import { useEmotionStore } from '../../store/useEmotionStore';
-import type { EmotionActivation } from '../../types/emotion';
+import type { EmotionActivation, SAEFeatureDiff } from '../../types/emotion';
 
 const ACCENT = '#e879a0';
 
@@ -7,10 +7,12 @@ export function SteerControls({ prompt }: { prompt: string }) {
   const {
     probeResult,
     steerResult,
+    steerSaeResult,
     isSteering,
     selectedEmotion,
     strength,
     steer,
+    steerSae,
     setSelectedEmotion,
     setStrength,
     emotionList,
@@ -76,7 +78,7 @@ export function SteerControls({ prompt }: { prompt: string }) {
 
           {/* Steer button */}
           <button
-            onClick={() => steer(prompt)}
+            onClick={() => { steer(prompt); steerSae(prompt); }}
             disabled={isSteering || !prompt}
             style={{
               width: '100%',
@@ -103,6 +105,11 @@ export function SteerControls({ prompt }: { prompt: string }) {
               originalEmotions={steerResult.original_emotions}
               steeredEmotions={steerResult.steered_emotions}
             />
+          )}
+
+          {/* SAE Feature Diff (Zone E) */}
+          {steerSaeResult && (
+            <SAEFeatureDiffPanel features={steerSaeResult.top_changed_features} layer={steerSaeResult.sae_layer_idx} />
           )}
         </>
       )}
@@ -193,6 +200,57 @@ function SteerResult({
                 fontWeight: 'bold',
               }}>
                 {d.diff > 0 ? '+' : ''}{d.diff.toFixed(1)}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+/* ---------- Zone E: SAE Feature Diff ---------- */
+
+function SAEFeatureDiffPanel({
+  features,
+  layer,
+}: {
+  features: SAEFeatureDiff[];
+  layer: number;
+}) {
+  return (
+    <div style={{ marginTop: 16 }}>
+      <div style={{ fontSize: 'var(--font-size-xs)', color: '#aa88ff', fontWeight: 'bold', marginBottom: 6 }}>
+        SAE FEATURE DIFF (layer {layer})
+      </div>
+      <table style={{ fontSize: 'var(--font-size-xs)', width: '100%', borderCollapse: 'collapse' }}>
+        <thead>
+          <tr style={{ color: 'var(--text-secondary)' }}>
+            <th style={{ textAlign: 'left', padding: '1px 4px', fontWeight: 'normal' }}>#</th>
+            <th style={{ textAlign: 'right', padding: '1px 4px', fontWeight: 'normal' }}>orig</th>
+            <th style={{ textAlign: 'right', padding: '1px 4px', fontWeight: 'normal' }}>steer</th>
+            <th style={{ textAlign: 'right', padding: '1px 4px', fontWeight: 'normal' }}>diff</th>
+          </tr>
+        </thead>
+        <tbody>
+          {features.slice(0, 10).map((f) => (
+            <tr key={f.feature_idx}>
+              <td style={{ padding: '1px 4px', color: '#aa88ff' }}>
+                {f.feature_idx}
+              </td>
+              <td style={{ padding: '1px 4px', textAlign: 'right', color: '#6b7280' }}>
+                {f.original_activation.toFixed(1)}
+              </td>
+              <td style={{ padding: '1px 4px', textAlign: 'right', color: '#aa88ff' }}>
+                {f.steered_activation.toFixed(1)}
+              </td>
+              <td style={{
+                padding: '1px 4px',
+                textAlign: 'right',
+                color: f.diff > 0 ? '#4ade80' : f.diff < 0 ? '#f87171' : 'var(--text-secondary)',
+                fontWeight: 'bold',
+              }}>
+                {f.diff > 0 ? '+' : ''}{f.diff.toFixed(1)}
               </td>
             </tr>
           ))}

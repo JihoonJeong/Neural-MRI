@@ -8,6 +8,7 @@ import type {
   PCAResponse,
   ProjectResponse,
   SteerResponse,
+  SteerSAEResponse,
   SweepResponse,
 } from '../types/emotion';
 import { useScanStore } from './useScanStore';
@@ -24,6 +25,7 @@ interface EmotionState {
   projectResult: ProjectResponse | null;
   pcaResult: PCAResponse | null;
   sweepResult: SweepResponse | null;
+  steerSaeResult: SteerSAEResponse | null;
   layerEvoResult: LayerEvolutionResponse | null;
 
   // Loading states
@@ -43,6 +45,7 @@ interface EmotionState {
   project: (prompt: string) => Promise<void>;
   fetchPCA: () => Promise<void>;
   sweep: (prompt: string) => Promise<void>;
+  steerSae: (prompt: string) => Promise<void>;
   layerEvolution: (prompt: string, tokenIdx?: number) => Promise<void>;
   setSelectedEmotion: (emotion: string) => void;
   setStrength: (strength: number) => void;
@@ -59,6 +62,7 @@ export const useEmotionStore = create<EmotionState>((set, get) => ({
   projectResult: null,
   pcaResult: null,
   sweepResult: null,
+  steerSaeResult: null,
   layerEvoResult: null,
 
   isExtracting: false,
@@ -140,6 +144,18 @@ export const useEmotionStore = create<EmotionState>((set, get) => ({
     }
   },
 
+  steerSae: async (prompt: string) => {
+    const { selectedEmotion, strength } = get();
+    try {
+      const result = await api.emotion.steerSae(prompt, selectedEmotion, strength);
+      set({ steerSaeResult: result });
+      useScanStore.getState().addLog(`Steer+SAE: ${result.top_changed_features.length} features changed`);
+    } catch (e) {
+      // SAE might not be available for this model — non-fatal
+      useScanStore.getState().addLog(`Steer+SAE: ${(e as Error).message}`);
+    }
+  },
+
   layerEvolution: async (prompt: string, tokenIdx = -1) => {
     try {
       const result = await api.emotion.layerEvolution(prompt, tokenIdx);
@@ -159,6 +175,7 @@ export const useEmotionStore = create<EmotionState>((set, get) => ({
       projectResult: null,
       pcaResult: null,
       sweepResult: null,
+      steerSaeResult: null,
       layerEvoResult: null,
       error: null,
       isExtracting: false,

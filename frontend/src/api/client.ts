@@ -173,6 +173,11 @@ export const api = {
         method: 'POST',
         body: JSON.stringify({ prompt, emotion, strengths }),
       }),
+    steerSae: (prompt: string, emotion: string, strength = 0.05, topK = 15) =>
+      request<import('../types/emotion').SteerSAEResponse>('/emotion/steer-sae', {
+        method: 'POST',
+        body: JSON.stringify({ prompt, emotion, strength, top_k: topK }),
+      }),
     layerEvolution: (prompt: string, tokenIdx = -1) =>
       request<import('../types/emotion').LayerEvolutionResponse>('/emotion/layer-evolution', {
         method: 'POST',
