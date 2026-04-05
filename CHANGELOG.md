@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0] - 2026-04-05
+
+First production release.
+
+### Highlights
+- 5 MRI scan modes (T1/T2/fMRI/DTI/FLAIR) + dedicated **EMO** tab for emotion vector analysis
+- Multi-backend SAE support (SAELens + EleutherAI Sparsify)
+- Emotion steering with causal behavioral change — verified on GPT-2, ready for SLM-scale experiments
+- Complete user guides (EN/KO) with Playwright-captured screenshots
+- 12 models in registry, HuggingFace Spaces live demo
+
+### User Guide
+- Rewritten with EMO tab walkthrough (6 zones: A–F)
+- Playwright-automated screenshots for all scan modes + EMO tab
+- Developer guide with full API reference (34 endpoints, curl examples)
+- Both English and Korean versions
+
+---
+
 ## [0.3.0] - 2026-04-05
 
 ### Dedicated Emotion Analysis Tab (EMO)

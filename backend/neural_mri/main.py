@@ -62,7 +62,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title="Neural MRI Scanner",
     description="Model Resonance Imaging for AI Interpretability",
-    version="0.3.0",
+    version="1.0.0",
     lifespan=lifespan,
     default_response_class=ORJSONResponse,
 )
@@ -92,6 +92,6 @@ app.include_router(ws_collab_router, tags=["websocket"])
 async def root():
     return {
         "name": "Neural MRI Scanner",
-        "version": "0.3.0",
+        "version": "1.0.0",
         "description": "Model Resonance Imaging for AI Interpretability",
     }
