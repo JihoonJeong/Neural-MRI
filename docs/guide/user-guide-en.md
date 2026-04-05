@@ -2,6 +2,8 @@
 
 > Visualize what's happening inside language models, like a brain MRI for AI.
 
+![Neural MRI Landing](screenshots/01-landing.png)
+
 ---
 
 ## Table of Contents
@@ -99,6 +101,8 @@ Shows the static structure of the model: layers, parameter counts, connections.
 
 **Example insight:** "GPT-2 has 12 transformer blocks, each with 12 attention heads and a 3072-wide MLP."
 
+![T1 Structural Scan](screenshots/02-t1-structural.png)
+
 ### T2 — Tensor (Weights)
 
 Displays weight distribution statistics and histograms for each parameter matrix.
@@ -132,6 +136,8 @@ Shows how the model's internal activations change for each token in your prompt.
 
 **Example insight:** "When processing the token 'Paris', layers 8–11 show much higher activation than earlier layers — the model is retrieving factual knowledge."
 
+![fMRI Activation Scan](screenshots/03-fmri-scan.png)
+
 ### DTI — Circuits (Information Flow)
 
 Traces which components are most important for predicting the next token.
@@ -148,6 +154,8 @@ Traces which components are most important for predicting the next token.
 - Pathways with importance > 0.3 are highlighted
 
 **Example insight:** "For 'The capital of France is ___', blocks 9-10 MLP are the most critical — ablating them completely changes the prediction from 'Paris' to random tokens."
+
+![DTI Circuit Scan](screenshots/05-dti-circuits.png)
 
 ### FLAIR — Anomaly Detection
 
@@ -166,6 +174,8 @@ Detects unusual patterns using Logit Lens (intermediate predictions) and entropy
 - **Logit Lens**: Top-5 predicted tokens at each layer
 
 **Example insight:** "At layer 3, the model thinks the answer is 'London', but by layer 8 it shifts to 'Paris'. The early-layer disagreement shows up as a high anomaly score."
+
+![FLAIR Anomaly Scan](screenshots/06-flair-anomaly.png)
 
 ---
 
@@ -190,6 +200,8 @@ Neural MRI can extract and manipulate emotion representations inside the model.
    - Negative (-): suppress the emotion
    - Range: -0.20 to +0.20
 4. Click **STEER**
+
+![Emotion Steering Result](screenshots/11-emotion-steered.png)
 
 ### Step 3: Read Results
 
@@ -281,6 +293,8 @@ Sparse Autoencoders decompose model activations into interpretable features.
 | Gemma-2-2B | SAELens | 0–25 |
 | Llama 3.1 8B | EleutherAI | 23, 29 (MLP) |
 | Llama 3 8B | EleutherAI | 0–31 |
+
+![SAE Features Decoded](screenshots/09-sae-decoded.png)
 
 ### What the heatmap shows:
 

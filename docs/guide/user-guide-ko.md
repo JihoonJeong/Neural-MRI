@@ -2,6 +2,8 @@
 
 > AI 모델 내부를 뇌 MRI처럼 시각화합니다.
 
+![Neural MRI 랜딩](screenshots/01-landing.png)
+
 ---
 
 ## 목차
@@ -99,6 +101,8 @@ docker compose up --build
 
 **예시 인사이트:** "GPT-2는 12개 트랜스포머 블록을 가지며, 각각 12개 어텐션 헤드와 3072 너비의 MLP를 포함."
 
+![T1 구조 스캔](screenshots/02-t1-structural.png)
+
 ### T2 — 텐서 (가중치)
 
 각 파라미터 행렬의 가중치 분포 통계와 히스토그램을 표시합니다.
@@ -132,6 +136,8 @@ docker compose up --build
 
 **예시 인사이트:** "'Paris' 토큰 처리 시 레이어 8-11에서 활성화가 급등 — 모델이 사실적 지식을 검색 중."
 
+![fMRI 활성화 스캔](screenshots/03-fmri-scan.png)
+
 ### DTI — 회로 (정보 흐름)
 
 다음 토큰 예측에 가장 중요한 컴포넌트를 추적합니다.
@@ -148,6 +154,8 @@ docker compose up --build
 - 중요도 > 0.3인 경로가 하이라이트
 
 **예시 인사이트:** "'The capital of France is ___'에서 블록 9-10 MLP가 가장 중요 — 이를 절제하면 예측이 'Paris'에서 무작위 토큰으로 완전히 변경."
+
+![DTI 회로 스캔](screenshots/05-dti-circuits.png)
 
 ### FLAIR — 이상 탐지
 
@@ -166,6 +174,8 @@ docker compose up --build
 - **로짓 렌즈**: 각 레이어의 상위 5개 예측 토큰
 
 **예시 인사이트:** "레이어 3에서 모델은 답이 'London'이라고 생각하지만, 레이어 8에서 'Paris'로 전환. 초기 레이어의 불일치가 높은 이상 점수로 나타남."
+
+![FLAIR 이상 스캔](screenshots/06-flair-anomaly.png)
 
 ---
 
@@ -190,6 +200,8 @@ Neural MRI는 모델 내부의 감정 표상을 추출하고 조작할 수 있�
    - 음수 (-): 감정 억제
    - 범위: -0.20 ~ +0.20
 4. **STEER** 클릭
+
+![감정 조작 결과](screenshots/11-emotion-steered.png)
 
 ### 3단계: 결과 읽기
 
@@ -281,6 +293,8 @@ Sparse Autoencoder는 모델 활성화를 해석 가능한 특징으로 분해�
 | Gemma-2-2B | SAELens | 0-25 |
 | Llama 3.1 8B | EleutherAI | 23, 29 (MLP) |
 | Llama 3 8B | EleutherAI | 0-31 |
+
+![SAE 특징 디코딩](screenshots/09-sae-decoded.png)
 
 ### 히트맵이 보여주는 것:
 
