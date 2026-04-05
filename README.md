@@ -80,19 +80,21 @@ Open http://localhost
 
 ## Supported Models
 
-| Model | Parameters | SAE | Notes |
-|-------|-----------|-----|-------|
-| GPT-2 | 124M | SAELens | Default |
-| GPT-2 Medium | 355M | — | Built-in |
-| Pythia-1.4B | 1.4B | — | Built-in |
-| Llama-3.2-3B | 3B | — | Gated (requires HF token) |
-| Llama-3.1-8B | 8B | EleutherAI | Gated — SAE on layers 23, 29 (MLP) |
-| Llama-3-8B | 8B | EleutherAI | Gated — SAE on all 32 layers |
-| Qwen-2.5-3B | 3B | — | Built-in |
-| Mistral-7B | 7.2B | — | Gated |
-| Phi-3 Mini | 3.8B | — | Built-in |
+| Model | Params | SAE | 8GB | 12GB | 16GB+ | Mac MPS |
+|-------|--------|-----|-----|------|-------|---------|
+| GPT-2 | 124M | SAELens | All | All | All | All |
+| GPT-2 Medium | 355M | — | All | All | All | All |
+| Pythia-1.4B | 1.4B | — | All | All | All | All |
+| Gemma-2-2B | 2.6B | SAELens | Scan | All | All | All |
+| Llama-3.2-3B | 3B | — | Scan | Scan | All | Scan |
+| Qwen-2.5-3B | 3B | — | Scan | Scan | All | Scan |
+| Phi-3 Mini | 3.8B | — | — | Scan | All | Scan |
+| Llama-3.1-8B | 8B | EleutherAI | — | — | — | — |
+| Mistral-7B | 7.2B | — | — | — | — | — |
 
-> **Note:** Gemma-2-2B is currently disabled due to a TransformerLens segfault. Gemma-3-1B-PT works.
+> **All** = scan + SAE + emotion steering. **Scan** = model loads, scans work, steering may OOM. **—** = cannot load.
+>
+> 7B+ models require 24GB+ VRAM (fp16). See [Hardware Requirements](docs/hardware-requirements.md) for details.
 
 Additional models can be loaded dynamically via **HuggingFace Hub search** — any model with a TransformerLens-compatible architecture works.
 
