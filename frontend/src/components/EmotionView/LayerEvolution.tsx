@@ -45,7 +45,7 @@ export function LayerEvolution({ prompt }: { prompt: string }) {
         <LayerCanvas data={layerEvoResult} svgRef={svgRef} selectedEmotion={selectedEmotion} />
       ) : (
         <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--text-secondary)', padding: '20px 0', textAlign: 'center' }}>
-          Click ANALYZE to see how emotions evolve across layers
+          Shows how emotion activations change from early (sensory) to late (action) layers — click ANALYZE
         </div>
       )}
     </div>

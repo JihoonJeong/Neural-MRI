@@ -13,6 +13,7 @@ const ACCENT = '#e879a0';
 
 export function EmotionView() {
   const isLoaded = useModelStore((s) => s.modelInfo !== null);
+  const modelId = useModelStore((s) => s.modelInfo?.model_id);
   const prompt = useScanStore((s) => s.prompt);
   const {
     probeResult,
@@ -24,6 +25,11 @@ export function EmotionView() {
 
   const error = useEmotionStore((s) => s.error);
   const hasProbes = probeResult !== null;
+
+  // Reset probes when model changes
+  useEffect(() => {
+    useEmotionStore.getState().reset();
+  }, [modelId]);
 
   // Auto-extract probes when entering emotion tab with a loaded model
   // Stop retrying if there's an error

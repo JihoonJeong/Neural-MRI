@@ -39,7 +39,11 @@ export function TranscriptHeatmap({ prompt }: { prompt: string }) {
         <HeatmapCanvas data={projectResult} svgRef={svgRef} />
       ) : (
         <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--text-secondary)', padding: '20px 0', textAlign: 'center' }}>
-          {!hasProbes ? 'Extract probes first' : 'Click PROJECT to visualize emotion activations across tokens'}
+          {!hasProbes
+            ? 'Extract probes first'
+            : !prompt
+              ? 'Enter a prompt above, then click PROJECT'
+              : 'Enter a prompt above, then click PROJECT to visualize emotion activations across tokens'}
         </div>
       )}
     </div>

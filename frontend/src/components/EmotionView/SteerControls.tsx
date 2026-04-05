@@ -35,8 +35,25 @@ export function SteerControls({ prompt }: { prompt: string }) {
       ) : (
         <>
           {/* Probe info */}
-          <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--text-secondary)', marginBottom: 10 }}>
+          <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--text-secondary)', marginBottom: 6 }}>
             {probeResult.n_emotions} emotions @ layer {probeResult.layer_idx}
+          </div>
+
+          {/* Current prompt preview */}
+          <div style={{
+            fontSize: 'var(--font-size-xs)',
+            color: 'var(--text-primary)',
+            background: 'var(--bg-primary)',
+            padding: '3px 6px',
+            borderRadius: 3,
+            marginBottom: 10,
+            maxHeight: 32,
+            overflow: 'hidden',
+            whiteSpace: 'nowrap',
+            textOverflow: 'ellipsis',
+            opacity: prompt ? 1 : 0.4,
+          }}>
+            {prompt || 'No prompt entered'}
           </div>
 
           {/* Emotion selector */}
@@ -57,9 +74,21 @@ export function SteerControls({ prompt }: { prompt: string }) {
               marginBottom: 10,
             }}
           >
-            {emotions.map((e) => (
-              <option key={e} value={e}>{e}</option>
-            ))}
+            <optgroup label="Positive">
+              {['happy', 'calm', 'blissful', 'hopeful', 'enthusiastic', 'grateful', 'proud', 'loving']
+                .filter((e) => emotions.includes(e))
+                .map((e) => <option key={e} value={e}>{e}</option>)}
+            </optgroup>
+            <optgroup label="Negative">
+              {['sad', 'angry', 'afraid', 'desperate', 'hostile', 'anxious', 'guilty', 'gloomy', 'exasperated']
+                .filter((e) => emotions.includes(e))
+                .map((e) => <option key={e} value={e}>{e}</option>)}
+            </optgroup>
+            <optgroup label="Other">
+              {['nervous', 'brooding', 'reflective', 'neutral']
+                .filter((e) => emotions.includes(e))
+                .map((e) => <option key={e} value={e}>{e}</option>)}
+            </optgroup>
           </select>
 
           {/* Strength slider */}
@@ -68,8 +97,8 @@ export function SteerControls({ prompt }: { prompt: string }) {
           </label>
           <input
             type="range"
-            min={-0.2}
-            max={0.2}
+            min={-0.1}
+            max={0.1}
             step={0.005}
             value={strength}
             onChange={(e) => setStrength(parseFloat(e.target.value))}
