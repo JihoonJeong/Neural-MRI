@@ -19,13 +19,18 @@ from pathlib import Path
 import torch
 
 from neural_mri.core.model_manager import ModelManager
+from neural_mri.core.sae_manager import SAEManager
+from neural_mri.core.sae_registry import get_sae_info
 from neural_mri.schemas.emotion import (
     EmotionActivation,
     ExtractProbesRequest,
     ExtractProbesResponse,
+    SAEFeatureDiff,
     SteerComparison,
     SteerRequest,
     SteerResponse,
+    SteerSAERequest,
+    SteerSAEResponse,
 )
 
 logger = logging.getLogger(__name__)
@@ -306,6 +311,150 @@ class EmotionEngine:
                 "probe_layer": probe_layer,
                 "n_steer_layers": len(steer_layers),
                 "max_new_tokens": req.max_new_tokens,
+                "compute_time_ms": round(elapsed_ms, 1),
+            },
+        )
+
+    # ------------------------------------------------------------------ #
+    # Steer + SAE Combined
+    # ------------------------------------------------------------------ #
+
+    def steer_sae(self, req: SteerSAERequest, sae_mgr: SAEManager) -> SteerSAEResponse:
+        """Run steering and capture SAE feature changes at the target layer."""
+        start = time.time()
+        model = self._mm.get_model()
+        model_id = self._mm.model_id
+        device = str(model.cfg.device)
+        n_layers = model.cfg.n_layers
+
+        # Ensure probes exist
+        probe_layer = n_layers * 2 // 3
+        probes = self._get_cached_probes(model_id, probe_layer)
+        if probes is None:
+            self.extract_probes(ExtractProbesRequest(layer_idx=probe_layer))
+            probes = self._get_cached_probes(model_id, probe_layer)
+
+        if req.emotion not in probes:
+            available = sorted(probes.keys())
+            raise ValueError(f"Emotion '{req.emotion}' not found. Available: {available}")
+
+        # SAE setup
+        sae_info = get_sae_info(model_id)
+        if sae_info is None:
+            raise ValueError(f"No SAE available for model: {model_id}")
+
+        sae_layer = req.sae_layer_idx if req.sae_layer_idx is not None else probe_layer
+        if sae_layer not in sae_info["layers"]:
+            sae_layer = sae_info["layers"][len(sae_info["layers"]) // 2]
+
+        provider = sae_mgr.get_provider(model_id, sae_layer, device)
+        sae_hook = provider.hook_name
+
+        # Steering setup
+        emotion_vec = probes[req.emotion]
+        steer_dir = emotion_vec / (emotion_vec.norm() + 1e-8)
+
+        if req.layer_range is not None:
+            steer_layers = req.layer_range
+        else:
+            steer_layers = list(range(n_layers))
+
+        steer_hook_names = [f"blocks.{layer}.hook_resid_post" for layer in steer_layers]
+
+        tokens = model.to_tokens(req.prompt)
+
+        def steering_hook(value, hook):
+            resid_norm = value.norm(dim=-1, keepdim=True).mean()
+            scaled_dir = steer_dir.to(value.device, value.dtype) * req.strength * resid_norm
+            return value + scaled_dir
+
+        with torch.no_grad():
+            # --- (1) Original: plain forward pass + SAE encode ---
+            _, orig_cache = model.run_with_cache(tokens)
+            orig_acts = orig_cache[sae_hook]  # [1, seq_len, d_model]
+            orig_enc = provider.encode(orig_acts)
+
+            # --- (2) Steered: add hooks + forward pass + SAE encode ---
+            for name in steer_hook_names:
+                model.add_hook(name, steering_hook)
+            try:
+                _, steered_cache = model.run_with_cache(tokens)
+            finally:
+                model.reset_hooks()
+            steered_acts = steered_cache[sae_hook]
+            steered_enc = provider.encode(steered_acts)
+
+        # Compare at last prompt token
+        last_idx = tokens.shape[1] - 1
+        top_k = req.top_k
+
+        # Original top-k
+        orig_top_acts = orig_enc.top_acts[0, last_idx, :top_k]
+        orig_top_idxs = orig_enc.top_indices[0, last_idx, :top_k]
+        steered_top_acts = steered_enc.top_acts[0, last_idx, :top_k]
+        steered_top_idxs = steered_enc.top_indices[0, last_idx, :top_k]
+
+        # Build activation maps for both
+        orig_map: dict[int, float] = {}
+        for idx, act in zip(orig_top_idxs.tolist(), orig_top_acts.tolist()):
+            orig_map[idx] = act
+
+        steered_map: dict[int, float] = {}
+        for idx, act in zip(steered_top_idxs.tolist(), steered_top_acts.tolist()):
+            steered_map[idx] = act
+
+        # All features that appear in either top-k
+        all_features = sorted(set(orig_map.keys()) | set(steered_map.keys()))
+
+        # Build diff list
+        all_diffs: list[SAEFeatureDiff] = []
+        for feat_idx in all_features:
+            o = orig_map.get(feat_idx, 0.0)
+            s = steered_map.get(feat_idx, 0.0)
+            all_diffs.append(
+                SAEFeatureDiff(
+                    feature_idx=feat_idx,
+                    original_activation=round(o, 4),
+                    steered_activation=round(s, 4),
+                    diff=round(s - o, 4),
+                )
+            )
+
+        # Original top features (sorted by original activation)
+        original_top = sorted(all_diffs, key=lambda x: -x.original_activation)[:top_k]
+
+        # Steered top features (sorted by steered activation)
+        steered_top = sorted(all_diffs, key=lambda x: -x.steered_activation)[:top_k]
+
+        # Top changed features (sorted by absolute diff)
+        top_changed = sorted(all_diffs, key=lambda x: -abs(x.diff))[:top_k]
+
+        elapsed_ms = (time.time() - start) * 1000
+        logger.info(
+            "Steer+SAE: %s strength=%.3f, SAE layer %d, %d features compared, %.1fms",
+            req.emotion,
+            req.strength,
+            sae_layer,
+            len(all_diffs),
+            elapsed_ms,
+        )
+
+        return SteerSAEResponse(
+            model_id=model_id,
+            prompt=req.prompt,
+            emotion=req.emotion,
+            strength=req.strength,
+            sae_layer_idx=sae_layer,
+            sae_hook_name=sae_hook,
+            d_sae=provider.d_sae,
+            original_top_features=original_top,
+            steered_top_features=steered_top,
+            top_changed_features=top_changed,
+            metadata={
+                "probe_layer": probe_layer,
+                "n_steer_layers": len(steer_layers),
+                "n_features_compared": len(all_diffs),
+                "top_k": top_k,
                 "compute_time_ms": round(elapsed_ms, 1),
             },
         )
