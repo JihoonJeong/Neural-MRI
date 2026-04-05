@@ -19,6 +19,7 @@ import { BatteryDetailModal } from './components/BatteryDetailModal';
 import { BatteryPanel } from './components/Panels/BatteryPanel';
 import { SAEPanel } from './components/Panels/SAEPanel';
 import { EmotionPanel } from './components/Panels/EmotionPanel';
+import { EmotionView } from './components/EmotionView/EmotionView';
 import { CollabPanel } from './components/Panels/CollabPanel';
 import { CausalTracePanel } from './components/Panels/CausalTracePanel';
 import { AttentionPanel } from './components/Panels/AttentionPanel';
@@ -33,6 +34,7 @@ import { useScanStore } from './store/useScanStore';
 import { useCompareStore } from './store/useCompareStore';
 import { useCollabStore } from './store/useCollabStore';
 import { useRecordingStore } from './store/useRecordingStore';
+import { useEmotionStore } from './store/useEmotionStore';
 
 export default function App() {
   const fetchModelInfo = useModelStore((s) => s.fetchModelInfo);
@@ -40,6 +42,7 @@ export default function App() {
   const addLog = useScanStore((s) => s.addLog);
   const isCompareMode = useCompareStore((s) => s.isCompareMode);
   const isCrossModelMode = useCrossModelStore((s) => s.isCrossModelMode);
+  const emotionTabActive = useEmotionStore((s) => s.tabActive);
   const collabRole = useCollabStore((s) => s.role);
   const remoteScanState = useCollabStore((s) => s.remoteScanState);
   const joinSession = useCollabStore((s) => s.joinSession);
@@ -100,7 +103,18 @@ export default function App() {
       <ModeTabs />
 
       <div className="flex flex-1 overflow-hidden">
-        {/* Left: Main canvas area */}
+        {emotionTabActive ? (
+          /* EMO tab: full-width EmotionView with its own layout */
+          <main className="flex-1 flex flex-col">
+            <PromptInput />
+            <div className="flex-1" style={{ overflow: 'hidden' }}>
+              <EmotionView />
+            </div>
+            <LogPanel />
+          </main>
+        ) : (
+          /* Normal scan modes */
+          <>
         <main className="flex-1 flex flex-col">
           <DicomHeader />
           <div
@@ -162,6 +176,8 @@ export default function App() {
             <CollabPanel />
           </div>
         </aside>
+          </>
+        )}
       </div>
       <GuideModal />
       <ReportModal />

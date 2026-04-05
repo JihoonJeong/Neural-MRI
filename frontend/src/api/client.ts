@@ -159,6 +159,25 @@ export const api = {
           max_new_tokens: maxNewTokens,
         }),
       }),
+    project: (prompt: string, emotions?: string[]) =>
+      request<import('../types/emotion').ProjectResponse>('/emotion/project', {
+        method: 'POST',
+        body: JSON.stringify({ prompt, emotions: emotions ?? null }),
+      }),
+    pca: (layerIdx?: number) =>
+      request<import('../types/emotion').PCAResponse>(
+        `/emotion/pca${layerIdx != null ? `?layer_idx=${layerIdx}` : ''}`,
+      ),
+    sweep: (prompt: string, emotion: string, strengths?: number[]) =>
+      request<import('../types/emotion').SweepResponse>('/emotion/sweep', {
+        method: 'POST',
+        body: JSON.stringify({ prompt, emotion, strengths }),
+      }),
+    layerEvolution: (prompt: string, tokenIdx = -1) =>
+      request<import('../types/emotion').LayerEvolutionResponse>('/emotion/layer-evolution', {
+        method: 'POST',
+        body: JSON.stringify({ prompt, token_idx: tokenIdx }),
+      }),
   },
   sae: {
     info: () => request<SAEInfoResponse>('/sae/info'),

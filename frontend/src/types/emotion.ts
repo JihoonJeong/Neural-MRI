@@ -32,6 +32,70 @@ export interface SteerResponse {
   metadata: Record<string, unknown>;
 }
 
+// --- Token-level Projection ---
+
+export interface TokenEmotionProfile {
+  token_idx: number;
+  token_str: string;
+  activations: Record<string, number>;
+}
+
+export interface ProjectResponse {
+  model_id: string;
+  prompt: string;
+  layer_idx: number;
+  emotions: string[];
+  tokens: TokenEmotionProfile[];
+  metadata: Record<string, unknown>;
+}
+
+// --- PCA ---
+
+export interface PCAResponse {
+  model_id: string;
+  layer_idx: number;
+  emotions: string[];
+  pc1: number[];
+  pc2: number[];
+  variance_explained: number[];
+  metadata: Record<string, unknown>;
+}
+
+// --- Sweep ---
+
+export interface SweepPoint {
+  strength: number;
+  target_emotion_activation: number;
+  generated_text: string;
+}
+
+export interface SweepResponse {
+  model_id: string;
+  prompt: string;
+  emotion: string;
+  points: SweepPoint[];
+  metadata: Record<string, unknown>;
+}
+
+// --- Layer Evolution ---
+
+export interface LayerEmotionPoint {
+  layer_idx: number;
+  activations: Record<string, number>;
+}
+
+export interface LayerEvolutionResponse {
+  model_id: string;
+  prompt: string;
+  token_idx: number;
+  token_str: string;
+  emotions: string[];
+  layers: LayerEmotionPoint[];
+  metadata: Record<string, unknown>;
+}
+
+// --- List ---
+
 export interface EmotionListResponse {
   emotions: string[];
   n_emotions: number;
