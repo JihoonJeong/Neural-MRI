@@ -25,12 +25,22 @@ from neural_mri.schemas.emotion import (
     EmotionActivation,
     ExtractProbesRequest,
     ExtractProbesResponse,
+    LayerEmotionPoint,
+    LayerEvolutionRequest,
+    LayerEvolutionResponse,
+    PCAResponse,
+    ProjectRequest,
+    ProjectResponse,
     SAEFeatureDiff,
     SteerComparison,
     SteerRequest,
     SteerResponse,
     SteerSAERequest,
     SteerSAEResponse,
+    SweepPoint,
+    SweepRequest,
+    SweepResponse,
+    TokenEmotionProfile,
 )
 
 logger = logging.getLogger(__name__)
@@ -195,6 +205,245 @@ class EmotionEngine:
                 for e, v in results
             ],
             key=lambda x: -x.activation,
+        )
+
+    # ------------------------------------------------------------------ #
+    # Token-level Projection
+    # ------------------------------------------------------------------ #
+
+    def project(self, req: ProjectRequest) -> ProjectResponse:
+        """Project each token's residual stream onto all emotion vectors."""
+        start = time.time()
+        model = self._mm.get_model()
+        model_id = self._mm.model_id
+        layer_idx = self._resolve_layer(req.layer_idx)
+        hook_name = f"blocks.{layer_idx}.hook_resid_post"
+
+        # Ensure probes
+        probes = self._get_cached_probes(model_id, layer_idx)
+        if probes is None:
+            self.extract_probes(ExtractProbesRequest(layer_idx=layer_idx))
+            probes = self._get_cached_probes(model_id, layer_idx)
+
+        # Filter emotions if requested
+        emotions = req.emotions or sorted(probes.keys())
+        selected = {e: probes[e] for e in emotions if e in probes}
+
+        tokens = model.to_tokens(req.prompt)
+        str_tokens = model.to_str_tokens(req.prompt)
+
+        with torch.no_grad():
+            _, cache = model.run_with_cache(tokens)
+            resid = cache[hook_name][0].float()  # [seq_len, d_model]
+
+        # Normalize probe vectors once
+        norm_probes = {e: v / (v.norm() + 1e-8) for e, v in selected.items()}
+
+        token_profiles: list[TokenEmotionProfile] = []
+        for t_idx in range(resid.shape[0]):
+            act = resid[t_idx]
+            activations = {e: round(torch.dot(act, nv).item(), 4) for e, nv in norm_probes.items()}
+            token_profiles.append(
+                TokenEmotionProfile(
+                    token_idx=t_idx,
+                    token_str=str(str_tokens[t_idx]),
+                    activations=activations,
+                )
+            )
+
+        elapsed_ms = (time.time() - start) * 1000
+        return ProjectResponse(
+            model_id=model_id,
+            prompt=req.prompt,
+            layer_idx=layer_idx,
+            emotions=list(selected.keys()),
+            tokens=token_profiles,
+            metadata={"compute_time_ms": round(elapsed_ms, 1)},
+        )
+
+    # ------------------------------------------------------------------ #
+    # PCA
+    # ------------------------------------------------------------------ #
+
+    def pca(self, layer_idx: int | None = None) -> PCAResponse:
+        """Compute 2D PCA of emotion vectors (valence/arousal axes)."""
+        start = time.time()
+        self._mm.get_model()  # ensure loaded
+        model_id = self._mm.model_id
+        layer_idx = self._resolve_layer(layer_idx)
+
+        probes = self._get_cached_probes(model_id, layer_idx)
+        if probes is None:
+            self.extract_probes(ExtractProbesRequest(layer_idx=layer_idx))
+            probes = self._get_cached_probes(model_id, layer_idx)
+
+        emotions = sorted(probes.keys())
+        mat = torch.stack([probes[e] for e in emotions])  # [n_emotions, d_model]
+
+        # Center
+        mat_centered = mat - mat.mean(dim=0, keepdim=True)
+
+        # SVD for PCA
+        U, S, Vh = torch.linalg.svd(mat_centered, full_matrices=False)
+        total_var = (S**2).sum().item()
+        pc1_var = round((S[0] ** 2).item() / total_var, 4)
+        pc2_var = round((S[1] ** 2).item() / total_var, 4)
+
+        # Project onto first 2 PCs
+        proj = mat_centered @ Vh[:2].T  # [n_emotions, 2]
+
+        elapsed_ms = (time.time() - start) * 1000
+        return PCAResponse(
+            model_id=model_id,
+            layer_idx=layer_idx,
+            emotions=emotions,
+            pc1=[round(v, 4) for v in proj[:, 0].tolist()],
+            pc2=[round(v, 4) for v in proj[:, 1].tolist()],
+            variance_explained=[pc1_var, pc2_var],
+            metadata={"compute_time_ms": round(elapsed_ms, 1)},
+        )
+
+    # ------------------------------------------------------------------ #
+    # Strength Sweep
+    # ------------------------------------------------------------------ #
+
+    def sweep(self, req: SweepRequest) -> SweepResponse:
+        """Run steering at multiple strengths, return dose-response curve."""
+        start = time.time()
+        model = self._mm.get_model()
+        model_id = self._mm.model_id
+        n_layers = model.cfg.n_layers
+        probe_layer = n_layers * 2 // 3
+
+        probes = self._get_cached_probes(model_id, probe_layer)
+        if probes is None:
+            self.extract_probes(ExtractProbesRequest(layer_idx=probe_layer))
+            probes = self._get_cached_probes(model_id, probe_layer)
+
+        if req.emotion not in probes:
+            raise ValueError(f"Emotion '{req.emotion}' not found.")
+
+        emotion_vec = probes[req.emotion]
+        steer_dir = emotion_vec / (emotion_vec.norm() + 1e-8)
+        probe_vec_norm = emotion_vec / (emotion_vec.norm() + 1e-8)
+        probe_hook = f"blocks.{probe_layer}.hook_resid_post"
+        hook_names = [f"blocks.{i}.hook_resid_post" for i in range(n_layers)]
+        tokens = model.to_tokens(req.prompt)
+
+        points: list[SweepPoint] = []
+
+        for strength in req.strengths:
+
+            def make_hook(s):
+                def hook_fn(value, hook):
+                    resid_norm = value.norm(dim=-1, keepdim=True).mean()
+                    return value + steer_dir.to(value.device, value.dtype) * s * resid_norm
+
+                return hook_fn
+
+            with torch.no_grad():
+                if abs(strength) < 1e-9:
+                    # No steering
+                    output = model.generate(
+                        tokens, max_new_tokens=req.max_new_tokens, do_sample=False
+                    )
+                    _, cache = model.run_with_cache(tokens)
+                else:
+                    # Steered generation
+                    hook_fn = make_hook(strength)
+                    steered_ids = tokens.clone()
+                    for _ in range(req.max_new_tokens):
+                        logits = model.run_with_hooks(
+                            steered_ids,
+                            fwd_hooks=[(n, hook_fn) for n in hook_names],
+                        )
+                        next_tok = logits[0, -1].argmax(dim=-1, keepdim=True)
+                        steered_ids = torch.cat([steered_ids, next_tok.unsqueeze(0)], dim=-1)
+                        if next_tok.item() == model.tokenizer.eos_token_id:
+                            break
+                    output = steered_ids
+
+                    # Activation measurement
+                    for n in hook_names:
+                        model.add_hook(n, hook_fn)
+                    try:
+                        _, cache = model.run_with_cache(tokens)
+                    finally:
+                        model.reset_hooks()
+
+                text = model.tokenizer.decode(
+                    output[0, tokens.shape[1] :], skip_special_tokens=True
+                )
+                act = cache[probe_hook][0, -1].float()
+                target_act = torch.dot(act, probe_vec_norm).item()
+
+            points.append(
+                SweepPoint(
+                    strength=strength,
+                    target_emotion_activation=round(target_act, 4),
+                    generated_text=text,
+                )
+            )
+
+        elapsed_ms = (time.time() - start) * 1000
+        logger.info("Sweep: %s, %d strengths, %.1fms", req.emotion, len(req.strengths), elapsed_ms)
+
+        return SweepResponse(
+            model_id=model_id,
+            prompt=req.prompt,
+            emotion=req.emotion,
+            points=points,
+            metadata={"compute_time_ms": round(elapsed_ms, 1)},
+        )
+
+    # ------------------------------------------------------------------ #
+    # Layer Evolution
+    # ------------------------------------------------------------------ #
+
+    def layer_evolution(self, req: LayerEvolutionRequest) -> LayerEvolutionResponse:
+        """Measure emotion activations across all layers at a specific token."""
+        start = time.time()
+        model = self._mm.get_model()
+        model_id = self._mm.model_id
+        n_layers = model.cfg.n_layers
+
+        # Need probes at every layer — extract at default layer first for the vectors
+        default_layer = n_layers * 2 // 3
+        probes = self._get_cached_probes(model_id, default_layer)
+        if probes is None:
+            self.extract_probes(ExtractProbesRequest(layer_idx=default_layer))
+            probes = self._get_cached_probes(model_id, default_layer)
+
+        emotions = req.emotions or sorted(probes.keys())
+        # Note: we reuse the same probe directions across layers. This is an approximation
+        # (Anthropic found structure is stable across mid-to-late layers).
+        selected = {e: probes[e] / (probes[e].norm() + 1e-8) for e in emotions if e in probes}
+
+        tokens = model.to_tokens(req.prompt)
+        str_tokens = model.to_str_tokens(req.prompt)
+        seq_len = tokens.shape[1]
+        t_idx = req.token_idx if req.token_idx >= 0 else seq_len - 1
+        t_idx = min(t_idx, seq_len - 1)
+
+        with torch.no_grad():
+            _, cache = model.run_with_cache(tokens)
+
+        layers: list[LayerEmotionPoint] = []
+        for i in range(n_layers):
+            hook = f"blocks.{i}.hook_resid_post"
+            act = cache[hook][0, t_idx].float()
+            activations = {e: round(torch.dot(act, nv).item(), 4) for e, nv in selected.items()}
+            layers.append(LayerEmotionPoint(layer_idx=i, activations=activations))
+
+        elapsed_ms = (time.time() - start) * 1000
+        return LayerEvolutionResponse(
+            model_id=model_id,
+            prompt=req.prompt,
+            token_idx=t_idx,
+            token_str=str(str_tokens[t_idx]),
+            emotions=list(selected.keys()),
+            layers=layers,
+            metadata={"compute_time_ms": round(elapsed_ms, 1)},
         )
 
     # ------------------------------------------------------------------ #

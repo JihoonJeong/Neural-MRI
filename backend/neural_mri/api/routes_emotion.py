@@ -10,10 +10,17 @@ from neural_mri.core.sae_manager import SAEManager
 from neural_mri.schemas.emotion import (
     ExtractProbesRequest,
     ExtractProbesResponse,
+    LayerEvolutionRequest,
+    LayerEvolutionResponse,
+    PCAResponse,
+    ProjectRequest,
+    ProjectResponse,
     SteerRequest,
     SteerResponse,
     SteerSAERequest,
     SteerSAEResponse,
+    SweepRequest,
+    SweepResponse,
 )
 
 router = APIRouter()
@@ -64,6 +71,50 @@ async def steer(
     """Run prompt with emotion vector steering and compare outputs."""
     _require_model(mm)
     return await asyncio.to_thread(engine.steer, req)
+
+
+@router.post("/project", response_model=ProjectResponse)
+async def project(
+    req: ProjectRequest,
+    mm: ModelManager = Depends(get_model_manager),
+    engine: EmotionEngine = Depends(get_emotion_engine),
+) -> ProjectResponse:
+    """Project each token's activation onto emotion vectors (heatmap data)."""
+    _require_model(mm)
+    return await asyncio.to_thread(engine.project, req)
+
+
+@router.get("/pca", response_model=PCAResponse)
+async def pca(
+    layer_idx: int | None = None,
+    mm: ModelManager = Depends(get_model_manager),
+    engine: EmotionEngine = Depends(get_emotion_engine),
+) -> PCAResponse:
+    """Compute 2D PCA of emotion vectors (valence/arousal axes)."""
+    _require_model(mm)
+    return await asyncio.to_thread(engine.pca, layer_idx)
+
+
+@router.post("/sweep", response_model=SweepResponse)
+async def sweep(
+    req: SweepRequest,
+    mm: ModelManager = Depends(get_model_manager),
+    engine: EmotionEngine = Depends(get_emotion_engine),
+) -> SweepResponse:
+    """Run steering at multiple strengths for dose-response curve."""
+    _require_model(mm)
+    return await asyncio.to_thread(engine.sweep, req)
+
+
+@router.post("/layer-evolution", response_model=LayerEvolutionResponse)
+async def layer_evolution(
+    req: LayerEvolutionRequest,
+    mm: ModelManager = Depends(get_model_manager),
+    engine: EmotionEngine = Depends(get_emotion_engine),
+) -> LayerEvolutionResponse:
+    """Measure emotion activations across all layers at a specific token."""
+    _require_model(mm)
+    return await asyncio.to_thread(engine.layer_evolution, req)
 
 
 @router.post("/steer-sae", response_model=SteerSAEResponse)

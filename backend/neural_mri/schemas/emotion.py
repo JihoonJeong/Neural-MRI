@@ -65,6 +65,96 @@ class SteerResponse(BaseModel):
 # --- Steer + SAE ---
 
 
+# --- Token-level Emotion Projection ---
+
+
+class ProjectRequest(BaseModel):
+    prompt: str
+    layer_idx: int | None = None
+    emotions: list[str] | None = None  # None = all
+
+
+class TokenEmotionProfile(BaseModel):
+    token_idx: int
+    token_str: str
+    activations: dict[str, float]  # {emotion: dot_product}
+
+
+class ProjectResponse(BaseModel):
+    model_id: str
+    prompt: str
+    layer_idx: int
+    emotions: list[str]
+    tokens: list[TokenEmotionProfile]
+    metadata: dict
+
+
+# --- PCA ---
+
+
+class PCAResponse(BaseModel):
+    model_id: str
+    layer_idx: int
+    emotions: list[str]
+    pc1: list[float]  # per emotion
+    pc2: list[float]
+    variance_explained: list[float]  # [pc1_var, pc2_var]
+    metadata: dict
+
+
+# --- Strength Sweep ---
+
+
+class SweepRequest(BaseModel):
+    prompt: str
+    emotion: str
+    strengths: list[float] = Field(
+        default=[-0.08, -0.05, -0.03, -0.01, 0.0, 0.01, 0.03, 0.05, 0.08]
+    )
+    max_new_tokens: int = Field(default=30, ge=1, le=100)
+
+
+class SweepPoint(BaseModel):
+    strength: float
+    target_emotion_activation: float
+    generated_text: str
+
+
+class SweepResponse(BaseModel):
+    model_id: str
+    prompt: str
+    emotion: str
+    points: list[SweepPoint]
+    metadata: dict
+
+
+# --- Layer Evolution ---
+
+
+class LayerEvolutionRequest(BaseModel):
+    prompt: str
+    emotions: list[str] | None = None  # None = all
+    token_idx: int = -1  # -1 = last token
+
+
+class LayerEmotionPoint(BaseModel):
+    layer_idx: int
+    activations: dict[str, float]
+
+
+class LayerEvolutionResponse(BaseModel):
+    model_id: str
+    prompt: str
+    token_idx: int
+    token_str: str
+    emotions: list[str]
+    layers: list[LayerEmotionPoint]
+    metadata: dict
+
+
+# --- Steer + SAE ---
+
+
 class SteerSAERequest(BaseModel):
     prompt: str
     emotion: str
