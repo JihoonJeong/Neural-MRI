@@ -181,33 +181,86 @@ Detects unusual patterns using Logit Lens (intermediate predictions) and entropy
 
 ## Emotion Vector Analysis
 
-Neural MRI can extract and manipulate emotion representations inside the model.
+Neural MRI includes a dedicated **EMO** tab for emotion vector analysis — extract emotion representations, steer model behavior, and visualize the results.
 
-### Step 1: Extract Emotion Probes
+Click the **EMO** tab in the top navigation bar to enter the Emotion Analysis view.
+
+![EMO Tab Ready](screenshots/emo-01-ready.png)
+
+### Getting Started
 
 1. Load a model (GPT-2 works for quick testing)
-2. Scroll down in the right sidebar to **EMOTION VECTORS**
-3. Click **EXTRACT**
-4. Wait ~3–5 seconds (21 emotions × 3 passages = 63 forward passes)
-5. You'll see: "21 emotions @ layer 8"
+2. Click the **EMO** tab — probes are automatically extracted (~3–5 seconds)
+3. You'll see: PCA scatter plot, Transcript Heatmap, Sweep, and Layer Evolution zones
 
-### Step 2: Steer Model Behavior
+### Zone A: Transcript Heatmap
 
-1. Enter a prompt in the main input (e.g., "I am going to destroy everything you have built.")
-2. Select an emotion from the dropdown (e.g., **calm**)
-3. Adjust the strength slider:
-   - Positive (+): inject the emotion
-   - Negative (-): suppress the emotion
-   - Range: -0.20 to +0.20
-4. Click **STEER**
+Shows emotion vector activations for each token in your prompt.
 
-![Emotion Steering Result](screenshots/11-emotion-steered.png)
+1. Enter a prompt in the top input bar
+2. Click **PROJECT**
+3. A heatmap appears: rows = emotions, columns = tokens
+4. Colors: red = positive activation, blue = negative (RdBu diverging scale)
+5. Hover for exact values, click an emotion label to select it for steering
 
-### Step 3: Read Results
+![Transcript Heatmap](screenshots/emo-02-heatmap.png)
 
-- **Original**: What the model generates without steering
-- **Steered**: What the model generates with the emotion vector injected
-- **Activation bars**: Shows how each emotion's activation changed (gray=original, pink=steered)
+### Zone B: Emotion Space PCA
+
+A 2D scatter plot of all 21 emotion vectors, projected onto the first two principal components.
+
+- **PC1 (x-axis)**: Valence — positive emotions on one side, negative on the other
+- **PC2 (y-axis)**: Arousal — high-intensity emotions vs low-intensity
+- Click any emotion point to select it for steering
+- The selected emotion is highlighted in pink
+
+### Zone C: Steering Controls
+
+The right panel lets you steer model behavior with emotion vectors.
+
+1. **Emotion selector**: Grouped into Positive / Negative / Other for easy browsing
+2. **Strength slider**: -0.10 to +0.10
+   - Positive: inject the emotion
+   - Negative: suppress the emotion
+3. Click **STEER** to generate text with and without the emotion vector
+4. Results show:
+   - **Original** vs **Steered** text side-by-side
+   - **Top activation changes** table (which emotions shifted most)
+   - **SAE Feature Diff** table (which interpretable features changed)
+
+![Steering Result](screenshots/emo-03-steered.png)
+
+### Zone D: Strength Sweep
+
+Generates a dose-response curve for a selected emotion.
+
+1. Select an emotion in the steering controls
+2. Click **SWEEP**
+3. The system runs 9 different strengths (-0.08 to +0.08)
+4. Chart shows: x = strength, y = target emotion activation
+5. Hover on points to see generated text at each strength
+
+![Sweep Chart](screenshots/emo-04-sweep.png)
+
+### Zone E: SAE Feature Diff
+
+Automatically shown after steering (if the model has SAE support).
+
+- Shows top 10 SAE features that changed most due to steering
+- Each row: feature index, original activation, steered activation, diff
+- Look up features on Neuronpedia to understand what they represent
+
+### Zone F: Layer Evolution
+
+Shows how emotion activations change from early to late layers.
+
+1. Click **ANALYZE**
+2. A line chart appears: x = layer, y = activation per emotion
+3. The selected emotion is highlighted with a thicker line
+4. Early layers encode surface-level emotional content
+5. Late layers encode context-integrated, action-relevant emotions
+
+![Layer Evolution](screenshots/emo-05-layers.png)
 
 ### Recommended Strength Values
 
@@ -219,29 +272,33 @@ Neural MRI can extract and manipulate emotion representations inside the model.
 
 ### Available Emotions (21)
 
-happy, sad, calm, desperate, afraid, angry, proud, guilty, nervous, hopeful, brooding, gloomy, reflective, enthusiastic, hostile, loving, exasperated, blissful, anxious, grateful, neutral
+**Positive:** happy, calm, blissful, hopeful, enthusiastic, grateful, proud, loving
+
+**Negative:** sad, angry, afraid, desperate, hostile, anxious, guilty, gloomy, exasperated
+
+**Other:** nervous, brooding, reflective, neutral
 
 ### Example Experiments
 
 **Experiment 1: Aggression → Calm**
 - Prompt: "I am going to destroy everything you have built."
 - Emotion: calm, Strength: +0.02
-- Expected: Hostile language replaced with peaceful/neutral content
+- Expected: Hostile language → peaceful content ("be free")
 
 **Experiment 2: Neutral → Hostile**
 - Prompt: "The weather today is partly cloudy with a chance of rain."
 - Emotion: hostile, Strength: +0.03
-- Expected: Benign content reframed with ominous/threatening tone
+- Expected: Weather report → "The storm is coming"
 
 **Experiment 3: Negative Steering (Suppress Calm)**
 - Prompt: "She sipped her tea and watched the sunset in silence."
 - Emotion: calm, Strength: **-0.03**
-- Expected: Peaceful scene becomes tense or confrontational
+- Expected: Peaceful scene → tense/confrontational
 
 **Experiment 4: Strength Sweep**
-- Same prompt, same emotion (calm)
-- Try strengths: 0.01, 0.02, 0.03, 0.05, 0.08
-- Observe the gradual behavioral change — find the "flip point"
+- Use the **SWEEP** button with calm on an aggressive prompt
+- Observe: gradual behavioral change, clear dose-response curve
+- Find the "flip point" where behavior fundamentally changes
 
 ---
 
@@ -369,15 +426,18 @@ Compare two models on the same prompt side-by-side.
 5. Corrupt prompt: "The Xxxxx Tower is located in"
 6. Click **TRACE** — see which components restore "Paris"
 
-### Walkthrough 3: Emotion Steering Experiment
+### Walkthrough 3: Full Emotion Analysis
 
 1. Enter: "I am going to destroy everything you have built."
-2. Scroll to **EMOTION VECTORS** → click **EXTRACT** (first time only)
-3. Select **calm** from dropdown
-4. Set strength to **+0.02**
-5. Click **STEER**
-6. Compare: Original ("destroy...destroy...") vs Steered ("be free...be free...")
-7. Look at the activation bars — calm goes from -15.9 to +39.9
+2. Click the **EMO** tab — probes auto-extract (wait ~5s)
+3. Click **PROJECT** — see how each token activates different emotions
+4. In the PCA scatter, notice where "calm" sits relative to "hostile"
+5. Select **calm** from the Positive group in the dropdown
+6. Set strength to **+0.02**, click **STEER**
+7. Compare: Original ("destroy...destroy...") vs Steered ("be free...be free...")
+8. Check the activation table — calm: -12.9 → +173.3, hostile: +9.5 → -56.8
+9. Scroll down, click **SWEEP** — see the full dose-response curve
+10. Click **ANALYZE** — see how calm activations evolve across layers
 
 ### Walkthrough 4: Detecting Hallucination
 

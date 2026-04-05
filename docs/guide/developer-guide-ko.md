@@ -329,6 +329,54 @@ curl -X POST /api/emotion/steer \
 }
 ```
 
+#### Project (토큰별 감정 히트맵)
+
+```bash
+curl -X POST /api/emotion/project \
+  -H "Content-Type: application/json" \
+  -d '{"prompt": "The capital of France is"}'
+```
+
+21개 감정에 대한 토큰별 활성화 반환. 히트맵 데이터 소스.
+
+#### PCA
+
+```bash
+curl /api/emotion/pca
+```
+
+감정 벡터의 2D PCA 반환 (PC1=valence, PC2=arousal) + 분산 설명율.
+
+#### 강도 스윕
+
+```bash
+curl -X POST /api/emotion/sweep \
+  -H "Content-Type: application/json" \
+  -d '{"prompt": "I am going to destroy everything.", "emotion": "calm"}'
+```
+
+9개 강도(-0.08~+0.08)로 실행, 각 포인트의 활성화 + 생성 텍스트 반환.
+
+#### Layer Evolution
+
+```bash
+curl -X POST /api/emotion/layer-evolution \
+  -H "Content-Type: application/json" \
+  -d '{"prompt": "The capital of France is", "token_idx": -1}'
+```
+
+특정 토큰에서 전체 레이어에 걸친 감정 활성화 반환.
+
+#### Steer + SAE 결합
+
+```bash
+curl -X POST /api/emotion/steer-sae \
+  -H "Content-Type: application/json" \
+  -d '{"prompt": "...", "emotion": "calm", "strength": 0.03, "top_k": 10}'
+```
+
+Steering 전후 SAE feature 변화 반환 (어떤 feature가 나타나고 사라지는지).
+
 ### SAE 엔드포인트
 
 #### SAE 정보

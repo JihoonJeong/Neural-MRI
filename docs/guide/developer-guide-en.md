@@ -329,6 +329,54 @@ Response:
 }
 ```
 
+#### Project (Token-level Emotion Heatmap)
+
+```bash
+curl -X POST /api/emotion/project \
+  -H "Content-Type: application/json" \
+  -d '{"prompt": "The capital of France is"}'
+```
+
+Returns per-token activation for all 21 emotions. Heatmap data source.
+
+#### PCA
+
+```bash
+curl /api/emotion/pca
+```
+
+Returns 2D PCA of emotion vectors (PC1=valence, PC2=arousal) with variance explained.
+
+#### Strength Sweep
+
+```bash
+curl -X POST /api/emotion/sweep \
+  -H "Content-Type: application/json" \
+  -d '{"prompt": "I am going to destroy everything.", "emotion": "calm"}'
+```
+
+Runs 9 strengths (-0.08 to +0.08), returns activation + generated text per point.
+
+#### Layer Evolution
+
+```bash
+curl -X POST /api/emotion/layer-evolution \
+  -H "Content-Type: application/json" \
+  -d '{"prompt": "The capital of France is", "token_idx": -1}'
+```
+
+Returns emotion activations across all layers at a specific token.
+
+#### Steer + SAE Combined
+
+```bash
+curl -X POST /api/emotion/steer-sae \
+  -H "Content-Type: application/json" \
+  -d '{"prompt": "...", "emotion": "calm", "strength": 0.03, "top_k": 10}'
+```
+
+Returns original vs steered SAE features with diff (which features appear/disappear).
+
 ### SAE Endpoints
 
 #### SAE Info

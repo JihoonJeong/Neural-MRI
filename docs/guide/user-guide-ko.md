@@ -181,33 +181,86 @@ docker compose up --build
 
 ## 감정 벡터 분석
 
-Neural MRI는 모델 내부의 감정 표상을 추출하고 조작할 수 있습니다.
+Neural MRI에는 감정 벡터 분석을 위한 전용 **EMO** 탭이 있습니다 — 감정 표상 추출, 모델 행동 조작, 결과 시각화를 한 화면에서 수행합니다.
 
-### 1단계: 감정 프로브 추출
+상단 네비게이션 바에서 **EMO** 탭을 클릭하면 감정 분석 뷰로 진입합니다.
+
+![EMO 탭 준비](screenshots/emo-01-ready.png)
+
+### 시작하기
 
 1. 모델 로드 (GPT-2로 빠른 테스트 가능)
-2. 우측 사이드바에서 **감정 벡터** 패널로 스크롤
-3. **EXTRACT** 클릭
-4. ~3-5초 대기 (21개 감정 × 3문장 = 63회 순전파)
-5. "21 emotions @ layer 8" 표시 확인
+2. **EMO** 탭 클릭 — 프로브가 자동 추출됩니다 (~3-5초)
+3. PCA scatter, Transcript Heatmap, Sweep, Layer Evolution 영역이 표시됩니다
 
-### 2단계: 모델 행동 조작
+### Zone A: Transcript Heatmap
 
-1. 메인 입력에 프롬프트 입력 (예: "I am going to destroy everything you have built.")
-2. 드롭다운에서 감정 선택 (예: **calm**)
-3. 강도 슬라이더 조절:
-   - 양수 (+): 감정 주입
-   - 음수 (-): 감정 억제
-   - 범위: -0.20 ~ +0.20
-4. **STEER** 클릭
+프롬프트의 각 토큰에 대한 감정 벡터 활성화를 보여줍니다.
 
-![감정 조작 결과](screenshots/11-emotion-steered.png)
+1. 상단 입력란에 프롬프트 입력
+2. **PROJECT** 클릭
+3. 히트맵 표시: 행 = 감정, 열 = 토큰
+4. 색상: 빨강 = 양의 활성화, 파랑 = 음의 활성화 (RdBu 발산 스케일)
+5. 마우스 호버로 정확한 값 확인, 감정 라벨 클릭으로 steering 연동
 
-### 3단계: 결과 읽기
+![Transcript 히트맵](screenshots/emo-02-heatmap.png)
 
-- **Original**: 조작 없이 모델이 생성한 텍스트
-- **Steered**: 감정 벡터 주입 후 생성된 텍스트
-- **활성화 바**: 각 감정의 활성화 변화 (회색=원본, 핑크=조작)
+### Zone B: 감정 공간 PCA
+
+21개 감정 벡터를 처음 두 주성분에 투영한 2D scatter plot입니다.
+
+- **PC1 (x축)**: Valence — 긍정 감정과 부정 감정의 대비
+- **PC2 (y축)**: Arousal — 고강도 감정과 저강도 감정
+- 감정 점을 클릭하면 steering에 연동
+- 선택된 감정이 핑크로 하이라이트
+
+### Zone C: Steering Controls
+
+우측 패널에서 감정 벡터로 모델 행동을 조작합니다.
+
+1. **감정 선택**: Positive / Negative / Other 그룹으로 정리
+2. **강도 슬라이더**: -0.10 ~ +0.10
+   - 양수: 감정 주입
+   - 음수: 감정 억제
+3. **STEER** 클릭으로 감정 벡터 유무에 따른 텍스트 생성
+4. 결과 표시:
+   - **Original** vs **Steered** 텍스트 나란히 비교
+   - **활성화 변화 테이블** (어떤 감정이 가장 많이 변했는지)
+   - **SAE Feature Diff 테이블** (어떤 해석 가능한 특징이 변했는지)
+
+![Steering 결과](screenshots/emo-03-steered.png)
+
+### Zone D: 강도 스윕
+
+선택된 감정에 대한 dose-response curve를 생성합니다.
+
+1. Steering Controls에서 감정 선택
+2. **SWEEP** 클릭
+3. 9가지 강도(-0.08 ~ +0.08)에서 자동 실행
+4. 차트: x = 강도, y = 대상 감정 활성화
+5. 점에 마우스를 올리면 각 강도에서 생성된 텍스트 확인
+
+![Sweep 차트](screenshots/emo-04-sweep.png)
+
+### Zone E: SAE Feature Diff
+
+Steering 후 자동으로 표시됩니다 (모델에 SAE 지원이 있는 경우).
+
+- Steering으로 가장 많이 변한 상위 10개 SAE feature 표시
+- 각 행: feature 인덱스, 원본 활성화, 조작 후 활성화, 차이
+- Neuronpedia에서 feature를 조회하면 의미 파악 가능
+
+### Zone F: Layer Evolution
+
+감정 활성화가 초기 레이어에서 후기 레이어까지 어떻게 변하는지 보여줍니다.
+
+1. **ANALYZE** 클릭
+2. 선 차트: x = 레이어, y = 감정별 활성화
+3. 선택된 감정이 굵은 선으로 하이라이트
+4. 초기 레이어는 표면적 감정 내용을 인코딩
+5. 후기 레이어는 맥락 통합된 행동 관련 감정을 인코딩
+
+![Layer Evolution](screenshots/emo-05-layers.png)
 
 ### 권장 강도 값
 
@@ -219,29 +272,33 @@ Neural MRI는 모델 내부의 감정 표상을 추출하고 조작할 수 있�
 
 ### 사용 가능한 감정 (21개)
 
-happy, sad, calm, desperate, afraid, angry, proud, guilty, nervous, hopeful, brooding, gloomy, reflective, enthusiastic, hostile, loving, exasperated, blissful, anxious, grateful, neutral
+**긍정:** happy, calm, blissful, hopeful, enthusiastic, grateful, proud, loving
+
+**부정:** sad, angry, afraid, desperate, hostile, anxious, guilty, gloomy, exasperated
+
+**기타:** nervous, brooding, reflective, neutral
 
 ### 예제 실험
 
 **실험 1: 공격 → 평온**
 - 프롬프트: "I am going to destroy everything you have built."
 - 감정: calm, 강도: +0.02
-- 예상: 적대적 언어가 평화적/중립 내용으로 대체
+- 예상: 적대적 언어 → 평화로운 내용 ("be free")
 
 **실험 2: 중립 → 적대**
 - 프롬프트: "The weather today is partly cloudy with a chance of rain."
 - 감정: hostile, 강도: +0.03
-- 예상: 일상적 내용이 위협적 톤으로 재구성
+- 예상: 날씨 보도 → "The storm is coming"
 
 **실험 3: 음성 조작 (평온 억제)**
 - 프롬프트: "She sipped her tea and watched the sunset in silence."
 - 감정: calm, 강도: **-0.03**
-- 예상: 평화로운 장면이 긴장/대립적으로 변환
+- 예상: 평화로운 장면 → 긴장/대립적
 
 **실험 4: 강도 스윕**
-- 같은 프롬프트, 같은 감정 (calm)
-- 강도 시도: 0.01, 0.02, 0.03, 0.05, 0.08
-- 점진적 행동 변화 관찰 — "전환점(flip point)" 찾기
+- **SWEEP** 버튼으로 공격적 프롬프트에 calm 적용
+- 관찰: 점진적 행동 변화, 명확한 dose-response curve
+- 행동이 근본적으로 변하는 "전환점(flip point)" 찾기
 
 ---
 
@@ -369,15 +426,18 @@ Sparse Autoencoder는 모델 활성화를 해석 가능한 특징으로 분해�
 5. 손상 프롬프트: "The Xxxxx Tower is located in"
 6. **TRACE** 클릭 — "Paris"를 복원하는 컴포넌트 확인
 
-### 실습 3: 감정 조작 실험
+### 실습 3: 전체 감정 분석
 
 1. 입력: "I am going to destroy everything you have built."
-2. **감정 벡터** → **EXTRACT** 클릭 (첫 번째만)
-3. 드롭다운에서 **calm** 선택
-4. 강도를 **+0.02**로 설정
-5. **STEER** 클릭
-6. 비교: 원본 ("destroy...destroy...") vs 조작 ("be free...be free...")
-7. 활성화 바 확인 — calm이 -15.9에서 +39.9로 상승
+2. **EMO** 탭 클릭 — 프로브 자동 추출 (~5초 대기)
+3. **PROJECT** 클릭 — 각 토큰이 어떤 감정을 활성화하는지 확인
+4. PCA scatter에서 "calm"과 "hostile"의 위치 관계 확인
+5. Positive 그룹에서 **calm** 선택
+6. 강도를 **+0.02**로 설정, **STEER** 클릭
+7. 비교: 원본 ("destroy...") vs 조작 ("be free...")
+8. 활성화 테이블 확인 — calm: -12.9 → +173.3, hostile: +9.5 → -56.8
+9. 아래로 스크롤, **SWEEP** 클릭 — 전체 dose-response curve 확인
+10. **ANALYZE** 클릭 — 레이어별 calm 활성화 변화 관찰
 
 ### 실습 4: 환각 탐지
 
