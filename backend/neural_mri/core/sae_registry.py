@@ -18,6 +18,7 @@ SAE_REGISTRY: dict[str, dict] = {
         "sae_id_template": "layer_{layer}/width_16k/canonical",
         "layers": list(range(26)),
         "d_sae": 16384,
+        "vram_mb": 800,  # ~800MB for width_16k SAE weights
         "neuronpedia_url_template": "https://neuronpedia.org/gemma-2-2b/{layer}-gemmascope-res-16k/{feature_idx}",
     },
     # ------------------------------------------------------------------ #

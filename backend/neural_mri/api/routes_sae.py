@@ -5,6 +5,7 @@ import asyncio
 from fastapi import APIRouter, Depends, HTTPException
 
 from neural_mri.core.analysis_engine import AnalysisEngine
+from neural_mri.core.cuda_guard import CUDAError, OOMError
 from neural_mri.core.model_manager import ModelManager
 from neural_mri.core.sae_manager import SAEManager
 from neural_mri.core.sae_registry import get_sae_info, list_sae_support
@@ -103,6 +104,11 @@ async def sae_scan(
     if cached is not None:
         return SAEData(**cached)
 
-    result = await asyncio.to_thread(engine.scan_sae, req, sae_mgr)
+    try:
+        result = await asyncio.to_thread(engine.scan_sae, req, sae_mgr)
+    except OOMError as exc:
+        raise HTTPException(status_code=507, detail=str(exc))
+    except CUDAError as exc:
+        raise HTTPException(status_code=503, detail=str(exc))
     cache.put(mm.model_id, "sae", cache_key, result.model_dump())
     return result
