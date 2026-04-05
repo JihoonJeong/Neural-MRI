@@ -1,7 +1,7 @@
 {
   "name": "neural-mri-frontend",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Neural MRI Scanner — Model Resonance Imaging frontend",
   "license": "MIT",
   "author": "JJ",
