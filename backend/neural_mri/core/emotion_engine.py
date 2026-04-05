@@ -18,6 +18,7 @@ from pathlib import Path
 
 import torch
 
+from neural_mri.core.cuda_guard import cuda_safe
 from neural_mri.core.model_manager import ModelManager
 from neural_mri.core.sae_manager import SAEManager
 from neural_mri.core.sae_registry import get_sae_info
@@ -94,6 +95,7 @@ class EmotionEngine:
     # Probe Extraction
     # ------------------------------------------------------------------ #
 
+    @cuda_safe
     def extract_probes(self, req: ExtractProbesRequest) -> ExtractProbesResponse:
         """Extract emotion vectors via comprehension-mode forward passes."""
         start = time.time()
@@ -211,6 +213,7 @@ class EmotionEngine:
     # Token-level Projection
     # ------------------------------------------------------------------ #
 
+    @cuda_safe
     def project(self, req: ProjectRequest) -> ProjectResponse:
         """Project each token's residual stream onto all emotion vectors."""
         start = time.time()
@@ -265,6 +268,7 @@ class EmotionEngine:
     # PCA
     # ------------------------------------------------------------------ #
 
+    @cuda_safe
     def pca(self, layer_idx: int | None = None) -> PCAResponse:
         """Compute 2D PCA of emotion vectors (valence/arousal axes)."""
         start = time.time()
@@ -307,6 +311,7 @@ class EmotionEngine:
     # Strength Sweep
     # ------------------------------------------------------------------ #
 
+    @cuda_safe
     def sweep(self, req: SweepRequest) -> SweepResponse:
         """Run steering at multiple strengths, return dose-response curve."""
         start = time.time()
@@ -400,6 +405,7 @@ class EmotionEngine:
     # Layer Evolution
     # ------------------------------------------------------------------ #
 
+    @cuda_safe
     def layer_evolution(self, req: LayerEvolutionRequest) -> LayerEvolutionResponse:
         """Measure emotion activations across all layers at a specific token."""
         start = time.time()
@@ -450,6 +456,7 @@ class EmotionEngine:
     # Steering
     # ------------------------------------------------------------------ #
 
+    @cuda_safe
     def steer(self, req: SteerRequest) -> SteerResponse:
         """Run prompt with and without emotion vector steering, compare outputs."""
         start = time.time()
@@ -568,6 +575,7 @@ class EmotionEngine:
     # Steer + SAE Combined
     # ------------------------------------------------------------------ #
 
+    @cuda_safe
     def steer_sae(self, req: SteerSAERequest, sae_mgr: SAEManager) -> SteerSAEResponse:
         """Run steering and capture SAE feature changes at the target layer."""
         start = time.time()

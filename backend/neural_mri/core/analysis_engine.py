@@ -5,6 +5,7 @@ import time
 
 import torch
 
+from neural_mri.core.cuda_guard import cuda_safe
 from neural_mri.core.model_manager import ModelManager
 from neural_mri.core.sae_manager import SAEManager
 from neural_mri.core.sae_registry import get_sae_info
@@ -42,6 +43,7 @@ class AnalysisEngine:
     def __init__(self, model_manager: ModelManager) -> None:
         self._mm = model_manager
 
+    @cuda_safe
     def scan_structural(self) -> StructuralData:
         """T1 scan: extract static architecture topology from model config."""
         start = time.time()
@@ -133,6 +135,7 @@ class AnalysisEngine:
             )
         return connections
 
+    @cuda_safe
     def scan_weights(self, layer_ids: list[str] | None = None) -> WeightData:
         """T2 scan: extract weight distribution statistics from state_dict."""
         start = time.time()
@@ -186,6 +189,7 @@ class AnalysisEngine:
     # fMRI: Activation Scan
     # ------------------------------------------------------------------ #
 
+    @cuda_safe
     def scan_activation(self, req: ActivationScanRequest) -> ActivationData:
         """fMRI scan: run prompt through model, extract per-layer activations."""
         start = time.time()
@@ -298,6 +302,7 @@ class AnalysisEngine:
     # DTI: Circuit Scan
     # ------------------------------------------------------------------ #
 
+    @cuda_safe
     def scan_circuits(self, req: CircuitScanRequest) -> CircuitData:
         """DTI scan: trace important circuits via attention + zero-ablation."""
         start = time.time()
@@ -415,6 +420,7 @@ class AnalysisEngine:
     # FLAIR: Anomaly Scan (Logit Lens + Entropy)
     # ------------------------------------------------------------------ #
 
+    @cuda_safe
     def scan_anomaly(self, req: AnomalyScanRequest) -> AnomalyData:
         """FLAIR scan: detect anomalous regions via Logit Lens + Entropy."""
         start = time.time()
@@ -540,6 +546,7 @@ class AnalysisEngine:
     # SAE: Sparse Autoencoder Feature Scan
     # ------------------------------------------------------------------ #
 
+    @cuda_safe
     def scan_sae(self, req: SAEScanRequest, sae_mgr: SAEManager) -> SAEData:
         """Decode residual stream into sparse SAE features for a given layer."""
         start = time.time()

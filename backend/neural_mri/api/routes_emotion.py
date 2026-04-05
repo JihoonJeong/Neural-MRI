@@ -4,6 +4,7 @@ import asyncio
 
 from fastapi import APIRouter, Depends, HTTPException
 
+from neural_mri.core.cuda_guard import CUDAError, OOMError
 from neural_mri.core.emotion_engine import EmotionEngine
 from neural_mri.core.model_manager import ModelManager
 from neural_mri.core.sae_manager import SAEManager
@@ -51,6 +52,15 @@ def _require_model(mm: ModelManager) -> None:
         raise HTTPException(status_code=400, detail="No model loaded. Load a model first.")
 
 
+def _handle_gpu_error(exc: Exception) -> HTTPException:
+    """Convert GPU errors to appropriate HTTP responses."""
+    if isinstance(exc, OOMError):
+        return HTTPException(status_code=507, detail=str(exc))
+    if isinstance(exc, CUDAError):
+        return HTTPException(status_code=503, detail=str(exc))
+    return HTTPException(status_code=500, detail=str(exc))
+
+
 @router.post("/extract-probes", response_model=ExtractProbesResponse)
 async def extract_probes(
     req: ExtractProbesRequest,
@@ -59,7 +69,10 @@ async def extract_probes(
 ) -> ExtractProbesResponse:
     """Extract emotion vectors from the loaded model via comprehension texts."""
     _require_model(mm)
-    return await asyncio.to_thread(engine.extract_probes, req)
+    try:
+        return await asyncio.to_thread(engine.extract_probes, req)
+    except (OOMError, CUDAError) as exc:
+        raise _handle_gpu_error(exc)
 
 
 @router.post("/steer", response_model=SteerResponse)
@@ -70,7 +83,10 @@ async def steer(
 ) -> SteerResponse:
     """Run prompt with emotion vector steering and compare outputs."""
     _require_model(mm)
-    return await asyncio.to_thread(engine.steer, req)
+    try:
+        return await asyncio.to_thread(engine.steer, req)
+    except (OOMError, CUDAError) as exc:
+        raise _handle_gpu_error(exc)
 
 
 @router.post("/project", response_model=ProjectResponse)
@@ -81,7 +97,10 @@ async def project(
 ) -> ProjectResponse:
     """Project each token's activation onto emotion vectors (heatmap data)."""
     _require_model(mm)
-    return await asyncio.to_thread(engine.project, req)
+    try:
+        return await asyncio.to_thread(engine.project, req)
+    except (OOMError, CUDAError) as exc:
+        raise _handle_gpu_error(exc)
 
 
 @router.get("/pca", response_model=PCAResponse)
@@ -92,7 +111,10 @@ async def pca(
 ) -> PCAResponse:
     """Compute 2D PCA of emotion vectors (valence/arousal axes)."""
     _require_model(mm)
-    return await asyncio.to_thread(engine.pca, layer_idx)
+    try:
+        return await asyncio.to_thread(engine.pca, layer_idx)
+    except (OOMError, CUDAError) as exc:
+        raise _handle_gpu_error(exc)
 
 
 @router.post("/sweep", response_model=SweepResponse)
@@ -103,7 +125,10 @@ async def sweep(
 ) -> SweepResponse:
     """Run steering at multiple strengths for dose-response curve."""
     _require_model(mm)
-    return await asyncio.to_thread(engine.sweep, req)
+    try:
+        return await asyncio.to_thread(engine.sweep, req)
+    except (OOMError, CUDAError) as exc:
+        raise _handle_gpu_error(exc)
 
 
 @router.post("/layer-evolution", response_model=LayerEvolutionResponse)
@@ -114,7 +139,10 @@ async def layer_evolution(
 ) -> LayerEvolutionResponse:
     """Measure emotion activations across all layers at a specific token."""
     _require_model(mm)
-    return await asyncio.to_thread(engine.layer_evolution, req)
+    try:
+        return await asyncio.to_thread(engine.layer_evolution, req)
+    except (OOMError, CUDAError) as exc:
+        raise _handle_gpu_error(exc)
 
 
 @router.post("/steer-sae", response_model=SteerSAEResponse)
@@ -126,7 +154,10 @@ async def steer_sae(
 ) -> SteerSAEResponse:
     """Run steering and capture SAE feature changes before/after."""
     _require_model(mm)
-    return await asyncio.to_thread(engine.steer_sae, req, sae_mgr)
+    try:
+        return await asyncio.to_thread(engine.steer_sae, req, sae_mgr)
+    except (OOMError, CUDAError) as exc:
+        raise _handle_gpu_error(exc)
 
 
 @router.get("/emotions")
