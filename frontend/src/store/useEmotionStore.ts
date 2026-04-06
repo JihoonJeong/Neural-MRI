@@ -85,14 +85,23 @@ export const useEmotionStore = create<EmotionState>((set, get) => ({
 
   extractProbes: async () => {
     set({ isExtracting: true, error: null });
-    try {
-      const result = await api.emotion.extractProbes();
-      set({ probeResult: result, isExtracting: false });
-      useScanStore.getState().addLog(`Emotion probes: ${result.n_emotions} extracted (layer ${result.layer_idx})`);
-    } catch (e) {
-      const msg = (e as Error).message;
-      set({ error: msg, isExtracting: false });
-      useScanStore.getState().addLog(`Emotion probe extraction failed: ${msg}`);
+    // Auto-retry once on first failure (server may still be initializing)
+    for (let attempt = 0; attempt < 2; attempt++) {
+      try {
+        const result = await api.emotion.extractProbes();
+        set({ probeResult: result, isExtracting: false });
+        useScanStore.getState().addLog(`Emotion probes: ${result.n_emotions} extracted (layer ${result.layer_idx})`);
+        return;
+      } catch (e) {
+        if (attempt === 0) {
+          // Silent retry after 1s
+          await new Promise((r) => setTimeout(r, 1000));
+          continue;
+        }
+        const msg = (e as Error).message;
+        set({ error: msg, isExtracting: false });
+        useScanStore.getState().addLog(`Emotion probe extraction failed: ${msg}`);
+      }
     }
   },
 
