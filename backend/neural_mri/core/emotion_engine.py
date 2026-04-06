@@ -23,6 +23,7 @@ from neural_mri.core.model_manager import ModelManager
 from neural_mri.core.sae_manager import SAEManager
 from neural_mri.core.sae_registry import get_sae_info
 from neural_mri.schemas.emotion import (
+    DisplayToken,
     EmotionActivation,
     ExtractProbesRequest,
     ExtractProbesResponse,
@@ -90,6 +91,72 @@ class EmotionEngine:
 
     def _cache_probes(self, model_id: str, layer_idx: int, probes: dict[str, torch.Tensor]) -> None:
         self._probes.setdefault(model_id, {})[layer_idx] = probes
+
+    @staticmethod
+    def _build_display_tokens(
+        model,
+        token_ids: list[int],
+        profiles: list,
+        emotions: list[str],
+    ) -> list[DisplayToken]:
+        """Group byte-level BPE tokens into displayable unicode segments.
+
+        Uses tokenizer.decode() on token ranges to recover original chars
+        (e.g. Korean, CJK, emoji) that are split by byte-level BPE.
+        """
+        tok = model.tokenizer
+        display: list[DisplayToken] = []
+        i = 0
+        n = len(token_ids)
+
+        while i < n:
+            # Try to decode single token
+            single = tok.decode([token_ids[i]])
+            if "\ufffd" not in single:
+                # Token decodes cleanly
+                acts = profiles[i].activations if i < len(profiles) else {}
+                display.append(
+                    DisplayToken(
+                        label=single,
+                        token_indices=[i],
+                        activations=acts,
+                    )
+                )
+                i += 1
+                continue
+
+            # Token has replacement chars — try extending range
+            found = False
+            for j in range(i + 1, min(i + 8, n + 1)):
+                chunk = tok.decode(token_ids[i : j + 1])
+                if "\ufffd" not in chunk:
+                    # Merge activations (average)
+                    indices = list(range(i, j + 1))
+                    merged: dict[str, float] = {}
+                    for e in emotions:
+                        vals = [
+                            profiles[k].activations.get(e, 0.0)
+                            for k in indices
+                            if k < len(profiles)
+                        ]
+                        merged[e] = round(sum(vals) / max(len(vals), 1), 4)
+                    display.append(
+                        DisplayToken(
+                            label=chunk,
+                            token_indices=indices,
+                            activations=merged,
+                        )
+                    )
+                    i = j + 1
+                    found = True
+                    break
+
+            if not found:
+                acts = profiles[i].activations if i < len(profiles) else {}
+                display.append(DisplayToken(label="?", token_indices=[i], activations=acts))
+                i += 1
+
+        return display
 
     # ------------------------------------------------------------------ #
     # Probe Extraction
@@ -254,6 +321,11 @@ class EmotionEngine:
                 )
             )
 
+        # Build display tokens: group byte-level BPE into unicode chars
+        display_tokens = self._build_display_tokens(
+            model, tokens[0].tolist(), token_profiles, list(selected.keys())
+        )
+
         elapsed_ms = (time.time() - start) * 1000
         return ProjectResponse(
             model_id=model_id,
@@ -261,6 +333,7 @@ class EmotionEngine:
             layer_idx=layer_idx,
             emotions=list(selected.keys()),
             tokens=token_profiles,
+            display_tokens=display_tokens,
             metadata={"compute_time_ms": round(elapsed_ms, 1)},
         )
 

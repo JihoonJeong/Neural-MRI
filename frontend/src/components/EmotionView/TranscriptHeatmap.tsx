@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 
 import { useEmotionStore } from '../../store/useEmotionStore';
-import { groupTokensForDisplay } from '../../utils/tokenDisplay';
 
 const ACCENT = '#e879a0';
 
@@ -64,23 +63,19 @@ function HeatmapCanvas({
     if (!svgRef.current || !data) return;
 
     const emotions = data.emotions;
-    const rawTokens = data.tokens;
 
-    // Group byte-level tokens into displayable unicode segments
-    const displayTokens = groupTokensForDisplay(rawTokens.map((t) => t.token_str));
-
-    // Merge activations for grouped tokens (average)
-    const mergedTokens = displayTokens.map((dt) => {
-      const merged: Record<string, number> = {};
-      for (const e of emotions) {
-        let sum = 0;
-        for (const idx of dt.indices) {
-          sum += rawTokens[idx]?.activations[e] ?? 0;
-        }
-        merged[e] = sum / dt.indices.length;
-      }
-      return { label: dt.label, activations: merged, indices: dt.indices };
-    });
+    // Use backend-provided display_tokens (properly grouped via tokenizer.decode)
+    const mergedTokens = data.display_tokens?.length
+      ? data.display_tokens.map((dt) => ({
+          label: dt.label,
+          activations: dt.activations,
+          indices: dt.token_indices,
+        }))
+      : data.tokens.map((t, i) => ({
+          label: t.token_str,
+          activations: t.activations,
+          indices: [i],
+        }));
 
     const nEmotions = emotions.length;
     const nTokens = mergedTokens.length;

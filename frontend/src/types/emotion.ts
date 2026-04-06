@@ -40,12 +40,19 @@ export interface TokenEmotionProfile {
   activations: Record<string, number>;
 }
 
+export interface DisplayToken {
+  label: string;
+  token_indices: number[];
+  activations: Record<string, number>;
+}
+
 export interface ProjectResponse {
   model_id: string;
   prompt: string;
   layer_idx: number;
   emotions: string[];
   tokens: TokenEmotionProfile[];
+  display_tokens: DisplayToken[];
   metadata: Record<string, unknown>;
 }
 

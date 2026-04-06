@@ -80,12 +80,21 @@ class TokenEmotionProfile(BaseModel):
     activations: dict[str, float]  # {emotion: dot_product}
 
 
+class DisplayToken(BaseModel):
+    """Grouped byte-level tokens into displayable unicode segments."""
+
+    label: str  # e.g. "한" instead of "�"
+    token_indices: list[int]  # indices into raw tokens
+    activations: dict[str, float]  # averaged activations
+
+
 class ProjectResponse(BaseModel):
     model_id: str
     prompt: str
     layer_idx: int
     emotions: list[str]
     tokens: list[TokenEmotionProfile]
+    display_tokens: list[DisplayToken]  # grouped for CJK/unicode display
     metadata: dict
 
 
