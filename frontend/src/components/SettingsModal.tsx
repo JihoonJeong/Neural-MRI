@@ -225,6 +225,20 @@ export function SettingsModal() {
               {statusLabel}
             </span>
           </div>
+          {!tokenStatus?.is_set && (
+            <div style={{ marginTop: 6, fontSize: 'var(--font-size-xs)', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
+              Required for gated models (Gemma, Llama, Mistral).{' '}
+              <a
+                href="https://huggingface.co/settings/tokens"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: '#06b6d4', textDecoration: 'underline' }}
+              >
+                Get a token at huggingface.co/settings/tokens
+              </a>
+              {' '}(read access is sufficient). You must also accept the model license on its HF page.
+            </div>
+          )}
         </div>
 
         {/* Device Section */}

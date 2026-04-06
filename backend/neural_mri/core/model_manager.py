@@ -164,7 +164,10 @@ class ModelManager:
             err_msg = str(exc).lower()
             if "401" in err_msg or "unauthorized" in err_msg or "token" in err_msg:
                 raise RuntimeError(
-                    f"Authentication required for {model_id}. Set an HF token in Settings."
+                    f"Authentication required for {model_id}. "
+                    f"1) Get a token at https://huggingface.co/settings/tokens "
+                    f"2) Set it in Settings (top-right gear icon) "
+                    f"3) Accept the model license at https://huggingface.co/{model_id}"
                 ) from exc
             if "404" in err_msg or "not found" in err_msg:
                 raise RuntimeError(f"Model '{model_id}' not found on HuggingFace Hub.") from exc
