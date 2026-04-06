@@ -214,7 +214,7 @@ function SteerResult({
       <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--text-secondary)', marginBottom: 4 }}>
         Top activation changes:
       </div>
-      <table style={{ fontSize: 'var(--font-size-xs)', width: '100%', borderCollapse: 'collapse' }}>
+      <table style={{ fontSize: 'var(--font-size-xs)', width: '100%', borderCollapse: 'collapse', tableLayout: 'fixed' }}>
         <tbody>
           {diffs.map((d) => (
             <tr key={d.emotion}>
@@ -252,7 +252,7 @@ function SAEFeatureDiffPanel({
       <div style={{ fontSize: 'var(--font-size-xs)', color: '#aa88ff', fontWeight: 'bold', marginBottom: 6 }}>
         SAE FEATURE DIFF (layer {layer})
       </div>
-      <table style={{ fontSize: 'var(--font-size-xs)', width: '100%', borderCollapse: 'collapse' }}>
+      <table style={{ fontSize: 'var(--font-size-xs)', width: '100%', borderCollapse: 'collapse', tableLayout: 'fixed' }}>
         <thead>
           <tr style={{ color: 'var(--text-secondary)' }}>
             <th style={{ textAlign: 'left', padding: '1px 4px', fontWeight: 'normal' }}>#</th>

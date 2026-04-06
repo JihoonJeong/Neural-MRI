@@ -167,12 +167,17 @@ export function EmotionView() {
         className="flex flex-col shrink-0"
         style={{
           width: rightWidth,
+          maxWidth: rightWidth,
           background: 'var(--bg-secondary)',
           overflowY: 'auto',
+          overflowX: 'hidden',
           padding: 12,
+          boxSizing: 'border-box',
         }}
       >
-        <SteerControls prompt={prompt} />
+        <div style={{ minWidth: 0, width: '100%' }}>
+          <SteerControls prompt={prompt} />
+        </div>
       </div>
     </div>
   );
