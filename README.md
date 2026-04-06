@@ -80,21 +80,21 @@ Open http://localhost
 
 ## Supported Models
 
-| Model | Params | SAE | 8GB | 12GB | 16GB+ | Mac MPS |
-|-------|--------|-----|-----|------|-------|---------|
-| GPT-2 | 124M | SAELens | All | All | All | All |
-| GPT-2 Medium | 355M | — | All | All | All | All |
-| Pythia-1.4B | 1.4B | — | All | All | All | All |
-| Gemma-2-2B | 2.6B | SAELens | Scan | All | All | All |
-| Llama-3.2-3B | 3B | — | Scan | Scan | All | Scan |
-| Qwen-2.5-3B | 3B | — | Scan | Scan | All | Scan |
-| Phi-3 Mini | 3.8B | — | — | Scan | All | Scan |
-| Llama-3.1-8B | 8B | EleutherAI | — | — | — | — |
-| Mistral-7B | 7.2B | — | — | — | — | — |
+| Model | Params | SAE | 8GB | 12GB | 16GB+ | VRAM Peak |
+|-------|--------|-----|-----|------|-------|-----------|
+| GPT-2 | 124M | SAELens | All | All | All | 2.2 GB |
+| GPT-2 Medium | 355M | — | All | All | All | 3.0 GB |
+| Pythia-1.4B | 1.4B | — | All | All | All | 4.4 GB |
+| Qwen-2.5-3B | 3B | — | — | **All** | All | 8.4 GB |
+| Llama-3.2-3B | 3B | — | — | **All** | All | 8.7 GB |
+| Phi-3 Mini | 3.8B | — | — | **All** | All | 9.6 GB |
+| Gemma-2-2B | 2.6B | SAELens | — | — | All | >12 GB |
+| Llama-3.1-8B | 8B | EleutherAI | — | — | — | >16 GB |
+| Mistral-7B | 7.2B | — | — | — | — | TL unsupported |
 
-> **All** = scan + SAE + emotion steering. **Scan** = model loads, scans work, steering may OOM. **—** = cannot load.
+> **All** = scan + emotion steering + sweep. **—** = cannot load. VRAM peaks measured on RTX 4070 Ti.
 >
-> 7B+ models require 24GB+ VRAM (fp16). See [Hardware Requirements](docs/hardware-requirements.md) for details.
+> See [Hardware Requirements](docs/hardware-requirements.md) for detailed measurements and Mac MPS guidance.
 
 Additional models can be loaded dynamically via **HuggingFace Hub search** — any model with a TransformerLens-compatible architecture works.
 
