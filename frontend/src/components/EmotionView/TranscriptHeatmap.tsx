@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 
 import { useEmotionStore } from '../../store/useEmotionStore';
+import { groupTokensForDisplay } from '../../utils/tokenDisplay';
 
 const ACCENT = '#e879a0';
 
@@ -63,9 +64,26 @@ function HeatmapCanvas({
     if (!svgRef.current || !data) return;
 
     const emotions = data.emotions;
-    const tokens = data.tokens;
+    const rawTokens = data.tokens;
+
+    // Group byte-level tokens into displayable unicode segments
+    const displayTokens = groupTokensForDisplay(rawTokens.map((t) => t.token_str));
+
+    // Merge activations for grouped tokens (average)
+    const mergedTokens = displayTokens.map((dt) => {
+      const merged: Record<string, number> = {};
+      for (const e of emotions) {
+        let sum = 0;
+        for (const idx of dt.indices) {
+          sum += rawTokens[idx]?.activations[e] ?? 0;
+        }
+        merged[e] = sum / dt.indices.length;
+      }
+      return { label: dt.label, activations: merged, indices: dt.indices };
+    });
+
     const nEmotions = emotions.length;
-    const nTokens = tokens.length;
+    const nTokens = mergedTokens.length;
 
     const cellW = Math.max(24, Math.min(50, 700 / nTokens));
     const cellH = 16;
@@ -75,7 +93,7 @@ function HeatmapCanvas({
 
     // Collect all values for color scale
     const allVals: number[] = [];
-    tokens.forEach((t) => emotions.forEach((e) => allVals.push(t.activations[e] ?? 0)));
+    mergedTokens.forEach((t) => emotions.forEach((e) => allVals.push(t.activations[e] ?? 0)));
     const maxAbs = Math.max(...allVals.map(Math.abs), 0.01);
 
     const colorScale = d3.scaleDiverging<string>()
@@ -90,7 +108,7 @@ function HeatmapCanvas({
     const g = svg.append('g');
 
     // Token labels (top, rotated)
-    tokens.forEach((t, ti) => {
+    mergedTokens.forEach((t, ti) => {
       g.append('text')
         .attr('x', margin.left + ti * cellW + cellW / 2)
         .attr('y', margin.top - 6)
@@ -98,7 +116,7 @@ function HeatmapCanvas({
         .attr('transform', `rotate(-55, ${margin.left + ti * cellW + cellW / 2}, ${margin.top - 6})`)
         .attr('fill', 'var(--text-secondary)')
         .attr('font-size', 9)
-        .text(t.token_str.trim() || '?');
+        .text(t.label.trim() || '?');
     });
 
     // Emotion labels (left)
@@ -128,7 +146,7 @@ function HeatmapCanvas({
       .style('pointer-events', 'none')
       .style('z-index', '9999');
 
-    tokens.forEach((t, ti) => {
+    mergedTokens.forEach((t, ti) => {
       emotions.forEach((e, ei) => {
         const val = t.activations[e] ?? 0;
         g.append('rect')
@@ -144,7 +162,7 @@ function HeatmapCanvas({
               .style('display', 'block')
               .style('left', `${event.clientX + 12}px`)
               .style('top', `${event.clientY - 8}px`)
-              .html(`<b>${e}</b> @ "${t.token_str.trim()}"<br/>activation: ${val.toFixed(2)}`);
+              .html(`<b>${e}</b> @ "${t.label.trim()}"<br/>activation: ${val.toFixed(2)}`);
           })
           .on('mousemove', (event) => {
             tooltip
