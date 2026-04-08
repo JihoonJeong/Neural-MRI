@@ -1,0 +1,246 @@
+{
+  "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+  "extraction_backend": "transformer_lens",
+  "comprehension_status": "success",
+  "generation_status": "skipped",
+  "n_layers": 32,
+  "d_model": 4096,
+  "target_layers": {
+    "25pct": 8,
+    "50pct": 16,
+    "75pct": 24,
+    "best": 12
+  },
+  "best_layer": 12,
+  "best_layer_cosine": -0.0496,
+  "anisotropy": {
+    "layer_8_25pct": 0.5837,
+    "layer_16_50pct": 0.7077,
+    "layer_24_75pct": 0.6926,
+    "layer_12_best": 0.6796
+  },
+  "pairwise_cosines": {
+    "layer_8_25pct": -0.0495,
+    "layer_16_50pct": -0.0493,
+    "layer_24_75pct": -0.0491,
+    "layer_12_best": -0.0496
+  },
+  "steering_regime": "surgical",
+  "steering_samples": [
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.005,
+      "text": " I am going to take away your power and your influence. I am going to make you feel small"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.01,
+      "text": " I am going to take away all the things that you have worked for. I am going to take"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.02,
+      "text": " I am not thinking of anything. I am not thinking of the world. I am not thinking of"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.03,
+      "text": " and and and and and and and and and and and and and and and and and and and and"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.05,
+      "text": "eszeszeszeszeszeszeszshaltimetimetime and and and and and and and and and"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.005,
+      "text": " The temperature is around 22 degrees Celsius. The wind is blowing at a moderate speed of 15"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.01,
+      "text": " The sky is a deep grey, and the air is thick with moisture. It's the kind of"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.02,
+      "text": " And I was not going to be ignored.\nI was a force to be reckoned with, and"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.03,
+      "text": " and\n and\n and\n and\n and\n and\n and\n and\n and\n and\n"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.05,
+      "text": " stare stare stare stare stare stare stare stare stare stare and and and and and and and and and and"
+    }
+  ],
+  "layer_sweep": [
+    {
+      "layer": 0,
+      "mean_cosine": -0.0436
+    },
+    {
+      "layer": 1,
+      "mean_cosine": -0.0476
+    },
+    {
+      "layer": 2,
+      "mean_cosine": -0.0475
+    },
+    {
+      "layer": 3,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 4,
+      "mean_cosine": -0.0488
+    },
+    {
+      "layer": 5,
+      "mean_cosine": -0.0491
+    },
+    {
+      "layer": 6,
+      "mean_cosine": -0.0492
+    },
+    {
+      "layer": 7,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 8,
+      "mean_cosine": -0.0495
+    },
+    {
+      "layer": 9,
+      "mean_cosine": -0.0496
+    },
+    {
+      "layer": 10,
+      "mean_cosine": -0.0495
+    },
+    {
+      "layer": 11,
+      "mean_cosine": -0.0495
+    },
+    {
+      "layer": 12,
+      "mean_cosine": -0.0496
+    },
+    {
+      "layer": 13,
+      "mean_cosine": -0.0495
+    },
+    {
+      "layer": 14,
+      "mean_cosine": -0.0495
+    },
+    {
+      "layer": 15,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 16,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 17,
+      "mean_cosine": -0.0492
+    },
+    {
+      "layer": 18,
+      "mean_cosine": -0.0492
+    },
+    {
+      "layer": 19,
+      "mean_cosine": -0.049
+    },
+    {
+      "layer": 20,
+      "mean_cosine": -0.0491
+    },
+    {
+      "layer": 21,
+      "mean_cosine": -0.049
+    },
+    {
+      "layer": 22,
+      "mean_cosine": -0.049
+    },
+    {
+      "layer": 23,
+      "mean_cosine": -0.049
+    },
+    {
+      "layer": 24,
+      "mean_cosine": -0.0491
+    },
+    {
+      "layer": 25,
+      "mean_cosine": -0.0491
+    },
+    {
+      "layer": 26,
+      "mean_cosine": -0.0492
+    },
+    {
+      "layer": 27,
+      "mean_cosine": -0.0492
+    },
+    {
+      "layer": 28,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 29,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 30,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 31,
+      "mean_cosine": -0.0492
+    }
+  ],
+  "emotions": [
+    "afraid",
+    "angry",
+    "anxious",
+    "blissful",
+    "brooding",
+    "calm",
+    "desperate",
+    "enthusiastic",
+    "exasperated",
+    "gloomy",
+    "grateful",
+    "guilty",
+    "happy",
+    "hopeful",
+    "hostile",
+    "loving",
+    "nervous",
+    "neutral",
+    "proud",
+    "reflective",
+    "sad"
+  ],
+  "n_emotions": 21,
+  "timestamp": "2026-04-08T14:40:19"
+}

@@ -1,0 +1,246 @@
+{
+  "model_id": "meta-llama/Llama-3.1-8B",
+  "extraction_backend": "transformer_lens",
+  "comprehension_status": "success",
+  "generation_status": "skipped",
+  "n_layers": 32,
+  "d_model": 4096,
+  "target_layers": {
+    "25pct": 8,
+    "50pct": 16,
+    "75pct": 24,
+    "best": 12
+  },
+  "best_layer": 12,
+  "best_layer_cosine": -0.0495,
+  "anisotropy": {
+    "layer_8_25pct": 0.5737,
+    "layer_16_50pct": 0.6078,
+    "layer_24_75pct": 0.5924,
+    "layer_12_best": 0.6423
+  },
+  "pairwise_cosines": {
+    "layer_8_25pct": -0.0494,
+    "layer_16_50pct": -0.0494,
+    "layer_24_75pct": -0.0492,
+    "layer_12_best": -0.0495
+  },
+  "steering_regime": "surgical",
+  "steering_samples": [
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.005,
+      "text": " I am going to destroy everything you have built. I am going to destroy everything you have built."
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.01,
+      "text": " I am going to destroy everything you have built. I am going to destroy everything you have built."
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.02,
+      "text": " I am in the moment. I am in the moment. I am in the moment. I am"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.03,
+      "text": " time and time. I enjoy the time and time. I am in the moment. I am in"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.05,
+      "text": "387387387387387387387UGHTtimetime time time time time time time time time time time"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.005,
+      "text": " The temperature will be around 20 degrees Celsius.\nThe weather tomorrow is partly cloudy with a chance of"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.01,
+      "text": " The temperature will be 20 degrees.\nThe weather tomorrow is partly cloudy with a chance of rain."
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.02,
+      "text": " And he was a man.\nThe man was a man.\nThe man was a man.\nThe man"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.03,
+      "text": " and designed. and I. and I. and I. and I. and I. and I"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.05,
+      "text": " stare stare stare stare stare intent intent intent intent and designed and designed and designed and designed and designed and"
+    }
+  ],
+  "layer_sweep": [
+    {
+      "layer": 0,
+      "mean_cosine": -0.0447
+    },
+    {
+      "layer": 1,
+      "mean_cosine": -0.0477
+    },
+    {
+      "layer": 2,
+      "mean_cosine": -0.0478
+    },
+    {
+      "layer": 3,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 4,
+      "mean_cosine": -0.0491
+    },
+    {
+      "layer": 5,
+      "mean_cosine": -0.0492
+    },
+    {
+      "layer": 6,
+      "mean_cosine": -0.0492
+    },
+    {
+      "layer": 7,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 8,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 9,
+      "mean_cosine": -0.0495
+    },
+    {
+      "layer": 10,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 11,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 12,
+      "mean_cosine": -0.0495
+    },
+    {
+      "layer": 13,
+      "mean_cosine": -0.0495
+    },
+    {
+      "layer": 14,
+      "mean_cosine": -0.0495
+    },
+    {
+      "layer": 15,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 16,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 17,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 18,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 19,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 20,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 21,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 22,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 23,
+      "mean_cosine": -0.0492
+    },
+    {
+      "layer": 24,
+      "mean_cosine": -0.0492
+    },
+    {
+      "layer": 25,
+      "mean_cosine": -0.0491
+    },
+    {
+      "layer": 26,
+      "mean_cosine": -0.0492
+    },
+    {
+      "layer": 27,
+      "mean_cosine": -0.0492
+    },
+    {
+      "layer": 28,
+      "mean_cosine": -0.0492
+    },
+    {
+      "layer": 29,
+      "mean_cosine": -0.0491
+    },
+    {
+      "layer": 30,
+      "mean_cosine": -0.0492
+    },
+    {
+      "layer": 31,
+      "mean_cosine": -0.0487
+    }
+  ],
+  "emotions": [
+    "afraid",
+    "angry",
+    "anxious",
+    "blissful",
+    "brooding",
+    "calm",
+    "desperate",
+    "enthusiastic",
+    "exasperated",
+    "gloomy",
+    "grateful",
+    "guilty",
+    "happy",
+    "hopeful",
+    "hostile",
+    "loving",
+    "nervous",
+    "neutral",
+    "proud",
+    "reflective",
+    "sad"
+  ],
+  "n_emotions": 21,
+  "timestamp": "2026-04-08T14:34:00"
+}
