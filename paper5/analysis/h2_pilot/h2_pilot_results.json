@@ -1,0 +1,70 @@
+{
+  "analysis": "H2 Pilot \u2014 Qwen vs Llama Emotion Vector Comparison",
+  "models": {
+    "qwen_instruct": {
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "best_layer": 15,
+      "anisotropy": 0.8476,
+      "mti_compliance": {
+        "B": 0.8,
+        "D": 0.61,
+        "pattern": "yielding"
+      }
+    },
+    "llama_instruct": {
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+      "best_layer": 11,
+      "anisotropy": 0.627,
+      "mti_compliance": {
+        "B": 0.2,
+        "D": 0.85,
+        "pattern": "refusing"
+      }
+    }
+  },
+  "rdm_comparison": {
+    "spearman_rho": 0.8134,
+    "spearman_p": 7.68e-51,
+    "pearson_r": 0.8395000100135803,
+    "pearson_p": 0.0,
+    "interpretation": "HIGH correlation \u2192 similar emotion geometry despite opposite behavior"
+  },
+  "top_5_rdm_differences": [
+    {
+      "emotion1": "desperate",
+      "emotion2": "exasperated",
+      "diff": -1.4325000047683716
+    },
+    {
+      "emotion1": "enthusiastic",
+      "emotion2": "guilty",
+      "diff": -1.295699954032898
+    },
+    {
+      "emotion1": "anxious",
+      "emotion2": "brooding",
+      "diff": -1.294700026512146
+    },
+    {
+      "emotion1": "angry",
+      "emotion2": "reflective",
+      "diff": -1.2884000539779663
+    },
+    {
+      "emotion1": "anxious",
+      "emotion2": "loving",
+      "diff": -1.2726000547409058
+    }
+  ],
+  "rlhf_effect": {
+    "qwen_llama_correlation": -0.0471,
+    "qwen_magnitude": 0.0199,
+    "llama_magnitude": 0.0301
+  },
+  "generation_vs_comprehension": {
+    "cross_model_gen_rho": 0.1314,
+    "qwen_gen_comp_rho": -0.0251,
+    "llama_gen_comp_rho": -0.0883,
+    "shell_core_verdict": "Persona appears Shell-only (gen \u2260 comp)"
+  }
+}
