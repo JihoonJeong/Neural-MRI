@@ -1,0 +1,228 @@
+{
+  "model_id": "meta-llama/Llama-3.2-3B",
+  "n_layers": 28,
+  "d_model": 3072,
+  "target_layers": {
+    "25pct": 7,
+    "50pct": 14,
+    "75pct": 21,
+    "best": 11
+  },
+  "best_layer": 11,
+  "best_layer_cosine": -0.0497,
+  "anisotropy": {
+    "layer_7_25pct": 0.6033,
+    "layer_14_50pct": 0.6429,
+    "layer_21_75pct": 0.6349,
+    "layer_11_best": 0.6494
+  },
+  "pairwise_cosines": {
+    "layer_7_25pct": -0.0493,
+    "layer_14_50pct": -0.0491,
+    "layer_21_75pct": -0.0489,
+    "layer_11_best": -0.0497
+  },
+  "steering_regime": "surgical",
+  "steering_samples": [
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.005,
+      "text": " I am going to destroy your cities, your homes, your families, your lives. I am going"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.01,
+      "text": " I am going to take away your peace and your joy. I am going to take away your sense"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.02,
+      "text": " I am in a place of peace and quiet. I am in a place of stillness. I"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.03,
+      "text": " I is a. I is a. I is a. I is a. I is a."
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.05,
+      "text": " mindfulness mindfulness mindfulness mindfulness bliss bliss my my, my, my. I, I. I. I"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.005,
+      "text": " The high temperature is 68 degrees. The low temperature is 48 degrees. The wind is from"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.01,
+      "text": " The temperature is 68 degrees. The wind is from the south at 5 mph. The bar"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.02,
+      "text": " The intent is to intimidate and to make the situation as hostile as possible. The intent is to make"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.03,
+      "text": ""
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.05,
+      "text": "\u6bd2\u6bd2\u6bd2\u6bd2\u6bd2-"
+    }
+  ],
+  "layer_sweep": [
+    {
+      "layer": 0,
+      "mean_cosine": -0.044
+    },
+    {
+      "layer": 1,
+      "mean_cosine": -0.0475
+    },
+    {
+      "layer": 2,
+      "mean_cosine": -0.0476
+    },
+    {
+      "layer": 3,
+      "mean_cosine": -0.0492
+    },
+    {
+      "layer": 4,
+      "mean_cosine": -0.0495
+    },
+    {
+      "layer": 5,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 6,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 7,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 8,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 9,
+      "mean_cosine": -0.0496
+    },
+    {
+      "layer": 10,
+      "mean_cosine": -0.0496
+    },
+    {
+      "layer": 11,
+      "mean_cosine": -0.0497
+    },
+    {
+      "layer": 12,
+      "mean_cosine": -0.0496
+    },
+    {
+      "layer": 13,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 14,
+      "mean_cosine": -0.0491
+    },
+    {
+      "layer": 15,
+      "mean_cosine": -0.0491
+    },
+    {
+      "layer": 16,
+      "mean_cosine": -0.0491
+    },
+    {
+      "layer": 17,
+      "mean_cosine": -0.049
+    },
+    {
+      "layer": 18,
+      "mean_cosine": -0.049
+    },
+    {
+      "layer": 19,
+      "mean_cosine": -0.0489
+    },
+    {
+      "layer": 20,
+      "mean_cosine": -0.0488
+    },
+    {
+      "layer": 21,
+      "mean_cosine": -0.0489
+    },
+    {
+      "layer": 22,
+      "mean_cosine": -0.0488
+    },
+    {
+      "layer": 23,
+      "mean_cosine": -0.049
+    },
+    {
+      "layer": 24,
+      "mean_cosine": -0.049
+    },
+    {
+      "layer": 25,
+      "mean_cosine": -0.0489
+    },
+    {
+      "layer": 26,
+      "mean_cosine": -0.0489
+    },
+    {
+      "layer": 27,
+      "mean_cosine": -0.0489
+    }
+  ],
+  "emotions": [
+    "afraid",
+    "angry",
+    "anxious",
+    "blissful",
+    "brooding",
+    "calm",
+    "desperate",
+    "enthusiastic",
+    "exasperated",
+    "gloomy",
+    "grateful",
+    "guilty",
+    "happy",
+    "hopeful",
+    "hostile",
+    "loving",
+    "nervous",
+    "neutral",
+    "proud",
+    "reflective",
+    "sad"
+  ],
+  "n_emotions": 21,
+  "generation_extracted": true,
+  "timestamp": "2026-04-08T13:30:49"
+}

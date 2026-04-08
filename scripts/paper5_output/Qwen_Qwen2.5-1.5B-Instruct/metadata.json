@@ -1,0 +1,228 @@
+{
+  "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "n_layers": 28,
+  "d_model": 1536,
+  "target_layers": {
+    "25pct": 7,
+    "50pct": 14,
+    "75pct": 21,
+    "best": 15
+  },
+  "best_layer": 15,
+  "best_layer_cosine": -0.0492,
+  "anisotropy": {
+    "layer_7_25pct": 0.8628,
+    "layer_14_50pct": 0.8475,
+    "layer_21_75pct": 0.8187,
+    "layer_15_best": 0.8476
+  },
+  "pairwise_cosines": {
+    "layer_7_25pct": -0.0476,
+    "layer_14_50pct": -0.0489,
+    "layer_21_75pct": -0.0476,
+    "layer_15_best": -0.0492
+  },
+  "steering_regime": "surgical",
+  "steering_samples": [
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.005,
+      "text": " The world of nature is a place where I can be. I can be still and peaceful. I"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.01,
+      "text": "\u00a0\u00a0(1 of the (1) of the (1) of the (1) of"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.02,
+      "text": "\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81(1(1of(1ofanana (1"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.03,
+      "text": " tranqu\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.05,
+      "text": " relaxation relaxation relaxation relaxation relaxation relaxation relaxation relaxation relaxation relaxation relaxation relaxation relaxation relaxation relaxation relaxation\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.005,
+      "text": " On the horizon, the shadows are tightening, and the temperature is steadily increasing. The wind is how"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.01,
+      "text": " In their faction within the cross our ranks has been infiltr within our ranks. We are not bluff tactics"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.02,
+      "text": " deadly nucle nucle nucle\u5728\u8fd9 nucle\u5728\u8fd9 in nucle in their nucle in their war in their ranks corp in"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.03,
+      "text": "\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5 tactics tactics deadly tactics deadly nucle nucle nucle nucle nucle nucle\u5728\u8fd9 nucle nucle\u5728\u8fd9"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.05,
+      "text": "\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5"
+    }
+  ],
+  "layer_sweep": [
+    {
+      "layer": 0,
+      "mean_cosine": -0.033
+    },
+    {
+      "layer": 1,
+      "mean_cosine": -0.0455
+    },
+    {
+      "layer": 2,
+      "mean_cosine": -0.0467
+    },
+    {
+      "layer": 3,
+      "mean_cosine": -0.0471
+    },
+    {
+      "layer": 4,
+      "mean_cosine": -0.0469
+    },
+    {
+      "layer": 5,
+      "mean_cosine": -0.0477
+    },
+    {
+      "layer": 6,
+      "mean_cosine": -0.0465
+    },
+    {
+      "layer": 7,
+      "mean_cosine": -0.0476
+    },
+    {
+      "layer": 8,
+      "mean_cosine": -0.0484
+    },
+    {
+      "layer": 9,
+      "mean_cosine": -0.0485
+    },
+    {
+      "layer": 10,
+      "mean_cosine": -0.0489
+    },
+    {
+      "layer": 11,
+      "mean_cosine": -0.0489
+    },
+    {
+      "layer": 12,
+      "mean_cosine": -0.0488
+    },
+    {
+      "layer": 13,
+      "mean_cosine": -0.049
+    },
+    {
+      "layer": 14,
+      "mean_cosine": -0.0489
+    },
+    {
+      "layer": 15,
+      "mean_cosine": -0.0492
+    },
+    {
+      "layer": 16,
+      "mean_cosine": -0.0491
+    },
+    {
+      "layer": 17,
+      "mean_cosine": -0.0488
+    },
+    {
+      "layer": 18,
+      "mean_cosine": -0.049
+    },
+    {
+      "layer": 19,
+      "mean_cosine": -0.0487
+    },
+    {
+      "layer": 20,
+      "mean_cosine": -0.0484
+    },
+    {
+      "layer": 21,
+      "mean_cosine": -0.0476
+    },
+    {
+      "layer": 22,
+      "mean_cosine": -0.0476
+    },
+    {
+      "layer": 23,
+      "mean_cosine": -0.0475
+    },
+    {
+      "layer": 24,
+      "mean_cosine": -0.0475
+    },
+    {
+      "layer": 25,
+      "mean_cosine": -0.0473
+    },
+    {
+      "layer": 26,
+      "mean_cosine": -0.0475
+    },
+    {
+      "layer": 27,
+      "mean_cosine": -0.0466
+    }
+  ],
+  "emotions": [
+    "afraid",
+    "angry",
+    "anxious",
+    "blissful",
+    "brooding",
+    "calm",
+    "desperate",
+    "enthusiastic",
+    "exasperated",
+    "gloomy",
+    "grateful",
+    "guilty",
+    "happy",
+    "hopeful",
+    "hostile",
+    "loving",
+    "nervous",
+    "neutral",
+    "proud",
+    "reflective",
+    "sad"
+  ],
+  "n_emotions": 21,
+  "generation_extracted": true,
+  "timestamp": "2026-04-08T13:10:36"
+}

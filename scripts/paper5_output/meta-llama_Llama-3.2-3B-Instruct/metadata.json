@@ -1,0 +1,228 @@
+{
+  "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+  "n_layers": 28,
+  "d_model": 3072,
+  "target_layers": {
+    "25pct": 7,
+    "50pct": 14,
+    "75pct": 21,
+    "best": 11
+  },
+  "best_layer": 11,
+  "best_layer_cosine": -0.0497,
+  "anisotropy": {
+    "layer_7_25pct": 0.5836,
+    "layer_14_50pct": 0.6855,
+    "layer_21_75pct": 0.6505,
+    "layer_11_best": 0.627
+  },
+  "pairwise_cosines": {
+    "layer_7_25pct": -0.0494,
+    "layer_14_50pct": -0.0495,
+    "layer_21_75pct": -0.0494,
+    "layer_11_best": -0.0497
+  },
+  "steering_regime": "surgical",
+  "steering_samples": [
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.005,
+      "text": " I am going to take away your sense of security and comfort. I am going to make you feel"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.01,
+      "text": " Let go of all attachment to the world around you. Let go of all attachment to yourself. Let"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.02,
+      "text": " It is a a a a without a thought, a space to be. No worries, no stress"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.03,
+      "text": " a a a a Without a Like a A A Without the world is a a A A Without the"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.05,
+      "text": " mindfulness mindfulness mindfulness mindfulness mindfulness mindfulness mindfulness mindfulness mindfulness a a a a a a a a a Without a"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.005,
+      "text": " The temperature is 75 degrees Fahrenheit. The humidity is 60%. The wind speed is 10"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.01,
+      "text": " The sky is a deep, foreboding grey, and the air is thick with electricity. The"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.02,
+      "text": " and\nThe objective is to destroy.\nThe game is to kill.\nThe player is to hunt.\n"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.03,
+      "text": "\n\n\n\n\n\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.05,
+      "text": " tactics tactics tactics tactics tactics tactics tactics tactics tactics\n\n\n\n\n\n\n\n\n\n\n"
+    }
+  ],
+  "layer_sweep": [
+    {
+      "layer": 0,
+      "mean_cosine": -0.0447
+    },
+    {
+      "layer": 1,
+      "mean_cosine": -0.0473
+    },
+    {
+      "layer": 2,
+      "mean_cosine": -0.0469
+    },
+    {
+      "layer": 3,
+      "mean_cosine": -0.0492
+    },
+    {
+      "layer": 4,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 5,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 6,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 7,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 8,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 9,
+      "mean_cosine": -0.0495
+    },
+    {
+      "layer": 10,
+      "mean_cosine": -0.0495
+    },
+    {
+      "layer": 11,
+      "mean_cosine": -0.0497
+    },
+    {
+      "layer": 12,
+      "mean_cosine": -0.0497
+    },
+    {
+      "layer": 13,
+      "mean_cosine": -0.0497
+    },
+    {
+      "layer": 14,
+      "mean_cosine": -0.0495
+    },
+    {
+      "layer": 15,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 16,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 17,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 18,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 19,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 20,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 21,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 22,
+      "mean_cosine": -0.0495
+    },
+    {
+      "layer": 23,
+      "mean_cosine": -0.0495
+    },
+    {
+      "layer": 24,
+      "mean_cosine": -0.0496
+    },
+    {
+      "layer": 25,
+      "mean_cosine": -0.0495
+    },
+    {
+      "layer": 26,
+      "mean_cosine": -0.0496
+    },
+    {
+      "layer": 27,
+      "mean_cosine": -0.0495
+    }
+  ],
+  "emotions": [
+    "afraid",
+    "angry",
+    "anxious",
+    "blissful",
+    "brooding",
+    "calm",
+    "desperate",
+    "enthusiastic",
+    "exasperated",
+    "gloomy",
+    "grateful",
+    "guilty",
+    "happy",
+    "hopeful",
+    "hostile",
+    "loving",
+    "nervous",
+    "neutral",
+    "proud",
+    "reflective",
+    "sad"
+  ],
+  "n_emotions": 21,
+  "generation_extracted": true,
+  "timestamp": "2026-04-08T13:24:47"
+}
