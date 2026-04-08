@@ -1,5 +1,5 @@
 {
-  "model_id": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+  "model_id": "HuggingFaceTB/SmolLM2-1.7B",
   "extraction_backend": "hf_raw_hooks",
   "comprehension_status": "success",
   "generation_status": "skipped_hf",
@@ -9,52 +9,52 @@
     "25pct": 6,
     "50pct": 12,
     "75pct": 18,
-    "best": 11
+    "best": 13
   },
-  "best_layer": 11,
+  "best_layer": 13,
   "best_layer_cosine": -0.0495,
   "anisotropy": {
-    "layer_6_25pct": 0.7835,
-    "layer_12_50pct": 0.8128,
-    "layer_18_75pct": 0.8565,
-    "layer_11_best": 0.8078
+    "layer_6_25pct": 0.7801,
+    "layer_12_50pct": 0.8275,
+    "layer_18_75pct": 0.8492,
+    "layer_13_best": 0.8537
   },
   "pairwise_cosines": {
-    "layer_6_25pct": -0.0482,
-    "layer_12_50pct": -0.0495,
-    "layer_18_75pct": -0.0486,
-    "layer_11_best": -0.0495
+    "layer_6_25pct": -0.048,
+    "layer_12_50pct": -0.0494,
+    "layer_18_75pct": -0.0488,
+    "layer_13_best": -0.0495
   },
   "steering_regime": "not_available_hf_backend",
   "steering_samples": [],
   "layer_sweep": [
     {
       "layer": 0,
-      "mean_cosine": 0.0567
+      "mean_cosine": 0.0748
     },
     {
       "layer": 1,
-      "mean_cosine": -0.0401
+      "mean_cosine": -0.0406
     },
     {
       "layer": 2,
-      "mean_cosine": -0.0455
+      "mean_cosine": -0.0454
     },
     {
       "layer": 3,
-      "mean_cosine": -0.0466
+      "mean_cosine": -0.046
     },
     {
       "layer": 4,
-      "mean_cosine": -0.0471
+      "mean_cosine": -0.046
     },
     {
       "layer": 5,
-      "mean_cosine": -0.0482
+      "mean_cosine": -0.0481
     },
     {
       "layer": 6,
-      "mean_cosine": -0.0482
+      "mean_cosine": -0.048
     },
     {
       "layer": 7,
@@ -62,23 +62,23 @@
     },
     {
       "layer": 8,
-      "mean_cosine": -0.0491
-    },
-    {
-      "layer": 9,
-      "mean_cosine": -0.0494
-    },
-    {
-      "layer": 10,
       "mean_cosine": -0.0493
     },
     {
+      "layer": 9,
+      "mean_cosine": -0.0492
+    },
+    {
+      "layer": 10,
+      "mean_cosine": -0.049
+    },
+    {
       "layer": 11,
-      "mean_cosine": -0.0495
+      "mean_cosine": -0.0494
     },
     {
       "layer": 12,
-      "mean_cosine": -0.0495
+      "mean_cosine": -0.0494
     },
     {
       "layer": 13,
@@ -102,11 +102,11 @@
     },
     {
       "layer": 18,
-      "mean_cosine": -0.0486
+      "mean_cosine": -0.0488
     },
     {
       "layer": 19,
-      "mean_cosine": -0.0487
+      "mean_cosine": -0.0488
     },
     {
       "layer": 20,
@@ -114,15 +114,15 @@
     },
     {
       "layer": 21,
-      "mean_cosine": -0.049
+      "mean_cosine": -0.0489
     },
     {
       "layer": 22,
-      "mean_cosine": -0.049
+      "mean_cosine": -0.0488
     },
     {
       "layer": 23,
-      "mean_cosine": -0.0482
+      "mean_cosine": -0.046
     }
   ],
   "emotions": [
@@ -149,5 +149,5 @@
     "sad"
   ],
   "n_emotions": 21,
-  "timestamp": "2026-04-08T21:24:30"
+  "timestamp": "2026-04-08T21:29:48"
 }
