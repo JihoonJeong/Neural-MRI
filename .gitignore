@@ -32,6 +32,10 @@ models/
 *.bin
 *.safetensors
 
+# Paper #5 output exceptions (small .pt files, ~2.7MB each)
+!scripts/paper5_output/**/*.pt
+!paper5/data/emotion/**/*.pt
+
 # HuggingFace cache
 .cache/
 
