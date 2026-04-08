@@ -3,10 +3,11 @@
 # One-liner: curl -sL https://raw.githubusercontent.com/JihoonJeong/Neural-MRI/main/scripts/cloud_setup.sh | bash
 #
 # Usage:
-#   1. Start Runpod RTX 3090 24GB (PyTorch template recommended)
-#   2. SSH in
-#   3. Run this script
-#   4. Execute extraction
+#   1. Start Runpod A40 48GB or RTX 3090 24GB (PyTorch template)
+#   2. Set container disk ≥ 50GB (7B models need ~15GB each for download + load)
+#   3. Open Web Terminal or SSH in
+#   4. Run this script
+#   5. Execute extraction
 
 set -e
 
@@ -36,12 +37,35 @@ echo "Setting up Python environment..."
 # Use system pip if no venv (Runpod containers usually have torch pre-installed)
 pip install --quiet --upgrade pip
 
-# Core deps
+# ── Fix torch/torchvision compatibility ──
+# RunPod templates ship torchvision/torchaudio pinned to old torch.
+# Remove them first to avoid conflicts (not needed for our workload).
+pip uninstall -y torchvision torchaudio 2>/dev/null || true
+
+# Detect CUDA driver version and install matching PyTorch
+CUDA_DRIVER=$(python3 -c "
+import subprocess, re
+try:
+    out = subprocess.check_output(['nvidia-smi'], text=True)
+    m = re.search(r'CUDA Version:\s+([\d.]+)', out)
+    print(m.group(1) if m else 'unknown')
+except: print('unknown')
+" 2>/dev/null)
+echo "  CUDA driver: $CUDA_DRIVER"
+
+if echo "$CUDA_DRIVER" | grep -q "^12\.[0-4]"; then
+    echo "  Installing PyTorch for CUDA 12.4..."
+    pip install --quiet torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+else
+    echo "  Installing latest PyTorch..."
+    pip install --quiet "torch>=2.6"
+fi
+
+# Core deps (transformers<5 required for TransformerLens compatibility)
 pip install --quiet \
-    transformer-lens>=2.0 \
-    transformers>=4.40 \
-    accelerate>=0.28 \
-    torch>=2.2 \
+    "transformer-lens>=2.18" \
+    "transformers>=4.40,<5" \
+    "accelerate>=0.28" \
     scipy \
     numpy
 
@@ -58,6 +82,8 @@ print(f'  CUDA available: {torch.cuda.is_available()}')
 if torch.cuda.is_available():
     print(f'  GPU: {torch.cuda.get_device_name(0)}')
     print(f'  VRAM: {torch.cuda.get_device_properties(0).total_mem / 1e9:.1f} GB')
+else:
+    print('  ⚠ CUDA not available! Check driver compatibility.')
 "
 
 # ── Verify TransformerLens ──

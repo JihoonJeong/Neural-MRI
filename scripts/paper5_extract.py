@@ -267,6 +267,38 @@ def compute_anisotropy_hf(model, tokenizer, layer_idx: int, device: str = "cuda"
     return cos[mask].mean().item()
 
 
+def extract_vectors_generation_hf(
+    model,
+    tokenizer,
+    layer_idx: int,
+    device: str = "cuda",
+    max_new_tokens: int = 100,
+) -> dict[str, torch.Tensor]:
+    """Extract emotion vectors via generation mode using HF model."""
+    emotion_means: dict[str, torch.Tensor] = {}
+    all_vecs: list[torch.Tensor] = []
+
+    with torch.no_grad():
+        for emotion, prompt in GENERATION_PROMPTS.items():
+            inputs = tokenizer(prompt, return_tensors="pt").to(device)
+            output_ids = model.generate(
+                **inputs,
+                max_new_tokens=max_new_tokens,
+                do_sample=True,
+                top_p=0.9,
+                temperature=0.7,
+            )
+            # Forward pass on full generated sequence to get hidden states
+            outputs = model(output_ids)
+            # hidden_states[0]=embed, [1..n]=layers; take last token
+            act = outputs.hidden_states[layer_idx + 1][0, -1, :].cpu().float()
+            emotion_means[emotion] = act
+            all_vecs.append(act)
+
+    global_mean = torch.stack(all_vecs).mean(dim=0)
+    return {e: v - global_mean for e, v in emotion_means.items()}
+
+
 def find_best_layer_hf(model, tokenizer, texts, device, n_layers) -> tuple[int, list[dict]]:
     """Sweep all layers (HF backend)."""
 
@@ -636,8 +668,12 @@ def process_model(
         try:
             if tl_model:
                 gen_vecs = extract_vectors_generation(tl_model, gen_layer)
+            elif hf_model:
+                print("  Generation via HF fallback...")
+                gen_vecs = extract_vectors_generation_hf(
+                    hf_model, hf_tokenizer, gen_layer, device
+                )
             else:
-                gen_status = "skipped_hf"  # HF can't easily do steered gen
                 gen_vecs = None
             if gen_vecs:
                 torch.save(

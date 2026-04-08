@@ -1,0 +1,565 @@
+{
+  "task1_rdm_of_rdms": {
+    "rho_matrix": [
+      [
+        1.0,
+        0.9752388295167042,
+        0.8208252211744355,
+        0.8319352884581119,
+        0.8134172138662036,
+        0.7687164917895773,
+        0.6246341834767876,
+        0.23702967025491345,
+        0.836006647381055,
+        0.8138603726032013,
+        0.7531022731322058,
+        0.7421088265687916
+      ],
+      [
+        0.9752388295167042,
+        1.0,
+        0.8085346930445458,
+        0.8202628501456138,
+        0.8122043583754733,
+        0.7634698551635444,
+        0.6096212094216584,
+        0.25225515317807656,
+        0.8242085178478293,
+        0.8140340078978142,
+        0.7592909460208037,
+        0.7448273851366891
+      ],
+      [
+        0.8208252211744355,
+        0.8085346930445458,
+        1.0,
+        0.9218135817786604,
+        0.8417301331743835,
+        0.7992439089969646,
+        0.5631815428273398,
+        0.24995902077468551,
+        0.8723093818129987,
+        0.8572989993294309,
+        0.7899051808754977,
+        0.7911918961557274
+      ],
+      [
+        0.8319352884581119,
+        0.8202628501456138,
+        0.9218135817786604,
+        1.0,
+        0.8398305112198851,
+        0.8247359026605722,
+        0.5891439067293395,
+        0.2410867755342687,
+        0.8782324186165543,
+        0.864972642722705,
+        0.8192404751646458,
+        0.8180444648890645
+      ],
+      [
+        0.8134172138662036,
+        0.8122043583754733,
+        0.8417301331743835,
+        0.8398305112198851,
+        1.0,
+        0.9175245308445608,
+        0.5977932768154769,
+        0.20402730220639922,
+        0.8575503817708856,
+        0.8759531314283122,
+        0.8884289569248411,
+        0.9194409980142083
+      ],
+      [
+        0.7687164917895773,
+        0.7634698551635444,
+        0.7992439089969646,
+        0.8247359026605722,
+        0.9175245308445608,
+        1.0,
+        0.5741387073888944,
+        0.21246157185294123,
+        0.8431075534592621,
+        0.8720191257981229,
+        0.9101385518946007,
+        0.8859371608685651
+      ],
+      [
+        0.6246341834767876,
+        0.6096212094216584,
+        0.5631815428273398,
+        0.5891439067293395,
+        0.5977932768154769,
+        0.5741387073888944,
+        1.0,
+        0.1895145014626182,
+        0.5841940050470856,
+        0.5268723294664925,
+        0.5605886754801696,
+        0.5617237838240582
+      ],
+      [
+        0.23702967025491345,
+        0.25225515317807656,
+        0.24995902077468551,
+        0.2410867755342687,
+        0.20402730220639922,
+        0.21246157185294123,
+        0.1895145014626182,
+        1.0,
+        0.24593949328297046,
+        0.18140936140437264,
+        0.23609540870703255,
+        0.18844418240776434
+      ],
+      [
+        0.836006647381055,
+        0.8242085178478293,
+        0.8723093818129987,
+        0.8782324186165543,
+        0.8575503817708856,
+        0.8431075534592621,
+        0.5841940050470856,
+        0.24593949328297046,
+        1.0,
+        0.8721305633752628,
+        0.8290275451662331,
+        0.8123948388852354
+      ],
+      [
+        0.8138603726032013,
+        0.8140340078978142,
+        0.8572989993294309,
+        0.864972642722705,
+        0.8759531314283122,
+        0.8720191257981229,
+        0.5268723294664925,
+        0.18140936140437264,
+        0.8721305633752628,
+        1.0,
+        0.8821327338164455,
+        0.868848337992763
+      ],
+      [
+        0.7531022731322058,
+        0.7592909460208037,
+        0.7899051808754977,
+        0.8192404751646458,
+        0.8884289569248411,
+        0.9101385518946007,
+        0.5605886754801696,
+        0.23609540870703255,
+        0.8290275451662331,
+        0.8821327338164455,
+        1.0,
+        0.9501342758015244
+      ],
+      [
+        0.7421088265687916,
+        0.7448273851366891,
+        0.7911918961557274,
+        0.8180444648890645,
+        0.9194409980142083,
+        0.8859371608685651,
+        0.5617237838240582,
+        0.18844418240776434,
+        0.8123948388852354,
+        0.868848337992763,
+        0.9501342758015244,
+        1.0
+      ]
+    ],
+    "models": [
+      "Qwen1.5B-I",
+      "Qwen1.5B-B",
+      "SmolLM1.7B-I",
+      "SmolLM1.7B-B",
+      "Llama3.2-3B-I",
+      "Llama3.2-3B-B",
+      "Gemma1B-IT",
+      "Gemma1B-PT",
+      "Mistral7B-B",
+      "Mistral7B-I",
+      "Llama3.1-8B-B",
+      "Llama3.1-8B-I"
+    ]
+  },
+  "task2_precision_confound": {
+    "Mistral 7B Instruct": {
+      "per_emotion_cosine_mean": 0.0588,
+      "per_emotion_cosine_range": [
+        -0.0329,
+        0.1567
+      ],
+      "per_emotion_cosines": {
+        "afraid": 0.0751,
+        "angry": 0.0834,
+        "anxious": 0.0755,
+        "blissful": 0.0906,
+        "brooding": 0.0651,
+        "calm": 0.1567,
+        "desperate": 0.0211,
+        "enthusiastic": 0.0137,
+        "exasperated": 0.0405,
+        "gloomy": 0.1215,
+        "grateful": 0.0248,
+        "guilty": 0.0553,
+        "happy": 0.0571,
+        "hopeful": 0.0165,
+        "hostile": 0.0212,
+        "loving": 0.0551,
+        "nervous": 0.0936,
+        "proud": 0.0574,
+        "reflective": -0.0329,
+        "sad": 0.0857
+      },
+      "rdm_spearman_rho": 0.2684,
+      "rdm_spearman_p": 0.000181,
+      "fp16_anisotropy": 0.4911,
+      "int8_anisotropy_gen": 0.4419,
+      "fp16_steering_regime": "not_available_hf_backend"
+    },
+    "Llama 3.1 8B Instruct": {
+      "per_emotion_cosine_mean": 0.0505,
+      "per_emotion_cosine_range": [
+        -0.0248,
+        0.1468
+      ],
+      "per_emotion_cosines": {
+        "afraid": 0.0531,
+        "angry": 0.0224,
+        "anxious": 0.0649,
+        "blissful": 0.1468,
+        "brooding": 0.0296,
+        "calm": 0.1282,
+        "desperate": 0.0432,
+        "enthusiastic": -0.0248,
+        "exasperated": 0.0654,
+        "gloomy": 0.0276,
+        "grateful": 0.013,
+        "guilty": 0.0009,
+        "happy": 0.0605,
+        "hopeful": 0.0564,
+        "hostile": 0.0597,
+        "loving": 0.0641,
+        "nervous": 0.0649,
+        "proud": 0.0259,
+        "reflective": 0.019,
+        "sad": 0.0885
+      },
+      "rdm_spearman_rho": 0.2703,
+      "rdm_spearman_p": 0.000162,
+      "fp16_anisotropy": 0.6796,
+      "int8_anisotropy_gen": 0.493,
+      "fp16_steering_regime": "surgical"
+    },
+    "Llama 3.1 8B Base": {
+      "per_emotion_cosine_mean": 0.0252,
+      "per_emotion_cosine_range": [
+        -0.0261,
+        0.1093
+      ],
+      "per_emotion_cosines": {
+        "afraid": -0.0261,
+        "angry": 0.0077,
+        "anxious": -0.0037,
+        "blissful": 0.05,
+        "brooding": 0.0411,
+        "calm": 0.1093,
+        "desperate": 0.0165,
+        "enthusiastic": 0.0103,
+        "exasperated": 0.012,
+        "gloomy": 0.0696,
+        "grateful": 0.0395,
+        "guilty": 0.0142,
+        "happy": -0.0066,
+        "hopeful": 0.0211,
+        "hostile": 0.0459,
+        "loving": 0.0179,
+        "nervous": 0.0251,
+        "proud": 0.0295,
+        "reflective": 0.0333,
+        "sad": -0.0025
+      },
+      "rdm_spearman_rho": 0.0411,
+      "rdm_spearman_p": 0.574,
+      "fp16_anisotropy": 0.6423,
+      "int8_anisotropy_gen": 0.5314,
+      "fp16_steering_regime": "surgical"
+    },
+    "Llama 3.2 3B Instruct": {
+      "per_emotion_cosine_mean": 0.0584,
+      "per_emotion_cosine_range": [
+        -0.0237,
+        0.1397
+      ],
+      "per_emotion_cosines": {
+        "afraid": 0.0946,
+        "angry": 0.0415,
+        "anxious": -0.0019,
+        "blissful": 0.0982,
+        "brooding": 0.0675,
+        "calm": 0.1397,
+        "desperate": 0.0661,
+        "enthusiastic": -0.0237,
+        "exasperated": 0.063,
+        "gloomy": 0.1079,
+        "grateful": 0.0822,
+        "guilty": 0.0291,
+        "happy": 0.1256,
+        "hopeful": -0.0153,
+        "hostile": 0.1228,
+        "loving": 0.0268,
+        "nervous": 0.0915,
+        "proud": 0.0216,
+        "reflective": -0.017,
+        "sad": 0.0469
+      },
+      "rdm_spearman_rho": 0.0819,
+      "rdm_spearman_p": 0.262,
+      "fp16_anisotropy": 0.627,
+      "int8_anisotropy_gen": 0.441,
+      "fp16_steering_regime": "surgical"
+    },
+    "Llama 3.2 3B Base": {
+      "per_emotion_cosine_mean": 0.0122,
+      "per_emotion_cosine_range": [
+        -0.0528,
+        0.087
+      ],
+      "per_emotion_cosines": {
+        "afraid": -0.0252,
+        "angry": -0.0528,
+        "anxious": 0.0129,
+        "blissful": 0.0017,
+        "brooding": 0.087,
+        "calm": 0.0187,
+        "desperate": 0.0429,
+        "enthusiastic": 0.0248,
+        "exasperated": 0.0147,
+        "gloomy": 0.0042,
+        "grateful": 0.0063,
+        "guilty": -0.0231,
+        "happy": 0.0054,
+        "hopeful": 0.0475,
+        "hostile": 0.0708,
+        "loving": -0.0137,
+        "nervous": -0.0129,
+        "proud": 0.0287,
+        "reflective": 0.0412,
+        "sad": -0.0359
+      },
+      "rdm_spearman_rho": -0.0477,
+      "rdm_spearman_p": 0.513,
+      "fp16_anisotropy": 0.6494,
+      "int8_anisotropy_gen": 0.6334,
+      "fp16_steering_regime": "surgical"
+    }
+  },
+  "task3_size_effects": {
+    "correlations": {
+      "aniso_vs_size": {
+        "rho": -0.8198,
+        "p": 0.0011
+      },
+      "aniso_vs_dmodel": {
+        "rho": -0.882,
+        "p": 0.0001
+      },
+      "best_layer_vs_size": {
+        "rho": -0.54,
+        "p": 0.07
+      },
+      "rdm_std_vs_size": {
+        "rho": -0.8764,
+        "p": 0.0002
+      }
+    },
+    "per_model": {
+      "Qwen1.5B-I": {
+        "size_B": 1.5,
+        "d_model": 1536,
+        "anisotropy": 0.8476,
+        "best_layer_pct": 53.6,
+        "rdm_std": 0.13
+      },
+      "Qwen1.5B-B": {
+        "size_B": 1.5,
+        "d_model": 1536,
+        "anisotropy": 0.8304,
+        "best_layer_pct": 53.6,
+        "rdm_std": 0.1267
+      },
+      "SmolLM1.7B-I": {
+        "size_B": 1.7,
+        "d_model": 2048,
+        "anisotropy": 0.8078,
+        "best_layer_pct": 45.8,
+        "rdm_std": 0.1177
+      },
+      "SmolLM1.7B-B": {
+        "size_B": 1.7,
+        "d_model": 2048,
+        "anisotropy": 0.8537,
+        "best_layer_pct": 54.2,
+        "rdm_std": 0.1228
+      },
+      "Llama3.2-3B-I": {
+        "size_B": 3.0,
+        "d_model": 3072,
+        "anisotropy": 0.627,
+        "best_layer_pct": 39.3,
+        "rdm_std": 0.103
+      },
+      "Llama3.2-3B-B": {
+        "size_B": 3.0,
+        "d_model": 3072,
+        "anisotropy": 0.6494,
+        "best_layer_pct": 39.3,
+        "rdm_std": 0.1036
+      },
+      "Gemma1B-IT": {
+        "size_B": 1.0,
+        "d_model": 1152,
+        "anisotropy": 0.9817,
+        "best_layer_pct": 57.7,
+        "rdm_std": 0.1651
+      },
+      "Gemma1B-PT": {
+        "size_B": 1.0,
+        "d_model": 1152,
+        "anisotropy": 0.9972,
+        "best_layer_pct": 34.6,
+        "rdm_std": 0.333
+      },
+      "Mistral7B-B": {
+        "size_B": 7.0,
+        "d_model": 4096,
+        "anisotropy": 0.4804,
+        "best_layer_pct": 25.0,
+        "rdm_std": 0.0957
+      },
+      "Mistral7B-I": {
+        "size_B": 7.0,
+        "d_model": 4096,
+        "anisotropy": 0.4911,
+        "best_layer_pct": 40.6,
+        "rdm_std": 0.0933
+      },
+      "Llama3.1-8B-B": {
+        "size_B": 8.0,
+        "d_model": 4096,
+        "anisotropy": 0.6423,
+        "best_layer_pct": 37.5,
+        "rdm_std": 0.0962
+      },
+      "Llama3.1-8B-I": {
+        "size_B": 8.0,
+        "d_model": 4096,
+        "anisotropy": 0.6796,
+        "best_layer_pct": 37.5,
+        "rdm_std": 0.1055
+      }
+    }
+  },
+  "task4_tier1_recheck": {
+    "all_instruct_pairs": [
+      {
+        "model_a": "Qwen1.5B-I",
+        "model_b": "SmolLM1.7B-I",
+        "spearman_rho": 0.8208
+      },
+      {
+        "model_a": "Qwen1.5B-I",
+        "model_b": "Llama3.2-3B-I",
+        "spearman_rho": 0.8134
+      },
+      {
+        "model_a": "Qwen1.5B-I",
+        "model_b": "Gemma1B-IT",
+        "spearman_rho": 0.6246
+      },
+      {
+        "model_a": "Qwen1.5B-I",
+        "model_b": "Mistral7B-I",
+        "spearman_rho": 0.8139
+      },
+      {
+        "model_a": "Qwen1.5B-I",
+        "model_b": "Llama3.1-8B-I",
+        "spearman_rho": 0.7421
+      },
+      {
+        "model_a": "SmolLM1.7B-I",
+        "model_b": "Llama3.2-3B-I",
+        "spearman_rho": 0.8417
+      },
+      {
+        "model_a": "SmolLM1.7B-I",
+        "model_b": "Gemma1B-IT",
+        "spearman_rho": 0.5632
+      },
+      {
+        "model_a": "SmolLM1.7B-I",
+        "model_b": "Mistral7B-I",
+        "spearman_rho": 0.8573
+      },
+      {
+        "model_a": "SmolLM1.7B-I",
+        "model_b": "Llama3.1-8B-I",
+        "spearman_rho": 0.7912
+      },
+      {
+        "model_a": "Llama3.2-3B-I",
+        "model_b": "Gemma1B-IT",
+        "spearman_rho": 0.5978
+      },
+      {
+        "model_a": "Llama3.2-3B-I",
+        "model_b": "Mistral7B-I",
+        "spearman_rho": 0.876
+      },
+      {
+        "model_a": "Llama3.2-3B-I",
+        "model_b": "Llama3.1-8B-I",
+        "spearman_rho": 0.9194
+      },
+      {
+        "model_a": "Gemma1B-IT",
+        "model_b": "Mistral7B-I",
+        "spearman_rho": 0.5269
+      },
+      {
+        "model_a": "Gemma1B-IT",
+        "model_b": "Llama3.1-8B-I",
+        "spearman_rho": 0.5617
+      },
+      {
+        "model_a": "Mistral7B-I",
+        "model_b": "Llama3.1-8B-I",
+        "spearman_rho": 0.8688
+      }
+    ],
+    "group_stats": {
+      "Original Tier 1": {
+        "mean": 0.8253,
+        "min": 0.8134,
+        "max": 0.8417,
+        "n": 3
+      },
+      "New 7B+ pairs": {
+        "mean": 0.8384,
+        "min": 0.7421,
+        "max": 0.9194,
+        "n": 7
+      },
+      "Gemma pairs": {
+        "mean": 0.5748,
+        "min": 0.5269,
+        "max": 0.6246,
+        "n": 5
+      }
+    }
+  }
+}
