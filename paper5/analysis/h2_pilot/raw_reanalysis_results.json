@@ -1,0 +1,102 @@
+{
+  "raw_instruct_pairs": [
+    {
+      "pair": "Qwen Inst vs Llama Inst",
+      "rho": 0.8134
+    },
+    {
+      "pair": "Qwen Inst vs Gemma Inst",
+      "rho": 0.6246
+    },
+    {
+      "pair": "Llama Inst vs Gemma Inst",
+      "rho": 0.5978
+    }
+  ],
+  "noise_comparison": {
+    "Qwen Inst": {
+      "mean_cos": -0.0492,
+      "std": 0.13
+    },
+    "Qwen Base": {
+      "mean_cos": -0.0492,
+      "std": 0.1267
+    },
+    "Llama Inst": {
+      "mean_cos": -0.0497,
+      "std": 0.103
+    },
+    "Llama Base": {
+      "mean_cos": -0.0497,
+      "std": 0.1036
+    },
+    "Gemma Inst": {
+      "mean_cos": -0.0494,
+      "std": 0.1651
+    },
+    "Gemma Base": {
+      "mean_cos": -0.0487,
+      "std": 0.333
+    }
+  },
+  "raw_rdm_of_rdms": {
+    "labels": [
+      "Qwen Inst",
+      "Qwen Base",
+      "Llama Inst",
+      "Llama Base",
+      "Gemma Inst",
+      "Gemma Base"
+    ],
+    "matrix": [
+      [
+        1.0,
+        0.9752,
+        0.8134,
+        0.7687,
+        0.6246,
+        0.237
+      ],
+      [
+        0.9752,
+        1.0,
+        0.8122,
+        0.7635,
+        0.6096,
+        0.2523
+      ],
+      [
+        0.8134,
+        0.8122,
+        1.0,
+        0.9175,
+        0.5978,
+        0.204
+      ],
+      [
+        0.7687,
+        0.7635,
+        0.9175,
+        1.0,
+        0.5741,
+        0.2125
+      ],
+      [
+        0.6246,
+        0.6096,
+        0.5978,
+        0.5741,
+        1.0,
+        0.1895
+      ],
+      [
+        0.237,
+        0.2523,
+        0.204,
+        0.2125,
+        0.1895,
+        1.0
+      ]
+    ]
+  }
+}
