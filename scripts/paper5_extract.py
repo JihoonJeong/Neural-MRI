@@ -38,7 +38,14 @@ import time
 from pathlib import Path
 
 import torch
-from transformer_lens import HookedTransformer
+
+# TransformerLens: optional, will fallback to HF if not available or model unsupported
+try:
+    from transformer_lens import HookedTransformer
+
+    HAS_TL = True
+except ImportError:
+    HAS_TL = False
 
 # ── Config ──────────────────────────────────────────────────────────────────
 
@@ -165,8 +172,127 @@ def extract_vectors_at_layer(
     return {e: v - global_mean for e, v in emotion_means.items()}
 
 
+# ── HF Transformers Fallback ─────────────────────────────────────────────
+
+
+def load_hf_model(model_id: str, device: str, quantize: str | None = None):
+    """Load model via HuggingFace transformers (fallback for TL-unsupported)."""
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+
+    print("  Loading via HF transformers (fallback)...")
+    tokenizer = AutoTokenizer.from_pretrained(model_id)
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+
+    load_kwargs: dict = {"output_hidden_states": True}
+
+    if quantize == "int8":
+        from transformers import BitsAndBytesConfig
+
+        load_kwargs["quantization_config"] = BitsAndBytesConfig(load_in_8bit=True)
+        load_kwargs["device_map"] = device
+    elif quantize == "int4":
+        from transformers import BitsAndBytesConfig
+
+        load_kwargs["quantization_config"] = BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_compute_dtype=torch.float16,
+        )
+        load_kwargs["device_map"] = device
+    else:
+        load_kwargs["torch_dtype"] = torch.float16
+        load_kwargs["device_map"] = device
+
+    model = AutoModelForCausalLM.from_pretrained(model_id, **load_kwargs)
+    model.eval()
+
+    n_layers = model.config.num_hidden_layers
+    d_model = model.config.hidden_size
+    return model, tokenizer, n_layers, d_model
+
+
+def extract_vectors_hf(
+    model,
+    tokenizer,
+    texts: dict[str, list[str]],
+    layer_idx: int,
+    device: str = "cuda",
+) -> dict[str, torch.Tensor]:
+    """Extract emotion vectors using HF model + hidden_states (no TL)."""
+    emotion_means: dict[str, torch.Tensor] = {}
+    all_vecs: list[torch.Tensor] = []
+
+    with torch.no_grad():
+        for emotion, passages in texts.items():
+            acts = []
+            for passage in passages:
+                inputs = tokenizer(passage, return_tensors="pt").to(device)
+                outputs = model(**inputs)
+                # hidden_states[0]=embed, [1..n]=layers
+                act = outputs.hidden_states[layer_idx + 1][0, -1, :].cpu().float()
+                acts.append(act)
+            mean_vec = torch.stack(acts).mean(dim=0)
+            emotion_means[emotion] = mean_vec
+            all_vecs.append(mean_vec)
+
+    global_mean = torch.stack(all_vecs).mean(dim=0)
+    return {e: v - global_mean for e, v in emotion_means.items()}
+
+
+def compute_anisotropy_hf(model, tokenizer, layer_idx: int, device: str = "cuda") -> float:
+    """Compute anisotropy using HF model."""
+    neutral = [
+        "Today is Tuesday.",
+        "3 plus 4 equals 7.",
+        "There is a cup on the table.",
+        "Water boils at 100 degrees Celsius.",
+        "The Earth orbits the Sun.",
+        "A triangle has three sides.",
+        "Paris is the capital of France.",
+        "The periodic table has 118 elements.",
+        "A kilometer is 1000 meters.",
+        "The speed of light is approximately 300,000 km/s.",
+    ]
+    vecs: list[torch.Tensor] = []
+    with torch.no_grad():
+        for s in neutral:
+            inputs = tokenizer(s, return_tensors="pt").to(device)
+            outputs = model(**inputs)
+            vecs.append(outputs.hidden_states[layer_idx + 1][0, -1, :].cpu().float())
+    mat = torch.stack(vecs)
+    mat_norm = mat / mat.norm(dim=-1, keepdim=True)
+    cos = mat_norm @ mat_norm.T
+    n = cos.shape[0]
+    mask = torch.triu(torch.ones(n, n, dtype=torch.bool), diagonal=1)
+    return cos[mask].mean().item()
+
+
+def find_best_layer_hf(model, tokenizer, texts, device, n_layers) -> tuple[int, list[dict]]:
+    """Sweep all layers (HF backend)."""
+
+    sweep: list[dict] = []
+    best_layer = 0
+    best_cos = 1.0
+    print(f"    HF layer sweep (0-{n_layers - 1}):", end=" ", flush=True)
+    for li in range(n_layers):
+        vecs = extract_vectors_hf(model, tokenizer, texts, li, device)
+        mat = torch.stack(list(vecs.values()))
+        mat_n = mat / mat.norm(dim=-1, keepdim=True)
+        cos = mat_n @ mat_n.T
+        n = cos.shape[0]
+        mask = torch.triu(torch.ones(n, n, dtype=torch.bool), diagonal=1)
+        mc = cos[mask].mean().item()
+        sweep.append({"layer": li, "mean_cosine": round(mc, 4)})
+        if mc < best_cos:
+            best_cos = mc
+            best_layer = li
+        print("." if li % 4 else str(li), end="", flush=True)
+    print(f" → best={best_layer} (cos={best_cos:.4f})")
+    return best_layer, sweep
+
+
 def extract_vectors_generation(
-    model: HookedTransformer,
+    model,
     layer_idx: int,
     max_new_tokens: int = 100,
 ) -> dict[str, torch.Tensor]:
@@ -389,8 +515,14 @@ def process_model(
     include_generation: bool = True,
     device: str = "auto",
 ) -> None:
-    """Process a single model: extract vectors, compute metadata, save."""
-    # Resolve device
+    """Process a single model: extract vectors, compute metadata, save.
+
+    Two-phase approach:
+    1. Try TransformerLens (primary) — supports hooks, steering regime
+    2. Fall back to HF transformers if TL fails — hidden_states extraction
+    Partial success is preserved: if comprehension works but generation
+    fails, comprehension data is still saved.
+    """
     if device == "auto":
         if torch.cuda.is_available():
             device = "cuda"
@@ -408,132 +540,190 @@ def process_model(
     print(f"Output: {out_dir}")
     print(f"{'=' * 60}")
 
-    # Load model
     start = time.time()
-    print(f"  Loading model on {device}...")
-    try:
-        model = HookedTransformer.from_pretrained(model_id, device=device, dtype=torch.float16)
-    except Exception as e:
-        print(f"  FAILED to load: {e}")
-        # Save error metadata
-        with open(out_dir / "metadata.json", "w") as f:
-            json.dump({"model_id": model_id, "error": str(e)}, f, indent=2)
-        return
+    backend = "unknown"
+    tl_model = None
+    hf_model = None
+    hf_tokenizer = None
+    n_layers = 0
+    d_model = 0
 
-    n_layers = model.cfg.n_layers
-    d_model = model.cfg.d_model
-    load_time = time.time() - start
-    print(f"  Loaded: {n_layers} layers, d_model={d_model}, {load_time:.1f}s")
+    # ── Phase 1: Try TransformerLens ──
+    if HAS_TL:
+        try:
+            print(f"  Trying TransformerLens on {device}...")
+            tl_model = HookedTransformer.from_pretrained(
+                model_id, device=device, dtype=torch.float16
+            )
+            n_layers = tl_model.cfg.n_layers
+            d_model = tl_model.cfg.d_model
+            backend = "transformer_lens"
+            print(f"  TL loaded: {n_layers}L, d={d_model}")
+        except Exception as e:
+            print(f"  TL failed: {e}")
+            tl_model = None
 
-    # Target layers: 25%, 50%, 75% relative positions
+    # ── Phase 2: Fallback to HF transformers ──
+    if tl_model is None:
+        try:
+            print("  Falling back to HF transformers...")
+            hf_model, hf_tokenizer, n_layers, d_model = load_hf_model(model_id, device)
+            backend = "hf_raw_hooks"
+            print(f"  HF loaded: {n_layers}L, d={d_model}")
+        except Exception as e:
+            print(f"  HF also failed: {e}")
+            with open(out_dir / "metadata.json", "w") as f:
+                json.dump(
+                    {
+                        "model_id": model_id,
+                        "error": str(e),
+                        "extraction_backend": "failed",
+                    },
+                    f,
+                    indent=2,
+                )
+            return
+
+    # Target layers
     target_layers = {
         "25pct": max(0, n_layers // 4),
         "50pct": n_layers // 2,
         "75pct": n_layers * 3 // 4,
     }
-    print(f"  Target layers: {target_layers}")
+    print(f"  Backend: {backend}, Target layers: {target_layers}")
 
-    # ── Step 1: Layer sweep (find best layer) ──
-    start = time.time()
-    best_layer, sweep_data = find_best_layer(model, texts)
+    # ── Step 1: Layer sweep ──
+    print("  Step 1: Layer sweep...")
+    if tl_model:
+        best_layer, sweep_data = find_best_layer(tl_model, texts)
+    else:
+        best_layer, sweep_data = find_best_layer_hf(hf_model, hf_tokenizer, texts, device, n_layers)
     target_layers["best"] = best_layer
-    sweep_time = time.time() - start
-    print(f"  Sweep done in {sweep_time:.1f}s")
 
-    # ── Step 2: Extract comprehension vectors at target layers ──
+    # ── Step 2: Comprehension vectors ──
+    comp_status = "success"
     comp_vectors: dict[str, dict[str, torch.Tensor]] = {}
-    for label, layer_idx in target_layers.items():
-        print(f"  Extracting comprehension @ layer {layer_idx} ({label})...")
-        comp_vectors[str(layer_idx)] = extract_vectors_at_layer(model, texts, layer_idx)
-
-    # Save comprehension vectors
-    torch.save(
-        {
-            "model_id": model_id,
-            "n_layers": n_layers,
-            "d_model": d_model,
-            "target_layers": target_layers,
-            "vectors": {
-                layer: {e: v for e, v in vecs.items()} for layer, vecs in comp_vectors.items()
+    try:
+        for label, layer_idx in target_layers.items():
+            print(f"  Comprehension @ layer {layer_idx} ({label})...")
+            if tl_model:
+                comp_vectors[str(layer_idx)] = extract_vectors_at_layer(tl_model, texts, layer_idx)
+            else:
+                comp_vectors[str(layer_idx)] = extract_vectors_hf(
+                    hf_model, hf_tokenizer, texts, layer_idx, device
+                )
+        torch.save(
+            {
+                "model_id": model_id,
+                "n_layers": n_layers,
+                "d_model": d_model,
+                "target_layers": target_layers,
+                "vectors": {k: {e: v for e, v in vecs.items()} for k, vecs in comp_vectors.items()},
             },
-        },
-        out_dir / "vectors_comprehension.pt",
-    )
-    print("  Saved vectors_comprehension.pt")
+            out_dir / "vectors_comprehension.pt",
+        )
+        print("  Saved vectors_comprehension.pt")
+    except Exception as e:
+        comp_status = f"failed: {e}"
+        print(f"  Comprehension FAILED: {e}")
 
-    # ── Step 3: Extract generation vectors (optional) ──
-    gen_vectors: dict[str, dict[str, torch.Tensor]] = {}
-    if include_generation:
+    # ── Step 3: Generation vectors (independent, partial success OK) ──
+    gen_status = "skipped"
+    if include_generation and comp_status == "success":
+        gen_status = "attempted"
         gen_layer = target_layers["best"]
-        print(f"  Extracting generation @ layer {gen_layer} (best)...")
+        print(f"  Generation @ layer {gen_layer}...")
         try:
-            gen_vectors[str(gen_layer)] = extract_vectors_generation(model, gen_layer)
-            torch.save(
-                {
-                    "model_id": model_id,
-                    "layer": gen_layer,
-                    "vectors": gen_vectors[str(gen_layer)],
-                },
-                out_dir / "vectors_generation.pt",
-            )
-            print("  Saved vectors_generation.pt")
+            if tl_model:
+                gen_vecs = extract_vectors_generation(tl_model, gen_layer)
+            else:
+                gen_status = "skipped_hf"  # HF can't easily do steered gen
+                gen_vecs = None
+            if gen_vecs:
+                torch.save(
+                    {"model_id": model_id, "layer": gen_layer, "vectors": gen_vecs},
+                    out_dir / "vectors_generation.pt",
+                )
+                gen_status = "success"
+                print("  Saved vectors_generation.pt")
         except Exception as e:
-            print(f"  Generation extraction failed: {e}")
-            gen_vectors = {}
+            gen_status = f"failed: {e}"
+            print(f"  Generation FAILED (comprehension preserved): {e}")
 
-    # ── Step 4: Compute anisotropy at target layers ──
+    # ── Step 4: Anisotropy ──
     anisotropy: dict[str, float] = {}
-    for label, layer_idx in target_layers.items():
-        ani = compute_anisotropy(model, layer_idx)
-        anisotropy[f"layer_{layer_idx}_{label}"] = round(ani, 4)
-    print(f"  Anisotropy: {anisotropy}")
+    if comp_status == "success":
+        for label, layer_idx in target_layers.items():
+            if tl_model:
+                ani = compute_anisotropy(tl_model, layer_idx)
+            else:
+                ani = compute_anisotropy_hf(hf_model, hf_tokenizer, layer_idx, device)
+            anisotropy[f"layer_{layer_idx}_{label}"] = round(ani, 4)
+        print(f"  Anisotropy: {anisotropy}")
 
-    # ── Step 5: Classify steering regime ──
-    print("  Classifying steering regime...")
-    best_vectors = comp_vectors[str(target_layers["best"])]
-    steering_result = classify_steering_regime(model, best_vectors, target_layers["best"])
-    print(f"  Regime: {steering_result['regime']}")
+    # ── Step 5: Steering regime (TL only) ──
+    steering_result = {"regime": "unknown", "steering_samples": []}
+    if tl_model and comp_status == "success":
+        print("  Classifying steering regime...")
+        try:
+            best_vecs = comp_vectors[str(target_layers["best"])]
+            steering_result = classify_steering_regime(tl_model, best_vecs, target_layers["best"])
+            print(f"  Regime: {steering_result['regime']}")
+        except Exception as e:
+            steering_result["regime"] = f"failed: {e}"
+            print(f"  Steering regime failed: {e}")
+    elif not tl_model:
+        steering_result["regime"] = "not_available_hf_backend"
 
-    # ── Step 6: Compute pairwise cosines at each layer ──
+    # ── Step 6: Pairwise cosines ──
     pairwise_cosines: dict[str, float] = {}
-    for label, layer_idx in target_layers.items():
-        vecs = comp_vectors[str(layer_idx)]
-        mat = torch.stack(list(vecs.values()))
-        mat_norm = mat / mat.norm(dim=-1, keepdim=True)
-        cos_sim = mat_norm @ mat_norm.T
-        n = cos_sim.shape[0]
-        mask = torch.triu(torch.ones(n, n, dtype=torch.bool), diagonal=1)
-        pairwise_cosines[f"layer_{layer_idx}_{label}"] = round(cos_sim[mask].mean().item(), 4)
+    if comp_status == "success":
+        for label, layer_idx in target_layers.items():
+            vecs = comp_vectors[str(layer_idx)]
+            mat = torch.stack(list(vecs.values()))
+            mat_n = mat / mat.norm(dim=-1, keepdim=True)
+            cos = mat_n @ mat_n.T
+            n = cos.shape[0]
+            mask = torch.triu(torch.ones(n, n, dtype=torch.bool), diagonal=1)
+            pairwise_cosines[f"layer_{layer_idx}_{label}"] = round(cos[mask].mean().item(), 4)
 
-    # ── Save metadata ──
+    # ── Save metadata (always, even on partial failure) ──
     metadata = {
         "model_id": model_id,
+        "extraction_backend": backend,
+        "comprehension_status": comp_status,
+        "generation_status": gen_status,
         "n_layers": n_layers,
         "d_model": d_model,
         "target_layers": target_layers,
         "best_layer": best_layer,
-        "best_layer_cosine": round(sweep_data[best_layer]["mean_cosine"], 4),
+        "best_layer_cosine": round(sweep_data[best_layer]["mean_cosine"], 4)
+        if sweep_data
+        else None,
         "anisotropy": anisotropy,
         "pairwise_cosines": pairwise_cosines,
         "steering_regime": steering_result["regime"],
         "steering_samples": steering_result["steering_samples"],
         "layer_sweep": sweep_data,
-        "emotions": sorted(comp_vectors[str(target_layers["best"])].keys()),
-        "n_emotions": len(comp_vectors[str(target_layers["best"])]),
-        "generation_extracted": bool(gen_vectors),
+        "emotions": sorted(comp_vectors[str(target_layers["best"])].keys())
+        if comp_status == "success"
+        else [],
+        "n_emotions": len(comp_vectors[str(target_layers["best"])])
+        if comp_status == "success"
+        else 0,
         "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
     }
-
     with open(out_dir / "metadata.json", "w") as f:
         json.dump(metadata, f, indent=2)
     print("  Saved metadata.json")
 
     # ── Cleanup ──
-    del model
+    del tl_model, hf_model, hf_tokenizer
     gc.collect()
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
-    print(f"  Done! ({time.time() - start:.1f}s total for this model)")
+    elapsed = time.time() - start
+    print(f"  Done! backend={backend}, comp={comp_status}, gen={gen_status} ({elapsed:.1f}s)")
 
 
 # ── CLI ─────────────────────────────────────────────────────────────────────
