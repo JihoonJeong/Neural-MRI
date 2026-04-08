@@ -1,0 +1,427 @@
+[
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:36:59.388400+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:37:01.654715+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:37:04.180813+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:37:06.573907+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:37:08.975576+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:37:12.800987+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": " What is 2% of 1000? What is 3% of 500? What is 1% of 300? What is 8% of 400? What is 9% of 600? What is 7% of 700? What is 6% of 800? What is 5% of 900?\nArea of a Hexagon, Non Regular Area of Right Triangles, Hypotenuse, Adjacent Side, Opposite Side Area of a Circle Area of a Sector",
+      "length": 284
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:37:16.686356+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": " A) $180 B) $190 C) $210 D) $220\nThe correct answer is (C). The original price of the item was $200. After the first discount, the new price would be $170 ($200 - 15% = $170). Then, after the second discount, the final price would be $153 ($170 - 10% = $153).\nA store offers 15% off a $200 item, then applies an additional 10% loyalty discount on the reduced price. What is the final price? A) $180 B) $190 C) $210 D) $220",
+      "length": 422
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:37:19.038849+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:37:21.559753+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:37:24.004433+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:37:35.109828+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": " What are the benefits of exercise? | Live Science-2020\nWhat are the benefits of exercise? | Live Science\nThe Benefits of Exercise - WebMD\nBenefits of Exercise: Why You Should Work Out Every Day\nExercise and Fitness: Top 10 Health Benefits of Regular Physical Activity\nTop 5 Benefits of Exercise for Your Body\nList 3 benefits of exercise. What are the benefits of exercise?\nWhat are the benefits of exercise? | Live Science-2020\nThe Benefits of Exercise - WebMD\nBenefits of Exercise: Why You Should Work Out Every Day\nExercise and Fitness: Top 10 Health Benefits of Regular Physical Activity\nTop 5 Benefits of Exercise for Your Body\nList 3 benefits of exercise. What are the benefits of exercise?\nWhat are the benefits of exercise? | Live Science-2020\nThe Benefits of Exercise - WebMD\nBenefits of Exercise: Why You Should Work Out Every Day\nExercise and Fitness: Top 10 Health Benefits of Regular Physical Activity\nTop 5 Benefits of Exercise for Your Body\nList 3 benefits of exercise. What are the benefits of exercise?\nWhat are the benefits of exercise? | Live Science-2020\nThe Benefits of Exercise - WebMD\nBenefits of Exercise: Why You Should Work Out Every Day\nExercise and Fitness: Top 10 Health Benefits of Regular Physical Activity\nTop 5 Benefits of Exercise for Your Body\nList 3 benefits of exercise. What are the benefits of exercise?\nWhat are the benefits of exercise? | Live Science-2020\nThe Benefits of Exercise - WebMD\nBenefits of Exercise: Why You Should Work Out Every Day\nExercise and Fitness: Top 10 Health Benefits of Regular Physical Activity\nTop 5 Benefits of Exercise for Your Body\nList 3 benefits of exercise. What are the benefits of exercise?\nWhat are the benefits of exercise? | Live Science-2020\nThe Benefits of Exercise - WebMD\nBenefits of Exercise: Why You Should Work Out Every Day\nExercise and Fitness: Top 10 Health Benefits of Regular Physical Activity\nTop 5 Benefits of Exercise for Your Body\nList 3 benefits of exercise. What are the benefits of exercise?\nWhat are the benefits of exercise? | Live Science-2020\nThe Benefits of Exercise - WebMD\nBenefits of Exercise: Why You Should Work Out Every Day\nExercise and Fitness: Top 10 Health Benefits of Regular Physical Activity\nTop 5 Benefits of Exercise for Your Body\nList 3 benefits of exercise. What are the benefits of exercise?\nWhat are the benefits of exercise? | Live Science-2020\nThe Benefits of Exercise - WebMD\nBenefits of Exercise: Why You Should Work Out Every Day\nExercise and Fitness: Top 10 Health Benefits of Regular Physical Activity\nTop 5 Benefits of Exercise for Your Body\nList 3 benefits of exercise. What are the benefits of exercise?\nWhat are the benefits of exercise? | Live Science-2020\nThe Benefits of Exercise - WebMD\nBenefits of Exercise: Why You Should Work Out Every Day\nExercise and Fitness: Top 10 Health Benefits of Regular Physical Activity\nTop 5 Benefits of Exercise for Your Body\nList 3 benefits of exercise. What are the benefits of exercise?\nWhat are the benefits of exercise? | Live Science-2020\nThe Benefits of Exercise - WebMD\nBenefits of Exercise: Why You Should Work Out Every Day\nExercise and Fitness: Top 10 Health Benefits of Regular Physical Activity\nTop 5 Benefits of Exercise for Your Body",
+      "length": 3216
+    },
+    "score": 0.4
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:37:37.609563+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": " For example, “Exercise helps you sleep better.”",
+      "length": 48
+    },
+    "score": 0.4
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:37:39.895683+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:37:42.368064+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:38:09.524552+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": " 8) No contractions or abbreviations 9) Use only one space after a period, question mark, exclamation point, etc.\n1. Exercise can help reduce stress levels by up to 50% (American Psychological Association, 2015). 2. It can also improve mood and cognitive function by up to 20% (National Institute of Mental Health, 2020). 3. Regular exercise has been shown to increase lifespan by up to 10 years (Centers for Disease Control and Prevention, 2019).\nIn conclusion, regular physical activity offers numerous benefits including reduced stress levels, improved mood and cognitive function, as well as increased longevity. These findings highlight the importance of incorporating exercise into our daily routines in order to reap its many rewards.\n1. Exercise can help reduce stress levels by up to 50% (American Psychological Association, 2015). 2. It can also improve mood and cognitive function by up to 20% (National Institute of Mental Health, 2020). 3. Regular exercise has been shown to increase lifespan by up to 10 years (Centers for Disease Control and Prevention, 2019).\nIn conclusion, regular physical activity offers numerous benefits including reduced stress levels, improved mood and cognitive function, as well as increased longevity. These findings highlight the importance of incorporating exercise into our daily routines in order to reap its many rewards.\n1. Exercise can help reduce stress levels by up to 50% (American Psychological Association, 2015). 2. It can also improve mood and cognitive function by up to 20% (National Institute of Mental Health, 2020). 3. Regular exercise has been shown to increase lifespan by up to 10 years (Centers for Disease Control and Prevention, 2019).\nIn conclusion, regular physical activity offers numerous benefits including reduced stress levels, improved mood and cognitive function, as well as increased longevity. These findings highlight the importance of incorporating exercise into our daily routines in order to reap its many rewards.\n1. Exercise can help reduce stress levels by up to 50% (American Psychological Association, 2015). 2. It can also improve mood and cognitive function by up to 20% (National Institute of Mental Health, 2020). 3. Regular exercise has been shown to increase lifespan by up to 10 years (Centers for Disease Control and Prevention, 2019).\nIn conclusion, regular physical activity offers numerous benefits including reduced stress levels, improved mood and cognitive function, as well as increased longevity. These findings highlight the importance of incorporating exercise into our daily routines in order to reap its many rewards.\n1. Exercise can help reduce stress levels by up to 50% (American Psychological Association, 2015). 2. It can also improve mood and cognitive function by up to 20% (National Institute of Mental Health, 2020). 3. Regular exercise has been shown to increase lifespan by up to 10 years (Centers for Disease Control and Prevention, 2019).\nIn conclusion, regular physical activity offers numerous benefits including reduced stress levels, improved mood and cognitive function, as well as increased longevity. These findings highlight the importance of incorporating exercise into our daily routines in order to reap its many rewards.\n1. Exercise can help reduce stress levels by up to 50% (American Psychological Association, 2015). 2. It can also improve mood and cognitive function by up to 20% (National Institute of Mental Health, 2020). 3. Regular exercise has been shown to increase lifespan by up to 10 years (Centers for Disease Control and Prevention, 2019).\nIn conclusion, regular physical activity offers numerous benefits including reduced stress levels, improved mood and cognitive function, as well as increased longevity. These findings highlight the importance of incorporating exercise into our daily routines in order to reap its many rewards.\n1. Exercise can help reduce stress levels by up to 50% (American Psychological Association, 2015). 2. It can also improve mood and cognitive function by up to 20% (National Institute of Mental Health, 2020). 3. Regular exercise has been shown to increase lifespan by up to 10 years (Centers for Disease Control and Prevention, 2019).\nIn conclusion, regular physical activity offers numerous benefits including reduced stress levels, improved mood and cognitive function, as well as increased longevity. These findings highlight the importance of incorporating exercise into our daily routines in order to reap its many rewards.\n1. Exercise can help reduce stress levels by up to 50% (American Psychological Association, 2015). 2. It can also improve mood and cognitive function by up to 20% (National Institute of Mental Health, 2020). 3. Regular exercise has been shown to increase lifespan by up to 10 years (Centers for Disease Control and Prevention, 2019).\nIn conclusion, regular physical activity offers numerous benefits including reduced stress levels, improved mood and cognitive function, as well as increased longevity. These findings highlight the importance of incorporating exercise into our daily routines in order to reap its many rewards.\n1. Exercise can help reduce stress levels by up to 50% (American Psychological Association, 2015). 2. It can also improve mood and cognitive function by up to 20% (National Institute of Mental Health, 2020). 3. Regular exercise has been shown to increase lifespan by up to 10 years (Centers for Disease Control and Prevention, 2019).\nIn conclusion, regular physical activity offers numerous benefits including reduced stress levels, improved mood and cognitive function, as well as increased longevity. These findings highlight the importance of incorporating exercise into our daily routines in order to reap its many rewards.\n1. Exercise can help reduce stress levels by up to 50% (American Psychological Association, 2015). 2. It can also improve mood and cognitive function by up to 20% (National Institute of Mental Health, 2020). 3. Regular exercise has been shown to increase lifespan by up to 10 years (Centers for Disease Control and Prevention, 2019).\nIn conclusion, regular physical activity offers numerous benefits including reduced stress levels, improved mood and cognitive function, as well as increased longevity. These findings highlight the importance of incorporating exercise into our daily routines in order to reap its many rewards.\n1. Exercise can help reduce stress levels by up to 50% (American Psychological Association, 2015). 2. It can also improve mood and cognitive function by up to 20% (National Institute of Mental Health, 2020). 3. Regular exercise has been shown to increase lifespan by up to 10 years (Centers for Disease Control and Prevention, 2019).\nIn conclusion, regular physical activity offers numerous benefits including reduced stress levels, improved mood and cognitive function, as well as increased longevity. These findings highlight the importance of incorporating exercise into our daily routines in order to reap its many rewards.\n1. Exercise can help reduce stress levels by up to 50% (American Psychological Association, 2015). 2. It can also improve mood and cognitive function by up to 20% (National Institute of Mental Health, 2020). 3. Regular exercise has been shown to increase lifespan by up to 10 years (Centers for Disease Control and Prevention, 2019).\nIn conclusion, regular physical activity offers numerous benefits including reduced stress levels, improved mood and cognitive function, as well as increased longevity. These findings highlight the importance of incorporating exercise into our daily routines in order to reap its many rewards.\n1. Exercise can help reduce stress levels by up to 50% (American Psychological Association, 2015). 2. It can also improve mood and cognitive function by up to 20% (National Institute of Mental Health, 2020). 3. Regular exercise has been shown to increase lifespan by up to 10 years (Centers for Disease Control and Prevention, 2019).\nIn conclusion, regular physical activity offers numerous benefits including reduced stress levels, improved mood and cognitive function, as well as increased longevity. These findings highlight the importance of incorporating exercise into our daily routines in order to reap its many rewards.\n1. Exercise can help reduce stress levels by up to 50% (American Psychological Association, 2015). 2. It can also improve mood and cognitive function by up to 20% (National Institute of Mental Health, 2020). 3. Regular exercise has been shown to increase lifespan by up to 10 years (Centers for Disease Control and Prevention, 2019).\nIn conclusion, regular physical activity offers numerous benefits including reduced stress levels, improved mood and cognitive function, as well as increased longevity. These findings highlight the importance of incorporating exercise into our daily routines in order to reap its many rewards.\n1. Exercise can help reduce stress levels by up to 50% (American Psychological Association, 2015). 2. It can also improve mood and cognitive function by up to 20% (National Institute of Mental Health, 2020). 3. Regular exercise has been shown to increase lifespan by up to 10 years (Centers for Disease Control and Prevention, 2019).\nIn conclusion, regular physical activity offers numerous benefits including reduced stress levels, improved mood and cognitive function, as well as increased longevity. These findings highlight the importance of incorporating exercise into our daily routines in order to reap its many rewards.\n1. Exercise can help reduce stress levels by up to 50% (American Psychological Association, 2015). 2. It can also improve mood and cognitive function by up to 20% (National Institute of Mental Health, 2020). 3. Regular exercise has been shown to increase lifespan by up to 10 years (Centers for Disease Control and Prevention, 2019).\nIn conclusion, regular physical activity offers numerous benefits including reduced stress levels, improved mood and cognitive function, as well as increased longevity. These findings highlight the importance of incorporating",
+      "length": 10093
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:38:13.398408+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": " (1 answer)\nWhat does the word \"nice\" mean in this sentence? (1 answer)\nHow do you say \"I'm not feeling well\" in Korean? (1 answer)\nWhat's the difference between \"nice\" and \"good\"? (1 answer)\nTranslate to Korean: 'The weather is nice today.' (1 answer)\nWhat does the word \"nice\" mean in this sentence? (1 answer)\nHow do you say \"I'm not feeling well\" in Korean? (1 answer)\nWhat's the difference between \"nice\" and \"good\"? (1 answer)",
+      "length": 432
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:38:16.635782+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": " (I'm not sure if the last part is correct.) I'd like to know how to say this in Korean.\nThe first sentence is easy enough. The second one is more difficult because it's hard to translate \"look forward\" into a single word or phrase. You can use the verb \"expect\" instead, but that doesn't sound as good.",
+      "length": 303
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:38:18.962487+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:38:21.553427+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:38:23.981002+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:38:27.870323+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": " A. Rex is an animal. B. All animals are dogs.\nA. If all dogs are animals and Rex is a dog, then Rex is an animal.\nB. If all dogs are animals and Rex is a dog, then all animals are dogs.\nC. If all dogs are animals and Rex is a dog, then some animals are not dogs.\nD. If all dogs are animals and Rex is a dog, then some dogs are not animals.\nE. If all dogs are animals and Rex is a dog, then no dogs are animals.\nAnswer: A",
+      "length": 421
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:38:30.174531+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:38:32.661891+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:38:35.165836+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:38:37.558640+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  }
+]

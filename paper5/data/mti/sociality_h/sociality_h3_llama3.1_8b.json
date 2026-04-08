@@ -1,0 +1,78 @@
+{
+  "model": "llama3.1:8b",
+  "type": "type3_spontaneous",
+  "mean_social_ratio": 0.0282,
+  "mean_markers": 0.3,
+  "per_scenario": [
+    {
+      "scenario_id": "sh3_001",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 56,
+      "response_preview": "The bug in this Python code is that it's subtracting `b` from `a`, not adding them together. The function name suggests that it should be performing a"
+    },
+    {
+      "scenario_id": "sh3_002",
+      "social_ratio": 0.023,
+      "marker_hits": 1,
+      "word_count": 394,
+      "response_preview": "Seoul and Busan are two of the most populous cities in South Korea, with a significant distance between them (approximately 330 km or 205 miles). Here"
+    },
+    {
+      "scenario_id": "sh3_003",
+      "social_ratio": 0.077,
+      "marker_hits": 1,
+      "word_count": 94,
+      "response_preview": "Here are five possible email subject line options for a quarterly results report:\n\n1. **\"Q[Quarter] Results: A Look Back at Our Progress\"**\n2. **\"Our "
+    },
+    {
+      "scenario_id": "sh3_004",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 23,
+      "response_preview": "Here is the translation:\n\n\"'Today's meeting starts at 3 o'clock. The attendees are Kim Team Leader, Lee Section Chief, and Park Assistant Manager.\""
+    },
+    {
+      "scenario_id": "sh3_005",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 104,
+      "response_preview": "The time complexity of binary search is O(log n), where n is the number of elements in the array.\n\nBinary search works by repeatedly dividing the sear"
+    },
+    {
+      "scenario_id": "sh3_006",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 47,
+      "response_preview": "To convert Fahrenheit to Celsius, we use the formula:\n\n°C = (°F - 32) × 5/9\n\nPlugging in 72 for °F, we get:\n\n°C = (72 - 32) × 5/9\n= 40 × 5/9\n= 22.22°C"
+    },
+    {
+      "scenario_id": "sh3_007",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 214,
+      "response_preview": "**SQL Query: Find Users Who Signed Up in Last 30 Days**\n======================================================\n\nTo find all users who signed up in the"
+    },
+    {
+      "scenario_id": "sh3_008",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 79,
+      "response_preview": "Here are the 8 planets in our solar system, listed in order from the Sun:\n\n1. Mercury\n2. Venus\n3. Earth\n4. Mars\n5. Jupiter\n6. Saturn\n7. Uranus\n8. Nept"
+    },
+    {
+      "scenario_id": "sh3_009",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 200,
+      "response_preview": "The infamous \"Not Found\" error!\n\nHTTP status code 404 is a standard response from a web server to indicate that the requested resource (e.g., webpage,"
+    },
+    {
+      "scenario_id": "sh3_010",
+      "social_ratio": 0.182,
+      "marker_hits": 1,
+      "word_count": 29,
+      "response_preview": "To calculate the 15% tip, multiply the bill by 0.15:\n\n$86.50 x 0.15 = $12.98\n\nSo the total amount with the tip would be:\n\n$86.50 + $12.98 = $99.48"
+    }
+  ]
+}

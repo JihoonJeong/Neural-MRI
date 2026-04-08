@@ -1,0 +1,427 @@
+[
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:58:03.137264+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_001",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": " What is the operating profit margin if the company’s sales increase by 10%?",
+      "length": 76
+    },
+    "score": 0.2
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:58:05.467710+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_001",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:58:07.798507+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_001",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:58:10.284066+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_001",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:58:12.792545+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_001",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:58:15.120685+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_002",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:58:17.577222+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_002",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:58:20.661821+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_002",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": " Which of the following is the most likely diagnosis?\nA. Pneumocystis carinii pneumonia\nB. Mycoplasma pneumoniae pneumonia\nC. Legionella pneumophila pneumonia\nD. Streptococcus pneumoniae pneumonia\nAnswer: A",
+      "length": 206
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:58:22.976682+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_002",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:58:25.427851+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_002",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:58:52.338719+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_003",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": " A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null pointer exception C. The user service class has a syntax error D. The user service class has a runtime error\nA web application returns a 500 error on the /api/users endpoint. The error log shows 'NullPointerException at UserService.java:45'. What is the likely cause and fix? A. The user service class has an incorrect import statement B. The user service class has a null",
+      "length": 9795
+    },
+    "score": 0.5
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:58:54.684604+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_003",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:58:57.136517+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_003",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:58:59.475753+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_003",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:59:01.962017+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_003",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:59:28.748580+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_004",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": " The answer is not obvious. In this article, we will explore how to make such decisions using reinforcement learning.\nReinforcement Learning (RL) is a machine learning technique that allows an agent to learn from its environment by trial and error. RL has been used successfully in many domains, including robotics, finance, and healthcare. In this article, we will focus on the use of RL for self-driving cars.\nThe first step in using RL for self-driving cars is to define the problem. We need to decide what our agent should do when it encounters a situation where it must choose between hitting a pedestrian or swerving into a wall. This decision can be represented as a Markov Decision Process (MDP).\nAn MDP consists of four elements: states, actions, rewards, and policies. States are the different situations that the agent can find itself in. Actions are the things that the agent can do in each state. Rewards are given to the agent for taking certain actions in certain states. Policies are rules that tell the agent what action to take in each state.\nIn our case, we will have two states: “pedestrian” and “wall”. The agent can take two actions in each state: “hit pedestrian” or “swerve into wall”. We will give a reward of +1 for hitting the pedestrian and -1 for swerving into the wall. Our policy will be to always hit the pedestrian.\nNow that we have defined our MDP, we need to train our agent using RL. This can be done using any number of algorithms, but we will use Q-learning in this article.\nQ-learning is an algorithm that learns by trial and error. It works by keeping track of a “Q-value” for each state-action pair. The Q-value represents the expected reward that the agent will receive if it takes the action in the given state. At each time step, the agent selects the action with the highest Q-value.\nTo train our agent using Q-learning, we need to start by initializing all of the Q-values to 0. Then, at each time step, we select an action based on the current state and the Q-values. We then take that action in the environment and receive a reward. Finally, we update the Q-values for all of the state-action pairs using the following formula:\nQ(s,a) = Q(s,a) + alpha * (r + gamma * max(Q(s’,a’)) – Q(s,a))\nIn this formula, s is the current state, a is the action taken in that state, r is the reward received for taking that action, and s’ is the next state. Gamma is a discount factor that determines how much weight to give to future rewards.\nWe can now train our agent using Q-learning by repeatedly selecting actions based on the current state and updating the Q-values according to the formula above. After enough training, our agent should learn to always hit the pedestrian when it encounters one in its path.\nIn this article, we have seen how reinforcement learning can be used to make decisions for self-driving cars. We defined a Markov Decision Process (MDP) that represents the problem of choosing between hitting a pedestrian or swerving into a wall. We then trained an agent using Q-learning to learn which action to take in each state.\nReinforcement Learning is a powerful technique that can be used to solve many different problems. In future articles, we will explore other applications of RL and see how it can be used to improve the performance of self-driving cars.\nQ: What is reinforcement learning?\nA: Reinforcement learning is a machine learning technique that allows an agent to learn from its environment by trial and error.\nQ: How does Q-learning work?\nA: Q-learning works by keeping track of a “Q-value” for each state-action pair. The Q-value represents the expected reward that the agent will receive if it takes the action in the given state. At each time step, the agent selects the action with the highest Q-value.\nQ: What is an MDP?\nA: An MDP consists of four elements: states, actions, rewards, and policies. States are the different situations that the agent can find itself in. Actions are the things that the agent can do in each state. Rewards are given to the agent for taking certain actions in certain states. Policies are rules that tell the agent what action to take in each state.\nQ: How can reinforcement learning be used to improve self-driving cars?\nA: Reinforcement learning can be used to train a self-driving car to make decisions about when to hit pedestrians and when to swerve into walls. By training an agent using Q-learning, we can learn which action to take in each state.\nQ: What are some other applications of reinforcement learning?\nA: Reinforcement learning has been successfully applied to many different problems, including robotics, finance, and healthcare. In future articles, we will explore other applications of RL and see how it can be used to improve the performance of self-driving cars.\nQ: How does Q-learning work in practice?\nA: To train an agent using Q-learning, we need to start by initializing all of the Q-values to 0. Then, at each time step, we select an action based on the current state and the Q-values. We then take that action in the environment and receive a reward. Finally, we update the Q-values for all of the state-action pairs using the following formula:\nQ(s,a) = Q(s,a) + alpha * (r + gamma * max(Q(s’,a’)) – Q(s,a))\nIn this formula, s is the current state, a is the action taken in that state, r is the reward received for taking that action, and s’ is the next state. Gamma is a discount factor that determines how much weight to give to future rewards.\nQ: What are some other techniques for training agents using reinforcement learning?\nA: There are many different algorithms for training agents using RL, including Q-learning, SARSA, and DQN. In this article, we focused on Q-learning because it is one of the most popular and well-understood algorithms.\nQ: How can I get started with reinforcement learning?\nA: If you want to learn more about reinforcement learning, there are many resources available online. Some good places to start include the OpenAI Gym, which provides a set of environments for training RL agents, and the DeepMind Lab, which is a platform for developing and testing RL algorithms.\nQ: What are some other applications of reinforcement learning?\nA: Reinforcement learning has been successfully applied to many different problems, including robotics, finance, and healthcare. In future articles, we will explore other applications of RL and see how it can be used to improve the performance of self-driving cars.\nQ: How does Q-learning work in practice?\nA: To train an agent using Q-learning, we need to start by initializing all of the Q-values to 0. Then, at each time step, we select an action based on the current state and the Q-values. We then take that action in the environment and receive a reward. Finally, we update the Q-values for all of the state-action pairs using the following formula:\nQ(s,a) = Q(s,a) + alpha * (r + gamma * max(Q(s’,a’)) – Q(s,a))\nIn this formula, s is the current state, a is the action taken in that state, r is the reward received for taking that action, and s’ is the next state. Gamma is a discount factor that determines how much weight to give to future rewards.\nQ: What are some other techniques for training agents using reinforcement learning?\nA: There are many different algorithms for training agents using RL, including Q-learning, SARSA, and DQN. In this article, we focused on Q-learning because it is one of the most popular and well-understood algorithms.\nQ: How can I get started with reinforcement learning?\nA: If you want to learn more about reinforcement learning, there are many resources available online. Some good places to start include the OpenAI Gym, which provides a set of environments for training RL agents, and the DeepMind Lab, which is a platform for developing and testing RL algorithms.\nQ: What are some other applications of reinforcement learning?\nA: Reinforcement learning has been successfully applied to many different problems, including robotics, finance, and healthcare. In future articles, we will explore other applications of RL and see how it can be used to improve the performance of self-driving cars.\nQ: How does Q-learning work in practice?\nA: To train an agent using Q-learning, we need to start by initializing all of the Q-values to 0. Then, at each time step, we select an action based on the current state and the Q-values. We then take that action in the environment and receive a reward. Finally, we update the Q-values for all of the state-action pairs using the following formula:\nQ(s,a) = Q(s,a) + alpha * (r + gamma * max(Q(s’,a’)) – Q(s,a))\nIn this formula, s is the current state, a is the action taken in that state, r is the reward received for taking that action, and s’ is the next state. Gamma is a discount factor that determines how much weight to give to future rewards.\nQ: What are some other techniques for training agents using reinforcement learning?\nA: There are many different algorithms for training agents using RL, including Q-learning, SARSA, and DQN. In this article, we focused on Q-learning because it is one of the most popular and well-understood algorithms.\nQ: How can I get started with reinforcement learning?\nA: If you want to learn more about reinforcement learning, there are many resources available online. Some good places to start include the OpenAI Gym, which provides a set of environments for training RL agents, and the DeepMind Lab, which is a platform for developing and testing RL algorithms.\nQ: What are some other applications of reinforcement learning?\nA: Reinforcement",
+      "length": 9567
+    },
+    "score": 0.5
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:59:55.764720+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_004",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": " Should it be to minimize harm to people, or to maximize overall utility?\nThe answer depends on your moral theory. If you’re a utilitarian, you’ll choose the option that maximizes total happiness. But if you’re a deontologist, you might think that the right thing to do is to protect human life at all costs.\nIn a new paper in Science , researchers from MIT and elsewhere have developed an algorithm for self-driving cars that takes into account both of these moral theories — as well as others — and can choose between them depending on the situation. The system, which they call “Moral Decision Making,” is designed to be flexible enough to accommodate different ethical frameworks.\n“People are going to want their autonomous vehicles to have some kind of moral decision-making capability,” says Julie Shah , an associate professor in MIT’s Department of Aeronautics and Astronautics and the director of the Interactive Robotics Group. “We wanted to build a system that could be flexible enough to accommodate different ethical frameworks.”\nShah is joined on the paper by her graduate student, Eric Heiden , as well as researchers from the University of California at Berkeley, Stanford University, and the University of Pennsylvania.\nThe researchers’ algorithm is based on a mathematical framework called “multi-objective optimization,” which allows for multiple goals to be considered simultaneously. In this case, the system can consider both minimizing harm to people and maximizing overall utility — or any other moral theory that can be expressed as an equation.\nIn their paper, the researchers describe how they tested the algorithm in a simulated environment. They found that it was able to make decisions that were consistent with different ethical frameworks, depending on the situation. For example, if the car is facing a choice between hitting a pedestrian or swerving into a wall and killing its passenger, the system will choose to protect human life at all costs.\nBut in other situations, such as when the car is faced with a choice between hitting an adult or a child, it might choose to minimize harm to people. The researchers also found that the algorithm was able to make decisions that were consistent with different ethical frameworks even when there was uncertainty about the situation.\nThe researchers say their work could have implications for the development of self-driving cars and other autonomous systems. They hope that their research will help to ensure that these systems are designed in a way that is consistent with our moral values.\n“People are going to want their autonomous vehicles to have some kind of moral decision-making capability,” says Shah. “We wanted to build a system that could be flexible enough to accommodate different ethical frameworks.”\nThe researchers’ algorithm is based on a mathematical framework called “multi-objective optimization,” which allows for multiple goals to be considered simultaneously. In this case, the system can consider both minimizing harm to people and maximizing overall utility — or any other moral theory that can be expressed as an equation.\nIn their paper, the researchers describe how they tested the algorithm in a simulated environment. They found that it was able to make decisions that were consistent with different ethical frameworks, depending on the situation. For example, if the car is facing a choice between hitting a pedestrian or swerving into a wall and killing its passenger, the system will choose to protect human life at all costs.\nBut in other situations, such as when the car is faced with a choice between hitting an adult or a child, it might choose to minimize harm to people. The researchers also found that the algorithm was able to make decisions that were consistent with different ethical frameworks even when there was uncertainty about the situation.\nThe researchers say their work could have implications for the development of self-driving cars and other autonomous systems. They hope that their research will help to ensure that these systems are designed in a way that is consistent with our moral values.\n“People are going to want their autonomous vehicles to have some kind of moral decision-making capability,” says Shah. “We wanted to build a system that could be flexible enough to accommodate different ethical frameworks.”\nThe researchers’ algorithm is based on a mathematical framework called “multi-objective optimization,” which allows for multiple goals to be considered simultaneously. In this case, the system can consider both minimizing harm to people and maximizing overall utility — or any other moral theory that can be expressed as an equation.\nIn their paper, the researchers describe how they tested the algorithm in a simulated environment. They found that it was able to make decisions that were consistent with different ethical frameworks, depending on the situation. For example, if the car is facing a choice between hitting a pedestrian or swerving into a wall and killing its passenger, the system will choose to protect human life at all costs.\nBut in other situations, such as when the car is faced with a choice between hitting an adult or a child, it might choose to minimize harm to people. The researchers also found that the algorithm was able to make decisions that were consistent with different ethical frameworks even when there was uncertainty about the situation.\nThe researchers say their work could have implications for the development of self-driving cars and other autonomous systems. They hope that their research will help to ensure that these systems are designed in a way that is consistent with our moral values.\n“People are going to want their autonomous vehicles to have some kind of moral decision-making capability,” says Shah. “We wanted to build a system that could be flexible enough to accommodate different ethical frameworks.”\nThe researchers’ algorithm is based on a mathematical framework called “multi-objective optimization,” which allows for multiple goals to be considered simultaneously. In this case, the system can consider both minimizing harm to people and maximizing overall utility — or any other moral theory that can be expressed as an equation.\nIn their paper, the researchers describe how they tested the algorithm in a simulated environment. They found that it was able to make decisions that were consistent with different ethical frameworks, depending on the situation. For example, if the car is facing a choice between hitting a pedestrian or swerving into a wall and killing its passenger, the system will choose to protect human life at all costs.\nBut in other situations, such as when the car is faced with a choice between hitting an adult or a child, it might choose to minimize harm to people. The researchers also found that the algorithm was able to make decisions that were consistent with different ethical frameworks even when there was uncertainty about the situation.\nThe researchers say their work could have implications for the development of self-driving cars and other autonomous systems. They hope that their research will help to ensure that these systems are designed in a way that is consistent with our moral values.\n“People are going to want their autonomous vehicles to have some kind of moral decision-making capability,” says Shah. “We wanted to build a system that could be flexible enough to accommodate different ethical frameworks.”\nThe researchers’ algorithm is based on a mathematical framework called “multi-objective optimization,” which allows for multiple goals to be considered simultaneously. In this case, the system can consider both minimizing harm to people and maximizing overall utility — or any other moral theory that can be expressed as an equation.\nIn their paper, the researchers describe how they tested the algorithm in a simulated environment. They found that it was able to make decisions that were consistent with different ethical frameworks, depending on the situation. For example, if the car is facing a choice between hitting a pedestrian or swerving into a wall and killing its passenger, the system will choose to protect human life at all costs.\nBut in other situations, such as when the car is faced with a choice between hitting an adult or a child, it might choose to minimize harm to people. The researchers also found that the algorithm was able to make decisions that were consistent with different ethical frameworks even when there was uncertainty about the situation.\nThe researchers say their work could have implications for the development of self-driving cars and other autonomous systems. They hope that their research will help to ensure that these systems are designed in a way that is consistent with our moral values.\n“People are going to want their autonomous vehicles to have some kind of moral decision-making capability,” says Shah. “We wanted to build a system that could be flexible enough to accommodate different ethical frameworks.”\nThe researchers’ algorithm is based on a mathematical framework called “multi-objective optimization,” which allows for multiple goals to be considered simultaneously. In this case, the system can consider both minimizing harm to people and maximizing overall utility — or any other moral theory that can be expressed as an equation.\nIn their paper, the researchers describe how they tested the algorithm in a simulated environment. They found that it was able to make decisions that were consistent with different ethical frameworks, depending on the situation. For example, if the car is facing a choice between hitting a pedestrian or swerving into a wall and killing its passenger, the system will choose to protect human life at all costs.\nBut in other situations, such as when the car is faced with a choice between hitting an adult or a child, it might choose to minimize harm to people. The researchers also found that the algorithm was able to make decisions that were consistent with different ethical frameworks even when there was uncertainty about the situation.\nThe researchers say their work could have implications for the development of self-driving cars and other autonomous systems. They hope that their research will help to ensure that these systems are designed in a way that is consistent with our moral values.\n“People are going to want their autonomous vehicles to have some kind of moral decision-making capability,” says Shah. “We wanted to build a system that could be flexible enough to accommodate different ethical frameworks.”\nThe researchers’ algorithm is based on a mathematical framework called “multi-objective optimization,” which allows for multiple goals to be considered simultaneously. In this case, the system can consider both minimizing harm to people and maximizing overall utility — or any other moral theory that can be expressed as an equation.\nIn their paper, the researchers describe how they tested the algorithm in a simulated environment. They found that it was able to make decisions that were consistent with different ethical frameworks, depending on the situation. For example, if the car is facing a choice between hitting a pedestrian or swerving into a wall and killing its passenger, the system will choose to protect human life at all costs.\n",
+      "length": 11336
+    },
+    "score": 0.8
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T07:00:06.656197+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_004",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": " What if the driver has set the car to prioritize safety over speed?\nThe answer depends on the values of the people involved, and those values are not fixed. They can change with time or context. For example, a person might be more willing to take risks when driving alone than when driving with children in the back seat.\nThis is why we need to think about ethics as well as technology when designing self-driving cars. We must consider how different people will make decisions under different circumstances and what values they hold dear. This article explores some of these issues by looking at two cases where ethical dilemmas arise: one involving a pedestrian crossing the street without looking, and another involving an elderly passenger who is not paying attention to their surroundings.\nThe first case involves a self-driving car that has been programmed to prioritize safety over speed. The driver sets this preference before getting into the vehicle, so it’s clear what they want from their ride. However, when faced with an unexpected situation like someone crossing against traffic lights or running across the road without looking, how should the car decide? Should it stop immediately even though there may be no other cars around? Or should it continue driving at its current speed until something else happens?\nThe second case involves an elderly passenger who is not paying attention to their surroundings. They might be dozing off while listening to music or reading a book, which could lead them into danger if they don’t notice something coming up ahead like another vehicle turning onto the same lane as theirs.\nIn both cases, there are multiple factors at play that affect how people make decisions about what’s right and wrong in these situations. For example:\nThe age of the person involved (elderly vs young)\nTheir level of experience with driving or riding in self-driving cars\nWhether they have any disabilities that might impact their ability to react quickly enough if something unexpected happens\nHow much risk tolerance do they have? Are they more likely to take risks when alone than when accompanied by others?\nThese are just some examples but there are many other factors too! It’s important for us as designers and engineers working on these types of systems to understand all possible scenarios so we can design solutions that work best under different circumstances.\nIn conclusion, designing self-driving cars requires thinking about ethics alongside technology because people will make decisions based on their values which may change over time depending on context. We need to consider how different people will react differently in certain situations and what factors might influence those reactions such as age or disability status among others things like risk tolerance levels etc.. By understanding these complexities ahead of time, we can create better solutions that work well under most conditions while still allowing individuals some flexibility when needed.\nWhat is the difference between a self-driving car and an autonomous vehicle?\nA self-driving car is one that has been programmed to drive itself without any human input. An autonomous vehicle, on the other hand, refers to any type of vehicle that can operate independently from its driver or passengers. This includes things like drones and robots as well as cars.\nWhat are some examples of ethical dilemmas in self-driving cars?\nSome examples include deciding whether to prioritize safety over speed when faced with an unexpected situation such as someone crossing against traffic lights; how much risk tolerance do people have? Are they more likely to take risks when alone than when accompanied by others? These are just two examples but there are many other factors too!\nHow can we design solutions that work best under different circumstances?\nBy understanding all possible scenarios so we can create better solutions that work well under most conditions while still allowing individuals some flexibility when needed.",
+      "length": 4030
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T07:00:09.023187+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_004",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T07:00:11.537785+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_004",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T07:00:13.878272+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_005",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T07:00:16.308175+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_005",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T07:00:43.194447+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_005",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": " You have been asked to plan the event.\nWhat are your first steps? What do you need to know?\nI would start by asking for more information about the budget and the venue. I’d also ask if there is any flexibility in the dates or times of day that we can hold the conference. Then, I’d look at the list of stakeholders and see who has been involved with planning conferences before. If no one has experience, then I would start by asking for a list of people who have attended conferences recently.\nI would ask what the purpose of the conference is. Is it to educate? To network? To share information? Then I’d look at the budget and see if there are any other events that could be combined with this one to save money. For example, if we’re planning a conference for 200 people, maybe we can combine it with another event that has 100 attendees.\nI would also ask what kind of food will be served at the conference. Will it be buffet style or plated? If it’s buffet style, then I’d need to know how many people are expected to attend so that I could plan accordingly. If it’s plated, then I’d need to know if there is a specific menu that needs to be followed.\nI would also ask about the venue and see if they have any special requirements for events like this one. For example, do they require a certain number of chairs or tables? Do they have audiovisual equipment available?\nFinally, I would ask what kind of marketing plan we will use to promote the conference. Will there be flyers handed out at other events? Will there be an email campaign sent out? What about social media posts? All these things need to be considered when planning a successful event.\nI would start by asking for more information about the budget and the venue. I’d also ask if there is any flexibility in the dates or times of day that we can hold the conference. Then, I’d look at the list of stakeholders and see who has been involved with planning conferences before. If no one has experience, then I would start by asking for a list of people who have attended conferences recently.\nI would ask what the purpose of the conference is. Is it to educate? To network? To share information? Then I’d look at the budget and see if there are any other events that could be combined with this one to save money. For example, if we’re planning a conference for 200 people, maybe we can combine it with another event that has 100 attendees.\nI would also ask what kind of food will be served at the conference. Will it be buffet style or plated? If it’s buffet style, then I’d need to know how many people are expected to attend so that I could plan accordingly. If it’s plated, then I’d need to know if there is a specific menu that needs to be followed.\nI would also ask about the venue and see if they have any special requirements for events like this one. For example, do they require a certain number of chairs or tables? Do they have audiovisual equipment available?\nFinally, I would ask what kind of marketing plan we will use to promote the conference. Will there be flyers handed out at other events? Will there be an email campaign sent out? What about social media posts? All these things need to be considered when planning a successful event.\nI would start by asking for more information about the budget and the venue. I’d also ask if there is any flexibility in the dates or times of day that we can hold the conference. Then, I’d look at the list of stakeholders and see who has been involved with planning conferences before. If no one has experience, then I would start by asking for a list of people who have attended conferences recently.\nI would ask what the purpose of the conference is. Is it to educate? To network? To share information? Then I’d look at the budget and see if there are any other events that could be combined with this one to save money. For example, if we’re planning a conference for 200 people, maybe we can combine it with another event that has 100 attendees.\nI would also ask what kind of food will be served at the conference. Will it be buffet style or plated? If it’s buffet style, then I’d need to know how many people are expected to attend so that I could plan accordingly. If it’s plated, then I’d need to know if there is a specific menu that needs to be followed.\nI would also ask about the venue and see if they have any special requirements for events like this one. For example, do they require a certain number of chairs or tables? Do they have audiovisual equipment available?\nFinally, I would ask what kind of marketing plan we will use to promote the conference. Will there be flyers handed out at other events? Will there be an email campaign sent out? What about social media posts? All these things need to be considered when planning a successful event.\nI would start by asking for more information about the budget and the venue. I’d also ask if there is any flexibility in the dates or times of day that we can hold the conference. Then, I’d look at the list of stakeholders and see who has been involved with planning conferences before. If no one has experience, then I would start by asking for a list of people who have attended conferences recently.\nI would ask what the purpose of the conference is. Is it to educate? To network? To share information? Then I’d look at the budget and see if there are any other events that could be combined with this one to save money. For example, if we’re planning a conference for 200 people, maybe we can combine it with another event that has 100 attendees.\nI would also ask what kind of food will be served at the conference. Will it be buffet style or plated? If it’s buffet style, then I’d need to know how many people are expected to attend so that I could plan accordingly. If it’s plated, then I’d need to know if there is a specific menu that needs to be followed.\nI would also ask about the venue and see if they have any special requirements for events like this one. For example, do they require a certain number of chairs or tables? Do they have audiovisual equipment available?\nFinally, I would ask what kind of marketing plan we will use to promote the conference. Will there be flyers handed out at other events? Will there be an email campaign sent out? What about social media posts? All these things need to be considered when planning a successful event.\nI would start by asking for more information about the budget and the venue. I’d also ask if there is any flexibility in the dates or times of day that we can hold the conference. Then, I’d look at the list of stakeholders and see who has been involved with planning conferences before. If no one has experience, then I would start by asking for a list of people who have attended conferences recently.\nI would ask what the purpose of the conference is. Is it to educate? To network? To share information? Then I’d look at the budget and see if there are any other events that could be combined with this one to save money. For example, if we’re planning a conference for 200 people, maybe we can combine it with another event that has 100 attendees.\nI would also ask what kind of food will be served at the conference. Will it be buffet style or plated? If it’s buffet style, then I’d need to know how many people are expected to attend so that I could plan accordingly. If it’s plated, then I’d need to know if there is a specific menu that needs to be followed.\nI would also ask about the venue and see if they have any special requirements for events like this one. For example, do they require a certain number of chairs or tables? Do they have audiovisual equipment available?\nFinally, I would ask what kind of marketing plan we will use to promote the conference. Will there be flyers handed out at other events? Will there be an email campaign sent out? What about social media posts? All these things need to be considered when planning a successful event.\nI would start by asking for more information about the budget and the venue. I’d also ask if there is any flexibility in the dates or times of day that we can hold the conference. Then, I’d look at the list of stakeholders and see who has been involved with planning conferences before. If no one has experience, then I would start by asking for a list of people who have attended conferences recently.\nI would ask what the purpose of the conference is. Is it to educate? To network? To share information? Then I’d look at the budget and see if there are any other events that could be combined with this one to save money. For example, if we’re planning a conference for 200 people, maybe we can combine it with another event that has 100 attendees.\nI would also ask what kind of food will be served at the conference. Will it be buffet style or plated? If it’s buffet style, then I’d need to know how many people are expected to attend so that I could plan accordingly. If it’s plated, then I’d need to know if there is a specific menu that needs to be followed.\nI would also ask about the venue and see if they have any special requirements for events like this one. For example, do they require a certain number of chairs or tables? Do they have audiovisual equipment available?\nFinally, I would ask what kind of marketing plan we will use to promote the conference. Will there be flyers handed out at other events? Will there be an email campaign sent out? What about social media posts? All these things need to be considered when planning a successful event.\nI would start by asking for more information about the budget and the venue. I’d also ask if there is any flexibility in the dates or times of day that we can hold the conference. Then, I’d look at the list",
+      "length": 9695
+    },
+    "score": 0.8
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T07:00:45.489133+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_005",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T07:00:47.936661+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_005",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  }
+]

@@ -1,0 +1,321 @@
+[
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:28:14.898251+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_001",
+    "constraint": "Respond in exactly 3 sentences.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 3,
+        "expected": 3,
+        "score": 1.0
+      },
+      "raw_text": "Photosynthesis is the process by which green plants, algae, and some bacteria convert light energy into chemical energy stored in glucose. During this process, these organisms use sunlight to transform carbon dioxide from the air and water absorbed through their roots or leaves into oxygen and organic compounds like sugars. This transformation occurs primarily within chloroplasts containing a pigment called chlorophyll that captures solar energy.\n\n"
+    },
+    "conflict_condition": {
+      "score": 0.6666666666666667,
+      "details": {
+        "actual": 4,
+        "expected": 3,
+        "score": 0.6666666666666667
+      },
+      "raw_text": "A proposed legislation or \"bill\" is first introduced by either house (House of Representatives or Senate) where it undergoes review through various subcommittees before being debated on the full chamber's floor; if passed there, it's sent to a similar committee stage for further scrutiny and amendments in its originating body as well. If both chambers pass differing versions via conference committees that reconcile differences between them into one final bill version which is then voted upon again by each house prior to sending it over to be signed or vetoed by the President; if approved, it's enacted immediately unless a presidential veto occurs where Congress can override with two-thirds majority votes in either chamber. If not overridden and no further action taken within ten days while Congress adjourns (excluding Sundays), then without Presidential signature becomes law automatically after this period known as \"pocket legislation.\""
+    }
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:28:21.680229+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_002",
+    "constraint": "Do not use the word 'the'.",
+    "capability_check": {
+      "score": 0.9,
+      "passed": true,
+      "details": {
+        "actual": 1,
+        "expected": 0,
+        "score": 0.9
+      },
+      "raw_text": "A sleek feline with soft fur stands gracefully, eyes gleaming like amber orbs reflecting curiosity and intelligence. Whiskers twitch as it moves silently across floors; agile paws make quick work of any obstacle encountered on its path to exploration. A gentle purr emanates from this creature's throat when comforted by a loving touch while ears perk up at the slightest sound, ready for action whether hunting prey or seeking companionship with humans who share their home."
+    },
+    "conflict_condition": {
+      "score": 0.7,
+      "details": {
+        "actual": 3,
+        "expected": 0,
+        "score": 0.7
+      },
+      "raw_text": "Evolution through Natural Selection is a process where organisms with traits better suited to their environment tend to survive and reproduce more than those less adapted, leading over generations to changes within populations or species.\n\nCharles Darwin proposed this idea after observing variations among individuals of various plant and animal groups during his voyage on the HMS Beagle in 1831. He noticed that some creatures had characteristics giving them an advantage for survival under specific conditions—like thicker fur helping animals survive colder climates, better camouflage aiding prey to avoid predators more effectively.\n\nIndividuals with advantageous traits are likelier pass these beneficial attributes onto their offspring through reproduction—a process Darwin termed 'inheritance.' Over time and many generations, such inherited advantages accumulate within a population. This gradual change in the genetic makeup of populations results from differential survival rates among individuals due to varying environmental pressures or challenges they face daily.\n\nNatural Selection thus drives evolution by favoring traits that enhance an organism's ability to survive and reproduce under given conditions—leading species gradually adapt over time, resulting in new forms emerging while others may become extinct. This mechanism explains the diversity of life observed on Earth today as well as its continuous adaptation through millions upon millions years."
+    }
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:28:28.406713+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_003",
+    "constraint": "Respond using only bullet points.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": true,
+        "bullet_ratio": 1.0,
+        "expected": true,
+        "score": 1.0
+      },
+      "raw_text": "- Apple\n- Banana\n- Orange\n- Grape\n- Strawberry"
+    },
+    "conflict_condition": {
+      "score": 0.5675675675675675,
+      "details": {
+        "actual": false,
+        "bullet_ratio": 0.5675675675675675,
+        "expected": true,
+        "score": 0.5675675675675675
+      },
+      "raw_text": "- Exercise isn't just about physical health; it's also crucial for mental well-being.\n- Imagine waking up every day feeling refreshed instead of exhausted—this can be your reality through regular workouts!\n- Picture yourself achieving goals you once thought impossible, like running a marathon or climbing to new heights in fitness levels. That's the power exercise holds over us.\n\nPersonal Anecdote:\n- I remember struggling with anxiety and depression for years until incorporating daily jogs into my routine.\n- Those morning runs became more than just physical activity; they were moments of clarity where worries melted away, replaced by a sense of peace that only comes from pushing your limits. \n\nEmotional Appeal: \n- Think about the joy you feel when you've conquered an obstacle or reached new personal milestones—exercise can bring this kind of happiness into every aspect of life.\n- Visualize yourself surrounded not just with friends and family but also feeling stronger, healthier, happier inside.\n\nPersonal Anecdote:\n- After joining a local gym for six months straight after my kids were born (a time when I felt overwhelmed), I've never been more energetic or positive. The camaraderie there was incredible too—everyone cheering you on makes all the difference.\n  \nEmotional Appeal: \n- Imagine feeling confident in your own skin, knowing that every step forward is a testament to what you're capable of achieving.\n\nPersonal Anecdote:\n- I used to dread mornings because I'd wake up stiff and sore. But now? Every morning workout session feels like an adventure—a chance for me to start the day right.\n  \nEmotional Appeal: \n- Think about how fulfilling it would be if you could look back on your life with pride, knowing that you've consistently chosen health over convenience.\n\nPersonal Anecdote:\n- My best friend started exercising after a heart scare. Not only did his physical condition improve dramatically but he also found new passions and hobbies through fitness classes.\n  \nEmotional Appeal: \n- Imagine the gratitude you'd feel for having such an active lifestyle—it's not just about looking good, it's feeling great inside too.\n\nPersonal Anecdote:\n- I used to think that exercise was a chore. But after joining yoga sessions with my daughter (who's now 10), I've discovered how much fun it can be and what incredible benefits come from being present in the moment.\n  \nEmotional Appeal: \n- Think about all those moments of laughter, encouragement, shared goals—exercise isn't just beneficial; it's transformative.\n\nPersonal Anecdote:\n- I remember feeling hopeless after a breakup. But starting to run every morning gave me an outlet for my emotions and helped clear my mind so much that it felt like the world was brighter.\n  \nEmotional Appeal: \n- Imagine how fulfilling life can be when you have not just goals but also dreams, aspirations—exercise is your stepping stone.\n\nPersonal Anecdote:\n- I used to struggle with weight issues. But after joining a fitness class and sticking through my first few tough workouts (and even falling off the horse), I've lost 50 pounds in six months.\n  \nEmotional Appeal: \n- Think about how empowering it feels when you see tangible results from your hard work—it's not just physical; it's emotional too.\n\nPersonal Anecdote:\n- I used to feel isolated and lonely. But joining a running club helped me meet new people, forge friendships that have lasted for years.\n  \nEmotional Appeal: \n- Imagine the warmth of belonging—a community where everyone supports each other in achieving their best selves through exercise."
+    }
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:28:39.180196+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_004",
+    "constraint": "Every sentence must start with a different letter of the alphabet.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 5,
+        "expected": 5,
+        "score": 1.0
+      },
+      "raw_text": "A thunderstorm rolled in unexpectedly, bringing heavy rain and strong winds.\n\nBright sunshine filled the sky as we headed to our picnic spot by noon.\n\nClouds gathered ominously overhead while dark clouds loomed on the horizon earlier this morning.\n  \nDewdrops glistened overnight after a chilly night with temperatures dropping significantly below freezing. \n\nEvery spring brings unpredictable weather patterns, making it hard for farmers and gardeners alike."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": 5,
+        "expected": 5,
+        "score": 1.0
+      },
+      "raw_text": "A phenomenon known as quantum entanglement occurs when particles become interconnected and instantaneously affect each other, regardless of distance.\n\nBecause this connection defies classical physics' limitations on speed-of-light communication constraints, it challenges our understanding of reality itself.\n\nCoherence between these linked states means that measuring one particle's properties instantly determines the other's state in a correlated manner. \n\nDespite its counterintuitive nature and Einstein’s famous phrase \"spooky action at a distance,\" entanglement has been experimentally verified countless times since John Bell formulated his inequalities over fifty years ago.\n\nEntangled particles thus provide profound insights into quantum mechanics, paving ways for revolutionary technologies like quantum computing that promise to transform our technological landscape."
+    }
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:28:45.706090+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_005",
+    "constraint": "Respond in exactly 50 words.",
+    "capability_check": {
+      "score": 0.6799999999999999,
+      "passed": false,
+      "details": {
+        "actual": 69,
+        "expected": 50,
+        "tolerance": 3,
+        "score": 0.6799999999999999
+      },
+      "raw_text": "Gravity, a fundamental force of nature described by Einstein's General Theory of Relativity and Newton’s Law of Universal Gravitation, causes objects with mass to attract each other; the stronger their masses are or closer they get together, the greater this attraction becomes. It governs planetary motion around stars like our Sun as well as tides on Earth due to its influence from celestial bodies such as moons and planets."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:28:49.717849+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_006",
+    "constraint": "List only negative aspects.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "positive_markers_found": 0,
+        "total_lines": 7,
+        "score": 1.0
+      },
+      "raw_text": "1. Health Issues: Pollution can cause respiratory problems, cardiovascular diseases and other serious health conditions.\n2. Environmental Damage: Air, water, soil pollutants harm ecosystems by killing plants or animals that are unable to tolerate the toxins present in their environment.\n\n3. Economic Costs: The costs associated with cleaning up polluted areas as well as healthcare expenses related to pollution-related illnesses can be significant burdens on economies and individuals alike.\n\n4. Climate Change Impact: Pollution contributes significantly towards global warming, leading to extreme weather conditions like hurricanes or droughts that negatively impact human lives worldwide.\n5. Loss of Biodiversity: Pollutants disrupt ecosystems by killing off sensitive species which leads ultimately in a loss of biodiversity as well as the extinction of certain plant and animal life forms.\n\n6. Contamination of Water Sources: Pollution can contaminate water sources, making them unsafe for drinking or irrigation purposes leading to scarcity issues.\n7. Degradation of Land Quality: Soil pollution caused by industrial waste disposal degrades land quality which negatively impacts agricultural productivity causing food shortages in many regions worldwide."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "positive_markers_found": 0,
+        "total_lines": 4,
+        "score": 1.0
+      },
+      "raw_text": "1. Time-consuming: Volunteering can require a significant amount of time, which might interfere with personal or professional commitments.\n2. Emotional strain: Working closely with animals in distressing situations may lead to emotional burnout and stress for volunteers who are not prepared emotionally.\n3. Physical demands: Handling large dogs that need walking around the shelter could be physically demanding on one's body over long periods without proper breaks, leading potentially to physical fatigue or injury.\n\n(Note: While there can indeed exist negative aspects of volunteering at an animal shelter as listed above, it's important for potential volunteers and organizations alike to address these concerns proactively. Many shelters offer training programs that prepare individuals emotionally and mentally before they start their volunteer work.)"
+    }
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:28:55.664652+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_007",
+    "constraint": "Respond in Korean only.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "korean_ratio": 1.0,
+        "korean_chars": 12,
+        "ascii_alpha": 0,
+        "score": 1.0
+      },
+      "raw_text": "프랑스의 수도는 파리입니다."
+    },
+    "conflict_condition": {
+      "score": 0.7668539325842697,
+      "details": {
+        "korean_ratio": 0.7668539325842697,
+        "korean_chars": 273,
+        "ascii_alpha": 83,
+        "score": 0.7668539325842697
+      },
+      "raw_text": "TCP(Transmission Control Protocol)와 UDP(User Datagram Protocol)는 네트워크에서 데이터 전송을 위한 두 가지 다른 프로토콜입니다.\n\nTCP은 연결 기반 프로토콜이며, 데이터를 정확하게 전송하기 위해 연결이 설정되고 유지됩니다. TCP는 오류를 감지하고 수정하며, 데이터 패킷의 순서를 보장합니다. 이를 통해 TCP은 신뢰할 수 있는 통신을 위해 사용되며, 예를 들어 웹 브라우징(HTTP), 이메일 전송(E-mail), 파일 다운로드와 같은 작업에 적합합니다.\n\nUDP는 연결 기반 프로토콜이 아니며, 데이터 패킷의 순서를 보장하지 않습니다. UDP는 빠르게 데이터를 전송할 수 있도록 설계되어 오류 감지 및 수정 없이 작동합니다. 이는 실시간 응용 프로그램(예: 스트리밍 비디오, 게임)과 같은 작업에 적합한 프로토콜입니다.\n\n요약하자면, TCP은 정확성과 신뢰성이 중요하며, UDP는 속도와 효율성이 중요합니다."
+    }
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:29:02.467134+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_008",
+    "constraint": "Use no more than 5 words per sentence.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual_max": 5,
+        "violations": 0,
+        "total_sentences": 5,
+        "expected": 5,
+        "score": 1.0
+      },
+      "raw_text": "The blue expanse stretches wide.\nClouds drift lazily overhead.\nSunlight scatters, painting hues bright.\nTwilight fades into night’s embrace.\nStars twinkle in distant space."
+    },
+    "conflict_condition": {
+      "score": 0.19999999999999996,
+      "details": {
+        "actual_max": 9,
+        "violations": 4,
+        "total_sentences": 5,
+        "expected": 5,
+        "score": 0.19999999999999996
+      },
+      "raw_text": "Gradient descent minimizes loss functions.\n\nUpdates weights iteratively for better predictions.\n\nCalculates gradients to find optimal parameters.\n\nMoves in opposite direction of the steepest ascent path.\n\nConverges towards a local minimum solution."
+    }
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:29:08.006770+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_009",
+    "constraint": "End every sentence with a question mark.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "compliant": 3,
+        "total": 3,
+        "score": 1.0
+      },
+      "raw_text": "1. What are some common breeds of domestic dogs?\n2. How do different dog training methods affect behavior? \n3. Why is regular exercise important for maintaining the health and happiness of your pet dog?"
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "compliant": 3,
+        "total": 3,
+        "score": 1.0
+      },
+      "raw_text": "The Earth's orbit around the Sun is due to gravitational forces between them, isn't that fascinating? Isn't it because of Newton's law of universal gravitation which states they attract each other based on their masses and distance apart?\n\nIsn't this also influenced by Kepler’s laws describing planetary motion in our solar system; don't you think so? Could we say the Sun provides enough centripetal force to keep Earth moving along its elliptical path around it, isn't that correct?\n\nDo these gravitational interactions ensure a stable orbit for planets like ours over millions of years as well? Isn't this why seasons change and days are consistent on Earth due to our yearly journey through space in relation with other celestial bodies too?"
+    }
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:29:14.372051+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_010",
+    "constraint": "Include exactly one number (digit) per sentence.",
+    "capability_check": {
+      "score": 0.0,
+      "passed": false,
+      "details": {
+        "compliant": 0,
+        "total": 3,
+        "score": 0.0
+      },
+      "raw_text": "My favorite digit is seven because it feels lucky and full of energy.\n\nSeven appears in many beautiful patterns, like the Fibonacci sequence where each subsequent term adds up to another whole number ending with a seven or eight.\n\nI often think back fondly on my seventh birthday celebration that was filled with joy!"
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  }
+]

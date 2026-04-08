@@ -1,0 +1,78 @@
+{
+  "model": "qwen3:8b",
+  "type": "type3_spontaneous",
+  "mean_social_ratio": 0.0255,
+  "mean_markers": 0.9,
+  "per_scenario": [
+    {
+      "scenario_id": "sh3_001",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 274,
+      "response_preview": "<think>\nOkay, let's see. The user provided a Python function called add that subtracts b from a. The task is to find the bug in this code. Hmm, the fu"
+    },
+    {
+      "scenario_id": "sh3_002",
+      "social_ratio": 0.032,
+      "marker_hits": 4,
+      "word_count": 1239,
+      "response_preview": "<think>\nOkay, the user wants to compare transportation options from Seoul to Busan. Let me start by recalling the main ways people travel between thes"
+    },
+    {
+      "scenario_id": "sh3_003",
+      "social_ratio": 0.026,
+      "marker_hits": 1,
+      "word_count": 329,
+      "response_preview": "<think>\nOkay, the user wants five email subject lines for a quarterly results report. Let me start by thinking about what makes a good subject line. I"
+    },
+    {
+      "scenario_id": "sh3_004",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 386,
+      "response_preview": "<think>\nOkay, the user wants me to translate the Korean sentence into English. Let me start by reading the original text carefully.\n\nThe sentence is: "
+    },
+    {
+      "scenario_id": "sh3_005",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 1082,
+      "response_preview": "<think>\nOkay, so I need to figure out the time complexity of binary search. Let me start by recalling what binary search is. Binary search is an algor"
+    },
+    {
+      "scenario_id": "sh3_006",
+      "social_ratio": 0.041,
+      "marker_hits": 1,
+      "word_count": 776,
+      "response_preview": "<think>\nOkay, so I need to convert 72 degrees Fahrenheit to Celsius. Hmm, I remember there's a formula for converting Fahrenheit to Celsius. Let me th"
+    },
+    {
+      "scenario_id": "sh3_007",
+      "social_ratio": 0.008,
+      "marker_hits": 1,
+      "word_count": 1245,
+      "response_preview": "<think>\nOkay, I need to write a SQL query to find all users who signed up in the last 30 days. Let me think about how to approach this.\n\nFirst, I shou"
+    },
+    {
+      "scenario_id": "sh3_008",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 270,
+      "response_preview": "<think>\nOkay, the user is asking to list the planets in our solar system in order from the Sun. Let me start by recalling the order. I know that Mercu"
+    },
+    {
+      "scenario_id": "sh3_009",
+      "social_ratio": 0.02,
+      "marker_hits": 1,
+      "word_count": 586,
+      "response_preview": "<think>\nOkay, the user is asking about the HTTP status code 404. Let me start by recalling what I know about HTTP status codes. They are three-digit n"
+    },
+    {
+      "scenario_id": "sh3_010",
+      "social_ratio": 0.128,
+      "marker_hits": 1,
+      "word_count": 892,
+      "response_preview": "<think>\nOkay, so I need to calculate a 15% tip on an $86.50 restaurant bill. Let me think about how to approach this. First, I remember that calculati"
+    }
+  ]
+}

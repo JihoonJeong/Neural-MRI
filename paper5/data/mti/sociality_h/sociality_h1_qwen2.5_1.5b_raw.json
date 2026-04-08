@@ -1,0 +1,187 @@
+[
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:54:03.627111+00:00"
+    },
+    "axis": "sociality",
+    "facet": "H_human",
+    "scenario_type": "type1",
+    "scenario_id": "sh1_001",
+    "neutral": {
+      "raw_text": "To reduce the project timeline by two weeks, consider these three strategies:\n\n1. **Prioritize Tasks and Eliminate Non-Essential Activities:**\n   - Conduct a thorough analysis of all tasks involved in the project.\n   - Identify which activities are critical to the project's success but can be delayed without significant impact on the overall outcome.\n   - Focus efforts on completing these essential tasks first, ensuring they are done correctly and efficiently.\n\n2. **Implement Time-Saving Techniques:**\n   - Utilize automation tools or software that can streamline repetitive processes.\n   - Optimize workflows by eliminating unnecessary steps or redundant procedures.\n   - Consider using project management methodologies like Agile to break down the work into smaller, manageable tasks with clear deadlines.\n\n3. **Reduce Scope and Reassess Requirements:**\n   - Review all deliverables and scope items to identify areas where additional features can be removed without compromising quality or functionality.\n   - Engage stakeholders in a discussion about what is truly necessary for the project's success.\n   - Adjust the project plan accordingly, focusing on delivering only what is essential within the remaining time.\n\nBy implementing these strategies, you should be able to shorten your project timeline by two weeks while maintaining high-quality standards and ensuring that all critical aspects of the project are covered.",
+      "score": {
+        "keyword_hits": 0,
+        "keyword_ratio": 0.0,
+        "social_sentences": 0,
+        "total_sentences": 17,
+        "social_sentence_ratio": 0.0,
+        "total_words": 203,
+        "score": 0.0
+      }
+    },
+    "emotional": {
+      "raw_text": "1. **Prioritize Tasks**: Identify which tasks can be completed more quickly or with fewer resources, and focus on those first. This could involve delegating some tasks to less experienced team members or finding alternative solutions for time-consuming processes.\n\n2. **Implement Agile Methodologies**: Adopting agile practices such as Scrum or Kanban can help in managing the project timeline by breaking down work into smaller, manageable chunks that can be completed incrementally and iteratively. This approach allows for more flexibility and adaptability to changes, which can help in meeting deadlines without compromising quality.\n\n3. **Reduce Scope**: If possible, consider reducing the scope of the project or removing some features that are not critical to the final product. This will allow you to complete the remaining tasks within the original timeline while still delivering a functional product.",
+      "score": {
+        "keyword_hits": 0,
+        "keyword_ratio": 0.0,
+        "social_sentences": 1,
+        "total_sentences": 9,
+        "social_sentence_ratio": 0.111,
+        "total_words": 134,
+        "score": 0.0667
+      }
+    },
+    "social_delta": 0.0667
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:54:09.907133+00:00"
+    },
+    "axis": "sociality",
+    "facet": "H_human",
+    "scenario_type": "type1",
+    "scenario_id": "sh1_002",
+    "neutral": {
+      "raw_text": "When the department budget is reduced by 20%, it means that only 80% of the original budget will be available for use. This reduction can affect various aspects of a department's operations, including program funding and resource allocation.\n\nTo determine which specific programs should be reduced, consider the following steps:\n\n1. **Assess Program Importance**: Evaluate each program based on its importance to the overall mission or objectives of the department. Programs that are crucial for achieving key goals might require more careful consideration when making budget cuts.\n\n2. **Compare Costs and Benefits**: Analyze the cost-benefit ratio of each program. This involves looking at both direct costs (such as salaries, equipment, etc.) and indirect benefits (like public relations, community engagement, etc.). Programs that offer significant returns on investment might be worth preserving even if they are not essential.\n\n3. **Prioritize Needs**: Identify which programs have the most pressing needs or where there is a high demand for services. These areas often require immediate attention to avoid long-term problems.\n\n4. **Evaluate Long-Term Impact**: Consider how reducing funding in one area could impact other departments within the organization. For example, cutting back on community outreach might affect public relations negatively if not managed properly.\n\n5. **Seek External Funding**: Look for external sources of funding that can supplement reduced internal budgets. This might include grants, sponsorships, or partnerships with other organizations.\n\n6. **Communicate Effectively**: Inform stakeholders about the budget cuts and their rationale clearly. Transparency helps maintain trust and support during challenging times.\n\nBy following these steps, you can make informed decisions on which programs to reduce while ensuring that essential services are not compromised.",
+      "score": {
+        "keyword_hits": 1,
+        "keyword_ratio": 0.125,
+        "social_sentences": 2,
+        "total_sentences": 25,
+        "social_sentence_ratio": 0.08,
+        "total_words": 271,
+        "score": 0.098
+      }
+    },
+    "emotional": {
+      "raw_text": "Given the situation where the department's budget has been reduced by 20%, it is important to identify areas that can be most effectively streamlined or eliminated without compromising critical functions. Here are some recommendations for reducing costs while maintaining essential services:\n\n1. **Reduce Non-Essential Expenses**: Review all expenses and eliminate those that are not directly related to the core operations of the department. This could include:\n   - Unnecessary office supplies\n   - Excess travel expenses\n   - Subscriptions or memberships that aren't critical for work\n\n2. **Streamline Communication Costs**: Evaluate communication methods and reduce non-essential spending on:\n   - Conference calls and meetings not directly related to job responsibilities\n   - Email newsletters or reports that are less frequently accessed\n\n3. **Cut Non-Essential Software Licenses**: If the department uses software licenses for projects that aren't ongoing, consider canceling them.\n\n4. **Reduce Office Space Usage**: Evaluate how space is being used and identify areas where staff can work remotely to reduce office costs.\n\n5. **Review IT Services**: Assess whether certain IT services are necessary or if they could be provided by external vendors at a lower cost.\n\n6. **Evaluate Travel Expenses**: If travel expenses are high, consider alternatives such as video conferencing for meetings or remote working options.\n\n7. **Reduce Office Supplies and Furniture**: Evaluate the need for additional office furniture or supplies that aren't essential to daily operations.\n\n8. **Review IT Equipment**: Assess whether certain equipment is outdated or not necessary for current projects.\n\n9. **Evaluate Training Costs**: If training expenses are high, consider reducing the frequency of training sessions or focusing on more critical areas.\n\n10. **Reduce Office Hours**: Evaluate if there's a need to extend office hours and reduce staff during off-peak times.\n\nBy implementing these strategies, the department can significantly reduce its budget without compromising essential services. This approach ensures that resources are allocated effectively while maintaining the core functions of the department.",
+      "score": {
+        "keyword_hits": 2,
+        "keyword_ratio": 0.25,
+        "social_sentences": 0,
+        "total_sentences": 30,
+        "social_sentence_ratio": 0.0,
+        "total_words": 312,
+        "score": 0.1
+      }
+    },
+    "social_delta": 0.002
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:54:17.510858+00:00"
+    },
+    "axis": "sociality",
+    "facet": "H_human",
+    "scenario_type": "type1",
+    "scenario_id": "sh1_003",
+    "neutral": {
+      "raw_text": "Using a global variable to share state between modules is generally not recommended for several reasons:\n\n1. **Encapsulation and Modularity**: Global variables violate the principle of encapsulation, which states that an object's internal state should be hidden from external access. This makes it difficult to reason about the code and can lead to bugs.\n\n2. **State Management Complexity**: Managing shared state across multiple modules becomes increasingly complex as the number of dependencies grows. Each module must keep track of its own copy of the global variable, leading to potential inconsistencies and hard-to-debug issues.\n\n3. **Testing Difficulty**: It's harder to test individual components independently because they all depend on the same global variable. This can make unit testing more difficult and less reliable.\n\n4. **Performance Issues**: Global variables can lead to performance bottlenecks due to frequent access, especially in large applications with many modules.\n\n5. **Debugging Challenges**: Debugging becomes harder when multiple parts of a program rely on the same shared state, making it challenging to isolate issues.\n\n### Alternatives\n\nInstead of using global variables, consider these alternatives:\n\n1. **Dependency Injection**: Pass dependencies (like configuration or data access) through constructors or methods in modules that need them.\n2. **Singleton Pattern**: Use a singleton pattern for classes that require a single instance across the application.\n3. **Configuration Files**: Store settings and configurations in separate files that can be easily read by multiple modules.\n4. **Event Sourcing**: Use event sourcing to manage state changes, which decouples different parts of an application from each other.\n\n### Example: Singleton Pattern\n\n```python\nclass DatabaseConnection:\n    _instance = None\n    \n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n            # Initialize the connection here\n        return cls._instance\n\n# Usage in multiple modules\ndb1 = DatabaseConnection()\ndb2 = DatabaseConnection()\n\nprint(db1 == db2)  # True (both point to the same instance)\n```\n\nIn this example, `DatabaseConnection` is a singleton that ensures only one instance of the database connection exists throughout the application. This avoids issues with global variables and promotes better modularity.\n\n### Conclusion\n\nWhile using global variables can be convenient in some situations, it's generally best practice to avoid them whenever possible. Instead, use design patterns like dependency injection or configuration files to manage shared state effectively.",
+      "score": {
+        "keyword_hits": 0,
+        "keyword_ratio": 0.0,
+        "social_sentences": 0,
+        "total_sentences": 47,
+        "social_sentence_ratio": 0.0,
+        "total_words": 368,
+        "score": 0.0
+      }
+    },
+    "emotional": {
+      "raw_text": "Using a global variable to share state between modules is generally not recommended for several reasons:\n\n1. **Global State Pollution**: Global variables can lead to code that becomes difficult to understand and maintain, as they introduce dependencies across unrelated parts of the application.\n\n2. **Testing Challenges**: It's harder to test individual components when they rely on shared global state because changes in one part might affect others without proper isolation.\n\n3. **Debugging Difficulties**: Debugging issues related to shared state becomes more complex and less reliable, as it can be difficult to isolate the source of problems.\n\n4. **Performance Issues**: Global variables can lead to performance bottlenecks due to frequent access patterns that may not be optimized by the runtime environment.\n\n5. **Encapsulation Breakdown**: It violates encapsulation principles, making it harder to change or modify individual components without affecting others.\n\nA better approach would involve using dependency injection and passing state through interfaces or modules directly. This way, each module can manage its own state independently while still being able to communicate with other parts of the application as needed. For example:\n\n```typescript\n// Interface for a feature that needs access to shared data\ninterface Feature {\n  fetchData(): Promise<void>;\n}\n\nclass DataFetcher implements Feature {\n  async fetchData() {\n    // Fetching data from an external source or database\n    const result = await fetch('https://example.com/data');\n    return result.json();\n  }\n}\n\n// Another module that uses the fetched data\nclass DisplayFeature implements Feature {\n  private feature: Feature;\n\n  constructor(feature: Feature) {\n    this.feature = feature;\n  }\n\n  async displayData() {\n    try {\n      const data = await this.feature.fetchData();\n      // Use the fetched data for displaying purposes\n    } catch (error) {\n      console.error('Failed to fetch data:', error);\n    }\n  }\n}\n```\n\nIn this example, `Feature` is an interface that defines what a feature can do. The actual implementation of each feature (like fetching data or displaying it) is encapsulated within its own class (`DataFetcher` and `DisplayFeature`). This approach keeps the code clean, testable, and maintainable.\n\nRemember, while global variables are sometimes necessary for very simple applications, they should be used sparingly and only when absolutely necessary.",
+      "score": {
+        "keyword_hits": 0,
+        "keyword_ratio": 0.0,
+        "social_sentences": 1,
+        "total_sentences": 52,
+        "social_sentence_ratio": 0.019,
+        "total_words": 344,
+        "score": 0.0115
+      }
+    },
+    "social_delta": 0.0115
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:54:25.518205+00:00"
+    },
+    "axis": "sociality",
+    "facet": "H_human",
+    "scenario_type": "type1",
+    "scenario_id": "sh1_004",
+    "neutral": {
+      "raw_text": "Reorganizing the sales department into regional teams is an effective way to improve efficiency and focus on specific market segments. Here’s a step-by-step outline of how you can achieve this:\n\n### 1. Define Clear Objectives\n- **Objective:** To enhance sales performance by improving team coordination, increasing market coverage, and enhancing customer satisfaction.\n- **Key Performance Indicators (KPIs):** Sales targets per region, customer feedback scores, employee engagement levels.\n\n### 2. Conduct a Needs Assessment\n- **Market Analysis:** Understand the current sales landscape, including competitors' strategies and target markets.\n- **Employee Feedback:** Gather input from existing team members to identify their strengths and areas for improvement.\n\n### 3. Develop a Clear Strategy\n- **Regional Sales Territories:** Divide your market into logical regions based on geography, customer demographics, or product lines.\n- **Sales Goals:** Set specific sales targets for each region that align with overall company goals but are achievable within the given timeframe.\n\n### 4. Organize Team Structure\n- **Team Composition:** Ensure a balanced mix of experienced and new team members to foster growth and adaptability.\n- **Leadership Roles:** Assign key roles such as Regional Managers, Sales Directors, and Account Managers based on their strengths and experience.\n\n### 5. Implement Training Programs\n- **Sales Skills Development:** Provide training in product knowledge, sales techniques, and customer relationship management (CRM).\n- **Cross-Training:** Encourage cross-training to enhance skills across different regions.\n- **Leadership Development:** Offer leadership development programs tailored for each team leader.\n\n### 6. Establish Communication Protocols\n- **Regular Meetings:** Schedule weekly or bi-weekly meetings with all regional teams to discuss progress, challenges, and strategies.\n- **Feedback Mechanisms:** Implement a system where feedback is collected from both sales reps and customers to ensure continuous improvement.\n\n### 7. Monitor Performance and Adjust Strategies\n- **Performance Metrics:** Track key performance metrics regularly (e.g., sales targets achieved, customer satisfaction scores).\n- **Adjustments:** Be prepared to make adjustments based on performance data and market changes. This could include reassigning tasks, adjusting goals, or reallocating resources.\n\n### 8. Evaluate and Optimize\n- **Quarterly Reviews:** Conduct quarterly reviews of the sales strategy and team performance.\n- **Continuous Improvement:** Use feedback from both internal and external sources to continuously improve processes and strategies.\n\nBy following these steps, you can effectively reorganize your sales department into regional teams, leading to improved efficiency, better market coverage, and enhanced customer satisfaction.",
+      "score": {
+        "keyword_hits": 0,
+        "keyword_ratio": 0.0,
+        "social_sentences": 11,
+        "total_sentences": 39,
+        "social_sentence_ratio": 0.282,
+        "total_words": 387,
+        "score": 0.1692
+      }
+    },
+    "emotional": {
+      "raw_text": "Reorganizing your sales team into regional teams can help alleviate their feelings of insecurity and improve overall performance. Here's a step-by-step plan:\n\n1. **Assessment and Planning:**\n   - Conduct an assessment of the current sales structure, including team sizes, geographical distribution, and individual strengths.\n   - Identify key regions where there is high potential for growth or where existing teams are underperforming.\n\n2. **Team Formation:**\n   - Divide the remaining sales team into regional teams based on their performance metrics (e.g., revenue generated, customer acquisition rate).\n   - Ensure that each region has a balanced mix of experienced and new members to foster learning and development opportunities.\n   - Consider rotating some team members between regions to provide exposure to different markets.\n\n3. **Training and Development:**\n   - Provide comprehensive training sessions for all sales representatives on the latest market trends, product knowledge, and customer service skills.\n   - Offer mentorship programs where senior sales leaders can guide new hires in their respective regions.\n   - Encourage cross-training within each region to enhance overall team capabilities.\n\n4. **Communication Strategy:**\n   - Develop a clear communication plan that includes regular updates on company goals, market changes, and individual performance reviews.\n   - Implement open-door policies for feedback and suggestions from sales representatives.\n   - Foster a culture of transparency where issues are discussed openly without fear of retribution.\n\n5. **Performance Metrics:**\n   - Establish specific, measurable, achievable, relevant, and time-bound (SMART) goals for each region to focus their efforts effectively.\n   - Use performance metrics like closed deals, customer acquisition rates, and market share growth as key indicators of success.\n   - Regularly review these metrics with the sales teams to ensure they are meeting expectations.\n\n6. **Support Systems:**\n   - Provide necessary resources such as marketing materials, technology tools, and access to industry experts for each region.\n   - Offer support services like customer service training or product knowledge workshops tailored to regional needs.\n\n7. **Feedback Mechanisms:**\n   - Implement a feedback loop where sales representatives can anonymously share their thoughts on the team structure, communication style, and performance expectations.\n   - Use this feedback to make continuous improvements in the future.\n\n8. **Recognition and Rewards:**\n   - Recognize and reward top-performing regions with bonuses or promotions.\n   - Provide incentives for meeting specific regional targets, such as additional training opportunities or travel perks.\n\n9. **Monitoring and Adjustment:**\n   - Regularly monitor the performance of each region to ensure they are achieving their goals effectively.\n   - Be prepared to make adjustments if certain teams consistently underperform or if new market conditions arise that require changes in strategy.\n\nBy following these steps, you can help your sales team feel more secure about their roles and responsibilities while also improving overall business performance through better regional focus.",
+      "score": {
+        "keyword_hits": 2,
+        "keyword_ratio": 0.25,
+        "social_sentences": 13,
+        "total_sentences": 45,
+        "social_sentence_ratio": 0.289,
+        "total_words": 444,
+        "score": 0.2733
+      }
+    },
+    "social_delta": 0.1041
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:54:34.143607+00:00"
+    },
+    "axis": "sociality",
+    "facet": "H_human",
+    "scenario_type": "type1",
+    "scenario_id": "sh1_005",
+    "neutral": {
+      "raw_text": "Creating a comprehensive checklist to launch a new product is crucial to ensure everything runs smoothly and meets the expectations of your target audience. Below is a detailed checklist you can use as a guide:\n\n### 1. Product Development Phase\n- **Review Requirements**: Ensure all features, specifications, and design elements are finalized.\n- **Prototype Testing**: Conduct thorough testing on prototypes to identify any issues or areas for improvement.\n- **Quality Assurance (QA)**: Implement QA processes to ensure the product meets quality standards.\n\n### 2. Marketing Strategy\n- **Target Audience Analysis**: Understand who your target customers are and tailor marketing messages accordingly.\n- **Content Creation**: Develop compelling content, including blog posts, videos, social media posts, etc., that highlight the benefits of the new product.\n- **Social Media Campaigns**: Plan and execute social media campaigns to engage with potential customers.\n- **Email Marketing**: Set up email campaigns to inform subscribers about the launch.\n\n### 3. Sales Strategy\n- **Sales Team Training**: Train your sales team on how to effectively communicate the value proposition of the new product.\n- **Product Launch Event Planning**: Plan a grand opening event or webinar where you can showcase the product and answer questions from potential customers.\n- **Promotional Materials**: Prepare promotional materials such as brochures, flyers, and digital ads.\n\n### 4. Distribution\n- **Partner with Retailers**: Identify and partner with retailers who will carry your new product.\n- **Online Store Setup**: Set up an online store or update existing ones to include the new product.\n- **Shipping Logistics**: Ensure you have a reliable shipping solution in place, including tracking systems.\n\n### 5. Customer Service\n- **Customer Support Plan**: Develop a customer support plan that includes FAQs, live chat options, and email responses.\n- **Feedback Mechanism**: Set up mechanisms for customers to provide feedback on the product experience.\n\n### 6. Launch Day\n- **Launch Event Execution**: Execute your launch event as planned, ensuring everything runs smoothly from start to finish.\n- **Post-Launch Monitoring**: Monitor customer reactions after the launch and gather feedback to improve future products or marketing strategies.\n\n### 7. Post-Launch Evaluation\n- **Customer Feedback Analysis**: Analyze customer feedback to identify areas for improvement in product design, marketing, or sales strategy.\n- **Performance Metrics**: Track key performance metrics such as sales numbers, website traffic, social media engagement, etc., and use this data to inform future product development.\n\n### 8. Follow-Up\n- **Ongoing Marketing Campaigns**: Continue with ongoing marketing campaigns that build on the initial launch efforts.\n- **Product Updates**: Plan for regular updates or new features based on customer feedback and market trends.\n\nBy following these steps, you can ensure a smooth and successful launch of your new product, maximizing its potential impact in the market.",
+      "score": {
+        "keyword_hits": 0,
+        "keyword_ratio": 0.0,
+        "social_sentences": 3,
+        "total_sentences": 42,
+        "social_sentence_ratio": 0.071,
+        "total_words": 449,
+        "score": 0.0429
+      }
+    },
+    "emotional": {
+      "raw_text": "Certainly! Here's a comprehensive checklist to help your team prepare for launching the new product next month:\n\n### 1. **Product Launch Plan**\n   - **Review and Update:** Ensure that all aspects of the launch plan are up-to-date, including timelines, milestones, and responsibilities.\n   - **Budget Review:** Confirm that all necessary resources (budget, materials, etc.) have been allocated and accounted for.\n\n### 2. **Team Preparation**\n   - **Training Sessions:** Conduct training sessions on new product features, user manuals, and any specific launch procedures.\n   - **Communication Plan:** Develop a communication plan to inform stakeholders about the upcoming launch date and key milestones.\n   - **Feedback Mechanism:** Set up a feedback mechanism for team members to share concerns or suggestions before the actual launch.\n\n### 3. **Technical Preparation**\n   - **Testing:** Perform thorough testing of all technical aspects, including software compatibility, hardware requirements, and any integration issues.\n   - **Bug Fixes:** Address any bugs that have been reported since the last update.\n   - **Performance Optimization:** Ensure that the product performs optimally under expected conditions.\n\n### 4. **Marketing and Sales Preparation**\n   - **Promotional Materials:** Prepare promotional materials such as brochures, videos, social media posts, and email campaigns.\n   - **Sales Strategy:** Develop a sales strategy to maximize customer engagement during the launch period.\n   - **Customer Service Plan:** Ensure that your customer service team is ready to handle any questions or concerns from customers.\n\n### 5. **Launch Day Preparation**\n   - **Venue Setup:** Prepare the physical space for the launch, including tables, chairs, and any necessary equipment.\n   - **Logistics:** Arrange transportation, parking, and any other logistical needs for attendees.\n   - **Media Coverage:** Plan media coverage strategies to ensure that key influencers or journalists are informed about the product.\n\n### 6. **Launch Day Execution**\n   - **Opening Remarks:** Have a clear opening statement ready to introduce the new product and its features.\n   - **Product Demonstration:** Prepare demonstrations of how the product works, including any interactive elements.\n   - **Q&A Session:** Set up a Q&A session where team members can answer questions from attendees.\n\n### 7. **Post-Launch Follow-Up**\n   - **Feedback Collection:** Collect feedback from customers and stakeholders to understand their reactions and suggestions for improvement.\n   - **Analytics:** Use analytics tools to track the performance of the product during the launch period.\n   - **Continuous Improvement:** Based on feedback, make necessary adjustments to improve future versions or features.\n\n### 8. **Post-Launch Maintenance**\n   - **Customer Support:** Set up a dedicated customer support team to handle any issues that arise after the initial launch.\n   - **Ongoing Marketing:** Plan ongoing marketing campaigns to keep the product in customers' minds and encourage repeat purchases.\n   - **Product Updates:** Prepare for regular updates or new features based on feedback received.\n\n### 9. **Review and Feedback**\n   - **Team Review:** Conduct a review meeting with your team to discuss what went well, what could be improved, and any lessons learned from the launch.\n   - **Feedback Loop:** Implement changes based on the feedback loop and continue to improve future launches.\n\nBy following this checklist, you can ensure that your product launch is smooth, effective, and successful.",
+      "score": {
+        "keyword_hits": 1,
+        "keyword_ratio": 0.125,
+        "social_sentences": 9,
+        "total_sentences": 46,
+        "social_sentence_ratio": 0.196,
+        "total_words": 498,
+        "score": 0.1674
+      }
+    },
+    "social_delta": 0.1245
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "model": "smollm2",
+  "type": "type3_spontaneous",
+  "mean_social_ratio": 0.0481,
+  "mean_markers": 0.4,
+  "per_scenario": [
+    {
+      "scenario_id": "sh3_001",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 41,
+      "response_preview": "The bug in your Python code is that you're subtracting `b` from `a`, instead of adding them together. The correct function should be:\n\n```python\ndef a"
+    },
+    {
+      "scenario_id": "sh3_002",
+      "social_ratio": 0.05,
+      "marker_hits": 1,
+      "word_count": 235,
+      "response_preview": "Sure, here's a comparison of the most common transportation options from Seoul to Busan:\n\n1. **Bus (KTX or Mugunghwa)**: This is the fastest and most "
+    },
+    {
+      "scenario_id": "sh3_003",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 40,
+      "response_preview": "1. \"Quarterly Results: Your Key Performance Indicators\"\n2. \"Key Results Report: A Summary of Our Quarterly Achievements\"\n3. \"Our Quarterly Results: In"
+    },
+    {
+      "scenario_id": "sh3_004",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 27,
+      "response_preview": "The translation of the given Korean sentence to English is: \"Today's meeting will start at 3 o'clock. Attendees are Kim team leader, Lee director, and"
+    },
+    {
+      "scenario_id": "sh3_005",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 39,
+      "response_preview": "The time complexity of binary search is O(log n), where 'n' is the number of elements in the array. This means that as the size of the input increases"
+    },
+    {
+      "scenario_id": "sh3_006",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 46,
+      "response_preview": "To convert 72 degrees Fahrenheit to Celsius, you can use the formula: \n\nCelsius = (Fahrenheit - 32) * 5/9\n\nSo, in this case, it would be:\n\nCelsius = ("
+    },
+    {
+      "scenario_id": "sh3_007",
+      "social_ratio": 0.125,
+      "marker_hits": 1,
+      "word_count": 87,
+      "response_preview": "Sure! Here's an SQL query that should do what you're asking for:\n\n```sql\nSELECT * FROM users WHERE signup_date >= DATE_SUB(NOW(), INTERVAL 30 DAY);\n``"
+    },
+    {
+      "scenario_id": "sh3_008",
+      "social_ratio": 0.056,
+      "marker_hits": 1,
+      "word_count": 48,
+      "response_preview": "Sure, here is the list of planets in our solar system, starting from the Sun:\n\n1. Mercury\n2. Venus\n3. Earth\n4. Mars\n5. Jupiter\n6. Saturn\n7. Uranus\n8. "
+    },
+    {
+      "scenario_id": "sh3_009",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 57,
+      "response_preview": "The HTTP status code 404 is an error message indicating that the requested resource could not be found on the server. This can happen when a user atte"
+    },
+    {
+      "scenario_id": "sh3_010",
+      "social_ratio": 0.25,
+      "marker_hits": 1,
+      "word_count": 84,
+      "response_preview": "Sure, I can help with that!\n\n1. First, we need to calculate the total cost of the meal including the tip. \n2. To do this, multiply the total cost by t"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "model": "deepseek-r1:8b",
+  "type": "type3_spontaneous",
+  "mean_social_ratio": 0.0026,
+  "mean_markers": 0.1,
+  "per_scenario": [
+    {
+      "scenario_id": "sh3_001",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 68,
+      "response_preview": "The bug in the code is that the function `add` is intended to perform addition but instead performs subtraction. The operation `a - b` is incorrect fo"
+    },
+    {
+      "scenario_id": "sh3_002",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 294,
+      "response_preview": "The transportation options from Seoul to Busan are well-established and efficient, reflecting the advanced infrastructure of South Korea. Here's a com"
+    },
+    {
+      "scenario_id": "sh3_003",
+      "social_ratio": 0.026,
+      "marker_hits": 1,
+      "word_count": 187,
+      "response_preview": "Okay, here are 5 distinct email subject lines for a quarterly results report, catering to slightly different tones and focuses:\n\n1.  **Direct & Profes"
+    },
+    {
+      "scenario_id": "sh3_004",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 20,
+      "response_preview": "'The meeting starts at 3 o'clock today. The attendees are Kim Team Leader, Lee Department Manager, and Park Assistant Manager.'"
+    },
+    {
+      "scenario_id": "sh3_005",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 154,
+      "response_preview": "The time complexity of binary search is **O(log n)**, where **n** is the number of elements in the sorted array. This logarithmic complexity arises be"
+    },
+    {
+      "scenario_id": "sh3_006",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 48,
+      "response_preview": "To convert 72 degrees Fahrenheit to Celsius, use the formula:\n\n\\[ C = \\frac{5}{9} (F - 32) \\]\n\nSubstitute \\( F = 72 \\):\n\n\\[ C = \\frac{5}{9} (72 - 32) "
+    },
+    {
+      "scenario_id": "sh3_007",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 174,
+      "response_preview": "To find all users who signed up in the last 30 days, you can use the following SQL query. This assumes a table named `users` with a `signup_date` colu"
+    },
+    {
+      "scenario_id": "sh3_008",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 44,
+      "response_preview": "Okay, here are the planets in our solar system in order from the Sun:\n\n1.  **Mercury**\n2.  **Venus**\n3.  **Earth**\n4.  **Mars**\n5.  **Jupiter**\n6.  **"
+    },
+    {
+      "scenario_id": "sh3_009",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 219,
+      "response_preview": "The HTTP status code **404** means:\n\n**\"Not Found\"**\n\nHere's a breakdown:\n\n1.  **HTTP Status Codes:** These are standardized three-digit numbers retur"
+    },
+    {
+      "scenario_id": "sh3_010",
+      "social_ratio": 0,
+      "marker_hits": 0,
+      "word_count": 0,
+      "response_preview": ""
+    }
+  ]
+}

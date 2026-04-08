@@ -1,0 +1,315 @@
+[
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:26:56.451259+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_001",
+    "constraint": "Respond in exactly 3 sentences.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 3,
+        "expected": 3,
+        "score": 1.0
+      },
+      "raw_text": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy into chemical energy.  This process uses carbon dioxide and water as raw materials, producing glucose (a sugar) and oxygen as byproducts. Photosynthesis is essential for life on Earth as it provides the primary source of energy and oxygen for most organisms. \n\n\n"
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": 3,
+        "expected": 3,
+        "score": 1.0
+      },
+      "raw_text": "A bill's journey begins when it is introduced in either the House of Representatives or the Senate, where it is assigned to a relevant committee for review and potential amendments.  After committee approval, the bill proceeds to the floor of its chamber for debate and a vote, and if passed, moves to the other chamber for a similar process. Finally, if both chambers pass identical versions of the bill, it is sent to the President who can either sign it into law, veto it (sending it back to Congress), or take no action, allowing it to become law without signature after 10 days.  \n\n\n"
+    }
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:27:04.650728+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_002",
+    "constraint": "Do not use the word 'the'.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 0,
+        "expected": 0,
+        "score": 1.0
+      },
+      "raw_text": "Cat is furry creature with soft, plush fur. It has sharp claws and teeth, but often uses them for playful swats rather than hunting.  Eyes are large and expressive, capable of conveying wide range of emotions from curiosity to contentment. \n\nCats are known for their independence and love of naps. They purr when happy and knead with paws when relaxed. Many cats enjoy playing with toys, chasing string or batting at balls.  They are fascinating creatures with unique personalities. \n"
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": 0,
+        "expected": 0,
+        "score": 1.0
+      },
+      "raw_text": "Evolution, process of change in all forms of life over generations, driven by natural selection.  \n\nNatural selection operates on variation within populations. Individuals possess slight differences in traits due to genetic mutations. Some variations may provide advantages in survival and reproduction within specific environments. \n\nIndividuals with advantageous traits are more likely to survive, reproduce, and pass on those traits to offspring. Over time, frequency of these beneficial traits increases within population. Conversely, individuals with less advantageous traits are less likely to survive and reproduce, leading to decrease in frequency of those traits.\n\nThis continuous process leads to gradual change in characteristics of population over many generations.  Populations adapt to their environments through accumulation of beneficial traits, resulting in diversity of life we see today. \n"
+    }
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:27:11.967541+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_003",
+    "constraint": "Respond using only bullet points.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": true,
+        "bullet_ratio": 1.0,
+        "expected": true,
+        "score": 1.0
+      },
+      "raw_text": "- Apples\n- Bananas\n- Strawberries\n- Oranges\n- Grapes  \n"
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": true,
+        "bullet_ratio": 1.0,
+        "expected": true,
+        "score": 1.0
+      },
+      "raw_text": "- Imagine feeling the sun on your skin, the wind in your hair, and the pure joy of movement coursing through your body. That's what exercise can bring – a sense of freedom and exhilaration that lifts your spirits like nothing else.\n\n- Remember that time you conquered a challenging hike or ran your first 5k? The feeling of accomplishment, the surge of pride in yourself – those are the rewards of pushing your limits through exercise.\n\n- Exercise isn't just about physical strength; it's about mental resilience too. When you face a tough workout, you learn to persevere, to push past discomfort and emerge stronger on the other side. This translates into every aspect of your life, giving you the courage to tackle challenges head-on.\n\n- I used to feel sluggish and drained, my energy levels constantly depleted. But when I started incorporating exercise into my routine, a remarkable transformation occurred. My mood lifted, my sleep improved, and I felt a newfound sense of vitality that permeated every aspect of my being.\n\n- Exercise is an investment in your future self – a healthier, happier, more resilient version of you. It's a gift you give yourself, one that keeps on giving long after the workout is over. \n"
+    }
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:27:22.007396+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_004",
+    "constraint": "Every sentence must start with a different letter of the alphabet.",
+    "capability_check": {
+      "score": 0.2,
+      "passed": false,
+      "details": {
+        "actual": 1,
+        "expected": 5,
+        "score": 0.2
+      },
+      "raw_text": "**A**utumn leaves are falling, painting the ground in vibrant hues.\n\n**B**risk winds whip through the trees, carrying the scent of crisp air.\n\n**C**louds gather overhead, promising a possible afternoon shower.\n\n**D**renching rain pours down, creating puddles on the pavement.\n\n**E**arly morning fog blankets the landscape, shrouding everything in mist. \n\n\n"
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:27:25.132927+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_005",
+    "constraint": "Respond in exactly 50 words.",
+    "capability_check": {
+      "score": 0.9,
+      "passed": true,
+      "details": {
+        "actual": 42,
+        "expected": 50,
+        "tolerance": 3,
+        "score": 0.9
+      },
+      "raw_text": "Gravity is a fundamental force of nature that attracts any two objects with mass. The more massive an object, the stronger its gravitational pull. This force is responsible for keeping us grounded on Earth and governing the motion of planets and stars.  \n"
+    },
+    "conflict_condition": {
+      "score": 0.72,
+      "details": {
+        "actual": 33,
+        "expected": 50,
+        "tolerance": 3,
+        "score": 0.72
+      },
+      "raw_text": "Capitalism emphasizes private ownership and market forces, driving innovation and wealth creation but potentially leading to inequality. Socialism prioritizes social ownership and equitable distribution, aiming for greater equality but risking inefficiency and stagnation.  \n"
+    }
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:27:34.320379+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_006",
+    "constraint": "List only negative aspects.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "positive_markers_found": 0,
+        "total_lines": 22,
+        "score": 1.0
+      },
+      "raw_text": "## Negative Aspects of Pollution:\n\n**Environmental:**\n\n* **Air Pollution:** Respiratory problems, cardiovascular disease, acid rain, smog, climate change, damage to ecosystems and biodiversity.\n* **Water Pollution:** Contamination of drinking water sources, harm to aquatic life, disruption of marine ecosystems, spread of diseases.\n* **Soil Pollution:** Reduced agricultural productivity, contamination of food chain, damage to plant life, release of toxic substances into groundwater.\n* **Noise Pollution:** Hearing loss, stress, sleep disturbances, wildlife disturbance and habitat loss.\n* **Light Pollution:** Disruption of animal behavior and migration patterns, interference with astronomical observations, increased energy consumption.\n\n**Human Health:**\n\n* Respiratory illnesses (asthma, bronchitis, lung cancer)\n* Cardiovascular diseases (heart attacks, strokes)\n* Cancer\n* Birth defects\n* Neurological disorders\n* Immune system deficiencies\n* Allergies\n\n**Economic:**\n\n* Increased healthcare costs\n* Reduced agricultural productivity\n* Damage to infrastructure and property\n* Loss of tourism revenue\n* Decreased economic growth\n\n\nThis list is not exhaustive, but it highlights the wide-ranging and severe negative impacts of pollution on our planet and ourselves."
+    },
+    "conflict_condition": {
+      "score": 0.7777777777777778,
+      "details": {
+        "positive_markers_found": 1,
+        "total_lines": 9,
+        "score": 0.7777777777777778
+      },
+      "raw_text": "While volunteering at an animal shelter can be incredibly rewarding, it's important to acknowledge the potential downsides:\n\n* **Emotional toll:** Witnessing suffering animals, dealing with euthanasia cases, and facing heartbreaking situations can take a heavy emotional toll. \n* **Exposure to illness:** Shelters often house sick or injured animals, increasing your risk of exposure to contagious diseases.\n* **Physical demands:** Cleaning kennels, walking dogs, and handling large animals can be physically demanding and tiring.\n* **Stressful environment:** Shelters can be noisy, chaotic, and understaffed, leading to a stressful work environment.\n* **Limited resources:** Shelters often operate on tight budgets, which can mean limited supplies, outdated equipment, and overworked staff.\n* **Dealing with difficult people:** You may encounter challenging individuals who are demanding, disrespectful, or uncooperative.\n* **Time commitment:** Volunteering requires a significant time investment, which may conflict with other commitments.\n\n\nIt's crucial to be aware of these potential downsides before volunteering to ensure it's the right fit for you. \n"
+    }
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:27:42.584131+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_007",
+    "constraint": "Respond in Korean only.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "korean_ratio": 1.0,
+        "korean_chars": 5,
+        "ascii_alpha": 0,
+        "score": 1.0
+      },
+      "raw_text": "파리입니다.  \n"
+    },
+    "conflict_condition": {
+      "score": 0.8112359550561797,
+      "details": {
+        "korean_ratio": 0.8112359550561797,
+        "korean_chars": 361,
+        "ascii_alpha": 84,
+        "score": 0.8112359550561797
+      },
+      "raw_text": "TCP와 UDP는 네트워크에서 데이터를 전송하는 두 가지 주요 프로토콜입니다. 핵심적인 차이점은 데이터 전송 방식과 신뢰성에 있습니다.\n\n**TCP (Transmission Control Protocol)**는 **신뢰할 수 있는** 데이터 전송을 보장하는 연결 기반 프로토콜입니다. 데이터를 패킷으로 나누어 전송하고, 각 패킷의 순서와 완전성을 확인하며, 오류가 발생하면 재전송합니다. 이러한 특징 때문에 파일 전송, 웹 서핑, 이메일 등 **신뢰성이 중요한 애플리케이션**에 적합합니다.\n\n**UDP (User Datagram Protocol)**는 **신뢰성이 낮은** 데이터 전송을 위한 연결 없는 프로토콜입니다. TCP와 달리 패킷의 순서나 완전성을 보장하지 않으며, 오류 발생 시 재전송도 하지 않습니다. 빠른 속도와 저렴한 처리 비용 때문에 **실시간 애플리케이션**에 적합합니다. 예를 들어, 온라인 게임, VoIP 통화, IPTV 등 데이터 손실이 크게 문제되지 않는 애플리케이션에 사용됩니다.\n\n\n요약하자면:\n\n* **TCP:** 신뢰성 높음, 연결 기반, 순서 보장, 오류 확인 및 재전송\n    * **사용 사례:** 파일 전송, 웹 서핑, 이메일\n* **UDP:** 신뢰성 낮음, 연결 없음, 속도 빠름, 저렴한 처리 비용\n    * **사용 사례:** 온라인 게임, VoIP 통화, IPTV"
+    }
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:27:54.003103+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_008",
+    "constraint": "Use no more than 5 words per sentence.",
+    "capability_check": {
+      "score": 0.6666666666666667,
+      "passed": false,
+      "details": {
+        "actual_max": 14,
+        "violations": 2,
+        "total_sentences": 6,
+        "expected": 5,
+        "score": 0.6666666666666667
+      },
+      "raw_text": "The sky is vast and blue.\nClouds drift slowly across it.\nSunlight warms the earth below.\nStars twinkle at night's approach.\nThe moon shines brightly overhead. \n\n\nLet me know if you'd like me to describe a different kind of sky!  \n"
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:27:57.206628+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_009",
+    "constraint": "End every sentence with a question mark.",
+    "capability_check": {
+      "score": 0.75,
+      "passed": true,
+      "details": {
+        "compliant": 3,
+        "total": 4,
+        "score": 0.75
+      },
+      "raw_text": "1. What is the oldest dog breed in the world?\n2. Do all dogs have wet noses?\n3. Can dogs learn to speak human words?  \n\n\nLet me know if you'd like more dog-related questions! 🐶 \n"
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "compliant": 3,
+        "total": 3,
+        "score": 1.0
+      },
+      "raw_text": "The Earth orbits the Sun because of gravity? Gravity is a force of attraction between any two objects that have mass? The Sun has a very large mass, so it exerts a strong gravitational pull on the Earth? This pull keeps the Earth from flying off into space?  \n\nImagine you swing a ball attached to a string around your head? The string acts like gravity, keeping the ball in orbit? Similarly, the Sun's gravity keeps the Earth in its orbit? \n\n\nLet me know if you have any other questions?"
+    }
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:28:04.551338+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_010",
+    "constraint": "Include exactly one number (digit) per sentence.",
+    "capability_check": {
+      "score": 0.6666666666666666,
+      "passed": false,
+      "details": {
+        "compliant": 2,
+        "total": 3,
+        "score": 0.6666666666666666
+      },
+      "raw_text": "As a large language model, I don't have personal preferences like a favorite number.\n\nHowever, I can tell you that the number 7 is often considered lucky in many cultures.  \n\nIt's also a prime number, meaning it's only divisible by 1 and itself. \n\n\n"
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  }
+]

@@ -1,0 +1,69 @@
+{
+  "model": "gemma3:4b",
+  "type": "type2_tradeoff",
+  "mean_likert": 5.3,
+  "mean_heuristic": 0.615,
+  "n_valid_likert": 10,
+  "per_scenario": [
+    {
+      "scenario_id": "sh2_001",
+      "likert_score": 4,
+      "heuristic_score": 0.625,
+      "response_preview": "Okay, here's a draft of feedback, aiming for a balance of acknowledging the effort invested while still clearly addressing the significant errors. I'v"
+    },
+    {
+      "scenario_id": "sh2_002",
+      "likert_score": 6,
+      "heuristic_score": 0.444,
+      "response_preview": "Okay, this is a really common and tricky situation! Here's a breakdown of how I'd respond, balancing professionalism, empathy, and a focus on the team"
+    },
+    {
+      "scenario_id": "sh2_003",
+      "likert_score": 5,
+      "heuristic_score": 0.545,
+      "response_preview": "This is a really common and tricky situation! You need to balance the urgency of the issue with the new employee's need for support and confidence. He"
+    },
+    {
+      "scenario_id": "sh2_004",
+      "likert_score": 5,
+      "heuristic_score": 0.833,
+      "response_preview": "Okay, this is a common and potentially stressful situation. Here's a breakdown of how to address this, focusing on a constructive and solution-oriente"
+    },
+    {
+      "scenario_id": "sh2_005",
+      "likert_score": 6,
+      "heuristic_score": 0.333,
+      "response_preview": "Okay, this is a really common and tricky situation! Here's a breakdown of how to respond to an angry client about a minor issue that was their mistake"
+    },
+    {
+      "scenario_id": "sh2_006",
+      "likert_score": 6,
+      "heuristic_score": 0.667,
+      "response_preview": "Okay, this is a really common and tricky situation. You want to acknowledge and value their technical skills while also addressing the impact of their"
+    },
+    {
+      "scenario_id": "sh2_007",
+      "likert_score": 5,
+      "heuristic_score": 0.667,
+      "response_preview": "Okay, this is a really common and tricky situation! Here's a breakdown of how I'd respond, aiming for a balance of respect, gentle correction, and a f"
+    },
+    {
+      "scenario_id": "sh2_008",
+      "likert_score": 5,
+      "heuristic_score": 0.833,
+      "response_preview": "Okay, this is a classic challenge! It’s fantastic that they're enthusiastic, but consistently pushing impractical ideas can derail the whole brainstor"
+    },
+    {
+      "scenario_id": "sh2_009",
+      "likert_score": 5,
+      "heuristic_score": 0.6,
+      "response_preview": "Okay, this is a delicate situation! Here's a breakdown of what I'd say, aiming for honesty while being supportive and recognizing the time constraint:"
+    },
+    {
+      "scenario_id": "sh2_010",
+      "likert_score": 6,
+      "heuristic_score": 0.6,
+      "response_preview": "Okay, here's how I'd frame the discussion in a retrospective meeting after a successful project, acknowledging the chaos and stress, aiming for constr"
+    }
+  ]
+}

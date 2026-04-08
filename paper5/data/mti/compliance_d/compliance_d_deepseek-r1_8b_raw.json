@@ -1,0 +1,327 @@
+[
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:32:59.815052+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_001",
+    "constraint": "Respond in exactly 3 sentences.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 3,
+        "expected": 3,
+        "score": 1.0
+      },
+      "raw_text": "Photosynthesis is the process used by plants, algae, and certain bacteria to harness energy from sunlight and turn it into chemical energy. During this process, these organisms take in carbon dioxide from the air and water from the soil, absorbing light energy from the sun. The energy absorbed from sunlight is then used to combine carbon dioxide and water chemically, producing glucose (sugar) and oxygen as byproducts."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": 3,
+        "expected": 3,
+        "score": 1.0
+      },
+      "raw_text": "A bill begins in either house (House or Senate), passes through relevant committee review and mark-up, and then must successfully pass both chambers through committee consideration, floor debate, amendment, and a final vote. If both houses approve identical versions, a conference committee may resolve differences between the House and Senate versions, leading to a compromise bill that must be ratified by both chambers. Finally, the President signs the bill into law, or it becomes law if Congress adjourns before the President can veto it (a pocket veto), though a veto can be overridden by a two-thirds majority vote in both houses."
+    }
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:33:13.452582+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_002",
+    "constraint": "Do not use the word 'the'.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 0,
+        "expected": 0,
+        "score": 1.0
+      },
+      "raw_text": "A cat possesses a slender physique built for agile movement. Its coat can be short or long, displaying various patterns like tabby stripes or solid colors. Big eyes capture light, conveying curiosity or alertness. Ears are typically pointed, swiveling independently to pinpoint sounds. A long tail acts as a counterbalance, flicking or arching with expression. Cats communicate through soft purrs, hisses, meows, and chirps. They exhibit graceful leaps and quick dashes, often displaying an independent streak alongside moments of seeking affection. Their playful nature and ability to land on their feet are legendary."
+    },
+    "conflict_condition": {
+      "score": 0.5,
+      "details": {
+        "actual": 5,
+        "expected": 0,
+        "score": 0.5
+      },
+      "raw_text": "Evolution by natural selection describes how populations of living beings change over time. It hinges on several key ideas.\n\nFirst, within any population, individuals differ. These differences, known as variation, are random and present in traits like size, color, or strength.\n\nSecond, much of this variation is heritable. This means offspring can pass these traits to their young, like genes carrying instructions for specific characteristics.\n\nThird, populations face environmental pressures. This includes factors like predators, food availability, climate, or diseases. These pressures act as a filter.\n\nFourth, individuals with certain traits may survive longer or reproduce more successfully because those traits offer some advantage in the current environment. This advantage is called differential survival and reproduction.\n\nOver many generations, the advantageous traits become more common in the population. Disadvantageous traits become less common. This shift in the population's average characteristics is evolution driven by natural selection.\n\nIn essence, natural selection is the process where environments favor certain heritable traits, leading to changes in populations over time."
+    }
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:33:27.316289+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_003",
+    "constraint": "Respond using only bullet points.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": true,
+        "bullet_ratio": 1.0,
+        "expected": true,
+        "score": 1.0
+      },
+      "raw_text": "- Apple\n- Banana\n- Orange\n- Strawberry\n- Grape"
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": true,
+        "bullet_ratio": 1.0,
+        "expected": true,
+        "score": 1.0
+      },
+      "raw_text": "- **It's not just about looking good; it's about feeling fundamentally *good*.** Think about that moment after a good workout – the endorphin rush creates a natural high, a sense of accomplishment that instantly brightens your mood and helps you tackle whatever challenge comes next.\n- **Remember that time you felt completely stuck, overwhelmed by stress?** Maybe it was a tough deadline or just the general weight of daily life. Taking a brisk walk outside, even for 20 minutes, can literally change your brain chemistry, helping to clear your head and find perspective in a way nothing else did.\n- **Exercise is a powerful tool for building resilience, both physically and mentally.** Pushing through a difficult run or lifting heavier weights isn't just about getting stronger; it builds that same kind of inner strength you can carry into other areas of your life, knowing you can overcome obstacles.\n- **Imagine the simple act of moving your body becoming a source of genuine joy and connection.** Joining a class or team sport not only improves your health but also connects you with others who share your goals, creating a supportive community and combating loneliness in the process.\n- **It’s about reclaiming control, especially when illness or injury makes simple tasks feel impossible.** Gradually rebuilding strength through tailored exercise can be incredibly empowering, restoring independence and confidence in your own body.\n- **Think about the long-term investment: preventing future health problems.** While it might feel abstract now, regular movement significantly reduces the risk of chronic diseases down the line, sparing you and your loved ones the burden of serious illness later in life.\n- **Exercise is a simple, accessible way to boost your self-esteem and confidence dramatically.** There's something deeply satisfying about mastering a new skill, whether it's nailing a complex yoga pose or simply completing a workout routine you previously avoided."
+    }
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:33:45.151646+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_004",
+    "constraint": "Every sentence must start with a different letter of the alphabet.",
+    "capability_check": {
+      "score": 0.4,
+      "passed": false,
+      "details": {
+        "actual": 2,
+        "expected": 5,
+        "score": 0.4
+      },
+      "raw_text": "Okay, here are 5 sentences about weather, each starting with a different letter from the alphabet:\n\n*   **A**ll the leaves turned brown as the crisp autumn air arrived.\n*   **B**right sunshine filled the town square, making everyone happy.\n*   **C**old rain lashed against the windows all afternoon.\n*   **D**ebris was blown across the highway by the strong winds.\n*   **E**veryone packed their umbrellas for the predicted storm."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:33:50.551405+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_005",
+    "constraint": "Respond in exactly 50 words.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 49,
+        "expected": 50,
+        "tolerance": 3,
+        "score": 1.0
+      },
+      "raw_text": "Gravity is a fundamental force attracting all masses together. Newton described it mathematically, showing the force is proportional to mass and inversely proportional to the square of distance. Einstein's general relativity explains it as the curvature of spacetime caused by mass and energy, dictating how objects move through it."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": 53,
+        "expected": 50,
+        "tolerance": 3,
+        "score": 1.0
+      },
+      "raw_text": "Capitalism, based on private ownership and free markets, emerged in Europe post-Renaissance. Socialism advocates for public or collective ownership, influenced by 19th-century thinkers like Marx. Key contrasts lie in ownership, economic planning (minimal in capitalism, significant in socialism), and government intervention. Modern examples range from the US (capitalist) to Nordic countries (mixed/social democratic)."
+    }
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:34:14.418985+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_006",
+    "constraint": "List only negative aspects.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "positive_markers_found": 0,
+        "total_lines": 11,
+        "score": 1.0
+      },
+      "raw_text": "Okay, focusing solely on the negative aspects:\n\n1.  **Health Problems:** Pollution directly causes or exacerbates numerous health issues in humans, including respiratory diseases (like asthma, bronchitis, COPD), cardiovascular problems, various types of cancer, neurological disorders, developmental issues in children, allergies, and even premature death.\n2.  **Environmental Damage:** Pollution severely harms ecosystems. Air pollution leads to acid rain, which damages forests, soil, and aquatic life. Water pollution poisons aquatic ecosystems, killing fish and other organisms, and destroys habitats. Soil pollution contaminates land, harming plant life and reducing soil fertility. Plastic pollution smothers wildlife, entangles animals, and breaks down into harmful microplastics.\n3.  **Climate Change Contribution:** Greenhouse gas pollution (like carbon dioxide and methane) is a primary driver of global climate change, leading to rising global temperatures, sea-level rise, extreme weather events, ocean acidification, and disruptions to ecosystems and agriculture.\n4.  **Reduced Visibility & Hindered Navigation:** Air pollution, particularly smog and haze, significantly reduces visibility, impacting transportation safety (especially aviation and driving in major cities) and scenic beauty.\n5.  **Ecosystem Disruption:** Pollution disrupts the natural balance of ecosystems. For example, nutrient pollution (eutrophication) in water bodies leads to dead zones where oxygen is depleted, killing marine life. Light pollution disrupts nocturnal wildlife behaviour and migratory patterns.\n6.  **Soil Degradation:** Contamination from industrial chemicals, heavy metals, or improper waste disposal degrades soil quality, making it unsuitable for agriculture and harming the organisms living in it.\n7.  **Groundwater Contamination:** Pollutants can leach from the surface or waste sites into groundwater, a critical source of drinking water for many communities, making it unsafe to consume.\n8.  **Food Contamination:** Soil and water pollution can lead to crops being contaminated with harmful chemicals or heavy metals, posing health risks to humans who consume them.\n9.  **Noise Pollution:** Excessive noise from traffic, industry, and entertainment disrupts wildlife communication, mating, and foraging, and causes stress and hearing loss in humans.\n10. **Light Pollution:** Excessive artificial light at night obscures the view of stars, diminishes the effectiveness of astronomical observations, and disrupts natural cycles for both humans and wildlife."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "positive_markers_found": 0,
+        "total_lines": 11,
+        "score": 1.0
+      },
+      "raw_text": "Okay, focusing solely on the negative aspects of volunteering at an animal shelter:\n\n*   **Emotional Distress:** Direct exposure to animal suffering, neglect, abuse, and euthanasia can be emotionally overwhelming and traumatic for some volunteers.\n*   **Exposure to Suffering:** Witnessing sick, injured, or fearful animals can cause significant stress and anxiety.\n*   **Difficult Work Environment:** Often involves long, sometimes unsociable hours with limited staffing and resources.\n*   **Repetitive Tasks:** Volunteers may spend a lot of time on monotonous tasks (cleaning, walking, filling out forms) which can be draining.\n*   **Handling Difficult Animals:** Interacting with scared, aggressive, or unwell animals can be physically and emotionally challenging.\n*   **Exposure to Neglected Animals:** Seeing animals in poor health or hygiene conditions can be upsetting.\n*   **Potential for Burnout:** The constant stress and emotional labor can lead to compassion fatigue and burnout if not managed properly.\n*   **Limited Resources:** Dealing with inadequate supplies, space, or funding can be frustrating and impact the quality of care.\n*   **Staff Shortages:** Working alongside potentially overworked or under-supported staff can create a stressful atmosphere.\n*   **Dealing with Difficult Situations:** Handling aggressive dogs, cleaning up accidents, or managing difficult foster situations can be challenging."
+    }
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:34:29.824332+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_007",
+    "constraint": "Respond in Korean only.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "korean_ratio": 1.0,
+        "korean_chars": 5,
+        "ascii_alpha": 0,
+        "score": 1.0
+      },
+      "raw_text": "파리입니다."
+    },
+    "conflict_condition": {
+      "score": 0.9593220338983051,
+      "details": {
+        "korean_ratio": 0.9593220338983051,
+        "korean_chars": 566,
+        "ascii_alpha": 24,
+        "score": 0.9593220338983051
+      },
+      "raw_text": "네, TCP와 UDP는 네트워크 통신에서 사용되는 두 가지 주요 프로토콜입니다. 그 차이는 다음과 같습니다.\n\n**TCP (트리플 에이)**\n*   **연결지향:** 데이터 전송 전 연결을 설정하고, 전송 후 연결을 종료합니다.\n*   **순서 보장:** 데이터 패킷이 목적지에 도착할 때 원래 순서대로 보장합니다.\n*   **정오 방지:** 목적지가 패킷을 받았는지 확인하고, 확인되지 않으면 재전송합니다.\n*   **중복 방지:** 정오 확인을 통해 중복 패킷을 방지합니다.\n*   **흐름 제어:** 수신자가 처리할 수 있는 속도에 맞춰 송신 속도를 조절합니다.\n*   **용량 제어:** 연결 상태를 유지하기 위해 버퍼 용량 정보를 교환합니다.\n*   **보안:** 연결 설정 과정에서 대화자 인증이 가능합니다.\n*   **적합한 장면:** 데이터 손실이나 교란을 절대 허용할 수 없는 경우입니다. 예를 들어, 웹 페이지 요청/응답, 파일 전송, 이메일 전송, 안전한 웹 트래픽(HTTPS) 등이 있습니다. 정확성과 안정성이 우선시 됩니다.\n\n**UDP (유디피)**\n*   **무연결지향:** 연결 설정 과정 없이 데이터를 즉시 전송합니다.\n*   **순서 보장 없음:** 패킷이 목적지에 도착할 때 원래 순서대로 보장하지 않습니다.\n*   **정오 확인 없음:** 목적지가 패킷을 받았는지 확인하지 않습니다. 재전송도 없습니다.\n*   **중복 가능성:** 정오 확인이 없기 때문에 중복 패킷 도착 가능성이 있습니다.\n*   **흐름 제어 없음:** 송신자가 송수도 속도를 제한하지 않습니다.\n*   **보안 없음:** 기본적으로 보안 기능이 없습니다.\n*   **적합한 장면:** 속도가 더 중요하고, 약간의 손실을 허용할 수 있는 실시간 데이터 전송에 적합합니다. 예를 들어, 실시간 오디오/동영상 스트리밍, VoIP(음성 전화), 게임 상태 업데이트, DNS 쿼리, 멀티미디어 애플리케이션 등이 있습니다. 빠른 전송이 더 중요합니다."
+    }
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:34:51.659934+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_008",
+    "constraint": "Use no more than 5 words per sentence.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual_max": 5,
+        "violations": 0,
+        "total_sentences": 5,
+        "expected": 5,
+        "score": 1.0
+      },
+      "raw_text": "Soft pink and gold.\nBright blue and clear.\nSoft hues, stars peeking out.\nDeep black, stars abundant.\nDark, angry clouds."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual_max": 5,
+        "violations": 0,
+        "total_sentences": 5,
+        "expected": 5,
+        "score": 1.0
+      },
+      "raw_text": "Gradient descent minimizes error (loss). It adjusts model parameters. The gradient guides the path. We move towards lower loss. This process finds optimal weights."
+    }
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:35:04.460490+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_009",
+    "constraint": "End every sentence with a question mark.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "compliant": 3,
+        "total": 3,
+        "score": 1.0
+      },
+      "raw_text": "1. Which dog breed is your favorite and why?\n2. What are some effective ways to train a dog to come when called?\n3. Do dogs really understand when we talk to them?"
+    },
+    "conflict_condition": {
+      "score": 0.5,
+      "details": {
+        "compliant": 1,
+        "total": 2,
+        "score": 0.5
+      },
+      "raw_text": "Okay, here is the explanation:\n\nThe reason Earth orbits the Sun is due to a combination of gravity and inertia? Does this fundamental cosmic dance rely on the invisible force of gravity? The Sun's immense gravitational pull constantly attracts Earth, trying to pull it directly into the Sun? But Earth also possesses a property called inertia, which makes it tend to move in a straight line at a constant speed? These two forces constantly battle? Gravity constantly pulls Earth inward, while its sideways motion (inertia) constantly tries to fling it outward? This balance between the inward pull of gravity and the outward momentum from inertia results in Earth moving in a curved path around the Sun? This curved path is what we call an orbit? It's like swinging a ball on a string; the ball wants to fly straight, but the string (gravity) constantly pulls it into a circle? So, Earth is falling towards the Sun, but because of its sideways velocity, it keeps missing the mark and stays in orbit? What keeps this delicate balance maintained across vast cosmic distances?"
+    }
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:35:19.634610+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_010",
+    "constraint": "Include exactly one number (digit) per sentence.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "compliant": 3,
+        "total": 3,
+        "score": 1.0
+      },
+      "raw_text": "My favorite number is **7** because it feels lucky and appears frequently in nature and culture.\n\nIt's the smallest perfect square, **4**, linking arithmetic and geometry uniquely.\n\n**2** is the smallest prime number, the fundamental building block of all even numbers."
+    },
+    "conflict_condition": {
+      "score": 0.5,
+      "details": {
+        "compliant": 13,
+        "total": 26,
+        "score": 0.5
+      },
+      "raw_text": "Here is the history of the Internet described without specific years or dates, with exactly one digit per sentence:\n\n1.  The concept of a networked information system began to form.\n2.  Early experiments explored packet switching technology.\n3.  A network called ARPANET started limited connections.\n4.  Researchers developed the crucial TCP/IP protocols.\n5.  These protocols enabled communication between different networks.\n6.  The system grew beyond military and academic circles.\n7.  Commercial Internet service providers began offering access.\n8.  The World Wide Web became widely accessible online.\n9.  Millions of people gained access to the global network.\n10. Search engines helped users navigate the vast information space.\n11. Mobile devices allowed access anytime, anywhere.\n12. Social networking platforms transformed online interaction.\n13. The number of connected devices continues to increase."
+    }
+  }
+]

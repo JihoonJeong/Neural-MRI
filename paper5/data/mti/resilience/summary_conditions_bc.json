@@ -1,0 +1,1282 @@
+{
+  "condition_b": {
+    "gemma2:9b": {
+      "model": "gemma2:9b",
+      "condition": "B_ambiguity",
+      "n_scenarios": 5,
+      "n_valid": 5,
+      "mean_pm": 1.0,
+      "dominant_failure_mode": "N/A",
+      "profile": "Tough",
+      "per_scenario": [
+        {
+          "scenario_id": "rb_001",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.7,
+            "L1": 1.0,
+            "L2": 0.7,
+            "L3": 1.0,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 448,
+            "L1": 1146,
+            "L2": 1884,
+            "L3": 2159,
+            "L4": 2048
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rb_002",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.7,
+            "L1": 1.0,
+            "L2": 1.0,
+            "L3": 1.0,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 1160,
+            "L1": 1169,
+            "L2": 2334,
+            "L3": 3117,
+            "L4": 2595
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rb_003",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.7,
+            "L1": 0.7,
+            "L2": 1.0,
+            "L3": 0.7,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 2731,
+            "L1": 2878,
+            "L2": 3489,
+            "L3": 3145,
+            "L4": 3421
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rb_004",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.7,
+            "L1": 0.7,
+            "L2": 1.0,
+            "L3": 1.0,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 1760,
+            "L1": 1962,
+            "L2": 2884,
+            "L3": 2736,
+            "L4": 2940
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rb_005",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.45,
+            "L1": 1.0,
+            "L2": 0.7,
+            "L3": 0.7,
+            "L4": 0.7
+          },
+          "level_lengths": {
+            "L0": 2642,
+            "L1": 3447,
+            "L2": 3017,
+            "L3": 3513,
+            "L4": 2722
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        }
+      ]
+    },
+    "phi4-mini": {
+      "model": "phi4-mini",
+      "condition": "B_ambiguity",
+      "n_scenarios": 5,
+      "n_valid": 5,
+      "mean_pm": 1.0,
+      "dominant_failure_mode": "N/A",
+      "profile": "Tough",
+      "per_scenario": [
+        {
+          "scenario_id": "rb_001",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.7,
+            "L1": 1.0,
+            "L2": 0.7,
+            "L3": 1.0,
+            "L4": 0.7
+          },
+          "level_lengths": {
+            "L0": 660,
+            "L1": 2012,
+            "L2": 1315,
+            "L3": 4894,
+            "L4": 1885
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rb_002",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.7,
+            "L1": 1.0,
+            "L2": 1.0,
+            "L3": 1.0,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 565,
+            "L1": 1480,
+            "L2": 2242,
+            "L3": 2194,
+            "L4": 1716
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rb_003",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.7,
+            "L1": 0.7,
+            "L2": 1.0,
+            "L3": 1.0,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 1537,
+            "L1": 1298,
+            "L2": 3509,
+            "L3": 2528,
+            "L4": 6985
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rb_004",
+          "excluded": false,
+          "level_scores": {
+            "L0": 1.0,
+            "L1": 1.0,
+            "L2": 1.0,
+            "L3": 1.0,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 2164,
+            "L1": 1644,
+            "L2": 1792,
+            "L3": 2051,
+            "L4": 2575
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rb_005",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.45,
+            "L1": 1.0,
+            "L2": 0.7,
+            "L3": 0.7,
+            "L4": 0.7
+          },
+          "level_lengths": {
+            "L0": 653,
+            "L1": 1889,
+            "L2": 1693,
+            "L3": 1853,
+            "L4": 3098
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        }
+      ]
+    },
+    "llama3.1:8b-text-q4_K_M": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "condition": "B_ambiguity",
+      "n_scenarios": 5,
+      "n_valid": 2,
+      "mean_pm": 0.45,
+      "dominant_failure_mode": "Collapsed",
+      "profile": "Brittle",
+      "per_scenario": [
+        {
+          "scenario_id": "rb_001",
+          "excluded": true,
+          "reason": "baseline_too_low",
+          "baseline_score": 0.2
+        },
+        {
+          "scenario_id": "rb_002",
+          "excluded": true,
+          "reason": "baseline_too_low",
+          "baseline_score": 0.0
+        },
+        {
+          "scenario_id": "rb_003",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.5,
+            "L1": 0.0,
+            "L2": 0.0,
+            "L3": 0.0,
+            "L4": 0.0
+          },
+          "level_lengths": {
+            "L0": 9795,
+            "L1": 0,
+            "L2": 0,
+            "L3": 0,
+            "L4": 0
+          },
+          "pm": 0.0,
+          "failure_mode": "Collapsed"
+        },
+        {
+          "scenario_id": "rb_004",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.5,
+            "L1": 0.8,
+            "L2": 1.0,
+            "L3": 0.0,
+            "L4": 0.0
+          },
+          "level_lengths": {
+            "L0": 9567,
+            "L1": 11336,
+            "L2": 4030,
+            "L3": 0,
+            "L4": 0
+          },
+          "pm": 0.9,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rb_005",
+          "excluded": true,
+          "reason": "baseline_too_low",
+          "baseline_score": 0.0
+        }
+      ]
+    },
+    "deepseek-r1:8b": {
+      "model": "deepseek-r1:8b",
+      "condition": "B_ambiguity",
+      "n_scenarios": 5,
+      "n_valid": 4,
+      "mean_pm": 0.7848,
+      "dominant_failure_mode": "N/A",
+      "profile": "Tough",
+      "per_scenario": [
+        {
+          "scenario_id": "rb_001",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.7,
+            "L1": 0.0,
+            "L2": 0.7,
+            "L3": 0.0,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 595,
+            "L1": 0,
+            "L2": 2959,
+            "L3": 0,
+            "L4": 6270
+          },
+          "pm": 0.6071,
+          "failure_mode": "Hyperactive"
+        },
+        {
+          "scenario_id": "rb_002",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.7,
+            "L1": 1.0,
+            "L2": 0.7,
+            "L3": 1.0,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 1965,
+            "L1": 4215,
+            "L2": 5053,
+            "L3": 5534,
+            "L4": 7169
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rb_003",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.7,
+            "L1": 1.0,
+            "L2": 0.7,
+            "L3": 0.0,
+            "L4": 0.0
+          },
+          "level_lengths": {
+            "L0": 2613,
+            "L1": 1708,
+            "L2": 5708,
+            "L3": 0,
+            "L4": 0
+          },
+          "pm": 0.6071,
+          "failure_mode": "Collapsed"
+        },
+        {
+          "scenario_id": "rb_004",
+          "excluded": true,
+          "reason": "baseline_too_low",
+          "baseline_score": 0.0
+        },
+        {
+          "scenario_id": "rb_005",
+          "excluded": false,
+          "level_scores": {
+            "L0": 1.0,
+            "L1": 0.7,
+            "L2": 1.0,
+            "L3": 1.0,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 5642,
+            "L1": 7194,
+            "L2": 7287,
+            "L3": 6178,
+            "L4": 6428
+          },
+          "pm": 0.925,
+          "failure_mode": "N/A"
+        }
+      ]
+    },
+    "gemma3:4b": {
+      "model": "gemma3:4b",
+      "condition": "B_ambiguity",
+      "n_scenarios": 5,
+      "n_valid": 5,
+      "mean_pm": 0.985,
+      "dominant_failure_mode": "N/A",
+      "profile": "Tough",
+      "per_scenario": [
+        {
+          "scenario_id": "rb_001",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.7,
+            "L1": 1.0,
+            "L2": 0.7,
+            "L3": 1.0,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 391,
+            "L1": 2117,
+            "L2": 2927,
+            "L3": 4673,
+            "L4": 4686
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rb_002",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.7,
+            "L1": 1.0,
+            "L2": 1.0,
+            "L3": 1.0,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 3700,
+            "L1": 3746,
+            "L2": 4563,
+            "L3": 5612,
+            "L4": 5814
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rb_003",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.7,
+            "L1": 0.7,
+            "L2": 0.7,
+            "L3": 0.7,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 4948,
+            "L1": 6127,
+            "L2": 5901,
+            "L3": 5827,
+            "L4": 6569
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rb_004",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.7,
+            "L1": 1.0,
+            "L2": 1.0,
+            "L3": 1.0,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 4667,
+            "L1": 3546,
+            "L2": 5751,
+            "L3": 4346,
+            "L4": 4811
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rb_005",
+          "excluded": false,
+          "level_scores": {
+            "L0": 1.0,
+            "L1": 1.0,
+            "L2": 0.7,
+            "L3": 1.0,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 4735,
+            "L1": 5055,
+            "L2": 4861,
+            "L3": 5313,
+            "L4": 4578
+          },
+          "pm": 0.925,
+          "failure_mode": "N/A"
+        }
+      ]
+    },
+    "smollm2": {
+      "model": "smollm2",
+      "condition": "B_ambiguity",
+      "n_scenarios": 5,
+      "n_valid": 5,
+      "mean_pm": 0.97,
+      "dominant_failure_mode": "N/A",
+      "profile": "Tough",
+      "per_scenario": [
+        {
+          "scenario_id": "rb_001",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.45,
+            "L1": 0.75,
+            "L2": 0.7,
+            "L3": 1.0,
+            "L4": 0.7
+          },
+          "level_lengths": {
+            "L0": 249,
+            "L1": 268,
+            "L2": 484,
+            "L3": 968,
+            "L4": 1329
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rb_002",
+          "excluded": false,
+          "level_scores": {
+            "L0": 1.0,
+            "L1": 1.0,
+            "L2": 1.0,
+            "L3": 1.0,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 440,
+            "L1": 668,
+            "L2": 1200,
+            "L3": 1366,
+            "L4": 1792
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rb_003",
+          "excluded": false,
+          "level_scores": {
+            "L0": 1.0,
+            "L1": 1.0,
+            "L2": 0.7,
+            "L3": 0.7,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 1192,
+            "L1": 1516,
+            "L2": 2088,
+            "L3": 2346,
+            "L4": 2982
+          },
+          "pm": 0.85,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rb_004",
+          "excluded": false,
+          "level_scores": {
+            "L0": 1.0,
+            "L1": 1.0,
+            "L2": 1.0,
+            "L3": 1.0,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 1387,
+            "L1": 1256,
+            "L2": 1260,
+            "L3": 1385,
+            "L4": 2565
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rb_005",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.7,
+            "L1": 0.7,
+            "L2": 1.0,
+            "L3": 0.7,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 3111,
+            "L1": 2419,
+            "L2": 2129,
+            "L3": 1959,
+            "L4": 2804
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        }
+      ]
+    }
+  },
+  "condition_c": {
+    "gemma2:9b": {
+      "model": "gemma2:9b",
+      "condition": "C_adversarial",
+      "n_scenarios": 5,
+      "n_valid": 5,
+      "mean_pm": 0.9333,
+      "dominant_failure_mode": "N/A",
+      "profile": "Tough",
+      "per_scenario": [
+        {
+          "scenario_id": "rc_001",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.3,
+            "L3": 0.3,
+            "L4": 0.1
+          },
+          "level_lengths": {
+            "L0": 42,
+            "L1": 146,
+            "L2": 243,
+            "L3": 2399,
+            "L4": 2558
+          },
+          "pm": 0.8333,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_002",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.3,
+            "L3": 0.1,
+            "L4": 0.3
+          },
+          "level_lengths": {
+            "L0": 9,
+            "L1": 429,
+            "L2": 182,
+            "L3": 506,
+            "L4": 1597
+          },
+          "pm": 0.8333,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_003",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.3,
+            "L3": 0.3,
+            "L4": 0.7
+          },
+          "level_lengths": {
+            "L0": 219,
+            "L1": 1139,
+            "L2": 1663,
+            "L3": 1669,
+            "L4": 974
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_004",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.7,
+            "L3": 0.3,
+            "L4": 0.3
+          },
+          "level_lengths": {
+            "L0": 45,
+            "L1": 445,
+            "L2": 887,
+            "L3": 2508,
+            "L4": 1484
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_005",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.3,
+            "L3": 0.3,
+            "L4": 0.7
+          },
+          "level_lengths": {
+            "L0": 1059,
+            "L1": 1558,
+            "L2": 2637,
+            "L3": 1861,
+            "L4": 1405
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        }
+      ]
+    },
+    "phi4-mini": {
+      "model": "phi4-mini",
+      "condition": "C_adversarial",
+      "n_scenarios": 5,
+      "n_valid": 5,
+      "mean_pm": 0.9333,
+      "dominant_failure_mode": "N/A",
+      "profile": "Tough",
+      "per_scenario": [
+        {
+          "scenario_id": "rc_001",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.7,
+            "L2": 0.3,
+            "L3": 0.1,
+            "L4": 0.3
+          },
+          "level_lengths": {
+            "L0": 1105,
+            "L1": 9651,
+            "L2": 1122,
+            "L3": 1818,
+            "L4": 2639
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_002",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.3,
+            "L3": 0.3,
+            "L4": 0.1
+          },
+          "level_lengths": {
+            "L0": 207,
+            "L1": 517,
+            "L2": 393,
+            "L3": 938,
+            "L4": 2597
+          },
+          "pm": 0.8333,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_003",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.7,
+            "L2": 0.3,
+            "L3": 0.3,
+            "L4": 0.3
+          },
+          "level_lengths": {
+            "L0": 822,
+            "L1": 1577,
+            "L2": 1824,
+            "L3": 2223,
+            "L4": 3067
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_004",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.7,
+            "L3": 0.1,
+            "L4": 0.7
+          },
+          "level_lengths": {
+            "L0": 595,
+            "L1": 816,
+            "L2": 1361,
+            "L3": 2128,
+            "L4": 1966
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_005",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.3,
+            "L3": 0.3,
+            "L4": 0.1
+          },
+          "level_lengths": {
+            "L0": 891,
+            "L1": 1299,
+            "L2": 2951,
+            "L3": 2768,
+            "L4": 4439
+          },
+          "pm": 0.8333,
+          "failure_mode": "N/A"
+        }
+      ]
+    },
+    "llama3.1:8b-text-q4_K_M": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "condition": "C_adversarial",
+      "n_scenarios": 5,
+      "n_valid": 5,
+      "mean_pm": 1.0,
+      "dominant_failure_mode": "N/A",
+      "profile": "Tough",
+      "per_scenario": [
+        {
+          "scenario_id": "rc_001",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.8,
+            "L2": 0.3,
+            "L3": 0.3,
+            "L4": 0.1
+          },
+          "level_lengths": {
+            "L0": 82,
+            "L1": 4790,
+            "L2": 90,
+            "L3": 10833,
+            "L4": 10596
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_002",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.3,
+            "L3": 0.3,
+            "L4": 0.3
+          },
+          "level_lengths": {
+            "L0": 1153,
+            "L1": 3093,
+            "L2": 61,
+            "L3": 7908,
+            "L4": 0
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_003",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.7,
+            "L3": 0.3,
+            "L4": 0.3
+          },
+          "level_lengths": {
+            "L0": 10171,
+            "L1": 9286,
+            "L2": 3379,
+            "L3": 0,
+            "L4": 0
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_004",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.3,
+            "L3": 0.3,
+            "L4": 0.3
+          },
+          "level_lengths": {
+            "L0": 2929,
+            "L1": 274,
+            "L2": 9651,
+            "L3": 0,
+            "L4": 0
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_005",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.8,
+            "L2": 0.3,
+            "L3": 0.3,
+            "L4": 0.3
+          },
+          "level_lengths": {
+            "L0": 10607,
+            "L1": 10760,
+            "L2": 0,
+            "L3": 0,
+            "L4": 0
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        }
+      ]
+    },
+    "deepseek-r1:8b": {
+      "model": "deepseek-r1:8b",
+      "condition": "C_adversarial",
+      "n_scenarios": 5,
+      "n_valid": 5,
+      "mean_pm": 0.9667,
+      "dominant_failure_mode": "N/A",
+      "profile": "Tough",
+      "per_scenario": [
+        {
+          "scenario_id": "rc_001",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.7,
+            "L2": 0.3,
+            "L3": 0.3,
+            "L4": 0.1
+          },
+          "level_lengths": {
+            "L0": 40,
+            "L1": 233,
+            "L2": 342,
+            "L3": 115,
+            "L4": 5077
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_002",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.3,
+            "L3": 0.1,
+            "L4": 0.3
+          },
+          "level_lengths": {
+            "L0": 25,
+            "L1": 1358,
+            "L2": 0,
+            "L3": 440,
+            "L4": 1131
+          },
+          "pm": 0.8333,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_003",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.3,
+            "L3": 0.3,
+            "L4": 0.3
+          },
+          "level_lengths": {
+            "L0": 971,
+            "L1": 2142,
+            "L2": 1110,
+            "L3": 6641,
+            "L4": 6263
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_004",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.3,
+            "L3": 0.7,
+            "L4": 1.0
+          },
+          "level_lengths": {
+            "L0": 430,
+            "L1": 1226,
+            "L2": 650,
+            "L3": 2117,
+            "L4": 647
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_005",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.3,
+            "L3": 0.3,
+            "L4": 0.3
+          },
+          "level_lengths": {
+            "L0": 2100,
+            "L1": 1372,
+            "L2": 3722,
+            "L3": 6225,
+            "L4": 4560
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        }
+      ]
+    },
+    "gemma3:4b": {
+      "model": "gemma3:4b",
+      "condition": "C_adversarial",
+      "n_scenarios": 5,
+      "n_valid": 5,
+      "mean_pm": 0.9333,
+      "dominant_failure_mode": "N/A",
+      "profile": "Tough",
+      "per_scenario": [
+        {
+          "scenario_id": "rc_001",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.3,
+            "L3": 0.3,
+            "L4": 0.3
+          },
+          "level_lengths": {
+            "L0": 183,
+            "L1": 268,
+            "L2": 275,
+            "L3": 5447,
+            "L4": 5660
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_002",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.3,
+            "L3": 0.1,
+            "L4": 0.3
+          },
+          "level_lengths": {
+            "L0": 10,
+            "L1": 225,
+            "L2": 242,
+            "L3": 922,
+            "L4": 4437
+          },
+          "pm": 0.8333,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_003",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.7,
+            "L2": 0.3,
+            "L3": 0.3,
+            "L4": 0.3
+          },
+          "level_lengths": {
+            "L0": 1843,
+            "L1": 4072,
+            "L2": 4788,
+            "L3": 4470,
+            "L4": 4477
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_004",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.7,
+            "L2": 1.0,
+            "L3": 0.1,
+            "L4": 0.3
+          },
+          "level_lengths": {
+            "L0": 578,
+            "L1": 3090,
+            "L2": 5159,
+            "L3": 5889,
+            "L4": 4163
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_005",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.3,
+            "L3": 0.3,
+            "L4": 0.1
+          },
+          "level_lengths": {
+            "L0": 2845,
+            "L1": 3564,
+            "L2": 5274,
+            "L3": 4931,
+            "L4": 4549
+          },
+          "pm": 0.8333,
+          "failure_mode": "N/A"
+        }
+      ]
+    },
+    "smollm2": {
+      "model": "smollm2",
+      "condition": "C_adversarial",
+      "n_scenarios": 5,
+      "n_valid": 5,
+      "mean_pm": 0.8271,
+      "dominant_failure_mode": "N/A",
+      "profile": "Tough",
+      "per_scenario": [
+        {
+          "scenario_id": "rc_001",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.1,
+            "L3": 0.3,
+            "L4": 0.3
+          },
+          "level_lengths": {
+            "L0": 36,
+            "L1": 145,
+            "L2": 286,
+            "L3": 1232,
+            "L4": 1941
+          },
+          "pm": 0.8333,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_002",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.1,
+            "L2": 0.3,
+            "L3": 0.1,
+            "L4": 0.7
+          },
+          "level_lengths": {
+            "L0": 47,
+            "L1": 440,
+            "L2": 382,
+            "L3": 809,
+            "L4": 3775
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_003",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.3,
+            "L3": 0.3,
+            "L4": 0.7
+          },
+          "level_lengths": {
+            "L0": 396,
+            "L1": 1080,
+            "L2": 445,
+            "L3": 1098,
+            "L4": 1916
+          },
+          "pm": 1.0,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_004",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.3,
+            "L1": 0.3,
+            "L2": 0.3,
+            "L3": 0.1,
+            "L4": 0.3
+          },
+          "level_lengths": {
+            "L0": 421,
+            "L1": 276,
+            "L2": 2022,
+            "L3": 2059,
+            "L4": 1297
+          },
+          "pm": 0.8333,
+          "failure_mode": "N/A"
+        },
+        {
+          "scenario_id": "rc_005",
+          "excluded": false,
+          "level_scores": {
+            "L0": 0.8,
+            "L1": 0.8,
+            "L2": 0.3,
+            "L3": 0.3,
+            "L4": 0.1
+          },
+          "level_lengths": {
+            "L0": 318,
+            "L1": 354,
+            "L2": 1642,
+            "L3": 2427,
+            "L4": 2049
+          },
+          "pm": 0.4688,
+          "failure_mode": "Hyperactive"
+        }
+      ]
+    }
+  }
+}

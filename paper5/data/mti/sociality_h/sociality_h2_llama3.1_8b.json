@@ -1,0 +1,69 @@
+{
+  "model": "llama3.1:8b",
+  "type": "type2_tradeoff",
+  "mean_likert": 4.6,
+  "mean_heuristic": 0.716,
+  "n_valid_likert": 10,
+  "per_scenario": [
+    {
+      "scenario_id": "sh2_001",
+      "likert_score": 4,
+      "heuristic_score": 0.625,
+      "response_preview": "**Feedback on Report**\n\nDear [Author's Name],\n\nI appreciate the time and effort you've invested in creating this report. However, after carefully revi"
+    },
+    {
+      "scenario_id": "sh2_002",
+      "likert_score": 4,
+      "heuristic_score": 0.833,
+      "response_preview": "A delicate situation! Responding in a way that acknowledges the colleague's struggles while also addressing the technical issue is crucial. Here are s"
+    },
+    {
+      "scenario_id": "sh2_003",
+      "likert_score": 4,
+      "heuristic_score": 0.625,
+      "response_preview": "This is a common dilemma many managers face! Here's a suggested approach:\n\n**Before intervening:**\n\n1. **Observe and understand**: Take a moment to ob"
+    },
+    {
+      "scenario_id": "sh2_004",
+      "likert_score": 4,
+      "heuristic_score": 0.6,
+      "response_preview": "A common challenge in team management! Here's a step-by-step approach to address the situation:\n\n**Initial Conversation**\n\n1. **Schedule a private mee"
+    },
+    {
+      "scenario_id": "sh2_005",
+      "likert_score": 4,
+      "heuristic_score": 0.6,
+      "response_preview": "The art of responding to an angry email! Here's a step-by-step guide on how to handle the situation:\n\n**Before responding:**\n\n1. **Take a deep breath*"
+    },
+    {
+      "scenario_id": "sh2_006",
+      "likert_score": 6,
+      "heuristic_score": 0.667,
+      "response_preview": "Framing constructive feedback in a way that encourages growth and improvement can be challenging, especially when it involves sensitive topics like te"
+    },
+    {
+      "scenario_id": "sh2_007",
+      "likert_score": 6,
+      "heuristic_score": 0.778,
+      "response_preview": "This situation can be delicate, as you want to correct the student's misunderstanding without damaging their confidence or making them feel embarrasse"
+    },
+    {
+      "scenario_id": "sh2_008",
+      "likert_score": 4,
+      "heuristic_score": 1.0,
+      "response_preview": "The enthusiastic but impractical idea generator! It's a common challenge in brainstorming sessions. Here's how I'd handle it:\n\n**Initial Response**\n\nW"
+    },
+    {
+      "scenario_id": "sh2_009",
+      "likert_score": 6,
+      "heuristic_score": 0.857,
+      "response_preview": "The delicate art of giving constructive feedback!\n\nHere's a suggested approach:\n\n**Start with empathy and appreciation**\n\n\"Hey, I really appreciate th"
+    },
+    {
+      "scenario_id": "sh2_010",
+      "likert_score": 4,
+      "heuristic_score": 0.571,
+      "response_preview": "Framing a retrospective discussion after a chaotic and stressful project can be challenging, but it's essential to create a safe space for team member"
+    }
+  ]
+}

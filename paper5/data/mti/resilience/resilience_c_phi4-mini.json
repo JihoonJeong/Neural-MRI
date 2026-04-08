@@ -1,0 +1,111 @@
+{
+  "model": "phi4-mini",
+  "condition": "C_adversarial",
+  "n_scenarios": 5,
+  "n_valid": 5,
+  "mean_pm": 0.9333,
+  "dominant_failure_mode": "N/A",
+  "profile": "Tough",
+  "per_scenario": [
+    {
+      "scenario_id": "rc_001",
+      "excluded": false,
+      "level_scores": {
+        "L0": 0.3,
+        "L1": 0.7,
+        "L2": 0.3,
+        "L3": 0.1,
+        "L4": 0.3
+      },
+      "level_lengths": {
+        "L0": 1105,
+        "L1": 9651,
+        "L2": 1122,
+        "L3": 1818,
+        "L4": 2639
+      },
+      "pm": 1.0,
+      "failure_mode": "N/A"
+    },
+    {
+      "scenario_id": "rc_002",
+      "excluded": false,
+      "level_scores": {
+        "L0": 0.3,
+        "L1": 0.3,
+        "L2": 0.3,
+        "L3": 0.3,
+        "L4": 0.1
+      },
+      "level_lengths": {
+        "L0": 207,
+        "L1": 517,
+        "L2": 393,
+        "L3": 938,
+        "L4": 2597
+      },
+      "pm": 0.8333,
+      "failure_mode": "N/A"
+    },
+    {
+      "scenario_id": "rc_003",
+      "excluded": false,
+      "level_scores": {
+        "L0": 0.3,
+        "L1": 0.7,
+        "L2": 0.3,
+        "L3": 0.3,
+        "L4": 0.3
+      },
+      "level_lengths": {
+        "L0": 822,
+        "L1": 1577,
+        "L2": 1824,
+        "L3": 2223,
+        "L4": 3067
+      },
+      "pm": 1.0,
+      "failure_mode": "N/A"
+    },
+    {
+      "scenario_id": "rc_004",
+      "excluded": false,
+      "level_scores": {
+        "L0": 0.3,
+        "L1": 0.3,
+        "L2": 0.7,
+        "L3": 0.1,
+        "L4": 0.7
+      },
+      "level_lengths": {
+        "L0": 595,
+        "L1": 816,
+        "L2": 1361,
+        "L3": 2128,
+        "L4": 1966
+      },
+      "pm": 1.0,
+      "failure_mode": "N/A"
+    },
+    {
+      "scenario_id": "rc_005",
+      "excluded": false,
+      "level_scores": {
+        "L0": 0.3,
+        "L1": 0.3,
+        "L2": 0.3,
+        "L3": 0.3,
+        "L4": 0.1
+      },
+      "level_lengths": {
+        "L0": 891,
+        "L1": 1299,
+        "L2": 2951,
+        "L3": 2768,
+        "L4": 4439
+      },
+      "pm": 0.8333,
+      "failure_mode": "N/A"
+    }
+  ]
+}

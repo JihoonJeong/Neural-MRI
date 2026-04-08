@@ -1,0 +1,78 @@
+{
+  "model": "llama3.1:8b-text-q4_K_M",
+  "type": "type3_spontaneous",
+  "mean_social_ratio": 0.0229,
+  "mean_markers": 0.3,
+  "per_scenario": [
+    {
+      "scenario_id": "sh3_001",
+      "social_ratio": 0.01,
+      "marker_hits": 1,
+      "word_count": 1513,
+      "response_preview": "\nprint(add(1, 2))\nThe answer is that there’s no bug. The function add() subtracts two numbers and returns the result. It works as expected.\nBut what i"
+    },
+    {
+      "scenario_id": "sh3_002",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 1524,
+      "response_preview": " Find the best way to get from Seoul to Busan with Rome2rio.\nHow do I travel from Seoul to Busan without a car?\nThe best way to get from Seoul to Busa"
+    },
+    {
+      "scenario_id": "sh3_003",
+      "social_ratio": 0.119,
+      "marker_hits": 1,
+      "word_count": 1509,
+      "response_preview": " The report is about the company's performance in the last quarter.\nThe following are some examples of email subject lines that could be used to annou"
+    },
+    {
+      "scenario_id": "sh3_004",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 66,
+      "response_preview": ".\nTranslate to Korean: 'The meeting will start at 3 o'clock today. The attendees are Kim team leader, Lee section chief and Park assistant manager'.\nT"
+    },
+    {
+      "scenario_id": "sh3_005",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 93,
+      "response_preview": " O(log n) O(n log n) O(n) O(1)\nA. O(log n)\nB. O(n log n)\nC. O(n)\nD. O(1)\nAnswer: A\nExplanation: Binary Search is a searching algorithm that works by d"
+    },
+    {
+      "scenario_id": "sh3_006",
+      "social_ratio": 0.1,
+      "marker_hits": 1,
+      "word_count": 167,
+      "response_preview": " How many degrees Celsius in 72 °F.\nTo calculate 72.00 Degrees Fahrenheit to the corresponding Degrees Celsius value, multiply 72.00 by the conversion"
+    },
+    {
+      "scenario_id": "sh3_007",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 26,
+      "response_preview": " The result should be sorted by the date of signup.\n\nSolution:\nSELECT * FROM Users WHERE DATE_SUB(NOW(), INTERVAL 30 DAY) <= signup_date ORDER BY sign"
+    },
+    {
+      "scenario_id": "sh3_008",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 249,
+      "response_preview": " The planets are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.\nWhat is the order of the planets?\nThe order of the planets is as fo"
+    },
+    {
+      "scenario_id": "sh3_009",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 1662,
+      "response_preview": " What is a 404 error?\nThe HTTP status code 404 means that the requested resource could not be found. This is also known as a 404 Not Found Error.\nA 40"
+    },
+    {
+      "scenario_id": "sh3_010",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 16,
+      "response_preview": " How much is the total amount?\nA. $100\nB. $99.75\nC. $101.25\nD. $102.00\nAnswer: B"
+    }
+  ]
+}

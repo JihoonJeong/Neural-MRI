@@ -1,0 +1,98 @@
+{
+  "model": "mistral:7b",
+  "condition": "A_overload",
+  "n_scenarios": 5,
+  "n_valid": 4,
+  "n_excluded": 1,
+  "mean_pm": 1.0,
+  "dominant_failure_mode": "N/A",
+  "profile": "Tough",
+  "per_scenario": [
+    {
+      "scenario_id": "ra_001",
+      "excluded": false,
+      "level_scores": {
+        "L0": 1.0,
+        "L1": 1.0,
+        "L2": 1.0,
+        "L3": 1.0,
+        "L4": 1.0
+      },
+      "level_lengths": {
+        "L0": 696,
+        "L1": 653,
+        "L2": 1198,
+        "L3": 3002,
+        "L4": 2667
+      },
+      "pm": 1.0,
+      "failure_mode": "N/A"
+    },
+    {
+      "scenario_id": "ra_002",
+      "excluded": false,
+      "level_scores": {
+        "L0": 1.0,
+        "L1": 1.0,
+        "L2": 1.0,
+        "L3": 1.0,
+        "L4": 1.0
+      },
+      "level_lengths": {
+        "L0": 166,
+        "L1": 600,
+        "L2": 662,
+        "L3": 1824,
+        "L4": 3607
+      },
+      "pm": 1.0,
+      "failure_mode": "N/A"
+    },
+    {
+      "scenario_id": "ra_003",
+      "excluded": false,
+      "level_scores": {
+        "L0": 1.0,
+        "L1": 1.0,
+        "L2": 1.0,
+        "L3": 1.0,
+        "L4": 1.0
+      },
+      "level_lengths": {
+        "L0": 705,
+        "L1": 522,
+        "L2": 450,
+        "L3": 781,
+        "L4": 674
+      },
+      "pm": 1.0,
+      "failure_mode": "N/A"
+    },
+    {
+      "scenario_id": "ra_004",
+      "excluded": false,
+      "level_scores": {
+        "L0": 0.7,
+        "L1": 1.0,
+        "L2": 1.0,
+        "L3": 1.0,
+        "L4": 1.0
+      },
+      "level_lengths": {
+        "L0": 52,
+        "L1": 61,
+        "L2": 482,
+        "L3": 349,
+        "L4": 3670
+      },
+      "pm": 1.0,
+      "failure_mode": "N/A"
+    },
+    {
+      "scenario_id": "ra_005",
+      "excluded": true,
+      "reason": "baseline_too_low",
+      "baseline_score": 0.4
+    }
+  ]
+}

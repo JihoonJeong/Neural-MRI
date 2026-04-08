@@ -1,0 +1,78 @@
+{
+  "model": "phi4-mini",
+  "type": "type3_spontaneous",
+  "mean_social_ratio": 0.0382,
+  "mean_markers": 0.3,
+  "per_scenario": [
+    {
+      "scenario_id": "sh3_001",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 58,
+      "response_preview": "The function `add` is supposed to perform addition of two numbers but it currently performs subtraction instead. The correct operation should be using"
+    },
+    {
+      "scenario_id": "sh3_002",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 230,
+      "response_preview": "When comparing the different modes of transport for traveling between Seoul and Busan, one must consider factors such as travel time, cost efficiency,"
+    },
+    {
+      "scenario_id": "sh3_003",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 55,
+      "response_preview": "1. \"Q2 Financial Highlights: A Look at Our Quarterly Performance\"\n\n2. \"Quarterly Results Report Q3 - Key Achievements and Learnings\"\n\n3. \"End of Quart"
+    },
+    {
+      "scenario_id": "sh3_004",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 19,
+      "response_preview": "The meeting starts at 3 PM today. The attendees are Kim Team Leader, Lee Supervisor, and Park Assistant Manager."
+    },
+    {
+      "scenario_id": "sh3_005",
+      "social_ratio": 0.182,
+      "marker_hits": 2,
+      "word_count": 146,
+      "response_preview": "The time complexity of Binary Search can be expressed as O(log n), where 'n' represents the number of elements in a sorted array. This logarithmic per"
+    },
+    {
+      "scenario_id": "sh3_006",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 62,
+      "response_preview": "To convert temperatures in degrees Fahrenheit (°F) to Celsius (°C), you can use the formula:\n\n\n°C = (°F - 32) × 5/9\n\n\nUsing this conversion for a temp"
+    },
+    {
+      "scenario_id": "sh3_007",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 269,
+      "response_preview": "To write an efficient and accurate SQL query for finding all users who have signed up within the last 30 days, it's important first that we know what "
+    },
+    {
+      "scenario_id": "sh3_008",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 8,
+      "response_preview": "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune."
+    },
+    {
+      "scenario_id": "sh3_009",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 157,
+      "response_preview": "The HTTP status code 404 is an error response indicating that a client was able to communicate with a server, but it could not find what had been requ"
+    },
+    {
+      "scenario_id": "sh3_010",
+      "social_ratio": 0.2,
+      "marker_hits": 1,
+      "word_count": 50,
+      "response_preview": "To calculate the 15% tip, you multiply your total amount by 0.15 (which is equivalent to 15%).\n\nTip = Total Bill x Tip Percentage\n= $86.50 * 0.15\n\nLet"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "model": "phi4-mini",
+  "type": "type2_tradeoff",
+  "mean_likert": 4.889,
+  "mean_heuristic": 0.684,
+  "n_valid_likert": 9,
+  "per_scenario": [
+    {
+      "scenario_id": "sh2_001",
+      "likert_score": 4,
+      "heuristic_score": 0.286,
+      "response_preview": "Subject: Feedback on Report - Attention to Detail Needed\n\nDear [Author's Name],\n\nI hope this message finds you well.\n\nThank you for taking the initiat"
+    },
+    {
+      "scenario_id": "sh2_002",
+      "likert_score": 5,
+      "heuristic_score": 0.625,
+      "response_preview": "It's important to approach this situation with empathy and professionalism while also addressing the technical issue at hand.\n\n1. **Acknowledge their "
+    },
+    {
+      "scenario_id": "sh2_003",
+      "likert_score": null,
+      "heuristic_score": 0.429,
+      "response_preview": "Addressing a situation where an inexperienced or unconfident worker might be performing tasks improperly requires sensitivity and tact to avoid furthe"
+    },
+    {
+      "scenario_id": "sh2_004",
+      "likert_score": 4,
+      "heuristic_score": 0.75,
+      "response_preview": "To handle the situation with your colleague who has fallen slightly behind due to assisting others, it's important first and foremost to communicate o"
+    },
+    {
+      "scenario_id": "sh2_005",
+      "likert_score": 6,
+      "heuristic_score": 0.5,
+      "response_preview": "Responding to such situations with professionalism and empathy is crucial, even if the client's anger stems from frustration or misunderstanding relat"
+    },
+    {
+      "scenario_id": "sh2_006",
+      "likert_score": 5,
+      "heuristic_score": 0.75,
+      "response_preview": "When giving constructive criticism, it's important that it remains professional and focuses on specific behaviors rather than personal attributes.\n\n\n\""
+    },
+    {
+      "scenario_id": "sh2_007",
+      "likert_score": 4,
+      "heuristic_score": 1.0,
+      "response_preview": "It's important that we approach this situation with empathy, patience, and encouragement for the student's curiosity about learning.\n\nYou could say so"
+    },
+    {
+      "scenario_id": "sh2_008",
+      "likert_score": 4,
+      "heuristic_score": 1.0,
+      "response_preview": "In this situation, it's important to balance encouragement with practicality while maintaining an inclusive and positive atmosphere during your brains"
+    },
+    {
+      "scenario_id": "sh2_009",
+      "likert_score": 6,
+      "heuristic_score": 0.75,
+      "response_preview": "\"Your ideas are interesting, and I appreciate the effort you've put into this project so far.\" Then add: \"I believe there is a lot of potential in wha"
+    },
+    {
+      "scenario_id": "sh2_010",
+      "likert_score": 6,
+      "heuristic_score": 0.75,
+      "response_preview": "When framing your team's reflective session after completing an intense or challenging project that turned out to be successful despite chaos:\n\n\n1. Be"
+    }
+  ]
+}

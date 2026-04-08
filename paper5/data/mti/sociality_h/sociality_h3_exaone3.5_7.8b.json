@@ -1,0 +1,78 @@
+{
+  "model": "exaone3.5:7.8b",
+  "type": "type3_spontaneous",
+  "mean_social_ratio": 0.0453,
+  "mean_markers": 0.4,
+  "per_scenario": [
+    {
+      "scenario_id": "sh3_001",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 127,
+      "response_preview": "The bug in the provided Python code lies in the implementation of the `add` function. The function is intended to add two numbers, `a` and `b`, but in"
+    },
+    {
+      "scenario_id": "sh3_002",
+      "social_ratio": 0.029,
+      "marker_hits": 1,
+      "word_count": 259,
+      "response_preview": "Certainly! Here’s a comparison of transportation options from Seoul to Busan:\n\n### 1. **High-Speed Train (KTX - Korea Train eXpress)**\n- **Duration**:"
+    },
+    {
+      "scenario_id": "sh3_003",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 110,
+      "response_preview": "Here are 5 email subject lines for a quarterly results report, designed to be clear and engaging:\n\n1. **Q[Quarter Number] FYI: [Company Name] Quarterl"
+    },
+    {
+      "scenario_id": "sh3_004",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 61,
+      "response_preview": "The meeting scheduled for today will begin at 3 PM. The attendees are Team Leader Kim, Lee Manager, and Park Associate. \n\n(Note: For clarity, \"Lee Man"
+    },
+    {
+      "scenario_id": "sh3_005",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 96,
+      "response_preview": "The time complexity of binary search is **O(log n)**, where **n** is the number of elements in the sorted array or list being searched.\n\nHere's why:\n\n"
+    },
+    {
+      "scenario_id": "sh3_006",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 60,
+      "response_preview": "To convert degrees Fahrenheit to Celsius, you can use the following formula:\n\n\\[ \\text{Celsius} = \\frac{(\\text{Fahrenheit} - 32) \\times 5}{9} \\]\n\nGive"
+    },
+    {
+      "scenario_id": "sh3_007",
+      "social_ratio": 0.067,
+      "marker_hits": 1,
+      "word_count": 158,
+      "response_preview": "To find all users who signed up in the last 30 days, you can use the following SQL query. This assumes you have a table named `users` with a column `s"
+    },
+    {
+      "scenario_id": "sh3_008",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 50,
+      "response_preview": "Here are the planets in our solar system listed in order from the Sun:\n\n1. Mercury\n2. Venus\n3. Earth\n4. Mars\n5. Jupiter\n6. Saturn\n7. Uranus\n8. Neptune"
+    },
+    {
+      "scenario_id": "sh3_009",
+      "social_ratio": 0.143,
+      "marker_hits": 1,
+      "word_count": 83,
+      "response_preview": "The HTTP status code **404** means **\"Not Found\"**. \n\nThis indicates that the server could not locate the requested resource (like a webpage, file, or"
+    },
+    {
+      "scenario_id": "sh3_010",
+      "social_ratio": 0.214,
+      "marker_hits": 1,
+      "word_count": 48,
+      "response_preview": "Here's how to calculate a 15% tip on an $86.50 bill:\n\n**1. Convert the percentage to a decimal:** Divide 15 by 100 = 0.15\n\n**2. Multiply the bill amou"
+    }
+  ]
+}

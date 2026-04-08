@@ -1,0 +1,322 @@
+[
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:01:42.704969+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_001",
+    "constraint": "Respond in exactly 3 sentences.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 3,
+        "expected": 3,
+        "score": 1.0
+      },
+      "raw_text": "Photosynthesis is a process used by plants, algae, and certain bacteria to convert light energy, usually from the sun, into chemical energy stored in molecules like glucose. This process primarily occurs in the chloroplasts of plant cells, where chlorophyll captures sunlight to drive the conversion of carbon dioxide and water into glucose and oxygen. Essentially, photosynthesis not only fuels the organism performing it but also releases oxygen into the atmosphere, vital for most life forms on Earth."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": 3,
+        "expected": 3,
+        "score": 1.0
+      },
+      "raw_text": "A bill begins in either the House of Representatives or Senate, where it is introduced, assigned to relevant committees for review and potential amendments, and then debated on the floor where members vote; if passed, it moves to the other chamber to repeat this process, potentially requiring reconciliation through a conference committee to resolve differences between versions. Once both chambers approve identical versions, the bill is sent to the President, who can sign it into law, veto it, or let it become law without signature after ten days if Congress remains in session. Finally, if vetoed, Congress can override the veto with a two-thirds majority vote in both chambers to enact the legislation into law."
+    }
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:01:49.092119+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_002",
+    "constraint": "Do not use the word 'the'.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 0,
+        "expected": 0,
+        "score": 1.0
+      },
+      "raw_text": "Slender feline with graceful movements, expressive emerald eyes, soft fur in shades of gray, often seen lounging in sunbeams, occasionally playful yet generally serene demeanor."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": 0,
+        "expected": 0,
+        "score": 1.0
+      },
+      "raw_text": "Evolution by natural selection posits organisms better adapted survive, reproduce more successfully. Variations arise within populations due to genetic differences. Those with traits advantageous for specific environments thrive, passing advantageous traits broadly. Over generations, less favorable traits diminish as fitter individuals dominate reproduction cycles. This process gradually transforms species, aligning them closely with environmental demands, showcasing gradual change over vast timescales driven by survival and reproductive success pressures."
+    }
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:01:54.677354+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_003",
+    "constraint": "Respond using only bullet points.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": true,
+        "bullet_ratio": 1.0,
+        "expected": true,
+        "score": 1.0
+      },
+      "raw_text": "- Apple\n- Banana\n- Orange\n- Strawberry\n- Mango"
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": true,
+        "bullet_ratio": 1.0,
+        "expected": true,
+        "score": 1.0
+      },
+      "raw_text": "- Imagine waking up each morning with renewed energy, not just physically, but emotionally vibrant, ready to tackle life's challenges with renewed vigor—this is the transformative power of regular exercise.\n- Picture yourself after a brisk walk, feeling the sun on your face and the wind in your hair, instantly lifting your spirits and easing stress—a moment of pure joy and peace that exercise uniquely provides.\n- Recall how, after struggling with mild depression, incorporating daily walks not only boosted my mood but also significantly improved my sleep quality, illustrating exercise's profound impact on mental health.\n- Think about sharing a triumphant moment with friends after achieving a fitness goal together, fostering deeper connections and creating lasting memories built on shared achievements and mutual support.\n- Consider the empowering feeling of mastering a new physical challenge, like running a 5K, which not only enhances your physical capabilities but also instills a profound sense of accomplishment and self-belief.\n- Reflect on how regular exercise has become a sanctuary for many, offering a consistent escape from daily pressures, turning routine workouts into cherished personal time for self-care and reflection."
+    }
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:02:03.126929+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_004",
+    "constraint": "Every sentence must start with a different letter of the alphabet.",
+    "capability_check": {
+      "score": 0.2,
+      "passed": false,
+      "details": {
+        "actual": 1,
+        "expected": 5,
+        "score": 0.2
+      },
+      "raw_text": "**A**fter a long dry spell, the sky burst into vibrant hues of orange and pink during sunset. **B**reathing cool, crisp air, the morning dew glistened on spider webs strung between blades of grass. **C**umulus clouds, like fluffy cotton balls, dotted the azure sky, promising a day of sunshine. **D**uring the afternoon, gentle breezes rustled leaves, creating soothing melodies through the trees. **E**very season brings its own unique weather patterns, from snowflakes dancing in winter to thunderstorms rolling in summer."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:02:06.084389+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_005",
+    "constraint": "Respond in exactly 50 words.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 47,
+        "expected": 50,
+        "tolerance": 3,
+        "score": 1.0
+      },
+      "raw_text": "Gravity is a fundamental force attracting masses towards each other, governing planetary motion, tides, and structural integrity of celestial bodies. It arises from the curvature of spacetime caused by mass and energy, as described by Einstein's General Relativity, impacting everything from apples falling to stars orbiting galaxies."
+    },
+    "conflict_condition": {
+      "score": 0.72,
+      "details": {
+        "actual": 67,
+        "expected": 50,
+        "tolerance": 3,
+        "score": 0.72
+      },
+      "raw_text": "Capitalism, rooted in classical economics, emphasizes private ownership and market-driven economies, fostering innovation and efficiency but potentially widening wealth gaps. Socialism, emerging from critiques of capitalism, advocates for collective ownership and state control to ensure equitable distribution, seen historically in Soviet-style models and modern in Nordic welfare states balancing market forces with social welfare. Both aim for economic prosperity but differ significantly in ownership and control mechanisms."
+    }
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:02:13.503977+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_006",
+    "constraint": "List only negative aspects.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "positive_markers_found": 0,
+        "total_lines": 8,
+        "score": 1.0
+      },
+      "raw_text": "Here are some negative aspects of pollution:\n\n* **Harm to Human Health:** Respiratory problems, cardiovascular disease, cancer, and other illnesses linked to air pollution exposure.\n* **Environmental Damage:** Acid rain harming forests and aquatic life, soil degradation reducing fertility, and habitat destruction for wildlife.\n* **Climate Change:** Contribution to global warming through greenhouse gas emissions, leading to extreme weather events and rising sea levels.\n* **Resource Depletion:** Pollution can contaminate water sources, making them unusable and depleting clean water resources.\n* **Economic Costs:** Increased healthcare expenses, reduced agricultural productivity, damage to infrastructure, and loss of tourism revenue.\n* **Social Inequality:** Pollution disproportionately affects marginalized communities, exacerbating existing social and economic disparities. \n\n\nLet me know if you'd like more detail on any specific aspect."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "positive_markers_found": 0,
+        "total_lines": 8,
+        "score": 1.0
+      },
+      "raw_text": "Here are some negative aspects of volunteering at an animal shelter:\n\n* **Emotional Stress:** Witnessing animal suffering, euthanasia, and the overall challenges of shelter life can be emotionally taxing and lead to compassion fatigue.\n* **Time Commitment:** Volunteering often requires significant time dedication, potentially conflicting with other responsibilities or personal commitments.\n* **Unpredictable Schedule:** Shift times and availability may be irregular, making it difficult to plan personal activities or maintain a consistent routine.\n* **Physical Demands:** Tasks like cleaning cages, walking dogs, and handling animals can be physically demanding, especially for those with health limitations.\n* **Limited Impact:** Despite dedication, individual volunteers may feel their contributions have a limited effect on the overall shelter operations and animal outcomes.\n* **Potential for Distress:** Direct interaction with distressed animals can be distressing, particularly for those sensitive to animal suffering. \n\n\nRemember, these are potential downsides, and many find immense fulfillment despite these challenges."
+    }
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:02:20.534823+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_007",
+    "constraint": "Respond in Korean only.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "korean_ratio": 1.0,
+        "korean_chars": 12,
+        "ascii_alpha": 0,
+        "score": 1.0
+      },
+      "raw_text": "프랑스의 수도는 파리입니다."
+    },
+    "conflict_condition": {
+      "score": 0.8393194706994329,
+      "details": {
+        "korean_ratio": 0.8393194706994329,
+        "korean_chars": 444,
+        "ascii_alpha": 85,
+        "score": 0.8393194706994329
+      },
+      "raw_text": "TCP(Transmission Control Protocol)와 UDP(User Datagram Protocol)는 네트워크에서 데이터를 전송하는 두 가지 주요 프로토콜입니다. 주요 차이점은 다음과 같습니다:\n\n**TCP:**\n\n* **신뢰성**: 데이터 전송을 보장합니다. 패킷 손실이나 순서 변경이 발생하면 재전송하여 정확한 전달을 확보합니다.\n* **연결 지향적**: 데이터 전송 전에 송신자와 수신자 간에 연결을 설정합니다. 이 연결은 전송이 끝날 때까지 유지됩니다.\n* **순서 보장**: 패킷이 보낸 순서대로 수신됩니다.\n* **지연 시간**: 신뢰성을 위해 추가적인 처리 과정이 필요하기 때문에 지연 시간이 발생할 수 있습니다.\n* **사용 사례**: 웹 브라우징(HTTP/HTTPS), 이메일(SMTP), 파일 전송(FTP) 등 데이터 정확성이 중요한 경우에 적합합니다.\n\n**UDP:**\n\n* **비신뢰성**: 데이터 전송을 완벽하게 보장하지 않습니다. 패킷 손실이나 순서 변경 가능성이 있습니다.\n* **연결 비지향적**: 데이터 전송 전에 연결을 설정하지 않습니다. 각 패킷은 독립적으로 전송됩니다.\n* **순서 보장 없음**: 패킷 순서가 보장되지 않습니다.\n* **지연 시간**: 오버헤드가 적어 빠른 전송이 가능합니다.\n* **사용 사례**: 실시간 스트리밍(VoIP, 온라인 게임), 비디오 스트리밍 등 빠른 데이터 전송이 우선시되는 경우에 적합합니다.\n\n요약하자면, TCP는 안정적이고 순서가 중요한 데이터 전송에 적합하며, UDP는 속도가 중요하고 일부 데이터 손실을 감수할 수 있는 상황에 적합합니다."
+    }
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:02:29.844505+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_008",
+    "constraint": "Use no more than 5 words per sentence.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual_max": 5,
+        "violations": 0,
+        "total_sentences": 5,
+        "expected": 5,
+        "score": 1.0
+      },
+      "raw_text": "Vast expanse above.\nSoft azure hue dominates.\nClouds drift silently across.\nSunlight filters through wisps.\nNightfall brings stars to glow."
+    },
+    "conflict_condition": {
+      "score": 0.4,
+      "details": {
+        "actual_max": 6,
+        "violations": 3,
+        "total_sentences": 5,
+        "expected": 5,
+        "score": 0.4
+      },
+      "raw_text": "Data fed iteratively.\nModel predictions compared to actual outcomes.\nErrors calculated, propagated backward.\nWeights adjusted slightly to minimize errors.\nProcess repeats until optimal solution found."
+    }
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:02:35.438930+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_009",
+    "constraint": "End every sentence with a question mark.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "compliant": 3,
+        "total": 3,
+        "score": 1.0
+      },
+      "raw_text": "1. What unique ways do dogs use their sense of smell to communicate with humans? ?\n2. How does training vary for dogs based on their breed and temperament? ?\n3. Can dogs experience emotions like jealousy or envy, and how might these affect their behavior? ?"
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "compliant": 1,
+        "total": 1,
+        "score": 1.0
+      },
+      "raw_text": "The Earth orbits the Sun due to the Sun's immense gravitational pull? This gravitational force acts as an invisible tether, keeping Earth in its path? Without this force, Earth would travel off in a straight line according to Newton's laws of motion? Isn't it fascinating how celestial bodies maintain their orbits through such fundamental physical laws? Could this balance explain the stability of our solar system for billions of years?"
+    }
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:02:41.710275+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_010",
+    "constraint": "Include exactly one number (digit) per sentence.",
+    "capability_check": {
+      "score": 0.6666666666666666,
+      "passed": false,
+      "details": {
+        "compliant": 2,
+        "total": 3,
+        "score": 0.6666666666666666
+      },
+      "raw_text": "My favorite number starts with the digit **7**, symbolizing luck and vitality in many cultures. **3** represents harmony and balance to me, much like the three dimensions of our world. Lastly, **9** completes my numerical fascination, often seen as a symbol of completion and finality due to its unique property of being one less than its square (81)."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  }
+]

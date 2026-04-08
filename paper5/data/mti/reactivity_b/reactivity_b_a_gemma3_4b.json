@@ -1,0 +1,299 @@
+{
+  "model": "gemma3:4b",
+  "axis": "reactivity",
+  "sub_axis": "reactivity_b",
+  "condition": "A_language",
+  "likert": {
+    "output_type": "likert",
+    "overall_mean_delta": 0.1333,
+    "per_scenario": [
+      {
+        "scenario_id": "rb_a_001",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.0,
+          "casual_vs_restructured": 0.0,
+          "formal_vs_restructured": 0.0
+        },
+        "mean_delta": 0.0
+      },
+      {
+        "scenario_id": "rb_a_002",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.5,
+          "casual_vs_restructured": 0.0,
+          "formal_vs_restructured": 0.5
+        },
+        "mean_delta": 0.3333
+      },
+      {
+        "scenario_id": "rb_a_003",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.3333,
+          "casual_vs_restructured": 0.0,
+          "formal_vs_restructured": 0.3333
+        },
+        "mean_delta": 0.2222
+      },
+      {
+        "scenario_id": "rb_a_004",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.0,
+          "casual_vs_restructured": 0.0,
+          "formal_vs_restructured": 0.0
+        },
+        "mean_delta": 0.0
+      },
+      {
+        "scenario_id": "rb_a_005",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.0,
+          "casual_vs_restructured": 0.1667,
+          "formal_vs_restructured": 0.1667
+        },
+        "mean_delta": 0.1111
+      },
+      {
+        "scenario_id": "rb_a_006",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.0,
+          "casual_vs_restructured": 0.1667,
+          "formal_vs_restructured": 0.1667
+        },
+        "mean_delta": 0.1111
+      },
+      {
+        "scenario_id": "rb_a_007",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.0,
+          "casual_vs_restructured": 0.0,
+          "formal_vs_restructured": 0.0
+        },
+        "mean_delta": 0.0
+      },
+      {
+        "scenario_id": "rb_a_008",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.1667,
+          "casual_vs_restructured": 0.6667,
+          "formal_vs_restructured": 0.5
+        },
+        "mean_delta": 0.4444
+      },
+      {
+        "scenario_id": "rb_a_009",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.0,
+          "casual_vs_restructured": 0.0,
+          "formal_vs_restructured": 0.0
+        },
+        "mean_delta": 0.0
+      },
+      {
+        "scenario_id": "rb_a_010",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.0,
+          "casual_vs_restructured": 0.1667,
+          "formal_vs_restructured": 0.1667
+        },
+        "mean_delta": 0.1111
+      }
+    ]
+  },
+  "forced_choice": {
+    "output_type": "forced_choice",
+    "overall_mean_delta": 0.2667,
+    "per_scenario": [
+      {
+        "scenario_id": "rb_a_001",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.0,
+          "casual_vs_restructured": 0.0,
+          "formal_vs_restructured": 0.0
+        },
+        "mean_delta": 0.0
+      },
+      {
+        "scenario_id": "rb_a_002",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.0,
+          "casual_vs_restructured": 0.0,
+          "formal_vs_restructured": 0.0
+        },
+        "mean_delta": 0.0
+      },
+      {
+        "scenario_id": "rb_a_003",
+        "pairwise_deltas": {
+          "casual_vs_formal": 1.0,
+          "casual_vs_restructured": 0.0,
+          "formal_vs_restructured": 1.0
+        },
+        "mean_delta": 0.6667
+      },
+      {
+        "scenario_id": "rb_a_004",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.0,
+          "casual_vs_restructured": 1.0,
+          "formal_vs_restructured": 1.0
+        },
+        "mean_delta": 0.6667
+      },
+      {
+        "scenario_id": "rb_a_005",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.0,
+          "casual_vs_restructured": 1.0,
+          "formal_vs_restructured": 1.0
+        },
+        "mean_delta": 0.6667
+      },
+      {
+        "scenario_id": "rb_a_006",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.0,
+          "casual_vs_restructured": 0.0,
+          "formal_vs_restructured": 0.0
+        },
+        "mean_delta": 0.0
+      },
+      {
+        "scenario_id": "rb_a_007",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.0,
+          "casual_vs_restructured": 0.0,
+          "formal_vs_restructured": 0.0
+        },
+        "mean_delta": 0.0
+      },
+      {
+        "scenario_id": "rb_a_008",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.0,
+          "casual_vs_restructured": 0.0,
+          "formal_vs_restructured": 0.0
+        },
+        "mean_delta": 0.0
+      },
+      {
+        "scenario_id": "rb_a_009",
+        "pairwise_deltas": {
+          "casual_vs_formal": 1.0,
+          "casual_vs_restructured": 0.0,
+          "formal_vs_restructured": 1.0
+        },
+        "mean_delta": 0.6667
+      },
+      {
+        "scenario_id": "rb_a_010",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.0,
+          "casual_vs_restructured": 0.0,
+          "formal_vs_restructured": 0.0
+        },
+        "mean_delta": 0.0
+      }
+    ]
+  },
+  "free_response": {
+    "output_type": "free_response",
+    "overall_mean_delta": 0.1069,
+    "per_scenario": [
+      {
+        "scenario_id": "rb_a_001",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.1242,
+          "casual_vs_restructured": 0.0452,
+          "formal_vs_restructured": 0.079
+        },
+        "mean_delta": 0.0828
+      },
+      {
+        "scenario_id": "rb_a_002",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.1932,
+          "casual_vs_restructured": 0.2939,
+          "formal_vs_restructured": 0.1007
+        },
+        "mean_delta": 0.1959
+      },
+      {
+        "scenario_id": "rb_a_003",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.1548,
+          "casual_vs_restructured": 0.0237,
+          "formal_vs_restructured": 0.1311
+        },
+        "mean_delta": 0.1032
+      },
+      {
+        "scenario_id": "rb_a_004",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.2428,
+          "casual_vs_restructured": 0.0793,
+          "formal_vs_restructured": 0.1634
+        },
+        "mean_delta": 0.1619
+      },
+      {
+        "scenario_id": "rb_a_005",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.0182,
+          "casual_vs_restructured": 0.0574,
+          "formal_vs_restructured": 0.0756
+        },
+        "mean_delta": 0.0504
+      },
+      {
+        "scenario_id": "rb_a_006",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.1346,
+          "casual_vs_restructured": 0.0526,
+          "formal_vs_restructured": 0.082
+        },
+        "mean_delta": 0.0897
+      },
+      {
+        "scenario_id": "rb_a_007",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.0416,
+          "casual_vs_restructured": 0.1214,
+          "formal_vs_restructured": 0.163
+        },
+        "mean_delta": 0.1087
+      },
+      {
+        "scenario_id": "rb_a_008",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.0098,
+          "casual_vs_restructured": 0.1422,
+          "formal_vs_restructured": 0.1324
+        },
+        "mean_delta": 0.0948
+      },
+      {
+        "scenario_id": "rb_a_009",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.0906,
+          "casual_vs_restructured": 0.0404,
+          "formal_vs_restructured": 0.131
+        },
+        "mean_delta": 0.0873
+      },
+      {
+        "scenario_id": "rb_a_010",
+        "pairwise_deltas": {
+          "casual_vs_formal": 0.1416,
+          "casual_vs_restructured": 0.0172,
+          "formal_vs_restructured": 0.1244
+        },
+        "mean_delta": 0.0944
+      }
+    ]
+  },
+  "summary": {
+    "likert_delta": 0.1333,
+    "choice_delta": 0.2667,
+    "length_delta": 0.1069
+  }
+}

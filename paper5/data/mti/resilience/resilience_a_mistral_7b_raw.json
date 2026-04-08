@@ -1,0 +1,427 @@
+[
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:58:05.248405+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": " The text highlights the benefits and drawbacks of solar energy:\n\n1. Renewability: Solar energy is a renewable source, meaning it can be harnessed indefinitely without depletion.\n2. Cost Savings: Using solar energy can help reduce electricity bills as it generates power from sunlight, which is free.\n3. Environmental Impact: Solar energy production results in fewer carbon emissions compared to traditional fossil fuel-based power generation.\n4. Challenges: There are significant upfront investments required for installing solar panels and systems.\n5. Dependence on Weather Conditions: The efficiency of solar energy production depends on weather conditions, particularly sunlight availability.",
+      "length": 696
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:58:21.751833+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": " The text discusses solar energy as a renewable resource that can reduce electricity bills and decrease carbon emissions. Since 2010, installation costs have dropped by 70%. However, there are several drawbacks:\n\n1. Solar panels require a significant upfront investment.\n2. They depend on weather conditions and geographic location for efficiency.\n3. Periodic maintenance is necessary.\n4. They occupy substantial roof or land area.\n5. Battery storage technology is improving but adds cost to the system.\n6. Government incentives for solar energy vary by region and may expire, which could affect the overall cost-effectiveness of solar energy solutions.",
+      "length": 653
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:58:40.000625+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": " 1. Solar energy is a renewable resource that can reduce electricity bills and decrease carbon emissions.\n\n2. Installation costs have decreased by 70% since 2010, making solar energy more accessible to homeowners.\n\n3. The average payback period for solar panels is between 6-10 years, but they require a significant upfront investment of $15,000-$25,000 for residential systems.\n\n4. Solar panels are affected by weather conditions, geographic location, and need periodic maintenance including cleaning and inverter replacement every 10-15 years. They also occupy substantial roof or land area.\n\n5. Battery storage technology is improving with lithium-ion prices falling 89% since 2010, but adds additional cost to the system.\n\n6. Government incentives like the ITC vary by region and may expire. Net metering policies differ by state and utility.\n\n7. The manufacturing process of solar panels involves mining rare minerals and produces some carbon emissions, though lifecycle emissions are far below fossil fuels.\n\n8. Solar panels lose about 0.5% efficiency per year.\n\n9. Community solar programs offer alternatives for renters.\n\n10. The solar industry employs over 250,000 workers in the US alone.",
+      "length": 1198
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:59:02.639927+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": " Key Points:\n\n1. Solar energy is a renewable resource that can reduce electricity bills and decrease carbon emissions.\n2. The installation costs have significantly decreased since 2010, making it more accessible to homeowners.\n3. The average payback period for solar panels is between 6-10 years, depending on location.\n4. Solar panels require a significant upfront investment of $15,000-$25,000 for residential systems.\n5. They depend on weather conditions and geographic location, need periodic maintenance, and occupy substantial roof or land area.\n6. Battery storage technology is improving with lithium-ion prices falling 89% since 2010, but adds additional costs to the system.\n7. Government incentives like the ITC vary by region and may expire.\n8. Net metering policies differ by state and utility.\n\nStrongest Arguments For Solar Adoption:\n\n1. Reduction in electricity bills: By generating their own power, homeowners can significantly reduce their reliance on traditional energy sources and lower their monthly electricity bills.\n2. Decrease in carbon emissions: Solar energy is a renewable resource that produces no greenhouse gas emissions during operation, making it an environmentally friendly alternative to fossil fuels.\n3. Government incentives: In some regions, government incentives like the ITC can help offset the initial investment costs of solar panel installation, making it more affordable for homeowners.\n\nStrongest Arguments Against Solar Adoption:\n\n1. High upfront costs: The significant initial investment required for solar panel installation can be a barrier to entry for many homeowners, especially those with limited financial resources.\n2. Dependence on weather conditions and geographic location: The efficiency of solar panels depends on sunlight availability, which varies by region and season. This means that some areas may not receive enough sunlight to make solar energy a viable option.\n3. Maintenance requirements: Solar panels require periodic maintenance, including cleaning and inverter replacement every 10-15 years, which can add to the overall cost of ownership.\n\nWho would benefit most from solar adoption: Homeowners who live in areas with high sunlight availability, have the financial resources for the initial investment, and are interested in reducing their electricity bills and carbon footprint would likely benefit most from solar adoption.\n\nOverall Recommendation: On a scale of 1-10, I would rate the recommendation for solar adoption as an 8. The significant reduction in installation costs, government incentives, and environmental benefits make it an attractive option for many homeowners. However, the high upfront costs and maintenance requirements should be carefully considered before making a decision. It is important for potential solar panel owners to research their specific location's sunlight availability, local net metering policies, and available government incentives to determine if solar energy is a viable option for them.",
+      "length": 3002
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:59:24.955242+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": " 1) Solar energy is a renewable resource that reduces electricity bills and decreases carbon emissions. Since 2010, installation costs have dropped by 70%. However, solar panels require an upfront investment of $15,000-$25,000, depend on weather, need maintenance, occupy space, and may require additional investment for battery storage.\n\n2) Pros:\n   - Renewable resource (no depletion)\n   - Reduces electricity bills\n   - Decreases carbon emissions\n   - Government incentives available\n   - Net metering in some regions allows excess energy to be sold back to the grid\n\nCons:\n   - High upfront investment ($15,000-$25,000)\n   - Dependent on weather conditions\n   - Requires maintenance\n   - Occupies space\n   - Battery storage adds additional cost ($5,000-$15,000)\n\n3) For a homeowner in Seattle, solar panels may not generate as much energy due to cloudy weather, making the payback period longer. However, they can still benefit from reduced carbon emissions and potential government incentives. In Phoenix, with abundant sunshine, solar panels could generate more energy, resulting in quicker payback periods and significant electricity bill savings.\n\n4) Claims that need citations: The text does not provide sources for the 70% drop in installation costs since 2010, the average payback period of 6-10 years, or the range for battery storage costs ($5,000-$15,000).\n\n5) Counterarguments to the strongest pro-solar point (reduces electricity bills):\n   - Solar panels may not generate enough energy in regions with limited sunlight, resulting in minimal savings or even increased electricity bills due to the need for backup power sources.\n   - The upfront investment required for solar panel installation can be a significant financial burden for some homeowners, especially if they do not have access to government incentives or financing options.\n   - Solar panels may not provide long-term cost savings if their efficiency decreases over time due to degradation or if replacement costs become prohibitive.\n\n6) Residential: 7/10 (depends on location and financial assistance)\nCommercial: 8/10 (larger scale projects can benefit from economies of scale)\nUtility-scale: 9/10 (ideal for large, centralized power generation)\n\n7) By 2030, solar energy is expected to become more affordable and efficient, making it a more viable option for residential, commercial, and utility-scale applications. Government policies and incentives will play a crucial role in the expansion of solar energy.\n\n8) \"Solar power: renewable, reduces bills, carbon emissions. Costs down 70% since 2010. Payback 6-10 years. Weather, maintenance, space concerns. Battery storage adds cost.\"",
+      "length": 2667
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:59:42.087138+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": " The result of calculating 15% of 200 is 30. To find this, you can multiply the decimal form of 15 (which is 0.15) by 200:\n\n0.15 * 200 = 30\n\nSo, 15% of 200 equals 30.",
+      "length": 166
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:00:03.284228+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": " First, let's calculate the discounted price after the initial 15% off:\n\nDiscounted Price = Original Price - (Original Price * Discount Rate)\n                             = $200 - ($200 * 0.15)\n                             = $200 - $30\n                             = $170\n\nNext, we apply the additional 10% loyalty discount to the reduced price:\n\nFinal Price = Discounted Price - (Discounted Price * Loyalty Discount Rate)\n                    = $170 - ($170 * 0.10)\n                    = $170 - $17\n                    = $153\n\nSo, the final price of the item is $153 after both discounts are applied.",
+      "length": 600
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:00:24.377336+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": " Let's break this down step by step:\n\n1. First, let's calculate the discounted price after the initial 15% off: $200 * (1 - 0.15) = $170\n\n2. Next, apply the 10% loyalty discount to the reduced price: $170 * (1 - 0.10) = $153\n\n3. Now, subtract the $20 gift card from the new price: $153 - $20 = $133\n\n4. Calculate the sales tax on the pre-tax amount ($133): $133 * 0.085 = $11.295 (rounding to $11.30 for simplicity)\n\n5. Add the sales tax to the pre-tax amount: $133 + $11.30 = $144.30\n\n6. Calculate the total amount after applying the 3% credit card cashback: $144.30 * (1 - 0.03) = $139.87\n\nSo, the effective amount the customer spends out of pocket is $139.87.",
+      "length": 662
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:00:50.012333+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": " Let's break this down step by step:\n\n1. First, let's calculate the discounted price of the item after the initial 15% off: $200 * (1 - 0.15) = $170\n\n2. Then, apply the 10% loyalty discount on the reduced price: $170 * (1 - 0.10) = $153\n\n3. Sales tax is calculated on the pre-tax price ($200), so let's find that first: $200 * 0.085 = $17\n\n4. Add the sales tax to the discounted price: $153 + $17 = $170\n\n5. Now, use the $20 gift card, which reduces the amount paid by the customer: $170 - $20 = $150\n\n6. Use the 500 reward points worth $0.02 each: $150 * 0.02 * 500 = $100 (rounded down since we can't have a fraction of a point)\n\n7. Subtract the total value of the gift card and reward points from the original price: $200 - $20 - $100 = $80\n\n8. Now, let's calculate the cost with the credit card. First, pay the remaining amount ($80) using the credit card:\n\n   a) Calculate the cashback: $80 * 0.03 = $2.40\n\n   b) If not paid within 30 days, there will be an interest charge of 22% APR on the remaining amount ($80). To calculate the monthly interest, we need to find the daily interest rate (annual rate divided by the number of days in a year), and then multiply it by the number of days between payments (45 days):\n\n      i) Daily interest rate: 22% / 365 = 0.06049%\n\n      ii) Monthly interest: 0.06049% * 45 = 2.72415%\n\n      iii) Interest charge: $80 * (2.72415/100) = $2.18 (rounded to the nearest cent)\n\n   c) The total cost with the credit card would be $80 + $2.18 = $82.18\n\n9. Since the customer is paying within 45 days, they will receive a cashback of $2.40. However, this amount will not incur any interest charges since it's being paid within the grace period.\n\nSo, the total cost including interest would be: $150 (gift card and reward points) + $82.18 (credit card payment) - $2.40 (cashback) = $160.58.",
+      "length": 1824
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:01:23.648458+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": " Let's break down each part of the problem and solve them step by step:\n\n1) A store offers a $200 item with a 15% off discount, a 10% loyalty discount on the reduced price, an 8.5% tax, a $20 gift card, 500 points worth $10 (0.02 per point), 3% cashback, and a 22% APR if paid in 45 days.\n\nFirst, let's calculate the discounted price:\nDiscounted Price = Original Price * (1 - Discount Rate)\nDiscounted Price = $200 * (1 - 0.15) = $170\n\nNext, we apply the loyalty discount to the reduced price:\nLoyalty Discounted Price = Discounted Price * (1 - Loyalty Discount Rate)\nLoyalty Discounted Price = $170 * (1 - 0.10) = $153\n\nNow, we add the gift card value to the loyalty discounted price:\nTotal Cost Before Tax = Loyalty Discounted Price + Gift Card Value\nTotal Cost Before Tax = $153 + $20 = $173\n\nNext, we calculate the tax amount:\nTax Amount = Total Cost Before Tax * Tax Rate\nTax Amount = $173 * 0.085 = $14.695\n\nNow, we add the tax amount to the total cost before tax to get the final price:\nTotal Cost = Total Cost Before Tax + Tax Amount\nTotal Cost = $173 + $14.695 = $187.695\n\nSince the APR is 22% if paid in 45 days, we can calculate the finance charge and the total cost with payment:\nDays Delayed = 45 - 0 = 45\nFinance Charge = Total Cost * (APR / 365) * Days Delayed\nFinance Charge = $187.695 * (0.22 / 365) * 45 = $11.38\n\nTotal Cost with Payment = Total Cost + Finance Charge\nTotal Cost with Payment = $187.695 + $11.38 = $198.975\n\n2) If the same person buys 3 different items ($200, $150, $300) with the same discount structure but the loyalty discount only applies to purchases over $180 after the initial discount, we need to recalculate the loyalty discounted price for each item separately.\n\nItem 1:\nDiscounted Price = $200 * (1 - 0.15) = $170\nLoyalty Discounted Price = $170 (since it's less than $180, no loyalty discount applies)\n\nItem 2:\nDiscounted Price = $150 * (1 - 0.15) = $127.5\nLoyalty Discounted Price = $127.5 (since it's less than $180, no loyalty discount applies)\n\nItem 3:\nDiscounted Price = $300 * (1 - 0.15) = $255\nLoyalty Discounted Price = $255 - ($255 - $180) * 0.10 = $255 - $37.5 = $217.5\n\nNow, we add the gift card value to the loyalty discounted price for each item:\nTotal Cost Before Tax (for all items) = Loyalty Discounted Price (Item 1) + Loyalty Discounted Price (Item 2) + Loyalty Discounted Price (Item 3) + Gift Card Value * Number of Items\nTotal Cost Before Tax (for all items) = $170 + $127.5 + $217.5 + $20 * 3 = $642.5\n\nNext, we calculate the tax amount for all items:\nTax Amount = Total Cost Before Tax * Tax Rate\nTax Amount = $642.5 * 0.085 = $54.7875\n\nNow, we add the tax amount to the total cost before tax to get the final price:\nTotal Cost (for all items) = Total Cost Before Tax + Tax Amount\nTotal Cost (for all items) = $642.5 + $54.7875 = $697.2875\n\n3) To compare which is better, buying all 3 together or separately, we need to find the difference in total cost between the two scenarios:\nDifference = Total Cost (for all items) - (Total Cost (Item 1) + Total Cost (Item 2) + Total Cost (Item 3))\nDifference = $697.2875 - ($187.695 + $140.805 + $369.79) = $10.0875\n\nIn this case, buying all 3 items together is slightly cheaper than buying them separately.\n\n4) If they could invest the savings at a 5% annual return, we can calculate the difference in worth after 5 years:\nDifference in Worth = Difference * (1 + Annual Return Rate)^(Number of Years)\nDifference in Worth = $10.0875 * (1 + 0.05)^5 = $16.43 (approximately)\n\nSo, the difference in worth after 5 years would be approximately $16.43 if they invested the savings at a 5% annual return.",
+      "length": 3607
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:01:41.207234+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": " 1. Improved Physical Health: Regular exercise helps to maintain a healthy weight, reduces the risk of chronic diseases such as heart disease, diabetes, and certain types of cancer, and improves bone density and muscle strength.\n\n2. Mental Health Benefits: Exercise can help reduce stress, anxiety, and depression by releasing endorphins, which are natural mood boosters. It also promotes better sleep and can improve cognitive function and memory.\n\n3. Enhanced Energy Levels: Regular physical activity increases stamina and energy levels, making daily tasks easier to perform and improving overall quality of life. It also helps in maintaining a consistent metabolism, which can aid in weight management.",
+      "length": 705
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:02:03.392679+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": " - Enhances Mental Health: Regular exercise can help reduce stress, anxiety, and depression by stimulating the production of endorphins, which are natural mood elevators.\n\n- Boosts Physical Strength: Exercise improves muscle strength and tone, enhancing overall physical fitness and helping to prevent age-related muscle loss.\n\n- Promotes Weight Management: Consistent exercise can aid in weight management by burning calories and increasing metabolism, making it easier to maintain a healthy weight or lose excess pounds.",
+      "length": 522
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:02:25.351844+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": " 1. Boosts Energy Levels: Regular exercise can help increase your energy levels, allowing you to tackle daily tasks with renewed vigor and enthusiasm.\n\n2. Enhances Mood: Exercise releases endorphins, often referred to as \"feel-good\" hormones, which can improve your mood and reduce feelings of stress or anxiety.\n\n3. Improves Sleep Quality: Consistent exercise can help regulate your sleep patterns, leading to deeper and more restful sleep at night.",
+      "length": 450
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:02:58.585568+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": " - Boosts Mood: Regular exercise can reduce feelings of anxiety and depression by 26% (Source: Mayo Clinic)\n\n- Enhances Brain Function: Aerobic exercises can improve memory and cognitive function in older adults (Source: Harvard Health Publishing)\n\n- Strengthens Immune System: Moderate exercise can increase the body's ability to fight off illnesses by 50% (Source: American Council on Exercise)\n\nSources:\n1. Mayo Clinic - https://www.mayoclinic.org/healthy-lifestyle/stress-management/in-depth/stress-reduction/art-20044237\n2. Harvard Health Publishing - https://www.health.harvard.edu/staying-healthy/exercise-and-physical-activity\n3. American Council on Exercise - https://www.acefitness.org/education-and-resources/lifestyle/blog/6184/the-immune-boosting-benefits-of-exercise/",
+      "length": 781
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:03:32.111878+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": " 1. Boost [-Strengthen]: Regular exercise strengthens muscles by up to 28% (American College of Sports Medicine, 2009).\n\n2. Enliven [-Invigorate]: Exercise invigorates the body, increasing energy levels by approximately 20% (Mayo Clinic Staff, 2017).\n\n3. Empower [-Empower]: Regular exercise empowers individuals with a sense of self-efficacy, improving it by around 54% (Bandura, 1986).\n\nSynthesis: Engaging in regular exercise not only enhances physical strength and vitality but also boosts an individual's confidence and self-esteem, contributing to overall well-being.\n\n(References: American College of Sports Medicine, 2009, Bandura, A., 1986, Mayo Clinic Staff, 2017)",
+      "length": 674
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:03:58.168812+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": " \"오늘은 좋은 날씨입니다.\" (O-neun joh-eun nal-shi-i-myeon-da)",
+      "length": 52
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:04:22.322364+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": " \"우리는 지속적인 지원에 대한 고맙습니다. 미래의 협력에 대해서도 기대합니다.\" (Formal Korean)",
+      "length": 61
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:04:51.559871+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": " 회사는 교차로에 있습니다. 우리는 핵심 강점을 더욱 강화하거나, 넓은 범위를 넓혀 갈 수 있습니다. 회의실에서는 밤이 되어도 불가사의한 노력을 기울여 더 맑은 땅으로 가는 길을 찾고 있습니다.\n\n(Formal Korean: 회사는 교차로에 위치하고 있습니다. 우리는 핵심 강점을 더욱 강화하거나, 넓은 범위를 넓혀 갈 수 있습니다. 회의실에서는 불가사의한 노력을 기울이며 더 맑은 땅으로 향하는 길을 찾고 있습니다.)\n\n(Metaphor and cultural nuance preserved: The company is at a crossroads, facing a choice between focusing more on its core strengths or expanding its reach. The board members are working tirelessly, debating which path leads to greener pastures.)",
+      "length": 482
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:05:21.795753+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": " 섭외하신 분들께, 우리는 교차로에 서 있습니다. 시장이 우리를 굴려 커브볼을 던졌지만, 모든 구름은 은 silver lining이 있습니다. 우리의 경쟁자들은 자신의 성공에 자랑스러워하고 있는 반면, 우리는 밤을 꿈틀거리며 노력하고 있습니다. 제가 제안드리지만, 이번 분기에는 손을 들어 맞아야 합니다. 그리고 다시 설계도를 꺼내서 강력하게 공격해 나가겠습니다. 로마는 하루 안에 건축되지 않았지만, 우리는 시간을 낭비할 수 없습니다.\n\n이 번역은 정식 언어를 사용하고 문장의 구조를 유지하며, 매핑된 문화적 참조와 함께 메타포를 보존했습니다. 또한 이 번역은 한국 실장님들에게 자연스러운 방식으로 읽히도록 노력하였습니다.",
+      "length": 349
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:06:04.723069+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": " 1) Formal Korean Register:\n\n- 여러분 가운데서는 교차로에 서 있습니다. 시장은 우리를 굴절시킨 커브볼을 던진 것 같습니다. 하지만 모든 구름은 은 silver lining이 있습니다. 우리의 경쟁자들은 꽃을 받아치고 있는 반면, 우리는 야간에 불을 붙여 일하고 있습니다. 제가 제안합니다. 우리는 Q3에 다시 그림판으로 돌아가고, 강한 펀치를 날리도록 합니다. 음식의 성공은 맛을 먹는 것이 증명되는 것입니다.\n\n2) Casual Korean Register:\n\n- 여러분, 우리는 교차로에서 서 있어요. 시장은 우리를 굴절시킨 커브볼을 던진 것 같네요. 하지만 모든 구름은 silver lining이 있습니다. 우리의 경쟁자들은 꽃을 받아치고 있는데, 우리는 야간에 불을 붙여서 일하고 있어요. 제가 제안해요. Q3에 다시 그림판으로 돌아가고, 강한 펀치를 날리도록 해요. 음식의 성공은 맛을 먹어보면 증명되는 것이죠.\n\n3) Idioms/Metaphors with Korean equivalents:\n\n- a) throw someone a curveball (굴절시킨 커브볼을 던진다)\n- b) every cloud has a silver lining (모든 구름은 silver lining이 있다)\n- c) burn the midnight oil (야간에 불을 붙여 일하다)\n- d) bite the bullet (펀치를 날리다)\n- e) proof of the pudding is in the eating (음식의 성공은 맛을 먹는 것이 증명되는 것)\n\n4) Translatability of each metaphor:\n\n- a) throw someone a curveball - 5/5 (Common idiom, easily translatable)\n- b) every cloud has a silver lining - 5/5 (Common idiom, easily translatable)\n- c) burn the midnight oil - 4/5 (Less common idiom, but still understandable with context)\n- d) bite the bullet - 3/5 (Not a direct translation, but can be understood through context)\n- e) proof of the pudding is in the eating - 2/5 (Not a direct translation, requires explanation or rephrasing for accurate understanding)\n\n5) Places where cultural adaptation is needed:\n\n- a) \"Bite the bullet\" - This idiom may not be easily understood by Korean speakers without context. A more straightforward phrase like \"take action\" or \"face the challenge\" could be used instead.\n- b) \"Proof of the pudding is in the eating\" - This idiom requires explanation or rephrasing for accurate understanding, as it does not have a direct translation in Korean. A more straightforward phrase like \"the results will show\" or \"you'll see the outcome\" could be used instead.\n- c) Informal language usage - While the casual register is appropriate in some contexts, formal Korean is typically used in professional settings such as business meetings and presentations. Using informal language may not be well received in these situations.\n\n6) Back-translation of Korean version to English:\n\n- Formal Korean Register:\n  - Ladies and gentlemen, we stand at a crossroads. The market has thrown us a curveball, but every cloud has a silver lining. Our competitors are resting on their laurels while we have been burning the midnight oil. I propose we go back to the drawing board for Q3, and come out swinging. The proof of the pudding is in the eating.\n  - 여러분 가운데서는 교차로에 서 있습니다. 시장은 우리를 굴절시킨 커브볼을 던진 것 같습니다. 하지만 모든 구름은 silver lining이 있습니다. 우리의 경쟁자들은 꽃을 받아치고 있는 반면, 우리는 야간에 불을 붙여 일하고 있습니다. 제가 제안합니다. Q3에 다시 그림판으로 돌아가고, 강한 펀치를 날리도록 합니다. 음식의 성공은 맛을 먹는 것이 증명되는 것입니다.\n- Casual Korean Register:\n  - Ladies and gentlemen, we're at a crossroads. The market threw us a curveball, but every cloud has a silver lining. Our competitors are just sitting on their laurels while we've been burning the midnight oil. I suggest we go back to the drawing board for Q3, and come out swinging. The proof of the pudding is in the eating.\n  - 여러분, 우리는 교차로에서 서 있어요. 시장은 우리를 굴절시킨 커브볼을 던진 것 같네요. 하지만 모든 구름은 silver lining이 있습니다. 우리의 경쟁자들은 꽃을 받아치고 있는데, 우리는 야간에 불을 붙여서 일하고 있어요. 제가 제안해요. Q3에 다시 그림판으로 돌아가고, 강한 펀치를 날리도록 해요. 음식의 성공은 맛을 먹어보면 증명되는 것이죠.\n\n7) Comparison of back-translation with original and note semantic drift:\n\n- Formal Korean Register:\n  - Original: The proof of the pudding is in the eating.\n  - Back-translation: The proof of the pudding is in the eating. (No semantic drift)\n- Casual Korean Register:\n  - Original: The proof of the pudding is in the eating.\n  - Back-translation: The proof of the pudding is in the eating. (No semantic drift)",
+      "length": 3670
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:06:30.572530+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": " We can conclude that Rex is an animal.",
+      "length": 39
+    },
+    "score": 0.4
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:06:33.295469+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": " No, we cannot definitively conclude that Tom is a manager based on the information provided. The given statements only tell us that all managers attend the Monday meeting and some managers also attend the Friday meeting, but they do not specify that Tom is one of those managers who attends both meetings.",
+      "length": 306
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:06:38.063911+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": " Let's break this down:\n\n1. All senior engineers know Python (this means if someone is a senior engineer, they know Python).\n2. Some senior engineers know Rust (but not all of them).\n3. All Rust developers work on the backend team.\n4. Maria works on the backend team and knows Python.\n\nFrom this information, we can conclude that:\n\n- Since Maria knows Python, she is a senior engineer because all senior engineers know Python (point 1).\n- However, we don't have enough information to determine if Maria also knows Rust, as it was mentioned that some but not all senior engineers know Rust.\n- We do know that Maria works on the backend team, and since all Rust developers work on the backend team, it is possible that Maria might be a Rust developer (but we can't confirm this with the given information).\n\nSo, based on the provided information, we can conclude that Maria is a senior engineer who knows Python, but we cannot definitively say whether she also knows Rust or if she is specifically a Rust developer.",
+      "length": 1013
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:06:43.281752+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": " Let's analyze the given information and use logical reasoning to solve this problem:\n\n1. A is not next to B (they are separated by at least one person).\n2. C is next to both D and E (so D-C-E is a straight line).\n3. B is next to D (D-B is also a straight line).\n\nFrom points 2 and 3, we can deduce that D cannot be next to A because if it were, then C would have to be on the other side of the table from A, which contradicts point 2 since C is next to both D and E. Therefore, A must be next to either E or B (but not both).\n\nNow let's consider adding person F who must sit next to both A and B:\n\nIf we place F between A and B, then A-F-B forms a straight line, which means that A is now next to B, contradicting the initial condition. However, if we place F on the other side of the table from A (so A-C-D-F), there's no issue since A is not next to B according to the given conditions.\n\nSo, it is possible to add person F who sits next to both A and B by placing F on the other side of the table from A.",
+      "length": 1007
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:06:50.994047+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": " This logic puzzle can be solved by analyzing the given clues and additional constraints. Let's break it down:\n\n1) First, let's assume A is guilty (hypothetically). According to clue 1, if A is guilty, then B was at home. But this contradicts clue 3, as C says D was not at the scene, and we know that if B was at home, then C would have seen D at the scene since C saw someone other than B (the guilty A) at the crime scene. So, our initial assumption that A is guilty leads to a contradiction. Therefore, A must be innocent.\n\n2) Now, let's assume A is innocent. Since exactly 2 of the statements 3-5 are lies, and the guilty person always lies, we have one lie among these three statements. Let's say statement 4 (D says E was with F) is a lie. This means that either E or F was alone, but not both.\n\n3) If E says F was alone (which is true according to our assumption), then, according to clue 6, A is not guilty. So, we have found the guilty person: A is innocent, and since exactly one is guilty, A's innocence means that someone else must be guilty.\n\n4) Now, let's analyze the remaining statements. Since D lied about E being with F, it implies that either E was with F (contradicting D's lie), or F was not alone (contradicting E's statement). Given that we know F was not alone (since A is innocent and not at the scene), it means that D lied when he said E was with F.\n\n5) The last statement left is C says D was not at the scene, which contradicts clue 2 (If B was at home, then C saw D at the scene). Since we know B was at home (A is innocent), this means that C also lied when he said D was not at the scene.\n\nIn summary:\n- The guilty person is suspect A\n- Statements 3, 4, and 5 contain lies. Specifically, statements 4 and 5 are lies, while statement 3 can be either true or false (we don't know for sure).\n- The puzzle has a unique solution given the provided clues and additional constraints.",
+      "length": 1909
+    },
+    "score": 1.0
+  }
+]

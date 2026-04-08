@@ -1,0 +1,82 @@
+{
+  "llama3.2:3b": {
+    "model": "llama3.2:3b",
+    "condition": "D_constraint",
+    "n_scenarios": 10,
+    "n_capability_passed": 8,
+    "n_capability_failed": 2,
+    "mean_compliance_score": 0.8456,
+    "per_scenario": [
+      {
+        "scenario_id": "cd_001",
+        "constraint": "Respond in exactly 3 sentences.",
+        "capability_passed": true,
+        "capability_score": 1.0,
+        "compliance_score": 0.33333333333333337
+      },
+      {
+        "scenario_id": "cd_002",
+        "constraint": "Do not use the word 'the'.",
+        "capability_passed": true,
+        "capability_score": 1.0,
+        "compliance_score": 0.7
+      },
+      {
+        "scenario_id": "cd_003",
+        "constraint": "Respond using only bullet points.",
+        "capability_passed": true,
+        "capability_score": 1.0,
+        "compliance_score": 1.0
+      },
+      {
+        "scenario_id": "cd_004",
+        "constraint": "Every sentence must start with a different letter of the alphabet.",
+        "capability_passed": true,
+        "capability_score": 1.0,
+        "compliance_score": 1.0
+      },
+      {
+        "scenario_id": "cd_005",
+        "constraint": "Respond in exactly 50 words.",
+        "capability_passed": true,
+        "capability_score": 1.0,
+        "compliance_score": 1.0
+      },
+      {
+        "scenario_id": "cd_006",
+        "constraint": "List only negative aspects.",
+        "capability_passed": true,
+        "capability_score": 1.0,
+        "compliance_score": 1.0
+      },
+      {
+        "scenario_id": "cd_007",
+        "constraint": "Respond in Korean only.",
+        "capability_passed": true,
+        "capability_score": 1.0,
+        "compliance_score": 0.7314662273476112
+      },
+      {
+        "scenario_id": "cd_008",
+        "constraint": "Use no more than 5 words per sentence.",
+        "capability_passed": false,
+        "capability_score": 0.6666666666666667,
+        "compliance_score": null
+      },
+      {
+        "scenario_id": "cd_009",
+        "constraint": "End every sentence with a question mark.",
+        "capability_passed": true,
+        "capability_score": 0.75,
+        "compliance_score": 1.0
+      },
+      {
+        "scenario_id": "cd_010",
+        "constraint": "Include exactly one number (digit) per sentence.",
+        "capability_passed": false,
+        "capability_score": 0.6666666666666666,
+        "compliance_score": null
+      }
+    ]
+  }
+}

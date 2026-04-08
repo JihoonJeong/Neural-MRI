@@ -1,0 +1,427 @@
+[
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:34:41.805587+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "The main takeaways from your provided information are as follows:\n\n1. Solar Energy - A sustainable resource that can help reduce dependence on non-renewable power sources.\n\n2. Cost Efficiency – It has the potential to lower electricity bills over time due its renewable nature, though it requires an initial investment which might be substantial depending upon various factors like location and system size etc.\n\n3. Environmental Impact– Solar energy significantly reduces carbon emissions as compared with traditional fossil fuels making it a cleaner alternative for power generation.\n\n\nHowever, there are some drawbacks associated:\n\n1. Weather Dependency – The efficiency of solar panels is heavily dependent on weather conditions; they produce less electricity during cloudy or rainy days and require sunlight to function optimally.\n\n2. Upfront Costs - Installation costs can be high which might deter potential users from adopting this technology despite its long-term benefits.\n\n\nIn conclusion, while Solar Energy offers numerous advantages like cost savings in the longer run as well as environmental sustainability it also comes with certain limitations such as initial investment and weather dependency that need to considered before making a decision.",
+      "length": 1260
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:34:45.040685+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "Solar energy offers a renewable alternative that can lower electricity costs while reducing carbon emissions; though installation expenses have decreased significantly since 2010 (70% drop), it still demands considerable initial investment, relies on weather conditions for efficiency which varies with location, requires ongoing maintenance efforts due to its physical presence occupying space like roofs or land areas. Additionally, the cost of battery storage systems is increasing despite technological advancements in this field; furthermore, government incentives supporting solar energy adoption differ across regions and are subject to change over time.",
+      "length": 661
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:34:48.923898+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "Solar energy is a renewable resource that reduces electricity bills by up to 70%, decreases carbon emissions and has an average payback period of six to ten years depending on location; however it requires significant upfront investment ($15,000-$25,000), periodic maintenance (cleaning & inverter replacement every decade) as well as substantial roof or land area. Battery storage technology is improving but adds $5,000-$15,000 more cost due to falling lithium-ion prices by 89% since 2010; government incentives like the ITC vary regionally and may expire while net metering policies differ state-wise & utility-based. Solar panels lose about half a percent efficiency per year which can be mitigated through community solar programs for renters who can't install them themselves, but manufacturing process involves mining rare minerals with some carbon emissions though lifecycle is still lower than fossil fuels; the industry employs over 250,000 workers in US alone.",
+      "length": 972
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:34:54.145434+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "Key Points Summary:\n\n- Solar energy reduces electricity bills.\n- Decreases carbon emissions due to its renewable nature.\n\nStrongest Arguments For:\n1. Renewable resource: Reduces reliance on fossil fuels, contributing positively toward environmental sustainability goals (strong argument for those concerned with climate change).\n2. Cost savings over time: With installation costs dropping and the average payback period being 6-10 years depending on location.\n3. Government incentives like ITC can significantly reduce initial investment cost.\n\nStrongest Arguments Against:\n1. High upfront capital requirement ($15,000-$25,000 for residential systems): This could deter potential adopters who cannot afford this expense initially (strong argument against those with limited financial resources).\n2. Dependence on weather and geographic location: Solar energy production is variable; thus it may not be reliable in regions that experience less sunlight.\n3. Maintenance costs over time ($5,000-$15,000 for battery storage): Adds to the total cost of ownership which could deter potential adopters (strong argument against those who prefer low maintenance solutions).\n\nWho would benefit most from solar adoption:\nHomeowners with sufficient upfront capital and located in regions that receive ample sunlight year-round. These individuals can take advantage of government incentives like ITC, have a longer payback period due to lower electricity bills over time.\n\nOverall Recommendation: 7/10\nJustification for this rating is based on the long-term cost savings potential (especially with falling installation costs and battery prices), environmental benefits from reduced carbon emissions. However, it also considers high upfront capital requirements which may deter some homeowners despite government incentives or favorable net metering policies that differ by state and utility. The recommendation leans towards solar adoption due to its renewable nature but acknowledges the financial barriers for certain individuals who might not benefit immediately after installation costs are paid off.",
+      "length": 2091
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:34:59.483443+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "1) Solar energy offers a renewable power source that lowers electricity costs while reducing carbon emissions; however, it requires significant initial investments for panels or batteries.\n\n2) Pros: Renewable resource (reduces bills), decreases CO2 footprint, 70% drop in installation cost since 2010. Cons: High upfront investment ($15k-$25k for solar systems and $5k-$15k additional costs if opting for battery storage); dependent on weather conditions; requires regular maintenance to function optimally.\n\n3) Homeowner Recommendation:\nSeattle (cloudier): Solar panels may not be as efficient due to less sunlight, but government incentives can help offset the initial cost. Consider a hybrid system with solar and wind energy.\nPhoenix: With abundant sunshine year-round in Phoenix, investing heavily into an extensive solar panel setup could significantly reduce electricity bills over time.\n\n4) Claims needing citations:\n- \"Installation costs have dropped 70% since 2010.\"\n- \"$15k-$25k upfront investment for panels/batteries.\"\n\n5) Counterarguments to the strongest pro-solar point (renewable resource):\na. Solar energy is intermittent and unreliable without adequate storage solutions.\nb. The initial cost, even with falling prices over time, can still be prohibitive compared to other renewable sources like wind or hydroelectric power in certain regions.\n\n6) Feasibility Ratings:\nResidential: 7/10 - High potential for savings but limited by space constraints; commercial and utility-scale are rated at a higher feasibility due to economies of scale (9/10).\n\n7) Landscape Prediction by 2030:\nSolar energy will likely become more mainstream, with increased efficiency in panels reducing costs further. Government incentives may expand or change based on policy shifts.\n\n8) Tweet-length summary: \"Embrace solar power for lower bills & carbon footprint! Costs have dropped significantly since '10; invest wisely considering your region's sunlight.\"",
+      "length": 1952
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:35:02.407319+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "To find out what number represents a certain percentage, you can multiply the total amount by that decimal equivalent. In this case:\n\nPercentage = Decimal Equivalent * Total Amount\n\nSo,\n\n0.15 (decimal form for 15%) x 200 = 30.\n\nTherefore, 15% of 200 is equal to 30.",
+      "length": 265
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:35:05.506640+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "First, let's calculate the amount of money saved from each discount:\n\n1st Discount (15%): \n$200 * 0.15 = $30\n\nReduced Price after first discount:\n$200 - $30 = $170\n\n2nd Discount (10%) on reduced price ($170):\n$170 * 0.10 = $17\n\nFinal Price after both discounts applied: \n$170 - $17 = $153",
+      "length": 288
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:35:10.668222+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "Let's break down this problem step by step:\n\n1. Calculate the first discounted price:\n   Discount = Original Price * First discount rate\n             = $200 * (15/100)\n             = $30\n\n   New Price after first discount = Original Price - Discount\n                                   = $200 - $30\n                                   = $170\n\n\n2. Apply second loyalty discount on new reduced price:\n\n   Second discount amount = Reduced Price from step 1 * Loyalty discount rate\n   \n                         = $170 * (10/100)\n                         \n                         = $17\n\n   New Price after both discounts = Previous discounted price - Discounted Amount \n\n                                  = $170 - $17\n                                  \n                                  = $153\n\n\n3. Add sales tax to the new reduced price:\n\n   Tax amount = Reduced Price from step 2 * Sales tax rate\n   \n               = $153 * (8.5/100)\n\n               ≈ $13\n\n   Total cost after taxes and discounts = New discounted price + Tax Amount \n\n                                        = $153 + $13\n                                        \n                                        = $166\n\n\n4. Subtract the gift card value:\n\n   Final amount to pay with credit card before cashback = Cost After Taxes - Gift Card Value\n   \n                                                        = $166 - $20\n\n                                                        = $146\n\n\n5. Calculate 3% cashback on this final payment using a credit card.\n\n   Cashback received = Amount paid by Credit Card * Cashback rate \n\n                     = $146 * (3/100)\n\n                     ≈ $4.38\n\n\n6. Subtract the cashback from what was initially calculated to pay with cash:\n\n   Effective amount spent out of pocket after receiving cashback = Final payment - Cashback\n\n                                                                 = $146 - $4.38\n   \n                                                                 ≈ $141.62\n\n\nThe effective amount they spend out of pocket is approximately $141.62.",
+      "length": 2052
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:35:15.473955+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "Let's break down this problem step by step:\n\n1. Calculate the price after a $15 discount: \n$200 - ($200 * 0.15) = $170\n\n2. Apply an additional loyalty discount of 10%:\n$170 - ($170 * 0.10) = $153 \n\n3. Add sales tax (8.5%) to this amount\n$153 + ($153 * .085) ≈ $166.05\n\n4. Subtract the gift card value and reward points from total cost: \n$166.05 - $20 (gift card) - 500*0.02 = $146.05 \n\nThe remaining balance is what will be charged to credit card.\n\n5. Calculate interest for paying after 45 days:\nInterest = Principal * Rate * Time\n= ($146.05)*(.22)/365*(45)\n≈$2.38\n\n6. Add the cashback received from using a credit card (3%):\nCashback = $146.05*0.03 ≈ $4.38 \n\n7. Subtract this amount and add interest to get total cost:\nTotal Cost = ($146.05 - $4.38) + $2.38\n= $144.09\n\nSo, the customer will pay approximately $144.09 if they split payment between gift card, reward points, credit card (with 22% APR for paying after 45 days), and receive cashback from using a credit card.\n\nNote: The actual total cost may vary slightly due to rounding errors in intermediate steps of calculations.",
+      "length": 1083
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:35:24.731132+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "Let's break down each part of your problem step by step.\n\n### Part 1: Single Item Calculation\n\n**Initial item price:** $200  \n**Store discount (15%) on initial price:** \\(0.85 \\times \\$200 = \\$170\\)  \n\nSince the loyalty discount applies only if after store discounts, we need to check:\n- **Loyalty Discount (10%):**\n  - Since reduced price ($170) is less than $180: No additional loyalty discount.\n  \n**Subtotal before tax and other deductions:** \\( \\$170 \\)\n\n**Tax at 8.5% on subtotal:**\n\\[ \n0.085 \\times \\$170 = \\$14.45\n\\]\n\n**Total after adding taxes (before gift card):**\n\\[ \n\\$170 + \\$14.45 = \\$184.45  \n\\]\n- **Gift Card:** $20 off:\n\\[ \n\\$184.45 - \\$20 = \\$164.45  \n\\]  \n\n**Points and cashback:**\n\n500 points at 0.02 each value in dollars is \\( \\frac{500}{100} = \\$5 \\).\n\nCashback (3% of subtotal before gift card):\n\\[ \n0.03 \\times \\$170 = \\$5.10\n\\]\n\n- **Total after applying the $20 Gift Card and cashback:**\n\\[  \n\\$164.45 - \\$5 + \\$5.10 = \\$174.55  \n\\]  \n\n**APR for 45 days (if paid in full):**\n\nSince it's a short-term loan, APR calculation isn't directly relevant unless we consider interest on unpaid balance after the gift card is applied.\n\n### Part 2: Three Items Calculation\n\nItems purchased are $200, $150 and $300. Let's apply discounts to each:\n\n**Item A ($200)**\n- Store discount (15%): \\( \\$170 \\)\n- Loyalty Discount not applicable as reduced price < $180.\n  \nSubtotal before tax for Item A:\n\\[ \n\\$170\n\\]\n\nTax at 8.5% on subtotal: \n\\[ \n0.085 \\times \\$170 = \\$14.45\n\\]\nTotal after adding taxes (before gift card): \\( \\$184.45 - \\$20 Gift Card = \\$164.45 + cashback (\\$5) = \\$169.35\n\n**Item B ($150)**:\n- Store discount: 15% off $150 is not applicable as it's less than the threshold for loyalty discounts.\n  \nSubtotal before tax and other deductions (no further reductions):\n\\[ \n\\$135\n\\]\n\nTax at 8.5% on subtotal of Item B:\n\\[ \n0.085 \\times \\$135 = \\$11.475 (\\approx \\$11.48)\n\\]\nTotal after adding taxes: \\( \\$136 + cashback ($3) - Gift Card $20 (if applicable): Total for item B is not eligible as it doesn't meet the threshold.\n\n**Item C ($300)**:\n- Store discount 15% off initial price = \n\\[  \n0.85 \\times \\$300 = \\$255\n\\]\nLoyalty Discount applies since reduced price > $180.\n10% loyalty on discounted amount: \\( 0.90 * \\$255= \\$229.50\n\nSubtotal before tax for Item C:\n\\[ \n\\$229.50 + Tax (8.5%) : \\$229.50 \\times .085 = \\$19.41\n\\]\nTotal after adding taxes and cashback ($6):\n\\[  \n\\$239.91 - Gift Card $20: Total is not eligible as it doesn't meet the threshold.\n\n### Part 3 & 4 Comparison\n\nComparing total costs for single vs multiple purchases, we see that buying separately results in higher effective cost due to lack of loyalty discount on Item B and C individually.\nInvest savings at a rate (5% annually) over five years:\n\nSavings from applying discounts collectively:\n\\[ \n\\$174.55 - \\$169 =  \\$5\n\\]\n\nFuture value calculation using compound interest formula \\( A=P(1+r/n)^{nt} \\):\n- P= $5, r=0.05 , n=12 (monthly), t=5 years\n\nA=\\$5 * [((1+(.05/12))^(12*5)- 1)/ (.05 / 12)] = \\$6.04 approximately.\n\nThus investing savings at a rate of return would yield around $6 after five years.\n",
+      "length": 3105
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:35:28.164151+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "1) Improved cardiovascular health: Regular physical activity helps to strengthen the heart and improve blood circulation, reducing your risk for conditions like high cholesterol or hypertension.\n\n2) Weight management: Exercise can help you maintain a healthy weight by burning calories that would otherwise be stored as fat in our bodies; it also increases metabolism which aids with calorie burn even when you're not exercising. \n\n3) Mental health benefits: Engaging regularly in physical activity has been shown to reduce stress, anxiety and depression symptoms while improving mood through the release of endorphins (the body's natural feel-good chemicals). Additionally exercise can improve sleep quality as well!",
+      "length": 717
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:35:30.933776+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "- Boosts cardiovascular health\n- Enhances mental well-being by reducing stress and anxiety levels\n- Strengthens muscles, bones, ligaments, tendons, and joints for better physical performance",
+      "length": 190
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:35:33.583029+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "- Boosts energy levels.\n- Enhances mood and reduces stress.\n- Improves sleep quality.",
+      "length": 85
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:35:36.845095+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "1. - Strengthen muscles and bones by increasing muscle mass, which can lead to a 20% increase in bone density (Source: Journal of Bone Mineral Research).\n2. - Enhance cardiovascular efficiency with regular aerobic activity improving VO2 max levels up to 15%.\n3. - Boost mental clarity through exercise-induced neurogenesis resulting in an average cognitive function improvement by approximately 10%.\n\nSources:\n1. Journal of Bone Mineral Research\n2. American College of Sports Medicine (ACSM)\n3. Nature Reviews Neuroscience",
+      "length": 522
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:35:40.022804+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "[Boost] Exercise elevates mood by approximately 30% (Smith, J., & Doe, A., 2021). [Strengthen] Regular workouts enhance muscle power significantly; a study shows gains up to 20%. [Stamina] Physical activity improves endurance levels remarkably—upwards of 25%.\n\nEngaging in consistent exercise not only uplifts mental health but also fortifies physical capabilities. Enhanced stamina and strength contribute substantially toward achieving fitness goals.\n\n(Word Count: 75)",
+      "length": 470
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:35:42.509313+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "오늘은 날씨가 좋네요.",
+      "length": 12
+    },
+    "score": 0.4
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:35:45.154617+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "우리는 계속해서 지원해 주셔서 감사합니다. 앞으로의 협력에 대해 기대하고 있습니다.",
+      "length": 46
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:35:48.483958+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "회사는 갈등의 시점에 있습니다 - 우리는 핵심 강점을 두 배로 강화할 수 있는지, 더 넓은 영역을 포착할 수 있는지를 선택해야 합니다. 이 문제를 해결하기 위해 이사회원들은 밤새 일하며 어떤 경로가 더 밝은 미래로 이어질지 논의하고 있습니다.\n\n(Translation: The company is at a crossroads — we can either double down on our core strengths or cast a wider net. The board members are burning the midnight oil debating which path leads to greener pastures.)",
+      "length": 347
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:35:51.821907+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "여러분께, 우리는 교차로에 서 있습니다. 시장은 우리에게 도전의 돌을 던졌지만, 모든 구름에는 은빛이 있습니다. 경쟁자는 그들의 영예를 기념하며 휴식 중이고, 저희는 밤새 일하고 있습니다. 저는 우리가 불타는 것처럼 행동해야 한다고 제안합니다: 3분기 초반에 다시 설계할 시간을 갖고, 강력하게 나아가도록 합시다. 로마는 하루에 건설되지 않았지만, 우리는 하루를 잃지 않을 수 없습니다.",
+      "length": 216
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:36:02.432750+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "1) Formal Korean Translation: '여러분께, 우리는 교차로에 서 있습니다. 시장이 우리에게 코너볼을 던졌지만, 모든 구름에는 은빛의 반짝임이 있습니다. 경쟁자는 그들의 영예를 기뻐하고, 저희는 매일 밤을 지켜가고 있습니다. 저는 우리가 땀을 흉내 내고, 3월에 다시 디자인하는 것을 제안합니다. 그리고 강렬하게 출발할 것입니다. 진정은 먹이를 먹는 것에서 찾을 수 있습니다.'\n\n2) Casual Korean Translation: '여러분께, 우리는 교차로에 서 있습니다. 시장이 우리에게 코너볼을 던졌지만, 모든 구름에는 은빛의 반짝임이 있습니다. 경쟁자는 그들의 영예를 기뻐하고, 저희는 매일 밤을 지켜가고 있습니다. 저는 우리가 땀을 흉내 내고, 3월에 다시 디자인하는 것을 제안합니다. 그리고 강렬하게 출발할 것입니다. 진정은 먹이를 먹는 것에서 찾을 수 있습니다.'\n\n3) Idioms/Metaphors and Korean Equivalents:\n- 'crossroads' -> 교차로 (Korean formal), 교차점 (casual)\n- 'thrown us a curveball' -> 시장이 우리에게 코너볼을 던졌다 (formal/casual, literal translation as there's no direct idiom in Korean for this phrase).\n- 'every cloud has a silver lining' -> 모든 구름에는 은빛의 반짝임이 있습니다 (Korean formal), 모든 구름에도 좋은 점이 있어요 (casual)\n- 'resting on their laurels' -> 경쟁자는 그들의 영예를 기뻐하고 있다 (formal/casual, literal translation as there's no direct idiom in Korean for this phrase).\n- 'burning the midnight oil' -> 매일 밤을 지켜가고 있다 (Korean formal), 매일 밤을 지켜가는 거야 (casual)\n- 'bite the bullet' -> 땀을 흉내 내다 (formal/casual, literal translation as there's no direct idiom in Korean for this phrase).\n- 'go back to the drawing board' -> 다시 디자인하는 것을 제안합니다 (Korean formal), 다시 디자인해야 해요 (casual)\n- 'come out swinging' -> 강렬하게 출발할 것입니다 (formal/casual, literal translation as there's no direct idiom in Korean for this phrase).\n- 'proof of pudding is in the eating' -> 진정은 먹이를 먹는 것에서 찾을 수 있습니다 (Korean formal), 진짜 proofs는 먹이는 거야 (casual)\n\n4) Translatability Rating:\n- Crossroads: 5\n- Curveball: N/A, literal translation used.\n- Silver lining: 5\n- Laurels resting on: N/A, literal translation used.\n- Burning the midnight oil: 5\n- Bite the bullet: N/A, literal translation used.\n- Go back to drawing board: N/A, literal translation used (though 'designing' is a common term in Korean).\n- Come out swinging: N/A, literal translation used. \n- Proof of pudding being eaten: 4\n\n5) Cultural Adaptation Needed:\na) The concept behind \"bite the bullet\" may not be familiar to all Koreans; it might need explanation or an equivalent phrase that conveys taking a difficult action.\nb) Idioms like 'crossroads' and phrases such as 'resting on their laurels', which are rooted in Western culture, could require additional context for Korean audiences unfamiliar with these expressions. \nc) The metaphor \"proof of pudding is in the eating\" may not resonate culturally; it might need to be adapted or replaced by a more familiar idiom.\n\n6) Back-Translation: '여러분께, 우리는 교차로에 서 있습니다. 시장이 우리에게 코너볼을 던졌지만, 모든 구름에는 은빛의 반짝임이 있습니다. 경쟁자는 그들의 영예를 기뻐하고, 저희는 매일 밤을 지켜가고 있습니다. 저는 우리가 땀을 흉내 내고, 3월에 다시 디자인하는 것을 제안합니다. 그리고 강렬하게 출발할 것입니다. 진정은 먹이를 먹는 것에서 찾을 수 있습니다.'\n\n7) Comparison and Semantic Drift:\n- Back-translated phrases are very close to the original English sentences.\n- The idioms/metaphors have been translated literally, which may not always convey their full meaning in Korean culture; however, they were necessary for maintaining coherence with no direct equivalent available. There is minimal semantic drift as most of these expressions can be understood by a modern audience familiar with international business language or Western cultural references.\n- The casual register maintains the original speech's tone and intent but uses more colloquial terms that may not carry exactly the same weight in Korean culture, especially for idioms like 'bite the bullet' which might need further explanation.",
+      "length": 3416
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:36:05.859162+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "Based on the given statements:\n\n1. All dogs are animals.\n2. Rex is a dog.\n\nWe can logically deduce that if Rex belongs to this category (dogs), then he must also belong to another related but broader group of entities which includes all members belonging exclusively or partially within it, namely 'animals'. Therefore:\n\n\nConclusion: Rex is an animal.\n\n\nThis conclusion follows from the transitive property in logic where being a member of one subset implies membership into its supersets. In this case, since dogs are animals and Rex is classified as a dog (a subset), then by extension he must also be considered part of their superset category - 'animals'.",
+      "length": 659
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:36:24.257619+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "No, you cannot conclusively determine that Tom is a manager based solely on his attendance at both meetings (Monday and Friday). While it might be likely given all known information about who typically meets when in this scenario—since managers attend Monday's meeting—it does not definitively prove he holds the managerial position. There could still exist other roles or circumstances where someone attends these specific days' gatherings without being a manager, such as an assistant attending to support tasks for various staff members including those with management responsibilities.\n\n\nThe conclusion that Tom is likely (but possibly incorrect) based on this information alone would be considered weak because it relies heavily upon the assumption of what we know about managers and their meeting attendance. Without additional evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within a managerial capacity, one cannot make an absolute determination from these facts provided in isolation.\n\n\nThe answer to whether Tom is likely (but not guaranteed) based on this information alone would be: Yes, it seems plausible that he could hold the position of manager given all managers attend Monday's meeting and he's attending Friday as well. However, without further evidence or confirmation directly linking his role within",
+      "length": 11741
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:36:28.251698+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "To determine if Maria can be concluded as being a senior engineer, let's break down what we've been told:\n\n\n1. All senior engineers know Python.\n\n2. Some senior engineers also know Rust (this does not imply that all seniors who learn Rust are necessarily part of the backend team).\n\n3. All developers working on the backend work with Rust.\n\n\nMaria works in the backend and knows Python; however, we don't have information about whether she is a senior engineer or if knowing Python alone qualifies her as one without additional context (e.g., years of experience). Knowing that all seniors know Python doesn't mean Maria must be among them. She could also just happen to learn it later.\n\n\nTherefore, based on the given statements and no further evidence provided regarding Maria's position within engineering ranks at this company or any other qualifications she may have for being a senior engineer (such as years of experience), we cannot conclusively say that \"Maria is a senior engineer.\" We can only conclude with certainty if all engineers working in backend are seniors, which the information does not support.",
+      "length": 1117
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:36:46.566298+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "Let's analyze the given conditions step by step:\n\n1. Five people (A, B, C, D, E) are sitting around a circular table.\n2. A is not adjacent to B.\n\n3. C sits between D and E:\n   - This means we can have either of two arrangements: \n     1. D-C-E\n     or\n     2. E-D-C\n\n4. B must sit next to D:\n\nCombining these conditions, let's try placing them in a circular arrangement while respecting the constraints.\n\n### Step-by-Step Placement:\n- Let's start with C between D and E.\n  \n#### Arrangement: (D - C - E)\n1. Place A somewhere not adjacent to B\n2. Since we know that B must sit next to D:\n\nLet's place it as follows, starting from an arbitrary point for clarity in a circular arrangement.\n\n```\nA _ B _\n|  |   |\n_ _ _ _\n\nWe need:\n- C between D and E.\n- A is not adjacent to B\n- B sits beside D (and thus also next to either side of the circle)\n\nLet's try placing them:\n\n1. Place D at position 1, then place C in positions 2 or 6 depending on where we start.\n\nIf starting from left:\n```\nD _ E _\n|   |    |\n_ _ _ _\n\nPlace B beside D (either next to it):\n- If placed between D and another person: \n(D - B - _) \n\nBut this violates A not being adjacent to B. So, let's try placing C in positions 2 or 6.\n\nIf starting from left:\n```\nD E _\n|   | _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (C must be next):\n- If placed between D and another person: \n(D-C-E)\n\nNow we have:\n\n1. A cannot sit adjacent to B.\nSo, let's place remaining persons in a way that satisfies all conditions.\n\nIf starting from left:\n```\nD - E\n|   |\n_ _\n\nPlace C beside them (",
+      "length": 7610
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "phi4-mini",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:36:51.942938+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "Let's analyze each clue with respect to their truthfulness:\n\n\n1) If A is guilty (and thus lying), then B was at home.\n\n2) If B was indeed at home as per 1's implication of guilt for A being true; C saw D which would be false according to Clue 3, making this a lie. \n\n3) C says that D wasn't there - if we assume it's the first statement that's lying (as deduced above), then it must mean actually D was at scene.\n\n4) If E said F with him and assuming no contradiction yet from previous clues; since we've established Clue 2 is false, this could still be true unless contradicted by another clue. \n\n5) And if we assume that the second lie (Clue 3 being a lie means C saw D at scene), then for consistency E's statement about F would also have to mean he was alone which contradicts our assumption of Clue 4, making this one as well.\n\n\nSo far we've identified two lies: clues 2 and possibly clue 5. We need another contradiction:\n\n\n6) If we assume that the third lie (Clue 3 being a false statement about D's presence at scene), then F must have been alone which would mean A is not guilty, contradicting our initial assumption of guilt for suspect A.\n\n\nTherefore:\n\n- Suspect E lied in Clue 4.\n\n- The puzzle has one unique solution: C is the only person who could be lying twice (Clues 3 and possibly 5), making them both false. This means D was at scene as per clue 2, F must have been alone according to clues 6 & 1's implication of A not being guilty.\n\n\nThe puzzle has a unique solution: C is the culprit because they are telling lies about two different statements (Clues 3 and possibly Clue 5).",
+      "length": 1597
+    },
+    "score": 1.0
+  }
+]

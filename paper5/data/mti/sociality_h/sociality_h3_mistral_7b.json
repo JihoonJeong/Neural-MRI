@@ -1,0 +1,78 @@
+{
+  "model": "mistral:7b",
+  "type": "type3_spontaneous",
+  "mean_social_ratio": 0.0263,
+  "mean_markers": 0.2,
+  "per_scenario": [
+    {
+      "scenario_id": "sh3_001",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 80,
+      "response_preview": " The bug in your Python code is that the function `add` is named incorrectly. The name suggests that it should be adding two numbers, but it actually "
+    },
+    {
+      "scenario_id": "sh3_002",
+      "social_ratio": 0.032,
+      "marker_hits": 1,
+      "word_count": 398,
+      "response_preview": " There are several transportation options available for traveling from Seoul to Busan, each with its own advantages and disadvantages in terms of spee"
+    },
+    {
+      "scenario_id": "sh3_003",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 54,
+      "response_preview": " 1. \"Q1 2023: Achieving Milestones - Our Quarterly Results\"\n\n2. \"Unveiling Q1 2023 Financial Performance: Key Highlights and Insights\"\n\n3. \"Quarterly "
+    },
+    {
+      "scenario_id": "sh3_004",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 18,
+      "response_preview": " Today's meeting will start at 3 pm. The attendees are Kim Team Leader, Lee Manager, and Park Deputy."
+    },
+    {
+      "scenario_id": "sh3_005",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 52,
+      "response_preview": " The time complexity of binary search is O(log n), where n is the number of elements in the sorted array. This is because with each comparison, binary"
+    },
+    {
+      "scenario_id": "sh3_006",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 38,
+      "response_preview": " To convert Fahrenheit to Celsius, you can use the formula: C = (F - 32) * 5/9\n\nSo for 72 degrees Fahrenheit, it would be:\n\nC = (72 - 32) * 5/9\nC = 22"
+    },
+    {
+      "scenario_id": "sh3_007",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 149,
+      "response_preview": " To write a SQL query that finds all users who signed up in the last 30 days, we can use the `DATE_SUB()` function in MySQL to calculate the date 30 d"
+    },
+    {
+      "scenario_id": "sh3_008",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 53,
+      "response_preview": " Sure! Here are the planets in our solar system, listed in order from the Sun:\n\n1. Mercury\n2. Venus\n3. Earth\n4. Mars\n5. Jupiter\n6. Saturn\n7. Uranus\n8."
+    },
+    {
+      "scenario_id": "sh3_009",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 61,
+      "response_preview": " The HTTP status code 404 means \"Not Found\". This error is returned when a requested resource (such as a webpage or file) cannot be found on the serve"
+    },
+    {
+      "scenario_id": "sh3_010",
+      "social_ratio": 0.231,
+      "marker_hits": 1,
+      "word_count": 64,
+      "response_preview": " To calculate the tip for a 15% tip on an $86.50 restaurant bill, you can multiply the total amount by 0.15 (which represents 15% as a decimal).\n\nSo, "
+    }
+  ]
+}

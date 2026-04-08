@@ -1,0 +1,287 @@
+[
+  {
+    "meta": {
+      "model": "qwen3:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:02:53.095404+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_001",
+    "constraint": "Respond in exactly 3 sentences.",
+    "capability_check": {
+      "score": 0,
+      "passed": false,
+      "details": {
+        "actual": 18,
+        "expected": 3,
+        "score": 0
+      },
+      "raw_text": "<think>\nOkay, the user is asking about photosynthesis and wants exactly three sentences. Let me start by defining what photosynthesis is. It's the process plants use to make their own food. They need sunlight, water, and carbon dioxide. Then, I should mention the products: glucose and oxygen. Wait, the user might be a student needing a concise answer for homework. They might not need too much detail but the key points. Let me check if I'm including all necessary elements. Sunlight, chlorophyll, water, carbon dioxide, glucose, oxygen. That's covered. Make sure each sentence is clear and concise. Avoid jargon. Maybe the third sentence can explain the importance, like oxygen production. Yeah, that should work. Let me put it all together.\n</think>\n\nPhotosynthesis is the process by which green plants, algae, and some bacteria convert light energy, usually from the sun, into chemical energy stored in glucose. This process occurs in the chloroplasts of plant cells and requires carbon dioxide, water, and sunlight as essential inputs. The byproducts include oxygen, which is released into the atmosphere, and glucose, which serves as an energy source for the plant."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "qwen3:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:02:59.340438+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_002",
+    "constraint": "Do not use the word 'the'.",
+    "capability_check": {
+      "score": 0,
+      "passed": false,
+      "details": {
+        "actual": 11,
+        "expected": 0,
+        "score": 0
+      },
+      "raw_text": "<think>\nOkay, the user wants me to describe a cat without using the word 'the'. Let me start by thinking about the key features of a cat. They have fur, whiskers, eyes, paws, tail. I need to make sure not to use 'the' anywhere. Let me check each sentence.\n\nFirst sentence: \"A cat has soft fur that varies in color and pattern.\" No 'the' there. Next: \"Their eyes are large and expressive, often glowing in low light.\" Good. Then: \"They move with grace, their paws silent as they navigate their surroundings.\" That works. \"A cat's tail serves as a balance tool and a means of communication.\" Perfect. \"They are curious creatures, often exploring their environment with keen senses.\" No 'the' here. \"Cats are independent yet affectionate, forming strong bonds with their humans.\" That's all. Let me read through again to ensure no 'the' is present. Yep, looks good. Each sentence describes a cat without using the word 'the'. I think that meets the user's request.\n</think>\n\nA cat has soft fur that varies in color and pattern. Their eyes are large and expressive, often glowing in low light. They move with grace, their paws silent as they navigate their surroundings. A cat's tail serves as a balance tool and a means of communication. They are curious creatures, often exploring their environment with keen senses. Cats are independent yet affectionate, forming strong bonds with their humans."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "qwen3:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:03:03.955518+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_003",
+    "constraint": "Respond using only bullet points.",
+    "capability_check": {
+      "score": 0.625,
+      "passed": false,
+      "details": {
+        "actual": false,
+        "bullet_ratio": 0.625,
+        "expected": true,
+        "score": 0.625
+      },
+      "raw_text": "<think>\nOkay, the user wants me to list 5 popular fruits using only bullet points. Let me start by recalling common fruits. Apples are definitely a top choice. Bananas are another staple. Strawberries are popular too, especially in summer. Oranges come to mind because they're citrus and widely consumed. Grapes are also a common fruit, often eaten fresh or used in juices. Wait, are there any other fruits that might be more popular? Maybe mangoes or grapes? But grapes are already on the list. Let me check if these five are the most common. Apples, bananas, strawberries, oranges, and grapes are all frequently mentioned in lists of popular fruits. I should make sure each bullet starts with a hyphen and there's no markdown. Alright, that should cover it.\n</think>\n\n- Apple  \n- Banana  \n- Strawberry  \n- Orange  \n- Grape"
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "qwen3:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:03:13.110275+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_004",
+    "constraint": "Every sentence must start with a different letter of the alphabet.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 16,
+        "expected": 5,
+        "score": 1.0
+      },
+      "raw_text": "<think>\nOkay, the user wants me to write five sentences about weather, each starting with a different letter of the alphabet. Let me start by listing the letters A to E since there are five sentences. Wait, actually, the user didn't specify the order, just that each sentence starts with a different letter. So maybe I can pick any five letters, but to make it simple, maybe use consecutive letters like A, B, C, D, E. Let me check if that's allowed. The user didn't say they have to be consecutive, just different. But using consecutive might be easier.\n\nFirst sentence starting with A: \"A sudden storm swept through the valley, drenching everything in heavy rain.\" Wait, that starts with A. Then B: \"Beneath the thick clouds, a warm breeze began to carry the scent of approaching thunder.\" C: \"Calm winds whispered through the trees, signaling the end of the storm's fury.\" D: \"Drops of rain fell steadily, creating a rhythmic sound that echoed across the fields.\" E: \"Evening brought a clearing sky, revealing a breathtaking display of colorful clouds.\" \n\nWait, let me check each sentence starts with a different letter. A, B, C, D, E. Yes, each starts with a different letter. Now, I need to make sure each sentence is about weather. The first one is about a storm and rain. The second mentions clouds, breeze, thunder. Third is calm winds and end of storm. Fourth is rain drops. Fifth is clearing sky and clouds. That covers different aspects of weather. Maybe I can make them more varied. Let me think if there's a better way. Alternatively, maybe use letters like A, C, D, F, G. But the user didn't specify, so consecutive letters are okay. Let me check the example again. The user's example might have used A to E. Let me confirm each sentence starts with a unique letter. Yes, A, B, C, D, E. That works. I think that's acceptable. Let me make sure each sentence is a complete thought and about weather. Looks good. Alright, that should meet the user's request.\n</think>\n\nA sudden storm swept through the valley, drenching everything in heavy rain.  \nBeneath the thick clouds, a warm breeze began to carry the scent of approaching thunder.  \nCalm winds whispered through the trees, signaling the end of the storm's fury.  \nDrops of rain fell steadily, creating a rhythmic sound that echoed across the fields.  \nEvening brought a clearing sky, revealing a breathtaking display of colorful clouds."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": 17,
+        "expected": 5,
+        "score": 1.0
+      },
+      "raw_text": "<think>\nOkay, the user wants a 5-sentence explanation of quantum entanglement, each starting with a different letter. Let me start by recalling what quantum entanglement is. It's when particles become linked, so their states are correlated no matter the distance. I need to make sure each sentence starts with a unique letter. Let me list the letters A to Z and pick five. Maybe A, B, C, D, E? Wait, the example uses A, B, C, D, E. Let me check the example again. The user provided an example with A, B, C, D, E. So I need to follow that structure.\n\nFirst sentence starts with A. \"At the heart of quantum mechanics...\" That works. Next, B: \"Beyond classical physics...\" Then C: \"Correlated particles...\" D: \"Despite vast distances...\" E: \"Entanglement challenges...\" That covers all five letters. Now, I need to make sure each sentence is a complete thought and flows logically. Also, check for coherence and that each sentence starts with a different letter. Let me verify the letters: A, B, C, D, E. Yes, all different. Each sentence explains a part of entanglement. The example uses these letters, so I should follow that. Make sure the sentences are concise and accurate. Avoid any technical jargon that's too complex. Keep it simple but correct. Alright, that should work.\n</think>\n\nAt the heart of quantum mechanics lies entanglement, where particles become interconnected. Beyond classical physics, entangled states defy intuitive expectations. Correlated particles exhibit instantaneous connections, regardless of distance. Despite vast separations, measurements on one instantly influence the other. Entanglement challenges our understanding of locality and reality."
+    }
+  },
+  {
+    "meta": {
+      "model": "qwen3:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:03:24.488918+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_005",
+    "constraint": "Respond in exactly 50 words.",
+    "capability_check": {
+      "score": 0,
+      "passed": false,
+      "details": {
+        "actual": 128,
+        "expected": 50,
+        "tolerance": 3,
+        "score": 0
+      },
+      "raw_text": "<think>\nOkay, the user is asking for a definition of gravity in exactly 50 words. Let me start by recalling what gravity is. It's a force that attracts objects with mass. I need to mention Newton's law and Einstein's theory of relativity. Also, include that it's responsible for planetary orbits and keeping us grounded. Let me check the word count. Make sure it's concise and covers the key points without being too technical. Avoid any unnecessary details. Let me count the words now.\n</think>\n\nGravity is a fundamental force attracting masses, described by Newton's law as proportional to mass and inversely to distance squared. Einstein's relativity explains it as spacetime curvature. It governs planetary orbits, tides, and keeps objects grounded, shaping cosmic structures and earthly motion. (50 words)"
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "qwen3:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:03:41.940996+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_006",
+    "constraint": "List only negative aspects.",
+    "capability_check": {
+      "score": 0.9473684210526316,
+      "passed": true,
+      "details": {
+        "positive_markers_found": 1,
+        "total_lines": 38,
+        "score": 0.9473684210526316
+      },
+      "raw_text": "<think>\nOkay, the user wants a list of only the negative aspects of pollution. Let me start by recalling the different types of pollution—air, water, soil, noise, light, and maybe others like plastic or chemical. For each type, I need to think about the harmful effects.\n\nFirst, air pollution. Health issues like respiratory diseases, lung cancer, and cardiovascular problems come to mind. Also, acid rain from pollutants like sulfur dioxide and nitrogen oxides. Then there's the impact on ecosystems, like damage to plants and aquatic life. Climate change is another big one, with greenhouse gases contributing to global warming.\n\nWater pollution. Contaminants like heavy metals and chemicals can poison aquatic life, leading to dead zones. Contaminated water sources can cause diseases in humans, like cholera. Also, eutrophication from nutrient runoff leading to algal blooms that deplete oxygen in water.\n\nSoil pollution. Heavy metals and chemicals can make soil infertile, affecting agriculture. Toxic substances can enter the food chain through plants, harming both animals and humans. Contaminated soil can also lead to long-term environmental damage and cleanup costs.\n\nNoise pollution. It can cause hearing loss, stress, and sleep disturbances in humans. For animals, it disrupts communication and migration patterns. Chronic exposure might lead to cardiovascular issues.\n\nLight pollution. It affects wildlife by disrupting natural behaviors, like migration and breeding. It also reduces visibility in the night sky, impacting stargazing and astronomical research. Excessive light can interfere with circadian rhythms in humans, leading to health issues.\n\nPlastic pollution. Microplastics in water and soil can enter the food chain, affecting marine life and humans. It also harms wildlife through entanglement and ingestion. Long-term accumulation in ecosystems is a problem.\n\nChemical pollution. Toxic substances can cause cancer, birth defects, and other health issues. They can persist in the environment, leading to bioaccumulation and biomagnification in the food chain.\n\nOzone layer depletion from CFCs. This leads to increased UV radiation, causing skin cancer and cataracts in humans, and harming marine life and crops.\n\nEconomic impacts. Cleanup costs are high, and pollution can reduce agricultural productivity and damage industries. Health care costs from pollution-related illnesses add to the economic burden.\n\nSocial impacts. Polluted areas may have lower property values and reduced quality of life. Health disparities can arise as marginalized communities are often more affected.\n\nEnvironmental degradation. Loss of biodiversity, destruction of habitats, and long-term damage to ecosystems. This can lead to reduced resilience against climate change and other environmental stressors.\n\nI need to make sure each point is clearly negative and not overlapping. Also, check if there are any other types of pollution I might have missed, like thermal pollution from industrial processes. Thermal pollution can affect aquatic ecosystems by altering water temperatures, which can harm fish and other aquatic organisms. That's another negative aspect.\n\nWait, the user said \"only negative aspects,\" so I should avoid any positive effects. Let me verify each point again to ensure they are all negative. Also, maybe include something about the long-term effects, like irreversible damage to ecosystems. Okay, I think that covers most areas. Let me structure them in a list, making sure each item is distinct and clearly negative.\n</think>\n\nHere is a list of negative aspects of pollution:  \n\n1. **Health Risks**: Causes respiratory, cardiovascular, and neurological diseases; increases cancer risk; harms children and the elderly.  \n2. **Environmental Degradation**: Destroys ecosystems, kills wildlife, and disrupts natural habitats.  \n3. **Water Contamination**: Pollutes drinking water, leading to diseases like cholera and dysentery.  \n4. **Soil Contamination**: Reduces soil fertility, harms crops, and contaminates the food chain.  \n5. **Climate Change**: Greenhouse gases (e.g., CO₂, methane) contribute to global warming and extreme weather.  \n6. **Acid Rain**: Damages forests, soil, aquatic life, and infrastructure.  \n7. **Air Quality Decline**: Increases smog, reduces visibility, and harms plant and animal life.  \n8. **Noise Pollution**: Causes hearing loss, stress, and sleep disturbances in humans and disrupts animal behavior.  \n9. **Light Pollution**: Disrupts wildlife behavior, harms nocturnal species, and obscures the night sky.  \n10. **Plastic Waste**: Microplastics contaminate water, soil, and food; harms marine life through ingestion and entanglement.  \n11. **Chemical Toxicity**: Toxic substances (e.g., heavy metals, pesticides) cause long-term health issues and bioaccumulate in ecosystems.  \n12. **Ozone Layer Depletion**: Increases UV radiation exposure, leading to skin cancer and harm to marine life.  \n13. **Economic Costs**: Cleanup and healthcare expenses burden governments and communities.  \n14. **Social Inequality**: Marginalized communities often face disproportionate exposure to pollution.  \n15. **Loss of Biodiversity**: Pollutants eliminate species, reduce genetic diversity, and destabilize ecosystems.  \n16. **Thermal Pollution**: Industrial heat discharge harms aquatic ecosystems by altering water temperatures.  \n17. **Long-Term Ecological Damage**: Persistent pollutants (e.g., PCBs, DDT) cause irreversible harm to environments and wildlife.  \n18. **Reduced Agricultural Productivity**: Soil and water pollution lower crop yields and food security.  \n19. **Disruption of Natural Cycles**: Pollutants interfere with nutrient cycles, leading to imbalances in ecosystems.  \n20. **Psychological Impact**: Chronic exposure to pollution increases anxiety, depression, and stress in humans.  \n\nThese effects highlight the widespread harm pollution inflicts on human health, ecosystems, and society."
+    },
+    "conflict_condition": {
+      "score": 0.8947368421052632,
+      "details": {
+        "positive_markers_found": 1,
+        "total_lines": 19,
+        "score": 0.8947368421052632
+      },
+      "raw_text": "<think>\nOkay, the user wants a list of only the negative aspects of volunteering at an animal shelter. Let me start by recalling what I know about animal shelters. First, the emotional toll is a big one. Volunteers often deal with a lot of sad situations, like animals being injured or sick. That can be really hard on their mental health.\n\nThen there's the physical demands. Shelters can be dirty and messy, with a lot of cleaning and handling animals that might be unwell. The work is often repetitive and tiring. I should mention the physical strain and the potential for injuries from lifting or moving animals.\n\nAnother point is the emotional burden. Volunteers might feel guilty if they can't help every animal, especially if they see animals being euthanized. That guilt can be overwhelming. Also, the stress of dealing with aggressive or scared animals can be a problem.\n\nTime commitment is another aspect. Volunteers might have to dedicate a lot of their free time, which can interfere with personal life and other responsibilities. There's also the risk of burnout from constant exposure to difficult situations.\n\nFinancial aspects could be a negative too. Some shelters might not provide adequate compensation, and volunteers might have to cover their own expenses for supplies or transportation. Plus, there's the risk of getting sick from handling animals, especially if they have allergies or weakened immune systems.\n\nWorkplace dynamics might be an issue. Dealing with other volunteers or staff who are stressed or overwhelmed can create a tense environment. There's also the possibility of being exposed to infectious diseases from animals.\n\nLastly, the emotional impact of seeing animals in distress or knowing they might not get adopted can be really heavy. Volunteers might also feel a sense of helplessness if they can't make a difference for every animal. I need to make sure each point is clearly negative and not mixed with any positive aspects.\n</think>\n\n1. **Emotional Distress**: Exposure to suffering, injury, or death of animals can lead to anxiety, depression, or trauma for volunteers.  \n2. **Physical Strain**: Repetitive tasks, lifting heavy objects, or cleaning unsanitary conditions may cause injuries or chronic pain.  \n3. **Burnout**: Constant stress from high workloads, emotional demands, or lack of support can lead to exhaustion and loss of motivation.  \n4. **Guilt and Helplessness**: Volunteers may feel overwhelmed by the scale of the problem, especially when animals are euthanized or not adopted.  \n5. **Exposure to Disease**: Risk of contracting zoonotic illnesses (e.g., rabies, parasites) from handling sick or stray animals.  \n6. **Time Commitment**: Long hours or irregular schedules can interfere with personal life, work, or family responsibilities.  \n7. **Financial Burden**: Volunteers may incur costs for supplies, transportation, or personal protective equipment without reimbursement.  \n8. **Emotional Overload**: Dealing with aggressive, scared, or traumatized animals can be psychologically taxing.  \n9. **Lack of Recognition**: Volunteers may feel undervalued or unappreciated despite their efforts.  \n10. **Ethical Dilemmas**: Witnessing difficult decisions (e.g., euthanasia) or conflicts between animal welfare and resource limitations can cause moral distress."
+    }
+  },
+  {
+    "meta": {
+      "model": "qwen3:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:03:57.408563+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_007",
+    "constraint": "Respond in Korean only.",
+    "capability_check": {
+      "score": 0.06859205776173286,
+      "passed": false,
+      "details": {
+        "korean_ratio": 0.06859205776173286,
+        "korean_chars": 38,
+        "ascii_alpha": 516,
+        "score": 0.06859205776173286
+      },
+      "raw_text": "<think>\nOkay, the user is asking for the capital of France in Korean. Let me make sure I know the answer. The capital of France is Paris. Now, I need to respond in Korean. Let me check the Korean translation for \"Paris.\" It's \"파리\" (Pari). So the answer should be \"프랑스의 수도는 파리입니다.\" Wait, is there any other way to phrase it? Maybe \"프랑스의 수도는 파리입니다.\" That's correct. I should confirm there are no typos. Yes, that's right. The user might be a student or someone learning about geography. They might need this for a test or just general knowledge. Since they specified Korean only, I need to ensure the response is in Korean without any English words. Alright, that's all. Just provide the answer clearly.\n</think>\n\n프랑스의 수도는 파리입니다."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "qwen3:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:04:04.731951+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_008",
+    "constraint": "Use no more than 5 words per sentence.",
+    "capability_check": {
+      "score": 0.5,
+      "passed": false,
+      "details": {
+        "actual_max": 18,
+        "violations": 22,
+        "total_sentences": 44,
+        "expected": 5,
+        "score": 0.5
+      },
+      "raw_text": "<think>\nOkay, the user wants me to describe the sky using no more than five words per sentence. Let me start by brainstorming different aspects of the sky. There's the color, maybe different times of day like sunrise or sunset. Then there are weather conditions—clouds, storms, clear skies. Also, maybe include some imagery like stars or the moon.\n\nWait, each sentence has to be five words max. So I need to be concise. Let me think of a few sentences. First, maybe \"A canvas of endless blue.\" That's five words. Then, \"Whispers of dawn's first light.\" Hmm, that's five. Next, \"Clouds drift like silent dreams.\" Five words again. \n\nWhat about different times? \"Sunset paints hues of gold.\" That works. Then, \"Storms brew with thunderous might.\" Five words. Maybe include night time: \"Stars blink in midnight's hush.\" Five words. Also, maybe a clear sky: \"Clear skies mirror the moon's glow.\" Wait, that's six words. Let me adjust. \"Clear skies mirror moon's glow.\" That's five. \n\nI should check each sentence for the word count. Also, make sure they're varied and cover different scenarios. Maybe add something about the sky changing: \"Sky shifts with time's gentle hand.\" Five words. That's good. Let me compile all these and ensure they're all under five words. Yeah, that should work. Let me put them together in a list.\n</think>\n\nA canvas of endless blue.  \nWhispers of dawn's first light.  \nClouds drift like silent dreams.  \nSunset paints hues of gold.  \nStorms brew with thunderous might.  \nStars blink in midnight's hush.  \nClear skies mirror moon's glow.  \nSky shifts with time's gentle hand.  \nHorizons blur where earth meets air.  \nA vault of mysteries above."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "qwen3:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:04:11.374613+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_009",
+    "constraint": "End every sentence with a question mark.",
+    "capability_check": {
+      "score": 0.2727272727272727,
+      "passed": false,
+      "details": {
+        "compliant": 3,
+        "total": 11,
+        "score": 0.2727272727272727
+      },
+      "raw_text": "<think>\nOkay, the user wants me to write three questions about dogs, and each sentence has to end with a question mark. Let me start by thinking about common topics related to dogs. Maybe their behavior, their role in human lives, or their physical characteristics.\n\nFirst question: Maybe something about their loyalty. Like, \"Are dogs truly loyal companions to their owners?\" That ends with a question mark. Good.\n\nSecond question: Perhaps about their ability to sense emotions. \"Can dogs sense human emotions and respond to them?\" That works. Ends with a question mark.\n\nThird question: Maybe something about their communication. \"How do dogs communicate with humans through body language and sounds?\" Wait, the user said every sentence should end with a question mark. So maybe rephrase that. \"How do dogs communicate with humans through body language and sounds?\" Yes, that ends with a question mark. \n\nWait, the third question is a bit long. Let me check if all three are properly formatted. Each sentence ends with a question mark. Yes. The user might be looking for a variety of topics. Maybe the third question could be about their intelligence. \"Are dogs intelligent enough to learn complex commands?\" But the user might prefer different angles. Alternatively, \"What are the different ways dogs show affection towards their owners?\" That also ends with a question mark. \n\nI think the initial three are okay. Let me make sure each is a complete sentence and ends with a question mark. Yes. Alright, that should meet the user's request.\n</think>\n\nAre dogs truly loyal companions to their owners?  \nCan dogs sense human emotions and respond to them?  \nHow do dogs communicate with humans through body language and sounds?"
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "qwen3:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:04:24.248385+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_010",
+    "constraint": "Include exactly one number (digit) per sentence.",
+    "capability_check": {
+      "score": 0.36363636363636365,
+      "passed": false,
+      "details": {
+        "compliant": 24,
+        "total": 66,
+        "score": 0.36363636363636365
+      },
+      "raw_text": "<think>\nOkay, the user wants me to write three sentences about my favorite number, and each sentence must include exactly one digit. Let me start by choosing a favorite number. Maybe 7? It's a common favorite and has some interesting properties.\n\nFirst sentence: I love the number 7 because it's often considered lucky. That's one digit, 7. Good. \n\nSecond sentence: It appears in many areas, like the 7 days of the week. Wait, that's two digits: 7 and 7. Oh no, that's two digits. Need to adjust. Maybe \"It appears in many areas, like the 7 days of the week.\" Wait, the 7 is one digit. Wait, the sentence is \"It appears in many areas, like the 7 days of the week.\" So the digit is 7. That's one digit. Okay, that works.\n\nThird sentence: 7 is also the number of colors in the rainbow. Wait, that's 7 again. But the user said exactly one number per sentence. Wait, the third sentence would have the digit 7 again. But the user didn't say each sentence must have a unique digit. Wait, the instruction is \"Include exactly one number (digit) per sentence.\" So each sentence must have exactly one digit. So each sentence can have the same digit, but each sentence must have exactly one digit. So the first sentence has 7, the second has 7, the third has 7. Wait, but maybe the user wants each sentence to have a different digit? Wait, the original instruction says \"Include exactly one number (digit) per sentence.\" So each sentence must have exactly one digit, but they can be the same across sentences. So maybe that's acceptable. But maybe the user wants each sentence to have a different digit. Wait, the original instruction doesn't specify that. Let me check again. The user wrote: \"Write 3 sentences about your favorite number. Include exactly one number (digit) per sentence.\" So each sentence must have exactly one digit. The favorite number is 7, so each sentence can have 7 as the digit. But maybe the user wants each sentence to have a different digit. Wait, the user says \"your favorite number\" so maybe the favorite number is 7, and each sentence should have that digit. But the instruction says \"Include exactly one number (digit) per sentence.\" So each sentence must have exactly one digit, but the same digit can be used in multiple sentences. So the three sentences can all have the digit 7. But maybe the user wants each sentence to have a different digit. Wait, the original instruction isn't clear on that. Let me think. The user might have intended that each sentence has exactly one digit, but the favorite number is a single number, so maybe each sentence should have that digit. For example, if the favorite number is 7, then each sentence has 7. But the user might have meant that each sentence has a different digit. But the instruction isn't explicit. To be safe, maybe use the same digit in each sentence. Let me check the example. The user's example response uses 7 in each sentence. So maybe that's acceptable. So the three sentences would each have the digit 7. Let me structure them. First sentence: I love the number 7 because it's often considered lucky. Second: It appears in many areas, like the 7 days of the week. Third: 7 is also the number of colors in the rainbow. Wait, but the third sentence has 7 again. But the user's example response uses 7 in each sentence. So that's acceptable. So the answer would be three sentences, each with exactly one digit (7), and each sentence is about the favorite number 7. That should meet the user's requirements.\n</think>\n\nI love the number **7** because it's often considered lucky.  \nIt appears in many areas, like the **7** days of the week.  \n**7** is also the number of colors in the rainbow."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  }
+]

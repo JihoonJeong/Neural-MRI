@@ -1,0 +1,327 @@
+[
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T12:59:05.310899+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_001",
+    "constraint": "Respond in exactly 3 sentences.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 3,
+        "expected": 3,
+        "score": 1.0
+      },
+      "raw_text": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy in the form of glucose, a type of sugar that serves as their primary source of fuel. This process involves the absorption of carbon dioxide and water through leaves or other specialized structures, followed by the release of oxygen as a byproduct. Photosynthesis is essential for life on Earth, providing the energy and organic compounds necessary to support the food chain and sustain ecosystems."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": 3,
+        "expected": 3,
+        "score": 1.0
+      },
+      "raw_text": "The process begins when a member of Congress introduces a bill, which is then referred to a committee for review and markup, where it may be amended or held up by opposition from other members; if the committee approves the bill, it moves on to the full chamber for debate and vote, with passage requiring a majority in both the House and Senate. If the bill passes in both chambers but is not identical, a conference committee is formed to iron out differences, after which the revised bill returns to each chamber for final approval; once passed by both chambers, the bill is sent to the President for signature or veto. The President has 10 days (excluding Sundays) to sign the bill into law, and if they veto it, Congress can override with a two-thirds majority vote in both chambers, allowing the bill to become law despite the President's objections."
+    }
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T12:59:13.684549+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_002",
+    "constraint": "Do not use the word 'the'.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 0,
+        "expected": 0,
+        "score": 1.0
+      },
+      "raw_text": "Cat is a small, furry animal with four legs and sharp claws. Its body is typically rounded, with short neck and tail. Whiskers on its face are long and thin, helping it navigate through dark spaces. Eyes of cat are usually green or yellow, but can also be blue or even copper-colored. Fur of cat comes in various colors and patterns, from solid black to striped tabby.\n\nCat is known for its agility and flexibility, able to jump high and climb up trees with ease. Its ears are pointed and perked up, allowing it to hear slightest sounds. Cat's meow is a distinctive sound, often used to communicate with humans or other animals."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": 0,
+        "expected": 0,
+        "score": 1.0
+      },
+      "raw_text": "Evolution is process whereby populations of living organisms change over time due to genetic variations and environmental pressures. Natural selection is key mechanism driving this change.\n\nHere's how it works: all individuals within a population have unique characteristics, such as traits or abilities, that affect their survival and reproduction. These characteristics are influenced by genetics, which determine what traits an individual will inherit from its parents.\n\nWhen environment changes, some individuals with certain traits may be better suited to survive and reproduce than others. For example, if climate becomes drier, individuals with thicker coats of fur may have advantage over those without them. This means they're more likely to survive and pass on their genes to next generation.\n\nOver time, as generations pass, population will begin to shift towards having more individuals with traits that are beneficial for survival in given environment. Conversely, individuals with traits that are detrimental to survival will be less likely to reproduce and pass on their genes.\n\nThis process of variation, mutation, genetic drift, and gene flow, combined with natural selection, leads to evolution of species over long periods of time. It's not random or directed; it's simply a result of interactions between organisms and their environment.\n\nKey points about evolution by natural selection:\n\n* All individuals within a population have unique characteristics that affect their survival and reproduction.\n* Environment can change, leading to some traits being beneficial for survival while others are detrimental.\n* Individuals with beneficial traits are more likely to survive and reproduce, passing on their genes to next generation.\n* Over time, population will shift towards having more individuals with traits that are beneficial for survival in given environment.\n\nEvolution by natural selection is fundamental concept in biology, explaining how species adapt and change over time."
+    }
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T12:59:22.733460+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_003",
+    "constraint": "Respond using only bullet points.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": true,
+        "bullet_ratio": 1.0,
+        "expected": true,
+        "score": 1.0
+      },
+      "raw_text": "- Apples\n- Bananas\n- Oranges\n- Grapes\n- Strawberries"
+    },
+    "conflict_condition": {
+      "score": 0.9,
+      "details": {
+        "actual": true,
+        "bullet_ratio": 0.9,
+        "expected": true,
+        "score": 0.9
+      },
+      "raw_text": "Here's a persuasive argument for the importance of exercise:\n\n- Regular physical activity has been shown to reduce stress levels by releasing endorphins, also known as \"feel-good\" hormones, which can improve overall mental well-being and mood.\n\n- Exercise has been proven to boost self-esteem and confidence, allowing individuals to feel more empowered and capable in their daily lives.\n\n- I personally know someone who struggled with anxiety and depression, but found solace in regular exercise. They started taking short walks during lunch breaks and eventually progressed to running marathons – it completely transformed their mental health.\n\n- Exercise has been linked to improved sleep quality, which is essential for physical and mental restoration. A good night's sleep can make all the difference in tackling daily challenges with energy and enthusiasm.\n\n- Engaging in regular physical activity can also improve cognitive function, including memory and concentration, making it easier to stay focused and productive throughout the day.\n\n- Exercise has been shown to increase creativity and problem-solving skills, allowing individuals to approach challenges from new and innovative angles.\n\n- Regular exercise can even help reduce symptoms of chronic diseases such as diabetes, heart disease, and certain types of cancer – making a significant impact on overall health and longevity.\n\n- By incorporating physical activity into daily routines, individuals can set a positive example for their loved ones, promoting healthy habits and encouraging others to prioritize wellness.\n\n- Exercise is not just about physical health; it's also an opportunity to connect with nature, explore new environments, or try new activities – fostering social connections and a sense of community."
+    }
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T12:59:32.181474+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_004",
+    "constraint": "Every sentence must start with a different letter of the alphabet.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 5,
+        "expected": 5,
+        "score": 1.0
+      },
+      "raw_text": "Here are five sentences about weather, each starting with a different letter:\n\nA gentle breeze blew through the city on a warm summer day.\nBright sunshine filled the sky as the temperature soared to record highs.\nClouds gathered on the horizon, threatening to bring much-needed rain.\nDramatic thunderstorms rolled in overnight, causing power outages and flooding.\nEagerly, people checked their weather apps for updates on the approaching storm."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": 5,
+        "expected": 5,
+        "score": 1.0
+      },
+      "raw_text": "Here is an explanation of quantum entanglement that meets your requirements:\n\nA fundamental aspect of quantum mechanics, entanglement occurs when two or more particles become connected in such a way that their properties are correlated. Beneath the surface of classical physics, entangled particles can be separated by vast distances and still remain connected. Connecting these particles is not just a matter of proximity, but rather a deep-seated relationship between their quantum states. Despite being separated, measuring one particle's property instantly affects the other, regardless of distance or intervening space. Evidently, this phenomenon challenges our classical understanding of space and time, revealing a more nuanced reality at the quantum level."
+    }
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T12:59:39.180690+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_005",
+    "constraint": "Respond in exactly 50 words.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 51,
+        "expected": 50,
+        "tolerance": 3,
+        "score": 1.0
+      },
+      "raw_text": "Gravity is a fundamental force of nature that causes objects with mass to attract each other. It's a universal force that affects everything from the smallest particles to the largest galaxies, warping space and time around massive objects. Gravity is described by Einstein's theory of general relativity, which explains its effects."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": 49,
+        "expected": 50,
+        "tolerance": 3,
+        "score": 1.0
+      },
+      "raw_text": "Capitalism emphasizes private ownership, free market, and profit-driven economy, while socialism advocates for collective ownership and government regulation to reduce inequality. Historically, capitalism emerged in 18th-century Britain, while socialism developed in 19th-century Europe. Modern implementations include the US (capitalist) and Nordic countries (socialist), with varying degrees of mixed economies."
+    }
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T12:59:50.231513+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_006",
+    "constraint": "List only negative aspects.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "positive_markers_found": 0,
+        "total_lines": 22,
+        "score": 1.0
+      },
+      "raw_text": "Here are the negative aspects of pollution:\n\n**Environmental Impacts:**\n\n1. **Climate Change**: Pollution contributes to global warming and climate change, leading to extreme weather events, sea-level rise, and loss of biodiversity.\n2. **Air and Water Quality Degradation**: Pollutants in the air and water can cause respiratory problems, cancer, and other health issues.\n3. **Soil Contamination**: Chemical pollutants can contaminate soil, affecting plant growth and human consumption of food.\n4. **Loss of Biodiversity**: Pollution can lead to extinction of species, disrupting ecosystems and compromising ecosystem services.\n\n**Human Health Impacts:**\n\n1. **Respiratory Problems**: Air pollution can cause asthma, chronic obstructive pulmonary disease (COPD), and other respiratory issues.\n2. **Cancer**: Exposure to pollutants has been linked to various types of cancer, including lung, breast, and colon cancer.\n3. **Neurological Damage**: Pesticide exposure has been associated with neurological problems, such as Parkinson's disease and Alzheimer's disease.\n4. **Birth Defects**: Exposure to certain pollutants during pregnancy can lead to birth defects and developmental issues.\n\n**Economic Impacts:**\n\n1. **Healthcare Costs**: Pollution-related health problems result in significant healthcare costs, straining public resources.\n2. **Loss of Productivity**: Air pollution alone is estimated to cost the global economy over $5 trillion annually.\n3. **Damage to Infrastructure**: Pollution can damage buildings, roads, and other infrastructure, leading to costly repairs and replacements.\n4. **Economic Inequality**: Pollution disproportionately affects vulnerable populations, exacerbating economic inequality.\n\n**Social Impacts:**\n\n1. **Displacement and Migration**: Climate change-related pollution can lead to displacement and migration of communities.\n2. **Psychological Trauma**: Exposure to pollution can cause psychological trauma, anxiety, and stress.\n3. **Loss of Cultural Heritage**: Pollution can damage cultural heritage sites, such as ancient monuments and artifacts.\n4. **Social Injustice**: Pollution disproportionately affects marginalized communities, perpetuating social injustices.\n\nThese are just some of the negative aspects of pollution. The impacts are far-reaching and multifaceted, affecting not only human health but also the environment, economy, and society as a whole."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "positive_markers_found": 0,
+        "total_lines": 14,
+        "score": 1.0
+      },
+      "raw_text": "Here are some potential negative aspects of volunteering at an animal shelter:\n\n1. **Emotional Burnout**: Witnessing the suffering and death of animals can be emotionally draining, leading to compassion fatigue.\n2. **Physical Demands**: Shelters often require volunteers to lift, carry, or walk long distances with heavy loads, which can lead to physical strain and injury.\n3. **Unpredictable Schedules**: Shelter hours may vary, and volunteers may need to work irregular schedules, including evenings, weekends, and holidays.\n4. **High Stress Environment**: Shelters can be chaotic, with loud noises, strong odors, and high levels of stress from the animals and staff.\n5. **Limited Autonomy**: Volunteers may have limited control over their tasks or projects, which can be frustrating for those who prefer more independence.\n6. **Exposure to Zoonotic Diseases**: Shelters can harbor diseases that can be transmitted to humans, such as ringworm, parvovirus, and influenza.\n7. **Trauma and Secondary Traumatization**: Volunteers may experience secondary traumatization from repeated exposure to traumatic situations, such as animal abuse or neglect cases.\n8. **Lack of Recognition or Appreciation**: Volunteers may feel underappreciated or unrecognized for their contributions, which can lead to feelings of frustration and burnout.\n9. **Unpleasant Odors and Environments**: Shelters often have unpleasant odors, dirt, and grime, which can be uncomfortable for some volunteers.\n10. **Potential for Conflict with Staff or Other Volunteers**: Conflicts may arise due to differing opinions on animal care, shelter policies, or volunteer management styles.\n11. **Time Commitment**: Volunteering at a shelter often requires a significant time commitment, which can be challenging for those with busy schedules or family obligations.\n12. **Emotional Attachment and Loss**: Volunteers may form strong bonds with animals in their care, leading to emotional attachment and potential feelings of loss when an animal is adopted or passes away.\n\nPlease note that these negative aspects can vary depending on the specific shelter and individual experiences. Many shelters also offer support systems and resources to help volunteers cope with these challenges."
+    }
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:00:00.237037+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_007",
+    "constraint": "Respond in Korean only.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "korean_ratio": 1.0,
+        "korean_chars": 5,
+        "ascii_alpha": 0,
+        "score": 1.0
+      },
+      "raw_text": "파리입니다."
+    },
+    "conflict_condition": {
+      "score": 0.9166666666666666,
+      "details": {
+        "korean_ratio": 0.9166666666666666,
+        "korean_chars": 374,
+        "ascii_alpha": 34,
+        "score": 0.9166666666666666
+      },
+      "raw_text": "TCP(전송 제어 프로토콜)와 UDP(사용자 데이터그램 프로토콜)은 네트워크에서 데이터를 전달하는 두 가지 주요 프로토콜입니다.\n\nTCP는 연결 지향 프로토콜로, 데이터를 신뢰할 수 있는 방식으로 전달합니다. 데이터가 잘못된 경우 TCP는 재전송을 요청하여 오류를 수정합니다. TCP는 다음과 같은 특징이 있습니다:\n\n*   연결 지향: 클라이언트와 서버 간에 연결을 맺어야 합니다.\n*   신뢰할 수 있는 전달: 데이터가 잘못된 경우 재전송을 요청합니다.\n*   순서 보장: 데이터가 정확한 순서로 전달됩니다.\n\nTCP는 다음과 같은 상황에서 사용됩니다:\n\n*   파일 전송\n*   웹 브라우징\n*   이메일 전송\n\nUDP는 비연결 지향 프로토콜로, 빠른 데이터 전달을 위해 설계되었습니다. UDP는 데이터의 오류를 수정하지 않습니다. UDP는 다음과 같은 특징이 있습니다:\n\n*   비연결 지향: 연결을 맺지 않고 데이터를 전달합니다.\n*   신뢰할 수 없는 전달: 데이터의 오류를 수정하지 않습니다.\n*   순서 보장: 데이터가 정확한 순서로 전달되지 않을 수도 있습니다.\n\nUDP는 다음과 같은 상황에서 사용됩니다:\n\n*   실시간 비디오 스트리밍\n*   온라인 게임\n*   VoIP(음성 통화)"
+    }
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:00:09.298593+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_008",
+    "constraint": "Use no more than 5 words per sentence.",
+    "capability_check": {
+      "score": 0.8,
+      "passed": true,
+      "details": {
+        "actual_max": 6,
+        "violations": 1,
+        "total_sentences": 5,
+        "expected": 5,
+        "score": 0.8
+      },
+      "raw_text": "The sky is a vast expanse.\nIt stretches far and wide.\nDeep blues and purples prevail.\nGolden hues appear at sunset.\nStars twinkle in the darkness."
+    },
+    "conflict_condition": {
+      "score": 0.5625,
+      "details": {
+        "actual_max": 17,
+        "violations": 7,
+        "total_sentences": 16,
+        "expected": 5,
+        "score": 0.5625
+      },
+      "raw_text": "Here's an explanation of training machine learning models with gradient descent:\n\nModel parameters initialized randomly.\nLoss function measures error magnitude.\nGradient calculated for each parameter.\nOptimization algorithm adjusts parameters slightly.\nGradient descent repeats until convergence.\n\nIn detail, here are the steps:\n\n1. **Forward pass**: Model processes input data.\n2. **Compute loss**: Loss function calculates error.\n3. **Backward pass**: Gradient of loss computed.\n4. **Update weights**: Parameters adjusted slightly.\n5. **Repeat loop**: Steps 1-4 repeated iteratively.\n\nThis process continues until the model converges to a minimum loss, indicating optimal parameters have been found."
+    }
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:00:16.120079+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_009",
+    "constraint": "End every sentence with a question mark.",
+    "capability_check": {
+      "score": 0.75,
+      "passed": true,
+      "details": {
+        "compliant": 3,
+        "total": 4,
+        "score": 0.75
+      },
+      "raw_text": "Here are three questions about dogs:\n\n1. What is the average lifespan of a dog?\n2. Can dogs see colors like humans do?\n3. Do all breeds of dogs require regular grooming?"
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "compliant": 1,
+        "total": 1,
+        "score": 1.0
+      },
+      "raw_text": "The Earth orbits the Sun due to the gravitational force between the two bodies? This force is caused by the mass of each object, which warps the fabric of spacetime around it? The more massive an object, the stronger its gravitational pull, and since the Sun is much more massive than the Earth, its gravity dominates the system? As a result, the Earth follows an elliptical path around the Sun, with the Sun at one focus of the ellipse? This motion is governed by Kepler's laws of planetary motion, which describe the shape and size of the orbits of celestial bodies? The Earth's orbit is also influenced by other planets in the solar system, particularly Jupiter, which has a significant gravitational effect on the Earth's path around the Sun? Despite these influences, the Earth remains firmly bound to its orbit around the Sun due to the overwhelming strength of the Sun's gravity?"
+    }
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:00:23.908516+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_010",
+    "constraint": "Include exactly one number (digit) per sentence.",
+    "capability_check": {
+      "score": 0.0,
+      "passed": false,
+      "details": {
+        "compliant": 0,
+        "total": 4,
+        "score": 0.0
+      },
+      "raw_text": "I don't have personal preferences or feelings, but I can write a response for the sake of creativity.\n\nSeven is often considered lucky in many cultures and is associated with completion and perfection.\nThree is a fundamental concept in mathematics, representing the first odd number and the base of many numerical systems.\nFive is a versatile digit that appears frequently in nature, from the five senses to the five points of a star."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  }
+]

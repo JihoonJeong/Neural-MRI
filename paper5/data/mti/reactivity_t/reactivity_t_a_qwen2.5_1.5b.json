@@ -1,0 +1,259 @@
+{
+  "model": "qwen2.5:1.5b",
+  "condition": "A_language",
+  "n_scenarios": 10,
+  "mean_keyword_delta": 0.16,
+  "mean_length_delta": 0.5044,
+  "per_scenario": [
+    {
+      "scenario_id": "rt_a_001",
+      "keyword_hits": {
+        "formal": 1.0,
+        "casual": 1.0,
+        "terse": 1.0
+      },
+      "keyword_pairwise_deltas": {
+        "formal_vs_casual": 0.0,
+        "formal_vs_terse": 0.0,
+        "casual_vs_terse": 0.0
+      },
+      "mean_keyword_delta": 0.0,
+      "response_lengths": {
+        "formal": 4014,
+        "casual": 2559,
+        "terse": 1460
+      },
+      "length_pairwise_deltas": {
+        "formal_vs_casual": 0.543,
+        "formal_vs_terse": 0.954,
+        "casual_vs_terse": 0.41
+      },
+      "mean_length_delta": 0.6357
+    },
+    {
+      "scenario_id": "rt_a_002",
+      "keyword_hits": {
+        "formal": 1.0,
+        "casual": 0.8,
+        "terse": 0.8
+      },
+      "keyword_pairwise_deltas": {
+        "formal_vs_casual": 0.19999999999999996,
+        "formal_vs_terse": 0.19999999999999996,
+        "casual_vs_terse": 0.0
+      },
+      "mean_keyword_delta": 0.1333,
+      "response_lengths": {
+        "formal": 3254,
+        "casual": 1669,
+        "terse": 1997
+      },
+      "length_pairwise_deltas": {
+        "formal_vs_casual": 0.687,
+        "formal_vs_terse": 0.545,
+        "casual_vs_terse": 0.142
+      },
+      "mean_length_delta": 0.458
+    },
+    {
+      "scenario_id": "rt_a_003",
+      "keyword_hits": {
+        "formal": 0.2,
+        "casual": 0.2,
+        "terse": 0.2
+      },
+      "keyword_pairwise_deltas": {
+        "formal_vs_casual": 0.0,
+        "formal_vs_terse": 0.0,
+        "casual_vs_terse": 0.0
+      },
+      "mean_keyword_delta": 0.0,
+      "response_lengths": {
+        "formal": 2588,
+        "casual": 1055,
+        "terse": 2417
+      },
+      "length_pairwise_deltas": {
+        "formal_vs_casual": 0.759,
+        "formal_vs_terse": 0.085,
+        "casual_vs_terse": 0.674
+      },
+      "mean_length_delta": 0.506
+    },
+    {
+      "scenario_id": "rt_a_004",
+      "keyword_hits": {
+        "formal": 1.0,
+        "casual": 0.4,
+        "terse": 0.8
+      },
+      "keyword_pairwise_deltas": {
+        "formal_vs_casual": 0.6,
+        "formal_vs_terse": 0.19999999999999996,
+        "casual_vs_terse": 0.4
+      },
+      "mean_keyword_delta": 0.4,
+      "response_lengths": {
+        "formal": 3659,
+        "casual": 1354,
+        "terse": 1857
+      },
+      "length_pairwise_deltas": {
+        "formal_vs_casual": 1.007,
+        "formal_vs_terse": 0.787,
+        "casual_vs_terse": 0.22
+      },
+      "mean_length_delta": 0.6713
+    },
+    {
+      "scenario_id": "rt_a_005",
+      "keyword_hits": {
+        "formal": 0.8,
+        "casual": 0.8,
+        "terse": 1.0
+      },
+      "keyword_pairwise_deltas": {
+        "formal_vs_casual": 0.0,
+        "formal_vs_terse": 0.19999999999999996,
+        "casual_vs_terse": 0.19999999999999996
+      },
+      "mean_keyword_delta": 0.1333,
+      "response_lengths": {
+        "formal": 3186,
+        "casual": 1321,
+        "terse": 2930
+      },
+      "length_pairwise_deltas": {
+        "formal_vs_casual": 0.752,
+        "formal_vs_terse": 0.103,
+        "casual_vs_terse": 0.649
+      },
+      "mean_length_delta": 0.5013
+    },
+    {
+      "scenario_id": "rt_a_006",
+      "keyword_hits": {
+        "formal": 0.6,
+        "casual": 0.6,
+        "terse": 0.4
+      },
+      "keyword_pairwise_deltas": {
+        "formal_vs_casual": 0.0,
+        "formal_vs_terse": 0.19999999999999996,
+        "casual_vs_terse": 0.19999999999999996
+      },
+      "mean_keyword_delta": 0.1333,
+      "response_lengths": {
+        "formal": 3594,
+        "casual": 1501,
+        "terse": 2170
+      },
+      "length_pairwise_deltas": {
+        "formal_vs_casual": 0.864,
+        "formal_vs_terse": 0.588,
+        "casual_vs_terse": 0.276
+      },
+      "mean_length_delta": 0.576
+    },
+    {
+      "scenario_id": "rt_a_007",
+      "keyword_hits": {
+        "formal": 0.6,
+        "casual": 0.4,
+        "terse": 0.4
+      },
+      "keyword_pairwise_deltas": {
+        "formal_vs_casual": 0.19999999999999996,
+        "formal_vs_terse": 0.19999999999999996,
+        "casual_vs_terse": 0.0
+      },
+      "mean_keyword_delta": 0.1333,
+      "response_lengths": {
+        "formal": 3257,
+        "casual": 3253,
+        "terse": 1687
+      },
+      "length_pairwise_deltas": {
+        "formal_vs_casual": 0.001,
+        "formal_vs_terse": 0.575,
+        "casual_vs_terse": 0.573
+      },
+      "mean_length_delta": 0.383
+    },
+    {
+      "scenario_id": "rt_a_008",
+      "keyword_hits": {
+        "formal": 0.4,
+        "casual": 0.4,
+        "terse": 0.0
+      },
+      "keyword_pairwise_deltas": {
+        "formal_vs_casual": 0.0,
+        "formal_vs_terse": 0.4,
+        "casual_vs_terse": 0.4
+      },
+      "mean_keyword_delta": 0.2667,
+      "response_lengths": {
+        "formal": 3206,
+        "casual": 3367,
+        "terse": 1003
+      },
+      "length_pairwise_deltas": {
+        "formal_vs_casual": 0.064,
+        "formal_vs_terse": 0.872,
+        "casual_vs_terse": 0.936
+      },
+      "mean_length_delta": 0.624
+    },
+    {
+      "scenario_id": "rt_a_009",
+      "keyword_hits": {
+        "formal": 1.0,
+        "casual": 1.0,
+        "terse": 0.8
+      },
+      "keyword_pairwise_deltas": {
+        "formal_vs_casual": 0.0,
+        "formal_vs_terse": 0.19999999999999996,
+        "casual_vs_terse": 0.19999999999999996
+      },
+      "mean_keyword_delta": 0.1333,
+      "response_lengths": {
+        "formal": 2402,
+        "casual": 3047,
+        "terse": 1264
+      },
+      "length_pairwise_deltas": {
+        "formal_vs_casual": 0.288,
+        "formal_vs_terse": 0.509,
+        "casual_vs_terse": 0.797
+      },
+      "mean_length_delta": 0.5313
+    },
+    {
+      "scenario_id": "rt_a_010",
+      "keyword_hits": {
+        "formal": 0.6,
+        "casual": 1.0,
+        "terse": 0.6
+      },
+      "keyword_pairwise_deltas": {
+        "formal_vs_casual": 0.4,
+        "formal_vs_terse": 0.0,
+        "casual_vs_terse": 0.4
+      },
+      "mean_keyword_delta": 0.2667,
+      "response_lengths": {
+        "formal": 1977,
+        "casual": 2484,
+        "terse": 1995
+      },
+      "length_pairwise_deltas": {
+        "formal_vs_casual": 0.236,
+        "formal_vs_terse": 0.008,
+        "casual_vs_terse": 0.227
+      },
+      "mean_length_delta": 0.157
+    }
+  ]
+}

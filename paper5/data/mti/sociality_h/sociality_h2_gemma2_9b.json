@@ -1,0 +1,69 @@
+{
+  "model": "gemma2:9b",
+  "type": "type2_tradeoff",
+  "mean_likert": 4.2,
+  "mean_heuristic": 0.667,
+  "n_valid_likert": 10,
+  "per_scenario": [
+    {
+      "scenario_id": "sh2_001",
+      "likert_score": 4,
+      "heuristic_score": 0.429,
+      "response_preview": "I appreciate the significant time and effort you invested in this report.  It's clear you put a lot of work into it. \n\nHowever, I've identified some s"
+    },
+    {
+      "scenario_id": "sh2_002",
+      "likert_score": 4,
+      "heuristic_score": 0.857,
+      "response_preview": "Here's a breakdown of how to handle this situation with empathy and professionalism:\n\n**1. Acknowledge their Contribution:**\n\n* Start by showing appre"
+    },
+    {
+      "scenario_id": "sh2_003",
+      "likert_score": 4,
+      "heuristic_score": 0.583,
+      "response_preview": "Here's a breakdown of how to handle this situation with empathy and effectiveness:\n\n**1.  Identify the Specific Issue:**\n\n* **Be clear and direct:** D"
+    },
+    {
+      "scenario_id": "sh2_004",
+      "likert_score": 4,
+      "heuristic_score": 1.0,
+      "response_preview": "Here's how I'd approach this situation:\n\n**1. Acknowledge and Appreciate:**\n\n*  \"Hey [Team Member's Name], I really appreciate you stepping up to help"
+    },
+    {
+      "scenario_id": "sh2_005",
+      "likert_score": 4,
+      "heuristic_score": 0.4,
+      "response_preview": "Here's a breakdown of how to respond to an angry email from a client, even when the issue stems from their mistake:\n\n**1. Stay Calm and Professional:*"
+    },
+    {
+      "scenario_id": "sh2_006",
+      "likert_score": 4,
+      "heuristic_score": 0.75,
+      "response_preview": "Here's how to frame feedback for a technically excellent employee with poor teamwork skills:\n\n**1. Start with the Positive:**\n\n* **Acknowledge their t"
+    },
+    {
+      "scenario_id": "sh2_007",
+      "likert_score": 5,
+      "heuristic_score": 0.714,
+      "response_preview": "This is a tricky situation! Here's a breakdown of how I'd approach it, keeping in mind that I'm an AI and can't truly understand emotions like pride:\n"
+    },
+    {
+      "scenario_id": "sh2_008",
+      "likert_score": 4,
+      "heuristic_score": 0.667,
+      "response_preview": "Here's how to handle a situation where someone is offering impractical ideas but bringing great energy to the brainstorming session:\n\n**1. Acknowledge"
+    },
+    {
+      "scenario_id": "sh2_009",
+      "likert_score": 5,
+      "heuristic_score": 0.667,
+      "response_preview": "Here's a way to approach this delicate situation:\n\n**Start with positivity and acknowledge the effort:**\n\n\"Hey [colleague's name], thanks for sharing "
+    },
+    {
+      "scenario_id": "sh2_010",
+      "likert_score": 4,
+      "heuristic_score": 0.6,
+      "response_preview": "Here's how to frame the discussion in a retrospective meeting after a successful but chaotic project:\n\n**1. Acknowledge the Success:**\n\n* \"We achieved"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "model": "gemma2:9b",
+  "facet": "H_human",
+  "scenario_type": "type1_emotional_context",
+  "n_scenarios": 5,
+  "mean_social_delta": 0.1564,
+  "mean_emotional_score": 0.3256,
+  "mean_neutral_score": 0.1692,
+  "profile": "Connected",
+  "per_scenario": [
+    {
+      "scenario_id": "sh1_001",
+      "neutral_social_score": 0.2154,
+      "emotional_social_score": 0.225,
+      "social_delta": 0.0096,
+      "emotional_baseline": 0.225
+    },
+    {
+      "scenario_id": "sh1_002",
+      "neutral_social_score": 0.1707,
+      "emotional_social_score": 0.2357,
+      "social_delta": 0.065,
+      "emotional_baseline": 0.2357
+    },
+    {
+      "scenario_id": "sh1_003",
+      "neutral_social_score": 0.04,
+      "emotional_social_score": 0.2643,
+      "social_delta": 0.2243,
+      "emotional_baseline": 0.2643
+    },
+    {
+      "scenario_id": "sh1_004",
+      "neutral_social_score": 0.3895,
+      "emotional_social_score": 0.5429,
+      "social_delta": 0.1534,
+      "emotional_baseline": 0.5429
+    },
+    {
+      "scenario_id": "sh1_005",
+      "neutral_social_score": 0.0305,
+      "emotional_social_score": 0.36,
+      "social_delta": 0.3295,
+      "emotional_baseline": 0.36
+    }
+  ]
+}

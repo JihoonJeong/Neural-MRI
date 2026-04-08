@@ -1,0 +1,84 @@
+{
+  "model": "llama3.1:8b-text-q4_K_M",
+  "condition": "A_overload",
+  "n_scenarios": 5,
+  "n_valid": 3,
+  "n_excluded": 2,
+  "mean_pm": 0.1667,
+  "dominant_failure_mode": "Collapsed",
+  "profile": "Brittle",
+  "per_scenario": [
+    {
+      "scenario_id": "ra_001",
+      "excluded": true,
+      "reason": "baseline_too_low",
+      "baseline_score": 0.0
+    },
+    {
+      "scenario_id": "ra_002",
+      "excluded": false,
+      "level_scores": {
+        "L0": 1.0,
+        "L1": 1.0,
+        "L2": 0.0,
+        "L3": 0.0,
+        "L4": 0.0
+      },
+      "level_lengths": {
+        "L0": 284,
+        "L1": 422,
+        "L2": 0,
+        "L3": 0,
+        "L4": 0
+      },
+      "pm": 0.25,
+      "failure_mode": "Collapsed"
+    },
+    {
+      "scenario_id": "ra_003",
+      "excluded": true,
+      "reason": "baseline_too_low",
+      "baseline_score": 0.4
+    },
+    {
+      "scenario_id": "ra_004",
+      "excluded": false,
+      "level_scores": {
+        "L0": 1.0,
+        "L1": 1.0,
+        "L2": 0.0,
+        "L3": 0.0,
+        "L4": 0.0
+      },
+      "level_lengths": {
+        "L0": 432,
+        "L1": 303,
+        "L2": 0,
+        "L3": 0,
+        "L4": 0
+      },
+      "pm": 0.25,
+      "failure_mode": "Collapsed"
+    },
+    {
+      "scenario_id": "ra_005",
+      "excluded": false,
+      "level_scores": {
+        "L0": 0.7,
+        "L1": 0.0,
+        "L2": 0.0,
+        "L3": 0.0,
+        "L4": 0.0
+      },
+      "level_lengths": {
+        "L0": 421,
+        "L1": 0,
+        "L2": 0,
+        "L3": 0,
+        "L4": 0
+      },
+      "pm": 0.0,
+      "failure_mode": "Collapsed"
+    }
+  ]
+}

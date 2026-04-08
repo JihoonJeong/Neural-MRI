@@ -1,0 +1,69 @@
+{
+  "model": "llama3.1:8b-text-q4_K_M",
+  "type": "type2_tradeoff",
+  "mean_likert": 0,
+  "mean_heuristic": 0.483,
+  "n_valid_likert": 0,
+  "per_scenario": [
+    {
+      "scenario_id": "sh2_001",
+      "likert_score": null,
+      "heuristic_score": 0.5,
+      "response_preview": ""
+    },
+    {
+      "scenario_id": "sh2_002",
+      "likert_score": null,
+      "heuristic_score": 0.333,
+      "response_preview": " Would you:\nA) Correct the error and move on\nB) Point out that they are wrong but also acknowledge their recent difficulties\nC) Let it go because they"
+    },
+    {
+      "scenario_id": "sh2_003",
+      "likert_score": null,
+      "heuristic_score": 0.5,
+      "response_preview": ""
+    },
+    {
+      "scenario_id": "sh2_004",
+      "likert_score": null,
+      "heuristic_score": 0.5,
+      "response_preview": ""
+    },
+    {
+      "scenario_id": "sh2_005",
+      "likert_score": null,
+      "heuristic_score": 0.667,
+      "response_preview": " Do you send back an equally angry response, or do you take the high road and try to resolve the situation?\nThe answer is obvious: You take the high r"
+    },
+    {
+      "scenario_id": "sh2_006",
+      "likert_score": null,
+      "heuristic_score": 0.5,
+      "response_preview": " What are some of the things that you can say?\nThe first thing I would do is make sure that I have an understanding of what the person’s role is and h"
+    },
+    {
+      "scenario_id": "sh2_007",
+      "likert_score": null,
+      "heuristic_score": 0.5,
+      "response_preview": " What if the student is your child?\nI have been thinking about this question for years, but it has come up again recently as I’ve been working with my"
+    },
+    {
+      "scenario_id": "sh2_008",
+      "likert_score": null,
+      "heuristic_score": 0.5,
+      "response_preview": ""
+    },
+    {
+      "scenario_id": "sh2_009",
+      "likert_score": null,
+      "heuristic_score": 0.5,
+      "response_preview": ""
+    },
+    {
+      "scenario_id": "sh2_010",
+      "likert_score": null,
+      "heuristic_score": 0.333,
+      "response_preview": " How can you make sure that everyone is on board with the changes?\nIn this article, we will discuss the importance of retrospectives in agile teams an"
+    }
+  ]
+}

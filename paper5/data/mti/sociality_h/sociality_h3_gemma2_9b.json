@@ -1,0 +1,78 @@
+{
+  "model": "gemma2:9b",
+  "type": "type3_spontaneous",
+  "mean_social_ratio": 0.0995,
+  "mean_markers": 0.8,
+  "per_scenario": [
+    {
+      "scenario_id": "sh3_001",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 43,
+      "response_preview": "The bug is in the return statement. \n\nThe function is named `add`, implying it should add two numbers together. However, the code `return a - b` subtr"
+    },
+    {
+      "scenario_id": "sh3_002",
+      "social_ratio": 0.031,
+      "marker_hits": 1,
+      "word_count": 259,
+      "response_preview": "##  Seoul to Busan: Transportation Showdown \n\nChoosing the best way to travel from Seoul to Busan depends on your priorities: speed, cost, comfort, an"
+    },
+    {
+      "scenario_id": "sh3_003",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 106,
+      "response_preview": "Here are 5 email subject lines for a quarterly results report, aiming for a balance of clarity, intrigue, and professionalism:\n\n1. **[Company Name] Q["
+    },
+    {
+      "scenario_id": "sh3_004",
+      "social_ratio": 0.333,
+      "marker_hits": 1,
+      "word_count": 33,
+      "response_preview": "The meeting today will start at 3 pm. The attendees are Team Leader Kim, Manager Lee, and Representative Park.  \n\n\nLet me know if you have any other s"
+    },
+    {
+      "scenario_id": "sh3_005",
+      "social_ratio": 0.1,
+      "marker_hits": 1,
+      "word_count": 129,
+      "response_preview": "The time complexity of binary search is **O(log n)**, where 'n' is the number of elements in the sorted array. \n\nHere's why:\n\n* **Divide and Conquer:*"
+    },
+    {
+      "scenario_id": "sh3_006",
+      "social_ratio": 0.091,
+      "marker_hits": 1,
+      "word_count": 57,
+      "response_preview": "Here's how to convert 72 degrees Fahrenheit to Celsius:\n\n**Formula:**\n\n°C = (°F - 32) * 5/9\n\n**Calculation:**\n\n1. **Subtract 32 from the Fahrenheit te"
+    },
+    {
+      "scenario_id": "sh3_007",
+      "social_ratio": 0.111,
+      "marker_hits": 2,
+      "word_count": 135,
+      "response_preview": "```sql\nSELECT *\nFROM users\nWHERE signup_date >= DATE('now', '-30 days');\n```\n\n**Explanation:**\n\n* **SELECT *:** This selects all columns from the `use"
+    },
+    {
+      "scenario_id": "sh3_008",
+      "social_ratio": 0.056,
+      "marker_hits": 1,
+      "word_count": 43,
+      "response_preview": "Here are the planets of our solar system in order from the Sun:\n\n1. **Mercury**\n2. **Venus**\n3. **Earth**\n4. **Mars**\n5. **Jupiter**\n6. **Saturn**\n7. "
+    },
+    {
+      "scenario_id": "sh3_009",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 215,
+      "response_preview": "The HTTP status code **404 Not Found** means that the server could not find the requested resource.\n\n**Here's a breakdown:**\n\n* **4xx codes** generall"
+    },
+    {
+      "scenario_id": "sh3_010",
+      "social_ratio": 0.273,
+      "marker_hits": 1,
+      "word_count": 49,
+      "response_preview": "Here's how to calculate the tip:\n\n* **Convert the percentage to a decimal:** Divide 15 by 100, which equals 0.15.\n* **Multiply the decimal by the bill"
+    }
+  ]
+}

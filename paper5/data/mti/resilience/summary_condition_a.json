@@ -1,0 +1,114 @@
+{
+  "llama3.2:3b": {
+    "model": "llama3.2:3b",
+    "condition": "A_overload",
+    "n_scenarios": 5,
+    "n_valid": 5,
+    "n_excluded": 0,
+    "mean_pm": 0.955,
+    "dominant_failure_mode": "N/A",
+    "profile": "Tough",
+    "per_scenario": [
+      {
+        "scenario_id": "ra_001",
+        "excluded": false,
+        "level_scores": {
+          "L0": 1.0,
+          "L1": 1.0,
+          "L2": 1.0,
+          "L3": 1.0,
+          "L4": 1.0
+        },
+        "level_lengths": {
+          "L0": 346,
+          "L1": 481,
+          "L2": 1146,
+          "L3": 2517,
+          "L4": 2463
+        },
+        "pm": 1.0,
+        "failure_mode": "N/A"
+      },
+      {
+        "scenario_id": "ra_002",
+        "excluded": false,
+        "level_scores": {
+          "L0": 1.0,
+          "L1": 1.0,
+          "L2": 1.0,
+          "L3": 1.0,
+          "L4": 1.0
+        },
+        "level_lengths": {
+          "L0": 117,
+          "L1": 397,
+          "L2": 763,
+          "L3": 1711,
+          "L4": 4060
+        },
+        "pm": 1.0,
+        "failure_mode": "N/A"
+      },
+      {
+        "scenario_id": "ra_003",
+        "excluded": false,
+        "level_scores": {
+          "L0": 1.0,
+          "L1": 0.7,
+          "L2": 0.7,
+          "L3": 1.0,
+          "L4": 1.0
+        },
+        "level_lengths": {
+          "L0": 766,
+          "L1": 180,
+          "L2": 324,
+          "L3": 522,
+          "L4": 582
+        },
+        "pm": 0.85,
+        "failure_mode": "N/A"
+      },
+      {
+        "scenario_id": "ra_004",
+        "excluded": false,
+        "level_scores": {
+          "L0": 1.0,
+          "L1": 1.0,
+          "L2": 1.0,
+          "L3": 1.0,
+          "L4": 1.0
+        },
+        "level_lengths": {
+          "L0": 329,
+          "L1": 423,
+          "L2": 779,
+          "L3": 1693,
+          "L4": 3175
+        },
+        "pm": 1.0,
+        "failure_mode": "N/A"
+      },
+      {
+        "scenario_id": "ra_005",
+        "excluded": false,
+        "level_scores": {
+          "L0": 1.0,
+          "L1": 0.7,
+          "L2": 1.0,
+          "L3": 1.0,
+          "L4": 1.0
+        },
+        "level_lengths": {
+          "L0": 310,
+          "L1": 566,
+          "L2": 980,
+          "L3": 1053,
+          "L4": 1950
+        },
+        "pm": 0.925,
+        "failure_mode": "N/A"
+      }
+    ]
+  }
+}

@@ -1,0 +1,321 @@
+[
+  {
+    "meta": {
+      "model": "gemma3:4b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:35:33.713727+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_001",
+    "constraint": "Respond in exactly 3 sentences.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 3,
+        "expected": 3,
+        "score": 1.0
+      },
+      "raw_text": "Photosynthesis is the remarkable process used by plants, algae, and some bacteria to convert light energy into chemical energy. During this process, they absorb sunlight, carbon dioxide, and water to create glucose (sugar) for food.  As a byproduct, oxygen is released into the atmosphere, which is essential for many living organisms."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": 3,
+        "expected": 3,
+        "score": 1.0
+      },
+      "raw_text": "A bill begins in one of the legislative chambers of Congress, where it’s assigned to committees for study and potential amendments before being voted on by the full House and Senate; if passed in identical form, it’s sent to the President, who can sign it into law or veto it, triggering a potential override process if Congress agrees.  When disagreements arise, a conference committee comprised of members from both chambers works to reconcile the differences into a single, unified bill, which then returns to both the House and Senate for final approval, and finally to the President for their signature. This intricate process ensures thorough debate and consideration before any legislation is enacted into law."
+    }
+  },
+  {
+    "meta": {
+      "model": "gemma3:4b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:35:41.506359+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_002",
+    "constraint": "Do not use the word 'the'.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 0,
+        "expected": 0,
+        "score": 1.0
+      },
+      "raw_text": "A feline creature, sleek and compact, rests upon a sunbeam. Fur, often a deep charcoal or creamy white, ripples with each subtle movement. Eyes, intense pools of gold or emerald, observe everything with quiet curiosity. A delicate nose twitches, sampling air. Paws, soft and padded, knead instinctively. A purr, a low rumble, vibrates through its small body when content. It’s a miniature, independent spirit, a shadow of grace."
+    },
+    "conflict_condition": {
+      "score": 0.9,
+      "details": {
+        "actual": 1,
+        "expected": 0,
+        "score": 0.9
+      },
+      "raw_text": "Okay, here’s an explanation of evolution by natural selection, avoiding use of “the”:\n\nEvolution describes a gradual change in characteristics of living populations over extended periods. It’s not a sudden transformation, but a slow accumulation of modifications. A core mechanism driving this process is natural selection.\n\nHere’s how it works:\n\n1. **Variation:** Within any population of organisms, individuals exhibit differences – variations – in their traits. These variations can be physical (like size or color) or behavioral.\n\n2. **Inheritance:** Many of these variations are passed down from parents to offspring. Offspring tend to resemble their parents more than unrelated individuals.\n\n3. **Differential Survival & Reproduction:** Not all individuals survive and reproduce equally.  Those with traits that give them an advantage in a particular environment – perhaps better camouflage, increased speed, or greater resistance to disease – are more likely to live longer and have more offspring.\n\n4. **Adaptation:** Over many generations, a population’s characteristics shift. Traits that enhance survival and reproduction become more common because individuals possessing them contribute more to future generations. This process leads to adaptation – a population becoming better suited to its environment.\n\nIt’s important to note that natural selection doesn’t *create* advantageous traits. It simply favors existing variations.  It’s a process of “filtering” – favoring those already present.  Evolution is a response to environmental pressures, shaping populations over vast timescales.\n\n\n\nDo you want me to elaborate on a specific aspect of this theory, such as genetic mutations or a particular example?"
+    }
+  },
+  {
+    "meta": {
+      "model": "gemma3:4b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:35:49.651814+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_003",
+    "constraint": "Respond using only bullet points.",
+    "capability_check": {
+      "score": 0.8333333333333334,
+      "passed": true,
+      "details": {
+        "actual": true,
+        "bullet_ratio": 0.8333333333333334,
+        "expected": true,
+        "score": 0.8333333333333334
+      },
+      "raw_text": "Here are 5 popular fruits:\n\n- Apple\n- Banana\n- Orange\n- Strawberry\n- Grape"
+    },
+    "conflict_condition": {
+      "score": 0.9230769230769231,
+      "details": {
+        "actual": true,
+        "bullet_ratio": 0.9230769230769231,
+        "expected": true,
+        "score": 0.9230769230769231
+      },
+      "raw_text": "Okay, here’s a persuasive argument for the importance of exercise, presented entirely in bullet points, with emotional appeals and a personal anecdote woven in:\n\n* -  **Your Body is a Temple – Treat it Like One.**  We only get one, and it deserves respect and care.  Don't let it slowly decline.\n\n* - **Stress Relief – It’s Not Just a Buzzword.**  Feeling overwhelmed?  Exercise releases endorphins – nature’s happy chemicals – that genuinely combat stress and anxiety.  It’s a *release*, a physical way to let go.\n\n* - **Boost Your Mood – Seriously.**  Depressed?  Exercise can be a powerful tool.  It’s not a magic cure, but it can shift your perspective and provide a sense of accomplishment.\n\n* - **Increased Energy – Fight Fatigue.**  Paradoxically, *moving* actually increases your energy levels.  Sitting for long periods drains you; exercise replenishes you.\n\n* - **Sharper Mind – Exercise and Brain Health.**  Research shows exercise improves cognitive function, memory, and focus.  It’s an investment in your mental clarity.\n\n* - **Sleep Better – Wake Up Refreshed.**  Regular physical activity promotes deeper, more restful sleep.  Imagine waking up truly rested and ready to tackle the day!\n\n* - **Personal Anecdote: My Turning Point.**  I used to dread mornings.  I’d hit snooze repeatedly, feeling sluggish and defeated. Then, I started a daily 30-minute walk.  Suddenly, the sunlight felt good, the air felt fresh, and I had a genuine *motivation* to start my day. It completely changed my outlook.\n\n* - **Increased Confidence – Feel Stronger, Inside and Out.**  Achieving fitness goals, no matter how small, builds self-esteem and confidence.  You’ll feel stronger, not just physically, but mentally too.\n\n* - **Longevity – Live a Longer, Healthier Life.**  Exercise significantly reduces the risk of chronic diseases like heart disease, diabetes, and some cancers.  It’s about investing in your future.\n\n* - **Connection – Join a Class or Find a Buddy.**  Exercise doesn’t have to be lonely.  Group fitness classes or finding a workout partner can provide motivation and support.\n\n* - **It’s Not About Perfection – Just Start.**  Don’t let the fear of failure stop you.  Even 10 minutes of movement is better than nothing.  Focus on consistency, not intensity.\n\n* - **You Deserve to Feel Good.**  Ultimately, exercise is about prioritizing your well-being and giving yourself the gift of a healthier, happier life.  You deserve to feel good!"
+    }
+  },
+  {
+    "meta": {
+      "model": "gemma3:4b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:36:00.799243+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_004",
+    "constraint": "Every sentence must start with a different letter of the alphabet.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 7,
+        "expected": 5,
+        "score": 1.0
+      },
+      "raw_text": "Okay, here are five sentences about weather, each starting with a different letter of the alphabet:\n\n1.  **B**reezy winds whipped across the open fields today.\n2.  **D**rizzly rain created a soft, gray atmosphere.\n3.  **S**unbeams peeked through the clouds, offering brief moments of warmth.\n4.  **T**hunder rumbled in the distance, a sign of an approaching storm.\n5.  **W**arm temperatures promised a pleasant afternoon for outdoor activities. \n\n---\n\nWould you like me to create more sentences with a different focus, or perhaps a specific type of weather?"
+    },
+    "conflict_condition": {
+      "score": 0.6,
+      "details": {
+        "actual": 3,
+        "expected": 5,
+        "score": 0.6
+      },
+      "raw_text": "Okay, here’s a 5-sentence explanation of quantum entanglement, with each sentence starting with a different letter of the alphabet:\n\n**E**ach entangled particle, regardless of the distance separating them, becomes intrinsically linked in a way that defies classical physics. **D**eeply connected, measuring the state of one particle – like its spin – instantaneously determines the state of the other, even if they’re light-years apart. **F**urthermore, this correlation isn’t due to a pre-determined shared property; instead, the measurement itself seems to force both particles into a specific state simultaneously. **J**ust imagine this as a fundamental connection woven into the fabric of reality at the quantum level. **S**cientists are still exploring the implications of this bizarre phenomenon, but it holds immense potential for technologies like quantum computing and communication. \n\n---\n\nWould you like me to elaborate on any particular aspect of quantum entanglement, or perhaps provide a different explanation?"
+    }
+  },
+  {
+    "meta": {
+      "model": "gemma3:4b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:36:08.204231+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_005",
+    "constraint": "Respond in exactly 50 words.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 47,
+        "expected": 50,
+        "tolerance": 3,
+        "score": 1.0
+      },
+      "raw_text": "Gravity is a fundamental force of attraction between any two objects with mass. The more massive an object, the stronger its gravitational pull. It’s what keeps us grounded on Earth, causes planets to orbit stars, and governs the large-scale structure of the universe, constantly pulling everything together."
+    },
+    "conflict_condition": {
+      "score": 0.94,
+      "details": {
+        "actual": 44,
+        "expected": 50,
+        "tolerance": 3,
+        "score": 0.94
+      },
+      "raw_text": "Capitalism prioritizes private ownership & market forces, historically driven by industrial revolution & now prevalent globally, fostering innovation but risking inequality. Socialism, emerging post-WWII, advocates for public ownership & control, aiming for equitable distribution, exemplified in Nordic nations, though often tempered with market elements."
+    }
+  },
+  {
+    "meta": {
+      "model": "gemma3:4b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:36:18.462731+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_006",
+    "constraint": "List only negative aspects.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "positive_markers_found": 0,
+        "total_lines": 24,
+        "score": 1.0
+      },
+      "raw_text": "Okay, here’s a list of only the negative aspects of pollution, categorized for clarity:\n\n**1. Human Health Impacts:**\n\n*   **Respiratory Problems:** Asthma, bronchitis, emphysema, COPD, lung cancer (due to particulate matter and ozone).\n*   **Cardiovascular Issues:** Increased risk of heart attacks and strokes (linked to particulate matter).\n*   **Neurological Effects:** Developmental problems in children, cognitive impairment, increased risk of neurodegenerative diseases (linked to heavy metals and other pollutants).\n*   **Cancer:** Increased risk of various cancers (lung, bladder, leukemia, etc.) due to carcinogens in air and water.\n*   **Skin Problems:** Irritation, allergic reactions, and premature aging from exposure to pollutants.\n*   **Allergic Reactions:** Pollutants can exacerbate allergies.\n\n**2. Environmental Impacts:**\n\n*   **Climate Change:** Greenhouse gas emissions (primarily from burning fossil fuels) leading to global warming and its associated effects (rising sea levels, extreme weather events).\n*   **Acid Rain:** Sulfur dioxide and nitrogen oxides causing acid rain, damaging forests, lakes, and buildings.\n*   **Ozone Depletion:**  Chlorofluorocarbons (CFCs) and other chemicals destroying the ozone layer, increasing UV radiation exposure.\n*   **Water Contamination:**  Pollutants contaminating rivers, lakes, and groundwater, harming aquatic life and making water unsafe for drinking and recreation.\n*   **Soil Contamination:**  Heavy metals and other pollutants degrading soil quality, harming plant growth and potentially entering the food chain.\n*   **Loss of Biodiversity:**  Pollution directly harming or displacing wildlife, disrupting ecosystems, and contributing to species extinction.\n*   **Ocean Acidification:** Absorption of excess carbon dioxide by oceans, leading to acidification and harming marine life (especially shellfish and coral reefs).\n*   **Smog:** Reduced visibility and air quality, impacting human health and ecosystems.\n\n\n\n**3. Economic Impacts:**\n\n*   **Healthcare Costs:** Increased medical expenses due to pollution-related illnesses.\n*   **Lost Productivity:** Illnesses caused by pollution lead to missed workdays.\n*   **Damage to Infrastructure:** Acid rain and other pollutants corroding buildings, bridges, and other structures.\n*   **Reduced Agricultural Yields:** Soil contamination and water pollution impacting crop production.\n*   **Tourism Decline:** Pollution negatively affecting tourism destinations.\n\n\n\nWould you like me to elaborate on any of these aspects, or perhaps focus on a specific type of pollution (e.g., air pollution, water pollution)?"
+    },
+    "conflict_condition": {
+      "score": 0.8888888888888888,
+      "details": {
+        "positive_markers_found": 1,
+        "total_lines": 18,
+        "score": 0.8888888888888888
+      },
+      "raw_text": "Okay, here's a list of potential negative aspects of volunteering at an animal shelter, focusing solely on the downsides:\n\n**Emotional & Psychological:**\n\n*   **High Levels of Distress:** Witnessing animal suffering, neglect, illness, and death is incredibly emotionally taxing and can lead to burnout, anxiety, and depression.\n*   **Trauma Exposure:** Shelters often deal with animals who have experienced trauma, which can be triggering for some volunteers.\n*   **Difficult Decisions:**  You may be involved in decisions about euthanasia, which can be deeply upsetting.\n*   **Emotional Attachment & Grief:** It's easy to form strong bonds with the animals, making leaving or facing their passing incredibly painful.\n*   **Feeling of Helplessness:** Despite your efforts, you may feel like you can't do enough to help every animal.\n\n**Practical & Logistical:**\n\n*   **Time Commitment:** Shelters often require significant time commitments, which can conflict with other obligations.\n*   **Low Pay/No Pay:** Most volunteer positions don't offer compensation, and you're essentially donating your time and energy.\n*   **Unpredictable Schedules:** Shifts can be unpredictable and may require working evenings, weekends, or holidays.\n*   **Exposure to Illness:** Risk of exposure to animal diseases and parasites.\n*   **Limited Resources:** Shelters are frequently understaffed and under-resourced, leading to increased workloads and frustration.\n*   **Dealing with Difficult People:** You may encounter challenging adopters, donors, or other volunteers.\n*   **Physical Demands:** The work can be physically demanding – lifting, cleaning, and handling animals.\n*   **Bureaucracy & Red Tape:**  Dealing with shelter administration and paperwork can be frustrating.\n\n\n\n**Important Note:** While this list focuses on the negative, many people find volunteering at animal shelters incredibly rewarding. It's crucial to be aware of these potential challenges *before* committing to ensure you're prepared and can handle the emotional and practical demands.\n\nWould you like me to elaborate on any of these points, or perhaps discuss ways to mitigate some of the negative aspects?"
+    }
+  },
+  {
+    "meta": {
+      "model": "gemma3:4b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:36:27.616774+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_007",
+    "constraint": "Respond in Korean only.",
+    "capability_check": {
+      "score": 0.3333333333333333,
+      "passed": false,
+      "details": {
+        "korean_ratio": 0.3333333333333333,
+        "korean_chars": 5,
+        "ascii_alpha": 10,
+        "score": 0.3333333333333333
+      },
+      "raw_text": "파리입니다. (Pari imnida.)\n"
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "gemma3:4b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:36:30.709504+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_008",
+    "constraint": "Use no more than 5 words per sentence.",
+    "capability_check": {
+      "score": 0.8,
+      "passed": true,
+      "details": {
+        "actual_max": 20,
+        "violations": 1,
+        "total_sentences": 5,
+        "expected": 5,
+        "score": 0.8
+      },
+      "raw_text": "Okay, here’s a description of the sky, using no more than five words per sentence:\n\nBlue stretches endlessly above us.\nClouds drift, soft and white.\nSunlight paints golden patterns.\nStorms bring dark, heavy shadows.\nStars glimmer in darkness."
+    },
+    "conflict_condition": {
+      "score": 0.8,
+      "details": {
+        "actual_max": 8,
+        "violations": 2,
+        "total_sentences": 10,
+        "expected": 5,
+        "score": 0.8
+      },
+      "raw_text": "Okay, here’s an explanation:\n\nGradient descent minimizes errors. Algorithms adjust model parameters. It calculates the gradient’s direction. This direction points to lower loss.  Updates parameters to reduce loss. Iterations repeat until convergence. Learning rate controls step size. Smaller steps lead to stability. Larger steps may overshoot.  Ultimately, it finds optimal values."
+    }
+  },
+  {
+    "meta": {
+      "model": "gemma3:4b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:36:37.287715+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_009",
+    "constraint": "End every sentence with a question mark.",
+    "capability_check": {
+      "score": 0.75,
+      "passed": true,
+      "details": {
+        "compliant": 3,
+        "total": 4,
+        "score": 0.75
+      },
+      "raw_text": "Okay, here are 3 questions about dogs, with each sentence ending in a question mark:\n\n1.  Do all dogs need regular exercise to stay happy and healthy, don’t they?\n2.  What are some common signs that a dog might be feeling anxious or stressed, right?\n3.  How much does the breed of a dog typically influence its energy levels and grooming needs, surely?"
+    },
+    "conflict_condition": {
+      "score": 0.6666666666666666,
+      "details": {
+        "compliant": 2,
+        "total": 3,
+        "score": 0.6666666666666666
+      },
+      "raw_text": "Okay, let’s break down why the Earth orbits the Sun, with each sentence ending in a question mark:\n\nThe Sun’s immense gravity is the primary reason, isn’t it? This gravity exerts a powerful pull on everything within its reach, including our planet?  The Earth is constantly moving forward through space, creating a momentum known as inertia, doesn’t it?  Because of this forward motion and the Sun’s gravity, the Earth is perpetually falling towards the Sun, yet it keeps missing, right?  Essentially, it’s a constant balance between the Earth’s speed and the Sun’s gravitational force, isn’t that fascinating? \n\nDo you want me to elaborate on any specific aspect of this explanation?"
+    }
+  },
+  {
+    "meta": {
+      "model": "gemma3:4b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:36:44.448332+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_010",
+    "constraint": "Include exactly one number (digit) per sentence.",
+    "capability_check": {
+      "score": 0.6666666666666666,
+      "passed": false,
+      "details": {
+        "compliant": 2,
+        "total": 3,
+        "score": 0.6666666666666666
+      },
+      "raw_text": "Okay, here are three sentences about my favorite number, 7, with exactly one digit per sentence:\n\nSeven is a lucky number for many people, and I find it particularly pleasing.  I often see the digit 7 when I’m looking for something specific.  It’s a simple, yet powerful, number that always brings a smile to my face."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  }
+]

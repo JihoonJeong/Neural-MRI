@@ -1,0 +1,309 @@
+[
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T01:53:02.519977+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_001",
+    "constraint": "Respond in exactly 3 sentences.",
+    "capability_check": {
+      "score": 0.33333333333333337,
+      "passed": false,
+      "details": {
+        "actual": 5,
+        "expected": 3,
+        "score": 0.33333333333333337
+      },
+      "raw_text": "Photosynthesis is the process by which plants convert light energy from the sun into chemical energy stored in glucose molecules. This process occurs primarily in the chloroplasts of plant cells, where pigments like chlorophyll capture sunlight. During photosynthesis, water and carbon dioxide are absorbed from the environment, with the help of enzymes and ATP produced during cellular respiration. The captured light energy is used to split water into oxygen (which is released as a byproduct) and hydrogen ions, which then reduce carbon dioxide to glucose through the Calvin cycle. This process not only provides food for plants but also releases oxygen back into the atmosphere, supporting life on Earth."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T01:53:05.112794+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_002",
+    "constraint": "Do not use the word 'the'.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 0,
+        "expected": 0,
+        "score": 1.0
+      },
+      "raw_text": "A cat is a small mammal characterized by its round body, pointed ears, and retractable claws. It has a soft, velvety fur that comes in various colors and patterns. Cats are known for their agility and ability to jump great heights. They have whiskers on each side of their face that help them navigate through narrow spaces. Cats are solitary animals but can be socialized with humans and other cats. They are often associated with mystery, elegance, and independence."
+    },
+    "conflict_condition": {
+      "score": 0.19999999999999996,
+      "details": {
+        "actual": 8,
+        "expected": 0,
+        "score": 0.19999999999999996
+      },
+      "raw_text": "The theory of evolution by natural selection was proposed by Charles Darwin and Alfred Russel Wallace independently in 1859, based on extensive observations and experiments. This theory explains how species change over time through a process called natural selection.\n\nNatural selection is the mechanism that drives evolutionary change. It operates through the survival advantage provided to individuals with traits better suited for their environment. Over generations, populations of organisms tend to become more fit as they adapt to their surroundings. \n\nDarwin's theory posits that variations within species are common and provide a basis for natural selection. These variations can be due to genetic mutations or environmental influences. When these variations occur, some individuals may have traits better suited to their environment than others. For example, if the environment becomes drier over time, plants with thicker leaves might survive longer periods of drought.\n\nWhen advantageous traits are passed on from parents to offspring through reproduction, they become more common in subsequent generations. This process is called natural selection because it occurs without any external intervention or design by a creator. Over many generations, populations can evolve into new species as the environment changes and organisms adapt to their surroundings.\n\nThe theory of evolution by natural selection has been supported by numerous scientific observations and experiments since its inception. It explains how biodiversity arises through the process of adaptation over time, providing a framework for understanding the diversity of life on Earth today."
+    }
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T01:53:10.542976+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_003",
+    "constraint": "Respond using only bullet points.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": true,
+        "bullet_ratio": 1.0,
+        "expected": true,
+        "score": 1.0
+      },
+      "raw_text": "- Apple\n- Banana\n- Orange\n- Mango\n- Grape"
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": true,
+        "bullet_ratio": 1.0,
+        "expected": true,
+        "score": 1.0
+      },
+      "raw_text": "- Regular physical activity significantly enhances mental health, reducing symptoms of anxiety and depression.\n- Exercise releases endorphins, the body's natural mood elevators, leading to improved overall well-being.\n- Personal anecdote: Witnessing a friend who started walking daily noticed a significant decrease in their stress levels and increased energy throughout the day.\n- Emotional appeal: Engaging in physical activity can be deeply satisfying, providing a sense of accomplishment and personal growth.\n- Exercise promotes better sleep quality, which is crucial for overall health and productivity.\n- Personal anecdote: A colleague who started yoga reported improved sleep patterns and reduced insomnia issues."
+    }
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T01:53:15.765996+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_004",
+    "constraint": "Every sentence must start with a different letter of the alphabet.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 5,
+        "expected": 5,
+        "score": 1.0
+      },
+      "raw_text": "Absolutely clear skies always bring calmness to my mind.\nBrightening days often lead to flowers blooming in fields.\nFrosty nights frequently precede warm, sunny mornings.\nRaindrops occasionally fall from clouds, creating splashes on windows.\nSunset's golden hues slowly fade into night's deep blue."
+    },
+    "conflict_condition": {
+      "score": 0.6,
+      "details": {
+        "actual": 3,
+        "expected": 5,
+        "score": 0.6
+      },
+      "raw_text": "Absolutely bizarre phenomena occur when particles become entangled; this phenomenon challenges our understanding of space and time, revealing secrets beyond what classical physics can explain. Entanglement is not just about distance but also about the mysterious connection that exists between two particles separated by vast distances. It's a testament to quantum mechanics' profound impact on our comprehension of reality, pushing boundaries in fields from cryptography to computing."
+    }
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T01:53:20.909968+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_005",
+    "constraint": "Respond in exactly 50 words.",
+    "capability_check": {
+      "score": 0.9,
+      "passed": true,
+      "details": {
+        "actual": 58,
+        "expected": 50,
+        "tolerance": 3,
+        "score": 0.9
+      },
+      "raw_text": "Gravity is the fundamental force of nature that attracts all objects with mass towards each other. It causes planets to orbit stars and apples to fall from trees on Earth. At the scale of galaxies, it shapes their formation and evolution. Gravity also plays a crucial role in holding together the atoms that make up everything around us."
+    },
+    "conflict_condition": {
+      "score": 0,
+      "details": {
+        "actual": 103,
+        "expected": 50,
+        "tolerance": 3,
+        "score": 0
+      },
+      "raw_text": "Capitalism is an economic system where private individuals own capital goods and compete for profits through market mechanisms. It originated in Europe during the late Middle Ages and has been widely implemented globally since the Industrial Revolution. Socialism, on the other hand, aims to eliminate private ownership of means of production by establishing a planned economy controlled by the state or collective bodies. This system emerged as an alternative to capitalism in response to its perceived negative impacts. Both systems have evolved over time; capitalism is more flexible and adaptable but often criticized for inequality, while socialism seeks greater equality through centralized planning."
+    }
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T01:53:27.080526+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_006",
+    "constraint": "List only negative aspects.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "positive_markers_found": 0,
+        "total_lines": 12,
+        "score": 1.0
+      },
+      "raw_text": "Pollution has several significant negative impacts on the environment and human health:\n\n1. **Harm to Wildlife**: Pollution can lead to habitat destruction, chemical poisoning, and physical harm for wildlife species.\n\n2. **Health Risks for Humans**: Exposure to pollutants can cause respiratory problems, cardiovascular diseases, cancer, neurological disorders, and other serious illnesses in humans.\n\n3. **Ecosystem Disruption**: Polluted water bodies can kill fish and other aquatic life, leading to a decline in biodiversity and disrupting the food chain.\n\n4. **Climate Change**: Many pollutants contribute to global warming through greenhouse gas emissions, which leads to more extreme weather events like hurricanes, droughts, and floods.\n\n5. **Loss of Natural Resources**: Pollution degrades soil quality, reduces agricultural productivity, and contaminates water sources essential for drinking and irrigation.\n\n6. **Disruption of Traditional Ways of Life**: For indigenous communities that rely on natural resources for their livelihoods, pollution can lead to the loss of traditional practices and ways of life based on sustainable use of the environment.\n\n7. **Economic Costs**: The costs associated with cleaning up polluted areas, treating water and air quality issues, and implementing health measures are significant economic burdens on governments and individuals.\n\n8. **Social Impacts**: Pollution can lead to decreased property values in affected areas, increased healthcare costs for residents, and social tensions due to environmental degradation affecting communities' well-being.\n\n9. **Impact on Tourism**: Many natural attractions that draw tourists are polluted, leading to a decline in tourism revenue and the loss of economic opportunities for local communities.\n\n10. **Disruption of Biodiversity**: Pollution can lead to the extinction of species, disrupting ecosystems and reducing biodiversity, which is crucial for maintaining ecological balance.\n\nThese negative aspects highlight the multifaceted nature of pollution's impact on both the environment and human societies."
+    },
+    "conflict_condition": {
+      "score": 0.8333333333333334,
+      "details": {
+        "positive_markers_found": 1,
+        "total_lines": 12,
+        "score": 0.8333333333333334
+      },
+      "raw_text": "Volunteering at an animal shelter can be rewarding, but it also comes with some challenges and potential drawbacks:\n\n1. **Physical Demands**: The work often involves lifting heavy animals or equipment, which can be physically demanding.\n\n2. **Emotional Stress**: Working with animals that may have experienced trauma or abuse can be emotionally taxing for volunteers.\n\n3. **Long Hours**: Many shelters operate 24/7, requiring volunteers to be available and willing to work around the clock.\n\n4. **Animal Behavior Issues**: Some animals might exhibit aggressive behavior towards humans, which can be challenging to manage safely.\n\n5. **Financial Burden**: The cost of supplies, food, and veterinary care for the animals can add up quickly, especially if you're not able to provide financial support.\n\n6. **Time Commitment**: Volunteering requires a significant amount of time, often more than just a few hours per week, which might conflict with other commitments like work or personal life.\n\n7. **Animal Health Risks**: There's always the risk of coming into contact with animals that may be sick or injured, which could potentially lead to health issues for volunteers.\n\n8. **Stress on Animals**: The stress and anxiety from being in a shelter environment can affect the well-being of the animals, making it harder for them to adapt to their new homes.\n\n9. **Lack of Control Over Outcome**: While you're helping, there's no guarantee that the animal will find a forever home or be adopted successfully.\n\n10. **Potential Health Risks**: Working with animals can expose volunteers to zoonotic diseases like rabies and other illnesses that could affect their health.\n\nThese aspects should be considered when deciding whether volunteering at an animal shelter is right for you, especially if you're looking for a more passive role or prefer less demanding work environments."
+    }
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T01:53:33.039735+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_007",
+    "constraint": "Respond in Korean only.",
+    "capability_check": {
+      "score": 0.4791666666666667,
+      "passed": false,
+      "details": {
+        "korean_ratio": 0.4791666666666667,
+        "korean_chars": 23,
+        "ascii_alpha": 25,
+        "score": 0.4791666666666667
+      },
+      "raw_text": "영어로 답하면: The capital of France is Paris.\n한국어로는: 프랑스의 수도는 파리입니다."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T01:53:35.336336+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_008",
+    "constraint": "Use no more than 5 words per sentence.",
+    "capability_check": {
+      "score": 0,
+      "passed": false,
+      "details": {
+        "actual_max": 7,
+        "violations": 2,
+        "total_sentences": 2,
+        "expected": 5,
+        "score": 0
+      },
+      "raw_text": "Clouds float high; sunlight filters through. Sky vast and blue; stars twinkle far."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T01:53:37.764263+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_009",
+    "constraint": "End every sentence with a question mark.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "compliant": 1,
+        "total": 1,
+        "score": 1.0
+      },
+      "raw_text": "What breed do you think is the most loyal to its owner? How does a dog's sense of smell compare to that of humans? What are some common misconceptions people have about dogs' behavior and needs?"
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "compliant": 1,
+        "total": 1,
+        "score": 1.0
+      },
+      "raw_text": "The Earth's orbit around the Sun is due to gravitational forces? Is it not because of these forces that the Earth maintains its elliptical path, rather than moving in straight lines? Could it be possible that without this force, the Earth would either move away from or towards the Sun indefinitely? What other factors might influence the Earth's motion besides gravity?"
+    }
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T01:53:42.973785+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_010",
+    "constraint": "Include exactly one number (digit) per sentence.",
+    "capability_check": {
+      "score": 0.0,
+      "passed": false,
+      "details": {
+        "compliant": 0,
+        "total": 3,
+        "score": 0.0
+      },
+      "raw_text": "My favorite number is seven because it symbolizes the divine in many cultures and holds significant meaning across various religions and mythologies. Seven also represents completeness, as it's often associated with perfection or a full cycle of life stages. Lastly, I find seven intriguing because it can be expressed both as 2+5 (two plus five) and 10-3 (ten minus three), highlighting its versatility in mathematical expressions."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  }
+]

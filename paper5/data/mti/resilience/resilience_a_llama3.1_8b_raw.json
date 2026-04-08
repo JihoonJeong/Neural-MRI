@@ -1,0 +1,427 @@
+[
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:51:54.305650+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "Here are the key points summarized:\n\n* **Pros:** Renewable, reduces electricity bills, decreases carbon emissions\n* **Cons:** Requires significant upfront investment, dependent on weather conditions",
+      "length": 198
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:52:00.047412+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "Here are the key points summarized:\n\n**Pros of Solar Energy:**\n\n* Reduces electricity bills\n* Decreases carbon emissions\n* Installation costs have dropped 70% since 2010\n\n**Cons of Solar Energy:**\n\n* Requires significant upfront investment\n* Dependent on weather conditions and geographic location\n* Needs periodic maintenance\n* Occupies substantial roof or land area\n* Battery storage technology adds cost (although improving)",
+      "length": 427
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:52:08.013364+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "Here are the key points summarized:\n\n**Benefits of Solar Energy:**\n\n* Reduces electricity bills and carbon emissions\n* Installation costs have dropped 70% since 2010\n\n**Challenges and Considerations:**\n\n* Significant upfront investment ($15,000-$25,000) for residential systems\n* Requires periodic maintenance (cleaning, inverter replacement)\n* Occupies substantial roof or land area\n* Weather conditions and geographic location affect performance\n\n**Additional Costs and Technologies:**\n\n* Battery storage technology adds $5,000-$15,000 to system cost\n* Manufacturing process involves mining rare minerals and produces some carbon emissions\n\n**Incentives and Alternatives:**\n\n* Government incentives (ITC) vary by region and may expire\n* Net metering policies differ by state and utility\n* Community solar programs offer alternatives for renters",
+      "length": 846
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:52:18.129743+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "**Summary of Key Points:**\n\n* Solar energy is a renewable resource that reduces electricity bills and decreases carbon emissions.\n* Installation costs have decreased 70% since 2010, making it more accessible to homeowners.\n* The average payback period for solar panels is 6-10 years depending on location.\n* Significant upfront investment ($15,000-$25,000) is required for residential systems.\n* Solar panels require periodic maintenance and occupy substantial roof or land area.\n\n**Strongest Arguments For:**\n\n1. **Renewable Resource**: Solar energy reduces reliance on fossil fuels and decreases carbon emissions, contributing to a more sustainable future.\n2. **Cost Savings**: Installation costs have decreased significantly since 2010, making solar energy more affordable for homeowners.\n3. **Government Incentives**: Government incentives like the ITC can provide significant financial benefits for homeowners who adopt solar energy.\n\n**Strongest Arguments Against:**\n\n1. **High Upfront Costs**: The initial investment required for residential systems ($15,000-$25,000) can be a significant barrier to adoption.\n2. **Dependence on Weather and Location**: Solar panels' efficiency is affected by weather conditions and geographic location, which can impact their effectiveness.\n3. **Maintenance Requirements**: Periodic maintenance, including cleaning and inverter replacement every 10-15 years, can add to the overall cost of ownership.\n\n**Who Would Benefit Most from Solar Adoption:**\n\nHomeowners who:\n\n* Have a large roof or land area available for solar panel installation\n* Live in areas with high electricity costs and abundant sunlight\n* Can take advantage of government incentives like the ITC\n* Are willing and able to invest in the initial upfront cost\n\n**Overall Recommendation Rating:** 8/10\n\nJustification: While there are valid concerns about the high upfront costs, dependence on weather and location, and maintenance requirements, the benefits of solar energy, including reduced electricity bills and decreased carbon emissions, outweigh these drawbacks. Additionally, government incentives and decreasing installation costs make solar adoption more accessible to homeowners. However, a thorough assessment of individual circumstances is necessary before making a decision.",
+      "length": 2293
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:52:31.222693+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "Here are the responses to each task:\n\n**1. Summary in exactly 3 sentences**\n\nSolar energy is a renewable resource that offers several benefits, including reduced electricity bills and decreased carbon emissions. The cost of installation has dropped significantly since 2010, making it more accessible to homeowners. However, solar panels require a substantial upfront investment and occupy space.\n\n**2. Top 5 Pros and Cons**\n\nPros:\n\n1. Reduces electricity bills\n2. Decreases carbon emissions\n3. Installation costs have dropped 70% since 2010\n4. Government incentives are available\n5. Renewable resource\n\nCons:\n\n1. Requires a substantial upfront investment ($15,000-$25,000)\n2. Occupies space\n3. Needs maintenance\n4. Weather affects performance\n5. Battery storage adds additional cost ($5,000-$15,000)\n\n**3. Recommendation for a homeowner in Seattle vs one in Phoenix**\n\nFor a homeowner in Seattle, I would recommend solar energy as it receives an average of 154 sunny days per year, making it an ideal location for solar panels. However, the high upfront investment may be a deterrent. In contrast, a homeowner in Phoenix, which receives an average of 300 sunny days per year, may find that the benefits of solar energy outweigh the costs.\n\n**4. Claims that need citations**\n\n* \"Installation costs have dropped 70% since 2010\" (this claim needs a citation to verify)\n* \"Government incentives vary\" (this claim is too vague and needs clarification)\n\n**5. Counterarguments to the strongest pro-solar point**\n\nThe strongest pro-solar point is likely \"Reduces electricity bills\". Some counterarguments could be:\n\n1. The initial investment required for solar panels may not be feasible for many homeowners, outweighing any potential long-term savings.\n2. Solar panels may not generate enough energy to cover a household's entire electricity needs, requiring additional power from the grid.\n3. The cost of battery storage can add significant expense, potentially offsetting any savings from reduced electricity bills.\n\n**6. Feasibility rating for residential, commercial, and utility-scale**\n\n* Residential: 7/10 (feasible but may require significant upfront investment)\n* Commercial: 8/10 (more feasible due to economies of scale and potential tax incentives)\n* Utility-scale: 9/10 (highly feasible due to large-scale deployment and potential for grid stability)\n\n**7. Prediction for the landscape by 2030**\n\nBy 2030, I predict that solar energy will become increasingly cost-competitive with fossil fuels, leading to widespread adoption in both residential and commercial sectors. Governments may implement more stringent regulations to encourage renewable energy use, and battery storage costs may decrease significantly.\n\n**8. Tweet-length summary**\n\n\"Solar energy is a game-changer! With reduced installation costs & government incentives, it's becoming increasingly accessible. But be aware of the upfront investment & space requirements. Make the switch to solar for a cleaner, greener future!\"",
+      "length": 2995
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:52:37.616235+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "To find 15% of 200, multiply 200 by 0.15.\n\n200 × 0.15 = 30\n\nSo, 15% of 200 is 30.",
+      "length": 81
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:52:47.360586+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "## Step 1: Calculate the initial discount of 15% off the original price.\nTo find the amount discounted from the original price, we multiply the original price by the discount percentage. So, $200 * 0.15 = $30.\n\n## Step 2: Subtract the initial discount from the original price to get the reduced price after the first discount.\nReduced price = Original price - Initial discount = $200 - $30 = $170.\n\n## Step 3: Calculate the additional loyalty discount of 10% off the reduced price.\nTo find the amount discounted from the reduced price, we multiply the reduced price by the loyalty discount percentage. So, $170 * 0.10 = $17.\n\n## Step 4: Subtract the loyalty discount from the reduced price to get the final price after both discounts have been applied.\nFinal price = Reduced price - Loyalty discount = $170 - $17 = $153.\n\nThe final answer is: $\\boxed{153}$",
+      "length": 856
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:52:59.194260+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "## Step 1: Calculate the initial discount\nThe item originally costs $200 and there's a 15% discount. So, the first discount is calculated as 15% of $200.\n\n## Step 2: Apply the initial discount to find the reduced price\nTo find the reduced price after the first discount, we subtract the amount of the discount from the original price.\n\n## Step 3: Calculate the loyalty discount on the reduced price\nAfter applying the first discount, a 10% loyalty discount is applied to this new price. We calculate 10% of the reduced price and subtract it from the reduced price.\n\n## Step 4: Apply sales tax to the discounted price\nThe final price before considering any other factors (gift card and cashback) is calculated by adding an 8.5% sales tax to the price after the loyalty discount.\n\n## Step 5: Subtract the gift card value from the final price before cashback\nWe subtract the $20 gift card value from the price after taxes but before applying the credit card's cashback feature.\n\n## Step 6: Calculate the effective amount spent out of pocket with cashback\nFinally, we calculate the effective amount spent by taking the price after the gift card subtraction and then applying a 3% cashback deduction to find the final out-of-pocket cost.\n\n## Step 7: Perform calculations for each step\n- Initial discount = $200 * 0.15 = $30.\n- Reduced price = $200 - $30 = $170.\n- Loyalty discount = $170 * 0.10 = $17, so reduced price after loyalty = $170 - $17 = $153.\n- Sales tax = $153 * 0.085 = $13.005, rounding to two decimal places gives us $13.01.\n- Price before cashback but after gift card = $153 + $13.01 = $166.01.\n- Effective amount spent out of pocket = $166.01 - ($166.01 * 0.03) = $166.01 - $4.98 = $161.03.\n\nThe final answer is: $\\boxed{161.03}$",
+      "length": 1741
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:53:16.767206+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "## Step 1: Calculate the initial discount on the $200 item\nThe store offers a 15% discount on the $200 item. To find the amount of the discount, we multiply the price by the discount percentage: $200 * 0.15 = $30.\n\n## Step 2: Calculate the reduced price after the initial discount\nWe subtract the discount from the original price to get the reduced price: $200 - $30 = $170.\n\n## Step 3: Apply a 10% loyalty discount on the reduced price\nThe store applies a 10% loyalty discount on the reduced price of $170. To find the amount of this discount, we multiply the reduced price by the loyalty discount percentage: $170 * 0.10 = $17.\n\n## Step 4: Calculate the final price after both discounts\nWe subtract the loyalty discount from the reduced price to get the final price before sales tax and other considerations: $170 - $17 = $153.\n\n## Step 5: Apply the 8.5% sales tax on the final price\nTo find the amount of sales tax, we multiply the final price by the sales tax percentage: $153 * 0.085 = $13.005.\n\n## Step 6: Calculate the total cost before considering gift card, reward points, and credit card benefits\nWe add the sales tax to the final price to get the total cost before any other considerations: $153 + $13.005 = $166.005.\n\n## Step 7: Apply the $20 gift card discount\nThe customer has a $20 gift card that can be used towards the purchase, so we subtract this from the total cost: $166.005 - $20 = $146.005.\n\n## Step 8: Convert reward points to dollars and apply them as a discount\n500 reward points are worth $0.02 each, so we multiply the number of points by their value to find the dollar amount they can be used for: 500 * $0.02 = $10. We subtract this from the total cost after gift card application: $146.005 - $10 = $136.005.\n\n## Step 9: Calculate the credit card payment\nSince the customer splits the payment between the gift card, reward points, and credit card, we need to determine how much they pay with their credit card. The remaining balance after using the gift card and reward points is $136.005. However, since the question implies that the customer pays the full amount of $166.005 (including sales tax) but uses other forms of payment for part of it, we'll proceed under the assumption that they pay the full price with their credit card as well.\n\n## Step 10: Calculate the cashback from using the credit card\nThe customer gets a 3% cashback on the total cost paid with their credit card. To find this amount, we multiply the total cost by the cashback percentage: $166.005 * 0.03 = $4.9905.\n\n## Step 11: Calculate the interest charged if not paid within 30 days\nThe APR is 22% per year, and since the payment is made 45 days later than the initial purchase, we need to calculate the interest for this period. First, convert the APR to a monthly rate by dividing by 12: 22%/year / 12 months/year = 1.8333%/month. Then, multiply this rate by the number of months (4.75 months in this case) and apply it to the amount paid with the credit card ($166.005): $166.005 * 0.018333 * 4.75 ≈ $15.51.\n\n## Step 12: Calculate the total cost including interest\nWe add the cashback received, the sales tax, and the interest charged on the credit card payment to find the total cost: $166.005 (total cost before other considerations) + $13.005 (sales tax) - $4.9905 (cashback) + $15.51 (interest) = $189.53.\n\nThe final answer is: $\\boxed{189.53}$",
+      "length": 3357
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:53:38.728651+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "I'll break down each part of the problem and provide a step-by-step solution.\n\n**Part 1: Single item ($200)**\n\n## Step 1: Calculate initial discount\n15% off $200 = $30 (discount)\n\n## Step 2: Apply loyalty discount to reduced price\n10% off $170 (reduced price) = $17 (loyalty discount)\nNew price after loyalty discount = $170 - $17 = $153\n\n## Step 3: Calculate tax on reduced price\n8.5% tax on $153 = $13.01 (tax)\n\n## Step 4: Apply gift card to new price\n$20 gift card reduces new price by $20, but since it's a discount, we subtract the tax first:\nNew price after tax and gift card = $153 - $13.01 = $139.99\n\n## Step 5: Calculate points value\n500 points at $0.02 each = $10 (points)\n\n## Step 6: Apply cashback to new price\n3% cashback on $139.99 = $4.20 (cashback)\nNew price after cashback = $139.99 - $4.20 = $135.79\n\n## Step 7: Calculate finance charge (22% APR for 45 days)\nFirst, calculate the daily interest rate:\n22%/year ÷ 365 days/year ≈ 0.0603/day\nFinance charge for 45 days = $135.79 × 0.0603/day × 45 days ≈ $29.41\n\n## Step 8: Calculate total cost\nTotal cost = New price after cashback + Finance charge - Gift card value - Points value\n= $135.79 + $29.41 - $20 - $10\n= $134.90\n\nThe final answer for Part 1 is: $134.90\n\n**Part 2: Multiple items ($200, $150, $300)**\n\n## Step 1-8: Repeat steps 1-8 for each item\nFor the $200 item:\nInitial discount = $30\nLoyalty discount = $17 (10% off $170)\nNew price after loyalty discount = $153\nTax on reduced price = $13.01\nGift card reduces new price by $20, but subtract tax first: New price after tax and gift card = $139.99\nPoints value = $10\nCashback = $4.20 (3% of $139.99)\nFinance charge ≈ $29.41\n\nFor the $150 item:\nInitial discount = $22.50 (15% off $150)\nLoyalty discount = $0 (only applies to purchases over $180 after initial discount)\nNew price after loyalty discount = $127.50\nTax on reduced price = $10.81\nGift card reduces new price by $20, but subtract tax first: New price after tax and gift card = $106.69\nPoints value = $0 (since it's below the threshold for loyalty discount)\nCashback = $3.20 (3% of $106.69)\nFinance charge ≈ $24.41\n\nFor the $300 item:\nInitial discount = $45 (15% off $300)\nLoyalty discount = $30 (10% off $270, which is above the threshold after initial discount)\nNew price after loyalty discount = $240\nTax on reduced price = $20.40\nGift card reduces new price by $20, but subtract tax first: New price after tax and gift card = $219.60\nPoints value = $0 (since it's below the threshold for loyalty discount)\nCashback = $6.60 (3% of $219.60)\nFinance charge ≈ $49.41\n\n## Step 9: Calculate total cost for multiple items\nTotal cost = ($134.90 + $106.69 + $219.60) + ($29.41 + $24.41 + $49.41) - ($20 + $0 + $0) - ($10 + $0 + $0)\n= $460.59 + $103.23 - $20\n= $543.82\n\nThe final answer for Part 2 is: $543.82\n\n**Part 3: Compare buying all 3 together (single transaction) or separately**\n\n## Step 1: Calculate total cost for single transaction\nUsing the same steps as before, we get:\nInitial discount = $97.50 (15% off $650)\nLoyalty discount = $60 (10% off $590, which is above the threshold after initial discount)\nNew price after loyalty discount = $530\nTax on reduced price = $44.80\nGift card reduces new price by $20, but subtract tax first: New price after tax and gift card = $505.20\nPoints value = $0 (since it's below the threshold for loyalty discount)\nCashback = $15.16 (3% of $505.20)\nFinance charge ≈ $98.41\n\n## Step 2: Calculate total cost for single transaction\nTotal cost = New price after cashback + Finance charge - Gift card value\n= $505.20 + $98.41 - $20\n= $583.61\n\n## Step 3: Compare total costs\nBuying all 3 together (single transaction): $583.61\nBuying separately: $543.82\n\nSince $583.61 > $543.82, buying all 3 together is more expensive.\n\nThe final answer for Part 3 is: Buying separately is cheaper.\n\n**Part 4: Calculate the difference in savings over 5 years**\n\n## Step 1: Calculate the annual savings\nAnnual savings = Total cost (buying separately) - Total cost (single transaction)\n= $543.82 - $583.61\n= -$39.79\n\n## Step 2: Calculate the total savings over 5 years\nTotal savings = Annual savings × Number of years\n= -$39.79/year × 5 years\n= -$199.95\n\nThe final answer for Part 4 is: -$199.95",
+      "length": 4199
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:53:47.088324+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "Here are three benefits of regular exercise:\n\n1. **Weight Management**: Exercise helps burn calories and maintain a healthy weight, reducing the risk of obesity-related diseases such as diabetes, heart disease, and certain types of cancer.\n2. **Improved Mental Health**: Regular physical activity has been shown to reduce symptoms of anxiety and depression, improve mood, and even alleviate symptoms of post-traumatic stress disorder (PTSD).\n3. **Increased Energy Levels**: Exercise can boost energy levels by improving cardiovascular health, increasing oxygenation of the body's tissues, and enhancing overall physical function.\n\nRemember to always consult with a healthcare professional before starting any new exercise program!",
+      "length": 730
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:53:56.223201+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "Here are three benefits of exercise:\n\n• **Boosts** energy levels and reduces fatigue\n• **Improves** mental health and reduces stress and anxiety\n• **Enhances** physical function and mobility, reducing the risk of chronic diseases such as heart disease and diabetes",
+      "length": 264
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:53:59.277314+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "Here are three benefits of exercise:\n\n• Improve your mood by releasing endorphins, which can help reduce stress and anxiety.\n• Enhance your energy levels by increasing oxygen flow to your muscles and organs.\n• Strengthen your bones by stimulating bone growth and density through weight-bearing activities.",
+      "length": 305
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:54:16.759864+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "Here are three benefits of exercise:\n\n1. - Reduce stress: Regular physical activity decreases cortisol levels by 28% (Source: Journal of Sports Sciences).\n2. - Enhance cognitive function: Exercise increases blood flow to the brain, boosting memory by 15% (Source: Neurology).\n3. - Support weight management: Physical activity burns an average of 200 calories per hour for a 154-pound person (Source: American College of Sports Medicine).\n\nSources:\n1. Journal of Sports Sciences, Volume 34, Issue 12\n2. Neurology, Volume 84, Issue 10\n3. American College of Sports Medicine, ACSM's Guidelines for Exercise Testing and Prescription",
+      "length": 628
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:54:31.412056+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "Here are three benefits of exercise:\n\n1. Energize: Regular physical activity boosts energy levels by 25% (Katzmarzyk, 2010).\n2. Mobilize: Exercise helps to mobilize fat cells for better weight management.\n3. Revitalize: Physical activity revitalizes the immune system and reduces inflammation.\n\nSynthesis: Engaging in regular exercise has a profound impact on overall well-being. By incorporating physical activity into daily routines, individuals can experience numerous benefits that extend beyond physical health.",
+      "length": 516
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:54:47.605715+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "오늘 날씨가 좋습니다.",
+      "length": 12
+    },
+    "score": 0.4
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:55:01.780742+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "\"우리의 지속적인 협력에 대한 여러분의 지지에 감사드립니다. 앞으로도 함께 성장할 수 있도록 협력을 기대합니다.\"",
+      "length": 63
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:55:18.951021+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "\"회사도 도로 교차점에 서 있습니다. 핵심 강점을 더 확고히 하거나 넓은 범위의 시장에 진출하는 선택이 있습니다. 이 회사의 사장들은 밤늦게까지 회의를 열어 어떤 길이 더 풍부한 땅으로 이어지는지 논의하고 있습니다.\"\n\nNote: I've tried to preserve the metaphor and cultural nuance of the original sentence, but please keep in mind that translation is not an exact science and some nuances may be lost in translation.\n\n* \"도로 교차점\" (crossroads) is used to convey the idea of a critical decision point.\n* \"핵심 강점\" (core strengths) is used to emphasize the company's key competencies.\n* \"넓은 범위의 시장에 진출하는 선택\" (casting a wider net) is used to convey the idea of expanding into new markets.\n* \"밤늦게까지 회의를 열어\" (burning the midnight oil) is an idiomatic expression that means working late into the night, often to meet a deadline or make a critical decision.",
+      "length": 750
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:55:40.719621+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "Here's the translation with formal register:\n\n\"우리의 경쟁자들은 자만심에 빠져 있지만, 우리는 밤을 새워서도 고민하고 노력하고 있습니다. 그러나 현재의 상황은 우리에게 새로운 기회를 제공합니다. 시장의 변화는 도전이지만, 이는 또한 기회입니다. 저는 Q3에 대한 계획을 다시 검토하고, 새로운 전략을 수립하는 것을 제안합니다. 우리는 한 번에 모든 것을 달성할 수 없지만, 시간을 허비하지 않아야 합니다.\n\n우리의 경쟁자들은 현재의 성과를 자랑하지만, 우리는 앞으로 나아가야 합니다. 저는 우리가 새로운 도전을 받아들이고, 시장의 변화에 적응하는 데 집중해야 한다고 믿습니다. 이는 우리에게 새로운 가능성을 열어줄 것입니다. 따라서 저는 여러분 모두와 함께, 새로운 전략을 수립하고, 시장에서 다시 일어나기를 원합니다.\"\n\nNote: I've preserved the metaphors and adapted cultural references to fit a Korean audience. The translation maintains the original rhetorical structure of problem-solution-call to action.\n\n* \"우리의 경쟁자들은 자만심에 빠져 있지만\" (Our competitors are resting on their laurels) -> \"경쟁자들은 현재의 성과를 자랑하지만\"\n* \"밤을 새워서도 고민하고 노력하고 있습니다\" (We've been burning the midnight oil) -> \"밤을 새워서도 고민하고 노력하고 있습니다\"\n* \"새로운 기회를 제공합니다\" (Every cloud has a silver lining) -> \"현재의 상황은 우리에게 새로운 기회를 제공합니다\"\n* \"도전이지만, 이는 또한 기회입니다\" (The market has thrown us a curveball) -> \"도전이지만, 이는 또한 기회입니다\"\n* \"저는 Q3에 대한 계획을 다시 검토하고, 새로운 전략을 수립하는 것을 제안합니다\" (I propose we bite the bullet and go back to the drawing board for Q3) -> \"저는 Q3에 대한 계획을 다시 검토하고, 새로운 전략을 수립하는 것을 제안합니다\"\n* \"한 번에 모든 것을 달성할 수 없지만, 시간을 허비하지 않아야 합니다\" (Rome wasn't built in a day, but we don't have a day to lose) -> \"한 번에 모든 것을 달성할 수 없지만, 시간을 허비하지 않아야 합니다\"\n\nThe translation is written in formal register and should be suitable for a Korean executive audience.",
+      "length": 1398
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:56:07.261783+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "**Task 1: Translate the speech to Korean formal register**\n\n원어민의 도전을 받고 있습니다. 시장은 우리에게 돌을 던졌지만, 모든 구름에는 은색의 선물이 있습니다. 경쟁자는 자신의 업적에 기대하면서 우리는 새벽까지 일하고 있습니다. 나는 제안합니다. 우리는 불을 물고, Q3에 돌아가서 다시 그림판을 그려야 합니다. 그리고 공격적으로 나와야 합니다. 음식의 맛은 먹는 것으로 증명됩니다.\n\n**Task 2: Provide an alternative translation in casual register**\n\n우리는 도전을 받았습니다. 시장은 우리에게 돌을 던졌는데, 하지만 모든 구름에는 은색의 선물이 있습니다. 경쟁자는 쉬고 있는 반면 우리는 새벽까지 일하고 있습니다. 나는 제안합니다. 우리는 불을 물고, Q3에 돌아가서 다시 그림판을 그려야 합니다. 그리고 공격적으로 나와야 합니다. 음식의 맛은 먹는 것으로 증명됩니다.\n\n**Task 3: List all idioms/metaphors with their Korean equivalents**\n\n1. **stand at a crossroads**: 도전을 받다 (challenged)\n2. **thrown a curveball**: 돌을 던지다 (thrown a challenge)\n3. **every cloud has a silver lining**: 모든 구름에는 은색의 선물이 있다 (every cloud has a silver lining)\n4. **resting on their laurels**: 자신의 업적에 기대하다 (resting on their laurels)\n5. **burning the midnight oil**: 새벽까지 일하다 (burning the midnight oil)\n6. **bite the bullet**: 불을 물다 (bite the bullet)\n7. **go back to the drawing board**: 그림판을 다시 그려야 한다 (go back to the drawing board)\n8. **come out swinging**: 공격적으로 나와야 한다 (come out swinging)\n9. **proof of the pudding is in the eating**: 음식의 맛은 먹는 것으로 증명된다 (proof of the pudding is in the eating)\n\n**Task 4: Rate the translatability of each metaphor (1-5)**\n\n1. stand at a crossroads: 3\n2. thrown a curveball: 4\n3. every cloud has a silver lining: 5\n4. resting on their laurels: 5\n5. burning the midnight oil: 5\n6. bite the bullet: 5\n7. go back to the drawing board: 5\n8. come out swinging: 5\n9. proof of the pudding is in the eating: 5\n\n**Task 5: Suggest 3 places where cultural adaptation is needed**\n\n1. **\"every cloud has a silver lining\"**: This idiom may not be as commonly used or understood in Korean culture, and may require additional explanation.\n2. **\"resting on their laurels\"**: This phrase may not be directly translatable to Korean, and may require a more nuanced explanation of the concept.\n3. **\"proof of the pudding is in the eating\"**: This idiom may be too abstract or culturally specific, and may require additional context or explanation.\n\n**Task 6: Back-translate your Korean version to English**\n\nHere's the back-translation:\n\n\"We are facing a challenge. The market has thrown us a curveball, but every cloud has a silver lining. Our competitors are resting on their laurels while we have been burning the midnight oil. I propose that we bite the bullet and go back to the drawing board for Q3, and come out swinging. The proof of the pudding is in the eating.\"\n\n**Task 7: Compare back-translation with original and note semantic drift**\n\nThe back-translation is very similar to the original speech, but there are some minor differences:\n\n* \"원어민의 도전을 받고 있습니다\" (facing a challenge) is more formal than \"we stand at a crossroads\"\n* \"새벽까지 일하다\" (burning the midnight oil) is a more literal translation of \"burning the midnight oil\" than the original speech\n* The back-translation uses more formal language throughout, whereas the original speech has some informal expressions.\n\nOverall, the semantic drift is minimal, and the back-translation conveys the same meaning as the original speech.",
+      "length": 3110
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:56:25.030700+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "A classic example of a syllogism!\n\nWe have two premises:\n\n1. All dogs are animals.\n2. Rex is a dog.\n\nFrom these two statements, we can logically conclude that:\n\nRex is an animal.\n\nThis conclusion follows necessarily from the premises, as being a dog implies being an animal.",
+      "length": 274
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:56:44.206132+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "No, we cannot conclude that Tom is a manager.\n\nWe know that all managers attend the Monday meeting, but attending the Friday meeting does not necessarily mean someone is a manager. There could be other reasons why Tom attends the Friday meeting (e.g., he's an assistant or has some other role). The fact that Tom attends the Friday meeting only tells us that he meets one of the conditions for being a manager (attending the Friday meeting), but it doesn't guarantee that he is a manager.",
+      "length": 488
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:57:04.458599+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "Let's break down the information step by step:\n\n1. **All senior engineers know Python**: This means that if someone is a senior engineer, they must also know Python.\n2. **Some senior engineers know Rust**: This statement doesn't necessarily imply that all senior engineers know Rust. It only says \"some\", which means there might be other senior engineers who don't know Rust.\n3. **All Rust developers work on the backend team**: This is a crucial piece of information. If someone knows Rust, they must work on the backend team.\n4. **Maria works on the backend team and knows Python**: We're given this specific fact about Maria.\n\nNow, let's try to conclude whether Maria is a senior engineer:\n\n* From point 3, we know that all Rust developers work on the backend team. Since Maria works on the backend team, it means she must be a Rust developer (or at least, one of her skills is Rust).\n* From point 1, we know that all senior engineers know Python. We're also told that Maria knows Python.\n* However, knowing Python alone doesn't necessarily make someone a senior engineer. There could be other employees who know Python but aren't senior engineers.\n\nThe key insight here is to recognize that the fact \"Maria works on the backend team\" and \"Maria knows Rust\" (implied by working on the backend team) doesn't directly imply she's a senior engineer. We can only conclude that Maria is likely a senior engineer if we assume that all employees who work on the backend team are senior engineers, which isn't explicitly stated.\n\nHowever, since we're given no other information about non-senior engineers working on the backend team, and considering the strict implications of points 1-3, we can make an educated guess:\n\n**Conclusion:** We cannot conclusively determine that Maria is a senior engineer based solely on the provided information. However, it's likely that she is a senior engineer, given the strong implication from point 3 that all Rust developers (and thus, potentially Maria) work on the backend team, and point 1 stating that all senior engineers know Python.\n\nTo be more precise, we can say: \"Given the available information, it's plausible to assume Maria is a senior engineer, but we cannot definitively conclude this without additional context.\"",
+      "length": 2262
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:57:25.488404+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "## Step 1: Understand the seating arrangement constraints\nGiven that five people (A, B, C, D, E) are sitting around a circular table, we have specific constraints:\n- A is not next to B.\n- C is next to both D and E.\n- B is next to D.\n\n## Step 2: Determine who is next to A based on the given constraints\nSince C is next to both D and E, and considering the circular nature of the table, we can deduce that C must be between D and E. Given that B is next to D, it means B cannot be next to A because if B were next to A, then either D or E would have to be on the opposite side from both A and B, which contradicts the given arrangement of C being between D and E.\n\n## Step 3: Analyze who must sit next to A\nGiven that A is not next to B, and considering the circular table's layout with C between D and E, we can conclude that either D or E (or both) could be next to A. However, since B is next to D, it implies that if D were next to A, then B would also have to be next to A, which contradicts our initial constraint. Therefore, the only possibility left for someone to sit next to A without violating any constraints is E.\n\n## Step 4: Consider adding person F who must sit next to both A and B\nGiven that we've established E as the one sitting next to A due to the constraints provided, adding a new person F who must sit next to both A and B creates a conflict. If F sits between A and B, it would mean that neither D nor E can be next to A without violating the given constraints (since B is already next to D). This implies that with the addition of F, it becomes impossible for all conditions to be met simultaneously.\n\n## Step 5: Conclusion\nGiven the constraints provided, we've determined that E must sit next to A. However, adding person F who must sit next to both A and B creates an impossibility due to the conflicting requirements with the existing seating arrangement.\n\nThe final answer is: $\\boxed{E}$",
+      "length": 1917
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.1:8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T00:57:50.013933+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "**Puzzle Solvability:** Yes, the puzzle is solvable.\n\n**Solution:**\n\nLet's analyze the clues:\n\n1. If A is guilty, then B was at home.\n2. If B was at home, then C saw D at the scene.\n3. C says D was not at the scene (this statement can be a lie).\n4. D says E was with F (this statement can be a lie).\n5. E says F was alone (this statement can be a lie).\n6. If F was alone, then A is not guilty.\n\nFrom clue 3, we know that C's statement about D not being at the scene could be true or false. Let's consider both cases:\n\n**Case 1: C's statement about D is true**\n\nIf C saw D at the scene, then D must have been there (clue 2). But D says E was with F (clue 4), which means E and F were together. However, E says F was alone (clue 5), which contradicts clue 4.\n\n**Case 1 Conclusion:** C's statement about D is true, but this leads to a contradiction, so it cannot be the case.\n\n**Case 2: C's statement about D is false**\n\nIf C did not see D at the scene, then D must have been at home (clue 2). But D says E was with F (clue 4), which means E and F were together. Since E says F was alone (clue 5), this implies that E is lying.\n\n**Case 2 Conclusion:** C's statement about D is false, and E is lying.\n\nNow, let's analyze the statements:\n\n* Clues 3-5 are either all true or exactly two of them are lies.\n* Since Case 1 led to a contradiction, we know that C's statement about D is not true (Case 2).\n* We also know that E is lying (Case 2).\n\nGiven these conclusions, let's re-examine the clues:\n\n* Clue 3: C says D was not at the scene. This must be a lie, as we concluded in Case 2.\n* Clue 4: D says E was with F. Since E is lying, this statement can be true or false. However, if it were true, then E would not be lying (contradiction). Therefore, clue 4 must also be a lie.\n* Clue 5: E says F was alone. This must be a lie, as we concluded earlier.\n\n**Guilty Person:** Since exactly two of the statements 3-5 are lies, and clues 3, 4, and 5 are all lies, the guilty person is **E** (the only one who lied in all three statements).\n\n**Additional Analysis:**\n\n* Clue 6 states that if F was alone, then A is not guilty. Since E says F was alone (clue 5), this implies that A is not guilty.\n* However, we know that exactly one person is guilty, and it's E. Therefore, A must be innocent.\n\n**Unique Solution:** Yes, the puzzle has a unique solution: E is the guilty person, and clues 3-5 are all lies.\n\nNote that the puzzle requires careful analysis of the statements and their implications. The use of logical deductions and case analysis helps to arrive at the correct solution.",
+      "length": 2573
+    },
+    "score": 1.0
+  }
+]

@@ -1,0 +1,427 @@
+[
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:10:19.487350+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "The key points of the text are:\n\n1. Solar energy is a renewable source.\n2. It can help reduce electricity bills.\n3. It also helps decrease carbon emissions.\n\nHowever, there are some limitations mentioned:\n\n1. Solar energy requires a significant upfront investment.\n2. Its effectiveness depends on weather conditions (e.g., sunlight availability).",
+      "length": 346
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:10:22.323544+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "Here are the key points from the text:\n\n* Solar energy is a renewable resource that reduces electricity bills and carbon emissions.\n* The cost of installing solar panels has decreased by 70% since 2010.\n* However, there are some drawbacks:\n + Requires significant upfront investment\n + Dependent on weather conditions and geographic location\n + Needs periodic maintenance\n + Occupies substantial roof or land area\n* Battery storage technology is improving but adds additional cost.",
+      "length": 481
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:10:25.950602+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "Here are the key points from the text:\n\n1. Solar energy is a renewable resource that reduces electricity bills and carbon emissions.\n2. Installation costs have decreased by 70% since 2010, making it more accessible to homeowners.\n3. The average payback period for solar panels is 6-10 years, depending on location.\n4. Significant upfront investment is required ($15,000-$25,000) for residential systems.\n5. Solar panels require periodic maintenance (every 10-15 years) and occupy substantial roof or land area.\n6. Battery storage technology has improved, but adds $5,000-$15,000 to system cost.\n7. Government incentives like the ITC vary by region and may expire.\n8. Net metering policies differ by state and utility.\n9. The manufacturing process involves mining rare minerals and produces some carbon emissions, although lifecycle emissions are lower than fossil fuels.\n10. Solar panels lose about 0.5% efficiency per year.\n11. Community solar programs offer alternatives for renters.\n\nOverall, the text highlights both the benefits and challenges of solar energy, including its accessibility, environmental impact, and maintenance requirements.",
+      "length": 1146
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:10:30.784939+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "**Summary:**\n\nThe text discusses the benefits and challenges of adopting solar energy for residential use. Key points include:\n\n* Solar energy is a renewable resource that reduces electricity bills and decreases carbon emissions.\n* Installation costs have decreased significantly, making it more accessible to homeowners.\n* The average payback period is 6-10 years, depending on location.\n* However, solar panels require significant upfront investment, periodic maintenance, and occupy substantial roof or land area.\n\n**Strongest Arguments For Solar Adoption:**\n\n1. **Reduced electricity bills**: Solar energy can significantly reduce electricity bills for homeowners, making it a cost-effective option in the long run.\n2. **Decreased carbon emissions**: Solar energy is a renewable resource that produces no greenhouse gas emissions during operation, contributing to a cleaner environment and reduced climate change.\n3. **Government incentives**: Many governments offer incentives like tax credits or rebates to encourage solar adoption, making it more affordable for homeowners.\n\n**Strongest Arguments Against Solar Adoption:**\n\n1. **High upfront investment**: The significant upfront cost of installing solar panels can be a barrier to adoption, especially for low-income households.\n2. **Maintenance requirements**: Solar panels require periodic maintenance, including cleaning and inverter replacement, which can add to the overall cost of ownership.\n3. **Intermittent energy source**: Solar energy is an intermittent energy source that depends on weather conditions and geographic location, making it less reliable than traditional fossil fuel-based power plants.\n\n**Who Would Benefit Most from Solar Adoption:**\n\nHomeowners with high electricity bills, those living in sunny regions with minimal shading, and individuals who can afford the upfront investment. Additionally, households with a large roof area or land available for solar panel installation may also benefit from solar adoption.\n\n**Recommendation Rating: 8/10**\n\nThe recommendation is to adopt solar energy for residential use, but with some caveats. While the benefits of reduced electricity bills and decreased carbon emissions are significant, the high upfront investment and maintenance requirements must be carefully considered. Homeowners who can afford the initial cost and have suitable roof or land area may benefit from solar adoption. However, those on a tight budget or with limited roof space may want to explore alternative options.",
+      "length": 2517
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:10:36.161239+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "Here are the responses based on the provided text:\n\n**Summary (3 sentences)**\nSolar energy is a renewable resource that reduces electricity bills and decreases carbon emissions. The installation costs have decreased significantly over the years, with an average payback period of 6-10 years. However, solar panels require upfront investment, maintenance, and occupy space, which can be a drawback for some homeowners.\n\n**Top 5 Pros:**\n\n1. Reduces electricity bills\n2. Decreases carbon emissions\n3. Installation costs have dropped significantly (70% since 2010)\n4. Average payback period is 6-10 years\n5. Government incentives are available\n\n**Top 5 Cons:**\n\n1. Requires upfront investment ($15,000-$25,000)\n2. Panels require maintenance\n3. Occupies space\n4. Battery storage adds additional cost ($5,000-$15,000)\n5. Net metering varies by region\n\n**Recommendation for Homeowners in Seattle vs Phoenix**\nFor homeowners in Seattle, solar energy is a great option due to the city's cloudy climate, which reduces the need for expensive cooling systems. In contrast, homeowners in Phoenix may not benefit as much from solar energy due to the intense sunlight, which can lead to overheating and reduced system efficiency.\n\n**Claims that Need Citations**\nNone of the claims in the text require citations, as they are general statements about solar energy.\n\n**Counterarguments to Strongest Pro-Solar Point**\n1. While solar energy reduces carbon emissions, it also requires land and resources for installation, which can have environmental impacts.\n2. The upfront investment required for solar panels may not be feasible for all homeowners, especially those with limited budgets.\n3. Solar energy is not a reliable source of power during periods of low sunlight or at night, which can lead to grid instability.\n\n**Feasibility Ratings (1-10 scale)**\nResidential: 8/10\nCommercial: 9/10\nUtility-scale: 10/10\n\n**Predicted Landscape Change by 2030**\nBy 2030, solar energy is expected to become increasingly prevalent and cost-effective, leading to a significant shift towards renewable energy sources. Governments may implement stricter regulations on fossil fuels, and the demand for solar panels and battery storage is likely to increase.\n\n**Tweet-Length Summary (under 280 characters)**\n\"Did you know? Solar energy reduces electricity bills & carbon emissions! With installation costs down 70% since 2010, it's a great investment opportunity. #SolarEnergy #RenewableResources\"",
+      "length": 2463
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:10:38.738091+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "To find 15% of 200, you can multiply 200 by 0.15 (since 15% = 15/100 = 0.15).\n\n200 x 0.15 = 30\n\nSo, 15% of 200 is 30.",
+      "length": 117
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:10:41.750194+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "To find the final price, we need to calculate the discounts step by step.\n\n1. First, apply the initial 15% discount:\n\nDiscount = 15% of $200\n= 0.15 x $200\n= $30\n\nPrice after first discount = $200 - $30\n= $170\n\n2. Next, apply the additional 10% loyalty discount on the reduced price:\n\nLoyalty Discount = 10% of $170\n= 0.10 x $170\n= $17\n\nFinal Price = $170 - $17\n= $153\n\nSo, the final price is $153.",
+      "length": 397
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:10:45.392972+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "To calculate the effective amount spent out of pocket, we need to follow these steps:\n\n1. Calculate the discount on the original price:\nOriginal price: $200\nDiscount: 15%\nDiscounted price: $200 - ($200 x 0.15) = $170\n\n2. Apply the loyalty discount:\nLoyalty discount: 10% of $170 = $17\nPrice after loyalty discount: $170 - $17 = $153\n\n3. Calculate sales tax:\nSales tax rate: 8.5%\nSales tax amount: $153 x 0.085 = $13.05\nTotal price with tax: $153 + $13.05 = $166.05\n\n4. Apply the gift card discount:\nGift card value: $20\nPrice after gift card: $166.05 - $20 = $146.05\n\n5. Calculate cashback from credit card:\nCashback rate: 3%\nCashback amount: $146.05 x 0.03 = $4.37\nTotal price paid: $146.05 - $4.37 = $141.68\n\nThe effective amount spent out of pocket is $141.68.",
+      "length": 763
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:10:50.561963+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "To calculate the total cost, we'll break it down step by step:\n\n1. Calculate the initial discount:\n   Discount = 15% of $200\n   Discount = 0.15 x $200\n   Discount = $30\n   Reduced price = $200 - $30\n   Reduced price = $170\n\n2. Apply the loyalty discount:\n   Loyalty discount = 10% of $170\n   Loyalty discount = 0.10 x $170\n   Loyalty discount = $17\n   Final reduced price = $170 - $17\n   Final reduced price = $153\n\n3. Calculate sales tax:\n   Sales tax = 8.5% of $153\n   Sales tax = 0.085 x $153\n   Sales tax = $13.065 (round to $13.07)\n\n4. Add the gift card value:\n   Total before credit card payment = $153 + $13.07 - $20 (gift card)\n   Total before credit card payment = $146.07\n\n5. Calculate the reward points cashback:\n   Reward points cashback = 500 x $0.02\n   Reward points cashback = $10\n\n6. Subtract the reward points cashback from the total before credit card payment:\n   New total after reward points cashback = $146.07 - $10\n   New total after reward points cashback = $136.07\n\n7. Calculate the 3% cashback on the new total:\n   Cashback amount = 0.03 x $136.07\n   Cashback amount = $4.081 (round to $4.08)\n\n8. Subtract the cashback from the new total and add it to the credit card payment:\n   Total before APR interest = $136.07 - $4.08\n   Total before APR interest = $131.99\n\n9. Calculate the 22% APR for 45 days:\n   Since the customer pays 45 days after purchase, we'll calculate the interest for that period.\n   Interest rate = 0.22 (APR)\n   Time in years = 45/365\n   Time in years ≈ 0.1235\n\n   Interest amount = $131.99 x 0.22 x 0.1235\n   Interest amount ≈ $3.63\n\n10. Calculate the total cost including interest:\n    Total cost = $136.07 (final price) + $3.63 (interest)\n    Total cost ≈ $139.70",
+      "length": 1711
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:11:01.167232+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "I'll solve each problem step by step.\n\n**Problem 1:**\n\n1. Calculate the initial discount:\n\n$200 x 15% = $30\nNew price = $200 - $30 = $170\n\n2. Apply the loyalty discount (only applies to purchases over $180):\n\nSince $170 is less than $180, there is no loyalty discount.\n\n3. Add tax:\n\n$170 x 8.5% = $14.45\nTotal cost so far = $170 + $14.45 = $184.45\n\n4. Add the gift card:\n\n$184.45 - $20 = $164.45\n\n5. Calculate the points value:\n\n500 points x $0.02 each = $10\n\n6. Subtract the points value from the total cost so far:\n\n$164.45 - $10 = $154.45\n\n7. Add cashback:\n\n$154.45 x 3% = $4.63\nTotal cost so far = $154.45 + $4.63 = $159.08\n\n8. Calculate the APR interest for 45 days:\n\n$200 x 22% = $44\nInterest = $44 / (365/45) ≈ $1.23\nTotal cost so far = $159.08 + $1.23 = $160.31\n\n**Problem 2:**\n\nFor each item, we'll apply the same discount structure.\n\nItem 1 ($200):\n\n1. Calculate the initial discount:\n\n$200 x 15% = $30\nNew price = $200 - $30 = $170\n\n2. Apply the loyalty discount (only applies to purchases over $180):\n\nSince $170 is less than $180, there is no loyalty discount.\n\n3. Add tax:\n\n$170 x 8.5% = $14.45\nTotal cost so far = $170 + $14.45 = $184.45\n\n4. Subtract the gift card:\n\n$184.45 - $20 = $164.45\n\n5. Calculate the points value:\n\n500 points x $0.02 each = $10\n\n6. Subtract the points value from the total cost so far:\n\n$164.45 - $10 = $154.45\n\n7. Add cashback:\n\n$154.45 x 3% = $4.63\nTotal cost so far = $154.45 + $4.63 = $159.08\n\n8. Calculate the APR interest for 45 days:\n\n$200 x 22% = $44\nInterest = $44 / (365/45) ≈ $1.23\nTotal cost so far = $159.08 + $1.23 = $160.31\n\nItem 2 ($150):\n\n1. Calculate the initial discount:\n\n$150 x 15% = $22.50\nNew price = $150 - $22.50 = $127.50\n\n2. Apply the loyalty discount (only applies to purchases over $180):\n\nSince $127.50 is less than $180, there is no loyalty discount.\n\n3. Add tax:\n\n$127.50 x 8.5% = $10.81\nTotal cost so far = $127.50 + $10.81 = $138.31\n\n4. Subtract the gift card:\n\n$138.31 - $20 = $118.31\n\n5. Calculate the points value:\n\n500 points x $0.02 each = $10\n\n6. Subtract the points value from the total cost so far:\n\n$118.31 - $10 = $108.31\n\n7. Add cashback:\n\n$108.31 x 3% = $3.25\nTotal cost so far = $108.31 + $3.25 = $111.56\n\n8. Calculate the APR interest for 45 days:\n\n$150 x 22% = $33\nInterest = $33 / (365/45) ≈ $1.09\nTotal cost so far = $111.56 + $1.09 = $112.65\n\nItem 3 ($300):\n\n1. Calculate the initial discount:\n\n$300 x 15% = $45\nNew price = $300 - $45 = $255\n\n2. Apply the loyalty discount (only applies to purchases over $180):\n\nSince $255 is greater than $180, apply the loyalty discount:\n\n$255 x 10% = $25.50\nNew price = $255 - $25.50 = $229.50\n\n3. Add tax:\n\n$229.50 x 8.5% = $19.45\nTotal cost so far = $229.50 + $19.45 = $248.95\n\n4. Subtract the gift card:\n\n$248.95 - $20 = $228.95\n\n5. Calculate the points value:\n\n500 points x $0.02 each = $10\n\n6. Subtract the points value from the total cost so far:\n\n$228.95 - $10 = $218.95\n\n7. Add cashback:\n\n$218.95 x 3% = $6.59\nTotal cost so far = $218.95 + $6.59 = $225.54\n\n8. Calculate the APR interest for 45 days:\n\n$300 x 22% = $66\nInterest = $66 / (365/45) ≈ $2.23\nTotal cost so far = $225.54 + $2.23 = $227.77\n\n**Comparison:**\n\nTo compare, we'll calculate the total cost of each scenario.\n\nScenario 1 (all three items together):\n\n$160.31 x 3 = $480.93\n\nScenario 2 (each item separately):\n\nItem 1: $159.08\nItem 2: $112.65\nItem 3: $227.77\nTotal: $479.50\n\nSince Scenario 2 is cheaper, buying each item separately is better.\n\n**Problem 4:**\n\nTo calculate the difference in savings after 5 years, we'll first calculate the total cost of each scenario:\n\nScenario 1 (all three items together):\n\n$480.93 x 5 = $2404.65\n\nScenario 2 (each item separately):\n\nItem 1: $159.08\nItem 2: $112.65\nItem 3: $227.77\nTotal: $479.50\n\nNow, let's calculate the interest earned on the savings:\n\nInitial savings = $480.93 - $2404.65 = -$1923.72 (we're losing money)\n\nInterest rate = 5% per year\nTime period = 5 years\n\nInterest earned = -$1923.72 x (1 + 0.05)^5 ≈ -$1939.19\n\nThe difference in savings after 5 years is approximately $15.47 ($1939.19 - $1923.72).",
+      "length": 4060
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:11:05.517739+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "Here are three benefits of exercise:\n\n1. **Improved Physical Health**: Regular exercise can help prevent chronic diseases such as heart disease, diabetes, and obesity. It can also improve sleep quality, boost the immune system, and increase energy levels.\n\n2. **Mental Well-being**: Exercise has been shown to have a positive impact on mental health, reducing symptoms of anxiety and depression. Physical activity releases endorphins, which are chemicals that act as natural painkillers and mood elevators.\n\n3. **Increased Productivity and Self-Esteem**: Regular exercise can improve cognitive function, including concentration and memory. It can also boost self-esteem and confidence, leading to a more positive outlook on life and improved overall quality of life.",
+      "length": 766
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:11:07.995031+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "Here are three benefits of exercise, formatted as bullet points starting with a verb:\n\n• Boosts energy levels\n• Improves mental clarity and focus\n• Enhances overall physical health",
+      "length": 180
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:11:10.701020+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "Here are three benefits of exercise, formatted as requested:\n\n• Boosts energy levels by increasing circulation and oxygenation of the body.\n• Enhances mental clarity and focus through increased production of brain-derived neurotrophic factor (BDNF).\n• Supports weight management by burning calories and building muscle mass.",
+      "length": 324
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:11:13.617011+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "Here are three benefits of exercise:\n\n1. - Reduces stress levels by 30% in just 20 minutes of moderate-intensity exercise (Source: Harvard Health Publishing)\n2. - Boosts energy levels by 47% after a 30-minute brisk walk (Source: Journal of Sports Science and Medicine)\n3. - Increases productivity by 21% with regular morning exercise, such as yoga or jogging (Source: American Psychological Association)\n\nSources:\n1. Harvard Health Publishing\n2. Journal of Sports Science and Medicine\n3. American Psychological Association",
+      "length": 522
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:11:16.546937+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "Here are three benefits of exercise:\n\n- Energize: Regular exercise boosts energy levels by 25% (American Heart Association, 2017).\n- Nourish: Exercise supports healthy weight management and reduces obesity risk by 30%.\n- Revitalize: Physical activity enhances mental clarity and focus, improving cognitive function.\n\nSynthesis: Exercise has a profound impact on overall well-being, fostering resilience and promoting vibrant living. By incorporating physical activity into daily routines, individuals can experience transformative benefits that extend far beyond the physical realm.",
+      "length": 582
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:11:19.359702+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "\"Today's weather is nice.\" or \"Today's weather is pleasant.\"\n\nAlternatively, you can also use:\n\n* \"\" (Ichi no ki wa suki desu) - This is a more formal way of saying it.\n* \"\" (Kyou no ki wa suki desu) - This means \"the weather today is nice\".\n\nNote: In Korean, the word for \"weather\" is \"\" (ki), and the verb \"to be\" is \"\" (desu).",
+      "length": 329
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:11:22.397100+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "Here's the translation:\n\n\"우리는 आपक의 지속적인 지원을 기대하며 미래의 협력에 대한 기대감을 가지고 있습니다.\"\n\nNote: I've used the formal Korean honorific suffix \"-ssi\" (-ssi) to maintain a formal register. If you'd like to use a more informal tone, I can suggest an alternative translation:\n\n\"우리는 आपक의 지속적인 지원을 기대하며 미래의 협력에 대한 기대감을 가지고 있습니다.\"\n\nThis translation uses the polite form of \"you\" (\"\"), which is suitable for formal or professional communication.",
+      "length": 423
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:11:25.975495+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "Here's the translation:\n\n\"회사는 교차로에 위치하고 있습니다. 우리는 본질적인 강점을 두 배로 확장하거나 더 넓은 Netz워크를 구축할 수 있습니다. 이사회는 밤의 오일을 불태우며, 그들이 더 나은Pasture를 향한 길을 결정하는 데 대한 논쟁을 벌이고 있습니다.\"\n\nNote: I've tried to preserve the metaphor and cultural nuance of the original sentence while using formal language suitable for a business or professional context. Here's a breakdown of my choices:\n\n* \"교차로\" (crossroads) is used instead of \"\" (fork in the road), which is more common in informal contexts.\n* \"\" (burning the midnight oil) is translated literally as \"\" (night's oil burning), to maintain the formal tone and avoid colloquialisms.\n* \"\" (greener pastures) is translated as \"\" (more fertile pasture), to use a more formal and technical expression.\n\nOverall, I hope this translation meets your requirements!",
+      "length": 779
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:11:31.285411+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "Here's a translation of the given text into Korean with formal register:\n\n\"가장 quý vị, 우리는 교차로에 서 있습니다. 시장은เรา에게 새로운 도전을 제시했지만, 모든 구름에는 은색의 선이 있습니다. 경쟁자는 laurels를 지키고 있지만, 우리는 중간 밤을 불태우고 있습니다. tôi 제안합니다. Q3에서 다시 그려보는 것이 좋고, 우리가 출발하는 momento에 강하게 나서야 합니다. 로마는 한 날에 세워지지 않았지만,เรา에는 시간이 없기 때문입니다.\"\n\nHere's a breakdown of the translation:\n\n* \"Ladies and gentlemen\" becomes \"\" (gukje ilgyo) to maintain formality.\n* \"We stand at a crossroads\" becomes \"\" (jojak-e issnaida) to use a more formal phrase for \"crossroads\".\n* \"The market has thrown us a curveball\" becomes \"\" (saenghwal-e jeonhwaga saram-e) to use a more formal phrase for \"curveball\".\n* \"But every cloud has a silver lining\" becomes \"\" (eobsneun gueum-e eobsneun silber lin-ing) to adapt the metaphor to Korean culture.\n* \"Our competitors are resting on their laurels\" becomes \"\" (gwall-eui jeonhwaga saram-e gong-ju-e issnaida) to use a more formal phrase for \"resting on their laurels\".\n* \"We have been burning the midnight oil\" becomes \"\" (midnight ilgyo-e bul-ta) to simplify the metaphor.\n* \"I propose we bite the bullet, go back to the drawing board for Q3\" becomes \"\" (jeong-ju-e issnaida, Q3-e jeonhwaga gyeol-e issnaida) to maintain formality and clarity.\n* \"And come out swinging\" becomes \"\" (gwa-e issnaida) to use a more formal phrase for \"come out swinging\".\n* \"Rome wasn't built in a day\" becomes \"\" (roma-e ilgyo-e issa-e issnaida) to adapt the reference to Korean culture.\n* \"But we don't have a day to lose\" becomes \"\" (eobsneun ilgyo-e issnaida) to simplify the phrase.\n\nThe translation maintains the rhetorical structure and metaphors, while adapting cultural references appropriately for a Korean executive audience.",
+      "length": 1693
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:11:39.013546+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "1. Korean formal register translation:\n\n\"가장 quý vị, 우리는 교차로에 서 있습니다. 시장은 우리에게 곡선이 주어졌지만 모든 구름에는 은색의 선이 있습니다. 경쟁자는 laurels를 지키고 있지만เรา에서는 밤을 지나고 일을 하며 지속하고 있습니다. 나는 우리가 버튼을咫지 않고, 3분기에서 다시 그려보는 것을 제안합니다. 그리고 우리는 강력하게 나와서 나아가야 합니다. pudding의 증거는 eating에 있습니다.\"\n\n2. Casual register alternative translation:\n\n\"Hey guys, we're at a tough spot. The market threw us a curveball, but there's always something good on the bright side. Our competitors are just resting on their past wins while we're grinding away. I think we should suck it up and go back to the drawing board for Q3. Then we can come out swinging and show them what we're made of.\"\n\n3. Idioms/metaphors with Korean equivalents:\n\n* \"stand at a crossroads\" - (가로지대다)\n* \"thrown us a curveball\" - (우리를 곡선으로 던져주다)\n* \"every cloud has a silver lining\" - (모든 구름에는 은색의 선이 있다)\n* \"burning the midnight oil\" - (밤을 지나고 일한다)\n* \"bite the bullet\" - (버튼을咫지다) / (가장 어려운 상황에 직면할 때, 가장 힘든 일도 하게 되다)\n* \"go back to the drawing board\" - (그려보는 보드에 돌아가다) / (새로운 아이디어를 brainstorm하기 위해 다시 시작한다)\n* \"come out swinging\" - (강력하게 나와서 나아가다)\n* \"proof of the pudding is in the eating\" - (pudding의 증거는 eating에 있다) / (실제로 어떤 것이จริง한지 확인하는 데는 실제로 사용하는 것만이 적절하다)\n\n4. Translatability rating:\n\n* \"stand at a crossroads\" - 5\n* \"thrown us a curveball\" - 3\n* \"every cloud has a silver lining\" - 5\n* \"burning the midnight oil\" - 4\n* \"bite the bullet\" - 5\n* \"go back to the drawing board\" - 5\n* \"come out swinging\" - 5\n* \"proof of the pudding is in the eating\" - 3\n\n5. Places where cultural adaptation is needed:\n\n1. Idiomatic expressions: Korean formal register uses more formal idioms, while casual register uses more colloquial expressions.\n2. Slang: Korean slang is different from English slang, and some words may not have direct equivalents.\n3. Cultural references: Some cultural references, such as the phrase \"burning the midnight oil,\" may not be familiar to Koreans.\n\n6. Back-translation:\n\n\"We are standing at a crossroads. The market has given us an unexpected turn, but there is always something good on the bright side. Our competitors are resting on their past successes while we have been working hard day and night. I propose that we take a difficult decision, go back to the drawing board for Q3, and come out strong. The proof of our pudding lies in eating it.\"\n\n7. Comparison with original:\n\n* \"stand at a crossroads\" remains the same\n* \"thrown us a curveball\" changed from \"thrown us a curveball\" to \"given us an unexpected turn\"\n* \"every cloud has a silver lining\" remained the same\n* \"burning the midnight oil\" changed from \"grinding away\" to \"working hard day and night\"\n* \"bite the bullet\" remained the same\n* \"go back to the drawing board\" remained the same\n* \"come out swinging\" remained the same\n* \"proof of the pudding is in the eating\" changed from \"pudding's proof is in the eating\" to \"the proof lies in eating it\"\n\nSemantic drift occurred in the following phrases:\n\n* \"thrown us a curveball\" (original: \"curveball\" implies an unexpected event, but Korean translation uses \"unexpected turn\")\n* \"burning the midnight oil\" (original: \"grinding away\" is more common in English, while Korean translation uses \"working hard day and night\")",
+      "length": 3175
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:11:41.787035+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "A classic example of deductive reasoning!\n\nWe can conclude that:\n\n1. All dogs are animals.\n2. Rex is a dog.\n\nUsing the principle of \"if-then\" (also known as modus ponens), we can infer that:\n\nIf all dogs are animals, and Rex is a dog, then...\n\nRex must be an animal.\n\nSo, we can conclude that Rex is an animal.",
+      "length": 310
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:11:44.738946+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "No, we cannot conclude that Tom is a manager based on the information provided.\n\nThe fact that all managers attend the Monday meeting does not necessarily mean that Tom is a manager, as it only tells us about his attendance at the Monday meeting. Similarly, the fact that some managers also attend the Friday meeting and Tom attends the Friday meeting does not provide enough evidence to conclude that Tom is a manager.\n\nWe would need more information about Tom's role or position within the organization to make an informed conclusion about whether he is a manager.",
+      "length": 566
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:11:48.277442+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "Let's break down the information step by step:\n\n1. All senior engineers know Python.\n2. Some senior engineers know Rust.\n3. All Rust developers work on the backend team.\n4. Maria works on the backend team and knows Python.\n\nFrom statement 3, we can conclude that all Rust developers are part of the backend team. Since Maria is a Rust developer (statement 4), she must also be part of the backend team.\n\nNow, let's consider statement 1: All senior engineers know Python. This means that if someone is a senior engineer, they must know Python. However, we don't have any information about Maria being a senior engineer or not.\n\nWe can conclude that Maria knows Python (statement 4), but we cannot conclude that she is a senior engineer based on the given information. There might be other engineers who also work on the backend team and know Python, but are not senior engineers.\n\nTherefore, we cannot conclude that Maria is a senior engineer solely based on the given information.",
+      "length": 980
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:11:52.201819+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "Let's analyze the given information:\n\n1. A is not next to B.\n2. C is next to both D and E.\n3. B is next to D.\n\nFrom (2), we know that C must be between D and E, in some order. Since there are only 5 people, this means that either D or E must be at the table, with C on one side of them. Let's assume without loss of generality that D is at the table.\n\nNow, from (3), we know that B is next to D. This means that B must be between D and C.\n\nThe only remaining person is A, who cannot be next to B (by (1)). Therefore, A must be on the other side of the table from B.\n\nSo, the order around the table is: E, C, D, B, A.\n\nNow, let's add person F:\n\nSince F must sit next to both A and B, we can place F between A and B. This means that F cannot be at either end of the table (since there would be no one on the other side).\n\nHowever, this creates a problem: if F is placed between A and B, then C will not be able to sit next to D, since C must be between D and E.\n\nTherefore, it is not possible to add person F without violating any of the given conditions.",
+      "length": 1053
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T02:11:57.555233+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "To solve this logic puzzle, we'll analyze each statement and constraint.\n\n1) If A is guilty, then B was at home: This implies that if A is not guilty, B must have been at home.\n2) If B was at home, then C saw D at the scene: This means that if B wasn't at home, C didn't see D at the scene.\n3) C says D was not at the scene: This statement can be true or false. We'll come back to it later.\n4) D says E was with F: If this is a lie, then E and F were alone.\n5) E says F was alone: If this is a lie, then F wasn't alone (i.e., E and/or others were with F).\n6) If F was alone, then A is not guilty: This implies that if F wasn't alone, A must be guilty.\n\nNow, let's analyze the constraints:\n\nExactly 2 of statements 3-5 are lies. Since D says E was with F (statement 4), and E says F was alone (statement 5), we have two possible scenarios:\n\nScenario 1: Statements 3-5 are true.\nIn this case, C's statement about D not being at the scene is true. This means that if B wasn't at home, C didn't see D at the scene.\n\nScenario 2: Statements 3-5 are false.\nIn this case, E and F were together (since statement 4 is a lie), which contradicts statement 6. Therefore, this scenario is not possible.\n\nNow, let's analyze Scenario 1:\n\nIf B wasn't at home (from statement 1), C didn't see D at the scene (from statement 2). This means that if A is guilty, then B was at home, but we know B wasn't at home. Therefore, A cannot be guilty.\n\nSince A is not guilty, F must be guilty (by statement 6).\n\nNow, let's find out who the other suspect is:\n\nIf E and F were together (as stated in scenario 1), C saw D at the scene (from statement 2). This means that if B wasn't at home, C saw D at the scene. Since A is not guilty, B must have been at home.\n\nTherefore, we have a unique solution: F is guilty, and B is innocent.\n\nThe lies are statements 4 and 5.\n\nThis puzzle has a unique solution because we can deduce that F is guilty based on the constraints and statements.",
+      "length": 1950
+    },
+    "score": 1.0
+  }
+]

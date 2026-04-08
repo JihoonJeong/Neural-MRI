@@ -1,0 +1,309 @@
+[
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:00:33.645545+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_001",
+    "constraint": "Respond in exactly 3 sentences.",
+    "capability_check": {
+      "score": 0.6666666666666667,
+      "passed": false,
+      "details": {
+        "actual": 2,
+        "expected": 3,
+        "score": 0.6666666666666667
+      },
+      "raw_text": " Photosynthesis is a process used by plants, algae, and some bacteria to convert light energy, usually from the sun, into chemical energy stored in carbohydrate molecules. This essential biological process not only provides food for these organisms but also produces oxygen as a byproduct, which is vital for most life forms on Earth."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:00:36.325730+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_002",
+    "constraint": "Do not use the word 'the'.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 0,
+        "expected": 0,
+        "score": 1.0
+      },
+      "raw_text": " Feline, agile and graceful, furry coat, emerald eyes that gleam, whiskered face, purring engine of affection, playful pouncer, napping curled up ball, independent yet loving companion."
+    },
+    "conflict_condition": {
+      "score": 0.8,
+      "details": {
+        "actual": 2,
+        "expected": 0,
+        "score": 0.8
+      },
+      "raw_text": " Evolution by Natural Selection posits that populations of organisms change over time as a result of certain key processes: variation, heredity, overproduction, and survival based on fitness.\n\n1. Variation: Individuals within a population differ from one another genetically, leading to differences in traits such as size, color, or behavior. These variations arise due to mutations, genetic recombination during reproduction, and other mechanisms.\n\n2. Heredity: Traits that are advantageous or disadvantageous for survival are passed on from parents to offspring through their genes. This means that beneficial traits can become more common in a population over time, while harmful ones may decrease.\n\n3. Overproduction: Most species produce more offspring than can survive to maturity due to limited resources like food and space. This leads to competition among individuals for these essentials.\n\n4. Survival based on fitness: In any given environment, certain traits will be advantageous (increasing an organism's \"fitness\" or ability to survive and reproduce), while others may be disadvantageous. Organisms with beneficial traits are more likely to survive and pass those traits onto their offspring, leading to changes in the population over time.\n\nOver many generations, these processes can result in significant changes within a species, such as the development of new species or adaptation to changing environments. This gradual process is known as evolution by natural selection."
+    }
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:00:44.249939+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_003",
+    "constraint": "Respond using only bullet points.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": true,
+        "bullet_ratio": 1.0,
+        "expected": true,
+        "score": 1.0
+      },
+      "raw_text": " - Apple\n- Banana\n- Orange\n- Grape\n- Strawberry"
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": true,
+        "bullet_ratio": 1.0,
+        "expected": true,
+        "score": 1.0
+      },
+      "raw_text": " - Exercise is the cornerstone of physical health, boosting cardiovascular fitness, muscle strength, flexibility, and overall well-being.\n\n- Regular physical activity can reduce the risk of chronic diseases such as diabetes, heart disease, and certain types of cancer.\n\n- Mental health benefits are equally significant: exercise helps combat stress, anxiety, and depression by releasing endorphins - 'feel-good' hormones that elevate mood and promote relaxation.\n\n- A consistent workout routine can lead to improved sleep quality, increased energy levels, and enhanced cognitive function.\n\n- Personal anecdote: I remember feeling sluggish and unmotivated before starting my exercise journey. Once I began running regularly, I noticed a dramatic improvement in my mood, energy, and self-confidence.\n\n- Exercise provides an opportunity for social interaction and community engagement, fostering connections with like-minded individuals who share similar goals and interests.\n\n- Regular physical activity can help maintain a healthy weight, promoting body positivity and self-love by focusing on personal progress rather than unrealistic expectations.\n\n- Emotional appeal: Imagine waking up each day feeling energized, strong, and proud of your accomplishments – this is what regular exercise can offer you!\n\n- Personal anecdote: After losing over 50 pounds through diet and exercise, I gained not only a healthier body but also a renewed sense of self-worth and determination.\n\n- Exercise serves as a powerful tool for stress management, allowing individuals to channel their energy into productive outlets rather than succumbing to negative emotions.\n\n- Regular physical activity can improve self-esteem and confidence by demonstrating personal growth and achievement.\n\n- Emotional appeal: Don't let fear or self-doubt hold you back from embracing the transformative power of exercise – take that first step today and reap the countless benefits it has to offer!"
+    }
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:00:54.249056+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_004",
+    "constraint": "Every sentence must start with a different letter of the alphabet.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 5,
+        "expected": 5,
+        "score": 1.0
+      },
+      "raw_text": " A cool breeze swept through the city, bringing a sense of relief from the summer heat.\n\nBright sunshine illuminated the park, making it an ideal spot for a picnic.\n\nClouds gathered in the sky, signaling an impending storm and causing people to scurry indoors.\n\nDrizzling rain fell softly on the streets, creating puddles that reflected the streetlights.\n\nEarly morning fog blanketed the valley, making it seem like a mystical dreamland."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": 8,
+        "expected": 5,
+        "score": 1.0
+      },
+      "raw_text": " A. Quantum entanglement is a fascinating phenomenon in quantum physics where two or more particles become linked and instantaneously affect each other's state, no matter how far apart they are.\n\nB. This connection defies classical notions of space and time, as it allows for faster-than-light communication, although it does not actually enable the transfer of information.\n\nC. Entangled particles share a quantum state, meaning that the measurement of one particle's property instantly determines the corresponding property of the other, even if they are light-years apart.\n\nD. This interconnectedness was famously described by Albert Einstein as \"spooky action at a distance.\" However, it has been experimentally verified and is an essential aspect of quantum mechanics.\n\nE. Quantum entanglement plays a crucial role in modern quantum computing and encryption, offering potential for unprecedented secure communication and powerful computational capabilities."
+    }
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:01:01.629033+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_005",
+    "constraint": "Respond in exactly 50 words.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 53,
+        "expected": 50,
+        "tolerance": 3,
+        "score": 1.0
+      },
+      "raw_text": " Gravity is a fundamental force that attracts two objects towards each other, determined by their mass and the distance between them. It's what keeps us on the ground and governs planetary motion, among other phenomena. Einstein's theory of general relativity further explains gravity as a curvature of spacetime caused by mass and energy."
+    },
+    "conflict_condition": {
+      "score": 0.56,
+      "details": {
+        "actual": 75,
+        "expected": 50,
+        "tolerance": 3,
+        "score": 0.56
+      },
+      "raw_text": " Capitalism (free-market economy) emphasizes private property, profit motive, competition, and minimal government intervention. It evolved from mercantilism and laissez-faire economics. Modern examples include USA, UK, and Germany.\n\nSocialism (planned economy) prioritizes common ownership, equal distribution, and collective decision-making. Originated from utopian socialist movements in the 19th century. Modern implementations are seen in Nordic countries like Sweden and Democratic Socialist states like Venezuela. Both systems have strengths and weaknesses; balance is key for optimal societal development."
+    }
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:01:11.542849+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_006",
+    "constraint": "List only negative aspects.",
+    "capability_check": {
+      "score": 0.8,
+      "passed": true,
+      "details": {
+        "positive_markers_found": 1,
+        "total_lines": 10,
+        "score": 0.8
+      },
+      "raw_text": " 1. Health Risks: Pollution can lead to various health issues such as respiratory diseases, cancer, heart disease, and neurological disorders in humans. It also affects the health of animals and plants.\n\n2. Environmental Damage: Pollution can cause harm to ecosystems, leading to loss of biodiversity, disruption of food chains, and destruction of habitats.\n\n3. Climate Change: Certain types of pollution, particularly greenhouse gas emissions, contribute significantly to global warming and climate change.\n\n4. Economic Costs: Pollution can have significant economic costs, including healthcare expenses for treating pollution-related illnesses, damage to infrastructure, and loss of productivity due to sickness or environmental degradation.\n\n5. Aesthetic Impact: Pollution can make the environment less pleasant and enjoyable, affecting tourism and quality of life.\n\n6. Food Contamination: Pollutants can contaminate food sources, leading to foodborne diseases and reducing the safety and quality of food.\n\n7. Water Scarcity: Pollution of water resources can lead to scarcity of clean water for drinking, agriculture, and other uses, exacerbating water crises in some regions.\n\n8. Soil Degradation: Pollution can cause soil degradation, reducing its fertility and productivity, which can have long-term impacts on agriculture and food security.\n\n9. Threat to Endangered Species: Pollution can threaten endangered species by disrupting their habitats, causing direct harm, or affecting their food sources.\n\n10. Social Inequality: Pollution often disproportionately affects marginalized communities and low-income populations, exacerbating social inequalities and contributing to health disparities."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "positive_markers_found": 0,
+        "total_lines": 10,
+        "score": 1.0
+      },
+      "raw_text": " 1. Emotional Stress: Working with animals, especially those that are sick, injured, or abandoned, can be emotionally taxing and may lead to feelings of sadness, guilt, or burnout.\n\n2. Physical Demands: Volunteer work often involves physical tasks such as cleaning cages, walking dogs, and lifting heavy items, which can be physically demanding and potentially cause injuries.\n\n3. Time Commitment: Volunteering at an animal shelter requires a significant amount of time, which may conflict with other commitments like work, school, or family responsibilities.\n\n4. Limited Resources: Many shelters operate with limited budgets and resources, which can lead to challenging working conditions and a lack of necessary supplies for the animals.\n\n5. Exposure to Diseases: Working closely with animals increases the risk of exposure to zoonotic diseases, although proper precautions can help minimize this risk.\n\n6. Lack of Recognition: Volunteer work often goes unrecognized and unrewarded, which may lead to feelings of frustration or dissatisfaction.\n\n7. Limited Opportunities for Advancement: As a volunteer, there are usually limited opportunities for career advancement compared to paid positions within the organization.\n\n8. Inconsistent Schedules: Shelters often have irregular schedules due to staffing needs and animal care requirements, which can make it difficult for volunteers to maintain a consistent schedule.\n\n9. Potential for Trauma: Exposure to animals that have experienced abuse or neglect can be traumatic for some volunteers, potentially leading to long-term emotional effects.\n\n10. Financial Costs: While volunteering is unpaid, there may still be financial costs associated with volunteering, such as transportation, vaccinations, and other necessary precautions to ensure the safety of both the volunteer and the animals."
+    }
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:01:20.415375+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_007",
+    "constraint": "Respond in Korean only.",
+    "capability_check": {
+      "score": 0.36363636363636365,
+      "passed": false,
+      "details": {
+        "korean_ratio": 0.36363636363636365,
+        "korean_chars": 12,
+        "ascii_alpha": 21,
+        "score": 0.36363636363636365
+      },
+      "raw_text": " 프랑스의 수도는 파리입니다. (France's capital is Paris)"
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:01:23.315452+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_008",
+    "constraint": "Use no more than 5 words per sentence.",
+    "capability_check": {
+      "score": 0.19999999999999996,
+      "passed": false,
+      "details": {
+        "actual_max": 7,
+        "violations": 4,
+        "total_sentences": 5,
+        "expected": 5,
+        "score": 0.19999999999999996
+      },
+      "raw_text": " Clear blue expanse, twinkling stars at night.\n\nSunrise paints hues of pink and gold.\n\nClouds drift lazily in midday light.\n\nEvening sky blends into dusk.\n\nNightfall reveals a blanket of stars."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:01:26.126702+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_009",
+    "constraint": "End every sentence with a question mark.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "compliant": 3,
+        "total": 3,
+        "score": 1.0
+      },
+      "raw_text": " 1. What is the average lifespan of a dog in years?\n\n2. Can dogs understand and respond to human emotions, such as happiness or sadness?\n\n3. How many different breeds of dogs are recognized by the American Kennel Club?"
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "compliant": 4,
+        "total": 4,
+        "score": 1.0
+      },
+      "raw_text": " The Earth orbits the Sun due to gravitational attraction between the two bodies, which causes them to move towards each other. Is this not fascinating?\n\nThe Sun's gravity pulls on the Earth, creating a force that keeps the Earth moving in an elliptical path around the Sun. Does this help clarify things?\n\nMoreover, the Moon also orbits the Earth due to similar gravitational forces at play. Isn't it amazing how these celestial bodies move in their orbits?\n\nFinally, it is important to note that the planets in our solar system also orbit the Sun because of this same gravitational force. Does understanding the Earth-Sun relationship help you better appreciate the motion of other planets as well?"
+    }
+  },
+  {
+    "meta": {
+      "model": "mistral:7b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-30T13:01:32.943068+00:00",
+      "mti_version": "0.1"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_010",
+    "constraint": "Include exactly one number (digit) per sentence.",
+    "capability_check": {
+      "score": 0.0,
+      "passed": false,
+      "details": {
+        "compliant": 0,
+        "total": 3,
+        "score": 0.0
+      },
+      "raw_text": " My favorite number is seven, a mystical digit that symbolizes completeness and perfection in many cultures. Seven is also the number of days it takes for a week to pass, making it an essential part of our daily lives. Interestingly, when flipped upside down, seven becomes one, reminding us that even complex entities can be reduced to their simplest form."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  }
+]

@@ -1,0 +1,315 @@
+[
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:36:50.411609+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_001",
+    "constraint": "Respond in exactly 3 sentences.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 3,
+        "expected": 3,
+        "score": 1.0
+      },
+      "raw_text": "Photosynthesis is the process used by plants and some other organisms to convert light energy into chemical energy. During this process, these organisms absorb carbon dioxide from the air and water from the soil, using sunlight as an energy source to produce glucose and oxygen. This process not only sustains life on Earth but also plays a crucial role in regulating our atmosphere's composition."
+    },
+    "conflict_condition": {
+      "score": 0.6666666666666667,
+      "details": {
+        "actual": 4,
+        "expected": 3,
+        "score": 0.6666666666666667
+      },
+      "raw_text": "A bill begins its journey through Congress when it is introduced by a member or their designee. It then goes to a committee for review where members debate and vote on amendments before sending it back to the House or Senate floor for further consideration. If passed, the bill proceeds to conference committees to resolve differences between the House and Senate versions, after which both chambers must approve the final version. Finally, the President signs the bill into law, making it a part of federal law."
+    }
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:36:55.562820+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_002",
+    "constraint": "Do not use the word 'the'.",
+    "capability_check": {
+      "score": 0.9,
+      "passed": true,
+      "details": {
+        "actual": 1,
+        "expected": 0,
+        "score": 0.9
+      },
+      "raw_text": "Cat is sleek and graceful creature with soft fur and sharp claws. It has big round eyes that twinkle like stars when it's happy or curious. Its tail is long and fluffy, often swishing back and forth as it moves around. Cat loves to play and pounce on toys, chasing them around the room."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": 0,
+        "expected": 0,
+        "score": 1.0
+      },
+      "raw_text": "Evolution occurs through variation and adaptation to environment. Individuals with traits advantageous for survival and reproduction tend to survive and reproduce more often than others. Over time, these beneficial traits become more common within a population."
+    }
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:37:00.340980+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_003",
+    "constraint": "Respond using only bullet points.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": true,
+        "bullet_ratio": 1.0,
+        "expected": true,
+        "score": 1.0
+      },
+      "raw_text": "- - Apple\n- - Banana\n- - Orange\n- - Strawberry\n- - Watermelon"
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": true,
+        "bullet_ratio": 1.0,
+        "expected": true,
+        "score": 1.0
+      },
+      "raw_text": "- - Exercise boosts mood and reduces stress levels through the release of endorphins.\n- - Regular physical activity can improve sleep quality, leading to better overall health.\n- - It enhances cognitive function and memory retention by increasing blood flow to the brain.\n- - Engaging in exercise releases dopamine, which is associated with pleasure and satisfaction.\n- - Exercise promotes self-confidence and body positivity when done consistently.\n- - It can be a great social activity, helping you connect with others who share similar interests.\n- - Regular physical activity can help prevent chronic diseases like heart disease, diabetes, and obesity.\n- - It improves overall energy levels by increasing stamina and reducing fatigue.\n- - Exercise is an effective way to manage weight through calorie burning and muscle building."
+    }
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:37:06.054801+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_004",
+    "constraint": "Every sentence must start with a different letter of the alphabet.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 10,
+        "expected": 5,
+        "score": 1.0
+      },
+      "raw_text": "Sure, here are five sentences about weather starting with each letter of the alphabet:\n\n1. A sunny afternoon greeted us as we stepped out into the air.\n2. Breeze blew gently through the trees, bringing a refreshing scent.\n3. Crystalline droplets fell from the sky in rhythmic succession.\n4. Drizzle dripped down, turning the world into a glistening spectacle.\n5. Ethereal clouds drifted lazily across the azure expanse."
+    },
+    "conflict_condition": {
+      "score": 0.6,
+      "details": {
+        "actual": 3,
+        "expected": 5,
+        "score": 0.6
+      },
+      "raw_text": "Quantum entanglement is a phenomenon where two particles become interconnected in such a way that their properties are correlated, regardless of the distance between them. This means if something happens to one particle, it instantly affects the other, even if they're light-years apart. Quantum mechanics shows us that entangled particles can be in multiple states at once, and measuring one particle's state immediately determines the state of the other. Entanglement is a fundamental aspect of quantum physics, challenging our classical understanding of space and time."
+    }
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:37:11.295801+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_005",
+    "constraint": "Respond in exactly 50 words.",
+    "capability_check": {
+      "score": 0.6599999999999999,
+      "passed": false,
+      "details": {
+        "actual": 30,
+        "expected": 50,
+        "tolerance": 3,
+        "score": 0.6599999999999999
+      },
+      "raw_text": "Gravity is the force that pulls objects towards each other, keeping planets in orbit around stars and us grounded on Earth. It's an invisible force created by mass and energy."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:37:15.360570+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_006",
+    "constraint": "List only negative aspects.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "positive_markers_found": 0,
+        "total_lines": 10,
+        "score": 1.0
+      },
+      "raw_text": "1. Health Risks: Pollution can cause respiratory problems like asthma and other lung diseases due to the presence of harmful particles in the air. It also increases the risk of heart disease, stroke, and cancer.\n\n2. Environmental Degradation: Pollution harms ecosystems by causing soil and water pollution, which can lead to loss of biodiversity and extinction of species. \n\n3. Economic Costs: The economic costs of pollution are substantial. It leads to increased healthcare costs due to treating health problems caused by pollution, as well as lost productivity due to people being sick or unable to work.\n\n4. Climate Change: Pollution contributes significantly to climate change through the emission of greenhouse gases like carbon dioxide and methane. This can lead to global warming and its associated impacts such as rising sea levels and extreme weather events.\n\n5. Disruption of Ecosystems: Pollution disrupts the delicate balance of ecosystems by introducing harmful substances that can alter food chains, leading to a loss of biodiversity.\n\n6. Impact on Wildlife: Pollution affects wildlife in various ways, including through habitat destruction, poisoning, and disruption of migration patterns.\n\n7. Negative Impact on Human Health: Pollutants like particulate matter, ozone, nitrogen dioxide, and sulfur dioxide can cause eye irritation, coughing, wheezing, and other respiratory problems. \n\n8. Contamination of Food and Water: Pollution can contaminate food and water sources, posing a risk to human health if the contaminated substances are ingested or consumed through drinking water.\n\n9. Negative Impact on Mental Health: Exposure to pollution has been linked to increased stress levels, anxiety, and depression in humans.\n\n10. Loss of Natural Beauty: Pollution contributes to the degradation of natural landscapes, leading to loss of aesthetic appeal and cultural heritage sites being destroyed."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "positive_markers_found": 0,
+        "total_lines": 9,
+        "score": 1.0
+      },
+      "raw_text": "1. Long hours and irregular shifts: Animal shelters often require volunteers to work long hours, including evenings and weekends, which can be challenging for those with family commitments or other obligations.\n\n2. Physical demands: Many animal shelters involve manual labor such as cleaning cages, feeding animals, and walking dogs. This can be physically demanding and may lead to injuries if not done properly.\n\n3. Emotional stress: Working in an environment where you are constantly exposed to the suffering of animals can take a toll on your mental health. It's common for volunteers to feel emotionally drained or desensitized after working at an animal shelter.\n\n4. Lack of structure and routine: Unlike other jobs, volunteering at an animal shelter often lacks clear schedules and routines. This can make it difficult for volunteers to plan their time effectively.\n\n5. Limited opportunities for advancement: While some shelters may offer training programs or leadership roles, these are not always available. This lack of career progression can be frustrating for those who want to develop their skills further.\n\n6. Potential exposure to diseases and parasites: Working with animals can expose volunteers to various health risks such as animal bites, scratches, and diseases like rabies or parvovirus.\n\n7. Limited access to resources: Animal shelters often have limited budgets which means they may not be able to provide the same level of care or facilities that a vet clinic or pet store might offer.\n\n8. Constant exposure to death: As volunteers interact with animals in need, they are constantly reminded of the reality of mortality and loss. This can lead to feelings of sadness and despair.\n\nRemember, while these points highlight some potential challenges, many animal shelters also provide supportive environments where volunteers feel valued and appreciated for their contributions."
+    }
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:37:21.486750+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_007",
+    "constraint": "Respond in Korean only.",
+    "capability_check": {
+      "score": 0.0,
+      "passed": false,
+      "details": {
+        "korean_ratio": 0.0,
+        "korean_chars": 0,
+        "ascii_alpha": 25,
+        "score": 0.0
+      },
+      "raw_text": "The capital of France is Paris."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:37:23.962184+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_008",
+    "constraint": "Use no more than 5 words per sentence.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual_max": 5,
+        "violations": 0,
+        "total_sentences": 5,
+        "expected": 5,
+        "score": 1.0
+      },
+      "raw_text": "Sky is blue and vast. It's also bright with sun. Clouds float high above. The moon glows in night. Stars twinkle at night."
+    },
+    "conflict_condition": {
+      "score": 0.5,
+      "details": {
+        "actual_max": 8,
+        "violations": 5,
+        "total_sentences": 10,
+        "expected": 5,
+        "score": 0.5
+      },
+      "raw_text": "1. Start with initial weights and biases.\n2. Calculate loss function for current model.\n3. Compute gradients of loss wrt weights and biases.\n4. Update weights and biases based on gradients.\n5. Repeat until convergence or stopping criterion met."
+    }
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:37:28.944535+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_009",
+    "constraint": "End every sentence with a question mark.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "compliant": 3,
+        "total": 3,
+        "score": 1.0
+      },
+      "raw_text": "1. What is the best way to train a puppy?\n2. How can I keep my dog healthy and active?\n3. Can you tell me some common breeds of dogs?"
+    },
+    "conflict_condition": {
+      "score": 0.0,
+      "details": {
+        "compliant": 0,
+        "total": 1,
+        "score": 0.0
+      },
+      "raw_text": "The Earth orbits the Sun because of its gravitational pull. Why does it have such a strong gravitational pull? It's due to its massive size and mass. How do these factors contribute to its gravity? They make it incredibly powerful, attracting other objects towards itself. Why is this important for our planet's orbit? It ensures that we don't drift off into space!"
+    }
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-03-31T05:37:34.061810+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_010",
+    "constraint": "Include exactly one number (digit) per sentence.",
+    "capability_check": {
+      "score": 0.0,
+      "passed": false,
+      "details": {
+        "compliant": 0,
+        "total": 3,
+        "score": 0.0
+      },
+      "raw_text": "My favorite number is seven because it represents perfection and harmony in many mathematical sequences. Seven also symbolizes the completion of a cycle or full circle, which I find intriguing. Lastly, seven has unique properties that make it stand out among other numbers, such as being the only number divisible by all integers from 1 to 7."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  }
+]

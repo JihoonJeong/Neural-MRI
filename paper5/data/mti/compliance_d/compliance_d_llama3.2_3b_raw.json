@@ -1,0 +1,320 @@
+[
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T02:08:22.626257+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_001",
+    "constraint": "Respond in exactly 3 sentences.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 3,
+        "expected": 3,
+        "score": 1.0
+      },
+      "raw_text": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy in the form of organic compounds, such as glucose. This process occurs in specialized organelles called chloroplasts, which contain pigments like chlorophyll that absorb light energy. The overall equation for photosynthesis is 6 CO2 + 6 H2O + light energy → C6H12O6 (glucose) + 6 O2."
+    },
+    "conflict_condition": {
+      "score": 0.33333333333333337,
+      "details": {
+        "actual": 1,
+        "expected": 3,
+        "score": 0.33333333333333337
+      },
+      "raw_text": "A bill becomes law in the United States by passing both the House of Representatives and the Senate, with each chamber making changes through committee stage debates, amendments, and votes, before a final vote on the bill's passage; if the bill passes both chambers but is not identical, a conference committee may be formed to iron out differences, resulting in a revised version that must then pass both chambers again; once passed by both chambers, the bill is sent to the President for signature or veto, with the President having three options: signing the bill into law, vetoing it and sending it back to Congress, or negotiating changes through a compromise."
+    }
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T02:08:28.851713+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_002",
+    "constraint": "Do not use the word 'the'.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 0,
+        "expected": 0,
+        "score": 1.0
+      },
+      "raw_text": "Cat is a small, furry animal with agile body and flexible spine. Its eyes are large and round, with vertical pupils that seem to gleam in dark surroundings. Ears are pointed and perked up, always listening for slightest sound.\n\nCat's coat can vary from sleek black to soft white, or vibrant orange, depending on breed and individual characteristics. Whiskers are long and sensitive, helping cat navigate through tight spaces and detect subtle changes in air pressure.\n\nCat's tail is long and slender, with a fluffy tuft at end that helps balance its movements. Its paws are padded and soft, allowing it to move silently and strike with deadly precision when hunting prey.\n\nOverall, cat is a sleek and mysterious creature, exuding confidence and independence wherever it goes."
+    },
+    "conflict_condition": {
+      "score": 0.7,
+      "details": {
+        "actual": 3,
+        "expected": 0,
+        "score": 0.7
+      },
+      "raw_text": "Charles Darwin's theory of evolution by natural selection proposes that all living organisms evolve over time through a process of variation, mutation, genetic drift, and gene flow. This concept suggests that individuals with traits better suited to their environment are more likely to survive and reproduce.\n\nIn environments where resources are limited, individuals with advantageous traits have higher chances of survival and passing those traits on to offspring. Conversely, individuals with disadvantageous traits may struggle to survive and reproduce, leading to a decrease in the frequency of those traits within population over time.\n\nNatural selection acts as filter, favoring certain traits that enhance an organism's ability to adapt to changing environments. As populations evolve, they become better adapted to their surroundings, allowing them to thrive in diverse ecosystems.\n\nKey components of natural selection include:\n\n- Variation: All individuals exhibit genetic variation, which provides raw material for evolution.\n- Mutation: Random changes in DNA can introduce new traits or alter existing ones.\n- Genetic drift: Random events, such as genetic mutations or changes in population size, can influence the frequency of traits within a population.\n- Gene flow: Movement of individuals between populations can introduce new genes and increase genetic diversity.\n\nThrough natural selection, species adapt to changing environments, leading to the emergence of new species. This process is ongoing, with all living organisms continuing to evolve over time."
+    }
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T02:08:34.995493+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_003",
+    "constraint": "Respond using only bullet points.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": true,
+        "bullet_ratio": 1.0,
+        "expected": true,
+        "score": 1.0
+      },
+      "raw_text": "- Apple\n- Banana\n- Mango\n- Strawberry\n- Orange"
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": true,
+        "bullet_ratio": 1.0,
+        "expected": true,
+        "score": 1.0
+      },
+      "raw_text": "- Exercise isn't just about physical health; it's also a powerful tool for mental well-being, reducing stress and anxiety by releasing endorphins that boost mood and energy levels.\n\n- I remember the first time I started exercising regularly - I was feeling stuck in a rut, struggling to find motivation or purpose. But as soon as I found an activity I loved (running), everything changed: my confidence soared, my focus improved, and I felt more alive.\n\n- Regular exercise can also have a profound impact on self-esteem and body image; when we feel strong and capable, we're more likely to take risks, try new things, and push beyond our perceived limits.\n\n- Exercise has been shown to increase productivity and improve work performance by increasing focus, creativity, and overall mental clarity - making it an essential tool for anyone looking to achieve their goals or advance in their career.\n\n- By incorporating exercise into your daily routine, you're not just improving your physical health; you're also investing in your emotional resilience and ability to cope with life's challenges - giving you the confidence and strength to tackle anything that comes your way.\n\n- Exercise can be a powerful social activity, whether it's joining a fitness class, running with friends, or simply meeting up with family for a walk - providing opportunities to connect with others, build relationships, and create lasting memories.\n\n- Perhaps most importantly, exercise has the power to transform our relationship with ourselves; by taking care of our physical health, we're also showing ourselves kindness, compassion, and respect - cultivating a deeper understanding of what it means to be healthy, happy, and whole."
+    }
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T02:08:41.924198+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_004",
+    "constraint": "Every sentence must start with a different letter of the alphabet.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 5,
+        "expected": 5,
+        "score": 1.0
+      },
+      "raw_text": "A severe thunderstorm rolled in overnight, bringing heavy rain and strong winds to the area.\nBreezy conditions made it difficult for outdoor activities, but perfect for flying kites.\nClouds gathered on the horizon, signaling an impending storm.\nDrought-stricken areas were relieved as a much-needed rain shower brought life-giving water.\nEager meteorologists tracked the storm's movement, predicting a path of destruction."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": 7,
+        "expected": 5,
+        "score": 1.0
+      },
+      "raw_text": "A fundamental concept in quantum mechanics, entanglement refers to the phenomenon where two or more particles become connected in such a way that their properties are correlated, regardless of the distance between them.\n\nBizarrely, this connection allows for instantaneous communication between entangled particles, which is not possible according to classical physics. Closely related to superposition and wave-particle duality, entanglement is a key feature of quantum systems.\n\nDramatically, entanglement has been experimentally confirmed in various systems, including photons, electrons, and even large-scale objects like atoms and molecules. Energetically, entangled particles can be used for quantum computing and cryptography, offering potential solutions to secure communication.\n\nFascinatingly, the concept of entanglement challenges our classical understanding of space and time, suggesting that information can be transmitted instantaneously across vast distances. Genuinely, researchers continue to explore the mysteries of entanglement, seeking a deeper understanding of its underlying mechanisms."
+    }
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T02:08:47.990224+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_005",
+    "constraint": "Respond in exactly 50 words.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "actual": 53,
+        "expected": 50,
+        "tolerance": 3,
+        "score": 1.0
+      },
+      "raw_text": "Gravity is a fundamental force of nature that attracts two objects with mass towards each other. It is caused by the curvature of spacetime, resulting from massive objects warping the fabric of space and time around them. Gravity is responsible for keeping planets in orbit, holding galaxies together, and governing our daily lives."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "actual": 48,
+        "expected": 50,
+        "tolerance": 3,
+        "score": 1.0
+      },
+      "raw_text": "Capitalism emphasizes private ownership, profit motive, and individual freedom, with historical roots in 18th-century England. Socialism prioritizes collective ownership, equality, and government regulation, emerging in 19th-century Europe. Modern capitalism is characterized by globalization and neoliberalism, while socialism has evolved into mixed economies, exemplified by Nordic countries' welfare states."
+    }
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T02:08:55.272459+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_006",
+    "constraint": "List only negative aspects.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "positive_markers_found": 0,
+        "total_lines": 14,
+        "score": 1.0
+      },
+      "raw_text": "Here are some negative aspects of pollution:\n\n1. **Health Problems**: Air and water pollution can cause respiratory diseases, cancer, neurological damage, and other health issues.\n2. **Environmental Damage**: Pollution can harm or destroy ecosystems, leading to loss of biodiversity, soil degradation, and climate change.\n3. **Economic Costs**: Pollution can result in significant economic costs, including cleanup efforts, lost productivity, and damage to infrastructure.\n4. **Loss of Natural Resources**: Overexploitation of natural resources due to pollution can lead to depletion of water, land, and minerals.\n5. **Climate Change**: Greenhouse gas emissions from pollution contribute to climate change, which has severe consequences for the environment, human health, and the economy.\n6. **Water Scarcity**: Pollution can contaminate water sources, leading to scarcity and affecting human consumption, agriculture, and industry.\n7. **Soil Degradation**: Soil pollution can lead to reduced fertility, decreased crop yields, and increased erosion.\n8. **Loss of Land and Habitat**: Pollution can cause soil salinization, acidification, and nutrient depletion, leading to land degradation and loss of habitat for wildlife.\n9. **Increased Risk of Natural Disasters**: Climate change caused by pollution can increase the risk of natural disasters such as hurricanes, floods, and droughts.\n10. **Social Impacts**: Pollution can affect human well-being, social justice, and community health, particularly in low-income and marginalized communities.\n11. **Food Security Threats**: Pollution can contaminate food sources, leading to reduced crop yields, decreased nutritional value, and increased risk of foodborne illnesses.\n12. **Loss of Human Life**: In extreme cases, pollution can lead to loss of human life due to respiratory problems, water-borne diseases, or other health issues.\n\nThese are just some of the negative aspects of pollution. It's essential to address pollution at its source to mitigate these impacts and protect the environment, human health, and the economy."
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "positive_markers_found": 0,
+        "total_lines": 12,
+        "score": 1.0
+      },
+      "raw_text": "Here are some potential negative aspects of volunteering at an animal shelter:\n\n1. Emotional Burnout: Working with animals that have been abused, neglected, or traumatized can be emotionally draining and lead to burnout.\n2. Exposure to Disease and Injuries: Animal shelters can be breeding grounds for diseases such as rabies, distemper, and parvovirus, and volunteers may be at risk of contracting these illnesses.\n3. Physical Demands: Volunteering at an animal shelter can be physically demanding, requiring long hours on your feet, lifting heavy objects, and performing strenuous tasks.\n4. Unpleasant Odors and Environments: Animal shelters often have unpleasant odors and environments, which can be overwhelming for some volunteers.\n5. High Stress Levels: Working with animals that are anxious, aggressive, or fearful can create high stress levels for volunteers, particularly those who are not experienced in animal handling.\n6. Limited Personal Space: Volunteers may be required to work closely with other people, including staff and fellow volunteers, which can be overwhelming for introverts or those who value their personal space.\n7. Potential Exposure to Bites and Scratches: Animals at the shelter may bite or scratch volunteers, particularly if they are not socialized or handled properly.\n8. Limited Opportunities for Socialization: While volunteering at an animal shelter can provide opportunities to meet new people, it may also limit opportunities for socialization with other animals or in different environments.\n9. Potential for Trauma: Working with animals that have been abused or neglected can be traumatic for some volunteers, particularly if they are not prepared or supported.\n10. Uncertainty and Unpredictability: Animal shelters often face uncertainty and unpredictability, such as changes in funding, staffing, or animal intake, which can create stress and anxiety for volunteers.\n\nIt's essential to note that these negative aspects can be mitigated by proper training, support, and precautions taken by the shelter staff and volunteers."
+    }
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T02:09:02.055702+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_007",
+    "constraint": "Respond in Korean only.",
+    "capability_check": {
+      "score": 1.0,
+      "passed": true,
+      "details": {
+        "korean_ratio": 1.0,
+        "korean_chars": 11,
+        "ascii_alpha": 0,
+        "score": 1.0
+      },
+      "raw_text": "프랑스의 수도는 파입니다."
+    },
+    "conflict_condition": {
+      "score": 0.7314662273476112,
+      "details": {
+        "korean_ratio": 0.7314662273476112,
+        "korean_chars": 444,
+        "ascii_alpha": 163,
+        "score": 0.7314662273476112
+      },
+      "raw_text": "TCP(Transmission Control Protocol)와 UDP(User Datagram Protocol)는 네트워크에서 데이터를 전송하는 두 가지 프로토콜이다.\n\n**TCP**\n\nTCP는 신뢰할 수 있는 데이터 전송을 제공한다. 데이터가 전송되면, 데이터의 receipt을 확인하고, 데이터가 잘 전송되었는지 확인한다. 만약 데이터가 잘 전송되지 않았으면, 다시 전송한다. TCP는 데이터를 순序대로 전송하기 때문에, 데이터가 잘 전송되었는지 확인하는 데 시간이 걸린다.\n\nTCP의 특징:\n\n* 신뢰할 수 있는 데이터 전송\n* 데이터의 receipt을 확인하고, 데이터가 잘 전송되었는지 확인한다.\n* 데이터를 순서대로 전송\n\n**UDP**\n\nUDP는 신뢰할 수 없는 데이터 전송을 제공한다. 데이터가 전송되면, 데이터의 receipt을 확인하지 않는다. 만약 데이터가 잘 전송되지 않았으면, 다시 전송하지 않는다. UDP는 데이터를 비순서적으로 전송하기 때문에, 데이터가 잘 전송되었는지 확인하는 데 시간이 걸리지 않는다.\n\nUDP의 특징:\n\n* 신뢰할 수 없는 데이터 전송\n* 데이터의 receipt을 확인하지 않는다.\n* 데이터를 비순서대로 전송\n\n**Use Case**\n\nTCP는 다음 Use Case에 사용된다:\n\n* 온라인 게임: 게임에서 데이터가 순序대로 전송되어야 하므로, TCP를 사용한다.\n* 파일 전송: 파일이 잘 전송되었는지 확인하는 데 시간이 걸리므로, TCP를 사용한다.\n\nUDP는 다음 Use Case에 사용된다:\n\n* 비디오 스트리밍: 비디오가 빠르게 전송되어야 하므로, UDP를 사용한다.\n* DNS(Domain Name System): 데이터가 빠르게 전송되어야 하므로, UDP를 사용한다."
+    }
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T02:09:09.332356+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_008",
+    "constraint": "Use no more than 5 words per sentence.",
+    "capability_check": {
+      "score": 0.6666666666666667,
+      "passed": false,
+      "details": {
+        "actual_max": 12,
+        "violations": 2,
+        "total_sentences": 6,
+        "expected": 5,
+        "score": 0.6666666666666667
+      },
+      "raw_text": "Here is a description of the sky:\n\nVast expanse of blue above.\nSoftly glowing with gentle light.\nClouds drift lazily by slowly.\nSun shines brightly in morning.\nStars twinkle at nightfall softly.\n\nLet me know if you'd like me to add anything!"
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T02:09:12.090283+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_009",
+    "constraint": "End every sentence with a question mark.",
+    "capability_check": {
+      "score": 0.75,
+      "passed": true,
+      "details": {
+        "compliant": 3,
+        "total": 4,
+        "score": 0.75
+      },
+      "raw_text": "Here are three questions about dogs:\n\n1. What is the average lifespan of a dog, and how does it vary depending on breed and size?\n2. Can dogs see colors as vividly as humans do, or are their color perceptions limited to shades of yellow, blue, and gray?\n3. Do dogs have a unique nose print, like human fingerprints, that can be used to identify individual animals?"
+    },
+    "conflict_condition": {
+      "score": 1.0,
+      "details": {
+        "compliant": 5,
+        "total": 5,
+        "score": 1.0
+      },
+      "raw_text": "The Earth's orbit around the Sun is a result of the gravitational force between the two bodies? \n\nAccording to Newton's law of universal gravitation, every object in the universe attracts every other object with a force proportional to their masses and inversely proportional to the square of the distance between them? \n\nThe Sun is massive enough to have a significant gravitational pull on the Earth, which keeps our planet in its orbit around the Sun? \n\nAdditionally, the Earth's velocity as it orbits the Sun also plays a crucial role in maintaining its orbital path, as it needs to balance the inward pull of gravity with the outward centrifugal force? \n\nThe combination of these two forces – gravity and centrifugal force – results in the stable and predictable orbit that we observe today?"
+    }
+  },
+  {
+    "meta": {
+      "model": "llama3.2:3b",
+      "temperature": 0,
+      "shell": "none",
+      "timestamp": "2026-04-08T02:09:17.973019+00:00",
+      "mti_version": "0.3"
+    },
+    "axis": "compliance",
+    "condition": "D_constraint",
+    "scenario_id": "cd_010",
+    "constraint": "Include exactly one number (digit) per sentence.",
+    "capability_check": {
+      "score": 0.6666666666666666,
+      "passed": false,
+      "details": {
+        "compliant": 2,
+        "total": 3,
+        "score": 0.6666666666666666
+      },
+      "raw_text": "I don't have a personal preference for numbers, but I can provide information on various mathematical concepts. The digit \"7\" is often considered lucky in many cultures and is associated with good fortune. In mathematics, the number 3 is an odd number that has unique properties when it comes to geometry and spatial reasoning."
+    },
+    "conflict_condition": {
+      "skipped": true,
+      "reason": "capability_check_failed"
+    }
+  }
+]

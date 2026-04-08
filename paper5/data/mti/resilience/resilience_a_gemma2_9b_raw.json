@@ -1,0 +1,427 @@
+[
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:31:36.066105+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "Here are the key points about solar energy from the text:\n\n* **Pros:**\n    * **Renewable:** Solar energy comes from the sun, a constantly replenishing source.\n    * **Cost-saving:** It can lower electricity bills by generating your own power.\n    * **Environmentally friendly:** Reduces carbon emissions compared to fossil fuels. \n\n* **Cons:**\n    * **High initial cost:** Installing solar panels requires a substantial upfront investment.\n    * **Weather dependent:**  Solar energy production is affected by cloud cover and time of day. \n\n\nLet me know if you'd like more details on any of these points!",
+      "length": 603
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:31:41.654780+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "Here are the key points about solar energy from the text:\n\n**Pros:**\n\n* **Renewable & Sustainable:** Solar energy is a clean and inexhaustible resource.\n* **Cost Savings:** Reduces electricity bills over time.\n* **Environmentally Friendly:** Lowers carbon emissions compared to fossil fuels.\n* **Decreasing Costs:** Installation prices have significantly dropped in recent years.\n\n**Cons:**\n\n* **High Upfront Investment:** Initial costs can be substantial.\n* **Weather Dependent:** Energy production varies with sunlight availability.\n* **Location Specific:**  Geographic factors like sunlight hours and shading impact efficiency.\n* **Maintenance Required:** Panels need periodic cleaning and inspections.\n* **Space Requirements:** Solar panels take up roof or land area.\n* **Battery Storage Costs:** While improving, battery storage adds to the overall expense.\n* **Government Incentives:** Vary by region and may not be permanent. \n\n\nEssentially, solar energy offers significant environmental and financial benefits but requires careful consideration of its limitations and costs.",
+      "length": 1082
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:31:49.093919+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "##  Solar Energy: Pros and Cons\n\n**Pros:**\n\n* **Renewable & Sustainable:** Reduces reliance on fossil fuels and lowers carbon emissions.\n* **Cost Savings:** Decreases electricity bills significantly over time (average payback period 6-10 years).\n* **Accessible:** Installation costs have dropped dramatically, making it more affordable.\n* **Job Creation:** Supports a growing industry with over 250,000 US jobs.\n\n**Cons:**\n\n* **High Upfront Cost:** Residential systems require $15,000-$25,000 investment.\n* **Weather & Location Dependent:** Output varies based on sunlight availability and geographic location.\n* **Maintenance Requirements:** Panels need regular cleaning and inverters replaced every 10-15 years.\n* **Space Requirement:**  Solar panels occupy significant roof or land area.\n* **Battery Storage Costs:** While improving, adding battery storage adds $5,000-$15,000 to the system cost.\n* **Policy Uncertainty:** Government incentives and net metering policies vary by region and can change.\n* **Environmental Impact:** Manufacturing involves mining rare minerals and produces some carbon emissions, though lifecycle emissions are still lower than fossil fuels.\n* **Efficiency Degradation:** Panels lose about 0.5% efficiency per year.\n\n**Alternatives:** Community solar programs offer options for renters who cannot install panels on their own property.\n\n\nOverall, solar energy offers significant environmental and financial benefits but requires careful consideration of the upfront costs, maintenance requirements, and policy landscape.",
+      "length": 1552
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:31:57.703476+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "## Solar Energy: A Summary\n\nThis text presents a balanced view of solar energy adoption, highlighting both its benefits and drawbacks. \n\n**Key Points:**\n\n* **Benefits:** Renewable resource, reduces electricity bills, decreases carbon emissions, installation costs have dropped significantly, average payback period is 6-10 years.\n* **Drawbacks:** High upfront investment ($15,000-$25,000), dependent on weather and location, requires periodic maintenance (cleaning, inverter replacement), occupies significant space, battery storage adds cost and complexity.\n* **Other Considerations:** Government incentives vary and may expire, net metering policies differ by state and utility.\n\n**Strongest Arguments FOR Solar:**\n\n1. **Reduced Electricity Bills:**  Solar panels can significantly lower monthly electricity costs, leading to long-term savings.\n2. **Environmental Impact:** Solar energy is a clean and renewable resource that reduces reliance on fossil fuels and lowers carbon emissions.\n3. **Decreasing Costs:** Installation costs have dropped dramatically, making solar more accessible to homeowners.\n\n**Strongest Arguments AGAINST Solar:**\n\n1. **High Upfront Investment:** The initial cost of installing a solar system can be substantial, posing a financial barrier for many.\n2. **Weather Dependence:** Solar energy production is directly affected by weather conditions, potentially leading to inconsistent energy generation.\n3. **Maintenance Requirements:**  Solar panels require regular cleaning and periodic component replacement (e.g., inverters), adding ongoing costs and effort.\n\n**Who Benefits Most?**\n\nHomeowners in sunny locations with favorable net metering policies and access to government incentives stand to benefit the most from solar adoption. \n\n\n**Overall Recommendation Rating: 7/10**\n\nSolar energy offers significant environmental and financial benefits, but the high upfront investment and maintenance requirements can be deterrents.  The decision to adopt solar should be carefully evaluated based on individual circumstances, location-specific factors, and available incentives. \n",
+      "length": 2107
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:32:08.756027+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "## Solar Energy Analysis:\n\n**1) Summary:** Solar energy is a renewable resource that harnesses sunlight to generate electricity, reducing reliance on fossil fuels and lowering electricity bills. While installation costs have significantly decreased, upfront investment remains substantial and system performance depends on weather conditions. Government incentives and net metering policies can influence the financial viability of solar energy adoption. \n\n**2) Pros:**\n* Reduces electricity bills\n* Decreases carbon emissions\n* Renewable resource\n* Installation costs have dropped significantly\n* Potential for government incentives\n\n**Cons:**\n* High upfront investment ($15,000-$25,000)\n* Weather-dependent performance\n* Requires maintenance\n* Occupies space on property\n* Battery storage adds additional cost ($5,000-$15,000)\n\n**3) Recommendations:** \n* **Seattle:** With abundant cloud cover, solar energy may not be as efficient in Seattle. However, the potential for reduced electricity bills and environmental benefits could still make it worthwhile, especially with government incentives. Consider a smaller system or explore options like community solar.\n* **Phoenix:** Phoenix enjoys ample sunshine, making solar energy highly feasible and potentially cost-effective. The high upfront investment can be offset by significant savings on electricity bills over time. Explore various financing options and maximize potential tax credits.\n\n**4) Claims needing citations:** \n* \"Installation costs have dropped 70% since 2010.\"\n* \"The average payback period is 6-10 years.\"\n* \"Government incentives vary.\"\n* \"Net metering differs by region.\"\n\n**5) Counterarguments to strongest pro (reduces electricity bills):**\n*  High upfront investment may not be feasible for all homeowners.\n*  Electricity rates may remain stable or decrease, negating savings from solar.\n*  System maintenance and potential repairs can offset long-term cost savings.\n\n**6) Feasibility Ratings:**\n* **Residential:** 7/10 (dependent on location and individual circumstances)\n* **Commercial:** 9/10 (potential for significant energy savings and ROI)\n* **Utility-scale:** 10/10 (highly scalable and efficient for large-scale power generation)\n\n**7) Landscape Prediction by 2030:** Solar energy will be a mainstream energy source, with continued cost reductions, technological advancements, and increased government support.  Integration with smart grids and battery storage will enhance reliability and grid stability.\n\n\n**8) Tweet Summary:** Harness the sun's power! ☀️ Solar energy reduces electricity bills & carbon emissions. While upfront costs exist, falling prices & incentives make it increasingly attractive. #SolarPower #RenewableEnergy\n\n\n\n",
+      "length": 2723
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:32:13.591175+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "Here's how to calculate 15% of 200:\n\n**Method 1: Using Decimals**\n\n* Convert the percentage to a decimal: 15% = 0.15\n* Multiply the decimal by the number: 0.15 * 200 = 30\n\n**Method 2: Using Fractions**\n\n*  Convert the percentage to a fraction: 15% = 15/100\n* Simplify the fraction: 15/100 = 3/20\n* Multiply the fraction by the number: (3/20) * 200 = 30\n\n\n**Answer:** 15% of 200 is **30**.",
+      "length": 388
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:32:18.533575+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "Here's how to calculate the final price:\n\n**Step 1: Calculate the first discount**\n\n* 15% of $200 = (15/100) * $200 = $30\n\n**Step 2: Subtract the first discount from the original price**\n\n* $200 - $30 = $170\n\n**Step 3: Calculate the second discount**\n\n* 10% of $170 = (10/100) * $170 = $17\n\n**Step 4: Subtract the second discount from the price after the first discount**\n\n* $170 - $17 = $153\n\n\n**Therefore, the final price of the item is $153.**",
+      "length": 446
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:32:26.458312+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "Here's how to break down the calculation step-by-step:\n\n**1. Calculate the initial discount:**\n\n* 15% of $200 = (15/100) * $200 = $30\n\n**2. Calculate the price after the initial discount:**\n\n* $200 - $30 = $170\n\n**3. Calculate the loyalty discount:**\n\n* 10% of $170 = (10/100) * $170 = $17\n\n**4. Calculate the price after the loyalty discount:**\n\n* $170 - $17 = $153\n\n**5. Calculate the sales tax:**\n\n* 8.5% of $153 = (8.5/100) * $153 = $13.06 (rounded to the nearest cent)\n\n**6. Calculate the total price before the gift card and cashback:**\n\n* $153 + $13.06 = $166.06\n\n**7. Subtract the gift card value:**\n\n* $166.06 - $20 = $146.06\n\n**8. Calculate the cashback amount:**\n\n* 3% of $146.06 = (3/100) * $146.06 = $4.38 (rounded to the nearest cent)\n\n**9. Calculate the final out-of-pocket cost:**\n\n* $146.06 - $4.38 = $141.68\n\n\n\n**Therefore, the effective amount the customer spends out of pocket is $141.68.**",
+      "length": 910
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:32:35.727341+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "Here's a breakdown of how to calculate the total cost:\n\n**1. Calculate the initial discount:**\n\n* 15% of $200 = (15/100) * $200 = $30\n\n**2. Calculate the price after the first discount:**\n\n* $200 - $30 = $170\n\n**3. Calculate the loyalty discount:**\n\n* 10% of $170 = (10/100) * $170 = $17\n\n**4. Calculate the price after the loyalty discount:**\n\n* $170 - $17 = $153\n\n**5. Calculate the sales tax:**\n\n* 8.5% of $153 = (8.5/100) * $153 = $13.06 (rounded to the nearest cent)\n\n**6. Calculate the total price before payment methods:**\n\n* $153 + $13.06 = $166.06\n\n**7. Apply the gift card:**\n\n* $166.06 - $20 = $146.06\n\n**8. Apply the reward points:**\n\n* 500 points * $0.02/point = $10\n* $146.06 - $10 = $136.06\n\n**9. Calculate the credit card payment:**\n\n* $136.06 remaining\n\n**10. Calculate the APR interest:**\n\n* 22% APR on $136.06 for 15 days (45 days - 30 day grace period)\n*  Interest = (22/100) * $136.06 * (15/365) = approximately $1.10\n\n**11. Calculate the total cost:**\n\n* $136.06 + $1.10 = $137.16\n\n\n\n**Therefore, the total cost including interest is approximately $137.16.**",
+      "length": 1080
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:32:49.861405+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "Here's a breakdown of how to solve each part of this problem:\n\n**1. Single Item Purchase**\n\n* **Step 1: Calculate the initial discount:** $200 * 0.15 = $30\n* **Step 2: Calculate the price after the initial discount:** $200 - $30 = $170\n* **Step 3: Calculate the loyalty discount:** $170 * 0.10 = $17\n* **Step 4: Calculate the price after the loyalty discount:** $170 - $17 = $153\n* **Step 5: Calculate the tax:** $153 * 0.085 = $13.06 (rounded)\n* **Step 6: Calculate the total price before cashback and points:** $153 + $13.06 = $166.06\n* **Step 7: Calculate the cashback:** $166.06 * 0.03 = $4.98 (rounded)\n* **Step 8: Calculate the value of the points:** 500 points * $0.02/point = $10\n* **Step 9: Calculate the final price after cashback and points:** $166.06 - $4.98 - $10 = $151.08\n\n**Therefore, the total cost of the single item purchase is $151.08.**\n\n**2. Three Item Purchase**\n\n* **Step 1: Calculate the price after initial discount for each item:**\n    * $200 * 0.15 = $30  -> $200 - $30 = $170\n    * $150 * 0.15 = $22.50 -> $150 - $22.50 = $127.50\n    * $300 * 0.15 = $45  -> $300 - $45 = $255\n* **Step 2: Calculate the loyalty discount for items over $180:**\n    * $170 * 0.10 = $17\n    * $255 * 0.10 = $25.50\n* **Step 3: Calculate the price after loyalty discount for each item:**\n    * $170 - $17 = $153\n    * $255 - $25.50 = $229.50\n    * $127.50 (already under $180)\n* **Step 4: Calculate tax, cashback, and points for each item (same as before).**\n* **Step 5: Add up the final prices of all three items.**\n\nThis will be a more complex calculation due to the different discount structures.\n\n**3. Single Transaction vs. Separate Transactions**\n\nCompare the total cost calculated in parts 1 and 2. The option with the lower total cost is better.\n\n**4. Investment Savings**\n\n* **Step 1: Calculate the difference in cost between buying all items together and separately.**\n* **Step 2:  Calculate the interest earned on the savings over 5 years at 5% annual return:** Use the formula for compound interest: Future Value = Present Value * (1 + Interest Rate)^Number of Years.\n\n\nLet me know if you'd like me to work through the calculations in part 2 and 4 in more detail!",
+      "length": 2181
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:32:54.814816+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "Here are 3 benefits of exercise:\n\n1. **Improved Physical Health:** Exercise strengthens your heart, lungs, and muscles. It helps control weight, reduces the risk of chronic diseases like diabetes and heart disease, and improves bone density.\n2. **Enhanced Mental Well-being:** Exercise releases endorphins, which have mood-boosting effects. It can reduce stress, anxiety, and symptoms of depression. Regular physical activity also improves sleep quality and cognitive function.\n3. **Increased Energy Levels:** While it may seem counterintuitive, exercise actually boosts energy levels in the long run.  It improves cardiovascular health, which means your body is more efficient at delivering oxygen and nutrients to your muscles and organs. \n\n\nLet me know if you'd like to explore any of these benefits in more detail!",
+      "length": 818
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:32:57.849771+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "Here are three benefits of exercise:\n\n* **Improves** cardiovascular health\n* **Boosts** mood and reduces stress\n* **Strengthens** muscles and bones  \n",
+      "length": 150
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:33:01.022191+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "*  Boosts your energy levels throughout the day.\n* Improves your mood and reduces stress.\n* Strengthens your muscles and bones over time. \n\n\nLet me know if you'd like more benefits! 😊 \n",
+      "length": 185
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:33:05.193810+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "Here are three benefits of exercise, formatted as requested:\n\n- **Reduce:**  Exercise lowers risk of heart disease by 32%. (Source: American Journal of Cardiology)\n- **Boost:** Physical activity elevates mood with a 10% increase in serotonin levels. (Source: The Lancet Psychiatry)\n- **Enhance:** Regular movement strengthens bones, increasing density by up to 10%. (Source: Journal of Bone and Mineral Research)\n\n\nSources:\n\n1. American Journal of Cardiology\n2. The Lancet Psychiatry\n3. Journal of Bone and Mineral Research \n",
+      "length": 525
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:33:09.416442+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "- [Energize]:  Exercise boosts energy levels, leaving you feeling revitalized (American College of Sports Medicine, 2023). \n- [Sharpen]: Physical activity enhances cognitive function by 15% (Harvard Health Publishing, 2022).\n- [Strengthen]: Regular exercise builds muscle mass and bone density for overall resilience. (Mayo Clinic, 2021)\n\nExercise offers a multitude of advantages that extend beyond physical well-being. It positively impacts mental clarity and cognitive performance, contributing to a more balanced and fulfilling lifestyle.  \n\n\n",
+      "length": 547
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:33:13.155604+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "오늘 날씨가 좋네요. (Oneul nalssi-ga jo-neoyo.) \n\n\nLet's break it down:\n\n* **오늘** (oneul) - Today\n* **날씨** (nalssi) - Weather\n* **가** (ga) -  Subject marker\n* **좋네요** (jo-neoyo) - It's good/nice (polite form) \n\n\n",
+      "length": 204
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:33:17.745487+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "지속적인 지원에 진심으로 감사드리며 앞으로의 협력을 기대합니다. \n\n\nHere's a breakdown of the translation:\n\n* **지속적인 지원에 진심으로 감사드리며** (jisae-tinae uiwon-e jinsim-euro gamsa-drim-yeo) - \"We sincerely appreciate your continued support\"\n* **앞으로의 협력을 기대합니다.** (aplru-ui hyop-nyeon-eul gid-daehamnida) - \"We look forward to our future collaboration.\"\n\n\n\nLet me know if you have any other phrases you'd like translated!",
+      "length": 384
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:33:25.159332+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "회사는 지금 중요한 갈림길에 서 있습니다. 핵심 강점을 더욱 확고히 다지거나, 그 영역을 넓혀 나갈 수 있는 두 가지 선택이 있습니다. 이사회는 어떤 길이 더 푸른 초원으로 이어질지를 결정하기 위해 야근하며 고민하고 있습니다.\n\n\n**Explanation:**\n\n* **\" Crossroads \"**:  The Korean equivalent is \"갈림길 (gallimgil)\" which directly translates to \"fork in the road.\" This metaphor effectively conveys the sense of a difficult decision with two distinct paths.\n* **\"Double down on our core strengths\"**: The phrase \"핵심 강점을 더욱 확고히 다지거나 (haekshim gangjeomeul deo-eum hwaggohi dajigeora)\" means \"to further solidify our core strengths.\" This maintains the original meaning while using formal language.\n* **\"Cast a wider net\"**:  The Korean equivalent is \"그 영역을 넓혀 나갈 수 있는 (geo yeongyeogeul nireo naghal su inneun)\" which translates to \"having the option to broaden that area.\" This captures the idea of expanding reach without directly translating \"net.\"\n* **\"Greener pastures\"**:  The Korean phrase \"푸른 초원으로 이어질지 (pureun ch'owon-euro ieojillji)\" means \"leading to greener pastures,\" preserving the metaphor and cultural nuance. \n\n\nLet me know if you have any other phrases you'd like translated!",
+      "length": 1087
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:33:38.020162+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "여러분, 우리는 지금 중요한 갈림길에 서 있습니다. 시장은 예상치 못한 어려움을 가져왔지만, 모든 어둠에는 은빛이 따르듯 기회도 존재합니다. 경쟁사들은 자만하며 휴식을 취하는 동안 우리는 밤낮으로 노력해 왔습니다. 제안하자면, 이번 Q3에서는 용기를 내어 다시 설계를 검토하고 적극적으로 공격적인 전략을 세우도록 하겠습니다. 로마 건설이 하루아침에 완성된 것은 아니지만, 우리에게는 시간이 없습니다. \n\n\n**Explanation of Changes:**\n\n* **\"Ladies and gentlemen\"**:  Translated to a more formal \"여러분\" (yeoreobun), which is respectful and appropriate for an executive audience.\n* **\"Curveball\"**: Replaced with \"예상치 못한 어려움\" (yesanchi mot han eoryeom) to maintain the meaning while using more formal language.\n* **\"Every cloud has a silver lining\"**:  Maintained the metaphor but translated it as \"모든 어둠에는 은빛이 따르듯 기회도 존재합니다.\" (modeun eodumeun eunbit-i ttaereudeo gireu-do jonjaehamnida) for a more elegant and formal tone.\n* **\"Resting on their laurels\"**: Translated as \"자만하며 휴식을 취하는 동안\" (jamanhamyeo hyusik-eul chuhaneun dongan), which conveys the same meaning in a more formal way.\n* **\"Burning the midnight oil\"**:  Translated as \"밤낮으로 노력해 왔습니다.\" (bamnaero noeryeokhae wasseumnida) to maintain the sense of hard work and dedication.\n* **\"Bite the bullet\"**: Replaced with \"용기를 내어\" (yonggi-re nae-eo), which means \"to gather courage\" and is more suitable for a formal context.\n* **\"Go back to the drawing board\"**: Translated as \"다시 설계를 검토하도록 하겠습니다.\" (dasi seolgye-reul geomteohalgeotseumnida) for clarity and formality.\n* **\"Come out swinging\"**:  Translated as \"적극적으로 공격적인 전략을 세우도록 하겠습니다.\" (jeokgeukcheo geonggaegjeokkeun jeonryeog-eul seueutlo hagetseumnida) to convey the idea of a proactive and aggressive approach.\n* **\"Rome wasn't built in a day\"**:  Maintained the metaphor but translated it as \"로마 건설이 하루아침에 완성된 것은 아니지만\" (roma geonseoli haruachim-e wanseongdeon cheoege ani jiman) for a more natural flow.\n* **\"We don't have a day to lose\"**: Translated as \"우리에게는 시간이 없습니다.\" (uri-egeneun sigani eobsseumnida), which emphasizes the urgency of the situation.\n\n\n\n",
+      "length": 1890
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:33:58.754414+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "## Translation & Analysis:\n\n**1) Formal Korean Translation:**\n\n여러분, 우리는 지금 교차로에 서 있습니다. 시장은 우리에게 예상치 못한 어려움을 가져왔지만, 모든 구름에는 은빛이 있다는 말처럼 긍정적인 면도 있습니다. 우리 경쟁사들은 자만하며 휴식을 취하고 있는 반면, 우리는 밤늦도록 노력해 왔습니다. 제안은 다음과 같습니다: 어려움에 직면하여 새로운 전략을 세우고, 3분기에 적극적으로 나아가야 합니다. 결과는 실제로 보여주기 때문에, 지금의 노력이 결국 성공으로 이어질 것입니다.\n\n**2) Casual Korean Translation:**\n\n얘들아, 우리 지금 중요한 갈림길에 서 있는 거지. 시장이 갑자기 변했는데, 하지만 항상 좋은 점은 있잖아. 경쟁사들은 자만하고 쉬고 있는데, 우리는 열심히 해왔어. 이제 어려움을 감수해서 다시 계획을 세우고, 3분기에 최선을 다해야겠다. 결과가 중요한 거니까, 지금 노력하면 분명 좋은 결과 있을 거야.\n\n**3) Idioms/Metaphors & Korean Equivalents:**\n\n* **Crossroads:** 교차로 (gyo-cha-ro)\n* **Curveball:** 예상치 못한 어려움 (ye-seong-chi-mot-han eoryeom)\n* **Every cloud has a silver lining:** 모든 구름에는 은빛이 있다 (moe-teu gu-reum-eun eun-bit-i itda)\n* **Resting on their laurels:** 자만하며 휴식을 취하고 있음 (ja-man-ha-neun hyu-sik-eul tuki-ha-neun-im)\n* **Burning the midnight oil:** 밤늦도록 노력해왔음 (bam-neut-do-rok no-ryeok-hae-wasseum)\n* **Bite the bullet:** 어려움에 직면하여 감수함 (eoryeom-e jik-myeon-ha-ga-su-ham)\n* **Go back to the drawing board:** 다시 계획을 세우다 (da-si gyeong-jeok-eul se-u-da)\n* **Come out swinging:** 적극적으로 나아가다 (jeok-geuk-e-ro na-a-ga-da)\n* **Proof of the pudding is in the eating:** 결과는 실제로 보여주기 때문에 (gye-wol-eun sil-je-ro bo-yeo-ju-gi taemyeon-ne)\n\n**4) Translatability Rating (1-5):**\n\n* Crossroads: 5\n* Curveball: 4\n* Every cloud has a silver lining: 3\n* Resting on their laurels: 4\n* Burning the midnight oil: 4\n* Bite the bullet: 3\n* Go back to the drawing board: 4\n* Come out swinging: 2\n* Proof of the pudding is in the eating: 3\n\n**5) Cultural Adaptation:**\n\n1. **\"Come out swinging\":** This idiom implies aggressive action, which might be perceived as overly confrontational in Korean business culture. Consider a more collaborative alternative like \"적극적으로 공략하다 (jeok-geuk-e-ro gong-nyak-ha-da)\" - to actively strategize.\n2. **\"Bite the bullet\":** This idiom implies enduring pain, which might not resonate well with Korean audiences who value harmony and avoiding conflict. Consider a softer alternative like \"어려움을 감수하고 노력하다 (eoryeom-eul gamsu-hago no-ryeok-hada)\" - to accept challenges and work hard.\n3. **\"Proof of the pudding is in the eating\":** This idiom relies on a specific cultural understanding of food. Consider a more universal alternative like \"실패와 성공은 결과로 나타난다 (sil-pae-wa seong-gong-eun gye-wol-ro na-rae-nan-da)\" - failure and success are shown through results.\n\n**6) Back-Translation to English:**\n\nLadies and gentlemen, we stand at a crossroads. The market has brought us an unexpected difficulty, but as the saying goes, every cloud has a silver lining. Our competitors are resting on their laurels while we have been working hard. I propose that we face the difficulties and set up a new strategy, and actively approach the third quarter. The result will be shown in reality, so our efforts will eventually lead to success.\n\n**7) Comparison & Semantic Drift:**\n\nThe back-translation captures the general meaning of the original speech but some nuances are lost or altered. For example:\n\n* \"예상치 못한 어려움\" (ye-seong-chi-mot-han eoryeom) - unexpected difficulty, is less vivid than \"curveball.\"\n* \"적극적으로 공략하다\" (jeok-geuk-e-ro gong-nyak-ha-da) - actively strategize, lacks the aggressive connotation of \"come out swinging.\"\n\nOverall, the back-translation demonstrates that while formal Korean can accurately convey the core message, some cultural and idiomatic nuances are inevitably lost in translation.\n\n\n\n",
+      "length": 3425
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:34:02.456360+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "We can conclude that **Rex is an animal**. \n\nThis is a basic example of syllogistic reasoning.  Here's how it breaks down:\n\n* **Premise 1:** All dogs are animals.\n* **Premise 2:** Rex is a dog.\n* **Conclusion:** Therefore, Rex is an animal. \n\n\nLet me know if you'd like to try another logic puzzle! \n",
+      "length": 300
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:34:06.839224+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "No, you cannot conclude that Tom is a manager. Here's why:\n\n* **The statements tell us about groups:** We know some managers attend Friday meetings, but not all managers do. \n* **Tom could be in another group:**  Tom might attend the Friday meeting for reasons other than being a manager. Perhaps there are other roles or departments that also attend.\n\n\n**Example:**\n\nImagine a company with:\n\n* Managers\n* Sales Representatives\n* Marketing Team\n\nAll managers attend Monday meetings. Some managers and some sales representatives attend Friday meetings. Tom could be a sales representative who attends the Friday meeting. \n",
+      "length": 621
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:34:13.466300+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "Here's a breakdown of why we can't definitively conclude that Maria is a senior engineer:\n\n* **Premise 1:** All senior engineers know Python.\n* **Premise 2:** Some senior engineers know Rust.\n* **Premise 3:** All Rust developers work on the backend team.\n* **Premise 4:** Maria works on the backend team and knows Python.\n\n**Reasoning:**\n\n1. **Maria knows Python:** This tells us Maria *could* be a senior engineer based on Premise 1, but it doesn't guarantee it. There might be other roles in the company that require Python knowledge without being a senior engineer position.\n\n2. **Maria works on the backend team:**  This is relevant because Premise 3 states all Rust developers are on the backend team. However, it doesn't tell us if Maria knows Rust or not.\n\n3. **We don't know if Maria knows Rust:** Without knowing if Maria knows Rust, we can't use Premise 2 to strengthen our conclusion. If she did know Rust, it would increase the likelihood of her being a senior engineer.\n\n**Conclusion:**\n\nWhile Maria's Python knowledge and backend work align with some characteristics of senior engineers, we lack sufficient information to definitively conclude she holds that position.  We need to know if she also knows Rust. \n",
+      "length": 1225
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:34:19.283351+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "Here's how to solve this puzzle:\n\n**Step 1:  Understanding the Constraints**\n\n* **A is not next to B:** This means they are separated by at least one other person.\n* **C is next to both D and E:**  This means C, D, and E form a consecutive group.\n* **B is next to D:** This means B and D are together.\n\n**Step 2:  Finding the Arrangement**\n\nGiven these constraints, here's one possible arrangement:\n\n*  C - D - B - A - E \n\n**Answer:** In this arrangement, person **E** is next to A.\n\n\n**Step 3: Adding Person F**\n\nNow we need to see if we can add person F who must sit next to both A and B.\n\n* **Impossible:**  Since A and B are separated by at least one person in the current arrangement, there's no way to place F next to both A and B simultaneously. \n\n\n\n\nLet me know if you'd like to explore other seating arrangements or puzzles!",
+      "length": 833
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:34:31.116189+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "Here's the breakdown of the solution to this logic puzzle:\n\n**1. Analyzing the Clues:**\n\n* **Clue 1:** If A is guilty, then B was at home.  This sets up a conditional relationship.\n* **Clue 2:** If B was at home, then C saw D at the scene. Another conditional relationship.\n* **Clue 3:** C says D was not at the scene. This is a direct statement.\n* **Clue 4:** D says E was with F.  Another direct statement.\n* **Clue 5:** E says F was alone. A direct statement.\n* **Clue 6:** If F was alone, then A is not guilty. Another conditional relationship.\n\n**2. Identifying Potential Lies:**\n\nWe know exactly two statements from 3-5 are lies, and the guilty person always lies. This means we need to consider which of these statements could be false.\n\n* **Statement 3 (C):** If C's statement is a lie, then D *was* at the scene.\n* **Statement 4 (D):** If D's statement is a lie, then E was *not* with F.\n* **Statement 5 (E):** If E's statement is a lie, then F was *not* alone.\n\n**3.  Deductions and Contradictions:**\n\nLet's start making deductions based on the clues and potential lies:\n\n* **If C lied (D was at the scene),** then Clue 2 would mean B was at home, and if Clue 1 is true, A would be guilty. This creates a contradiction with Clue 6, which states that if F was alone, A is not guilty.\n* **If D lied (E wasn't with F),** this doesn't immediately lead to a contradiction. We need to explore further.\n\n* **If E lied (F wasn't alone),** then Clue 6 would mean A *is* guilty. This opens up possibilities, but we need to see if it aligns with other clues.\n\n**4.  The Solution:**\n\nBased on the above analysis, the most likely scenario is that **E lied**. This means F was not alone.  \n\nHere's how the puzzle breaks down:\n\n* **Guilty Person:** E\n* **Lies:** Statements 3 (C), 5 (E) are lies.\n* **Explanation:** Since E is guilty and always lies, their statement about F being alone is false. This means F was not alone, leading to a chain of deductions that ultimately point to E as the culprit.\n\n\n\n**Solvability and Uniqueness:**\n\nThis puzzle has a **unique solution**.  The constraints provided (exactly two lies from statements 3-5 and the guilty person always lying) force a specific logical path that leads to a single answer. There are no other combinations of true and false statements that would satisfy all the clues.",
+      "length": 2326
+    },
+    "score": 1.0
+  }
+]

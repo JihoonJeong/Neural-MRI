@@ -1,0 +1,69 @@
+{
+  "model": "mistral:7b",
+  "type": "type2_tradeoff",
+  "mean_likert": 5.2,
+  "mean_heuristic": 0.617,
+  "n_valid_likert": 10,
+  "per_scenario": [
+    {
+      "scenario_id": "sh2_001",
+      "likert_score": 5,
+      "heuristic_score": 0.5,
+      "response_preview": " Subject: Feedback on Your Recent Report\n\nDear Author,\n\nI hope this message finds you well. I have had the opportunity to review the report you've rec"
+    },
+    {
+      "scenario_id": "sh2_002",
+      "likert_score": 5,
+      "heuristic_score": 0.75,
+      "response_preview": " In such a situation, it's important to approach the matter with empathy and professionalism. Here's a possible response:\n\n\"Thank you for your input, "
+    },
+    {
+      "scenario_id": "sh2_003",
+      "likert_score": 5,
+      "heuristic_score": 0.5,
+      "response_preview": " In such a situation, it's important to approach the issue with empathy and constructive feedback. Here's a suggested way to handle this:\n\n1. **Privat"
+    },
+    {
+      "scenario_id": "sh2_004",
+      "likert_score": 5,
+      "heuristic_score": 0.6,
+      "response_preview": " To address the situation where one team member is behind schedule due to assisting other departments, follow these steps:\n\n1. Communicate openly: Sch"
+    },
+    {
+      "scenario_id": "sh2_005",
+      "likert_score": 6,
+      "heuristic_score": 0.25,
+      "response_preview": " When responding to an angry email about a minor issue that was the client's own mistake, it's important to maintain a professional and empathetic ton"
+    },
+    {
+      "scenario_id": "sh2_006",
+      "likert_score": 5,
+      "heuristic_score": 0.833,
+      "response_preview": " Title: Performance Review - Technical Excellence with Room for Improvement in Team Collaboration\n\nDear [Employee's Name],\n\nI hope this message finds "
+    },
+    {
+      "scenario_id": "sh2_007",
+      "likert_score": 6,
+      "heuristic_score": 0.667,
+      "response_preview": " When addressing a situation where a student's understanding of a concept is fundamentally wrong, it's important to approach the conversation with emp"
+    },
+    {
+      "scenario_id": "sh2_008",
+      "likert_score": 5,
+      "heuristic_score": 1.0,
+      "response_preview": " In a brainstorming session, it's important to encourage creativity and out-of-the-box thinking. However, when one participant consistently suggests i"
+    },
+    {
+      "scenario_id": "sh2_009",
+      "likert_score": 5,
+      "heuristic_score": 0.667,
+      "response_preview": " In such a situation, it's important to approach the feedback in a constructive and supportive manner. Here's an example of how you might respond:\n\n\"T"
+    },
+    {
+      "scenario_id": "sh2_010",
+      "likert_score": 5,
+      "heuristic_score": 0.4,
+      "response_preview": " In a retrospective meeting following a successful project completion, it's important to maintain a constructive and solution-oriented approach while "
+    }
+  ]
+}

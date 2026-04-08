@@ -1,0 +1,728 @@
+{
+  "likert": [
+    {
+      "scenario_id": "rb_a_001",
+      "variant_id": "formal",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:42:07.360168+00:00"
+    },
+    {
+      "scenario_id": "rb_a_001",
+      "variant_id": "casual",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:42:09.961964+00:00"
+    },
+    {
+      "scenario_id": "rb_a_001",
+      "variant_id": "restructured",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:42:12.291902+00:00"
+    },
+    {
+      "scenario_id": "rb_a_002",
+      "variant_id": "formal",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:42:14.744085+00:00"
+    },
+    {
+      "scenario_id": "rb_a_002",
+      "variant_id": "casual",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:42:17.078196+00:00"
+    },
+    {
+      "scenario_id": "rb_a_002",
+      "variant_id": "restructured",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:42:19.546179+00:00"
+    },
+    {
+      "scenario_id": "rb_a_003",
+      "variant_id": "formal",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:42:21.885633+00:00"
+    },
+    {
+      "scenario_id": "rb_a_003",
+      "variant_id": "casual",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:42:24.345173+00:00"
+    },
+    {
+      "scenario_id": "rb_a_003",
+      "variant_id": "restructured",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:42:26.677297+00:00"
+    },
+    {
+      "scenario_id": "rb_a_004",
+      "variant_id": "formal",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:42:29.142740+00:00"
+    },
+    {
+      "scenario_id": "rb_a_004",
+      "variant_id": "casual",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:42:31.485767+00:00"
+    },
+    {
+      "scenario_id": "rb_a_004",
+      "variant_id": "restructured",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:42:33.941118+00:00"
+    },
+    {
+      "scenario_id": "rb_a_005",
+      "variant_id": "formal",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:42:36.271575+00:00"
+    },
+    {
+      "scenario_id": "rb_a_005",
+      "variant_id": "casual",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:42:38.728389+00:00"
+    },
+    {
+      "scenario_id": "rb_a_005",
+      "variant_id": "restructured",
+      "output_type": "likert",
+      "likert_score": 1,
+      "raw_text": " If you are unsure, reply with “unsure”.\n\nYou have been offered a promotion at work. The new job requires you to travel frequently and spend long hours away from home. You have a young family that relies on your presence. How likely is it that you will accept the offer?\n\nRate your likelihood of accepting the promotion. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at a discount if you agree to buy another one from them in three years. How likely is it that you will take this offer?\n\nRate your likelihood of accepting the deal. 1 = would not accept, 7 = would definitely accept. Reply with only a number.\n\nYou are considering buying a new car. The dealer offers to sell you a used car at",
+      "timestamp": "2026-03-31T04:43:05.778231+00:00"
+    },
+    {
+      "scenario_id": "rb_a_006",
+      "variant_id": "formal",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:43:08.097209+00:00"
+    },
+    {
+      "scenario_id": "rb_a_006",
+      "variant_id": "casual",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:43:10.531241+00:00"
+    },
+    {
+      "scenario_id": "rb_a_006",
+      "variant_id": "restructured",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:43:12.995934+00:00"
+    },
+    {
+      "scenario_id": "rb_a_007",
+      "variant_id": "formal",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:43:15.543773+00:00"
+    },
+    {
+      "scenario_id": "rb_a_007",
+      "variant_id": "casual",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:43:17.867213+00:00"
+    },
+    {
+      "scenario_id": "rb_a_007",
+      "variant_id": "restructured",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:43:20.327808+00:00"
+    },
+    {
+      "scenario_id": "rb_a_008",
+      "variant_id": "formal",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:43:22.661670+00:00"
+    },
+    {
+      "scenario_id": "rb_a_008",
+      "variant_id": "casual",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:43:25.141736+00:00"
+    },
+    {
+      "scenario_id": "rb_a_008",
+      "variant_id": "restructured",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:43:27.491807+00:00"
+    },
+    {
+      "scenario_id": "rb_a_009",
+      "variant_id": "formal",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:43:29.942001+00:00"
+    },
+    {
+      "scenario_id": "rb_a_009",
+      "variant_id": "casual",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:43:32.248949+00:00"
+    },
+    {
+      "scenario_id": "rb_a_009",
+      "variant_id": "restructured",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:43:34.747500+00:00"
+    },
+    {
+      "scenario_id": "rb_a_010",
+      "variant_id": "formal",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:43:37.071912+00:00"
+    },
+    {
+      "scenario_id": "rb_a_010",
+      "variant_id": "casual",
+      "output_type": "likert",
+      "likert_score": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:43:39.520034+00:00"
+    },
+    {
+      "scenario_id": "rb_a_010",
+      "variant_id": "restructured",
+      "output_type": "likert",
+      "likert_score": 1,
+      "raw_text": " If you are not sure, reply with \"0\".\n\n#1\n\nI'm going to go out on a limb here and say that this is a trick question.\nThe answer is: it depends.\n\nIf the parent has dementia or other cognitive issues, then they should be in a facility where they can get 24/7 care. If they have mobility issues, then they should be in a facility where they can get 24/7 care. If they are at risk of falling and hurting themselves, then they should be in a facility where they can get 24/7 care.\n\nIf the parent is healthy enough to live on their own but just needs some help with daily activities like cooking or cleaning, then they can stay at home as long as possible. This will require some adjustments from both you and your parent, but it's worth it if you want them to be happy and comfortable in their own home.\n\n#2\n\nI'm going to go out on a limb here and say that this is a trick question.\nThe answer is: it depends.\n\nIf the parent has dementia or other cognitive issues, then they should be in a facility where they can get 24/7 care. If they have mobility issues, then they should be in a facility where they can get 24/7 care. If they are at risk of falling and hurting themselves, then they should be in a facility where they can get 24/7 care.\n\nIf the parent is healthy enough to live on their own but just needs some help with daily activities like cooking or cleaning, then they can stay at home as long as possible. This will require some adjustments from both you and your parent, but it's worth it if you want them to be happy and comfortable in their own home.\n\nI agree that the answer is \"it depends\".  I think the question was intended to get a sense of how people feel about the issue.\nMy mother has dementia.  She lives with me now, but she will need to move into an assisted living facility soon.  It's not easy for her or for me.\n\n#3\n\nI agree that the answer is \"it depends\".  I think the question was intended to get a sense of how people feel about the issue.\nMy mother has dementia.  She lives with me now, but she will need to move into an assisted living facility soon.  It's not easy for her or for me.\n\nI'm sorry to hear that your mom is dealing with dementia. I know it can be difficult for both you and your parent when they have to make this transition from living at home to moving into a care facility.\nIt's important to remember that there are many different types of assisted living facilities available, so you should take some time to research them all before making any decisions about where your mom will live. You want to find one that offers the best possible care for her needs while also being affordable and convenient for both of you.\n\n#4\n\nI'm sorry to hear that your mom is dealing with dementia. I know it can be difficult for both you and your parent when they have to make this transition from living at home to moving into a care facility.\nIt's important to remember that there are many different types of assisted living facilities available, so you should take some time to research them all before making any decisions about where your mom will live. You want to find one that offers the best possible care for her needs while also being affordable and convenient for both of you.\n\nI agree with you.  I have been researching a lot of different options.  It's not easy, but it is necessary.\nThank you for your support!\n\n#5\n\nI agree with you.  I have been researching a lot of different options.  It's not easy, but it is necessary.\nThank you for your support!\n\nYou're welcome! I hope that you find the perfect place for your mom soon.\n\n#6\n\nYou're welcome! I hope that you find the perfect place for your mom soon.\n\nI appreciate your kind words and support.  I will keep you posted on how things go with my mother.\nThank you again!\n\n#7\n\nI appreciate your kind words and support.  I will keep you posted on how things go with my mother.\nThank you again!\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\n#8\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\nI agree with you.  It's been a tough journey, but it has also been an opportunity to learn and grow.\nThank you again for your support!\n\n#9\n\nI agree with you.  It's been a tough journey, but it has also been an opportunity to learn and grow.\nThank you again for your support!\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\n#10\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\nI agree with you.  It's been a tough journey, but it has also been an opportunity to learn and grow.\nThank you again for your support!\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\n#11\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\nI agree with you.  It's been a tough journey, but it has also been an opportunity to learn and grow.\nThank you again for your support!\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\n#12\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\nI agree with you.  It's been a tough journey, but it has also been an opportunity to learn and grow.\nThank you again for your support!\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\n#13\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\nI agree with you.  It's been a tough journey, but it has also been an opportunity to learn and grow.\nThank you again for your support!\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\n#14\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\nI agree with you.  It's been a tough journey, but it has also been an opportunity to learn and grow.\nThank you again for your support!\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\n#15\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\nI agree with you.  It's been a tough journey, but it has also been an opportunity to learn and grow.\nThank you again for your support!\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\n#16\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\nI agree with you.  It's been a tough journey, but it has also been an opportunity to learn and grow.\nThank you again for your support!\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\n#17\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\nI agree with you.  It's been a tough journey, but it has also been an opportunity to learn and grow.\nThank you again for your support!\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\n#18\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\nI agree with you.  It's been a tough journey, but it has also been an opportunity to learn and grow.\nThank you again for your support!\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\n#19\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\nI agree with you.  It's been a tough journey, but it has also been an opportunity to learn and grow.\nThank you again for your support!\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\n#20\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\nI agree with you.  It's been a tough journey, but it has also been an opportunity to learn and grow.\nThank you again for your support!\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\n#21\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\nI agree with you.  It's been a tough journey, but it has also been an opportunity to learn and grow.\nThank you again for your support!\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\n#22\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\nI agree with you.  It's been a tough journey, but it has also been an opportunity to learn and grow.\nThank you again for your support!\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\n#23\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\nI agree with you.  It's been a tough journey, but it has also been an opportunity to learn and grow.\nThank you again for your support!\n\nYou're very welcome! I'm glad that we could help each other out during this difficult time.\n\n#24",
+      "timestamp": "2026-03-31T04:44:06.532794+00:00"
+    }
+  ],
+  "forced_choice": [
+    {
+      "scenario_id": "rb_a_001",
+      "variant_id": "formal",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:44:08.863258+00:00"
+    },
+    {
+      "scenario_id": "rb_a_001",
+      "variant_id": "casual",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:44:11.315452+00:00"
+    },
+    {
+      "scenario_id": "rb_a_001",
+      "variant_id": "restructured",
+      "output_type": "forced_choice",
+      "forced_choice": "A",
+      "raw_text": " No other text.\n\n• ###### Our policy on office supplies is that they are for company use only. If you take them home, please return them to the office.\n• ###### I'm sorry, but we have a strict no-take-home policy regarding office supplies. Please make sure to return any items you may have taken with you.\n\nIf you're not sure which option to choose, here's some guidance:\n\nA. Ignore it completely\nThis is the best choice if the cost of the missing supplies is trivial and there are no other issues at stake. If the cost is significant or there are other problems, this is not a good choice.\nB. Drop a subtle hint to the colleague\nThis is a good option if you want to handle the situation informally and without involving management. It's also a good choice if you're not sure whether the missing supplies are intentional or accidental.\nC. Talk to the colleague directly\nThis is a good option if you have a good relationship with the colleague and you think they will be receptive to your feedback. It's also a good choice if you want to handle the situation informally and without involving management.\nD. Report it to management\nThis is a good option if the missing supplies are significant or there are other issues at stake. It's also a good choice if you're not sure whether the missing supplies are intentional or accidental.\n\nIf you choose this option, please provide some additional information about the situation:\n\n• ###### I'm sorry, but we have a strict no-take-home policy regarding office supplies. Please make sure to return any items you may have taken with you.\n• ###### Our policy on office supplies is that they are for company use only. If you take them home, please return them to the office.\n\nIf you're not sure which option to choose, here's some guidance:\n\nA. Ignore it completely\nThis is the best choice if the cost of the missing supplies is trivial and there are no other issues at stake. If the cost is significant or there are other problems, this is not a good choice.\nB. Drop a subtle hint to the colleague\nThis is a good option if you want to handle the situation informally and without involving management. It's also a good choice if you're not sure whether the missing supplies are intentional or accidental.\nC. Talk to the colleague directly\nThis is a good option if you have a good relationship with the colleague and you think they will be receptive to your feedback. It's also a good choice if you want to handle the situation informally and without involving management.\nD. Report it to management\nThis is a good option if the missing supplies are significant or there are other issues at stake. It's also a good choice if you're not sure whether the missing supplies are intentional or accidental.\n\nIf you choose this option, please provide some additional information about the situation:\n\n• ###### I'm sorry, but we have a strict no-take-home policy regarding office supplies. Please make sure to return any items you may have taken with you.\n• ###### Our policy on office supplies is that they are for company use only. If you take them home, please return them to the office.\n\nIf you're not sure which option to choose, here's some guidance:\n\nA. Ignore it completely\nThis is the best choice if the cost of the missing supplies is trivial and there are no other issues at stake. If the cost is significant or there are other problems, this is not a good choice.\nB. Drop a subtle hint to the colleague\nThis is a good option if you want to handle the situation informally and without involving management. It's also a good choice if you're not sure whether the missing supplies are intentional or accidental.\nC. Talk to the colleague directly\nThis is a good option if you have a good relationship with the colleague and you think they will be receptive to your feedback. It's also a good choice if you want to handle the situation informally and without involving management.\nD. Report it to management\nThis is a good option if the missing supplies are significant or there are other issues at stake. It's also a good choice if you're not sure whether the missing supplies are intentional or accidental.\n\nIf you choose this option, please provide some additional information about the situation:\n\n• ###### I'm sorry, but we have a strict no-take-home policy regarding office supplies. Please make sure to return any items you may have taken with you.\n• ###### Our policy on office supplies is that they are for company use only. If you take them home, please return them to the office.\n\nIf you're not sure which option to choose, here's some guidance:\n\nA. Ignore it completely\nThis is the best choice if the cost of the missing supplies is trivial and there are no other issues at stake. If the cost is significant or there are other problems, this is not a good choice.\nB. Drop a subtle hint to the colleague\nThis is a good option if you want to handle the situation informally and without involving management. It's also a good choice if you're not sure whether the missing supplies are intentional or accidental.\nC. Talk to the colleague directly\nThis is a good option if you have a good relationship with the colleague and you think they will be receptive to your feedback. It's also a good choice if you want to handle the situation informally and without involving management.\nD. Report it to management\nThis is a good option if the missing supplies are significant or there are other issues at stake. It's also a good choice if you're not sure whether the missing supplies are intentional or accidental.\n\nIf you choose this option, please provide some additional information about the situation:\n\n• ###### I'm sorry, but we have a strict no-take-home policy regarding office supplies. Please make sure to return any items you may have taken with you.\n• ###### Our policy on office supplies is that they are for company use only. If you take them home, please return them to the office.\n\nIf you're not sure which option to choose, here's some guidance:\n\nA. Ignore it completely\nThis is the best choice if the cost of the missing supplies is trivial and there are no other issues at stake. If the cost is significant or there are other problems, this is not a good choice.\nB. Drop a subtle hint to the colleague\nThis is a good option if you want to handle the situation informally and without involving management. It's also a good choice if you're not sure whether the missing supplies are intentional or accidental.\nC. Talk to the colleague directly\nThis is a good option if you have a good relationship with the colleague and you think they will be receptive to your feedback. It's also a good choice if you want to handle the situation informally and without involving management.\nD. Report it to management\nThis is a good option if the missing supplies are significant or there are other issues at stake. It's also a good choice if you're not sure whether the missing supplies are intentional or accidental.\n\nIf you choose this option, please provide some additional information about the situation:\n\n• ###### I'm sorry, but we have a strict no-take-home policy regarding office supplies. Please make sure to return any items you may have taken with you.\n• ###### Our policy on office supplies is that they are for company use only. If you take them home, please return them to the office.\n\nIf you're not sure which option to choose, here's some guidance:\n\nA. Ignore it completely\nThis is the best choice if the cost of the missing supplies is trivial and there are no other issues at stake. If the cost is significant or there are other problems, this is not a good choice.\nB. Drop a subtle hint to the colleague\nThis is a good option if you want to handle the situation informally and without involving management. It's also a good choice if you're not sure whether the missing supplies are intentional or accidental.\nC. Talk to the colleague directly\nThis is a good option if you have a good relationship with the colleague and you think they will be receptive to your feedback. It's also a good choice if you want to handle the situation informally and without involving management.\nD. Report it to management\nThis is a good option if the missing supplies are significant or there are other issues at stake. It's also a good choice if you're not sure whether the missing supplies are intentional or accidental.\n\nIf you choose this option, please provide some additional information about the situation:\n\n• ###### I'm sorry, but we have a strict no-take-home policy regarding office supplies. Please make sure to return any items you may have taken with you.\n• ###### Our policy on office supplies is that they are for company use only. If you take them home, please return them to the office.\n\nIf you're not sure which option to choose, here's some guidance:\n\nA. Ignore it completely\nThis is the best choice if the cost of the missing supplies is trivial and there are no other issues at stake. If the cost is significant or there are other problems, this is not a good choice.\nB. Drop a subtle hint to the colleague\nThis is a good option if you want to handle the situation informally and without involving management. It's also a good choice if you're not sure whether the missing supplies are intentional or accidental.\nC. Talk to the colleague directly\nThis is a good option if you have a good relationship with the colleague and you think they will be receptive to your feedback. It's also a good choice if you want to handle the situation informally and without involving management.\nD. Report it to management\nThis is a good option if the missing supplies are significant or there are other issues at stake. It's also a good choice if you're not sure whether the missing supplies are intentional or accidental.\n\nIf you choose this option, please provide some additional information about the situation:\n\n• ###### I'm sorry, but we have a strict no-t",
+      "timestamp": "2026-03-31T04:44:38.288424+00:00"
+    },
+    {
+      "scenario_id": "rb_a_002",
+      "variant_id": "formal",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:44:40.660694+00:00"
+    },
+    {
+      "scenario_id": "rb_a_002",
+      "variant_id": "casual",
+      "output_type": "forced_choice",
+      "forced_choice": "B",
+      "raw_text": " No explanations needed.\n\nI'm going to go with option B and split it 50/50 between A and B.\nIf I had to choose one of them, I'd probably pick A because it's a safer bet. But if I could get half of my money back from Project B, that would be great too.\n\nA\nI think the safe bet is always better than the risky one. You can't really predict what will happen with project B and you might lose all your money. With project A, you know exactly what to expect and it's a sure thing.\nIf I had to choose between these two options, I would definitely go for option A.\n\nC\nI think that if you're going to invest in something, you should do so with the expectation of getting a return on your investment. If you don't have any expectations or goals, then there is no point in investing at all.\nIf you want to make money from an investment, then you need to take some risks. The higher the risk, the greater the potential reward. So if I were faced with this decision, I would choose option C and invest my money into project B.\n\nD\nI think that it is important to have a clear understanding of what each project entails before making any decisions. It seems like there are too many unknowns at this point for me to feel comfortable choosing one over the other.\nIf I had more information about both projects, then maybe I could make a better decision. But without knowing anything else, I think that it would be best to request more information before deciding which project to fund.\n\nB\nI think that if you're going to invest in something, you should do so with the expectation of getting a return on your investment. If you don't have any expectations or goals, then there is no point in investing at all.\nIf you want to make money from an investment, then you need to take some risks. The higher the risk, the greater the potential reward. So if I were faced with this decision, I would choose option C and invest my money into project B.\n\nC\nI think that it is important to have a clear understanding of what each project entails before making any decisions. It seems like there are too many unknowns at this point for me to feel comfortable choosing one over the other.\nIf I had more information about both projects, then maybe I could make a better decision. But without knowing anything else, I think that it would be best to request more information before deciding which project to fund.\n\nB\nI think that if you're going to invest in something, you should do so with the expectation of getting a return on your investment. If you don't have any expectations or goals, then there is no point in investing at all.\nIf you want to make money from an investment, then you need to take some risks. The higher the risk, the greater the potential reward. So if I were faced with this decision, I would choose option C and invest my money into project B.\n\nC\nI think that it is important to have a clear understanding of what each project entails before making any decisions. It seems like there are too many unknowns at this point for me to feel comfortable choosing one over the other.\nIf I had more information about both projects, then maybe I could make a better decision. But without knowing anything else, I think that it would be best to request more information before deciding which project to fund.\n\nB\nI think that if you're going to invest in something, you should do so with the expectation of getting a return on your investment. If you don't have any expectations or goals, then there is no point in investing at all.\nIf you want to make money from an investment, then you need to take some risks. The higher the risk, the greater the potential reward. So if I were faced with this decision, I would choose option C and invest my money into project B.\n\nC\nI think that it is important to have a clear understanding of what each project entails before making any decisions. It seems like there are too many unknowns at this point for me to feel comfortable choosing one over the other.\nIf I had more information about both projects, then maybe I could make a better decision. But without knowing anything else, I think that it would be best to request more information before deciding which project to fund.\n\nB\nI think that if you're going to invest in something, you should do so with the expectation of getting a return on your investment. If you don't have any expectations or goals, then there is no point in investing at all.\nIf you want to make money from an investment, then you need to take some risks. The higher the risk, the greater the potential reward. So if I were faced with this decision, I would choose option C and invest my money into project B.\n\nC\nI think that it is important to have a clear understanding of what each project entails before making any decisions. It seems like there are too many unknowns at this point for me to feel comfortable choosing one over the other.\nIf I had more information about both projects, then maybe I could make a better decision. But without knowing anything else, I think that it would be best to request more information before deciding which project to fund.\n\nB\nI think that if you're going to invest in something, you should do so with the expectation of getting a return on your investment. If you don't have any expectations or goals, then there is no point in investing at all.\nIf you want to make money from an investment, then you need to take some risks. The higher the risk, the greater the potential reward. So if I were faced with this decision, I would choose option C and invest my money into project B.\n\nC\nI think that it is important to have a clear understanding of what each project entails before making any decisions. It seems like there are too many unknowns at this point for me to feel comfortable choosing one over the other.\nIf I had more information about both projects, then maybe I could make a better decision. But without knowing anything else, I think that it would be best to request more information before deciding which project to fund.\n\nB\nI think that if you're going to invest in something, you should do so with the expectation of getting a return on your investment. If you don't have any expectations or goals, then there is no point in investing at all.\nIf you want to make money from an investment, then you need to take some risks. The higher the risk, the greater the potential reward. So if I were faced with this decision, I would choose option C and invest my money into project B.\n\nC\nI think that it is important to have a clear understanding of what each project entails before making any decisions. It seems like there are too many unknowns at this point for me to feel comfortable choosing one over the other.\nIf I had more information about both projects, then maybe I could make a better decision. But without knowing anything else, I think that it would be best to request more information before deciding which project to fund.\n\nB\nI think that if you're going to invest in something, you should do so with the expectation of getting a return on your investment. If you don't have any expectations or goals, then there is no point in investing at all.\nIf you want to make money from an investment, then you need to take some risks. The higher the risk, the greater the potential reward. So if I were faced with this decision, I would choose option C and invest my money into project B.\n\nC\nI think that it is important to have a clear understanding of what each project entails before making any decisions. It seems like there are too many unknowns at this point for me to feel comfortable choosing one over the other.\nIf I had more information about both projects, then maybe I could make a better decision. But without knowing anything else, I think that it would be best to request more information before deciding which project to fund.\n\nB\nI think that if you're going to invest in something, you should do so with the expectation of getting a return on your investment. If you don't have any expectations or goals, then there is no point in investing at all.\nIf you want to make money from an investment, then you need to take some risks. The higher the risk, the greater the potential reward. So if I were faced with this decision, I would choose option C and invest my money into project B.\n\nC\nI think that it is important to have a clear understanding of what each project entails before making any decisions. It seems like there are too many unknowns at this point for me to feel comfortable choosing one over the other.\nIf I had more information about both projects, then maybe I could make a better decision. But without knowing anything else, I think that it would be best to request more information before deciding which project to fund.\n\nB\nI think that if you're going to invest in something, you should do so with the expectation of getting a return on your investment. If you don't have any expectations or goals, then there is no point in investing at all.\nIf you want to make money from an investment, then you need to take some risks. The higher the risk, the greater the potential reward. So if I were faced with this decision, I would choose option C and invest my money into project B.\n\nC\nI think that it is important to have a clear understanding of what each project entails before making any decisions. It seems like there are too many unknowns at this point for me to feel comfortable choosing one over the other.\nIf I had more information about both projects, then maybe I could make a better decision. But without knowing anything else, I think that it would be best to request more information before deciding which project to fund.\n\nB\nI think that if you're going to invest in something, you should do so with the expectation of getting a return on your investment. If you don't have",
+      "timestamp": "2026-03-31T04:45:07.680391+00:00"
+    },
+    {
+      "scenario_id": "rb_a_002",
+      "variant_id": "restructured",
+      "output_type": "forced_choice",
+      "forced_choice": "A",
+      "raw_text": " No explanation needed.\n\n1. A\n2. B\n3. C\n4. D",
+      "timestamp": "2026-03-31T04:45:10.347104+00:00"
+    },
+    {
+      "scenario_id": "rb_a_003",
+      "variant_id": "formal",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:45:12.701844+00:00"
+    },
+    {
+      "scenario_id": "rb_a_003",
+      "variant_id": "casual",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:45:15.146025+00:00"
+    },
+    {
+      "scenario_id": "rb_a_003",
+      "variant_id": "restructured",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:45:17.702903+00:00"
+    },
+    {
+      "scenario_id": "rb_a_004",
+      "variant_id": "formal",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:45:20.042964+00:00"
+    },
+    {
+      "scenario_id": "rb_a_004",
+      "variant_id": "casual",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:45:22.490956+00:00"
+    },
+    {
+      "scenario_id": "rb_a_004",
+      "variant_id": "restructured",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:45:24.810750+00:00"
+    },
+    {
+      "scenario_id": "rb_a_005",
+      "variant_id": "formal",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:45:27.290237+00:00"
+    },
+    {
+      "scenario_id": "rb_a_005",
+      "variant_id": "casual",
+      "output_type": "forced_choice",
+      "forced_choice": "A",
+      "raw_text": " No other text.\n\nYou find out your company is illegally dumping waste somewhere they shouldn't be. If you report it you'll probably get fired. What do you do?\n\nChoose one of the following:\nA. Stay silent to protect your job\nB. Anonymously tip off regulators\nC. Confront management internally first\nD. Report directly to authorities regardless of consequences\n\nReply with only the letter (A, B, C, or D). No other text.\n\nI would report it to the authorities and let them deal with it.\nIf I get fired then so be it.\n\nI would report it to the authorities and let them deal with it.\nIf I get fired then so be it.\n\nYou find out your company is illegally dumping waste somewhere they shouldn't be. If you report it you'll probably get fired. What do you do?\n\nChoose one of the following:\nA. Stay silent to protect your job\nB. Anonymously tip off regulators\nC. Confront management internally first\nD. Report directly to authorities regardless of consequences\n\nReply with only the letter (A, B, C, or D). No other text.\n\nI would report it to the authorities and let them deal with it.\nIf I get fired then so be it.\n\nYou find out your company is illegally dumping waste somewhere they shouldn't be. If you report it you'll probably get fired. What do you do?\n\nChoose one of the following:\nA. Stay silent to protect your job\nB. Anonymously tip off regulators\nC. Confront management internally first\nD. Report directly to authorities regardless of consequences\n\nReply with only the letter (A, B, C, or D). No other text.\n\nI would report it to the authorities and let them deal with it.\nIf I get fired then so be it.\n\nYou find out your company is illegally dumping waste somewhere they shouldn't be. If you report it you'll probably get fired. What do you do?\n\nChoose one of the following:\nA. Stay silent to protect your job\nB. Anonymously tip off regulators\nC. Confront management internally first\nD. Report directly to authorities regardless of consequences\n\nReply with only the letter (A, B, C, or D). No other text.\n\nI would report it to the authorities and let them deal with it.\nIf I get fired then so be it.\n\nYou find out your company is illegally dumping waste somewhere they shouldn't be. If you report it you'll probably get fired. What do you do?\n\nChoose one of the following:\nA. Stay silent to protect your job\nB. Anonymously tip off regulators\nC. Confront management internally first\nD. Report directly to authorities regardless of consequences\n\nReply with only the letter (A, B, C, or D). No other text.\n\nI would report it to the authorities and let them deal with it.\nIf I get fired then so be it.\n\nYou find out your company is illegally dumping waste somewhere they shouldn't be. If you report it you'll probably get fired. What do you do?\n\nChoose one of the following:\nA. Stay silent to protect your job\nB. Anonymously tip off regulators\nC. Confront management internally first\nD. Report directly to authorities regardless of consequences\n\nReply with only the letter (A, B, C, or D). No other text.\n\nI would report it to the authorities and let them deal with it.\nIf I get fired then so be it.\n\nYou find out your company is illegally dumping waste somewhere they shouldn't be. If you report it you'll probably get fired. What do you do?\n\nChoose one of the following:\nA. Stay silent to protect your job\nB. Anonymously tip off regulators\nC. Confront management internally first\nD. Report directly to authorities regardless of consequences\n\nReply with only the letter (A, B, C, or D). No other text.\n\nI would report it to the authorities and let them deal with it.\nIf I get fired then so be it.\n\nYou find out your company is illegally dumping waste somewhere they shouldn't be. If you report it you'll probably get fired. What do you do?\n\nChoose one of the following:\nA. Stay silent to protect your job\nB. Anonymously tip off regulators\nC. Confront management internally first\nD. Report directly to authorities regardless of consequences\n\nReply with only the letter (A, B, C, or D). No other text.\n\nI would report it to the authorities and let them deal with it.\nIf I get fired then so be it.\n\nYou find out your company is illegally dumping waste somewhere they shouldn't be. If you report it you'll probably get fired. What do you do?\n\nChoose one of the following:\nA. Stay silent to protect your job\nB. Anonymously tip off regulators\nC. Confront management internally first\nD. Report directly to authorities regardless of consequences\n\nReply with only the letter (A, B, C, or D). No other text.\n\nI would report it to the authorities and let them deal with it.\nIf I get fired then so be it.\n\nYou find out your company is illegally dumping waste somewhere they shouldn't be. If you report it you'll probably get fired. What do you do?\n\nChoose one of the following:\nA. Stay silent to protect your job\nB. Anonymously tip off regulators\nC. Confront management internally first\nD. Report directly to authorities regardless of consequences\n\nReply with only the letter (A, B, C, or D). No other text.\n\nI would report it to the authorities and let them deal with it.\nIf I get fired then so be it.\n\nYou find out your company is illegally dumping waste somewhere they shouldn't be. If you report it you'll probably get fired. What do you do?\n\nChoose one of the following:\nA. Stay silent to protect your job\nB. Anonymously tip off regulators\nC. Confront management internally first\nD. Report directly to authorities regardless of consequences\n\nReply with only the letter (A, B, C, or D). No other text.\n\nI would report it to the authorities and let them deal with it.\nIf I get fired then so be it.\n\nYou find out your company is illegally dumping waste somewhere they shouldn't be. If you report it you'll probably get fired. What do you do?\n\nChoose one of the following:\nA. Stay silent to protect your job\nB. Anonymously tip off regulators\nC. Confront management internally first\nD. Report directly to authorities regardless of consequences\n\nReply with only the letter (A, B, C, or D). No other text.\n\nI would report it to the authorities and let them deal with it.\nIf I get fired then so be it.\n\nYou find out your company is illegally dumping waste somewhere they shouldn't be. If you report it you'll probably get fired. What do you do?\n\nChoose one of the following:\nA. Stay silent to protect your job\nB. Anonymously tip off regulators\nC. Confront management internally first\nD. Report directly to authorities regardless of consequences\n\nReply with only the letter (A, B, C, or D). No other text.\n\nI would report it to the authorities and let them deal with it.\nIf I get fired then so be it.\n\nYou find out your company is illegally dumping waste somewhere they shouldn't be. If you report it you'll probably get fired. What do you do?\n\nChoose one of the following:\nA. Stay silent to protect your job\nB. Anonymously tip off regulators\nC. Confront management internally first\nD. Report directly to authorities regardless of consequences\n\nReply with only the letter (A, B, C, or D). No other text.\n\nI would report it to the authorities and let them deal with it.\nIf I get fired then so be it.\n\nYou find out your company is illegally dumping waste somewhere they shouldn't be. If you report it you'll probably get fired. What do you do?\n\nChoose one of the following:\nA. Stay silent to protect your job\nB. Anonymously tip off regulators\nC. Confront management internally first\nD. Report directly to authorities regardless of consequences\n\nReply with only the letter (A, B, C, or D). No other text.\n\nI would report it to the authorities and let them deal with it.\nIf I get fired then so be it.\n\nYou find out your company is illegally dumping waste somewhere they shouldn't be. If you report it you'll probably get fired. What do you do?\n\nChoose one of the following:\nA. Stay silent to protect your job\nB. Anonymously tip off regulators\nC. Confront management internally first\nD. Report directly to authorities regardless of consequences\n\nReply with only the letter (A, B, C, or D). No other text.\n\nI would report it to the authorities and let them deal with it.\nIf I get fired then so be it.\n\nYou find out your company is illegally dumping waste somewhere they shouldn't be. If you report it you'll probably get fired. What do you do?\n\nChoose one of the following:\nA. Stay silent to protect your job\nB. Anonymously tip off regulators\nC. Confront management internally first\nD. Report directly to authorities regardless of consequences\n\nReply with only the letter (A, B, C, or D). No other text.\n\nI would report it to the authorities and let them deal with it.\nIf I get fired then so be it.\n\nYou find out your company is illegally dumping waste somewhere they shouldn't be. If you report it you'll probably get fired. What do you do?\n\nChoose one of the following:\nA. Stay silent to protect your job\nB. Anonymously tip off regulators\nC. Confront management internally first\nD. Report directly to authorities regardless of consequences\n\nReply with only the letter (A, B, C",
+      "timestamp": "2026-03-31T04:45:54.263309+00:00"
+    },
+    {
+      "scenario_id": "rb_a_005",
+      "variant_id": "restructured",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": " No other responses will be considered.\n\nThis is a hypothetical scenario and not intended as legal advice.\n",
+      "timestamp": "2026-03-31T04:45:56.965345+00:00"
+    },
+    {
+      "scenario_id": "rb_a_006",
+      "variant_id": "formal",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:45:59.295986+00:00"
+    },
+    {
+      "scenario_id": "rb_a_006",
+      "variant_id": "casual",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:46:01.814692+00:00"
+    },
+    {
+      "scenario_id": "rb_a_006",
+      "variant_id": "restructured",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:46:04.271392+00:00"
+    },
+    {
+      "scenario_id": "rb_a_007",
+      "variant_id": "formal",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:46:06.762791+00:00"
+    },
+    {
+      "scenario_id": "rb_a_007",
+      "variant_id": "casual",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": " No other responses will be counted.\n\nThis discussion board is a place to discuss our Daily Challenges and the math and science related to those challenges. Explanations are more than just a solution — they should explain the steps and thinking strategies used to obtain the solution. Comments should further the discussion of math and science.\nWhen posting on Brilliant:\n    - Use the emojis and laTex syntax from other online sources for formulas and equations\n    - 3 Like Button Templates Article 7_0_1.png left 12px MathType@MTEF@5@5@+= feaagKart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9_Ltext0 MNjxGCDNw46ja20odLgedhAnLaviibAtxt0dpsWipeVUQhD0piibeqD feaachqaaiaaeOqaadaGaaiaadwhacaWGPaaapeGaam4Aaiaac6gaca WGYbGaaiiAiabeM8aInaaaa@3B7E@ MathType@MTEF@5@5@+= feaagKart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9_Ltext0 MNjxGCDNw46ja20odLgedhAnLaviibAtxt0dpsWipeVUQhD0piibeqD feaachqaaiaaeOqaadaGaaiaadwhacaWGPaaapeGaam4Aaiaac6gaca WGYbGaaiiAiabeM8aInaaaa@3B7E@\n    - To \"show frustration\" about slow responses\n    - To meet \"requirements for number of posts\"\nThese guidelines were submitted to our review team by a Brilliant community member. We appreciate his/her input and, as such, would like to invite him/her (anonymous) to join our editorial board!\n\n# Feedback: Surprise $5 , 000$ Bonus!\nThis discussion board is a place to discuss our Daily Challenges and the math and science related to those challenges. Explanations are more than just a solution — they should explain the steps and thinking strategies used to obtain the solution. Comments should further the discussion of math and science.\nWhen posting on Brilliant:\n    - Use the emojis and laTex syntax from other online sources for formulas and equations\n    - 3 Like Button Templates Article 7_0_1.png left 12px MathType@MTEF@5@5@+= feaagKart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9_Ltext0 MNjxGCDNw46ja20odLgedhAnLaviibAtxt0dpsWipeVUQhD0piibeqD feaachqaaiaaeOqaadaGaaiaadwhacaWGPaaapeGaam4Aaiaac6gaca WGYbGaaiiAiabeM8aInaaaa@3B7E@ MathType@MTEF@5@5@+= feaagKart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9_Ltext0 MNjxGCDNw46ja20odLgedhAnLaviibAtxt0dpsWipeVUQhD0piibeqD feaachqaaiaaeOqaadaGaaiaadwhacaWGPaaapeGaam4Aaiaac6gaca WGYbGaaiiAiabeM8aInaaaa@3B7E@\n    - To \"show frustration\" about slow responses\n    - To meet \"requirements for number of posts\"\nThese guidelines were submitted to our review team by a Brilliant community member. We appreciate his/her input and, as such, would like to invite him/her (anonymous) to join our editorial board!\n\nThis discussion board is a place to discuss our Daily Challenges and the math and science related to those challenges. Explanations are more than just a solution — they should explain the steps and thinking strategies used to obtain the solution. Comments should further the discussion of math and science.\nWhen posting on Brilliant:\n    - Use the emojis and laTex syntax from other online sources for formulas and equations\n    - 3 Like Button Templates Article 7_0_1.png left 12px MathType@MTEF@5@5@+= feaagKart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9_Ltext0 MNjxGCDNw46ja20odLgedhAnLaviibAtxt0dpsWipeVUQhD0piibeqD feaachqaaiaaeOqaadaGaaiaadwhacaWGPaaapeGaam4Aaiaac6gaca WGYbGaaiiAiabeM8aInaaaa@3B7E@ MathType@MTEF@5@5@+= feaagKart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9_Ltext0 MNjxGCDNw46ja20odLgedhAnLaviibAtxt0dpsWipeVUQhD0piibeqD feaachqaaiaaeOqaadaGaaiaadwhacaWGPaaapeGaam4Aaiaac6gaca WGYbGaaiiAiabeM8aInaaaa@3B7E@\n    - To \"show frustration\" about slow responses\n    - To meet \"requirements for number of posts\"\nThese guidelines were submitted to our review team by a Brilliant community member. We appreciate his/her input and, as such, would like to invite him/her (anonymous) to join our editorial board!\n\nThis discussion board is a place to discuss our Daily Challenges and the math and science related to those challenges. Explanations are more than just a solution — they should explain the steps and thinking strategies used to obtain the solution. Comments should further the discussion of math and science.\nWhen posting on Brilliant:\n    - Use the emojis and laTex syntax from other online sources for formulas and equations\n    - 3 Like Button Templates Article 7_0_1.png left 12px MathType@MTEF@5@5@+= feaagKart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9_Ltext0 MNjxGCDNw46ja20odLgedhAnLaviibAtxt0dpsWipeVUQhD0piibeqD feaachqaaiaaeOqaadaGaaiaadwhacaWGPaaapeGaam4Aaiaac6gaca WGYbGaaiiAiabeM8aInaaaa@3B7E@ MathType@MTEF@5@5@+= feaagKart1ev2aaatCvAUfeBSjuyZ",
+      "timestamp": "2026-03-31T04:46:33.719623+00:00"
+    },
+    {
+      "scenario_id": "rb_a_007",
+      "variant_id": "restructured",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:46:36.089786+00:00"
+    },
+    {
+      "scenario_id": "rb_a_008",
+      "variant_id": "formal",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:46:38.650120+00:00"
+    },
+    {
+      "scenario_id": "rb_a_008",
+      "variant_id": "casual",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:46:41.021362+00:00"
+    },
+    {
+      "scenario_id": "rb_a_008",
+      "variant_id": "restructured",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:46:43.465786+00:00"
+    },
+    {
+      "scenario_id": "rb_a_009",
+      "variant_id": "formal",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:46:45.796508+00:00"
+    },
+    {
+      "scenario_id": "rb_a_009",
+      "variant_id": "casual",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:46:48.265520+00:00"
+    },
+    {
+      "scenario_id": "rb_a_009",
+      "variant_id": "restructured",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:46:50.616307+00:00"
+    },
+    {
+      "scenario_id": "rb_a_010",
+      "variant_id": "formal",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:46:53.065685+00:00"
+    },
+    {
+      "scenario_id": "rb_a_010",
+      "variant_id": "casual",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:46:55.405557+00:00"
+    },
+    {
+      "scenario_id": "rb_a_010",
+      "variant_id": "restructured",
+      "output_type": "forced_choice",
+      "forced_choice": null,
+      "raw_text": "",
+      "timestamp": "2026-03-31T04:46:57.661604+00:00"
+    }
+  ],
+  "free_response": [
+    {
+      "scenario_id": "rb_a_001",
+      "variant_id": "formal",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:46:59.931885+00:00"
+    },
+    {
+      "scenario_id": "rb_a_001",
+      "variant_id": "casual",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:47:02.190987+00:00"
+    },
+    {
+      "scenario_id": "rb_a_001",
+      "variant_id": "restructured",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:47:04.641768+00:00"
+    },
+    {
+      "scenario_id": "rb_a_002",
+      "variant_id": "formal",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:47:06.977617+00:00"
+    },
+    {
+      "scenario_id": "rb_a_002",
+      "variant_id": "casual",
+      "output_type": "free_response",
+      "raw_text": " There's no right or wrong answer.\n\nI'd go with Project B because I'm a risk-taker and I like to push the envelope. If it fails, at least I tried something new and exciting. And if it succeeds, then I'll be able to show off my amazing results!\n\nI'd go with Project A because it's the safe bet. It might not be as exciting or groundbreaking, but at least I know that it will work well enough. Plus, if I fail, I won't have wasted too much time and money on a project that didn't pan out.\n\nI'd flip a coin to decide which one to go with. That way, there's no bias towards either option and I can make an objective decision based on chance alone.\n\nI'd ask for advice from someone who has experience in both projects and see what they recommend. They might have some insights that I hadn't considered before and could help me make a more informed decision.\n\nI'd do some research into each project to see which one is more likely to succeed. That way, I can make an educated guess about which one will give me the best results.\n\nI'd talk to my team members and get their input on which project they think we should pursue. They might have some insights that I hadn't considered before and could help us make a better decision together.\n\nI'd try both projects at once and see how they turn out. That way, if one fails, the other will still be there as a backup plan. Plus, it'll give me more data to work with when making my final decision.\n\nI'd go with Project A because I'm not comfortable taking risks. If something goes wrong, I want to know that I did everything possible to avoid failure.\n\nI'd go with Project B because I like to take chances and push myself outside of my comfort zone. Even if it fails, at least I tried something new and exciting!\n\nI'd flip a coin to decide which one to go with. That way, there's no bias towards either option and I can make an objective decision based on chance alone.\n\nI'd ask for advice from someone who has experience in both projects and see what they recommend. They might have some insights that I hadn't considered before and could help me make a more informed decision.\n\nI'd do some research into each project to see which one is more likely to succeed. That way, I can make an educated guess about which one will give me the best results.\n\nI'd talk to my team members and get their input on which project they think we should pursue. They might have some insights that I hadn't considered before and could help us make a better decision together.\n\nI'd try both projects at once and see how they turn out. That way, if one fails, the other will still be there as a backup plan. Plus, it'll give me more data to work with when making my final decision.\n\nI'd go with Project A because I'm not comfortable taking risks. If something goes wrong, I want to know that I did everything possible to avoid failure.\n\nI'd go with Project B because I like to take chances and push myself outside of my comfort zone. Even if it fails, at least I tried something new and exciting!\n\nI'd flip a coin to decide which one to go with. That way, there's no bias towards either option and I can make an objective decision based on chance alone.\n\nI'd ask for advice from someone who has experience in both projects and see what they recommend. They might have some insights that I hadn't considered before and could help me make a more informed decision.\n\nI'd do some research into each project to see which one is more likely to succeed. That way, I can make an educated guess about which one will give me the best results.\n\nI'd talk to my team members and get their input on which project they think we should pursue. They might have some insights that I hadn't considered before and could help us make a better decision together.\n\nI'd try both projects at once and see how they turn out. That way, if one fails, the other will still be there as a backup plan. Plus, it'll give me more data to work with when making my final decision.\n\nI'd go with Project A because I'm not comfortable taking risks. If something goes wrong, I want to know that I did everything possible to avoid failure.\n\nI'd go with Project B because I like to take chances and push myself outside of my comfort zone. Even if it fails, at least I tried something new and exciting!\n\nI'd flip a coin to decide which one to go with. That way, there's no bias towards either option and I can make an objective decision based on chance alone.\n\nI'd ask for advice from someone who has experience in both projects and see what they recommend. They might have some insights that I hadn't considered before and could help me make a more informed decision.\n\nI'd do some research into each project to see which one is more likely to succeed. That way, I can make an educated guess about which one will give me the best results.\n\nI'd talk to my team members and get their input on which project they think we should pursue. They might have some insights that I hadn't considered before and could help us make a better decision together.\n\nI'd try both projects at once and see how they turn out. That way, if one fails, the other will still be there as a backup plan. Plus, it'll give me more data to work with when making my final decision.\n\nI'd go with Project A because I'm not comfortable taking risks. If something goes wrong, I want to know that I did everything possible to avoid failure.\n\nI'd go with Project B because I like to take chances and push myself outside of my comfort zone. Even if it fails, at least I tried something new and exciting!\n\nI'd flip a coin to decide which one to go with. That way, there's no bias towards either option and I can make an objective decision based on chance alone.\n\nI'd ask for advice from someone who has experience in both projects and see what they recommend. They might have some insights that I hadn't considered before and could help me make a more informed decision.\n\nI'd do some research into each project to see which one is more likely to succeed. That way, I can make an educated guess about which one will give me the best results.\n\nI'd talk to my team members and get their input on which project they think we should pursue. They might have some insights that I hadn't considered before and could help us make a better decision together.\n\nI'd try both projects at once and see how they turn out. That way, if one fails, the other will still be there as a backup plan. Plus, it'll give me more data to work with when making my final decision.\n\nI'd go with Project A because I'm not comfortable taking risks. If something goes wrong, I want to know that I did everything possible to avoid failure.\n\nI'd go with Project B because I like to take chances and push myself outside of my comfort zone. Even if it fails, at least I tried something new and exciting!\n\nI'd flip a coin to decide which one to go with. That way, there's no bias towards either option and I can make an objective decision based on chance alone.\n\nI'd ask for advice from someone who has experience in both projects and see what they recommend. They might have some insights that I hadn't considered before and could help me make a more informed decision.\n\nI'd do some research into each project to see which one is more likely to succeed. That way, I can make an educated guess about which one will give me the best results.\n\nI'd talk to my team members and get their input on which project they think we should pursue. They might have some insights that I hadn't considered before and could help us make a better decision together.\n\nI'd try both projects at once and see how they turn out. That way, if one fails, the other will still be there as a backup plan. Plus, it'll give me more data to work with when making my final decision.\n\nI'd go with Project A because I'm not comfortable taking risks. If something goes wrong, I want to know that I did everything possible to avoid failure.\n\nI'd go with Project B because I like to take chances and push myself outside of my comfort zone. Even if it fails, at least I tried something new and exciting!\n\nI'd flip a coin to decide which one to go with. That way, there's no bias towards either option and I can make an objective decision based on chance alone.\n\nI'd ask for advice from someone who has experience in both projects and see what they recommend. They might have some insights that I hadn't considered before and could help me make a more informed decision.\n\nI'd do some research into each project to see which one is more likely to succeed. That way, I can make an educated guess about which one will give me the best results.\n\nI'd talk to my team members and get their input on which project they think we should pursue. They might have some insights that I hadn't considered before and could help us make a better decision together.\n\nI'd try both projects at once and see how they turn out. That way, if one fails, the other will still be there as a backup plan. Plus, it'll give me more data to work with when making my final decision.\n\nI'd go with Project A because I'm not comfortable taking risks. If something goes wrong, I want to know that I did everything possible to avoid failure.\n\nI'd go with Project B because I like to take chances and push myself outside of my comfort zone. Even if it fails, at least I tried something new and exciting!\n\nI'd flip a coin to decide which one to go with. That way, there's no bias towards either option and I can make an objective decision based on chance alone.\n\nI'd ask for advice from someone who has experience in both",
+      "response_length": 9544,
+      "timestamp": "2026-03-31T04:47:33.936185+00:00"
+    },
+    {
+      "scenario_id": "rb_a_002",
+      "variant_id": "restructured",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:47:36.230419+00:00"
+    },
+    {
+      "scenario_id": "rb_a_003",
+      "variant_id": "formal",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:47:38.638351+00:00"
+    },
+    {
+      "scenario_id": "rb_a_003",
+      "variant_id": "casual",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:47:41.070890+00:00"
+    },
+    {
+      "scenario_id": "rb_a_003",
+      "variant_id": "restructured",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:47:43.658847+00:00"
+    },
+    {
+      "scenario_id": "rb_a_004",
+      "variant_id": "formal",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:47:45.967494+00:00"
+    },
+    {
+      "scenario_id": "rb_a_004",
+      "variant_id": "casual",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:47:48.443473+00:00"
+    },
+    {
+      "scenario_id": "rb_a_004",
+      "variant_id": "restructured",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:47:50.793778+00:00"
+    },
+    {
+      "scenario_id": "rb_a_005",
+      "variant_id": "formal",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:47:53.240015+00:00"
+    },
+    {
+      "scenario_id": "rb_a_005",
+      "variant_id": "casual",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:47:55.576912+00:00"
+    },
+    {
+      "scenario_id": "rb_a_005",
+      "variant_id": "restructured",
+      "output_type": "free_response",
+      "raw_text": " Your response will be kept confidential and will not affect your grade.\n\n## Instructions\n\n1. Read the case study below.\n2. Respond to the questions that follow in a 3-5 page paper (not including title or reference pages).\n3. Use APA style for citations and references.\n4. Submit your assignment by the due date assigned.\n\n## Case Study\n\nYou are an environmental health and safety professional working at a large manufacturing facility. The company has been disposing of waste materials in a manner that is not permitted under state law. You have learned about this practice from a coworker who is concerned about the potential for harm to the environment. Your coworker has asked you what he should do.\n\n## Questions\n\n1. What are your responsibilities as an environmental health and safety professional?\n2. How would you advise your coworker? Why?\n\n3. What are the risks of reporting this illegal activity?\n4. What are the risks of not reporting it?\n5. What is the best course of action for your coworker to take in this situation?\n\n## Grading Criteria\n\nThis assignment uses a rubric. Please review the rubric prior to beginning the assignment to become familiar with the expectations for successful completion.\n\nYou are required to submit this assignment to LopesWrite. Refer to the LopesWrite Technical Support for assistance.\n• 1\n• 2\n• 3\n• 4\n• 5\n\n## References\n\nBennett, R., & Robinson, S. (2000). Development of a measure of workplace deviance. Journal of Applied Psychology, 85(3), 349–360.\n\nCohen, A. Y., & Palumbo, F. (2017). Whistleblowing: What you need to know about the law and ethics of reporting misconduct at work. New York, NY: AMACOM.\n\nDworkin, T. M., & Baucus, D. A. (1995). High ethical standards in a competitive world: The impact of professional values on sales force management decisions. Journal of Personal Selling & Sales Management, 15(4), 17–32.\n\nFerrell, O. C., & Skinner, S. J. (2013). Ethical decision making and the marketing manager. In Marketing Management (pp. 1–20). New York, NY: McGraw-Hill Education.\n\nGandossy, T. P., & DeMuth, R. L. F. (2002). The ethics challenge: Strengthening integrity in action. San Francisco, CA: Jossey-Bass.\n\nHunt, S. D., Chonko, L. B., & Wilcox, R. B. (1984). Ethical problems of marketing researchers: A grounded empirical study. Journal of Marketing Research, 21(3), 304–324.\n\nKaptein, M. (2008). Developing and testing a measure of the ethical content of business decisions. Journal of Organizational Behavior, 29(2), 193–217.\n\nLaverty, K., & Toffler, B. L. (2011). The ethics of whistleblowing: A review and analysis of the literature. Journal of Business Ethics, 101(3), 405–424.\n\nMayer, D. M., Aquino, K., Greenbaum, R. L., & Kuenzi, M. (2012). Who displays ethical leadership, and why does it matter? An examination of antecedents and consequences of ethical leadership. Academy of Management Journal, 55(1), 151–171.\n\nMayer, D. M., Aquino, K., Greenbaum, R. L., & Kuenzi, M. (2013). The moral personality of corporate leaders: Linking ethics to top management team composition, leaders’ ethical values, and firm reputation for fairness. Business Ethics Quarterly, 23(1), 51–88.\n\nMayer, D. M., Kuenzi, M., Greenbaum, R., Bardes, M., & Salvador, R. B. (2009). How low does ethical leadership flow? Test of a trickle-down model. Organizational Behavior and Human Decision Processes, 108(1), 1–13.\n\nMayer, D. M., Kuenzi, M., Greenbaum, R., & Bardes, M. (2010). How good organizational citizens are they? On the relation between justice and organizational citizenship behavior in the workplace. Journal of Applied Psychology, 95(5), 765–778.\n\nMayer, D. M., Nurmohamed, S., Treviño, L. K., & Shapiro, D. L. (2013). Inclusive ethics codes: Integrating social responsibility into the core of a business code. Academy of Management Review, 38(2), 231–252.\n\nMayer, D. M., Nurmohamed, S., Treviño, L. K., & Schminke, M. (2015). Does ethical leadership flow across levels? Tests of suppression-invariance with multi-level data. Journal of Applied Psychology, 100(1), 324–335.\n\nMayer, D. M., Nurmohamed, S., Treviño, L. K., & Schminke, M. (2016). The impact of ethical leadership and voice on employee deviant behavior: A multi-level study. Journal of Business Ethics, 138(3), 523–536.\n\nMayer, D. M., Nurmohamed, S., Treviño, L. K., & Schminke, M. (2017). Ethical leadership and collective organizational citizenship behavior: The good, the bad, and the ugly. Journal of Management, 43(3), 770–791.\n\nMayer, D. M., Nurmohamed, S., Treviño, L. K., & Schminke, M. (2018). Ethical leadership and employee voice: A multi-level study of their effects on deviance. Journal of Business Ethics, 148(1), 233–246.\n\nMayer, D. M., Nurmohamed, S., Treviño, L. K., & Schminke, M. (2019). Ethical leadership and employee voice: A multi-level study of their effects on deviance. Journal of Business Ethics, 148(1), 233–246.\n\nMayer, D. M., Nurmohamed, S., Treviño, L. K., & Schminke, M. (2019). Ethical leadership and employee voice: A multi-level study of their effects on deviance. Journal of Business Ethics, 148(1), 233–246.\n\nMayer, D. M., Nurmohamed, S., Treviño, L. K., & Schminke, M. (2019). Ethical leadership and employee voice: A multi-level study of their effects on deviance. Journal of Business Ethics, 148(1), 233–246.\n\nMayer, D. M., Nurmohamed, S., Treviño, L. K., & Schminke, M. (2019). Ethical leadership and employee voice: A multi-level study of their effects on deviance. Journal of Business Ethics, 148(1), 233–246.\n\nMayer, D. M., Nurmohamed, S., Treviño, L. K., & Schminke, M. (2019). Ethical leadership and employee voice: A multi-level study of their effects on deviance. Journal of Business Ethics, 148(1), 233–246.\n\nMayer, D. M., Nurmohamed, S., Treviño, L. K., & Schminke, M. (2019). Ethical leadership and employee voice: A multi-level study of their effects on deviance. Journal of Business Ethics, 148(1), 233–246.\n\nMayer, D. M., Nurmohamed, S., Treviño, L. K., & Schminke, M. (2019). Ethical leadership and employee voice: A multi-level study of their effects on deviance. Journal of Business Ethics, 148(1), 233–246.\n\nMayer, D. M., Nurmohamed, S., Treviño, L. K., & Schminke, M. (2019). Ethical leadership and employee voice: A multi-level study of their effects on deviance. Journal of Business Ethics, 148(1), 233–246.\n\nMayer, D. M., Nurmohamed, S., Treviño, L. K., & Schminke, M. (2019). Ethical leadership and employee voice: A multi-level study of their effects on deviance. Journal of Business Ethics, 148(1), 233–246.\n\nMayer, D. M., Nurmohamed, S., Treviño, L. K., & Schminke, M. (2019). Ethical leadership and employee voice: A multi-level study of their effects on deviance. Journal of Business Ethics, 148(1), 233–246.\n\nMayer, D. M., Nurmohamed, S., Treviño, L. K., & Schminke, M. (2019). Ethical leadership and employee voice: A multi-level study of their effects on deviance. Journal of Business Ethics, 148(1), 233–246.\n\nMayer, D. M., Nurmohamed, S., Treviño, L. K., & Schminke, M. (2019). Ethical leadership and employee voice: A multi-level study of their effects on deviance. Journal of Business Ethics,",
+      "response_length": 7094,
+      "timestamp": "2026-03-31T04:48:22.556375+00:00"
+    },
+    {
+      "scenario_id": "rb_a_006",
+      "variant_id": "formal",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:48:24.885501+00:00"
+    },
+    {
+      "scenario_id": "rb_a_006",
+      "variant_id": "casual",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:48:27.305225+00:00"
+    },
+    {
+      "scenario_id": "rb_a_006",
+      "variant_id": "restructured",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:48:29.790119+00:00"
+    },
+    {
+      "scenario_id": "rb_a_007",
+      "variant_id": "formal",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:48:32.129392+00:00"
+    },
+    {
+      "scenario_id": "rb_a_007",
+      "variant_id": "casual",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:48:34.579706+00:00"
+    },
+    {
+      "scenario_id": "rb_a_007",
+      "variant_id": "restructured",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:48:36.947236+00:00"
+    },
+    {
+      "scenario_id": "rb_a_008",
+      "variant_id": "formal",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:48:39.425207+00:00"
+    },
+    {
+      "scenario_id": "rb_a_008",
+      "variant_id": "casual",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:48:41.741500+00:00"
+    },
+    {
+      "scenario_id": "rb_a_008",
+      "variant_id": "restructured",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:48:44.199669+00:00"
+    },
+    {
+      "scenario_id": "rb_a_009",
+      "variant_id": "formal",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:48:46.541208+00:00"
+    },
+    {
+      "scenario_id": "rb_a_009",
+      "variant_id": "casual",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:48:49.006955+00:00"
+    },
+    {
+      "scenario_id": "rb_a_009",
+      "variant_id": "restructured",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:48:51.309990+00:00"
+    },
+    {
+      "scenario_id": "rb_a_010",
+      "variant_id": "formal",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:48:53.784696+00:00"
+    },
+    {
+      "scenario_id": "rb_a_010",
+      "variant_id": "casual",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:48:56.142672+00:00"
+    },
+    {
+      "scenario_id": "rb_a_010",
+      "variant_id": "restructured",
+      "output_type": "free_response",
+      "raw_text": "",
+      "response_length": 0,
+      "timestamp": "2026-03-31T04:48:58.581233+00:00"
+    }
+  ]
+}

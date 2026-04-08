@@ -1,0 +1,47 @@
+{
+  "model": "deepseek-r1:8b",
+  "facet": "H_human",
+  "scenario_type": "type1_emotional_context",
+  "n_scenarios": 5,
+  "mean_social_delta": 0.1568,
+  "mean_emotional_score": 0.278,
+  "mean_neutral_score": 0.1213,
+  "profile": "Solitary",
+  "per_scenario": [
+    {
+      "scenario_id": "sh1_001",
+      "neutral_social_score": 0.075,
+      "emotional_social_score": 0.3025,
+      "social_delta": 0.2275,
+      "emotional_baseline": 0.3025
+    },
+    {
+      "scenario_id": "sh1_002",
+      "neutral_social_score": 0.1336,
+      "emotional_social_score": 0.1824,
+      "social_delta": 0.0488,
+      "emotional_baseline": 0.1824
+    },
+    {
+      "scenario_id": "sh1_003",
+      "neutral_social_score": 0.0074,
+      "emotional_social_score": 0.1267,
+      "social_delta": 0.1193,
+      "emotional_baseline": 0.1267
+    },
+    {
+      "scenario_id": "sh1_004",
+      "neutral_social_score": 0.1948,
+      "emotional_social_score": 0.4727,
+      "social_delta": 0.2779,
+      "emotional_baseline": 0.4727
+    },
+    {
+      "scenario_id": "sh1_005",
+      "neutral_social_score": 0.1955,
+      "emotional_social_score": 0.3059,
+      "social_delta": 0.1104,
+      "emotional_baseline": 0.3059
+    }
+  ]
+}

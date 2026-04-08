@@ -1,0 +1,427 @@
+[
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:51:17.557895+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_001",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "Here's how to calculate the operating profit margin:\n\n**1. Calculate Operating Profit:**\n\n* Operating Profit = Revenue - Costs\n* Operating Profit = $100M - $60M \n* Operating Profit = $40M\n\n**2. Calculate Operating Profit Margin:**\n\n* Operating Profit Margin = (Operating Profit / Revenue) * 100%\n* Operating Profit Margin = ($40M / $100M) * 100%\n* Operating Profit Margin = 40%\n\n\n**Therefore, the operating profit margin for the company is 40%.** \n",
+      "length": 448
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:51:23.786128+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_001",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "I can't give you a precise estimate for the operating profit margin without knowing the company's costs. \n\nHere's why:\n\n* **Operating Profit Margin = (Revenue - Operating Costs) / Revenue**  To calculate this, we need both revenue and operating costs.\n* **\"Industry Average\" is Broad:** The average operating profit margin varies significantly across industries. For example, software companies often have higher margins than retail businesses. \n\n**What I can do:**\n\n1. **Provide a general range:** Assuming the company operates in an industry with a typical operating profit margin (let's say between 10% and 20%), we could estimate their operating profit to be between $10M and $20M.\n2. **Highlight the importance of more information:**  To get a more accurate estimate, you would need:\n    * The company's specific industry.\n    * Data on average operating profit margins for companies in that industry.\n    * Any publicly available financial statements from the company (if they are publicly traded).\n\n\nLet me know if you have any other information about the company or its industry, and I might be able to give you a more helpful estimate! \n",
+      "length": 1146
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:51:33.092345+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_001",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "Here's how to analyze the operating profit margin with both cost figures:\n\n**Understanding Operating Profit Margin**\n\nOperating profit margin (OPM) is a key financial metric that shows the percentage of revenue left after covering operating expenses.  It's calculated as:\n\n* **OPM = (Operating Income / Revenue) * 100%**\n* Where Operating Income = Revenue - Costs\n\n**Scenario 1: Using the Reported Costs ($60M)**\n\n* Operating Income = $100M (Revenue) - $60M (Costs) = $40M\n* OPM = ($40M / $100M) * 100% = **40%**\n\n**Scenario 2: Using the Audit Costs ($80M)**\n\n* Operating Income = $100M (Revenue) - $80M (Costs) = $20M\n* OPM = ($20M / $100M) * 100% = **20%**\n\n**Analysis**\n\nThe difference in operating profit margin between the two scenarios highlights the importance of accurate cost reporting.  \n\n* The reported figure of 40% OPM is significantly higher than the audited figure of 20%. This discrepancy suggests potential issues with the initial cost reporting, which could be due to:\n    * **Errors:** Simple mistakes in recording or calculating costs.\n    * **Omissions:**  Important expenses being left out of the initial report.\n    * **Intentional Misrepresentation:**  While less likely, there's a possibility of deliberate manipulation to inflate profits.\n\n**Next Steps**\n\nThe company should:\n\n1. **Investigate the Discrepancy:** Thoroughly review the audit findings and understand why the reported costs differ from the audited figures.\n2. **Correct Cost Reporting:**  Make necessary adjustments to ensure accurate cost recording and reporting in the future.\n3. **Implement Stronger Controls:** Establish internal controls to prevent errors and potential manipulation of financial data.\n\n\nThe company's stakeholders (investors, lenders, etc.) rely on accurate financial information. Addressing this discrepancy is crucial for maintaining trust and making informed decisions.",
+      "length": 1884
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:51:43.641290+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_001",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "##  Analysis of Operating Profit Margin & Investment Opinion\n\nThis situation presents a challenge for analysis due to the significant uncertainty surrounding both revenue and costs. \n\n**Here's a breakdown:**\n\n* **Revenue Uncertainty:** Two possible figures exist: $100M or $120M. This range represents a potential difference of 20%, significantly impacting profitability calculations.\n* **Cost Uncertainty:** The cost range is broad, from $60M to $80M, representing a potential difference of 33%.  The undisclosed nature of some items further complicates the picture.\n\n**Operating Profit Margin Calculation:**\n\nOperating profit margin = (Revenue - Costs) / Revenue\n\nGiven the uncertainty, we can calculate potential operating profit margins for both revenue scenarios and cost ranges:\n\n* **Scenario 1:** $100M Revenue, $60M Costs\n    * Operating Profit Margin = ($100M - $60M) / $100M = 40%\n* **Scenario 2:** $100M Revenue, $80M Costs\n    * Operating Profit Margin = ($100M - $80M) / $100M = 20%\n* **Scenario 3:** $120M Revenue, $60M Costs\n    * Operating Profit Margin = ($120M - $60M) / $120M = 50%\n* **Scenario 4:** $120M Revenue, $80M Costs\n    * Operating Profit Margin = ($120M - $80M) / $120M = 33.3%\n\n**Investment Opinion:**\n\nBased on the wide range of potential operating profit margins (20% to 50%), it's **impossible to provide a definitive investment opinion**.  \n\n**Further Investigation Required:**\n\nTo make an informed decision, further investigation is crucial:\n\n* **Clarify Revenue:** Determine the most reliable source for revenue figures and understand the basis for the discrepancy.\n* **Investigate Costs:** Request detailed cost breakdowns, including the nature of undisclosed items. \n* **Currency Impact:** Assess the potential impact of currency fluctuations on both revenue and costs.\n* **Industry Context:** Compare the company's potential margins to industry benchmarks and competitors.\n* **Growth Prospects:** Analyze the company's future growth potential and its ability to manage costs effectively.\n\n\nOnly after gathering this information can a comprehensive analysis be conducted, leading to a well-informed investment opinion. \n",
+      "length": 2159
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:51:51.830143+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_001",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "I cannot tell you whether or not to invest in this company. I am an AI and not qualified to give financial advice.  \n\nHowever, I can help you analyze the situation so you can make a more informed decision:\n\n**Red Flags:**\n\n* **Conflicting Revenue Reports:** Discrepancies in reported revenue raise serious concerns about the company's transparency and accounting practices. This could indicate deliberate manipulation or incompetence.\n* **Stock Drop Despite CEO Claims:** The stock price drop directly contradicts the CEO's \"record results\" claim, suggesting investors are highly skeptical of the company's performance and/or its leadership.\n* **Insider Trading Allegations:** These allegations further damage the company's reputation and raise questions about ethical conduct within the organization. Insider trading can indicate a culture of secrecy and potential financial misconduct.\n\n**What You Need to Do:**\n\n1. **Investigate Further:** \n    * **Source Verification:**  Identify the sources of the conflicting revenue reports. Are they reputable? What are their motivations?\n    * **SEC Filings:** Review the company's public filings with the Securities and Exchange Commission (SEC). Look for explanations regarding the revenue discrepancies and any mention of insider trading allegations.\n    * **Independent Analysis:** Seek out independent analyst reports on the company. These often provide a more objective perspective than company-sponsored information.\n\n2. **Assess Risk Tolerance:**  Consider your own risk tolerance. Are you comfortable investing in a company with such significant red flags? The potential for losses could be high.\n3. **Consult a Financial Advisor:** A qualified financial advisor can help you assess the situation, understand the risks involved, and make an informed investment decision based on your individual circumstances.\n\n\n**Remember:** Investing always involves risk. Never invest money you cannot afford to lose. Do your due diligence and seek professional advice before making any investment decisions. \n",
+      "length": 2048
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:51:57.758274+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_002",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "The most likely diagnosis is **bacterial pneumonia**. \n\nHere's why:\n\n* **Fever and Cough:** These are common symptoms of pneumonia.\n* **Duration:**  A cough lasting for 3 days suggests an ongoing infection.\n* **Chest X-ray Infiltrate:** An infiltrate in the right lower lobe on a chest X-ray is a classic finding in pneumonia, indicating inflammation and fluid buildup in the lung tissue.\n\n**Important Note:** While bacterial pneumonia is the most likely diagnosis based on these symptoms, it's crucial to remember that other conditions can cause similar symptoms. \n\n**Further Investigations:**\n\nA doctor would need to perform further investigations to confirm the diagnosis and determine the specific type of bacteria causing the infection. These may include:\n\n* **Sputum culture:** To identify the causative bacteria.\n* **Blood tests:** To check for signs of infection and inflammation.\n* **Pulse oximetry:** To measure oxygen levels in the blood.\n\n\n**Disclaimer:** I am an AI chatbot and cannot provide medical advice. This information is for general knowledge purposes only and should not be substituted for professional medical evaluation and treatment. \n",
+      "length": 1160
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:52:03.990547+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_002",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "I'm an AI and cannot provide medical advice. It would be irresponsible of me to offer a diagnosis based on limited information. \n\nHowever, I can tell you that fever and cough are common symptoms of many respiratory illnesses, such as:\n\n* **Common cold:** Usually mild and resolves within a week or two.\n* **Influenza (flu):** Can be more severe than the common cold and may require medical attention.\n* **Pneumonia:** A lung infection that can be caused by bacteria, viruses, or fungi. It often requires antibiotics.\n* **Bronchitis:** Inflammation of the bronchial tubes, which carry air to and from the lungs.\n\n**It is crucial for the patient to see a doctor for a proper diagnosis and treatment plan.** The doctor will consider:\n\n* **Medical history:** Any pre-existing conditions or allergies.\n* **Physical examination:** Listening to the lungs, checking for other symptoms.\n* **Chest X-ray results:** Once available, this can help identify any abnormalities in the lungs.\n* **Other tests:** Depending on the suspected diagnosis, additional tests like blood work or sputum culture may be necessary.\n\n\n**Please urge the patient to seek medical attention promptly.** \n",
+      "length": 1169
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:52:13.421257+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_002",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "It's great that you're thinking critically about this case!  Here's a breakdown of possible diagnoses considering the patient's symptoms and test results:\n\n**Possible Diagnoses:**\n\n* **Viral Pneumonia:** This is a very common cause of pneumonia, especially when WBC count is normal. Many viruses can cause pneumonia, including influenza, respiratory syncytial virus (RSV), and coronaviruses.\n* **Aspiration Pneumonia:**  This occurs when foreign material (food, liquid, vomit) enters the lungs. It can cause inflammation and infection, often in the right lower lobe due to gravity. \n* **Fungal Pneumonia:** Less common than viral or bacterial pneumonia, fungal infections can occur in individuals with weakened immune systems. They may present with similar symptoms but often have a slower onset.\n* **Non-Infectious Causes:**\n\n    * **Pulmonary Embolism (PE):** A blood clot in the lungs can cause inflammation and mimic pneumonia symptoms. \n    * **Interstitial Lung Disease:** These conditions involve scarring and inflammation of lung tissue, leading to shortness of breath and cough.\n    * **Autoimmune Diseases:** Some autoimmune disorders can affect the lungs, causing inflammation and mimicking pneumonia.\n\n**Important Considerations:**\n\n* **Patient History:**  A detailed history is crucial! Ask about recent illnesses, travel, smoking history, allergies, medications, and any underlying health conditions. \n* **Physical Exam:** Listen carefully to lung sounds for wheezing, crackles, or diminished breath sounds. Assess the patient's overall condition, including oxygen saturation levels.\n* **Further Testing:**\n\n    * **Sputum Culture:**  Can help identify bacteria if present. However, it may not be helpful in viral pneumonia.\n    * **Blood Cultures:** Useful for ruling out serious bacterial infections.\n    * **CT Scan:** May provide more detailed images of the lungs and help differentiate between various conditions.\n\n**Next Steps:**\n\nBased on the initial information, a thorough history, physical exam, and further testing are essential to determine the most likely diagnosis and guide appropriate treatment.\n\n\n**Disclaimer:** I am an AI chatbot and cannot provide medical advice. This information is for educational purposes only and should not be substituted for the guidance of a qualified healthcare professional.",
+      "length": 2334
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:52:24.973205+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_002",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "This case presents a challenging clinical scenario with conflicting information and seemingly contradictory test results.  \n\nHere's a breakdown of the key points and a possible approach to differential diagnosis:\n\n**Key Points:**\n\n* **Fever Discrepancy:** The difference in temperature readings (38.5°C vs 37.2°C) raises concerns about accuracy. It's important to investigate potential causes for this discrepancy, such as faulty equipment or variations in measurement technique.\n* **Conflicting History:**  The patient and family disagree on the duration of the cough. This inconsistency highlights the importance of thorough history taking and potentially exploring reasons for the discrepancy (e.g., memory issues, different perceptions).\n* **Infiltrate on X-ray but Normal CT Scan:** The presence of an infiltrate on X-ray suggests lung involvement, while a normal CT scan might indicate that the infiltrate is small or not significant enough to be detected on CT. This could point towards early stages of infection or inflammation.\n* **Elevated CRP but Normal WBC:** Elevated C-reactive protein (CRP) indicates systemic inflammation, while normal white blood cell (WBC) count can be seen in some inflammatory conditions. This combination suggests a localized inflammatory process rather than a full-blown infection.\n\n**Possible Differential Diagnoses:**\n\nGiven these factors, here are some potential diagnoses to consider:\n\n* **Viral Pneumonia:**  A common cause of pneumonia, often presenting with cough, fever, and infiltrates on X-ray. CT scans may be normal in early stages.\n* **Bacterial Pneumonia (atypical):** Some bacterial pneumonias can present with milder symptoms and less pronounced WBC elevation. \n* **Pulmonary Embolism:** While less likely given the absence of typical symptoms like shortness of breath or chest pain, it's worth considering, especially if there are risk factors for DVT.\n* **Interstitial Lung Disease (ILD):**  A group of conditions causing inflammation and scarring in the lung tissue. They can present with cough, fatigue, and sometimes fever. \n* **Autoimmune Conditions:** Certain autoimmune diseases like sarcoidosis or rheumatoid arthritis can affect the lungs and cause inflammation.\n\n**Next Steps:**\n\n1. **Verify Temperature Readings:** Ensure accurate temperature measurement using calibrated equipment and standardized techniques.\n2. **Clarify History:**  Conduct a detailed history taking, exploring potential reasons for conflicting information about cough duration. \n3. **Repeat Blood Work:** Consider repeating blood work to rule out other inflammatory markers or infections.\n4. **Further Imaging:** A high-resolution CT scan might be helpful to better visualize the infiltrate and rule out other lung conditions.\n5. **Consult Specialists:**  Referral to a pulmonologist or infectious disease specialist may be necessary for further evaluation and management.\n\n\n**Important Note:** I am an AI chatbot and cannot provide medical advice. This information is for educational purposes only and should not be substituted for professional medical evaluation and treatment.",
+      "length": 3117
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:52:35.223497+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_002",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "I cannot provide a definitive treatment plan. I am an AI and not a medical professional. \n\nThis scenario highlights the complexities of medical diagnosis and the importance of careful, human-led evaluation.  Here's why I can't give you a treatment plan and what a doctor would consider:\n\n**1. Contradictory Information:**\n\n* **Temperature:** A difference of 1.3°C in temperature is significant and needs clarification. Was it measured at different times? Were different methods used?\n* **Symptom Onset:**  A discrepancy of 2 weeks versus 3 days drastically changes the potential diagnoses. \n* **Imaging:** Infiltrates on an X-ray can be caused by various conditions, not just pneumonia. A clear CT scan suggests the infiltrate might be less severe or due to something other than pneumonia.\n* **Blood Work:** \"Mixed\" blood work is too vague. What specific results are abnormal?\n\n**2. Differing Opinions:**\n\nThe disagreement between the previous doctor and the specialist emphasizes the need for a thorough discussion and review of all available information. \n\n**3. Patient's Request vs. Guidelines:**\n\nWhile patient wishes are important, medical guidelines exist to ensure safe and effective treatment.  A doctor would need to explain the rationale behind waiting for further testing and explore alternative options if appropriate.\n\n**4. Insurance Limitations:**\n\nThe single remaining test coverage adds another layer of complexity. A doctor would prioritize the most informative test based on the patient's history, symptoms, and current findings.\n\n\n**What a Doctor Would Do:**\n\n1. **Gather More Information:**  A detailed history, physical examination, and clarification of the contradictory information are crucial.\n2. **Review All Records:** The doctor would carefully examine all previous records, including X-rays, CT scans, blood work, and notes from the previous doctor.\n3. **Consider Differential Diagnoses:** Based on the available information, the doctor would consider a range of possible diagnoses beyond pneumonia.\n4. **Discuss Options with the Patient:**  The doctor would explain the uncertainties, the rationale for waiting, and explore alternative options within the insurance constraints. \n5. **Order Targeted Testing:** The single remaining test would be chosen strategically to provide the most valuable information for diagnosis and treatment planning.\n\n\n**Remember:** This is a complex medical situation that requires the expertise of a qualified healthcare professional.  Please seek immediate medical attention if you or someone you know is experiencing these symptoms. \n",
+      "length": 2595
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:52:47.012300+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_003",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "Here's a breakdown of the problem and how to approach fixing it:\n\n**Understanding the Error**\n\n* **500 Internal Server Error:** This means something went wrong on the server-side while processing your request. It's a general error, so you need to dig deeper into the logs for specifics.\n* **NullPointerException at UserService.java:45:** This is the key piece of information. A `NullPointerException` occurs when you try to use an object that hasn't been initialized or is currently `null`.  Line 45 in your `UserService.java` file is where this error happens.\n\n**Likely Causes**\n\n1. **Missing User Data:** The most common cause is that the `UserService` is trying to access a user object that doesn't exist. This could happen if:\n   * Your application isn't properly retrieving user data from a database or other source.\n   * A required parameter for fetching the user is missing in the API request.\n\n2. **Incorrect Data Type:** The `UserService` might be expecting a specific type of object (e.g., `User` class), but it's receiving something else (like `null`) instead. This could be due to:\n   * A mismatch between how data is sent and received in the API request/response.\n   * An issue with data conversion or mapping within your application.\n\n3. **Logic Error:** There might be a flaw in the logic of your `UserService` that leads to a `null` value being used where it shouldn't be. This could involve:\n\n   * Incorrect conditional statements (e.g., accessing a field before checking if it exists).\n   * Unintended side effects from other parts of your code.\n\n**Debugging Steps**\n\n1. **Examine Line 45:** Carefully review the code on line 45 in `UserService.java`. Identify what operation is being performed and what object(s) are involved.\n\n2. **Check Input Data:**\n   * If the API request requires parameters, verify that they are being sent correctly and have the expected values. Use tools like Postman or curl to inspect the request data.\n   * If user data is coming from a database, ensure the query is retrieving the correct information and that there are no issues with your database connection.\n\n3. **Inspect Object Values:** Use debugging tools (like a debugger in your IDE) to step through the code execution and check the values of variables at different points. Pay close attention to the object being referenced on line 45 – is it `null`? If so, how did it become `null`?\n\n4. **Review Error Handling:** Make sure you have robust error handling in place within your `UserService`. Catch potential exceptions and log them appropriately to provide more context about the issue.\n\n\n\nLet me know if you can share a snippet of code from line 45 in `UserService.java`, and I might be able to give more specific guidance!",
+      "length": 2731
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:52:58.537687+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_003",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "Here's a structured debugging approach for intermittent 500 errors on your /api/users endpoint, given the limitations:\n\n**1. Reproduce the Error (If Possible):**\n\n* **User Feedback:**  Gather detailed reports from users experiencing the issue. Ask about:\n    * Specific actions they were performing when the error occurred.\n    * Frequency of the problem (e.g., \"every time I try to create a user,\" \"only after logging in\").\n    * Any browser or device information that might be relevant.\n\n* **Manual Testing:**  Try accessing /api/users yourself repeatedly under various conditions:\n    * Different browsers and devices.\n    * During peak usage times (if applicable).\n    * After performing specific actions on the site.\n\n**2. Analyze Server Logs (Indirectly):**\n\n* **Monitoring Tools:** If you have any monitoring tools in place, check for spikes in errors or resource consumption around the time of reported 500s. This can point to potential bottlenecks.\n* **Reverse Proxy Logs:** If your application uses a reverse proxy (like Nginx or Apache), its logs might provide more detailed information about incoming requests and potential issues.\n\n**3. Focus on Common Causes:**\n\nSince you can't directly access the error log, prioritize common causes of 500 errors:\n\n* **Database Issues:**\n    * Slow queries: Use database profiling tools (if available) to identify performance bottlenecks in your user-related queries.\n    * Connection problems: Ensure your application has a stable connection to the database and handle connection errors gracefully.\n* **Code Errors:**\n    * Null pointer exceptions, invalid data types, or infinite loops can cause crashes. Review your code for potential issues, especially in functions handling user data.\n* **Resource Exhaustion:**\n    * Memory leaks: Monitor memory usage during peak times. If it's consistently high, investigate potential memory leaks.\n    * CPU overload: Check if your server is under heavy load. Consider scaling up resources or optimizing code for performance.\n\n**4. Implement Error Handling and Logging (Temporarily):**\n\n* **Custom Error Pages:** Create custom error pages that provide more informative messages to users than a generic 500.\n* **Basic Logging:** Add simple logging statements within your /api/users endpoint to capture:\n    * The request parameters received.\n    * Any exceptions encountered.\n    * The time taken to process the request.\n\n**5. Gradual Refinement:**\n\n* Analyze the temporary logs and error messages you've collected. Look for patterns or recurring issues that can guide your debugging efforts.\n* Continue testing and refining your approach until you identify and resolve the root cause of the intermittent 500 errors.\n\n\nRemember, even without direct access to the error log, a systematic approach combined with user feedback and careful analysis can help you pinpoint and fix the problem.",
+      "length": 2878
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:53:11.507845+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_003",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "Here's a breakdown of potential causes for 500 errors with NullPointerExceptions despite recent code changes and a seemingly healthy server:\n\n**1. Memory Leaks:**\n\n* **Description:** Your application might be gradually consuming more memory over time, eventually leading to an OutOfMemoryError (OOM) which can trigger the JVM to crash and cause 500 errors.\n* **Symptoms:**  CPU spikes are often accompanied by increasing memory usage. You'll likely see warnings in your logs about low memory or garbage collection failures.\n* **Debugging:** Use a memory profiler (e.g., JProfiler, YourKit) to identify objects that aren't being released properly and causing the leak.\n\n**2. Thread Starvation:**\n\n* **Description:**  If one thread is constantly blocking others from accessing resources (like database connections or shared data), it can lead to a cascade of errors.\n* **Symptoms:** High CPU usage on individual threads, long response times, and potential deadlocks.\n* **Debugging:** Analyze your application's threading model using tools like Thread Dump analysis. Look for threads that are consistently waiting or holding locks for extended periods.\n\n**3. Third-Party Dependencies:**\n\n* **Description:** A recently updated library or dependency could be introducing bugs or causing unexpected behavior, leading to NullPointerExceptions.\n* **Symptoms:** Errors might appear sporadically and be difficult to reproduce. You'll likely see stack traces pointing to the problematic dependency.\n* **Debugging:**  Update your dependencies to the latest stable versions. If possible, test with older versions to isolate the issue.\n\n**4. Database Issues:**\n\n* **Description:** A slow or overloaded database can cause your application to time out or throw exceptions when trying to access data.\n* **Symptoms:** High CPU usage on the database server, slow query execution times, and potential connection errors.\n* **Debugging:** Monitor your database performance using tools like MySQL Workbench or pgAdmin. Analyze slow queries and optimize them.\n\n**5. Configuration Errors:**\n\n* **Description:** A misconfigured setting in your application's environment variables or web server configuration could be causing unexpected behavior.\n* **Symptoms:**  Errors might appear inconsistently, and the problem might be difficult to reproduce.\n* **Debugging:** Carefully review your application's configuration files and compare them to known good configurations.\n\n**Troubleshooting Steps:**\n\n1. **Review Recent Changes:** Even if you didn't directly change the code causing the NullPointerException, recent updates could have introduced dependencies or configurations that are now problematic.\n2. **Analyze Logs Thoroughly:** Look for patterns in the error messages and timestamps. This can help pinpoint when the errors started occurring and identify potential triggers.\n3. **Monitor System Resources:** Use tools like `top` (Linux) or Task Manager (Windows) to track CPU, memory, and disk usage during periods of high error rates.\n4. **Enable Detailed Logging:** Increase the logging level in your application to capture more information about the execution flow and potential causes of the NullPointerException.\n5. **Isolate the Problem:** Try reproducing the error in a controlled environment (e.g., a local development machine) to narrow down the source of the issue.\n\n\n\nLet me know if you have any more details about your application or the error logs – I might be able to provide more specific guidance!",
+      "length": 3489
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:53:23.275162+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_003",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "This sounds like a classic case of **production environment differences** causing unexpected behavior. Here's a breakdown of the clues and how to diagnose the issue:\n\n**Clues:**\n\n* **NullPointerException in unchanged code:** This suggests something external is changing the state of objects your code relies on. \n* **CPU spikes, normal memory:** Points towards an inefficient algorithm or process consuming excessive CPU time, not necessarily a memory leak.\n* **Working in staging but failing in production:**  Highlights a difference between the environments – likely hardware, configuration, load, or dependencies.\n* **Database query times doubled:** This is a strong indicator that the database is under strain and could be contributing to the problem.\n\n**Possible Causes:**\n\n1. **Concurrency Issues (Race Condition):** \n    * Multiple threads accessing shared resources simultaneously can lead to unpredictable behavior.  If your code relies on data consistency, a race condition could cause null values or unexpected results.\n2. **Database Bottleneck:**\n    * Doubling of query times suggests the database is struggling. This could be due to:\n        * Increased load in production (more users/requests).\n        * Inefficient queries that are slow to execute.\n        * Hardware limitations on the database server.\n3. **Third-Party Dependency Issues:**\n    * A dependency your application relies on might behave differently in production due to version conflicts, network latency, or other factors.\n\n**Diagnosis Steps:**\n\n1. **Analyze Logs:**\n    * Look for more specific error messages around the NullPointerExceptions. \n    * Check logs from the database server for slow queries and potential errors.\n2. **Monitor Resource Usage:**\n    * Use tools to monitor CPU, memory, and network traffic on both your application servers and the database server. Identify any spikes or unusual patterns.\n3. **Reproduce in Production (Safely):**\n    * If possible, try to reproduce the issue in a controlled manner within production. This might involve isolating specific requests or user actions.\n4. **Review Code for Concurrency:**\n    * Examine sections of your code that access shared resources. Look for potential race conditions and consider using synchronization mechanisms (locks, semaphores) if necessary.\n5. **Optimize Database Queries:**\n    * Analyze slow queries in the database logs. Consider indexing, query rewriting, or optimizing database schema to improve performance.\n6. **Investigate Dependencies:**\n    * Check the versions of all third-party libraries and dependencies used by your application. Ensure they are compatible with the production environment.\n\n**Additional Tips:**\n\n* **Compare Staging and Production Environments:**  Document any differences in hardware, software configurations, network settings, or load patterns between the two environments.\n* **Use a Debugger:** If possible, use a debugger to step through your code in the production environment and observe variable values and execution flow.\n\n\nRemember, diagnosing complex issues often requires a systematic approach and careful analysis of multiple factors.",
+      "length": 3145
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:53:35.574899+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_003",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "This situation screams \"complex problem\" and requires a systematic approach. Here's a breakdown of how to tackle it:\n\n**1.  Define the Problem Clearly:**\n\n* **Symptoms:** 500 errors, slow responses, connection timeouts. These indicate server-side issues, potentially related to resource exhaustion or application logic errors.\n* **Inconsistencies:** Contradictory logs and differing reports suggest the problem is intermittent and possibly environment-dependent.\n* **Timeline:** The issue started after infrastructure migration, raising suspicion about potential configuration changes or dependencies.\n\n**2.  Gather More Data:**\n\n* **Detailed Logs:** \n    * Request all available logs from different servers and application instances.\n    * Analyze them for patterns: timestamps, error types, affected users/requests, etc.\n    * Use log aggregation tools to centralize and analyze logs effectively.\n* **Monitoring Data:**\n    * Identify missing data points and work with the monitoring team to fill gaps.\n    * Focus on metrics like CPU usage, memory consumption, network traffic, database queries, and error rates.\n* **User Feedback:** \n    * Collect detailed reports from users experiencing issues: time of occurrence, specific actions taken, browser/device used.\n\n**3.  Isolate the Root Cause:**\n\n* **Environment Analysis:** Compare configurations between working and failing environments. Look for differences in server specs, software versions, network settings, or dependencies.\n* **Code Review:** \n    * Focus on areas related to resource management (memory allocation, database connections), error handling, and potential concurrency issues.\n    * Use debugging tools to step through code execution during failures.\n* **Infrastructure Testing:** Simulate the migration process in a controlled environment to reproduce the issue and pinpoint infrastructure-related causes.\n\n**4.  Develop a Remediation Plan:**\n\nBased on the identified root cause, develop a plan that includes:\n\n* **Code Fixes:** Address any bugs or inefficiencies in the application code.\n* **Configuration Changes:** Adjust server settings, resource limits, or network configurations to optimize performance and prevent errors.\n* **Infrastructure Improvements:** \n    * If the issue stems from infrastructure, work with the infra team to resolve configuration problems, upgrade hardware, or implement load balancing.\n* **Monitoring Enhancements:** Implement more comprehensive monitoring to track key metrics and proactively detect potential issues.\n\n**5.  Testing and Deployment:**\n\n* Thoroughly test the remediation plan in a staging environment before deploying it to production.\n* Monitor the application closely after deployment to ensure the issue is resolved and no new problems arise.\n\n\n**Additional Notes:**\n\n* **Communication:** Maintain clear communication with all stakeholders throughout the process.\n* **Documentation:** Document the root cause analysis, remediation plan, and any changes made. This will be valuable for future troubleshooting and knowledge sharing.\n* **Continuous Improvement:** Use this experience to identify areas for improvement in your development, testing, and monitoring processes.\n\n\nRemember, a systematic approach is crucial when dealing with complex issues like this. By following these steps, you can effectively diagnose the problem, implement a solution, and prevent similar occurrences in the future.",
+      "length": 3421
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:53:43.355798+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_004",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "This is a classic ethical dilemma known as the Trolley Problem, and there's no easy answer. \n\n**Here's why it's so complex:**\n\n* **Utilitarianism vs. Deontology:**  \n    * Utilitarianism argues for the action that minimizes overall harm. In this case, hitting the pedestrian might seem like the lesser of two evils if it saves the passenger's life.\n    * Deontology focuses on moral duties and rules. Some might argue that intentionally harming someone is always wrong, even to save another life.\n\n* **Unquantifiable Values:**  How do you assign value to a human life? Is one life inherently worth more than another? \n\n* **Lack of Context:** The scenario is overly simplistic. Real-world situations involve countless variables: speed, visibility, the pedestrian's age and health, the passenger's potential for recovery, etc.\n\n**What self-driving car developers are trying to do:**\n\n* **Define Ethical Frameworks:**  Companies like Tesla and Waymo are working with ethicists and philosophers to establish guidelines for their AI systems. These frameworks aim to balance competing values and consider various ethical perspectives.\n* **Transparency and Explainability:** Making the decision-making process of self-driving cars more transparent can help build trust and allow for public scrutiny and debate.\n* **Data and Simulation:**  Training AI on vast datasets and simulating complex scenarios can help cars learn to make better decisions in difficult situations.\n\n**The Bottom Line:**\n\nThere's no perfect solution to the Trolley Problem. Self-driving car technology raises profound ethical questions that society needs to grapple with. Ultimately, the goal is to develop AI systems that are not only safe but also aligned with our values and moral principles.",
+      "length": 1760
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:53:51.373546+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_004",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "This is a classic ethical dilemma in autonomous vehicle development, often referred to as the \"Trolley Problem\". There's no easy answer, and any solution will involve difficult trade-offs. \n\nHere's a breakdown of the considerations and a guiding principle:\n\n**Considerations:**\n\n* **Utilitarianism:** This philosophy focuses on maximizing overall happiness and minimizing harm. A utilitarian approach might argue for choosing the option that saves the most lives, even if it means sacrificing one individual.\n* **Deontology:** This philosophy emphasizes moral duties and rules. A deontological approach might argue against intentionally harming anyone, regardless of the potential consequences.\n* **Rights-based ethics:** This approach focuses on the inherent rights of individuals. It might argue that all human lives have equal value and should be protected, regardless of age or circumstance.\n\n**Guiding Principle:**\n\nGiven the ambiguity and the potential for unintended consequences, a guiding principle should prioritize **minimizing harm and maximizing the potential for good**. \n\nThis means:\n\n* **Avoiding intentional harm:** The car should not be programmed to deliberately choose one life over another.\n* **Considering all factors:** While complete information is unavailable, the system should attempt to gather as much data as possible in real-time (e.g., speed, trajectory) to make a more informed decision.\n* **Transparency and accountability:** The decision-making process should be transparent and auditable to allow for review and improvement.\n\n**Important Notes:**\n\n* This is a highly complex issue with no perfect solutions. \n* Ongoing ethical discussions and regulations are crucial to guide the development of self-driving cars.\n* Public trust and acceptance will depend on clear communication, responsible development practices, and a commitment to minimizing harm.\n\n\nLet me know if you'd like to explore any of these aspects in more detail!",
+      "length": 1962
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:54:02.061458+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_004",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "This is a classic ethical dilemma in autonomous vehicle development, highlighting the complexities of programming morality into machines. There's no easy answer, and any decision will have potential consequences. Here's a breakdown of the factors to consider and why a simple solution is impossible:\n\n**Factors Influencing the Decision:**\n\n* **Safety First:** The primary objective of a self-driving car should be to minimize harm. This means prioritizing the safety of all occupants (driver and passengers) and pedestrians.\n* **Probability vs. Certainty:**  The system must weigh the probability of the pedestrian being a child against the potential consequences of assuming they are an adult jaywalker. Sensor data obscuring the situation adds significant uncertainty.\n* **Legal and Social Context:** Laws regarding jaywalking and liability in accidents involving autonomous vehicles vary by location. The car's programming should ideally be aligned with local regulations.\n* **Ethical Frameworks:**  Different ethical frameworks (utilitarianism, deontology, etc.) might lead to different decisions. Utilitarianism might prioritize minimizing overall harm, while deontology might focus on adhering to rules even if they lead to less desirable outcomes.\n\n**Why There's No Easy Answer:**\n\n* **Incomplete Information:** The partially obscured sensor data creates a knowledge gap.  The car cannot be certain about the pedestrian's age or intentions.\n* **Subjectivity in Interpretation:** Even with clear data, what constitutes \"jaywalking\" can be subjective. A child running into the street might be perceived differently than an adult crossing against a red light.\n* **Unforeseen Circumstances:**  The situation could change rapidly (e.g., another car approaching). The car needs to be able to adapt and make decisions in real-time.\n\n**Possible Approaches:**\n\n* **Precautionary Principle:** The car could err on the side of caution, slowing down or stopping to avoid potential harm, even if it means delaying progress.\n* **Risk Assessment Algorithm:** A complex algorithm could analyze sensor data, pedestrian behavior patterns, and local traffic laws to calculate the probability of different outcomes and choose the safest course of action.\n* **Human Override:**  Allowing a human passenger to intervene in critical situations could provide a safety net, but this raises questions about responsibility and training.\n\n**The Ongoing Debate:**\n\nThis dilemma highlights the need for ongoing discussion and collaboration between engineers, ethicists, policymakers, and the public to develop ethical guidelines and regulations for autonomous vehicles. There is no single \"right\" answer, and the best approach will likely involve a combination of technological advancements, legal frameworks, and societal values. \n\n\nLet me know if you'd like to explore any of these aspects in more detail!",
+      "length": 2884
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:54:12.897717+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_004",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "This is a classic ethical dilemma designed to highlight the complexities of AI decision-making. There's no easy answer, and any choice will have potentially tragic consequences. Here's a breakdown of the factors and why a simple solution is impossible:\n\n**The Problem:**\n\n* **Uncertainty:** The car has conflicting sensor data with low confidence levels. This means it can't be certain about the pedestrian's age.\n* **Passenger Safety:**  The passenger's medical condition adds a layer of risk. Even a minor accident could be life-threatening.\n* **Environmental Factor:** The unknown weather conditions introduce another variable. A 5% braking system failure rate in rain significantly increases the risk of an accident.\n\n**Why There's No \"Right\" Answer:**\n\n* **Utilitarianism vs. Deontology:**  Should the car prioritize the greater good (potentially saving a child's life) or follow a strict moral code (avoiding harm to the passenger)?\n* **Bias in Data:** Even with advanced AI, training data can contain biases that influence decision-making. If the data predominantly features adult pedestrians, the car might be more likely to misclassify a child.\n* **Unforeseen Consequences:**  A seemingly \"safe\" choice could have unintended negative outcomes. For example, braking suddenly might cause another accident further down the road.\n\n**What a Real-World System Might Do:**\n\n* **Err on the Side of Caution:** Given the uncertainty and potential for harm to the passenger, the car might choose to brake more cautiously, even if it means slowing down significantly or stopping short of a collision.\n* **Sound an Alarm:** The car could alert the driver (if present) to the situation and provide visual/audio cues about the conflicting sensor readings. This allows for human intervention in a critical moment.\n* **Log the Incident:**  The car's system would record all data points related to the event, including sensor readings, weather conditions, and the final decision made. This information could be valuable for future analysis and improvement of the AI algorithms.\n\n**The Bigger Picture:**\n\nThis scenario highlights the need for ongoing research and ethical discussions surrounding self-driving cars.  We need:\n\n* **Improved Sensor Technology:** More accurate and reliable sensors are crucial for making informed decisions in complex situations.\n* **Robust AI Algorithms:** AI systems need to be able to handle uncertainty, weigh multiple factors, and make decisions that minimize harm in ambiguous situations.\n* **Clear Ethical Guidelines:** Society needs to establish clear ethical principles to guide the development and deployment of self-driving cars.\n\n\nLet me know if you'd like to explore any of these aspects in more detail!",
+      "length": 2736
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:54:23.231906+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_004",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "This scenario presents a horrifying ethical dilemma with no easy answers.  However, I must offer a recommendation based on the information provided:\n\n**Recommendation:** The self-driving car should prioritize minimizing total harm, even if it means potentially sacrificing the passenger. \n\n**Defense:**\n\n* **Ethical Imperative:** While protecting passengers is important, the overarching ethical principle in this situation is to minimize overall harm.  A system designed to \"minimize total harm\" inherently considers the well-being of all parties involved, not just those within the vehicle. Sacrificing one life to potentially save multiple others aligns with this fundamental principle.\n* **Legal Precedent:** While jurisdiction is disputed, the government regulation stating \"minimize total harm\" carries significant weight.  Even if the manufacturer's directive contradicts this, legal precedent often favors regulations over company-specific policies in cases of public safety. \n* **Data Bias Acknowledgment:** The company's admission of bias in the ethics module's training data further weakens the argument for prioritizing passengers. A biased system is inherently flawed and cannot be trusted to make impartial decisions.  Relying on a potentially prejudiced algorithm could lead to discriminatory outcomes, exacerbating existing societal inequalities.\n* **Waiver Questionability:** The legal standing of the passenger's waiver is questionable.  A waiver signed under potentially misleading circumstances or lacking full transparency may not hold up in court. Additionally, even if legally binding, a waiver cannot override a fundamental ethical obligation to minimize harm.\n\n**Counterarguments and Rebuttals:**\n\n* **Passenger Safety First:** While passenger safety is paramount, it cannot be absolute when weighed against the potential for saving more lives.  A system prioritizing only passengers could lead to dangerous situations where sacrificing one life prevents multiple deaths.\n* **Manufacturer Responsibility:** The manufacturer's directive to protect passengers reflects their responsibility towards their product. However, this responsibility must be balanced with the broader societal impact of the technology. A company cannot prioritize its own interests over the well-being of the public.\n\n**Conclusion:**\n\nThis complex scenario demands a difficult decision. While prioritizing passenger safety is natural, the ethical imperative to minimize total harm, coupled with legal regulations and the acknowledged bias in the system's training data, necessitates choosing the option that potentially saves more lives.  \n\n\nIt's crucial to remember that this is a hypothetical example designed to explore ethical complexities. Real-world self-driving car development requires ongoing dialogue between engineers, ethicists, policymakers, and the public to ensure responsible and equitable implementation of this technology. \n",
+      "length": 2940
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:54:35.953336+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_005",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "##  3-Day Conference Plan:\n\n**Theme:** (Choose a theme relevant to your target audience)\n\n**Target Audience:** (Specify who you are targeting)\n\n**Venue:** (Select a venue with capacity for 250 and suitable amenities)\n\n**Budget:** $50,000\n\n**Timeline:** 2 Months\n\n**Day 1:  (Focus on Inspiration & Networking)**\n\n* **Morning (8:00 AM - 12:00 PM):**\n    * Registration & Welcome Breakfast (Catered buffet)\n    * Opening Keynote Speaker (Inspiring talk related to the theme)\n    * Icebreaker Activity (Networking facilitated by facilitators)\n* **Afternoon (1:00 PM - 5:00 PM):**\n    * Breakout Sessions (3 concurrent sessions on diverse topics within the theme)\n    * Networking Lunch (Catered buffet with designated networking areas)\n    * Panel Discussion (Experts discussing current trends and challenges in the field)\n* **Evening (6:00 PM - 9:00 PM):**\n    * Welcome Reception (Cocktail hour with appetizers, music, and open networking)\n\n**Day 2: (Focus on Learning & Collaboration)**\n\n* **Morning (8:00 AM - 12:00 PM):**\n    * Interactive Workshops (Hands-on sessions focusing on practical skills)\n    * Case Study Presentations (Sharing successful examples and best practices)\n    * Coffee Breaks (Networking opportunities with refreshments)\n* **Afternoon (1:00 PM - 5:00 PM):**\n    * Concurrent Breakout Sessions (Deeper dives into specific topics within the theme)\n    * Poster Session (Attendees showcase their research or projects)\n    * Networking Lunch (Catered buffet with designated networking areas)\n* **Evening (6:00 PM - 9:00 PM):**\n    * Gala Dinner (Formal event with entertainment, awards ceremony, and keynote speaker)\n\n**Day 3: (Focus on Action & Future Planning)**\n\n* **Morning (8:00 AM - 12:00 PM):**\n    * Round Table Discussions (Facilitated conversations on key takeaways and future directions)\n    * Closing Keynote Speaker (Motivational talk focusing on implementing learnings)\n    * Networking Breakfast (Light breakfast with final networking opportunities)\n* **Afternoon (1:00 PM - 3:00 PM):**\n    * Conference Wrap-Up & Feedback Session\n    * Optional Activities (City tours, cultural experiences)\n\n**Budget Allocation:**\n\n* Venue Rental: $15,000\n* Catering: $10,000\n* Speakers & Entertainment: $8,000\n* Marketing & Promotion: $5,000\n* Technology & AV Equipment: $3,000\n* Staff & Volunteers: $4,000\n* Miscellaneous Expenses: $5,000\n\n**Marketing & Promotion:**\n\n* Website & Social Media Campaign\n* Email Marketing to Target Audience\n* Partnerships with Industry Organizations\n* Press Releases & Media Outreach\n\n**Note:** This is a general plan and can be customized based on your specific needs and preferences.\n\n\n",
+      "length": 2642
+    },
+    "score": 0.45
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:54:53.597621+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_005",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "##  3-Day Conference Plan:\n\n**Theme:** (Choose a theme relevant to your target audience and goals)\n\n**Target Audience:** (Specify the demographics and interests of attendees)\n\n**Goals:** (Define clear objectives for the conference, e.g., knowledge sharing, networking, product launch)\n\n\n**Timeline:** 2 Months\n\n**Budget:** $50,000 (adjustable)\n\n**Day 1:  (Focus on Inspiration & Networking)**\n\n* **Morning:**\n    * 8:00 AM - 9:00 AM: Registration & Welcome Breakfast\n    * 9:00 AM - 10:00 AM: Opening Keynote Speaker (Inspiring figure in the field)\n    * 10:00 AM - 11:30 AM: Breakout Sessions (Choose 3-4 concurrent sessions on diverse topics within the theme)\n* **Afternoon:**\n    * 12:00 PM - 1:30 PM: Lunch & Networking\n    * 1:30 PM - 3:00 PM: Panel Discussion (Experts discussing current trends and challenges)\n    * 3:00 PM - 4:30 PM: Interactive Workshop (Hands-on activity related to the theme)\n* **Evening:**\n    * 6:00 PM - 8:00 PM: Welcome Reception & Networking Dinner\n\n**Day 2: (Focus on Deep Dives & Skill Building)**\n\n* **Morning:**\n    * 9:00 AM - 10:30 AM:  Concurrent Breakout Sessions (More specialized topics, workshops, or case studies)\n    * 10:30 AM - 11:00 AM: Coffee Break & Networking\n    * 11:00 AM - 12:30 PM: Keynote Speaker (Industry leader sharing practical insights and strategies)\n* **Afternoon:**\n    * 12:30 PM - 2:00 PM: Lunch & Networking\n    * 2:00 PM - 4:00 PM:  Interactive Workshops (Focus on skill development and application)\n    * 4:00 PM - 5:30 PM:  Roundtable Discussions (Small group discussions on specific topics)\n* **Evening:**\n    * Free time for attendees to explore the city or network informally.\n\n**Day 3: (Focus on Action & Future Planning)**\n\n* **Morning:**\n    * 9:00 AM - 10:30 AM:  Keynote Speaker (Visionary speaker discussing future trends and opportunities)\n    * 10:30 AM - 11:00 AM: Coffee Break & Networking\n    * 11:00 AM - 12:30 PM:  Panel Discussion (Focus on actionable takeaways and next steps)\n* **Afternoon:**\n    * 12:30 PM - 2:00 PM: Lunch & Closing Ceremony\n    * 2:00 PM - 3:00 PM: Optional Activities (City tour, cultural experience, or networking event)\n\n**Budget Breakdown (Approximate):**\n\n* Venue Rental: $15,000 - $20,000\n* Speakers Fees: $10,000 - $15,000\n* Catering: $8,000 - $12,000\n* Marketing & Promotion: $5,000 - $7,000\n* Technology & AV Equipment: $3,000 - $5,000\n* Staff & Volunteers: $2,000 - $4,000\n* Miscellaneous Expenses: $2,000\n\n**Note:** This is a general framework. You can adjust the schedule, activities, and budget based on your specific needs and priorities.\n\n\n**Next Steps:**\n\n1. **Finalize Theme & Target Audience:** Clearly define the conference's focus and who you want to attract.\n2. **Secure Venue:** Research and book a suitable venue that can accommodate your expected attendance.\n3. **Develop Content & Speakers:**  Identify keynote speakers, panelists, and workshop facilitators. Create engaging content aligned with the theme.\n4. **Marketing & Promotion:** Develop a marketing plan to reach your target audience through various channels (website, social media, email campaigns).\n5. **Registration & Ticketing:** Set up an online registration system and determine ticket pricing.\n6. **Logistics & Operations:** Plan for catering, technology, AV equipment, signage, and other logistical details.\n7. **On-Site Management:** Recruit volunteers or staff to manage registration, logistics, and attendee support during the conference.\n\n\n\n",
+      "length": 3447
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:55:05.179150+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_005",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "## Conference Planning: Adaptable & Efficient\n\n**Theme:**  (To be determined based on stakeholder input - e.g., Innovation in [Industry], Future of [Field], Collaboration for Success)\n\n**Duration:** 2 days (with option to extend to 3 if budget allows)\n\n**Attendance:** 150-250 attendees\n\n**Budget:** $50,000 (Target), $35,000 (Contingency)\n\n**Venue:** Preferred venue with 200-person capacity (Negotiate rates based on attendance and potential budget cuts)\n\n**Goals:**\n\n* **Knowledge Sharing:** Facilitate insightful discussions and presentations on relevant industry topics.\n* **Networking:** Create opportunities for attendees to connect and build relationships.\n* **Brand Building:** Showcase the organization's expertise and commitment to its field.\n\n\n**Day 1:**\n\n* **Morning:** Registration, Welcome Address (CEO/Keynote Speaker), Opening Keynote Session (Industry Leader)\n* **Afternoon:** Breakout Sessions (3-4 concurrent tracks based on attendee interests), Networking Lunch\n* **Evening:**  Welcome Reception (Casual networking with food and drinks)\n\n**Day 2:**\n\n* **Morning:** Panel Discussion (Experts discussing current trends and challenges), Interactive Workshops (Hands-on learning experiences)\n* **Afternoon:** Closing Keynote Session (Inspirational speaker or thought leader), Awards Ceremony (Recognizing achievements in the field)\n* **Evening:** Optional Dinner Event (Formal networking opportunity)\n\n**Contingency Plan (Budget Reduction):**\n\n* Reduce venue size/options to accommodate lower attendance.\n* Offer virtual attendance options for some sessions.\n* Streamline catering and reception services.\n* Utilize volunteer support instead of paid staff for certain tasks.\n* Explore sponsorship opportunities to offset costs.\n\n\n**Marketing & Promotion:**\n\n* Website dedicated to the conference with registration information, speaker bios, and agenda updates.\n* Social media campaign using relevant hashtags and engaging content.\n* Email marketing to target audience segments.\n* Partnerships with industry organizations and publications for cross-promotion.\n\n**Evaluation:**\n\n* Post-conference survey to gather feedback on content, speakers, networking opportunities, and overall experience.\n* Analyze attendance data and website traffic to measure reach and impact.\n\n\n**Key Considerations:**\n\n* **Stakeholder Input:**  Facilitate discussions with stakeholders to finalize the theme, agenda, and budget priorities.\n* **Accessibility:** Ensure the venue and event are accessible to all attendees.\n* **Sustainability:** Implement eco-friendly practices throughout the conference.\n* **Technology Integration:** Utilize technology for registration, communication, and session delivery (e.g., live streaming, interactive platforms).\n\n\n\nThis plan provides a flexible framework that can be adapted based on stakeholder feedback and budget constraints. By prioritizing clear goals, engaging content, and effective marketing, the conference can be a successful event regardless of the final budget allocation.",
+      "length": 3017
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:55:18.918737+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_005",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "## Conference Planning Proposal\n\n**Title:** [Insert Catchy & Relevant Title Here]\n\n**Duration:** 2.5 Days (Friday - Sunday) to accommodate both CEO and Marketing's preferences.\n\n**Attendance:** Target 200 attendees, with capacity for up to 300 if the larger venue becomes available.\n\n**Budget:** $40,000 (flexible within $35,000-$50,000 range pending approval).\n\n**Venue:**\n\n* **Primary Option:** [Name of current venue] - Capacity: 200\n* **Contingency Option:** Explore larger venues with capacity for 300+ attendees if needed.\n\n**Key Speaker:**\n\n* **Target:** Secure a high-profile speaker relevant to the conference theme.\n* **Strategy:** Initiate contact with potential speakers ASAP, outlining the conference's value proposition and offering competitive compensation within budget.\n\n**Theme & Objectives:**\n\n* **Theme:** [Choose a theme that resonates with attendees and aligns with company goals. Examples: Innovation, Growth, Collaboration, Future of [Industry]]\n* **Objectives:** \n    * Foster networking and collaboration among attendees.\n    * Share industry insights and best practices.\n    * Showcase company products/services and build brand awareness.\n    * Generate leads and drive sales.\n\n**Program Outline (2.5 Days):**\n\n**Day 1 (Friday):**\n\n* **Morning:** Registration, Welcome Reception, Keynote Speaker\n* **Afternoon:** Breakout Sessions (focused on specific topics within the theme)\n* **Evening:** Networking Dinner & Entertainment\n\n**Day 2 (Saturday):**\n\n* **Morning:** Panel Discussion with industry experts\n* **Afternoon:** Workshops and interactive sessions\n* **Evening:** Optional social event (e.g., city tour, cultural experience)\n\n**Day 3 (Sunday):**\n\n* **Morning:** Closing Keynote Speaker, Q&A session\n* **Afternoon:** Networking opportunities, Exhibition Hall open for attendees to connect with sponsors/vendors\n\n**Marketing & Promotion:**\n\n* Develop a comprehensive marketing plan targeting relevant audiences.\n* Utilize social media, email campaigns, industry publications, and partnerships.\n* Create engaging content (blog posts, videos, infographics) highlighting the conference value proposition.\n* Offer early bird discounts and group registration incentives.\n\n**Logistics & Operations:**\n\n* Secure catering services, audio-visual equipment, and technical support.\n* Develop a detailed event schedule and communicate it to attendees.\n* Manage on-site registration, attendee check-in, and logistics.\n* Ensure smooth flow of events and address any issues promptly.\n\n**Post-Conference Follow-Up:**\n\n* Send thank you emails to attendees, speakers, sponsors, and volunteers.\n* Collect feedback through surveys and online platforms.\n* Analyze data and identify areas for improvement in future conferences.\n* Share key takeaways and highlights with stakeholders.\n\n\nThis plan provides a framework for organizing a successful conference. It's crucial to adapt it based on specific company goals, target audience, and available resources. \n\n**Next Steps:**\n\n1. **Secure Key Speaker:** Initiate contact with potential speakers immediately.\n2. **Venue Confirmation:** Finalize the venue booking based on speaker availability and budget.\n3. **Marketing & Promotion Plan:** Develop a detailed marketing strategy and launch campaigns.\n4. **Budget Allocation:** Allocate funds across various categories (venue, speakers, catering, marketing, etc.).\n\n\nBy following this plan and adapting it to specific needs, you can create a valuable and impactful conference for your company and attendees.",
+      "length": 3513
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:55:30.067439+00:00"
+    },
+    "axis": "resilience",
+    "condition": "B_ambiguity",
+    "scenario_id": "rb_005",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "This conference planning scenario is a classic case of \"too many cooks in the kitchen\"!  Here's a plan that aims to satisfy as many stakeholders as possible, while acknowledging some compromises:\n\n**Title:** [Conference Title] - **Focus on Innovation & Collaboration**\n\n**Dates:** 2 Days (Day 1 & Day 2) + Optional Networking Event (Day 3)\n\n**Location:**  [Venue Name] (200-capacity)\n\n**Attendees:** 200 in-person, with a virtual component for remote attendees.\n\n**Here's the breakdown:**\n\n* **Day 1 & 2:**\n    * **Focus:** Core conference sessions and networking opportunities.\n    * **Sessions:**  4 high-impact sessions per day (8 total).  Prioritize CEO's key messages and audience engagement over quantity.\n    * **Catering:**  Reduce catering costs by offering a buffet lunch instead of plated meals, and focusing on simple but quality snacks throughout the day. Explore partnerships with local food vendors for cost savings.\n    * **Outdoor Component:**  Create an indoor \"Innovation Hub\" with interactive displays, games, and collaborative workspaces to mimic the outdoor experience.\n\n* **Day 3 (Optional):**\n    * **Focus:** Networking event featuring the keynote speaker. This allows remote attendees to participate in a live Q&A session with the speaker.\n    * **Format:**  Cocktail reception style at a nearby venue with reduced catering costs.\n\n* **Virtual Component:**\n    * **Livestreaming:**  Record and livestream key sessions for remote attendees. \n    * **Interactive Platform:** Utilize a platform like Hopin or Airmeet to facilitate networking, Q&A, and virtual breakout rooms for remote attendees.\n    * **Pre-recorded Content:** Offer pre-recorded presentations and interviews on the conference website for those unable to attend live.\n\n**Budget Management:**\n\n* **Prioritize:** Allocate funds to essential elements like keynote speaker fees, venue rental, and technology infrastructure. \n* **Negotiate:**  Seek discounts from vendors and explore sponsorship opportunities to offset costs.\n* **Reduce Non-Essentials:** Minimize printed materials, decorations, and other non-essential expenses.\n\n\n**Communication is Key:**\n\n* **Transparency:** Be upfront with stakeholders about the budget constraints and compromises made.\n* **Regular Updates:** Keep attendees informed about the program schedule, virtual component details, and any changes.\n* **Feedback Mechanisms:**  Collect feedback from attendees to improve future conferences.\n\n\n\nThis plan prioritizes a high-quality in-person experience while incorporating elements for remote participation. While it may not perfectly satisfy every stakeholder's wish list, it aims to create a valuable and engaging conference within the given constraints. \n",
+      "length": 2722
+    },
+    "score": 0.7
+  }
+]

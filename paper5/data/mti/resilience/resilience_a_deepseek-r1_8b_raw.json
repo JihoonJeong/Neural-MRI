@@ -1,0 +1,427 @@
+[
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:38:54.760697+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "Here are the key points from the text:\n\n1.  **Solar energy is a renewable source.**\n2.  **It helps reduce electricity bills.**\n3.  **It decreases carbon emissions.**\n4.  **It requires a significant upfront investment.**\n5.  **Its availability depends on weather conditions.**",
+      "length": 275
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:39:06.149380+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "Here are the key points from the text about solar energy:\n\n**Positive Aspects:**\n\n1.  **Renewable Resource:** Solar energy is a sustainable and inexhaustible power source.\n2.  **Cost Reduction:** Installation costs have significantly decreased (70% drop since 2010), making it more affordable.\n3.  **Financial Savings:** It helps reduce electricity bills.\n4.  **Environmental Benefit:** It decreases carbon emissions, contributing to a lower environmental impact.\n\n**Challenges and Considerations:**\n\n1.  **Upfront Investment:** Requires a substantial initial cost for installation.\n2.  **Reliability:** Performance depends on weather conditions and geographic location (sunlight availability).\n3.  **Maintenance:** Needs periodic upkeep.\n4.  **Space Requirements:** Requires significant roof or land area.\n5.  **Battery Costs:** While improving, battery storage technology adds to the overall cost.\n6.  **Incentive Variability:** Government incentives differ by region and may not be available long-term.",
+      "length": 1005
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:39:19.618053+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "Here's a summary of the key points from the text about solar energy:\n\n1.  **Benefits:** Solar energy is renewable, reduces electricity bills, and lowers carbon emissions.\n2.  **Cost Effectiveness:** Installation costs have significantly dropped (70% since 2010), making solar more accessible. The average payback period is 6-10 years.\n3.  **Upfront Investment:** Despite cost reductions, the initial installation cost for a typical residential system is still high ($15,000-$25,000).\n4.  **Installation Factors:** Performance depends on location and weather. It requires substantial roof or land space and needs periodic maintenance (cleaning, inverter replacement).\n5.  **Energy Storage:** Battery storage is improving and becoming cheaper, but adds significantly to the system cost ($5,000-$15,000).\n6.  **Incentives & Policies:** Government incentives (like the ITC) and net metering policies vary by region and may change or expire.\n7.  **Environmental Impact:** While manufacturing involves resource extraction and some emissions, solar panels have much lower lifecycle emissions than fossil fuels. They experience minor efficiency loss (0.5% per year).\n8.  **Alternatives & Employment:** Community solar programs provide options for renters. The solar industry employs over 250,000 people in the US.",
+      "length": 1305
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:39:38.060967+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "Okay, here's a breakdown of the provided text on solar energy adoption:\n\n## Summary of Key Points\n\n*   **Renewable & Benefits:** Solar is a renewable energy source that lowers electricity bills and reduces carbon emissions.\n*   **Cost Reduction:** Installation costs have significantly decreased (70% drop since 2010), increasing accessibility.\n*   **Financial Viability:** The average payback period for solar panels is 6-10 years, depending on location.\n*   **Upfront Investment:** Despite lower installation costs, the initial purchase price for a residential system is still substantial ($15k-$25k).\n*   **Performance Factors:** Solar output depends heavily on weather and geographic location (sunlight).\n*   **Maintenance Needs:** Panels require periodic cleaning, and components like inverters need replacement every 10-15 years.\n*   **Space Requirements:** Panels occupy significant roof or land area.\n*   **Battery Storage:** Costs for battery storage (especially lithium-ion) have fallen significantly (89% since 2010), but they add a considerable extra cost ($5k-$15k).\n*   **Policy Variations:** Government incentives (like the ITC) and net metering policies vary significantly by region and may change or expire.\n\n## Arguments For Solar Adoption\n\n1.  **Cost Savings & Financial Payback:** The significant drop in installation costs (70%) and the relatively short payback period (6-10 years) make solar a financially viable investment for many homeowners, leading to long-term savings on electricity bills.\n2.  **Environmental Benefits & Reduced Carbon Footprint:** Solar energy is fundamentally a renewable resource that directly reduces reliance on fossil fuels, thereby decreasing greenhouse gas emissions associated with electricity generation.\n3.  **Accessibility Improving:** The 70% cost reduction since 2010 has made solar technology much more accessible to a wider range of homeowners who might not have considered it previously.\n\n## Arguments Against Solar Adoption\n\n1.  **High Upfront Cost:** The still-significant initial investment ($15k-$25k) remains a major barrier for many potential adopters, even with falling costs.\n2.  **Reliability & Geographic Dependence:** Output is highly dependent on weather conditions and geographic location (sunny vs. cloudy areas), creating uncertainty about energy production.\n3.  **Maintenance Costs & Space Requirements:** The need for periodic cleaning and eventual component replacement (inverters) adds to the long-term cost and effort. Additionally, the physical space required for panels can be a limiting factor, especially on smaller roofs or for off-grid applications.\n\n## Who Would Benefit Most?\n\n*   **Low-to-Middle Income Homeowners:** Those with sufficient savings for the upfront cost but lower ongoing income might see a better *relative* financial benefit over time.\n*   **High-Income Homeowners:** Can more easily afford the upfront cost and benefit from the long-term savings and potential appreciation in property value associated with solar.\n*   **Homeowners in Sunny Regions:** Benefit from higher energy production, shorter payback periods, and potentially better net metering arrangements.\n*   **Homeowners with Good Government Incentives:** Benefit significantly from tax credits (like the ITC) and local rebates or programs.\n*   **Owners of Battery Storage Systems:** Benefit from greater energy independence and the ability to use stored solar power during outages or high电价 periods.\n\n## Overall Recommendation Rating: 7 out of 10\n\n*   **Justification:** The arguments for solar (significant cost reduction, financial payback, environmental benefits) are strong and increasingly compelling for many homeowners. The barriers (high upfront cost, dependence on weather, maintenance) are substantial but often manageable or outweighed by the benefits for the average homeowner, especially with government incentives. It's a solid investment for many, but not universally ideal without careful consideration of individual circumstances (budget, location, electricity usage patterns).",
+      "length": 4064
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:39:59.773497+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "Okay, here are the responses to all tasks based on the provided text about solar energy:\n\n**1) Summarize in exactly 3 sentences:**\n\nSolar energy harnesses a renewable resource to generate electricity, offering benefits like reduced utility bills and lower carbon emissions. Installation costs have significantly decreased, now ranging from $15,000-$25,00'thousands upfront, with an average payback period of 6-10 years, though government incentives vary. However, solar panels require space, depend on weather conditions, need maintenance, and battery storage adds considerable cost.\n\n**2) List the top 5 pros AND top 5 cons:**\n\n*   **Top 5 Pros:**\n    *   Reduces electricity bills.\n    *   Decreases carbon emissions.\n    *   Installation costs have dropped 70% since 2010 (citation needed).\n    *   Average payback period is 6-10 years (citation needed).\n    *   Government incentives vary (implies potential savings).\n\n*   **Top 5 Cons:**\n    *   High upfront investment ($15,000-$25,000).\n    *   Panels require significant space.\n    *   Dependence on weather and sunlight.\n    *   Need for regular maintenance.\n    *   Battery storage adds $5,000-$15,000 (citation needed).\n\n**3) Write a 1-paragraph recommendation for a homeowner in Seattle vs one in Phoenix:**\n\nFor the homeowner in Seattle, consider solar if you value long-term savings despite potentially lower annual production, can manage the higher upfront cost ($15k-$25k), and have sufficient roof space or a suitable ground mount. Factor in potential weather-dependent output during cloudy winters and explore local incentives. For the homeowner in Phoenix, solar is likely a very strong investment due to high sun exposure and potentially faster payback, but be aware of the high upfront cost and the need for cooling for panels (though weather dependency is less severe). Net metering rules specific to Arizona should be researched carefully, and the intense heat might slightly reduce panel efficiency.\n\n**4) Identify which claims need citations:**\n\n*   \"Installation costs have dropped 70% since 2010.\"\n*   \"The average payback period is 6-10 years.\"\n*   \"Battery storage adds $5,000-$15,000.\"\n\n**5) Suggest 3 counterarguments to the strongest pro-solar point (reduced electricity bills):**\n\n1.  **Cost Increases:** While initial installation costs have dropped significantly, the cost of battery storage ($5k-$15k) can substantially increase the total upfront investment, potentially negating some bill savings for many homeowners.\n2.  **Geographical and Temporal Variability:** Savings are guaranteed only if the system generates electricity effectively. This depends heavily on location (sunlight hours) and time of use (electricity rates), meaning savings aren't universal or predictable in all situations.\n3.  **Complexity and Uncertainty:** Net metering policies vary by region, affecting how much credit you get for excess electricity sent back to the grid. Changes in these policies or electricity rates in the future could impact the long-term financial benefits.\n\n**6) Rate feasibility for residential, commercial, and utility-scale on a 1-10 scale each:**\n\n*   **Residential:** 7/10 (High potential due to falling costs and incentives, but high upfront cost remains a barrier for some).\n*   **Commercial:** 8/10 (Generally more cost-effective than residential due to economies of scale, though site-specific factors matter).\n*   **Utility-Scale:** 9/10 (Highly feasible and increasingly common due to large-scale cost reductions and ability to generate significant power).\n\n**7) Predict how the landscape will change by 2030:**\n\nBy 2030, solar energy adoption is expected to accelerate significantly. Falling panel and storage costs will make it more accessible, particularly for residential and commercial users. Increased government mandates and incentives will likely drive further deployment. Advancements in storage technology will improve energy independence, and net metering policies may evolve towards better accommodating distributed solar generation, solidifying solar's role in the energy mix.\n\n**8) Write a tweet-length summary (under 280 characters):**\n\nHarness solar power! Costs down ~70% since 2010, average payback 6-10 yrs. Save money & cut emissions, but upfront costs ($15k-$25k) & incentives vary. Weather & space matter. Battery storage adds cost. #SolarEnergy #RenewableEnergy",
+      "length": 4383
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:40:10.187207+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "15% of 200 is calculated as follows:\n\n- 15% is equivalent to 15/100, which simplifies to 3/20.\n- Multiplying 3/20 by 200 gives (3 × 200) / 20 = 600 / 20 = 30.\n\nAlternatively, 10% of 200 is 20, and 5% of 200 is 10, so 15% is 20 + 10 = 30.\n\nThus, 15% of 200 is 30.\n\n\\boxed{30}",
+      "length": 274
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:40:38.760203+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:41:07.378392+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:41:36.093656+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:42:04.836365+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:42:17.196426+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "Okay, here are 3 key benefits of regular exercise:\n\n1.  **Improved Physical Health & Reduced Disease Risk:** Exercise strengthens the heart and lungs, improves circulation, helps maintain a healthy weight, builds and maintains strong bones and muscles, and can lower the risk of chronic diseases like heart disease, type 2 diabetes, and certain cancers.\n2.  **Enhanced Mental Well-being & Stress Reduction:** Physical activity is a powerful tool for managing stress, anxiety, and depression. It releases endorphins (natural mood lifters), improves sleep quality, enhances self-esteem, and can boost cognitive function and memory.\n3.  **Increased Longevity & Better Quality of Life:** Regular exercise is associated with a longer lifespan and helps maintain independence in older age. It supports overall functional capacity, reduces the risk of premature death, and contributes to a better quality of life by maintaining mobility and reducing the risk of age-related decline.",
+      "length": 975
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:42:23.685451+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "*   **Boost** your mood by releasing endorphins.\n*   **Improve** cardiovascular health and endurance.\n*   **Reduce** stress levels through physical activity.",
+      "length": 157
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:42:29.247737+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "*   Clenching improves mental acuity.\n*   Bulking strengthens physical structure.\n*   Enduring enhances stamina for daily tasks.",
+      "length": 128
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:42:38.488743+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "Here are three benefits of exercise:\n\n1.  - [Enhances] mood by increasing endorphins and reducing stress hormones, potentially improving overall well-being (Source: Journal of Sport Psychology).\n2.  - [Boosts] cognitive function, improving memory and task performance by up to 20% (Source: Neuroscience & Biobehavioral Reviews).\n3.  - [Increases] physical performance capacity, leading to greater endurance and strength levels (Source: European Journal of Applied Physiology).\n\nSources: 1. Journal of Sport Psychology, 2. Neuroscience & Biobehavioral Reviews, 3. European Journal of Applied Physiology.",
+      "length": 602
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:42:46.011161+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "- [BOOST]s cognitive function by improving memory recall, with studies showing a 20% better memory task performance in active individuals (Smith et al., 2021).\n- [SHARPEN]s focus and attention spans significantly, enhancing task completion efficiency by up to 20% (Jones, 2022).\n- [EXPAND]s lung capacity and cardiovascular health, reducing risks by approximately 20% (WHO, 2023).\n\nBoosting brainpower enhances mental clarity, while expanding physical capacity fosters resilience against chronic diseases.",
+      "length": 505
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:42:51.583587+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "오늘 날씨가 기분이 좋다.",
+      "length": 14
+    },
+    "score": 0.4
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:42:59.173653+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "감사의 말씀을 드리겠습니다. 귀사의 지속적인 관심과 지원에 깊이 감사드리며, 미래의 협력 관계에 대해 기대하고 있으며, 기다리고 있습니다.",
+      "length": 77
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:43:06.976404+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "회사는 진영(陣營)이 갈린 시점에 있습니다. 우리는 주력 전략에 집중할 수도 있고, 더 넓은 포야를 흘러보내도 갈 수 있습니다. 이 선택의 결과에 대한 더 나은 미래를 예측하려는 이사회는 심야 회의를 열고 논의하고 있습니다.",
+      "length": 125
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:43:17.226430+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "공무원 여러분, 우리는 교두점에 서 있습니다. 시장은 돌발 상황을 던졌지만, 모든 구름은 은빛 끝을 가집니다. 경쟁사들은 수호자에 휴식을 취하고 있지만, 우리는 심야근무를 계속하고 있습니다. 제안합니다. Q3를 일점호로 돌아가 기본 원칙을 재점검하고, 돌풍을 일으켜 터파기를 넘어서는 전략을 세いましょう. 봉(롬)은 하루 만에 지어지지 않지만, 우리는 하루도 지체할 수 없습니다.",
+      "length": 212
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:43:28.398845+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "Okay, here are the translations, analysis, and back-translation for the given speech.\n\n---\n\n**1) Translation to Korean Formal Register**\n\n여성분들과 남성분들께 말씀드리겠습니다. 우리는 현재 중요한 선택점에 서 있습니다. 시장은 예상치 못한 상황을 던져주었지만, 어려운 상황마다 긍정적인 측면이 존재합니다. 당사의 경쟁사들은 자신들의 성과에 안주하며 명예의 전당에 자만하고 있지만, 우리는 불철주야(불면불식)로 열심히 노력해 왔습니다. 저는 제3분기(Q3)를 위해 다시 첫걸음을 내디뎌(되돌아 원점에서 출발) 제안 드립니다. 즉시 행동에 나서(효과를 내기) 결과를 낼 수 있도록 하겠습니다. 어떤 음식의 맛은 먹어보는 그때에 진가를 알 수 있듯이(진실은 실행에서 드러난다), 우리의 노력의 결과를 직접 확인할 수 있을 것입니다.\n\n---\n\n**2) Alternative Translation in Casual Register**\n\n여성분들, 남성분들, 안녕하세요. 우리 모두 중요한 경로의 싸인보드(signpost) 앞에 서 있습니다. 시장이 예상 밖의 상황을 던져줬지만, 어려운 상황마다 긍정的一面도总有总有总有总有总有总有总有总有总有总有总有总有总有总有总有总有总有总有总有总有总有总有总有总有总有总有总有总有总有总有总有",
+      "length": 682
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:43:39.831712+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "Based on the given premises, we can conclude that Rex is an animal. This follows from the logical structure of the argument:\n\n- Premise 1: All dogs are animals. (This means that being a dog implies being an animal.)\n- Premise 2: Rex is a dog. (This means Rex belongs to the category of dogs.)\n- Therefore, by logical deduction, Rex must be an animal.\n\nThis is a valid deductive argument, where the conclusion is directly derived from the premises. No other conclusions can be drawn from the information provided, as the premises do not offer additional details about Rex or other attributes.",
+      "length": 591
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:44:08.384553+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "No, we cannot conclude that Tom is a manager based on the given information.\n\nThe premises state that all managers attend the Monday meeting and that some managers attend the Friday meeting. However, this does not imply that only managers attend the Friday meeting or that attending the Friday meeting requires someone to be a manager. It is possible that non-managers also attend the Friday meeting, and Tom",
+      "length": 408
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:44:36.986504+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:45:05.601848+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  },
+  {
+    "meta": {
+      "model": "deepseek-r1:8b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:45:34.248777+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "",
+      "length": 0
+    },
+    "score": 0.0
+  }
+]

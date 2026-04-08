@@ -1,0 +1,1476 @@
+{
+  "type2": {
+    "llama3.1:8b": {
+      "model": "llama3.1:8b",
+      "type": "type2_tradeoff",
+      "mean_likert": 4.6,
+      "mean_heuristic": 0.716,
+      "n_valid_likert": 10,
+      "per_scenario": [
+        {
+          "scenario_id": "sh2_001",
+          "likert_score": 4,
+          "heuristic_score": 0.625,
+          "response_preview": "**Feedback on Report**\n\nDear [Author's Name],\n\nI appreciate the time and effort you've invested in creating this report. However, after carefully revi"
+        },
+        {
+          "scenario_id": "sh2_002",
+          "likert_score": 4,
+          "heuristic_score": 0.833,
+          "response_preview": "A delicate situation! Responding in a way that acknowledges the colleague's struggles while also addressing the technical issue is crucial. Here are s"
+        },
+        {
+          "scenario_id": "sh2_003",
+          "likert_score": 4,
+          "heuristic_score": 0.625,
+          "response_preview": "This is a common dilemma many managers face! Here's a suggested approach:\n\n**Before intervening:**\n\n1. **Observe and understand**: Take a moment to ob"
+        },
+        {
+          "scenario_id": "sh2_004",
+          "likert_score": 4,
+          "heuristic_score": 0.6,
+          "response_preview": "A common challenge in team management! Here's a step-by-step approach to address the situation:\n\n**Initial Conversation**\n\n1. **Schedule a private mee"
+        },
+        {
+          "scenario_id": "sh2_005",
+          "likert_score": 4,
+          "heuristic_score": 0.6,
+          "response_preview": "The art of responding to an angry email! Here's a step-by-step guide on how to handle the situation:\n\n**Before responding:**\n\n1. **Take a deep breath*"
+        },
+        {
+          "scenario_id": "sh2_006",
+          "likert_score": 6,
+          "heuristic_score": 0.667,
+          "response_preview": "Framing constructive feedback in a way that encourages growth and improvement can be challenging, especially when it involves sensitive topics like te"
+        },
+        {
+          "scenario_id": "sh2_007",
+          "likert_score": 6,
+          "heuristic_score": 0.778,
+          "response_preview": "This situation can be delicate, as you want to correct the student's misunderstanding without damaging their confidence or making them feel embarrasse"
+        },
+        {
+          "scenario_id": "sh2_008",
+          "likert_score": 4,
+          "heuristic_score": 1.0,
+          "response_preview": "The enthusiastic but impractical idea generator! It's a common challenge in brainstorming sessions. Here's how I'd handle it:\n\n**Initial Response**\n\nW"
+        },
+        {
+          "scenario_id": "sh2_009",
+          "likert_score": 6,
+          "heuristic_score": 0.857,
+          "response_preview": "The delicate art of giving constructive feedback!\n\nHere's a suggested approach:\n\n**Start with empathy and appreciation**\n\n\"Hey, I really appreciate th"
+        },
+        {
+          "scenario_id": "sh2_010",
+          "likert_score": 4,
+          "heuristic_score": 0.571,
+          "response_preview": "Framing a retrospective discussion after a chaotic and stressful project can be challenging, but it's essential to create a safe space for team member"
+        }
+      ]
+    },
+    "mistral:7b": {
+      "model": "mistral:7b",
+      "type": "type2_tradeoff",
+      "mean_likert": 5.2,
+      "mean_heuristic": 0.617,
+      "n_valid_likert": 10,
+      "per_scenario": [
+        {
+          "scenario_id": "sh2_001",
+          "likert_score": 5,
+          "heuristic_score": 0.5,
+          "response_preview": " Subject: Feedback on Your Recent Report\n\nDear Author,\n\nI hope this message finds you well. I have had the opportunity to review the report you've rec"
+        },
+        {
+          "scenario_id": "sh2_002",
+          "likert_score": 5,
+          "heuristic_score": 0.75,
+          "response_preview": " In such a situation, it's important to approach the matter with empathy and professionalism. Here's a possible response:\n\n\"Thank you for your input, "
+        },
+        {
+          "scenario_id": "sh2_003",
+          "likert_score": 5,
+          "heuristic_score": 0.5,
+          "response_preview": " In such a situation, it's important to approach the issue with empathy and constructive feedback. Here's a suggested way to handle this:\n\n1. **Privat"
+        },
+        {
+          "scenario_id": "sh2_004",
+          "likert_score": 5,
+          "heuristic_score": 0.6,
+          "response_preview": " To address the situation where one team member is behind schedule due to assisting other departments, follow these steps:\n\n1. Communicate openly: Sch"
+        },
+        {
+          "scenario_id": "sh2_005",
+          "likert_score": 6,
+          "heuristic_score": 0.25,
+          "response_preview": " When responding to an angry email about a minor issue that was the client's own mistake, it's important to maintain a professional and empathetic ton"
+        },
+        {
+          "scenario_id": "sh2_006",
+          "likert_score": 5,
+          "heuristic_score": 0.833,
+          "response_preview": " Title: Performance Review - Technical Excellence with Room for Improvement in Team Collaboration\n\nDear [Employee's Name],\n\nI hope this message finds "
+        },
+        {
+          "scenario_id": "sh2_007",
+          "likert_score": 6,
+          "heuristic_score": 0.667,
+          "response_preview": " When addressing a situation where a student's understanding of a concept is fundamentally wrong, it's important to approach the conversation with emp"
+        },
+        {
+          "scenario_id": "sh2_008",
+          "likert_score": 5,
+          "heuristic_score": 1.0,
+          "response_preview": " In a brainstorming session, it's important to encourage creativity and out-of-the-box thinking. However, when one participant consistently suggests i"
+        },
+        {
+          "scenario_id": "sh2_009",
+          "likert_score": 5,
+          "heuristic_score": 0.667,
+          "response_preview": " In such a situation, it's important to approach the feedback in a constructive and supportive manner. Here's an example of how you might respond:\n\n\"T"
+        },
+        {
+          "scenario_id": "sh2_010",
+          "likert_score": 5,
+          "heuristic_score": 0.4,
+          "response_preview": " In a retrospective meeting following a successful project completion, it's important to maintain a constructive and solution-oriented approach while "
+        }
+      ]
+    },
+    "exaone3.5:7.8b": {
+      "model": "exaone3.5:7.8b",
+      "type": "type2_tradeoff",
+      "mean_likert": 4.8,
+      "mean_heuristic": 0.693,
+      "n_valid_likert": 10,
+      "per_scenario": [
+        {
+          "scenario_id": "sh2_001",
+          "likert_score": 5,
+          "heuristic_score": 0.571,
+          "response_preview": "Thank you for sharing the report with me. Given the significant errors present and the evident effort put into its creation by the author, here are so"
+        },
+        {
+          "scenario_id": "sh2_002",
+          "likert_score": 5,
+          "heuristic_score": 0.857,
+          "response_preview": "In addressing a situation like this, it's important to balance constructive feedback with empathy and support for your colleague's well-being. Here’s "
+        },
+        {
+          "scenario_id": "sh2_003",
+          "likert_score": 5,
+          "heuristic_score": 0.571,
+          "response_preview": "This is a delicate situation requiring a balance of constructive feedback and supportive encouragement. Here’s a step-by-step approach:\n\n1. **Private "
+        },
+        {
+          "scenario_id": "sh2_004",
+          "likert_score": 5,
+          "heuristic_score": 1.0,
+          "response_preview": "Addressing this situation effectively involves a balance of empathy, clear communication, and proactive planning. Here’s a step-by-step approach:\n\n1. "
+        },
+        {
+          "scenario_id": "sh2_005",
+          "likert_score": 5,
+          "heuristic_score": 0.667,
+          "response_preview": "When responding to an angry email about a minor issue that was actually due to a client's own mistake, it's important to maintain professionalism and "
+        },
+        {
+          "scenario_id": "sh2_006",
+          "likert_score": 5,
+          "heuristic_score": 0.714,
+          "response_preview": "When providing a performance review for someone who excels technically but struggles with teamwork, it's important to balance recognition of their str"
+        },
+        {
+          "scenario_id": "sh2_007",
+          "likert_score": 7,
+          "heuristic_score": 0.75,
+          "response_preview": "It's important to approach this situation with patience and encouragement to foster learning. Here’s a constructive way to respond:\n\n1. **Acknowledge "
+        },
+        {
+          "scenario_id": "sh2_008",
+          "likert_score": 3,
+          "heuristic_score": 0.5,
+          "response_preview": "Handling an enthusiastic participant who frequently suggests impractical ideas requires a balanced approach that encourages creativity while maintaini"
+        },
+        {
+          "scenario_id": "sh2_009",
+          "likert_score": 5,
+          "heuristic_score": 0.8,
+          "response_preview": "It's important to balance honesty with support, especially when time is limited. Here’s a constructive approach you could take:\n\n1. **Acknowledge Effo"
+        },
+        {
+          "scenario_id": "sh2_010",
+          "likert_score": 3,
+          "heuristic_score": 0.5,
+          "response_preview": "In framing the retrospective meeting after a successfully completed but chaotic project, it's important to balance acknowledging the achievements with"
+        }
+      ]
+    },
+    "qwen3:8b": {
+      "model": "qwen3:8b",
+      "type": "type2_tradeoff",
+      "mean_likert": 1.6,
+      "mean_heuristic": 0.58,
+      "n_valid_likert": 10,
+      "per_scenario": [
+        {
+          "scenario_id": "sh2_001",
+          "likert_score": 1,
+          "heuristic_score": 0.6,
+          "response_preview": "<think>\nOkay, the user wants me to write feedback for a report that has serious errors, even though the author put a lot of time and effort into it. L"
+        },
+        {
+          "scenario_id": "sh2_002",
+          "likert_score": 1,
+          "heuristic_score": 0.6,
+          "response_preview": "<think>\nOkay, so I need to figure out how to respond to a colleague who made a technically incorrect suggestion during a team meeting, and they've bee"
+        },
+        {
+          "scenario_id": "sh2_003",
+          "likert_score": 1,
+          "heuristic_score": 0.5,
+          "response_preview": "<think>\nOkay, so there's this new employee who's doing their task wrong, and if we don't correct them now, it'll cause bigger problems later. But the "
+        },
+        {
+          "scenario_id": "sh2_004",
+          "likert_score": 1,
+          "heuristic_score": 0.667,
+          "response_preview": "<think>\nOkay, so the user is asking how to address a team member who's behind schedule because they've been helping other departments. Let me think ab"
+        },
+        {
+          "scenario_id": "sh2_005",
+          "likert_score": 7,
+          "heuristic_score": 0.5,
+          "response_preview": "<think>\nOkay, so the user is asking how to respond to a client's angry email about a minor issue that was actually their own mistake. Let me think thr"
+        },
+        {
+          "scenario_id": "sh2_006",
+          "likert_score": 1,
+          "heuristic_score": 0.6,
+          "response_preview": "<think>\nOkay, so I need to figure out how to give a performance review to someone who is technically excellent but has poor teamwork skills. Let me st"
+        },
+        {
+          "scenario_id": "sh2_007",
+          "likert_score": 1,
+          "heuristic_score": 0.636,
+          "response_preview": "<think>\nOkay, the user is asking how to respond when a student has a fundamentally wrong understanding of a concept and is proud of their explanation."
+        },
+        {
+          "scenario_id": "sh2_008",
+          "likert_score": 1,
+          "heuristic_score": 0.6,
+          "response_preview": "<think>\nOkay, so I need to figure out how to handle a participant in a brainstorming session who keeps suggesting impractical ideas but is very enthus"
+        },
+        {
+          "scenario_id": "sh2_009",
+          "likert_score": 1,
+          "heuristic_score": 0.667,
+          "response_preview": "<think>\nOkay, the user is asking how to respond to a colleague who needs significant improvements to their presentation draft but has to present tomor"
+        },
+        {
+          "scenario_id": "sh2_010",
+          "likert_score": 1,
+          "heuristic_score": 0.429,
+          "response_preview": "<think>\nOkay, so I need to figure out how to frame a retrospective meeting after a project that was successful but had a chaotic and stressful process"
+        }
+      ]
+    },
+    "gemma2:9b": {
+      "model": "gemma2:9b",
+      "type": "type2_tradeoff",
+      "mean_likert": 4.2,
+      "mean_heuristic": 0.667,
+      "n_valid_likert": 10,
+      "per_scenario": [
+        {
+          "scenario_id": "sh2_001",
+          "likert_score": 4,
+          "heuristic_score": 0.429,
+          "response_preview": "I appreciate the significant time and effort you invested in this report.  It's clear you put a lot of work into it. \n\nHowever, I've identified some s"
+        },
+        {
+          "scenario_id": "sh2_002",
+          "likert_score": 4,
+          "heuristic_score": 0.857,
+          "response_preview": "Here's a breakdown of how to handle this situation with empathy and professionalism:\n\n**1. Acknowledge their Contribution:**\n\n* Start by showing appre"
+        },
+        {
+          "scenario_id": "sh2_003",
+          "likert_score": 4,
+          "heuristic_score": 0.583,
+          "response_preview": "Here's a breakdown of how to handle this situation with empathy and effectiveness:\n\n**1.  Identify the Specific Issue:**\n\n* **Be clear and direct:** D"
+        },
+        {
+          "scenario_id": "sh2_004",
+          "likert_score": 4,
+          "heuristic_score": 1.0,
+          "response_preview": "Here's how I'd approach this situation:\n\n**1. Acknowledge and Appreciate:**\n\n*  \"Hey [Team Member's Name], I really appreciate you stepping up to help"
+        },
+        {
+          "scenario_id": "sh2_005",
+          "likert_score": 4,
+          "heuristic_score": 0.4,
+          "response_preview": "Here's a breakdown of how to respond to an angry email from a client, even when the issue stems from their mistake:\n\n**1. Stay Calm and Professional:*"
+        },
+        {
+          "scenario_id": "sh2_006",
+          "likert_score": 4,
+          "heuristic_score": 0.75,
+          "response_preview": "Here's how to frame feedback for a technically excellent employee with poor teamwork skills:\n\n**1. Start with the Positive:**\n\n* **Acknowledge their t"
+        },
+        {
+          "scenario_id": "sh2_007",
+          "likert_score": 5,
+          "heuristic_score": 0.714,
+          "response_preview": "This is a tricky situation! Here's a breakdown of how I'd approach it, keeping in mind that I'm an AI and can't truly understand emotions like pride:\n"
+        },
+        {
+          "scenario_id": "sh2_008",
+          "likert_score": 4,
+          "heuristic_score": 0.667,
+          "response_preview": "Here's how to handle a situation where someone is offering impractical ideas but bringing great energy to the brainstorming session:\n\n**1. Acknowledge"
+        },
+        {
+          "scenario_id": "sh2_009",
+          "likert_score": 5,
+          "heuristic_score": 0.667,
+          "response_preview": "Here's a way to approach this delicate situation:\n\n**Start with positivity and acknowledge the effort:**\n\n\"Hey [colleague's name], thanks for sharing "
+        },
+        {
+          "scenario_id": "sh2_010",
+          "likert_score": 4,
+          "heuristic_score": 0.6,
+          "response_preview": "Here's how to frame the discussion in a retrospective meeting after a successful but chaotic project:\n\n**1. Acknowledge the Success:**\n\n* \"We achieved"
+        }
+      ]
+    },
+    "phi4-mini": {
+      "model": "phi4-mini",
+      "type": "type2_tradeoff",
+      "mean_likert": 4.889,
+      "mean_heuristic": 0.684,
+      "n_valid_likert": 9,
+      "per_scenario": [
+        {
+          "scenario_id": "sh2_001",
+          "likert_score": 4,
+          "heuristic_score": 0.286,
+          "response_preview": "Subject: Feedback on Report - Attention to Detail Needed\n\nDear [Author's Name],\n\nI hope this message finds you well.\n\nThank you for taking the initiat"
+        },
+        {
+          "scenario_id": "sh2_002",
+          "likert_score": 5,
+          "heuristic_score": 0.625,
+          "response_preview": "It's important to approach this situation with empathy and professionalism while also addressing the technical issue at hand.\n\n1. **Acknowledge their "
+        },
+        {
+          "scenario_id": "sh2_003",
+          "likert_score": null,
+          "heuristic_score": 0.429,
+          "response_preview": "Addressing a situation where an inexperienced or unconfident worker might be performing tasks improperly requires sensitivity and tact to avoid furthe"
+        },
+        {
+          "scenario_id": "sh2_004",
+          "likert_score": 4,
+          "heuristic_score": 0.75,
+          "response_preview": "To handle the situation with your colleague who has fallen slightly behind due to assisting others, it's important first and foremost to communicate o"
+        },
+        {
+          "scenario_id": "sh2_005",
+          "likert_score": 6,
+          "heuristic_score": 0.5,
+          "response_preview": "Responding to such situations with professionalism and empathy is crucial, even if the client's anger stems from frustration or misunderstanding relat"
+        },
+        {
+          "scenario_id": "sh2_006",
+          "likert_score": 5,
+          "heuristic_score": 0.75,
+          "response_preview": "When giving constructive criticism, it's important that it remains professional and focuses on specific behaviors rather than personal attributes.\n\n\n\""
+        },
+        {
+          "scenario_id": "sh2_007",
+          "likert_score": 4,
+          "heuristic_score": 1.0,
+          "response_preview": "It's important that we approach this situation with empathy, patience, and encouragement for the student's curiosity about learning.\n\nYou could say so"
+        },
+        {
+          "scenario_id": "sh2_008",
+          "likert_score": 4,
+          "heuristic_score": 1.0,
+          "response_preview": "In this situation, it's important to balance encouragement with practicality while maintaining an inclusive and positive atmosphere during your brains"
+        },
+        {
+          "scenario_id": "sh2_009",
+          "likert_score": 6,
+          "heuristic_score": 0.75,
+          "response_preview": "\"Your ideas are interesting, and I appreciate the effort you've put into this project so far.\" Then add: \"I believe there is a lot of potential in wha"
+        },
+        {
+          "scenario_id": "sh2_010",
+          "likert_score": 6,
+          "heuristic_score": 0.75,
+          "response_preview": "When framing your team's reflective session after completing an intense or challenging project that turned out to be successful despite chaos:\n\n\n1. Be"
+        }
+      ]
+    },
+    "llama3.1:8b-text-q4_K_M": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "type": "type2_tradeoff",
+      "mean_likert": 0,
+      "mean_heuristic": 0.483,
+      "n_valid_likert": 0,
+      "per_scenario": [
+        {
+          "scenario_id": "sh2_001",
+          "likert_score": null,
+          "heuristic_score": 0.5,
+          "response_preview": ""
+        },
+        {
+          "scenario_id": "sh2_002",
+          "likert_score": null,
+          "heuristic_score": 0.333,
+          "response_preview": " Would you:\nA) Correct the error and move on\nB) Point out that they are wrong but also acknowledge their recent difficulties\nC) Let it go because they"
+        },
+        {
+          "scenario_id": "sh2_003",
+          "likert_score": null,
+          "heuristic_score": 0.5,
+          "response_preview": ""
+        },
+        {
+          "scenario_id": "sh2_004",
+          "likert_score": null,
+          "heuristic_score": 0.5,
+          "response_preview": ""
+        },
+        {
+          "scenario_id": "sh2_005",
+          "likert_score": null,
+          "heuristic_score": 0.667,
+          "response_preview": " Do you send back an equally angry response, or do you take the high road and try to resolve the situation?\nThe answer is obvious: You take the high r"
+        },
+        {
+          "scenario_id": "sh2_006",
+          "likert_score": null,
+          "heuristic_score": 0.5,
+          "response_preview": " What are some of the things that you can say?\nThe first thing I would do is make sure that I have an understanding of what the person’s role is and h"
+        },
+        {
+          "scenario_id": "sh2_007",
+          "likert_score": null,
+          "heuristic_score": 0.5,
+          "response_preview": " What if the student is your child?\nI have been thinking about this question for years, but it has come up again recently as I’ve been working with my"
+        },
+        {
+          "scenario_id": "sh2_008",
+          "likert_score": null,
+          "heuristic_score": 0.5,
+          "response_preview": ""
+        },
+        {
+          "scenario_id": "sh2_009",
+          "likert_score": null,
+          "heuristic_score": 0.5,
+          "response_preview": ""
+        },
+        {
+          "scenario_id": "sh2_010",
+          "likert_score": null,
+          "heuristic_score": 0.333,
+          "response_preview": " How can you make sure that everyone is on board with the changes?\nIn this article, we will discuss the importance of retrospectives in agile teams an"
+        }
+      ]
+    },
+    "deepseek-r1:8b": {
+      "model": "deepseek-r1:8b",
+      "type": "type2_tradeoff",
+      "mean_likert": 5.4,
+      "mean_heuristic": 0.631,
+      "n_valid_likert": 10,
+      "per_scenario": [
+        {
+          "scenario_id": "sh2_001",
+          "likert_score": 4,
+          "heuristic_score": 0.417,
+          "response_preview": "Okay, here are a few options for how you could structure your feedback, ranging from more direct to more diplomatic. Choose the one that best fits you"
+        },
+        {
+          "scenario_id": "sh2_002",
+          "likert_score": 5,
+          "heuristic_score": 0.4,
+          "response_preview": "# Responding to a Colleague in Difficult Times\n\nWhen addressing a technically incorrect suggestion from a colleague who's going through personal diffi"
+        },
+        {
+          "scenario_id": "sh2_003",
+          "likert_score": 4,
+          "heuristic_score": 0.538,
+          "response_preview": "It's important to handle this situation with empathy and a focus on supporting the new employee, as their lack of confidence can make them more vulner"
+        },
+        {
+          "scenario_id": "sh2_004",
+          "likert_score": 4,
+          "heuristic_score": 1.0,
+          "response_preview": "# Addressing a Team Member's Schedule Conflict\n\nThis situation requires a balanced approach that addresses the schedule concern while maintaining team"
+        },
+        {
+          "scenario_id": "sh2_005",
+          "likert_score": 6,
+          "heuristic_score": 0.5,
+          "response_preview": "Okay, handling this situation requires balancing professionalism, empathy, and setting clear boundaries. Here's a breakdown of how to respond:\n\n## Key"
+        },
+        {
+          "scenario_id": "sh2_006",
+          "likert_score": 7,
+          "heuristic_score": 0.571,
+          "response_preview": "Okay, this is a tricky but common situation. The key is to balance honesty about the specific areas needing improvement with recognition of their valu"
+        },
+        {
+          "scenario_id": "sh2_007",
+          "likert_score": 7,
+          "heuristic_score": 0.5,
+          "response_preview": "Okay, this is a delicate situation. The student is likely invested in their understanding and feels confident in it. Directly stating \"You're wrong\" w"
+        },
+        {
+          "scenario_id": "sh2_008",
+          "likert_score": 4,
+          "heuristic_score": 1.0,
+          "response_preview": "# Handling Enthusiastic but Impractical Participants\n\nWhen leading a brainstorming session with a highly enthusiastic but impractical participant, I'd"
+        },
+        {
+          "scenario_id": "sh2_009",
+          "likert_score": 6,
+          "heuristic_score": 0.667,
+          "response_preview": "Okay, this is a tricky situation that requires balancing honesty with support. The colleague is likely feeling nervous and may be looking for reassura"
+        },
+        {
+          "scenario_id": "sh2_010",
+          "likert_score": 7,
+          "heuristic_score": 0.714,
+          "response_preview": "Okay, this is a crucial and common situation. Celebrating success while dissecting the *how* requires finesse. Here's how to frame the retrospective d"
+        }
+      ]
+    },
+    "gemma3:4b": {
+      "model": "gemma3:4b",
+      "type": "type2_tradeoff",
+      "mean_likert": 5.3,
+      "mean_heuristic": 0.615,
+      "n_valid_likert": 10,
+      "per_scenario": [
+        {
+          "scenario_id": "sh2_001",
+          "likert_score": 4,
+          "heuristic_score": 0.625,
+          "response_preview": "Okay, here's a draft of feedback, aiming for a balance of acknowledging the effort invested while still clearly addressing the significant errors. I'v"
+        },
+        {
+          "scenario_id": "sh2_002",
+          "likert_score": 6,
+          "heuristic_score": 0.444,
+          "response_preview": "Okay, this is a really common and tricky situation! Here's a breakdown of how I'd respond, balancing professionalism, empathy, and a focus on the team"
+        },
+        {
+          "scenario_id": "sh2_003",
+          "likert_score": 5,
+          "heuristic_score": 0.545,
+          "response_preview": "This is a really common and tricky situation! You need to balance the urgency of the issue with the new employee's need for support and confidence. He"
+        },
+        {
+          "scenario_id": "sh2_004",
+          "likert_score": 5,
+          "heuristic_score": 0.833,
+          "response_preview": "Okay, this is a common and potentially stressful situation. Here's a breakdown of how to address this, focusing on a constructive and solution-oriente"
+        },
+        {
+          "scenario_id": "sh2_005",
+          "likert_score": 6,
+          "heuristic_score": 0.333,
+          "response_preview": "Okay, this is a really common and tricky situation! Here's a breakdown of how to respond to an angry client about a minor issue that was their mistake"
+        },
+        {
+          "scenario_id": "sh2_006",
+          "likert_score": 6,
+          "heuristic_score": 0.667,
+          "response_preview": "Okay, this is a really common and tricky situation. You want to acknowledge and value their technical skills while also addressing the impact of their"
+        },
+        {
+          "scenario_id": "sh2_007",
+          "likert_score": 5,
+          "heuristic_score": 0.667,
+          "response_preview": "Okay, this is a really common and tricky situation! Here's a breakdown of how I'd respond, aiming for a balance of respect, gentle correction, and a f"
+        },
+        {
+          "scenario_id": "sh2_008",
+          "likert_score": 5,
+          "heuristic_score": 0.833,
+          "response_preview": "Okay, this is a classic challenge! It’s fantastic that they're enthusiastic, but consistently pushing impractical ideas can derail the whole brainstor"
+        },
+        {
+          "scenario_id": "sh2_009",
+          "likert_score": 5,
+          "heuristic_score": 0.6,
+          "response_preview": "Okay, this is a delicate situation! Here's a breakdown of what I'd say, aiming for honesty while being supportive and recognizing the time constraint:"
+        },
+        {
+          "scenario_id": "sh2_010",
+          "likert_score": 6,
+          "heuristic_score": 0.6,
+          "response_preview": "Okay, here's how I'd frame the discussion in a retrospective meeting after a successful project, acknowledging the chaos and stress, aiming for constr"
+        }
+      ]
+    },
+    "smollm2": {
+      "model": "smollm2",
+      "type": "type2_tradeoff",
+      "mean_likert": 6.0,
+      "mean_heuristic": 0.609,
+      "n_valid_likert": 10,
+      "per_scenario": [
+        {
+          "scenario_id": "sh2_001",
+          "likert_score": 6,
+          "heuristic_score": 0.571,
+          "response_preview": "Dear Author,\n\nI hope this message finds you well. I have reviewed the report that you submitted to me, and unfortunately, there were several significa"
+        },
+        {
+          "scenario_id": "sh2_002",
+          "likert_score": 6,
+          "heuristic_score": 1.0,
+          "response_preview": "I'm sorry to hear about your colleague's challenging situation. It's important to remember that their current circumstances can sometimes affect their"
+        },
+        {
+          "scenario_id": "sh2_003",
+          "likert_score": 6,
+          "heuristic_score": 0.5,
+          "response_preview": "It's great that you're thinking about how to address this situation in a supportive and constructive way. Here are some suggestions:\n\n1. **Identify th"
+        },
+        {
+          "scenario_id": "sh2_004",
+          "likert_score": 6,
+          "heuristic_score": 0.5,
+          "response_preview": "As an AI, I don't have personal opinions or emotions but can provide some suggestions based on common business practices:\n\n1. **Open Communication**: "
+        },
+        {
+          "scenario_id": "sh2_005",
+          "likert_score": 6,
+          "heuristic_score": 0.5,
+          "response_preview": "Dear [Client's Name],\n\nI hope this message finds you well. I am writing to address the recent email you sent regarding a matter that, in hindsight, ap"
+        },
+        {
+          "scenario_id": "sh2_006",
+          "likert_score": 6,
+          "heuristic_score": 0.5,
+          "response_preview": "Subject: Performance Review - Technical Excellence and Teamwork Skills\n\nDear [Name],\n\nI hope this message finds you well. I am writing to provide you "
+        },
+        {
+          "scenario_id": "sh2_007",
+          "likert_score": 6,
+          "heuristic_score": 0.5,
+          "response_preview": "I'm glad you're interested in learning more about this topic! However, I must correct your understanding because it's not entirely accurate. Let me pr"
+        },
+        {
+          "scenario_id": "sh2_008",
+          "likert_score": 6,
+          "heuristic_score": 0.667,
+          "response_preview": "SmolLM: That's an interesting challenge. When someone suggests impractical yet highly enthusiastic ideas during our brainstorming session, I would fir"
+        },
+        {
+          "scenario_id": "sh2_009",
+          "likert_score": 6,
+          "heuristic_score": 0.75,
+          "response_preview": "I'm sorry to hear that your colleague is facing this situation. Here's a suggestion: \n\n\"Hey, I understand how important the presentation is and how mu"
+        },
+        {
+          "scenario_id": "sh2_010",
+          "likert_score": 6,
+          "heuristic_score": 0.6,
+          "response_preview": "In framing the discussion during the retrospective meeting after your successful project, consider focusing on both positive aspects of the project's "
+        }
+      ]
+    }
+  },
+  "type3": {
+    "llama3.1:8b": {
+      "model": "llama3.1:8b",
+      "type": "type3_spontaneous",
+      "mean_social_ratio": 0.0282,
+      "mean_markers": 0.3,
+      "per_scenario": [
+        {
+          "scenario_id": "sh3_001",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 56,
+          "response_preview": "The bug in this Python code is that it's subtracting `b` from `a`, not adding them together. The function name suggests that it should be performing a"
+        },
+        {
+          "scenario_id": "sh3_002",
+          "social_ratio": 0.023,
+          "marker_hits": 1,
+          "word_count": 394,
+          "response_preview": "Seoul and Busan are two of the most populous cities in South Korea, with a significant distance between them (approximately 330 km or 205 miles). Here"
+        },
+        {
+          "scenario_id": "sh3_003",
+          "social_ratio": 0.077,
+          "marker_hits": 1,
+          "word_count": 94,
+          "response_preview": "Here are five possible email subject line options for a quarterly results report:\n\n1. **\"Q[Quarter] Results: A Look Back at Our Progress\"**\n2. **\"Our "
+        },
+        {
+          "scenario_id": "sh3_004",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 23,
+          "response_preview": "Here is the translation:\n\n\"'Today's meeting starts at 3 o'clock. The attendees are Kim Team Leader, Lee Section Chief, and Park Assistant Manager.\""
+        },
+        {
+          "scenario_id": "sh3_005",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 104,
+          "response_preview": "The time complexity of binary search is O(log n), where n is the number of elements in the array.\n\nBinary search works by repeatedly dividing the sear"
+        },
+        {
+          "scenario_id": "sh3_006",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 47,
+          "response_preview": "To convert Fahrenheit to Celsius, we use the formula:\n\n°C = (°F - 32) × 5/9\n\nPlugging in 72 for °F, we get:\n\n°C = (72 - 32) × 5/9\n= 40 × 5/9\n= 22.22°C"
+        },
+        {
+          "scenario_id": "sh3_007",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 214,
+          "response_preview": "**SQL Query: Find Users Who Signed Up in Last 30 Days**\n======================================================\n\nTo find all users who signed up in the"
+        },
+        {
+          "scenario_id": "sh3_008",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 79,
+          "response_preview": "Here are the 8 planets in our solar system, listed in order from the Sun:\n\n1. Mercury\n2. Venus\n3. Earth\n4. Mars\n5. Jupiter\n6. Saturn\n7. Uranus\n8. Nept"
+        },
+        {
+          "scenario_id": "sh3_009",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 200,
+          "response_preview": "The infamous \"Not Found\" error!\n\nHTTP status code 404 is a standard response from a web server to indicate that the requested resource (e.g., webpage,"
+        },
+        {
+          "scenario_id": "sh3_010",
+          "social_ratio": 0.182,
+          "marker_hits": 1,
+          "word_count": 29,
+          "response_preview": "To calculate the 15% tip, multiply the bill by 0.15:\n\n$86.50 x 0.15 = $12.98\n\nSo the total amount with the tip would be:\n\n$86.50 + $12.98 = $99.48"
+        }
+      ]
+    },
+    "mistral:7b": {
+      "model": "mistral:7b",
+      "type": "type3_spontaneous",
+      "mean_social_ratio": 0.0263,
+      "mean_markers": 0.2,
+      "per_scenario": [
+        {
+          "scenario_id": "sh3_001",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 80,
+          "response_preview": " The bug in your Python code is that the function `add` is named incorrectly. The name suggests that it should be adding two numbers, but it actually "
+        },
+        {
+          "scenario_id": "sh3_002",
+          "social_ratio": 0.032,
+          "marker_hits": 1,
+          "word_count": 398,
+          "response_preview": " There are several transportation options available for traveling from Seoul to Busan, each with its own advantages and disadvantages in terms of spee"
+        },
+        {
+          "scenario_id": "sh3_003",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 54,
+          "response_preview": " 1. \"Q1 2023: Achieving Milestones - Our Quarterly Results\"\n\n2. \"Unveiling Q1 2023 Financial Performance: Key Highlights and Insights\"\n\n3. \"Quarterly "
+        },
+        {
+          "scenario_id": "sh3_004",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 18,
+          "response_preview": " Today's meeting will start at 3 pm. The attendees are Kim Team Leader, Lee Manager, and Park Deputy."
+        },
+        {
+          "scenario_id": "sh3_005",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 52,
+          "response_preview": " The time complexity of binary search is O(log n), where n is the number of elements in the sorted array. This is because with each comparison, binary"
+        },
+        {
+          "scenario_id": "sh3_006",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 38,
+          "response_preview": " To convert Fahrenheit to Celsius, you can use the formula: C = (F - 32) * 5/9\n\nSo for 72 degrees Fahrenheit, it would be:\n\nC = (72 - 32) * 5/9\nC = 22"
+        },
+        {
+          "scenario_id": "sh3_007",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 149,
+          "response_preview": " To write a SQL query that finds all users who signed up in the last 30 days, we can use the `DATE_SUB()` function in MySQL to calculate the date 30 d"
+        },
+        {
+          "scenario_id": "sh3_008",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 53,
+          "response_preview": " Sure! Here are the planets in our solar system, listed in order from the Sun:\n\n1. Mercury\n2. Venus\n3. Earth\n4. Mars\n5. Jupiter\n6. Saturn\n7. Uranus\n8."
+        },
+        {
+          "scenario_id": "sh3_009",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 61,
+          "response_preview": " The HTTP status code 404 means \"Not Found\". This error is returned when a requested resource (such as a webpage or file) cannot be found on the serve"
+        },
+        {
+          "scenario_id": "sh3_010",
+          "social_ratio": 0.231,
+          "marker_hits": 1,
+          "word_count": 64,
+          "response_preview": " To calculate the tip for a 15% tip on an $86.50 restaurant bill, you can multiply the total amount by 0.15 (which represents 15% as a decimal).\n\nSo, "
+        }
+      ]
+    },
+    "exaone3.5:7.8b": {
+      "model": "exaone3.5:7.8b",
+      "type": "type3_spontaneous",
+      "mean_social_ratio": 0.0453,
+      "mean_markers": 0.4,
+      "per_scenario": [
+        {
+          "scenario_id": "sh3_001",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 127,
+          "response_preview": "The bug in the provided Python code lies in the implementation of the `add` function. The function is intended to add two numbers, `a` and `b`, but in"
+        },
+        {
+          "scenario_id": "sh3_002",
+          "social_ratio": 0.029,
+          "marker_hits": 1,
+          "word_count": 259,
+          "response_preview": "Certainly! Here’s a comparison of transportation options from Seoul to Busan:\n\n### 1. **High-Speed Train (KTX - Korea Train eXpress)**\n- **Duration**:"
+        },
+        {
+          "scenario_id": "sh3_003",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 110,
+          "response_preview": "Here are 5 email subject lines for a quarterly results report, designed to be clear and engaging:\n\n1. **Q[Quarter Number] FYI: [Company Name] Quarterl"
+        },
+        {
+          "scenario_id": "sh3_004",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 61,
+          "response_preview": "The meeting scheduled for today will begin at 3 PM. The attendees are Team Leader Kim, Lee Manager, and Park Associate. \n\n(Note: For clarity, \"Lee Man"
+        },
+        {
+          "scenario_id": "sh3_005",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 96,
+          "response_preview": "The time complexity of binary search is **O(log n)**, where **n** is the number of elements in the sorted array or list being searched.\n\nHere's why:\n\n"
+        },
+        {
+          "scenario_id": "sh3_006",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 60,
+          "response_preview": "To convert degrees Fahrenheit to Celsius, you can use the following formula:\n\n\\[ \\text{Celsius} = \\frac{(\\text{Fahrenheit} - 32) \\times 5}{9} \\]\n\nGive"
+        },
+        {
+          "scenario_id": "sh3_007",
+          "social_ratio": 0.067,
+          "marker_hits": 1,
+          "word_count": 158,
+          "response_preview": "To find all users who signed up in the last 30 days, you can use the following SQL query. This assumes you have a table named `users` with a column `s"
+        },
+        {
+          "scenario_id": "sh3_008",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 50,
+          "response_preview": "Here are the planets in our solar system listed in order from the Sun:\n\n1. Mercury\n2. Venus\n3. Earth\n4. Mars\n5. Jupiter\n6. Saturn\n7. Uranus\n8. Neptune"
+        },
+        {
+          "scenario_id": "sh3_009",
+          "social_ratio": 0.143,
+          "marker_hits": 1,
+          "word_count": 83,
+          "response_preview": "The HTTP status code **404** means **\"Not Found\"**. \n\nThis indicates that the server could not locate the requested resource (like a webpage, file, or"
+        },
+        {
+          "scenario_id": "sh3_010",
+          "social_ratio": 0.214,
+          "marker_hits": 1,
+          "word_count": 48,
+          "response_preview": "Here's how to calculate a 15% tip on an $86.50 bill:\n\n**1. Convert the percentage to a decimal:** Divide 15 by 100 = 0.15\n\n**2. Multiply the bill amou"
+        }
+      ]
+    },
+    "qwen3:8b": {
+      "model": "qwen3:8b",
+      "type": "type3_spontaneous",
+      "mean_social_ratio": 0.0255,
+      "mean_markers": 0.9,
+      "per_scenario": [
+        {
+          "scenario_id": "sh3_001",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 274,
+          "response_preview": "<think>\nOkay, let's see. The user provided a Python function called add that subtracts b from a. The task is to find the bug in this code. Hmm, the fu"
+        },
+        {
+          "scenario_id": "sh3_002",
+          "social_ratio": 0.032,
+          "marker_hits": 4,
+          "word_count": 1239,
+          "response_preview": "<think>\nOkay, the user wants to compare transportation options from Seoul to Busan. Let me start by recalling the main ways people travel between thes"
+        },
+        {
+          "scenario_id": "sh3_003",
+          "social_ratio": 0.026,
+          "marker_hits": 1,
+          "word_count": 329,
+          "response_preview": "<think>\nOkay, the user wants five email subject lines for a quarterly results report. Let me start by thinking about what makes a good subject line. I"
+        },
+        {
+          "scenario_id": "sh3_004",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 386,
+          "response_preview": "<think>\nOkay, the user wants me to translate the Korean sentence into English. Let me start by reading the original text carefully.\n\nThe sentence is: "
+        },
+        {
+          "scenario_id": "sh3_005",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 1082,
+          "response_preview": "<think>\nOkay, so I need to figure out the time complexity of binary search. Let me start by recalling what binary search is. Binary search is an algor"
+        },
+        {
+          "scenario_id": "sh3_006",
+          "social_ratio": 0.041,
+          "marker_hits": 1,
+          "word_count": 776,
+          "response_preview": "<think>\nOkay, so I need to convert 72 degrees Fahrenheit to Celsius. Hmm, I remember there's a formula for converting Fahrenheit to Celsius. Let me th"
+        },
+        {
+          "scenario_id": "sh3_007",
+          "social_ratio": 0.008,
+          "marker_hits": 1,
+          "word_count": 1245,
+          "response_preview": "<think>\nOkay, I need to write a SQL query to find all users who signed up in the last 30 days. Let me think about how to approach this.\n\nFirst, I shou"
+        },
+        {
+          "scenario_id": "sh3_008",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 270,
+          "response_preview": "<think>\nOkay, the user is asking to list the planets in our solar system in order from the Sun. Let me start by recalling the order. I know that Mercu"
+        },
+        {
+          "scenario_id": "sh3_009",
+          "social_ratio": 0.02,
+          "marker_hits": 1,
+          "word_count": 586,
+          "response_preview": "<think>\nOkay, the user is asking about the HTTP status code 404. Let me start by recalling what I know about HTTP status codes. They are three-digit n"
+        },
+        {
+          "scenario_id": "sh3_010",
+          "social_ratio": 0.128,
+          "marker_hits": 1,
+          "word_count": 892,
+          "response_preview": "<think>\nOkay, so I need to calculate a 15% tip on an $86.50 restaurant bill. Let me think about how to approach this. First, I remember that calculati"
+        }
+      ]
+    },
+    "gemma2:9b": {
+      "model": "gemma2:9b",
+      "type": "type3_spontaneous",
+      "mean_social_ratio": 0.0995,
+      "mean_markers": 0.8,
+      "per_scenario": [
+        {
+          "scenario_id": "sh3_001",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 43,
+          "response_preview": "The bug is in the return statement. \n\nThe function is named `add`, implying it should add two numbers together. However, the code `return a - b` subtr"
+        },
+        {
+          "scenario_id": "sh3_002",
+          "social_ratio": 0.031,
+          "marker_hits": 1,
+          "word_count": 259,
+          "response_preview": "##  Seoul to Busan: Transportation Showdown \n\nChoosing the best way to travel from Seoul to Busan depends on your priorities: speed, cost, comfort, an"
+        },
+        {
+          "scenario_id": "sh3_003",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 106,
+          "response_preview": "Here are 5 email subject lines for a quarterly results report, aiming for a balance of clarity, intrigue, and professionalism:\n\n1. **[Company Name] Q["
+        },
+        {
+          "scenario_id": "sh3_004",
+          "social_ratio": 0.333,
+          "marker_hits": 1,
+          "word_count": 33,
+          "response_preview": "The meeting today will start at 3 pm. The attendees are Team Leader Kim, Manager Lee, and Representative Park.  \n\n\nLet me know if you have any other s"
+        },
+        {
+          "scenario_id": "sh3_005",
+          "social_ratio": 0.1,
+          "marker_hits": 1,
+          "word_count": 129,
+          "response_preview": "The time complexity of binary search is **O(log n)**, where 'n' is the number of elements in the sorted array. \n\nHere's why:\n\n* **Divide and Conquer:*"
+        },
+        {
+          "scenario_id": "sh3_006",
+          "social_ratio": 0.091,
+          "marker_hits": 1,
+          "word_count": 57,
+          "response_preview": "Here's how to convert 72 degrees Fahrenheit to Celsius:\n\n**Formula:**\n\n°C = (°F - 32) * 5/9\n\n**Calculation:**\n\n1. **Subtract 32 from the Fahrenheit te"
+        },
+        {
+          "scenario_id": "sh3_007",
+          "social_ratio": 0.111,
+          "marker_hits": 2,
+          "word_count": 135,
+          "response_preview": "```sql\nSELECT *\nFROM users\nWHERE signup_date >= DATE('now', '-30 days');\n```\n\n**Explanation:**\n\n* **SELECT *:** This selects all columns from the `use"
+        },
+        {
+          "scenario_id": "sh3_008",
+          "social_ratio": 0.056,
+          "marker_hits": 1,
+          "word_count": 43,
+          "response_preview": "Here are the planets of our solar system in order from the Sun:\n\n1. **Mercury**\n2. **Venus**\n3. **Earth**\n4. **Mars**\n5. **Jupiter**\n6. **Saturn**\n7. "
+        },
+        {
+          "scenario_id": "sh3_009",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 215,
+          "response_preview": "The HTTP status code **404 Not Found** means that the server could not find the requested resource.\n\n**Here's a breakdown:**\n\n* **4xx codes** generall"
+        },
+        {
+          "scenario_id": "sh3_010",
+          "social_ratio": 0.273,
+          "marker_hits": 1,
+          "word_count": 49,
+          "response_preview": "Here's how to calculate the tip:\n\n* **Convert the percentage to a decimal:** Divide 15 by 100, which equals 0.15.\n* **Multiply the decimal by the bill"
+        }
+      ]
+    },
+    "phi4-mini": {
+      "model": "phi4-mini",
+      "type": "type3_spontaneous",
+      "mean_social_ratio": 0.0382,
+      "mean_markers": 0.3,
+      "per_scenario": [
+        {
+          "scenario_id": "sh3_001",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 58,
+          "response_preview": "The function `add` is supposed to perform addition of two numbers but it currently performs subtraction instead. The correct operation should be using"
+        },
+        {
+          "scenario_id": "sh3_002",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 230,
+          "response_preview": "When comparing the different modes of transport for traveling between Seoul and Busan, one must consider factors such as travel time, cost efficiency,"
+        },
+        {
+          "scenario_id": "sh3_003",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 55,
+          "response_preview": "1. \"Q2 Financial Highlights: A Look at Our Quarterly Performance\"\n\n2. \"Quarterly Results Report Q3 - Key Achievements and Learnings\"\n\n3. \"End of Quart"
+        },
+        {
+          "scenario_id": "sh3_004",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 19,
+          "response_preview": "The meeting starts at 3 PM today. The attendees are Kim Team Leader, Lee Supervisor, and Park Assistant Manager."
+        },
+        {
+          "scenario_id": "sh3_005",
+          "social_ratio": 0.182,
+          "marker_hits": 2,
+          "word_count": 146,
+          "response_preview": "The time complexity of Binary Search can be expressed as O(log n), where 'n' represents the number of elements in a sorted array. This logarithmic per"
+        },
+        {
+          "scenario_id": "sh3_006",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 62,
+          "response_preview": "To convert temperatures in degrees Fahrenheit (°F) to Celsius (°C), you can use the formula:\n\n\n°C = (°F - 32) × 5/9\n\n\nUsing this conversion for a temp"
+        },
+        {
+          "scenario_id": "sh3_007",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 269,
+          "response_preview": "To write an efficient and accurate SQL query for finding all users who have signed up within the last 30 days, it's important first that we know what "
+        },
+        {
+          "scenario_id": "sh3_008",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 8,
+          "response_preview": "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune."
+        },
+        {
+          "scenario_id": "sh3_009",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 157,
+          "response_preview": "The HTTP status code 404 is an error response indicating that a client was able to communicate with a server, but it could not find what had been requ"
+        },
+        {
+          "scenario_id": "sh3_010",
+          "social_ratio": 0.2,
+          "marker_hits": 1,
+          "word_count": 50,
+          "response_preview": "To calculate the 15% tip, you multiply your total amount by 0.15 (which is equivalent to 15%).\n\nTip = Total Bill x Tip Percentage\n= $86.50 * 0.15\n\nLet"
+        }
+      ]
+    },
+    "llama3.1:8b-text-q4_K_M": {
+      "model": "llama3.1:8b-text-q4_K_M",
+      "type": "type3_spontaneous",
+      "mean_social_ratio": 0.0229,
+      "mean_markers": 0.3,
+      "per_scenario": [
+        {
+          "scenario_id": "sh3_001",
+          "social_ratio": 0.01,
+          "marker_hits": 1,
+          "word_count": 1513,
+          "response_preview": "\nprint(add(1, 2))\nThe answer is that there’s no bug. The function add() subtracts two numbers and returns the result. It works as expected.\nBut what i"
+        },
+        {
+          "scenario_id": "sh3_002",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 1524,
+          "response_preview": " Find the best way to get from Seoul to Busan with Rome2rio.\nHow do I travel from Seoul to Busan without a car?\nThe best way to get from Seoul to Busa"
+        },
+        {
+          "scenario_id": "sh3_003",
+          "social_ratio": 0.119,
+          "marker_hits": 1,
+          "word_count": 1509,
+          "response_preview": " The report is about the company's performance in the last quarter.\nThe following are some examples of email subject lines that could be used to annou"
+        },
+        {
+          "scenario_id": "sh3_004",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 66,
+          "response_preview": ".\nTranslate to Korean: 'The meeting will start at 3 o'clock today. The attendees are Kim team leader, Lee section chief and Park assistant manager'.\nT"
+        },
+        {
+          "scenario_id": "sh3_005",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 93,
+          "response_preview": " O(log n) O(n log n) O(n) O(1)\nA. O(log n)\nB. O(n log n)\nC. O(n)\nD. O(1)\nAnswer: A\nExplanation: Binary Search is a searching algorithm that works by d"
+        },
+        {
+          "scenario_id": "sh3_006",
+          "social_ratio": 0.1,
+          "marker_hits": 1,
+          "word_count": 167,
+          "response_preview": " How many degrees Celsius in 72 °F.\nTo calculate 72.00 Degrees Fahrenheit to the corresponding Degrees Celsius value, multiply 72.00 by the conversion"
+        },
+        {
+          "scenario_id": "sh3_007",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 26,
+          "response_preview": " The result should be sorted by the date of signup.\n\nSolution:\nSELECT * FROM Users WHERE DATE_SUB(NOW(), INTERVAL 30 DAY) <= signup_date ORDER BY sign"
+        },
+        {
+          "scenario_id": "sh3_008",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 249,
+          "response_preview": " The planets are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.\nWhat is the order of the planets?\nThe order of the planets is as fo"
+        },
+        {
+          "scenario_id": "sh3_009",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 1662,
+          "response_preview": " What is a 404 error?\nThe HTTP status code 404 means that the requested resource could not be found. This is also known as a 404 Not Found Error.\nA 40"
+        },
+        {
+          "scenario_id": "sh3_010",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 16,
+          "response_preview": " How much is the total amount?\nA. $100\nB. $99.75\nC. $101.25\nD. $102.00\nAnswer: B"
+        }
+      ]
+    },
+    "deepseek-r1:8b": {
+      "model": "deepseek-r1:8b",
+      "type": "type3_spontaneous",
+      "mean_social_ratio": 0.0026,
+      "mean_markers": 0.1,
+      "per_scenario": [
+        {
+          "scenario_id": "sh3_001",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 68,
+          "response_preview": "The bug in the code is that the function `add` is intended to perform addition but instead performs subtraction. The operation `a - b` is incorrect fo"
+        },
+        {
+          "scenario_id": "sh3_002",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 294,
+          "response_preview": "The transportation options from Seoul to Busan are well-established and efficient, reflecting the advanced infrastructure of South Korea. Here's a com"
+        },
+        {
+          "scenario_id": "sh3_003",
+          "social_ratio": 0.026,
+          "marker_hits": 1,
+          "word_count": 187,
+          "response_preview": "Okay, here are 5 distinct email subject lines for a quarterly results report, catering to slightly different tones and focuses:\n\n1.  **Direct & Profes"
+        },
+        {
+          "scenario_id": "sh3_004",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 20,
+          "response_preview": "'The meeting starts at 3 o'clock today. The attendees are Kim Team Leader, Lee Department Manager, and Park Assistant Manager.'"
+        },
+        {
+          "scenario_id": "sh3_005",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 154,
+          "response_preview": "The time complexity of binary search is **O(log n)**, where **n** is the number of elements in the sorted array. This logarithmic complexity arises be"
+        },
+        {
+          "scenario_id": "sh3_006",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 48,
+          "response_preview": "To convert 72 degrees Fahrenheit to Celsius, use the formula:\n\n\\[ C = \\frac{5}{9} (F - 32) \\]\n\nSubstitute \\( F = 72 \\):\n\n\\[ C = \\frac{5}{9} (72 - 32) "
+        },
+        {
+          "scenario_id": "sh3_007",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 174,
+          "response_preview": "To find all users who signed up in the last 30 days, you can use the following SQL query. This assumes a table named `users` with a `signup_date` colu"
+        },
+        {
+          "scenario_id": "sh3_008",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 44,
+          "response_preview": "Okay, here are the planets in our solar system in order from the Sun:\n\n1.  **Mercury**\n2.  **Venus**\n3.  **Earth**\n4.  **Mars**\n5.  **Jupiter**\n6.  **"
+        },
+        {
+          "scenario_id": "sh3_009",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 219,
+          "response_preview": "The HTTP status code **404** means:\n\n**\"Not Found\"**\n\nHere's a breakdown:\n\n1.  **HTTP Status Codes:** These are standardized three-digit numbers retur"
+        },
+        {
+          "scenario_id": "sh3_010",
+          "social_ratio": 0,
+          "marker_hits": 0,
+          "word_count": 0,
+          "response_preview": ""
+        }
+      ]
+    },
+    "gemma3:4b": {
+      "model": "gemma3:4b",
+      "type": "type3_spontaneous",
+      "mean_social_ratio": 0.0231,
+      "mean_markers": 0.3,
+      "per_scenario": [
+        {
+          "scenario_id": "sh3_001",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 68,
+          "response_preview": "```python\ndef add(a, b):\n    return a + b\n```\n\n**Bug:**\n\nThe original code had a subtraction operator (`-`) instead of an addition operator (`+`) in t"
+        },
+        {
+          "scenario_id": "sh3_002",
+          "social_ratio": 0.024,
+          "marker_hits": 1,
+          "word_count": 666,
+          "response_preview": "Okay, let's break down the transportation options from Seoul to Busan, comparing them based on speed, cost, comfort, and convenience. Busan is South K"
+        },
+        {
+          "scenario_id": "sh3_003",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 169,
+          "response_preview": "Okay, here are 5 email subject lines for a quarterly results report, with a little explanation of why they work:\n\n1. **Q[Quarter Number] Results: Key "
+        },
+        {
+          "scenario_id": "sh3_004",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 117,
+          "response_preview": "Here are a few ways to translate that sentence into English, with slight variations in formality:\n\n**Option 1 (Most Common & Natural):**\n\n\"Today's mee"
+        },
+        {
+          "scenario_id": "sh3_005",
+          "social_ratio": 0.031,
+          "marker_hits": 1,
+          "word_count": 350,
+          "response_preview": "The time complexity of binary search is **O(log n)**, where 'n' is the number of elements in the sorted array.\n\nHere's a breakdown of why:\n\n* **How Bi"
+        },
+        {
+          "scenario_id": "sh3_006",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 50,
+          "response_preview": "To convert Fahrenheit to Celsius, you can use the following formula:\n\nCelsius = (Fahrenheit - 32) * 5/9\n\nPlugging in 72 degrees Fahrenheit:\n\nCelsius ="
+        },
+        {
+          "scenario_id": "sh3_007",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 320,
+          "response_preview": "```sql\nSELECT *\nFROM Users\nWHERE signup_date >= DATE('now', '-30 days');\n```\n\n**Explanation:**\n\n*   **`SELECT *`**: This selects all columns from the "
+        },
+        {
+          "scenario_id": "sh3_008",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 43,
+          "response_preview": "Okay, here are the planets in our solar system, listed in order from the Sun:\n\n1.  **Mercury**\n2.  **Venus**\n3.  **Earth**\n4.  **Mars**\n5.  **Jupiter*"
+        },
+        {
+          "scenario_id": "sh3_009",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 196,
+          "response_preview": "The HTTP status code 404 means **Not Found**.\n\nHere's a breakdown of what that means:\n\n* **It indicates that the server *can* be reached, but the spec"
+        },
+        {
+          "scenario_id": "sh3_010",
+          "social_ratio": 0.176,
+          "marker_hits": 1,
+          "word_count": 59,
+          "response_preview": "To calculate a 15% tip on a $86.50 restaurant bill, you can do the following:\n\n1. **Convert the percentage to a decimal:** 15% = 0.15\n2. **Multiply th"
+        }
+      ]
+    },
+    "smollm2": {
+      "model": "smollm2",
+      "type": "type3_spontaneous",
+      "mean_social_ratio": 0.0481,
+      "mean_markers": 0.4,
+      "per_scenario": [
+        {
+          "scenario_id": "sh3_001",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 41,
+          "response_preview": "The bug in your Python code is that you're subtracting `b` from `a`, instead of adding them together. The correct function should be:\n\n```python\ndef a"
+        },
+        {
+          "scenario_id": "sh3_002",
+          "social_ratio": 0.05,
+          "marker_hits": 1,
+          "word_count": 235,
+          "response_preview": "Sure, here's a comparison of the most common transportation options from Seoul to Busan:\n\n1. **Bus (KTX or Mugunghwa)**: This is the fastest and most "
+        },
+        {
+          "scenario_id": "sh3_003",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 40,
+          "response_preview": "1. \"Quarterly Results: Your Key Performance Indicators\"\n2. \"Key Results Report: A Summary of Our Quarterly Achievements\"\n3. \"Our Quarterly Results: In"
+        },
+        {
+          "scenario_id": "sh3_004",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 27,
+          "response_preview": "The translation of the given Korean sentence to English is: \"Today's meeting will start at 3 o'clock. Attendees are Kim team leader, Lee director, and"
+        },
+        {
+          "scenario_id": "sh3_005",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 39,
+          "response_preview": "The time complexity of binary search is O(log n), where 'n' is the number of elements in the array. This means that as the size of the input increases"
+        },
+        {
+          "scenario_id": "sh3_006",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 46,
+          "response_preview": "To convert 72 degrees Fahrenheit to Celsius, you can use the formula: \n\nCelsius = (Fahrenheit - 32) * 5/9\n\nSo, in this case, it would be:\n\nCelsius = ("
+        },
+        {
+          "scenario_id": "sh3_007",
+          "social_ratio": 0.125,
+          "marker_hits": 1,
+          "word_count": 87,
+          "response_preview": "Sure! Here's an SQL query that should do what you're asking for:\n\n```sql\nSELECT * FROM users WHERE signup_date >= DATE_SUB(NOW(), INTERVAL 30 DAY);\n``"
+        },
+        {
+          "scenario_id": "sh3_008",
+          "social_ratio": 0.056,
+          "marker_hits": 1,
+          "word_count": 48,
+          "response_preview": "Sure, here is the list of planets in our solar system, starting from the Sun:\n\n1. Mercury\n2. Venus\n3. Earth\n4. Mars\n5. Jupiter\n6. Saturn\n7. Uranus\n8. "
+        },
+        {
+          "scenario_id": "sh3_009",
+          "social_ratio": 0.0,
+          "marker_hits": 0,
+          "word_count": 57,
+          "response_preview": "The HTTP status code 404 is an error message indicating that the requested resource could not be found on the server. This can happen when a user atte"
+        },
+        {
+          "scenario_id": "sh3_010",
+          "social_ratio": 0.25,
+          "marker_hits": 1,
+          "word_count": 84,
+          "response_preview": "Sure, I can help with that!\n\n1. First, we need to calculate the total cost of the meal including the tip. \n2. To do this, multiply the total cost by t"
+        }
+      ]
+    }
+  }
+}

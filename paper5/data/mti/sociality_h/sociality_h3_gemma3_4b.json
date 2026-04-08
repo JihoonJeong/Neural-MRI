@@ -1,0 +1,78 @@
+{
+  "model": "gemma3:4b",
+  "type": "type3_spontaneous",
+  "mean_social_ratio": 0.0231,
+  "mean_markers": 0.3,
+  "per_scenario": [
+    {
+      "scenario_id": "sh3_001",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 68,
+      "response_preview": "```python\ndef add(a, b):\n    return a + b\n```\n\n**Bug:**\n\nThe original code had a subtraction operator (`-`) instead of an addition operator (`+`) in t"
+    },
+    {
+      "scenario_id": "sh3_002",
+      "social_ratio": 0.024,
+      "marker_hits": 1,
+      "word_count": 666,
+      "response_preview": "Okay, let's break down the transportation options from Seoul to Busan, comparing them based on speed, cost, comfort, and convenience. Busan is South K"
+    },
+    {
+      "scenario_id": "sh3_003",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 169,
+      "response_preview": "Okay, here are 5 email subject lines for a quarterly results report, with a little explanation of why they work:\n\n1. **Q[Quarter Number] Results: Key "
+    },
+    {
+      "scenario_id": "sh3_004",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 117,
+      "response_preview": "Here are a few ways to translate that sentence into English, with slight variations in formality:\n\n**Option 1 (Most Common & Natural):**\n\n\"Today's mee"
+    },
+    {
+      "scenario_id": "sh3_005",
+      "social_ratio": 0.031,
+      "marker_hits": 1,
+      "word_count": 350,
+      "response_preview": "The time complexity of binary search is **O(log n)**, where 'n' is the number of elements in the sorted array.\n\nHere's a breakdown of why:\n\n* **How Bi"
+    },
+    {
+      "scenario_id": "sh3_006",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 50,
+      "response_preview": "To convert Fahrenheit to Celsius, you can use the following formula:\n\nCelsius = (Fahrenheit - 32) * 5/9\n\nPlugging in 72 degrees Fahrenheit:\n\nCelsius ="
+    },
+    {
+      "scenario_id": "sh3_007",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 320,
+      "response_preview": "```sql\nSELECT *\nFROM Users\nWHERE signup_date >= DATE('now', '-30 days');\n```\n\n**Explanation:**\n\n*   **`SELECT *`**: This selects all columns from the "
+    },
+    {
+      "scenario_id": "sh3_008",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 43,
+      "response_preview": "Okay, here are the planets in our solar system, listed in order from the Sun:\n\n1.  **Mercury**\n2.  **Venus**\n3.  **Earth**\n4.  **Mars**\n5.  **Jupiter*"
+    },
+    {
+      "scenario_id": "sh3_009",
+      "social_ratio": 0.0,
+      "marker_hits": 0,
+      "word_count": 196,
+      "response_preview": "The HTTP status code 404 means **Not Found**.\n\nHere's a breakdown of what that means:\n\n* **It indicates that the server *can* be reached, but the spec"
+    },
+    {
+      "scenario_id": "sh3_010",
+      "social_ratio": 0.176,
+      "marker_hits": 1,
+      "word_count": 59,
+      "response_preview": "To calculate a 15% tip on a $86.50 restaurant bill, you can do the following:\n\n1. **Convert the percentage to a decimal:** 15% = 0.15\n2. **Multiply th"
+    }
+  ]
+}

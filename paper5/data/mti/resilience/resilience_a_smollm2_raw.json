@@ -1,0 +1,427 @@
+[
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:48:57.165592+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "Key points: Solar energy is renewable, reduces electricity bills, and decreases carbon emissions; however, it has a high initial cost and relies on favorable weather conditions.",
+      "length": 177
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:48:59.667959+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "Solar energy is a renewable resource that reduces electricity bills and decreases carbon emissions. Installation costs have dropped 70% since 2010. However, solar panels require significant upfront investment, depend on weather conditions and geographic location, need periodic maintenance, and occupy substantial roof or land area. Battery storage technology improves but adds cost. Government incentives vary by region and may expire.",
+      "length": 436
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:49:02.876389+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "Solar energy is a renewable resource that reduces electricity bills and decreases carbon emissions. Installation costs have dropped by 70% since 2010, making it more accessible to homeowners. The average payback period for residential systems varies from 6-10 years depending on location. However, solar panels require significant upfront investment of $15,000-$25,000, depend on weather conditions and geographic location, need periodic maintenance, occupy substantial roof or land area, and may be affected by government incentives like the ITC. Battery storage technology is improving with falling prices but adds extra cost. The manufacturing process involves mining rare minerals and produces some carbon emissions, though lifecycle emissions are far below fossil fuels. Solar panels lose about 0.5% efficiency per year. Community solar programs offer alternatives for renters.",
+      "length": 882
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:49:08.597812+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "Key points:\n\n1. Solar energy is a renewable resource that reduces electricity bills and decreases carbon emissions.\n2. Installation costs have dropped 70% since 2010, making it increasingly accessible to homeowners.\n3. The average payback period for residential solar systems varies from 6-10 years depending on location.\n4. Solar panels require significant upfront investment of $15,000-$25,000 for residential systems.\n5. They depend on weather conditions and geographic location.\n6. They need periodic maintenance including cleaning and inverter replacement every 10-15 years.\n7. They occupy substantial roof or land area.\n8. Battery storage technology is improving with lithium-ion prices falling 89% since 2010, but adds $5,000-$15,000 to system cost.\n9. Government incentives like the ITC vary by region and may expire.\n10. Net metering policies differ by state and utility.\n\nStrongest arguments for solar adoption:\n\n1. Renewable resource with reduced electricity bills and decreased carbon emissions.\n2. Installation costs have dropped 70% since 2010, making it more accessible to homeowners.\n3. Average payback period of 6-10 years depending on location.\n4. Government incentives like the ITC can offset installation costs.\n5. Improving battery storage technology and falling lithium-ion prices make solar systems more affordable.\n\nStrongest arguments against solar adoption:\n\n1. High upfront investment of $15,000-$25,000 for residential systems.\n2. Dependence on weather conditions and geographic location.\n3. Requires periodic maintenance including cleaning and inverter replacement every 10-15 years.\n4. Occupies substantial roof or land area.\n5. May not be eligible for all government incentives like the ITC, and may expire.\n6. Net metering policies can vary by state and utility, which might affect overall savings.\n\nWho would benefit most from solar adoption:\n\n1. Homeowners with high electricity bills and a desire to reduce their carbon footprint.\n2. Those who want to invest in renewable energy and potentially save money on their energy bills over time.\n3. Individuals living in areas with high sunlight exposure, as this can increase the effectiveness of solar panels.\n4. People who are interested in reducing their reliance on fossil fuels and contributing to a cleaner environment.\n5. Those who have the financial resources to invest in solar systems without worrying about upfront costs.\n\nOverall recommendation: 8/10\n\nThe benefits of solar energy, such as reduced electricity bills and decreased carbon emissions, make it an attractive option for many homeowners. However, the high upfront investment, dependence on weather conditions and geographic location, and periodic maintenance requirements are significant drawbacks. Government incentives like the ITC can help offset installation costs, but they may expire or vary by region. Net metering policies also differ by state and utility, which might affect overall savings. Despite these challenges, solar energy remains a viable option for those who want to invest in renewable energy and potentially save money on their energy bills over time.",
+      "length": 3123
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:49:13.118857+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "Solar energy is a renewable resource that reduces electricity bills and decreases carbon emissions. Installation costs have dropped 70% since 2010. The average payback period is 6-10 years. Panels require $15,000-$25,000 upfront investment, depend on weather, need maintenance, and occupy space. Battery storage adds $5,000-$15,000. Government incentives vary. Net metering differs by region.\n\nTop 5 pros: \n1) Reduces electricity bills\n2) Decreases carbon emissions\n3) Installation costs have dropped 70% since 2010\n4) Average payback period is 6-10 years\n5) Panels require $15,000-$25,000 upfront investment\n\nTop 5 cons: \n1) Requires a significant upfront investment\n2) Dependent on weather conditions\n3) Needs maintenance and upkeep\n4) Occupies space\n5) Battery storage adds extra cost\n\nRecommendation for homeowner in Seattle vs Phoenix: For homeowners in Seattle, solar energy is more feasible due to the mild climate. In Phoenix, it's less feasible as the intense heat requires additional cooling measures.\n\nClaims needing citations: \n1) Solar energy reduces carbon emissions significantly\n2) Installation costs have dropped 70% since 2010\n3) The average payback period is always 6-10 years\n4) Net metering varies by region\n5) Government incentives vary\n\nCounterarguments to the strongest pro-solar point: \n1) While solar energy reduces electricity bills, it may not be as cost-effective for homeowners in areas with high utility rates.\n2) The upfront investment required can deter some homeowners from adopting solar energy.\n3) Weather conditions and maintenance requirements make solar panels less reliable in certain regions.\n4) Battery storage adds extra costs that might outweigh the benefits of net metering.\n5) The landscape may change by 2030 with more widespread adoption of solar energy, potentially leading to a cleaner environment but also altering natural habitats.",
+      "length": 1883
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:49:15.800832+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "To find 15% of 200, you can multiply 200 by 0.15 (since 15% is equivalent to 0.15 in decimal form). \n\n200 * 0.15 = 30 \n\nSo, 15% of 200 is 30.",
+      "length": 141
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:49:19.470656+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "To find the final price after both discounts are applied, we first need to calculate each individual discount:\n\n1. The initial discount of 15% off a $200 item would be calculated as follows:\n   Discount = (Initial Price * Discount Rate) / 100\n   Discount = ($200 * 15) / 100\n   Discount = $3000 / 100\n   Discount = $30\n\n2. The second discount of 10% on the reduced price would be calculated as follows:\n   Reduced Price = Initial Price - Discount\n   Reduced Price = $200 - $30\n   Reduced Price = $170\n\nNow, we apply this new reduced price to the second discount rate:\n   Final Discount = (Reduced Price * Second Discount Rate) / 100\n   Final Discount = ($170 * 10) / 100\n   Final Discount = $1700 / 100\n   Final Discount = $17\n\nSo, the final price after both discounts are applied is:\n   Final Price = Reduced Price - Final Discount\n   Final Price = $170 - $17\n   Final Price = $153\n\nTherefore, the final price of the item after both discounts is $\\boxed{\\$153}$ .",
+      "length": 964
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:49:23.495249+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "To find the effective amount you'll spend out of pocket, we need to calculate each discount and tax separately, then add them up.\n\n1. First, let's apply the 15% off the $200 item:\n   Discount = 15/100 * $200 = $30\n   Reduced price = $200 - $30 = $170\n\n2. Then, we'll apply the 10% loyalty discount on the reduced price:\n   Loyalty discount = 10/100 * $170 = $17\n   Final price after loyalty discount = $170 - $17 = $153\n\n3. Now, let's calculate sales tax on this final price:\n   Sales tax = 8.5/100 * $153 = $12.945\n   Total cost including tax = $153 + $12.945 = $165.945\n\n4. Next, we'll apply the cashback on your credit card:\n   Cashback = 3/100 * $165.945 = $0.50785\n   Total amount paid after cashback = $165.945 - $0.50785 = $165.43715\n\n5. Finally, let's subtract the gift card:\n   Out-of-pocket cost = $165.43715 - $20 = $145.43715\n\nSo, the effective amount you'll spend out of pocket is approximately $\\boxed{\\$145.44}$ .",
+      "length": 928
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:49:28.848595+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "To calculate the total cost, we need to break down each step:\n\n1. **First discount**: The item costs $200. A 15% discount on this price would be calculated as follows:\n   - Discount = 15/100 * $200 = $30\n   - Price after first discount = $200 - $30 = $170\n\n2. **Second discount**: The item now costs $170. A 10% discount on this price would be calculated as follows:\n   - Discount = 10/100 * $170 = $17\n   - Price after second discount = $170 - $17 = $153\n\n3. **Sales tax**: The item now costs $153, and the sales tax is 8.5%. This would be calculated as follows:\n   - Sales Tax = 8.5/100 * $153 = $12.945\n   - Total price after tax = $153 + $12.945 = $165.945\n\n4. **Gift card**: The customer has a gift card worth $20, which can be used to pay part of the total cost:\n   - Gift card amount = $20\n   - Remaining balance after using gift card = $165.945 - $20 = $145.945\n\n5. **Reward points**: The customer has 500 reward points, each worth $0.02. This would be calculated as follows:\n   - Reward points amount = 500 * $0.02 = $10\n\n6. **Credit card cashback**: The customer can use their credit card for the remaining balance and get a 3% cashback on this amount. This would be calculated as follows:\n   - Cashback amount = 3/100 * $145.945 = $4.37865\n   - Total cashback amount = $4.37865\n\n7. **Credit card interest**: The customer has a credit card with an APR of 22% and they pay the balance in full after 45 days, which is not within the grace period. Therefore, there will be no interest on this transaction.\n\n**Total cost including interest:**\n   - Total amount paid = $165.945 (after tax) + $4.37865 (cashback) = $170.32365\n   - No interest is charged because the payment was made in full and within 45 days of the purchase date.\n\nSo, the total cost including interest would be $\\boxed{\\$170.32}$ .",
+      "length": 1804
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:49:34.055088+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "I'm sorry for any confusion, but as an AI, I don't have real-time access to external databases or financial information to provide you with accurate calculations. However, I can guide you through the process of calculating these costs and savings.\n\n1) Let's break it down:\n   - The initial discount is 15% off a $200 item. So, that's (15/100)*$200 = $30 off.\n   - Then there's a loyalty discount on the reduced price of $200 - $30 = $170. The loyalty discount is 10% of this amount: (10/100)*$170 = $17 off.\n   - After both discounts, you're left with $170 - $17 = $153.\n   - Now, there's a tax of 8.5%, so that's (8.5/100)*$153 = $12.94 added to the price.\n   - The gift card is worth $20 and points are at $0.02 each, totaling $20 + (3*$0.02) = $20.06 in value.\n   - Cashback of 5% on the total amount after tax: (5/100)*$153 + $12.94 = $7.665.\n   - The final price is $153 - $12.94 - $7.665 = $128.275.\n\n2) Here's the breakdown for each item:\n   - For the first item, discount and loyalty discounts are applied similarly to the previous calculation.\n   - For the second item, you need to apply the 3% cashback on the reduced price after both discounts.\n   - For the third item, there is no initial discount but a $20 gift card and points at $0.02 each.\n\n3) To compare these costs, let's calculate the total cost for buying all items together:\n   - Total cost = $153 + $170 + $128.275 = $451.275.\n   - Total cost when bought separately would be 3 times the single transaction cost: $153 * 3 = $469.\n\n4) To calculate the difference in savings over 5 years at a 5% annual return, we need to know how much you'd save each year and then multiply by 5. However, without knowing the exact amount of interest earned per year, this calculation is not possible with the given information.",
+      "length": 1781
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:49:37.053395+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "1. Improved Physical Health: Regular exercise helps to maintain a healthy weight, improve cardiovascular health, and strengthen muscles and bones. It also reduces the risk of chronic diseases such as diabetes, heart disease, and certain types of cancer.\n\n2. Mental Health Benefits: Exercise has been shown to reduce symptoms of depression and anxiety by releasing endorphins, which are chemicals in the brain that act as natural painkillers and mood elevators. It can also improve self-esteem and cognitive function.\n\n3. Enhanced Energy Levels: Regular physical activity improves your muscle strength and boosts your endurance, giving you more energy throughout the day. It helps to increase your stamina and reduces fatigue by improving sleep quality.",
+      "length": 752
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:49:39.508568+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "- **Engage in**: Exercise helps to increase energy levels and stamina.\n- **Optimize**: Regular physical activity can improve overall health and wellbeing.\n- **Enhance**: Exercise contributes to better mental health, reducing stress and anxiety.",
+      "length": 244
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:49:41.913895+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "- Exercise boosts energy levels and stamina\n- It enhances mental clarity and focus\n- Regular physical activity improves overall mood and reduces stress",
+      "length": 151
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:49:44.720308+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "1. '- Increases energy levels': Regular exercise boosts cardiovascular health, which in turn enhances stamina and reduces fatigue (Source: Journal of Sports Sciences).\n\n2. '- Enhances cognitive function': Physical activity promotes blood flow to the brain, improving memory, concentration, and overall mental performance (Source: Neurology).\n\n3. '- Reduces stress and anxiety': Exercise releases endorphins, also known as 'feel-good' hormones, which can help alleviate symptoms of depression and anxiety (Source: Journal of Clinical Psychology).",
+      "length": 545
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:49:47.566064+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "- [Exercise] can significantly reduce the risk of chronic diseases such as heart disease, diabetes, and obesity (CDC, 2020).\n- Regular physical activity boosts mental health by reducing symptoms of depression and anxiety (Mayo Clinic, 2019).\n- Engaging in exercise increases energy levels and improves sleep quality (National Sleep Foundation, 2020).\n\nExercise has numerous benefits for overall well-being. It reduces the risk of chronic diseases, enhances mental health, and boosts energy levels and sleep quality.",
+      "length": 515
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:49:49.899374+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "'날씨는 현재 좋은 날입니다.'",
+      "length": 17
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:50:03.315753+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "저희는 서로의 더 큰 것을 종합하기 위해 연락자들의 축적을 많이 받아 공동으로 활용하게 되었습니다.\n\n(Joeheun joesae-eul chuk-gong-hada yeonhaesae-jal-geu maengda haneo-jeol-gwa haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo-nado-neun yondeung-i jo-yeongha-eul josae-jal-geu maseo-nado-neun yeonhaesae-jal-geu maengda haenhan-ui kyochug-eo eob-seo",
+      "length": 3607
+    },
+    "score": 0.6
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:50:11.521160+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "전략팀은 이상한 경쟁이 발생하고, 특정 요소를 더하거나 다른 방향으로 구성해야 할지 결심이 들었다. 이러한 패턴을 보고, '요소를 더하거나 다른 방향으로 구성'이라는 수사적인 표현을 생각해보자.\n\n만약, 'greener pastures' 를 '더 좋은 경쟁이나 업문화를 향한 다른 방향으로 구성'으로 보고, 'burning the midnight oil'을 '수사에 집중하는 흔적을 찾아내는 것'이라는 뜻으로 변환하고 싶다면, 아래와 같은 표현을 사용할 수 있다.\n\n전략팀은 이상한 경쟁이 발생하고, '요소를 더하거나 다른 방향으로 구성'이라는 수사적인 표현을 생각해보자. 이러한 패턴을 보고, '요소를 더하거나 다른 방향으로 구성'이라는 수사적인 표현을 생각해보자.\n\n만약, 'greener pastures' 를 '더 좋은 경쟁이나 업문화를 향한 다른 방향으로 구성'으로 보고, 'burning the midnight oil'을 '수사에 집중하는 흔적을 찾아내는 것'이라는 뜻으로 변환하고 싶다면, 아래와 같은 표현을 사용할 수 있다.\n\n전략팀은 이상한 경쟁이 발생하고, '요소를 더하거나 다른 방향으로 구성'이라는 수사적인 표현을 생각해보자. 이러한 패턴을 보고, '요소를 더하거나 다른 방향으로 구성'이라는 수사적인 표현을 생각해보자.",
+      "length": 638
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:50:16.039715+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "부모님들, 우리가 마치 경사한 고속동행이었을 때, 호기심을 느내듯이 일상에 맞춤형 목표를 극복할 수 있어. 우리의 팀은 외롭게 이루어진 상황에 대한 극복이 필요하지만, 아무도 잠재소가 없다. 이러한 상황에 대해 극복을 시도하기 위해 우리는 '번어지는 힘'을 들여다보았다. 그러나, 이러한 상황에서 '번어지는 힘'을 듣고 다시 아무 기회를 가지고 Q3년도 상황을 바꾸어 자유로 하는 것이 핵심이다.",
+      "length": 221
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:50:29.512680+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "1) Translate speech into Korean formal register: \n\n아무렇게 하지 말곤 않았어요. 개인적으로, 통시에 대해 이상이 나타났어요. 친구들은 자주 계속 하는 것으로 만들어져 있어요. 그런데, 이들은 아무거나 없어요. 그럼 말해주시는 것이 좋을 거 같아요.\n\n저희는 현재 친구들의 업데이트 내용에 대해 집중했어요. 그러나 현재 친구들은 이전에 생겼던 방법을 사용하고 있어요. 그러나, 현재 친구들은 집중했던 방법을 다시 고치고 있어요.\n\n2) Provide an alternative translation in casual register:\n\n아무렇게 하지 말곤 않았어요. 개인적으로, 통시에 대해 이상이 나타났어요. 친구들은 자주 계속 하는 것으로 만들어져 있어요. 그런데, 이들은 아무거나 없어요. 그럼 말해주시는 것이 좋을 거 같아요.\n\n저희는 현재 친구들의 업데이트 내용에 대해 집중했어요. 그러나 현재 친구들은 이전에 생겼던 방법을 사용하고 있어요. 그러나, 현재 친구들은 집중했던 방법을 다시 고치고 있어요.\n\n3) List all idioms/metaphors with their Korean equivalents:\n\n- '나타났어요' (말하는 모습이 나타났어요): Literally, it means \"the appearance is telling.\" It's used to describe when something seems obvious or clear.\n- '계속 하는 것' (계속 집중했던 방법): Literally, it means \"the method that is being continued.\" It's used to describe something that has been done repeatedly.\n- '이전에 생겼던 방법' (이전에 생겼던 방법): Literally, it means \"the method that was made before.\" It's used to describe something that has been done previously.\n- '다시 고치고 있어요' (다시 고치를 하고 있어요): Literally, it means \"to change and do again.\" It's used to describe something that has been done repeatedly.\n- '말해주시는 것이 좋을 거 같아요' (말해주시는 것이 좋은 거 같아요): Literally, it means \"the thing that is said to be good is indeed so.\" It's used to describe something that has been confirmed or proven.\n\n4) Rate the translatability of each metaphor (1-5):\n\n- '나타났어요' (말하는 모습이 나타났어요): 4/5: This metaphor is relatively easy to translate and understand. It's a common idiom in Korean, so it can be translated directly without much difficulty.\n- '계속 하는 것' (계속 집중했던 방법): 3/5: This metaphor is a bit more complex to translate because it involves the concept of repetition. It might be easier to explain in English rather than translating directly from Korean.\n- '이전에 생겼던 방법' (이전에 생겼던 방법): 4/5: This metaphor is relatively easy to translate because it involves a simple comparison. It's also common in Korean, so it can be translated directly without much difficulty.\n- '다시 고치고 있어요' (다시 고치를 하고 있어요): 5/5: This metaphor is relatively easy to translate because it involves a simple comparison. It's also common in Korean, so it can be translated directly without much difficulty.\n- '말해주시는 것이 좋은 거 같아요' (말해주시는 것이 좋은 거 같아요): 5/5: This metaphor is relatively easy to translate because it involves a simple comparison. It's also common in Korean, so it can be translated directly without much difficulty.\n\n5) Suggest 3 places where cultural adaptation is needed:\n\n- '나타났어요' (말하는 모습이 나타났어요): This metaphor might be difficult to understand for non-Korean speakers. It's a common idiom in Korean, but it may not be familiar to English speakers.\n- '계속 하는 것' (계속 집중했던 방법): This metaphor might be difficult to understand for non-Korean speakers because it involves the concept of repetition. It's a common idiom in Korean, but it may not be familiar to English speakers.\n- '이전에 생겼던 방법' (이전에 생겼던 방법): This metaphor might be difficult to understand for non-Korean speakers because it",
+      "length": 3006
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:50:32.144937+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "Based on the given information, if all dogs are indeed animals, and Rex is a dog, then we can conclude that Rex is also an animal. This conclusion follows logically from the premises provided: \n\n1) All dogs are animals (premise 1).\n2) Rex is a dog (premise 2).\n3) Therefore, by combining these two premises, we can deduce that Rex is an animal.",
+      "length": 344
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:50:34.988960+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "Yes, based on the information provided, it can be concluded that Tom is likely a manager. The statement \"Some managers also attend the Friday meeting\" suggests that there are at least some managers who attend the Friday meeting. Since Tom attends the Friday meeting and he is one of those attending, we can infer that Tom is probably a manager. However, without more specific information about Tom's role or responsibilities within the company, it cannot be definitively confirmed.",
+      "length": 481
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:50:38.196644+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "Step 1: Identify the given information.\n- All senior engineers know Python.\n- Some senior engineers know Rust.\n- All Rust developers work on the backend team.\n- Maria works on the backend team and knows Python.\n\nStep 2: Analyze the relationship between Maria's role and her knowledge of Python.\n- Since Maria works on the backend team, she must be a senior engineer according to the given information.\n\nStep 3: Examine the relationship between Maria's role and her knowledge of Rust.\n- It is stated that all Rust developers work on the backend team.\n- However, this statement does not imply that only Rust developers know Python or vice versa.\n\nStep 4: Analyze the relationship between Maria's role and her knowledge of Python given she works on the backend team.\n- Since Maria knows Python, it is possible for her to be a senior engineer who also happens to work on the backend team.\n\nConclusion: Based on the information provided, we can conclude that Maria is indeed a senior engineer.",
+      "length": 988
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:50:41.923887+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "Let's break down the information given about the seating arrangement of people around a circular table.\n\n1. Person A is not next to person B.\n2. Person C is next to both D and E.\n3. Person B is next to D.\n4. Person F must sit next to both A and B.\n\nFrom point 3, we know that C is between D and E. Since B is next to D (point 3), it means that the order of people around the table could be:\n\n1. A - B - D - C - E\n2. A - B - C - D - E\n\nNow let's consider point 4, which states that F must sit next to both A and B. This implies that there is a space between A and B where F can sit. \n\nIf we place F in the first arrangement (1), it would mean that F sits between A and B:\n\n1. A - F - B - D - C - E\n\nHowever, this arrangement does not satisfy point 2 because C is next to both D and E, but there's no space for F between A and B where C can be placed. Therefore, it's impossible to arrange the people around the table such that F sits next to both A and B while satisfying all other conditions.\n\nSo, the answer is: No, it is not possible to add person F who must sit next to both A and B given the current seating arrangement of five people around a circular table.",
+      "length": 1163
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "smollm2",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:50:47.300369+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "To solve this logic puzzle, let's break it down step by step.\n\n1. We know that exactly one suspect is guilty. This means that there must be at least two innocent suspects (A-F).\n\n2. From clue 4, we know that D says E was with F. Since D claims to have seen E and F together, this statement cannot be true if D is lying (as per the constraints of the puzzle). Therefore, D's statement about E must be true. This means that E is indeed with F at the crime scene.\n\n3. From clue 5, we know that E says F was alone. Since E claims to have seen F and F was with E, this statement cannot be true if E is lying (as per the constraints of the puzzle). Therefore, E's statement about F must be true. This means that F is indeed alone at the crime scene.\n\n4. From clue 2, we know that C says D was not at the scene. Since C claims to have seen D and D was with E, this statement cannot be true if C is lying (as per the constraints of the puzzle). Therefore, C's statement about D must be false. This means that D was indeed at the crime scene.\n\n5. From clue 1, we know that if A is guilty, then B was at home. Since we've already established that D was with E and F (from clues 4-6), this statement cannot be true if A is lying (as per the constraints of the puzzle). Therefore, A's statement about B must be false. This means that B was not at home.\n\n6. From clue 3, we know that C says D was not at the scene. Since we've already established that D was with E and F (from clues 4-6), this statement cannot be true if C is lying (as per the constraints of the puzzle). Therefore, C's statement about D must be false. This means that D was indeed at the crime scene.\n\nNow, let's analyze whether the puzzle has a unique solution:\n\nFrom our deductions above, we have established the following facts:\n- A is not guilty (from clue 1)\n- B is not guilty (from clue 2)\n- C and D are both guilty (from clues 4-6)\n- E is with F at the crime scene (from clue 5)\n- F is alone at the crime scene (from clue 3)\n\nSince exactly two of the statements 3-5 are lies, we can conclude that these two statements must be false. However, this creates a contradiction because we've already established that D was with E and F at the crime scene. Therefore, there cannot be a unique solution to this puzzle. The given clues do not allow us to determine who is guilty or which statements are lies without contradictions.",
+      "length": 2384
+    },
+    "score": 1.0
+  }
+]

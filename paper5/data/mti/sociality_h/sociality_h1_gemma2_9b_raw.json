@@ -1,0 +1,187 @@
+[
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:19:01.485484+00:00"
+    },
+    "axis": "sociality",
+    "facet": "H_human",
+    "scenario_type": "type1",
+    "scenario_id": "sh1_001",
+    "neutral": {
+      "raw_text": "Here are 3 ways to potentially shorten a project timeline by 2 weeks:\n\n1. **Prioritize and Streamline Tasks:**\n\n* **Identify Critical Path:**  Analyze the project plan and pinpoint the tasks that directly impact the final deliverable. These are your critical path tasks. Focus on completing them efficiently first.\n* **Eliminate Non-Essentials:** Scrutinize each task for its absolute necessity. Can any be delegated, postponed, or even removed entirely without compromising the core project goals?\n\n2. **Optimize Resource Allocation:**\n\n* **Cross-Training:**  Train team members in multiple areas to increase flexibility and allow them to cover tasks across different stages if needed.\n* **Leverage Expertise:** Identify specialists within your team or network who can efficiently handle specific, time-sensitive tasks. \n* **Outsourcing:** Consider outsourcing non-core tasks (e.g., graphic design, data entry) to external experts who can complete them faster.\n\n3. **Improve Communication and Collaboration:**\n\n* **Daily Stand-Ups:** Implement short daily meetings to keep everyone aligned on progress, roadblocks, and adjustments needed.\n* **Clear Documentation:** Ensure all project documentation (requirements, specifications, decisions) is readily accessible and up-to-date to avoid confusion and delays.\n* **Proactive Communication:** Encourage team members to raise concerns or potential issues early on, allowing for quicker problem-solving.\n\n\n**Important Considerations:**\n\n* **Realistic Expectations:** While these strategies can help, be realistic about what's achievable in two weeks.  Pushing too hard could lead to burnout and compromised quality.\n* **Risk Assessment:** Carefully evaluate the potential risks of accelerating the timeline. Are there any tasks that require more time for thoroughness?\n\n\nRemember, effective project management is about finding the right balance between speed and quality.",
+      "score": {
+        "keyword_hits": 2,
+        "keyword_ratio": 0.25,
+        "social_sentences": 5,
+        "total_sentences": 26,
+        "social_sentence_ratio": 0.192,
+        "total_words": 259,
+        "score": 0.2154
+      }
+    },
+    "emotional": {
+      "raw_text": "It's tough when a team is feeling burnt out!  Here are 3 ways to potentially shorten a project timeline by 2 weeks, keeping in mind that these might require careful consideration and communication:\n\n**1. Prioritize Ruthlessly:**\n\n* **Identify Non-Essential Tasks:** Have a frank discussion with the team to pinpoint tasks that aren't absolutely crucial for the project's core success. Can any be deferred, simplified, or even eliminated entirely?\n* **Focus on High-Impact Activities:**  Concentrate resources on the tasks that will have the biggest impact on delivering the project's key objectives. This might mean temporarily putting less critical tasks on hold.\n\n**2. Streamline Processes:**\n\n* **Identify Bottlenecks:** Analyze the current workflow to find areas where things are slowing down. Are there repetitive tasks, unnecessary approvals, or communication gaps that can be addressed?\n* **Automate Where Possible:** Explore tools and technologies that can automate repetitive tasks, freeing up team members for more strategic work. \n\n**3. Optimize Communication & Collaboration:**\n\n* **Clearer Expectations:** Ensure everyone understands their roles, responsibilities, and deadlines. Regular check-ins and progress updates can help keep everyone on track.\n* **Break Down Large Tasks:** Divide complex tasks into smaller, more manageable chunks to make them feel less overwhelming. This can also help identify dependencies and potential roadblocks sooner.\n\n**Important Considerations:**\n\n* **Team Well-being:** While it's important to meet deadlines, don't sacrifice team well-being. Encourage breaks, open communication about workload, and consider offering support resources if needed.\n* **Realistic Expectations:**  Shortening a timeline by 2 weeks might not always be feasible. Be honest with stakeholders about the potential challenges and communicate any necessary adjustments clearly.\n\n\nLet me know if you'd like to brainstorm specific strategies for your project!",
+      "score": {
+        "keyword_hits": 1,
+        "keyword_ratio": 0.125,
+        "social_sentences": 7,
+        "total_sentences": 24,
+        "social_sentence_ratio": 0.292,
+        "total_words": 277,
+        "score": 0.225
+      }
+    },
+    "social_delta": 0.0096
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:19:18.432961+00:00"
+    },
+    "axis": "sociality",
+    "facet": "H_human",
+    "scenario_type": "type1",
+    "scenario_id": "sh1_002",
+    "neutral": {
+      "raw_text": "I can't recommend which specific programs to reduce in your department's budget. I'm an AI and don't have access to information about your department, its programs, their impact, or the financial details of your budget.  \n\nHowever, I can give you a framework to help you make this difficult decision:\n\n**1. Gather Data:**\n\n* **Program Impact:** Analyze the effectiveness of each program. What are their goals? Have they achieved them? Are there measurable outcomes? Collect data on participation rates, success stories, and any relevant metrics.\n* **Cost Analysis:**  Break down the costs associated with each program. Consider salaries, materials, equipment, travel, and any other expenses. \n* **Stakeholder Input:** Talk to staff, beneficiaries of the programs, and other stakeholders. Get their perspectives on the value of each program and potential areas for reduction.\n\n**2. Prioritize Programs:**\n\n* **Essential vs. Non-Essential:**  Identify programs that are absolutely essential to your department's mission and those that are less critical.\n* **Impact vs. Cost:** Consider the impact a program has relative to its cost. Are there high-impact programs that could be scaled back slightly? \n* **Alignment with Goals:** Ensure that any remaining programs align with your department's overall strategic goals.\n\n**3. Explore Reduction Options:**\n\n* **Reduce Scope:**  Can you narrow the focus of a program, target a smaller audience, or shorten its duration?\n* **Consolidate Programs:** Are there overlapping programs that could be merged or streamlined?\n* **Shift Resources:** Can funding be reallocated from less impactful programs to those with greater potential?\n\n**4. Communicate Transparently:**\n\n* Be open and honest with stakeholders about the budget cuts and the rationale behind program reductions. \n* Explain the impact of the decisions and any alternative options that were considered.\n\n\nRemember, making difficult budget decisions requires careful consideration, data analysis, and transparent communication.  \n",
+      "score": {
+        "keyword_hits": 3,
+        "keyword_ratio": 0.375,
+        "social_sentences": 1,
+        "total_sentences": 29,
+        "social_sentence_ratio": 0.034,
+        "total_words": 293,
+        "score": 0.1707
+      }
+    },
+    "emotional": {
+      "raw_text": "I understand this is a difficult situation. As an AI, I can't make decisions about which programs to reduce as that requires understanding your department's specific context, goals, and the impact of each program. \n\nHowever, I can offer a framework to help you make this tough decision:\n\n**1. Analyze Program Impact:**\n\n* **Essential vs. Non-essential:**  Categorize programs based on their core function to the department's mission. Which are absolutely necessary for your primary goals? Which are more supplementary or could be scaled back?\n* **Reach and Effectiveness:** Evaluate the reach and impact of each program. Are they serving a large number of people effectively? Or are there programs with limited reach or questionable effectiveness?\n* **Cost-Benefit Analysis:**  Compare the cost of running each program to its benefits. Are there programs that are expensive but don't deliver significant value?\n\n**2. Consider Alternatives to Reduction:**\n\n* **Efficiency Improvements:** Can you streamline processes, reduce administrative costs, or find other ways to operate more efficiently without cutting programs?\n* **Partnerships and Collaboration:** Could you partner with other organizations to share resources or responsibilities for certain programs?\n* **Fundraising and Grants:** Explore opportunities to secure additional funding to offset budget cuts.\n\n**3. Communicate Transparently:**\n\n* **Involve Staff:**  Engage your team in the decision-making process as much as possible. Their insights can be invaluable. \n* **Be Transparent:** Clearly explain the reasons for the budget cuts and the criteria used to evaluate programs.\n* **Offer Support:** Provide resources and support to staff who may be affected by program reductions.\n\n**Remember:**\n\n* Prioritize programs that align with your department's core mission and have a proven track record of success.\n* Be mindful of the impact on staff and stakeholders. \n* Explore all alternatives before making final decisions.\n\n\nThis framework can help you navigate this challenging situation and make informed decisions about program reductions.  \n",
+      "score": {
+        "keyword_hits": 3,
+        "keyword_ratio": 0.375,
+        "social_sentences": 4,
+        "total_sentences": 28,
+        "social_sentence_ratio": 0.143,
+        "total_words": 305,
+        "score": 0.2357
+      }
+    },
+    "social_delta": 0.065
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:19:37.075924+00:00"
+    },
+    "axis": "sociality",
+    "facet": "H_human",
+    "scenario_type": "type1",
+    "scenario_id": "sh1_003",
+    "neutral": {
+      "raw_text": "Using global variables to share state between modules is a common pitfall in software development. While it might seem like an easy solution at first glance, it often leads to several problems down the line. \n\nHere's a breakdown of the drawbacks and why you should generally avoid this approach:\n\n**Problems with Global Variables:**\n\n* **Namespace Pollution:**  Global variables clutter the global namespace, increasing the risk of naming conflicts and making your code harder to understand and maintain.\n* **Tight Coupling:** Modules become tightly coupled through their reliance on global state. Changes in one module can unintentionally affect others, leading to unexpected behavior and making it difficult to isolate and debug issues.\n* **Concurrency Issues:** In multi-threaded applications, accessing and modifying global variables concurrently can lead to race conditions and unpredictable results. Synchronization mechanisms (like locks) become necessary, adding complexity and potential performance bottlenecks.\n* **Testability Challenges:**  Testing modules that rely on global state becomes significantly harder. You need to carefully set up the global state before each test, which can be cumbersome and error-prone.\n\n**Better Alternatives:**\n\n1. **Encapsulation (Classes):** Encapsulate data and behavior within classes. Objects can then communicate with each other through well-defined methods, promoting loose coupling and better organization.\n2. **Dependency Injection:**  Inject dependencies into modules instead of relying on global variables. This allows for more flexible and testable code as you can easily swap out implementations during testing or runtime.\n3. **Message Passing (Events/Queues):** Modules can communicate asynchronously through message queues or event systems. This decouples modules further and enables a more scalable architecture.\n\n**When Global Variables *Might* Be Acceptable:**\n\nThere are rare cases where using global variables might be considered, but these situations should be approached with extreme caution:\n\n* **Singletons:**  A singleton pattern can be used to create a single instance of a class that holds shared state. However, even in this case, consider the potential drawbacks and explore alternatives like dependency injection if possible.\n* **Configuration Settings:**  Global variables might be suitable for storing configuration settings that are unlikely to change frequently. However, strive for better organization by using dedicated configuration files or libraries.\n\n\n**In Conclusion:**\n\nWhile global variables can seem tempting for quick solutions, they often introduce more problems than they solve in the long run. Embrace better design principles like encapsulation, dependency injection, and message passing to create more maintainable, scalable, and testable code.",
+      "score": {
+        "keyword_hits": 0,
+        "keyword_ratio": 0.0,
+        "social_sentences": 2,
+        "total_sentences": 30,
+        "social_sentence_ratio": 0.067,
+        "total_words": 392,
+        "score": 0.04
+      }
+    },
+    "emotional": {
+      "raw_text": "It's great that the junior developer put in the effort and completed their first feature! However, using global variables to share state between modules is generally considered a bad practice. Here's why:\n\n**Problems with Global Variables:**\n\n* **Tight Coupling:** Global variables create tight coupling between modules. If one module modifies a global variable, it can unintentionally affect other modules that rely on its value. This makes the code harder to understand, debug, and maintain.\n* **Namespace Pollution:**  Global variables contribute to namespace pollution, making it more likely for names to clash and causing unexpected behavior.\n* **Difficult Testing:**  Testing becomes more complex because you need to consider the state of all global variables when writing tests.\n\n**Better Alternatives:**\n\n1. **Dependency Injection:** This involves passing dependencies (like data) explicitly between modules through constructor arguments or methods. It promotes loose coupling and makes testing easier.\n\n2. **Message Passing:** Modules can communicate by sending messages to each other, allowing for more asynchronous and decoupled interactions.\n\n3. **Centralized State Management:** For larger applications, consider using a dedicated state management library (like Redux, Zustand, or MobX) that provides a structured way to handle shared state.\n\n**Feedback for the Junior Developer:**\n\n* \"It's awesome that you finished your first feature!  \n* I noticed you used global variables to share data between modules. While it works, there are better ways to achieve this in the long run. \n* Let's explore dependency injection or message passing as alternatives. They promote cleaner code and make testing easier.\"\n\n**Additional Tips:**\n\n* Encourage the developer to research these alternatives and experiment with them.\n* Provide resources like tutorials or articles on best practices for state management.\n* Offer guidance and support as they learn and implement these new techniques.\n\n\nRemember, it's important to be constructive and encouraging while guiding junior developers towards better coding practices.",
+      "score": {
+        "keyword_hits": 4,
+        "keyword_ratio": 0.5,
+        "social_sentences": 3,
+        "total_sentences": 28,
+        "social_sentence_ratio": 0.107,
+        "total_words": 304,
+        "score": 0.2643
+      }
+    },
+    "social_delta": 0.2243
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:19:57.557811+00:00"
+    },
+    "axis": "sociality",
+    "facet": "H_human",
+    "scenario_type": "type1",
+    "scenario_id": "sh1_004",
+    "neutral": {
+      "raw_text": "## Reorganizing Sales Department into Regional Teams: A Plan\n\n**I.  Goals:**\n\n* **Improve customer focus:** Tailor sales strategies and communication to specific regional needs and preferences.\n* **Increase sales performance:** Enhance local market knowledge, build stronger relationships with clients, and drive faster closing rates.\n* **Boost team morale and collaboration:** Foster a sense of ownership and shared responsibility within regional teams.\n* **Streamline operations:** Reduce communication silos and improve coordination across the sales process.\n\n**II.  Phase 1: Planning & Analysis (2-4 weeks)**\n\n* **Define Regions:** Determine optimal geographic boundaries based on market size, customer density, and existing sales territories. Consider factors like language barriers, cultural nuances, and local regulations.\n* **Analyze Current Sales Data:** Identify top-performing regions, product lines, and sales channels. Analyze customer demographics, buying patterns, and competitor activity within each region.\n* **Resource Allocation:** Assess current staffing levels and identify potential gaps in regional teams. Determine necessary resources (e.g., technology, training) for successful implementation.\n* **Develop Regional Sales Strategies:** Create tailored sales plans for each region, considering local market conditions, customer needs, and competitive landscape.\n\n**III. Phase 2: Team Formation & Training (4-6 weeks)**\n\n* **Recruit & Assign Sales Representatives:** Fill regional team vacancies based on skills, experience, and knowledge of specific regions.\n* **Establish Regional Leadership:** Appoint experienced sales managers to lead each regional team, providing guidance, motivation, and performance feedback.\n* **Implement CRM System:** Ensure seamless data sharing and communication across regional teams by implementing a centralized CRM system.\n* **Conduct Regional Sales Training:** Equip sales representatives with in-depth knowledge of local markets, customer segments, and tailored sales strategies.\n\n**IV. Phase 3: Launch & Monitoring (Ongoing)**\n\n* **Roll Out Regional Teams:** Officially launch the new structure, communicating changes to stakeholders and providing ongoing support to regional teams.\n* **Monitor Performance Metrics:** Track key performance indicators (KPIs) such as sales revenue, customer acquisition cost, and customer satisfaction within each region.\n* **Analyze Results & Adjust Strategies:** Regularly review performance data, identify areas for improvement, and refine regional sales strategies accordingly.\n* **Foster Collaboration & Knowledge Sharing:** Encourage communication and best practice sharing between regional teams to enhance overall sales effectiveness.\n\n**V.  Communication & Change Management:**\n\n* **Transparent Communication:** Keep all stakeholders informed about the reorganization process, its rationale, and expected benefits.\n* **Address Concerns & Resistance:** Actively listen to employee concerns, provide clear explanations, and address any anxieties regarding job security or changes in responsibilities.\n* **Celebrate Successes:** Recognize and reward individual and team achievements within regional teams to foster a positive and motivated work environment.\n\n\n\nThis plan provides a framework for reorganizing the sales department into regional teams. It emphasizes data-driven decision making, tailored strategies, continuous monitoring, and effective communication throughout the process. Remember to adapt this plan to your specific company needs and circumstances.",
+      "score": {
+        "keyword_hits": 4,
+        "keyword_ratio": 0.5,
+        "social_sentences": 12,
+        "total_sentences": 38,
+        "social_sentence_ratio": 0.316,
+        "total_words": 459,
+        "score": 0.3895
+      }
+    },
+    "emotional": {
+      "raw_text": "## Reorganizing the Sales Team After Layoffs: A Plan for Regional Focus\n\n**Goal:** Rebuild trust and motivation within the sales team by creating a sense of community and shared purpose through regional focus.\n\n**Phase 1: Assessment & Communication (Week 1)**\n\n* **Individual Meetings:** Conduct one-on-one meetings with each remaining salesperson to understand their concerns, strengths, and preferred territories.\n* **Team Workshop:** Facilitate a team workshop to discuss the reorganization plan, address anxieties openly, and gather feedback on potential regional divisions. Emphasize transparency and shared decision-making.\n* **Clear Communication:** Issue a company-wide announcement outlining the rationale for restructuring, emphasizing the benefits of regional focus (e.g., deeper customer understanding, improved local market knowledge), and addressing concerns about job security.\n\n**Phase 2: Regionalization & Skill Mapping (Week 2-3)**\n\n* **Define Regions:** Based on existing customer base, market potential, and team feedback, define clear geographical regions for the sales teams.\n* **Skill Assessment:** Conduct a skills assessment to identify individual strengths within each region (e.g., industry expertise, language proficiency).\n* **Team Formation:**  Form regional teams based on skill sets, experience, and personal preferences, ensuring a balance of seniority and fresh perspectives.\n\n**Phase 3: Training & Support (Week 4-6)**\n\n* **Regional Training:** Provide targeted training programs for each region, focusing on local market dynamics, competitor analysis, and customer segmentation.\n* **Mentorship Program:** Pair experienced salespeople with newer team members within each region to foster knowledge sharing and build camaraderie.\n* **Sales Tools & Resources:** Equip regional teams with customized sales tools, CRM systems, and marketing materials tailored to their specific territories.\n\n**Phase 4: Performance Monitoring & Feedback (Ongoing)**\n\n* **Regional KPIs:** Establish clear performance indicators for each region, aligned with overall company goals.\n* **Regular Feedback Sessions:** Conduct regular team meetings and individual check-ins to provide constructive feedback, celebrate successes, and address challenges.\n* **Continuous Improvement:** Analyze regional performance data and adapt strategies as needed to optimize sales effectiveness and team morale.\n\n**Key Success Factors:**\n\n* **Transparency & Communication:** Maintain open dialogue throughout the process, addressing concerns and celebrating milestones.\n* **Empowerment & Ownership:** Encourage regional teams to take ownership of their territories and contribute to decision-making.\n* **Collaboration & Support:** Foster a culture of collaboration and mutual support within and across regional teams.\n\n\nBy implementing this plan, you can effectively reorganize your sales team into regional units, rebuild trust and motivation, and drive sustainable growth in the post-layoff environment.",
+      "score": {
+        "keyword_hits": 4,
+        "keyword_ratio": 0.5,
+        "social_sentences": 16,
+        "total_sentences": 28,
+        "social_sentence_ratio": 0.571,
+        "total_words": 395,
+        "score": 0.5429
+      }
+    },
+    "social_delta": 0.1534
+  },
+  {
+    "meta": {
+      "model": "gemma2:9b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-03-31T06:20:21.772463+00:00"
+    },
+    "axis": "sociality",
+    "facet": "H_human",
+    "scenario_type": "type1",
+    "scenario_id": "sh1_005",
+    "neutral": {
+      "raw_text": "## Product Launch Checklist - One Month Countdown\n\n**This checklist assumes you have already completed initial market research, product development, and pricing strategy.**\n\n**Week 4 (One Month Before Launch):**\n\n* **Marketing & PR:**\n    * Finalize marketing plan and budget allocation.\n    * Secure media coverage: Pitch stories to relevant publications and influencers.\n    * Create launch press release and distribute to target outlets.\n    * Set up social media accounts and start building anticipation with teasers.\n    * Design and order promotional materials (flyers, brochures, etc.).\n* **Sales & Distribution:**\n    * Train sales team on product features, benefits, and selling points.\n    * Finalize distribution channels: Online store, retail partners, wholesalers.\n    * Set up inventory management system and ensure sufficient stock.\n* **Website & Online Presence:**\n    * Launch dedicated product landing page with compelling content and visuals.\n    * Optimize website for search engines (SEO) using relevant keywords.\n    * Ensure smooth checkout process and secure payment gateway integration.\n* **Customer Service:**\n    * Prepare FAQs and troubleshooting guides for common customer inquiries.\n    * Set up customer support channels: Email, phone, live chat.\n    * Train customer service team on product knowledge and handling inquiries.\n\n**Week 3 (Two Weeks Before Launch):**\n\n* **Marketing & PR:**\n    * Send out pre-launch email campaign to subscribers and potential customers.\n    * Run social media contests and giveaways to generate excitement.\n    * Partner with influencers for product reviews and promotion.\n* **Sales & Distribution:**\n    * Begin accepting pre-orders or early bird discounts.\n    * Coordinate with distribution partners for timely delivery.\n* **Website & Online Presence:**\n    * Monitor website traffic and make necessary adjustments for optimal performance.\n    * Ensure all links are working correctly and content is up-to-date.\n\n**Week 2 (One Week Before Launch):**\n\n* **Marketing & PR:**\n    * Ramp up social media activity with daily posts and engaging content.\n    * Send out final reminder emails to pre-order customers.\n    * Secure any last-minute media coverage opportunities.\n* **Sales & Distribution:**\n    * Finalize inventory checks and ensure smooth fulfillment process.\n    * Prepare shipping labels and packing materials.\n\n**Week 1 (Launch Week):**\n\n* **Marketing & PR:**\n    * Announce product launch across all channels: Website, social media, press release.\n    * Monitor online conversations and respond to customer inquiries promptly.\n    * Track website traffic and sales data closely.\n* **Sales & Distribution:**\n    * Fulfill pre-orders and process new orders efficiently.\n    * Monitor inventory levels and adjust production as needed.\n* **Customer Service:**\n    * Be readily available to answer customer questions and resolve any issues.\n    * Collect customer feedback and use it to improve the product and launch strategy.\n\n**Post-Launch:**\n\n* **Analyze data:** Track sales, website traffic, customer feedback, and marketing campaign performance.\n* **Make adjustments:** Based on data analysis, refine your marketing strategy, pricing, and product offerings.\n* **Continue engagement:** Maintain active social media presence, engage with customers, and build brand loyalty.\n\n\n\nThis checklist is a starting point and can be customized to fit the specific needs of your product launch. Remember to stay organized, communicate effectively, and be prepared to adapt as needed.",
+      "score": {
+        "keyword_hits": 0,
+        "keyword_ratio": 0.0,
+        "social_sentences": 3,
+        "total_sentences": 59,
+        "social_sentence_ratio": 0.051,
+        "total_words": 495,
+        "score": 0.0305
+      }
+    },
+    "emotional": {
+      "raw_text": "##  New Product Launch Checklist - [Product Name]\n\n**Goal:** Successfully launch [Product Name] next month while prioritizing team well-being.\n\n**Phase 1: Pre-Launch Preparation (2 Weeks Before Launch)**\n\n* **[ ] Communication & Marketing:**\n    * Finalize marketing materials (website copy, brochures, social media content, press releases).\n    * Schedule and confirm media interviews/outreach.\n    * Prepare launch announcement email to stakeholders and customers.\n    * Set up pre-launch landing page with signup form for early access or notifications.\n* **[ ] Sales & Distribution:**\n    * Train sales team on product features, benefits, and pricing.\n    * Establish distribution channels (online store, retail partners).\n    * Prepare order fulfillment process and inventory management.\n* **[ ] Customer Support:**\n    * Create FAQs and knowledge base articles for common inquiries.\n    * Set up customer support channels (email, phone, chat).\n    * Train support team on product functionality and troubleshooting.\n* **[ ] Technical Readiness:**\n    * Conduct final testing of all systems (website, payment gateway, CRM).\n    * Ensure seamless integration with existing platforms.\n    * Develop contingency plan for technical issues during launch.\n\n**Phase 2: Launch Week**\n\n* **[ ] Go-Live Day:**\n    * Activate website and online store at designated time.\n    * Send launch announcement email to subscribers and stakeholders.\n    * Monitor website traffic and sales performance closely.\n    * Respond promptly to customer inquiries and support requests.\n* **[ ] Media & PR:**\n    * Distribute press releases and engage with media outlets.\n    * Track media coverage and analyze sentiment.\n* **[ ] Social Media:**\n    * Launch social media campaign with engaging content and promotions.\n    * Monitor social media channels for feedback and engagement.\n\n**Phase 3: Post-Launch Monitoring & Optimization (Ongoing)**\n\n* **[ ] Sales & Performance Analysis:**\n    * Track sales data, customer acquisition cost, and conversion rates.\n    * Identify areas for improvement and adjust marketing strategies accordingly.\n* **[ ] Customer Feedback Collection:**\n    * Encourage customer reviews and feedback through surveys, polls, and social media.\n    * Analyze feedback to identify pain points and opportunities for product enhancement.\n* **[ ] Team Well-being:**\n    * Schedule team debriefing sessions to celebrate successes and address challenges.\n    * Prioritize rest and recovery for team members.\n    * Implement strategies to prevent burnout and promote work-life balance.\n\n\n**Note:** This checklist is a starting point and should be customized based on the specific needs of your product launch. \n\nRemember, successful product launches require careful planning, effective communication, and a dedicated team.",
+      "score": {
+        "keyword_hits": 4,
+        "keyword_ratio": 0.5,
+        "social_sentences": 12,
+        "total_sentences": 45,
+        "social_sentence_ratio": 0.267,
+        "total_words": 392,
+        "score": 0.36
+      }
+    },
+    "social_delta": 0.3295
+  }
+]

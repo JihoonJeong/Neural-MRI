@@ -1,0 +1,427 @@
+[
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:54:54.129260+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "The text discusses several benefits of solar energy:\n- It's renewable, meaning it doesn't run out like fossil fuels.\n- It can reduce your electricity bill by using less power from the grid.\n- It helps decrease greenhouse gas emissions that contribute to climate change.\n\nHowever, there are also some drawbacks:\n- You need a significant upfront investment in solar panels and installation.\n- The effectiveness of solar energy depends on weather conditions.",
+      "length": 455
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:54:56.827243+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "The text discusses the benefits of using solar energy as a renewable resource that reduces electricity bills and decreases carbon emissions. It mentions that installation costs have dropped 70% since 2010, making it more accessible to people. However, there are still challenges such as requiring significant upfront investment, depending on weather conditions and geographic location, needing periodic maintenance, and occupying substantial roof or land area. Additionally, battery storage technology is improving but adds cost, and government incentives vary by region and may expire.",
+      "length": 586
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:55:00.320606+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "The text discusses several key points regarding solar energy:\n\n1. **Renewable and Cost-Effective**: Solar energy is a renewable resource that reduces electricity bills and decreases carbon emissions.\n   \n2. **Installation Costs**: Installation costs have dropped by 70% since 2010, making it increasingly accessible to homeowners.\n\n3. **Payback Period**: The average payback period for residential systems depends on location but typically ranges from 6-10 years.\n\n4. **Initial Investment**: Solar panels require a significant upfront investment of $15,000-$25,000, which can vary based on weather conditions and geographic location.\n\n5. **Maintenance**: Panels need periodic maintenance including cleaning and inverter replacement every 10-15 years.\n\n6. **Battery Storage Technology**: Battery storage technology is improving with lithium-ion prices falling by 89% since 2010, adding $5,000-$15,000 to system cost.\n\n7. **Government Incentives and Policies**: Government incentives like the ITC vary by region and may expire, while net metering policies differ by state and utility.\n\n8. **Manufacturing Process**: The manufacturing process involves mining rare minerals that produce some carbon emissions but has a lifecycle emission profile far below fossil fuels.\n\n9. **Efficiency Loss**: Solar panels lose about 0.5% efficiency per year due to aging.\n\n10. **Community Solar Programs**: Community solar programs offer alternatives for renters, making it accessible to those who cannot install their own systems.\n\nThe text concludes with the industry employing over 250,000 workers in the US alone.",
+      "length": 1599
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:55:04.164498+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "### Key Points Summary:\n- **Renewable Resource**: Solar energy is a renewable resource that reduces electricity bills and decreases carbon emissions.\n- **Installation Costs**: Installation costs have dropped 70% since 2010, making it increasingly accessible to homeowners.\n- **Payback Period**: The average payback period for residential systems is 6-10 years depending on location.\n- **Initial Investment**: Solar panels require a significant upfront investment of $15,000-$25,000.\n- **Maintenance and Area Requirements**: Panels need periodic maintenance including cleaning and inverter replacement every 10-15 years. They occupy substantial roof or land area.\n\n### Strongest Arguments for:\n1. **Environmental Benefits**: Solar energy significantly reduces carbon emissions and helps combat climate change.\n2. **Economic Savings**: Reduces electricity bills, leading to long-term financial savings.\n3. **Government Incentives**: Available government incentives like the ITC can offset initial costs and provide additional benefits.\n\n### Strongest Arguments Against:\n1. **High Initial Investment**: Solar panels require a substantial upfront investment of $15,000-$25,000.\n2. **Maintenance Costs**: Panels need periodic maintenance including cleaning and inverter replacement every 10-15 years.\n3. **Space Requirements**: They occupy substantial roof or land area.\n\n### Who Benefits Most:\nHomeowners who are willing to invest the initial cost but can afford the long-term savings, especially those living in areas with favorable weather conditions and low energy bills.\n\n### Overall Recommendation Rating (1-10):\n**8/10**\n\nJustification: The text presents a balanced view of solar energy's benefits and drawbacks. While it highlights significant advantages like environmental impact reduction and economic savings, it also points out the high initial investment and maintenance requirements that could deter some potential adopters. However, considering the overall positive aspects outweighing the negatives, this rating reflects a strong recommendation for those who can afford the upfront costs but benefit from long-term financial savings and reduced carbon footprint.",
+      "length": 2173
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:55:07.599265+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "**Summarize:**\nSolar energy is a clean, renewable resource that can significantly reduce electricity bills and decrease carbon emissions. Installation costs have dropped substantially since 2010, with an average payback period of 6-10 years for panels.\n\n**Pros:**\n1. **Environmental Impact:** Reduces reliance on fossil fuels.\n2. **Energy Independence:** Provides a stable energy source.\n3. **Cost Savings:** Long-term savings in electricity bills.\n4. **Government Incentives:** Available tax credits and rebates.\n5. **Job Creation:** Supports local economies through solar panel installation.\n\n**Cons:**\n1. **High Upfront Costs:** Panels require significant upfront investment, typically $15,000-$25,000.\n2. **Maintenance Required:** Regular cleaning is necessary to ensure optimal performance.\n3. **Space Requirements:** Panels occupy space on rooftops or ground-mounted structures.\n4. **Weather Dependency:** Performance can be affected by weather conditions.\n5. **Battery Storage Costs:** Additional investment in battery storage systems.\n\n**Recommendation:**\nFor a homeowner in Seattle, where energy costs are already high and the climate is conducive to solar power, solar energy offers substantial benefits with minimal drawbacks. In Phoenix, while it's still viable, the higher temperatures might reduce panel efficiency due to increased heat absorption.\n\n**Citations Needed:**\n- \"Solar Energy: A Guide for Homeowners\" by Solar Energy Industries Association.\n- \"Net Metering and Renewable Energy Policies in the United States\" report from the National Renewable Energy Laboratory.",
+      "length": 1588
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:55:10.232091+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "To find 15% of 200, you can follow these steps:\n\n1. Convert the percentage to a decimal: 15% = 0.15.\n2. Multiply the decimal by the number: 0.15 × 200.\n\nLet's do the multiplication:\n\\[ 0.15 \\times 200 = 30 \\]\n\nSo, 15% of 200 is 30.",
+      "length": 231
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:55:13.389025+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "To determine the final price of the item after applying both discounts, we need to follow these steps:\n\n1. Calculate the price after the initial 15% discount.\n2. Apply the additional 10% loyalty discount on the already discounted price.\n\nLet's start with the first step:\n\n1. The original price of the item is $200. A 15% discount means we are left with 85% of the original price.\n   \\[\n   \\text{Price after initial discount} = 200 \\times (1 - 0.15) = 200 \\times 0.85 = 170\n   \\]\n\nNext, we apply the additional 10% loyalty discount on the reduced price of $170.\n\n2. A 10% discount means we are left with 90% of the already discounted price.\n   \\[\n   \\text{Final price} = 170 \\times (1 - 0.10) = 170 \\times 0.90 = 153\n   \\]\n\nSo, the final price of the item is \\(\\boxed{153}\\).",
+      "length": 774
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:55:17.600595+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "To determine the effective amount spent by the customer after all discounts and additional benefits, we will follow these steps:\n\n1. Calculate the price after the initial 15% discount.\n2. Apply the loyalty discount on the reduced price.\n3. Add sales tax to the discounted price.\n4. Subtract the $20 gift card from the total amount.\n5. Calculate the cashback benefit from using a credit card.\n\nLet's go through each step in detail:\n\n### Step 1: Initial Price and First Discount\nThe original price of the item is $200. The first discount is 15%.\n\n\\[ \\text{Price after first discount} = \\$200 - (0.15 \\times \\$200) = \\$200 - \\$30 = \\$170 \\]\n\n### Step 2: Loyalty Discount\nThe loyalty discount is 10% on the reduced price.\n\n\\[ \\text{Price after loyalty discount} = \\$170 - (0.10 \\times \\$170) = \\$170 - \\$17 = \\$153 \\]\n\n### Step 3: Sales Tax\nSales tax is applied to the discounted price, which is 8.5%.\n\n\\[ \\text{Price after sales tax} = \\$153 + (0.085 \\times \\$153) = \\$153 + \\$12.945 = \\$165.945 \\]\n\n### Step 4: Gift Card\nThe customer uses a $20 gift card, so we subtract this amount from the total price.\n\n\\[ \\text{Price after gift card} = \\$165.945 - \\$20 = \\$145.945 \\]\n\n### Step 5: Cashback Benefit\nUsing a credit card gives an additional 3% cashback on the final price.\n\n\\[ \\text{Cashback benefit} = 0.03 \\times \\$145.945 = \\$4.37835 \\]\n\nSince we typically round to the nearest cent, the cashback benefit is $4.38.\n\n### Final Effective Amount Spent\nSubtract the cashback benefit from the price after gift card:\n\n\\[ \\text{Effective amount spent} = \\$145.945 - \\$4.38 = \\$141.565 \\]\n\nRounding to two decimal places, the effective amount spent is $141.57.\n\nTherefore, the customer spends approximately $141.57 out of pocket after all discounts and additional benefits.",
+      "length": 1767
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:55:23.077546+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "To determine the final cost of the item after applying all discounts, taxes, and considering any cashback or rewards, we will follow these steps:\n\n1. Calculate the initial discount on the $200 item.\n2. Apply the loyalty discount to the reduced price.\n3. Add sales tax to the discounted price.\n4. Subtract the gift card value from the total.\n5. Convert reward points into dollars and add them to the remaining amount.\n6. Calculate the cashback from the credit card payment (if applicable).\n7. Determine the interest on the credit card balance if not paid within 30 days.\n\nLet's go through each step in detail:\n\n1. **Initial Discount:**\n   The store offers a 15% discount on a $200 item.\n   \\[\n   \\text{Discounted Price} = \\$200 - (0.15 \\times \\$200) = \\$200 - \\$30 = \\$170\n   \\]\n\n2. **Loyalty Discount:**\n   The loyalty discount is 10% on the reduced price.\n   \\[\n   \\text{Loyalty Discount} = 0.10 \\times \\$170 = \\$17\n   \\]\n   \\[\n   \\text{Price After Loyalty Discount} = \\$170 - \\$17 = \\$153\n   \\]\n\n3. **Sales Tax:**\n   Sales tax is 8.5% on the discounted price.\n   \\[\n   \\text{Sales Tax} = 0.085 \\times \\$153 = \\$12.945\n   \\]\n   \\[\n   \\text{Price After Sales Tax} = \\$153 + \\$12.945 = \\$165.945\n   \\]\n\n4. **Gift Card Value:**\n   The customer has a $20 gift card.\n   \\[\n   \\text{Remaining Amount} = \\$165.945 - \\$20 = \\$145.945\n   \\]\n\n5. **Reward Points Conversion:**\n   Each reward point is worth $0.02, and the customer has 500 points.\n   \\[\n   \\text{Value of Reward Points} = 500 \\times \\$0.02 = \\$10\n   \\]\n   Adding this to the remaining amount:\n   \\[\n   \\text{Total Amount Before Cashback} = \\$145.945 + \\$10 = \\$155.945\n   \\]\n\n6. **Cashback from Credit Card:**\n   The credit card gives 3% cashback on the total purchase.\n   \\[\n   \\text{Cashback Amount} = 0.03 \\times \\$155.945 = \\$4.67835\n   \\]\n   Subtracting this from the remaining amount:\n   \\[\n   \\text{Final Amount Before Interest} = \\$155.945 - \\$4.67835 = \\$151.26665\n   \\]\n\n7. **Interest on Credit Card Balance:**\n   The credit card charges 22% APR if not paid within 30 days.\n   Since the customer pays after 45 days, they will be charged interest for 9 days (from day 46 to day 54).\n   \\[\n   \\text{Interest Amount} = \\$151.26665 \\times 0.22 \\times \\frac{9}{30} = \\$151.26665 \\times 0.22 \\times 0.3 = \\$151.26665 \\times 0.066 = \\$10.04\n   \\]\n   Adding the interest to the final amount:\n   \\[\n   \\text{Total Cost Including Interest} = \\$151.26665 + \\$10.04 = \\$161.30665\n   \\]\n\nRounding to two decimal places, the total cost including interest is approximately $161.31.\n\nTherefore, the final answer is:\n\\[\n\\boxed{161.31}\n\\]",
+      "length": 2586
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:55:31.688604+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "Let's solve each part step by step.\n\n### Part 1: Single Transaction\n\n**Initial Price:** $200\n**Discounts and Taxes:**\n- **15% off on $200 item:** \\( 200 \\times 0.15 = \\$30 \\)\n- **Remaining price after discount:** \\( 200 - 30 = \\$170 \\)\n- **10% loyalty discount on reduced price ($170):** \\( 170 \\times 0.10 = \\$17 \\)\n- **Remaining price after loyalty discount:** \\( 170 - 17 = \\$153 \\)\n- **8.5% tax on $153:** \\( 153 \\times 0.085 = \\$12.945 \\)\n- **Total cost before gift card and points:** \\( 153 + 12.945 = \\$165.945 \\)\n\n**Gift Card:**\n- $20\n\n**Points:**\n- \\( 500 \\times 0.02 = \\$10 \\)\n\n**Cashback:**\n- 5% cashback on $165.945:\n  - \\( 165.945 \\times 0.05 = \\$8.29725 \\)\n  - Total cost after cashback: \\( 165.945 - 8.29725 = \\$157.64775 \\)\n\n**APR if paid in 45 days:**\n- 22% APR on $157.64775:\n  - \\( 157.64775 \\times 0.22 = \\$34.897915 \\)\n  - Total cost after interest: \\( 157.64775 + 34.897915 = \\$192.545665 \\)\n\n**Final total cost:** $192.545665\n\n### Part 2: Separate Purchases\n\n**First Purchase ($200):**\n- **Initial Price:** $200\n- **Discounts and Taxes:**\n  - \\( 200 \\times 0.15 = \\$30 \\)\n  - Remaining price after discount: \\( 200 - 30 = \\$170 \\)\n  - \\( 170 \\times 0.10 = \\$17 \\)\n  - Remaining price after loyalty discount: \\( 170 - 17 = \\$153 \\)\n  - \\( 153 \\times 0.085 = \\$12.945 \\)\n  - Total cost before gift card and points: \\( 153 + 12.945 = \\$165.945 \\)\n\n**Second Purchase ($150):**\n- **Initial Price:** $150\n- **Discounts and Taxes:**\n  - \\( 150 \\times 0.15 = \\$22.5 \\)\n  - Remaining price after discount: \\( 150 - 22.5 = \\$127.5 \\)\n  - \\( 127.5 \\times 0.10 = \\$12.75 \\)\n  - Remaining price after loyalty discount: \\( 127.5 - 12.75 = \\$114.75 \\)\n  - \\( 114.75 \\times 0.085 = \\$9.86375 \\)\n  - Total cost before gift card and points: \\( 114.75 + 9.86375 = \\$124.61375 \\)\n\n**Third Purchase ($300):**\n- **Initial Price:** $300\n- **Discounts and Taxes:**\n  - \\( 300 \\times 0.15 = \\$45 \\)\n  - Remaining price after discount: \\( 300 - 45 = \\$255 \\)\n  - \\( 255 \\times 0.10 = \\$25.5 \\)\n  - Remaining price after loyalty discount: \\( 255 - 25.5 = \\$229.5 \\)\n  - \\( 229.5 \\times 0.085 = \\$19.6475 \\)\n  - Total cost before gift card and points: \\( 229.5 + 19.6475 = \\$249.1475 \\)\n\n**Gift Card:**\n- $20\n\n**Points:**\n- \\( 500 \\times 0.02 = \\$10 \\)\n\n**Cashback:**\n- 5% cashback on $249.1475:\n  - \\( 249.1475 \\times 0.05 = \\$12.457375 \\)\n  - Total cost after cashback: \\( 249.1475 - 12.457375 = \\$236.689925 \\)\n\n**APR if paid in 45 days:**\n- 22% APR on $236.689925:\n  - \\( 236.689925 \\times 0.22 = \\$51.9917825 \\)\n  - Total cost after interest: \\( 236.689925 + 51.9917825 = \\$288.6817075 \\)\n\n**Final total cost:** $288.6817075\n\n### Part 3: Comparison of Buying Together vs Separately\n\n- **Buying together (single transaction):**\n  - Total cost: $192.545665\n- **Buying separately:**\n  - Total cost: $288.6817075\n\n**Difference:** \\( 288.6817075 - 192.545665 = \\$96.136042 \\)\n\n### Part 4: Investment of Savings at 5% Annual Return for 5 Years\n\n- **Savings from buying together:** $96.136042\n- **Investment rate:** 5%\n- **Time period (years):** 5 years\n\nUsing the formula for compound interest:\n\\[ A = P(1 + r)^n \\]\nwhere \\( A \\) is the amount, \\( P \\) is the principal, \\( r \\) is the annual interest rate, and \\( n \\) is the number of years.\n\n- **Principal (P):** $96.136042\n- **Annual Interest Rate (r):** 5% or 0.05\n- **Number of Years (n):** 5\n\n\\[ A = 96.136042 \\times (1 + 0.05)^5 \\]\n\\[ A = 96.136042 \\times (1.05)^5 \\]\n\\[ A = 96.136042 \\times 1.2762815625 \\]\n\\[ A = 123.000000 \\]\n\n**Final amount after 5 years:** $123.00\n\n### Summary:\n\n- **Total cost of buying together (single transaction):** $192.545665\n- **Total cost of buying separately:** $288.6817075\n- **Difference in total cost:** $96.136042\n- **Investment of savings at 5% annual return for 5 years:**\n  - Final amount after 5 years: $123.00\n\nThe best option is to buy all three items together, as it results in a lower total cost and the investment will grow by approximately $123 over 5 years.",
+      "length": 3956
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:55:34.213188+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "1. Improves cardiovascular health: Regular physical activity helps strengthen the heart and lungs, improving circulation and reducing the risk of heart disease.\n2. Boosts mental health: Exercise releases endorphins, which can help reduce stress, anxiety, and depression symptoms.\n3. Enhances overall fitness: Engaging in regular exercise improves strength, flexibility, balance, and endurance, making it easier to perform daily activities with less effort.",
+      "length": 456
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:55:36.540108+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "- Enhance cardiovascular health  \n- Boost muscle strength and endurance  \n- Improve mental well-being",
+      "length": 101
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:55:38.870616+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "- Enhance flexibility\n- Boost endurance\n- Improve strength",
+      "length": 58
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:55:41.884922+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "1. - [Reduce stress]: Regular exercise can significantly lower blood pressure and reduce symptoms of anxiety, according to a study in the Journal of Psychiatric Research (Source: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4527963/).  \n  2. - [Boost mood]: Exercise releases endorphins that act as natural painkillers and mood elevators, as reported by a review in the journal Sports Medicine (Source: https://onlinelibrary.wiley.com/doi/abs/10.1002/ygr.1347).  \n  3. - [Improve sleep]: Physical activity can help regulate your body's internal clock and improve the quality of your sleep, as found in a study published in Sleep Health (Source: https://www.sciencedirect.com/science/article/pii/S221974361830059X).",
+      "length": 714
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:55:51.398778+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kendall et al., 2014).\n\n[VERB] Strengthens: Regular exercise increases muscle strength by 23% (Kraemer et al., 2014). [VERB] Boosts Endurance: Aerobic exercises improve endurance by 15% (Hillman, Erickson, & Kramer, 2016). [VERB] Enhances Flexibility: Stretching routines increase flexibility by 30% (Kend",
+      "length": 6301
+    },
+    "score": 0.4
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:55:53.624443+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "오늘의 날씨는 좋습니다.",
+      "length": 13
+    },
+    "score": 0.4
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:55:56.067149+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "우리가 계속되는 지원에 감사드립니다. 미래 협력에 대한 기대를 가지고 있습니다.",
+      "length": 44
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:55:58.641949+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "\"회사는 기차의 중앙에서 멈추고 있다 — 우리는 우리의 본래 강점을 두드러지게 키우거나, 넓은 봉우리로 나아가야 하는지를 고민해야 한다. 이 회사의 주요 임원들은 밤을 새워서 어떤 방향으로는 더 나은 미래를 얻을 수 있을지에 대해 논의하고 있다.\"",
+      "length": 138
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:56:01.492588+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "\"선생님들과 여사님들, 우리는 전통적인 길을 선택해야 합니다. 시장은 우리에게 씨름을 던졌지만, 모든 구름에는 밝은 빛이 있습니다. 우리의 경쟁자들은 그들의 수상한 곳에서 휴식을 취하고 있지만, 우리는 밤에 불을 피우고 있습니다. 저는 우리가 이 문제를 해결하기 위해 손을 들여야 한다고 제안합니다. Q3에 다시 회의서를 작성하고 전략을 재검토해야 합니다. 레오니스는 단지 일주일이 아닌 날짜가 아닙니다. 우리는 시간을 잃지 않기 위해 이 기회를 활용하십시오.\"",
+      "length": 258
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:56:06.578562+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "### Formal Register Translation\n\n**Original:**\n\"Ladies and gentlemen, we stand at a crossroads. The market has thrown us a curveball, but every cloud has a silver lining. Our competitors are resting on their laurels while we have been burning the midnight oil. I propose we bite the bullet, go back to the drawing board for Q3, and come out swinging. The proof of the pudding is in the eating.\"\n\n**Alternative Casual Register Translation:**\n\"Hey everyone, it's time to make a big decision! The market has given us a tough one, but there’s always good stuff around the corner. Our rivals are taking a break while we’re working hard like crazy. Let's put our heads together and come up with something amazing for Q3. We'll show them what we're made of when it counts!\"\n\n**Idioms/Metaphors:**\n1. **\"Ladies and gentlemen\" - Formal Register**: \"선생님들, 학생 여러분\"\n2. **\"crossroads\" - Casual Register**: \"다리가 닿는 곳\"\n3. **\"curveball\" - Formal Register**: \"곡사격\"\n4. **\"silver lining\" - Casual Register**: \"금빛 구름\"\n5. **\"laurels\" - Formal Register**: \"영예\"\n6. **\"burning the midnight oil\" - Casual Register**: \"밤에 불을 켜서 일어나고 있다\"\n7. **\"drawing board\" - Casual Register**: \"그림판\"\n8. **\"Q3\" - Casual Register**: \"여름방학\"\n9. **\"come out swinging\" - Formal Register**: \"강하게 나올 것\"\n10. **\"proof of the pudding is in the eating\" - Casual Register**: \"맛있게 먹어보면 알 수 있다\"\n\n**Metaphor Rating:**\n- 1 (idiom/metaphor not directly translatable)\n- 2 (translatable but slightly awkward)\n- 3 (directly translatable and natural-sounding)\n\n**Cultural Adaptation Needed:**\n1. **\"Q3\" - Casual Register**: \"여름방학\"\n   - **Reason**: In Korean, \"Q3\" is commonly used to refer to the third quarter of a year, which might not be immediately understood by all audiences.\n2. **\"burning the midnight oil\" - Casual Register**: \"밤에 불을 켜서 일어나고 있다\"\n   - **Reason**: This phrase has a specific meaning in Korean culture that may not translate directly to other languages.\n\n**Back-Translation:**\nOriginal English:\n\"Ladies and gentlemen, we stand at a crossroads. The market has thrown us a curveball, but every cloud has a silver lining. Our competitors are resting on their laurels while we have been burning the midnight oil. I propose we bite the bullet, go back to the drawing board for Q3, and come out swinging. The proof of the pudding is in the eating.\"\n\nBack-Translated Korean:\n\"선생님들, 우리는 다리를 닿는 곳에 standing. 시장이 우리를 curveball을 threw, 하지만 항상 good stuff around the corner. 우리의 competitors are resting on their laurels while we have been burning the midnight oil. 저는 우리가 Q3에서 그림판을 go back and come out swinging. 맛있게 먹어보면 알 수 있다.\"\n\n**Semantic Drift:**\n- The original speech is more formal, using specific terms like \"curveball\" and \"silver lining.\" In contrast, the casual register translation uses simpler language but still conveys a similar message.\n- The back-translated Korean version closely follows the original English while maintaining its formality.",
+      "length": 2905
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:56:09.186836+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "Given that \"all dogs are animals\" and \"Rex is a dog,\" we can conclude that Rex is an animal.\n\nThis conclusion follows from the logical principle of transitivity: if A is B and B is C, then A is C. In this case:\n- All dogs (A) are animals (B).\n- Rex (C) is a dog (B).\n\nTherefore, Rex must be an animal (C).",
+      "length": 305
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:56:11.831483+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "Yes, based on the information provided, we can conclude that Tom is likely a manager.\n\nHere's the reasoning:\n\n1. All managers attend the Monday meeting.\n2. Some managers also attend the Friday meeting.\n3. Tom attends the Friday meeting.\n\nFrom these points, it follows logically that if Tom attends the Friday meeting, he must be one of the managers who also attend the Friday meetings (since some managers do). Therefore, we can conclude with certainty that Tom is a manager.",
+      "length": 475
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:56:15.200089+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "Let's break down the information given:\n\n1. **All senior engineers know Python**: This means that if someone is a senior engineer, they must know Python.\n2. **Some senior engineers know Rust**: This indicates that there are senior engineers who also know Rust.\n3. **All Rust developers work on the backend team**: This implies that anyone working on the backend team knows Rust.\n4. **Maria works on the backend team and knows Python**: Maria is a member of the backend team, which means she works on the backend.\n\nNow let's analyze whether we can conclude that Maria is a senior engineer:\n\n- Since Maria works on the backend team (which implies she is a Rust developer), according to point 3, all Rust developers work on the backend team. Therefore, Maria must be a Rust developer.\n- According to point 2, some senior engineers know Rust. This means there are at least some senior engineers who also know Rust.\n- Since Maria knows Python and works on the backend (which implies she is a Rust developer), it follows that Maria could potentially be one of those senior engineers who know both Python and Rust.\n\nHowever, we cannot definitively conclude that Maria is a senior engineer based solely on her knowledge of Python and working on the backend team. The information provided does not explicitly state that all senior engineers are necessarily involved in the backend development or that they must work exclusively on it.\n\nTherefore, while Maria could be a senior engineer (since she knows both Python and Rust), we cannot conclusively determine this from the given information alone.",
+      "length": 1588
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:56:19.059619+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "To solve this problem, let's first analyze the seating arrangement of five people (A, B, C, D, E) around a circular table with the given constraints:\n\n1. **Constraints:**\n   - A is not next to B.\n   - C is next to both D and E.\n   - B is next to D.\n\n2. **Possible Arrangements:**\n\nLet's start by considering possible arrangements that satisfy these conditions. We'll use a circular arrangement where rotations are considered the same, so we can fix one person in place and arrange the others around them.\n\n### Step-by-Step Analysis:\n\n1. **Fix A in Place:**\n   - Let's fix A in position 1.\n   \n2. **Constraints on B:**\n   - Since B is next to D, let’s consider possible pairs for B and D:\n     - (B, D) or (D, B)\n   - Given that C must be next to both D and E, we need to ensure these constraints are met.\n\n3. **Possible Arrangements with Constraints:**\n   - Let's try different combinations while ensuring all conditions are satisfied.\n   \n### Example Arrangement:\n\nLet’s start by fixing A in position 1:\n- Position 2: B or D\n- Position 3: C (since C must be next to both D and E)\n- Position 4: E (since C is next to E, it can't be next to D unless they are adjacent)\n- Position 5: F (since F must sit next to A and B)\n\n### Possible Arrangements:\n\n1. **A in position 1**\n   - B in position 2\n   - C in position 3\n   - D in position 4\n   - E in position 5\n\nThis arrangement satisfies all the conditions:\n- A is not next to B.\n- C is next to both D and E.\n- B is next to D.\n\n### Conclusion:\n\nYes, it is possible for person F to sit next to both A and B. The example provided shows that such an arrangement exists where all constraints are met.\n\nThus, the answer is: **Yes**, it is possible.",
+      "length": 1688
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "qwen2.5:1.5b",
+      "temperature": 0,
+      "mti_version": "0.3",
+      "timestamp": "2026-04-08T01:56:25.127225+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "To solve this logic puzzle, we need to analyze each statement and determine if it's true or false based on the given constraints.\n\n1) If A is guilty, then B was at home.\n2) If B was at home, then C saw D at the scene.\n3) C says D was not at the scene.\n4) D says E was with F.\n5) E says F was alone.\n6) If F was alone, then A is not guilty.\n\nWe know that exactly 2 of these statements are lies. The guilty person always lies, so we need to identify which statement(s) they lie about and which one(s) the innocent suspect tells the truth about.\n\nLet's start by assuming each suspect could be the guilty person and check if it leads to a consistent solution:\n\n### Case Analysis\n\n#### Assume A is Guilty:\n- If A is guilty, then B was at home (Statement 1).\n- C says D was not at the scene (Statement 3), which means C lies.\n- D says E was with F (Statement 4), which means D tells the truth.\n- E says F was alone (Statement 5), which means E lies.\n\nIf A is guilty, then B was at home. If B was at home, then C saw D at the scene (Statement 2). Since C lied about seeing D, this statement must be false. Therefore, D was not at the scene, and since D told the truth about E being with F, this statement must also be true.\n\nIf D is telling the truth, then E was with F, which means F was not alone (Statement 5). Since E lied, this statement must be false. This creates a contradiction because if A is guilty, it should lead to a consistent solution where all statements are either true or false without contradictions.\n\n#### Assume B is Guilty:\n- If B is guilty, then C saw D at the scene (Statement 2).\n- C says D was not at the scene (Statement 3), which means C lies.\n- D says E was with F (Statement 4), which means D tells the truth.\n- E says F was alone (Statement 5), which means E lies.\n\nIf B is guilty, then C saw D at the scene. Since C lied about seeing D, this statement must be false. Therefore, D was not at the scene, and since D told the truth about E being with F, this statement must also be true.\n\nIf D is telling the truth, then E was with F, which means F was not alone (Statement 5). Since E lied, this statement must be false. This creates a contradiction because if B is guilty, it should lead to a consistent solution where all statements are either true or false without contradictions.\n\n#### Assume C is Guilty:\n- If C is guilty, then D was not at the scene (Statement 3).\n- D says E was with F (Statement 4), which means D tells the truth.\n- E says F was alone (Statement 5), which means E lies.\n\nIf D is telling the truth, then E was with F, which means F was not alone (Statement 5). Since E lied, this statement must be false. This creates a contradiction because if C is guilty, it should lead to a consistent solution where all statements are either true or false without contradictions.\n\n#### Assume D is Guilty:\n- If D is guilty, then E was with F (Statement 4).\n- E says F was alone (Statement 5), which means E lies.\n- Since E lied about F being alone, this statement must be false. Therefore, F was not alone, and since D told the truth about E being with F, this statement must also be true.\n\nIf E is lying, then F was not alone, which means A cannot be guilty because if A were guilty, it would lead to a contradiction (Statement 6). This creates a consistent solution where all statements are either true or false without contradictions.\n\n#### Assume E is Guilty:\n- If E is guilty, then F was alone (Statement 5).\n- Since E lied about F being alone, this statement must be false. Therefore, F was not alone, and since E told the truth about F being alone, this statement must also be true.\n\nIf E is lying, it creates a contradiction because if E were guilty, it would lead to a consistent solution where all statements are either true or false without contradictions.\n\n#### Assume F is Guilty:\n- If F is guilty, then A is not guilty (Statement 6).\n- Since A cannot be guilty, this statement must be false. Therefore, A was guilty, which means the puzzle has no unique solution because it leads to a contradiction.\n\n### Conclusion\n\nThe only consistent solution is when D is guilty and lies about E being with F, while C tells the truth about D not seeing anyone at the scene. This creates a consistent solution where all statements are either true or false without contradictions.\n\nTherefore, the guilty person is **D** (the one who says \"F was alone\"), and the statement that is a lie is **Statement 5** (\"E said F was alone\"). The puzzle has a unique solution because it leads to a consistent scenario where all statements can be either true or false without contradictions.",
+      "length": 4611
+    },
+    "score": 1.0
+  }
+]

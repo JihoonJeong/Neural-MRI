@@ -1,0 +1,427 @@
+[
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:06:59.754111+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "The key points of the text are:\n\n1. **Benefits**: Solar energy is renewable, helps lower electricity costs, and reduces carbon emissions.\n2. **Challenges**: It demands substantial initial investment and its effectiveness varies with weather conditions.",
+      "length": 252
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:07:03.766148+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "Here are the key points summarized from the text:\n\n1. **Benefits**: Solar energy is renewable, lowers electricity bills, and reduces carbon emissions.\n2. **Cost Trends**: Installation costs have decreased by 70% since 2010, making it more affordable.\n3. **Challenges**:\n   - High upfront investment required.\n   - Performance dependent on weather and location.\n   - Needs regular maintenance.\n   - Requires significant space (roof or land area).\n4. **Technological Aspect**: Battery storage technology is advancing but increases overall costs.\n5. **Policy Variability**: Government incentives for solar energy vary by region and may change over time.\n\nThese points highlight both the advantages and practical considerations of adopting solar energy solutions.",
+      "length": 759
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:07:09.794382+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "**Key Points of the Text:**\n\n1. **Benefits:**\n   - Renewable energy source reducing electricity bills and carbon emissions.\n   - Installation costs have decreased by 70% since 2010, enhancing accessibility.\n   - Average payback period is 6-10 years, varying by location.\n\n2. **Costs and Considerations:**\n   - Significant upfront investment of $15,000-$25,000 for residential systems.\n   - Dependent on weather and geographic location.\n   - Requires periodic maintenance (cleaning, inverter replacement every 10-15 years).\n   - Occupies considerable roof or land space.\n   - Battery storage adds $5,000-$15,000 but improves with falling lithium-ion prices (89% decrease since 2010).\n\n3. **Policy and Incentives:**\n   - Government incentives like the ITC vary by region and may change.\n   - Net metering policies differ by state and utility provider.\n\n4. **Environmental Impact:**\n   - Manufacturing involves mining rare minerals and produces some emissions, but lifecycle emissions are lower than fossil fuels.\n   - Panels lose about 0.5% efficiency annually.\n\n5. **Additional Options:**\n   - Community solar programs provide alternatives for renters.\n   - Significant employment impact (over 250,000 workers in the US).\n\nThese points highlight the economic, environmental, and practical aspects of adopting solar energy systems.",
+      "length": 1329
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:07:17.860332+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "### Summary of Key Points:\n- **Pros:**\n  - Renewable resource reducing electricity bills and carbon emissions.\n  - Significant decrease in installation costs (70% since 2010).\n  - Improved payback period of 6-10 years depending on location.\n  - Advancing battery storage technology reduces additional costs associated with energy storage.\n  \n- **Cons:**\n  - High upfront investment ($15,000-$25,000 for residential systems).\n  - Dependency on weather and geographic location for efficiency.\n  - Requires periodic maintenance (cleaning, inverter replacement every 10-15 years).\n  - Occupies significant roof or land area.\n  - Variability in government incentives and net metering policies across regions.\n\n### Strongest Arguments For:\n1. **Cost Reduction Over Time:** Installation costs have significantly decreased, making solar energy more financially viable over time.\n2. **Environmental Benefits:** Solar energy reduces carbon emissions and electricity bills, aligning with sustainability goals.\n3. **Technological Advancements:** Improvements in battery storage technology reduce additional costs and enhance energy independence.\n\n### Strongest Arguments Against:\n1. **High Initial Investment:** The substantial upfront cost remains a significant barrier for many homeowners.\n2. **Weather Dependency:** Efficiency varies greatly depending on local climate conditions, affecting reliability.\n3. **Maintenance Requirements:** Regular cleaning and periodic replacements add ongoing costs and effort.\n\n### Beneficiaries of Solar Adoption:\n- **Homeowners in Sun-Rich Regions:** Those living in areas with ample sunlight and supportive government incentives would benefit most financially and environmentally.\n- **Small Businesses and Communities:** Entities looking to reduce operational costs and enhance their green credentials.\n- **Government Entities:** Public bodies aiming to promote renewable energy and reduce municipal carbon footprints.\n\n### Overall Recommendation Rating: 7/10\n**Justification:**\nWhile solar energy offers substantial long-term benefits in terms of cost savings and environmental impact, the high initial investment and dependency on external factors like weather and policy stability pose notable challenges. The decreasing costs and technological advancements make it increasingly attractive, particularly for those in favorable geographic and regulatory environments. However, the variability in incentives and maintenance needs temper the overall recommendation, leading to a balanced score of 7 out of 10. This rating reflects a positive outlook with recognition of current limitations.",
+      "length": 2617
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:07:29.839427+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_001",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "### 1) Summary\nSolar energy harnesses renewable sunlight to generate electricity, significantly lowering utility bills and reducing carbon footprints. With installation costs having plummeted by 70% since 2010, homeowners can achieve financial savings within 6-10 years, though initial investments range from $15,000 to $25,000 per system, including optional battery storage costs. Government incentives and net metering policies vary by location, impacting overall feasibility and return on investment.\n\n### 2) Pros & Cons\n**Top 5 Pros:**\n1. **Cost Savings:** Reduces electricity bills significantly over time.\n2. **Environmental Impact:** Decreases reliance on fossil fuels, lowering carbon emissions.\n3. **Energy Independence:** Provides a degree of self-sufficiency from grid electricity.\n4. **Technological Advancements:** Continuous improvements in efficiency and affordability.\n5. **Government Incentives:** Potential tax credits and rebates reduce upfront costs.\n\n**Top 5 Cons:**\n1. **High Initial Cost:** Requires substantial upfront investment ($15,000-$25,000).\n2. **Weather Dependency:** Performance varies with sunlight availability, less effective in cloudy regions.\n3. **Maintenance Needs:** Regular cleaning and occasional repairs are required.\n4. **Space Requirements:** Significant area needed for panel installation, potentially limiting options for densely populated areas.\n5. **Storage Costs:** Additional expenses for battery storage to ensure power during non-sunny periods.\n\n### 3) Recommendations\n**Seattle Homeowner:** Given Seattle's frequent cloud cover, while solar panels can still be beneficial, consider investing in high-efficiency panels and battery storage to maximize energy capture during daylight hours and ensure consistent power supply. Additionally, leverage local incentives and net metering policies to optimize savings.\n\n**Phoenix Homeowner:** Phoenix's abundant sunshine makes solar energy highly feasible. With minimal cloud cover, a standard solar panel installation paired with optional battery storage can significantly reduce electricity bills and environmental impact. Take advantage of strong regional incentives and net metering programs to enhance financial benefits.\n\n### 4) Claims Needing Citations\n- **\"Installation costs have dropped 70% since 2010.\"**\n- **\"Average payback period is 6-10 years.\"**\n- **\"Government incentives vary.\"**\n- **\"Net metering differs by region.\"**\n\n### 5) Counterarguments to Strongest Pro (Cost Savings)\n1. **Initial Investment Barrier:** High upfront costs can be prohibitive for many homeowners, especially those with limited financial resources.\n2. **Weather Variability:** Regions with inconsistent sunlight may not achieve expected savings, undermining long-term financial benefits.\n3. **Maintenance and Lifespan:** Ongoing maintenance costs and the eventual need for panel replacement can offset initial savings over time.\n\n### 6) Feasibility Ratings (1-10 Scale)\n- **Residential:** 8 (High potential due to cost reductions and incentives, but varies by location)\n- **Commercial:** 9 (Often more feasible due to larger roof spaces and higher energy consumption)\n- **Utility-Scale:** 10 (Optimized for large areas and economies of scale, highly efficient)\n\n### 7) Landscape Prediction by 2030\nBy 2030, solar energy infrastructure will likely expand significantly, with increased adoption driven by technological advancements, lower costs, and robust policy support. Rooftop installations will proliferate, especially in sunny regions like Phoenix, while utility-scale projects will dominate renewable energy production nationwide, contributing substantially to reduced carbon emissions and energy independence.\n\n### 8) Tweet-Length Summary\n🌞 Harness the sun! Solar energy cuts bills & emissions, but requires upfront investment & weather dependency. Seattle & Phoenix benefit differently; check local incentives & space availability for optimal gains. #SolarEnergy #RenewableFuture 🌱",
+      "length": 3974
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:07:32.883739+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "To find 15% of 200, you multiply 200 by 0.15:\n\n\\[ 200 \\times 0.15 = 30 \\]\n\nSo, 15% of 200 is **30**.",
+      "length": 100
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:07:36.650710+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "Here's how to calculate the final price:\n\n**Step 1: Calculate the first discount**\n\n* Discount amount: $200 * 0.15 = $30\n* Price after first discount: $200 - $30 = $170\n\n**Step 2: Calculate the second discount**\n\n* Discount amount: $170 * 0.10 = $17\n* Final price: $170 - $17 = $153\n\n\n**Therefore, the final price of the item is $153.**",
+      "length": 336
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:07:42.823291+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "Here's a breakdown of the calculations to determine the effective out-of-pocket expense:\n\n**1. Initial Discount:**\n\n* Discount amount: $200 * 0.15 = $30\n* Price after first discount: $200 - $30 = $170\n\n**2. Loyalty Discount:**\n\n* Loyalty discount amount: $170 * 0.10 = $17\n* Price after loyalty discount: $170 - $17 = $153\n\n**3. Sales Tax:**\n\n* Sales tax amount: $153 * 0.085 = $13.005 (round up to $13.01)\n* Price including tax: $153 + $13.01 = $166.01\n\n**4. Gift Card Application:**\n\n* Price after gift card: $166.01 - $20 = $146.01\n\n**5. Credit Card Cashback:**\n\n* Cashback amount: $146.01 * 0.03 = $4.38 (rounded)\n\n**6. Final Out-of-Pocket Expense:**\n\n* Effective cost: $146.01 - $4.38 = **$141.63**\n\n\nTherefore, the customer spends **$141.63** out of pocket after all discounts, taxes, the gift card, and cashback.",
+      "length": 819
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:07:51.963149+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "Here's a breakdown of the calculations to determine the total cost, including interest:\n\n**1. Initial Discounts:**\n\n* **15% off $200:** $200 * 0.15 = $30 discount\n* **Price after first discount:** $200 - $30 = $170\n* **10% loyalty discount on $170:** $170 * 0.10 = $17 discount\n* **Price after loyalty discount:** $170 - $17 = $153\n\n**2. Applying Gift Card and Reward Points:**\n\n* **Gift Card Value:** $20\n* **Reward Points Value:** 500 points * $0.02/point = $10\n* **Total Discount from Gift Card & Points:** $20 + $10 = $30\n* **Price after discounts and rewards:** $153 - $30 = $123\n\n**3. Sales Tax:**\n\n* **Sales Tax Amount:** $123 * 0.085 = $10.405 (round up to $10.41)\n* **Price including tax:** $123 + $10.41 = $133.41\n\n**4. Credit Card Payment:**\n\n* **Amount Paid with Credit Card:** $133.41 (total after tax)\n* **Cashback from Credit Card:** $133.41 * 0.03 = $4.003 (round up to $4.00)\n* **Effective Credit Card Payment:** $133.41 - $4.00 = $129.41\n\n**5. Credit Card Interest:**\n\n* **Interest Rate:** 22% APR / 12 months = 1.83% per month\n* **Number of Months:** 45 days / 30 days per month ≈ 1.5 months\n* **Monthly Interest Rate:** 1.83% / 1.5 ≈ 1.22%\n* **Interest Calculation:** $129.41 * 0.0122 = $1.57 (rounded)\n\n**6. Total Cost Including Interest:**\n\n* **Total Cost:** $133.41 (initial payment) + $1.57 (interest) = **$134.98**\n\n\n\nTherefore, the total cost for the customer, including interest on the delayed credit card payment, would be approximately **$134.98**.",
+      "length": 1477
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:08:17.534931+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_002",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "Let's break down each scenario step-by-step to solve the problems systematically.\n\n### Scenario 1: Single Item Purchase ($200)\n\n1. **Initial Discount (15% off):**\n   \\[\n   \\text{Discounted Price} = 200 \\times (1 - 0.15) = 200 \\times 0.85 = \\$170\n   \\]\n\n2. **Loyalty Discount (10% off reduced price):**\n   \\[\n   \\text{Price after Loyalty Discount} = 170 \\times (1 - 0.10) = 170 \\times 0.90 = \\$153\n   \\]\n\n3. **Tax (8.5%):**\n   \\[\n   \\text{Tax Amount} = 153 \\times 0.085 = \\$12.905 \\quad \\text{(round to \\$12.91)}\n   \\]\n   \\[\n   \\text{Price with Tax} = 153 + 12.91 = \\$165.91\n   \\]\n\n4. **Gift Card ($20):**\n   \\[\n   \\text{Price after Gift Card} = 165.91 - 20 = \\$145.91\n   \\]\n\n5. **Points (500 points at $0.02 each):**\n   \\[\n   \\text{Value of Points} = 500 \\times 0.02 = \\$10\n   \\]\n   \\[\n   \\text{Final Price} = 145.91 - 10 = \\$135.91\n   \\]\n\n6. **Cashback (3%):**\n   \\[\n   \\text{Cashback Amount} = 135.91 \\times 0.03 = \\$4.0773 \\quad \\text{(round to \\$4.08)}\n   \\]\n   \\[\n   \\text{Final Price after Cashback} = 135.91 - 4.08 = \\$131.83\n   \\]\n\n7. **APR Financing (22% APR over 45 days):**\n   \\[\n   \\text{Interest} = 131.83 \\times \\frac{22\\%}{365} \\times 45 \\approx 131.83 \\times 0.006579 \\times 45 \\approx \\$3.74\n   \\]\n   \\[\n   \\text{Total Cost} = 131.83 + 3.74 = \\$135.57\n   \\]\n\n### Scenario 2: Multiple Items ($200, $150, $300) with Conditional Loyalty Discount\n\n1. **Initial Discounts:**\n   - **$200 Item:**\n     \\[\n     \\text{Discounted Price} = 200 \\times 0.85 = \\$170\n     \\]\n     \\[\n     \\text{Price after Loyalty Discount} = 170 \\times 0.90 = \\$153\n     \\]\n     \\[\n     \\text{Price with Tax} = 153 \\times 1.085 = \\$168.005 \\quad \\text{(round to \\$168.01)}\n     \\]\n     \\[\n     \\text{Price after Gift Card} = 168.01 - 20 = \\$148.01\n     \\]\n     \\[\n     \\text{Final Price} = 148.01 - 10 = \\$138.01\n     \\]\n     \\[\n     \\text{Cashback Amount} = 138.01 \\times 0.03 = \\$4.14 \\quad \\text{(round to \\$4.14)}\n     \\]\n     \\[\n     \\text{Final Price after Cashback} = 138.01 - 4.14 = \\$133.87\n     \\]\n     \\[\n     \\text{Interest} = 133.87 \\times \\frac{22\\%}{365} \\times 45 \\approx \\$3.68\n     \\]\n     \\[\n     \\text{Total Cost} = 133.87 + 3.68 = \\$137.55\n     \\]\n\n   - **$150 Item:**\n     \\[\n     \\text{Discounted Price} = 150 \\times 0.85 = \\$127.50\n     \\]\n     \\[\n     \\text{Price after Loyalty Discount} = 127.50 \\times 0.90 = \\$114.75\n     \\]\n     \\[\n     \\text{Price with Tax} = 114.75 \\times 1.085 = \\$124.44 \\quad \\text{(round to \\$124.44)}\n     \\]\n     \\[\n     \\text{Price after Gift Card} = 124.44 - 20 = \\$104.44\n     \\]\n     \\[\n     \\text{Final Price} = 104.44 - 10 = \\$94.44\n     \\]\n     \\[\n     \\text{Cashback Amount} = 94.44 \\times 0.03 = \\$2.84 \\quad \\text{(round to \\$2.84)}\n     \\]\n     \\[\n     \\text{Final Price after Cashback} = 94.44 - 2.84 = \\$91.60\n     \\]\n     \\[\n     \\text{Interest} = 91.60 \\times \\frac{22\\%}{365} \\times 45 \\approx \\$2.04\n     \\]\n     \\[\n     \\text{Total Cost} = 91.60 + 2.04 = \\$93.64\n     \\]\n\n   - **$300 Item:**\n     \\[\n     \\text{Discounted Price} = 300 \\times 0.85 = \\$255\n     \\]\n     \\[\n     \\text{Price after Loyalty Discount} = 255 \\times 0.90 = \\$229.50\n     \\]\n     \\[\n     \\text{Price with Tax} = 229.50 \\times 1.085 = \\$249.99 \\quad \\text{(round to \\$250.00)}\n     \\]\n     \\[\n     \\text{Price after Gift Card} = 250.00 - 20 = \\$230.00\n     \\]\n     \\[\n     \\text{Final Price} = 230.00 - 10 = \\$220.00\n     \\]\n     \\[\n     \\text{Cashback Amount} = 220.00 \\times 0.03 = \\$6.60 \\quad \\text{(round to \\$6.60)}\n     \\]\n     \\[\n     \\text{Final Price after Cashback} = 220.00 - 6.60 = \\$213.40\n     \\]\n     \\[\n     \\text{Interest} = 213.40 \\times \\frac{22\\%}{365} \\times 45 \\approx \\$5.46\n     \\]\n     \\[\n     \\text{Total Cost} = 213.40 + 5.46 = \\$218.86\n     \\]\n\n   **Total Cost for Multiple Items:**\n   \\[\n   133.55 + 93.64 + 218.86 = \\$445.05\n   \\]\n\n### Scenario 3: Comparison of Buying Together vs. Separately\n\n- **Single Transaction (Scenario 1):** \\$135.57\n- **Multiple Transactions (Scenario 2):** \\$445.05\n\n**Conclusion:** Buying all items together is significantly cheaper (\\$135.57 vs. \\$445.05).\n\n### Scenario 4: Investment of Savings at 5% Annual Return\n\n**Difference in Savings:**\n\\[\n\\text{Difference} = 445.05 - 135.57 = \\$309.48\n\\]\n\n**Future Value with 5% Annual Return over 5 Years:**\n\\[\n\\text{Future Value} = 309.48 \\times (1 + 0.05)^5\n\\]\n\\[\n\\text{",
+      "length": 4307
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:08:21.593127+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "Here are three key benefits of regular exercise:\n\n1. **Improved Physical Health:** Exercise strengthens the heart, improves circulation, boosts muscle strength and endurance, and enhances flexibility, reducing the risk of chronic diseases like heart disease, diabetes, and obesity.\n\n2. **Enhanced Mental Well-being:** Physical activity releases endorphins, which have mood-boosting effects and can help alleviate symptoms of anxiety and depression. It also improves sleep quality and cognitive function.\n\n3. **Increased Energy Levels:** While it might seem counterintuitive, regular exercise actually increases stamina and reduces fatigue over time. It helps your body become more efficient at using oxygen and energy. \n\n\nLet me know if you'd like to explore any of these benefits in more detail!",
+      "length": 796
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:08:24.224207+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "- Enhances cardiovascular health\n- Boosts mental well-being and reduces stress\n- Increases muscle strength and endurance",
+      "length": 120
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:08:26.841496+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "- Enhances physical endurance and strength.\n- Boosts mental clarity and focus.\n- Supports better sleep quality and duration.",
+      "length": 124
+    },
+    "score": 0.7
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:08:30.580647+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "- **Boosts Mood**: Enhances feelings through release of endorphins, reducing stress by 20% (Source: *Journal of Psychiatric Research*).  \n- **Increases Energy Levels**: Regular activity boosts stamina, decreasing fatigue by 15% (Source: *Sports Medicine*).  \n- **Enhances Cognitive Function**: Exercise sharpens memory and focus, increasing brain activity by 10% (Source: *Neurology*).\n\n**Sources:**\n1. *Journal of Psychiatric Research*\n2. *Sports Medicine*\n3. *Neurology*",
+      "length": 472
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:08:35.738623+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_003",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "- **Boosts:** Energy levels by 20%, enhancing daily vitality (Smith, 2020).\n- **Accelerates:** Metabolism, aiding in weight management efficiently (Johnson, 2019).\n- **Strengthens:** Immune response, decreasing illness occurrence by 15% (Lee, 2021).\n\nRegular physical activity not only invigorates daily routines but also significantly cuts down on health-related absences, fostering a robust lifestyle. Engaging in consistent exercise profoundly impacts overall well-being beyond mere physical metrics.\n\n**References:**\n- Smith, J. (2020). *Energy Dynamics in Active Populations*. Journal of Physical Health, 45(2), 123-134.\n- Johnson, L. (2019). *Metabolic Enhancements Through Exercise*. Metabolism Today, 38(4), 201-210.\n- Lee, R. (2021). *Immune System Resilience with Regular Activity*. Immunity Insights, 17(3), 45-56.",
+      "length": 825
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:08:38.043703+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "오늘 날씨가 좋네요.",
+      "length": 11
+    },
+    "score": 0.4
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:08:41.219530+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "지속적인 지원에 감사드리며, 미래의 협업을 기대합니다. \n\n(Jeongsijok sujeon-e gamsa-dari-man, mueo-ui gaebyeol-i gidae-hamnida.) \n\n\nLet me know if you need anything else translated! 😊",
+      "length": 159
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:08:45.039642+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "회사는 중요한 분기점에 서 있습니다. 우리는 핵심 역량에 더욱 집중할 것인지, 아니면 새로운 영역으로 확장할 것인지 선택해야 합니다. 이사회는 밤늦게까지 논의하며, 어느 길이 더 풍요로운 미래로 이어질지 고민하고 있습니다.\n\n**More Formal Version:**\n\n회사는 중대한 전환점에 직면해 있습니다. 우리는 기존의 핵심 역량을 더욱 강화할 것인지, 아니면 새로운 기회를 탐색하기 위해 영역을 확장할 것인지 결정해야 합니다. 이사회는 밤늦게까지 회의를 이어가며, 어느 전략이 더 번영으로 이어질지 심도 있게 논의하고 있습니다.",
+      "length": 300
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:08:49.123509+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "존경하는 여러분,\n\n우리는 중요한 전환점에 서 있습니다. 시장은 예상치 못한 도전을 던져왔지만, 어려움 속에도 희망의 빛은 항상 존재합니다. 경쟁사들은 안주하고 있는 반면, 우리는 끊임없이 노력해 왔습니다. \n\n따라서 저는 지금 당장 결단을 내려야 한다고 제안합니다. 3분기부터 다시 기본으로 돌아가 전략을 재검토하고, 적극적으로 반격을 시작해야 합니다. 로마는 하루 만에 건설되지 않았지만, 우리에게는 낭비할 시간이 없습니다. 지금 행동하지 않으면 미래는 불확실해질 것입니다. 함께 새로운 전략을 수립하고, 이 위기를 도약의 기회로 만들어 나가도록 합시다.\n\n감사합니다.",
+      "length": 320
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:09:03.801325+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_004",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "### Translation Tasks\n\n#### 1) Formal Register Translation (Korean)\n존경하는 여러분, 우리는 중요한 전환점에 서 있습니다. 시장은 예상치 못한 도전을 던졌지만, 어려움 속에도 희망의 빛이 있습니다. 경쟁사들은 안주하고 있지만, 우리는 밤을 새우며 노력해 왔습니다. 제안하는 바는 어려움을 직시하고, 3분기를 위해 다시 계획을 세우며, 적극적으로 나아가는 것입니다. 결과는 실제로 맛봐야 알 수 있습니다.\n\n#### 2) Casual Register Translation (Korean)\n여러분, 지금 정말 중요한 순간이야. 시장이 예상치 못한 어려움을 줬지만, 항상 좋은 점은 있잖아. 경쟁사들은 쉬고 있는데 우리는 열심히 일하고 있어. 지금 당장 도전해보자고, 3분기에 다시 계획 세우고, 힘차게 나아가자. 실제로 먹어보면 결과를 알 수 있잖아.\n\n#### 3) Idioms/Metaphors and Korean Equivalents\n- **Curveball**: 예상치 못한 도전 (예상치 못한 공)\n- **Every cloud has a silver lining**: 어려움 속에도 희망이 있다 (모든 구름 뒤에는 은빛 줄이 있다)\n- **Burning the midnight oil**: 밤을 새우며 일하다 (밤 늦게까지 일하다)\n- **Bite the bullet**: 어려움을 직시하고 대처하다 (총알을 씹다)\n- **Drawing board**: 계획을 다시 세우다 (도면판)\n- **Come out swinging**: 힘차게 나아가다 (강력하게 출발하다)\n- **Proof of the pudding is in the eating**: 결과는 실제로 해봐야 안다 (팥빙수의 맛은 먹어보면 안다)\n\n#### 4) Translatability Rating of Metaphors (1-5)\n- **Curveball**: 4 (비교적 직관적이지만 문화적 차이가 약간 있음)\n- **Every cloud has a silver lining**: 5 (직관적이고 널리 이해됨)\n- **Burning the midnight oil**: 4 (직관적이나 약간의 문화적 차이가 있음)\n- **Bite the bullet**: 4 (직관적이나 문화적 맥락에 따라 이해 차이가 있음)\n- **Drawing board**: 3 (직역이 가능하지만, 일상 대화에서는 덜 사용됨)\n- **Come out swinging**: 4 (직관적이지만 문화적 표현의 차이가 있음)\n- **Proof of the pudding is in the eating**: 4 (직관적이나 문화적 차이가 약간 있음)\n\n#### 5) Suggestions for Cultural Adaptation\n1. **\"Curveball\"**: 한국에서는 \"예상치 못한 도전\"으로 더 명확하게 표현할 수 있습니다.\n2. **\"Burning the midnight oil\"**: \"밤을 새우며 일하다\"로 바꾸면 더 자연스럽게 이해될 수 있습니다.\n3. **\"Drawing board\"**: \"계획을 다시 세우다\"로 바꾸면 일상적인 표현으로 더 잘 전달될 수 있습니다.\n\n#### 6) Back-Translation to English\n존경하는 여러분, 우리는 중요한 전환점에 서 있습니다. 시장은 예상치 못한 어려움을 던졌지만, 어려움 속에도 희망의 빛이 있습니다. 경쟁사들은 안주하고 있지만, 우리는 밤을 새우며 노력해 왔습니다. 지금 당장 어려움을 직시하고, 3분기에 다시 계획을 세우며, 힘차게 나아가자는 제안을 드립니다. 실제로 해봐야 결과를 알 수 있습니다.\n\n#### 7) Comparison with Original and Semantic Drift\n- **Original**: \"Ladies and gentlemen, we stand at a crossroads. The market has thrown us a curveball, but every cloud has a silver lining. Our competitors are resting on their laurels while we have been burning the midnight oil. I propose we bite the bullet, go back to the drawing board for Q3, and come out swinging. The proof of the pudding is in the eating.\"\n- **Back-Translation**: \"여러분, 지금 정말 중요한 순간입니다. 시장이 예상치 못한 도전을 던졌지만, 어려움 속에도 희망의 빛이 있습니다. 경쟁사들은 쉬고 있지만, 우리는 열심히 일해 왔습니다. 지금 당장 어려움을 직시하고, 3분기에 다시 계획을 세우며, 힘차게 나아가자는 제안을 드립니다. 실제로 해봐야 결과를 알 수 있습니다.\"\n\n**Semantic Drift**:\n- **\"Ladies and gentlemen\"** → **\"여러분\"**: 공식적인 인사말에서 친근한 표현으로 약간의 변화가 있음.\n- **\"Curveball\"** → **\"예상치 못한 도전\"**: 문화적 맥락에 맞게 좀 더 구체적으로 설명되었음.\n- **\"Drawing board\"** → **\"계획을 다시 세우다\"**: 직역보다는 일상적인 표현으로 바꾸어 이해하기 쉽게 조정됨.\n- **Overall**: 주요 의미는 유지되나, 문화적 맥락에 맞게 약간의 표현 조정이 이루어졌습니다.",
+      "length": 2687
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:09:07.086670+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L0",
+    "response": {
+      "raw_text": "Given the statements:\n\n1. All dogs are animals.\n2. Rex is a dog.\n\nWe can logically conclude that **Rex is an animal**. This conclusion follows directly from the first statement, which categorically places dogs within the broader category of animals, and the second statement identifies Rex as belonging to the specific category of dogs. Therefore, Rex, being a dog, must also be an animal.",
+      "length": 389
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:09:10.929316+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L1",
+    "response": {
+      "raw_text": "Based on the information provided:\n\n1. All managers attend the Monday meeting.\n2. Some managers also attend the Friday meeting.\n3. Tom attends the Friday meeting.\n\nWhile Tom attending the Friday meeting indicates he could be a manager (since some managers attend it), we cannot definitively conclude that Tom is a manager solely from this information. The fact that some managers attend the Friday meeting means that non-managers could also potentially attend without contradicting the given statements.\n\nTherefore, although it is possible that Tom is a manager, we cannot conclude with certainty that he is one based solely on his attendance at the Friday meeting. Additional information would be needed to make a definitive conclusion.",
+      "length": 737
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:09:18.354519+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L2",
+    "response": {
+      "raw_text": "To determine if we can conclude that Maria is a senior engineer based on the given information, let's break down the statements step by step:\n\n1. **All senior engineers know Python.**\n   - This means if someone is a senior engineer, they definitely know Python.\n\n2. **Some senior engineers know Rust.**\n   - This indicates that within the group of senior engineers, there is a subset that also knows Rust, but not all senior engineers necessarily know Rust.\n\n3. **All Rust developers work on the backend team.**\n   - This tells us that anyone working on the backend team must be a Rust developer, but it doesn't specify if they are senior engineers or not.\n\n4. **Maria works on the backend team and knows Python.**\n   - From this, we know:\n     - Maria works on the backend team (implying she could be a Rust developer since all Rust developers are on the backend team).\n     - Maria knows Python (which aligns with the fact that all senior engineers know Python).\n\n### Reasoning:\n- **Python Knowledge**: Since Maria knows Python, she fits the criterion that all senior engineers must meet (knowing Python).\n- **Backend Team Membership**: Maria works on the backend team, which could mean she is a Rust developer, but it doesn't explicitly state her seniority level.\n- **Lack of Direct Seniority Information**: The given information does not explicitly state that Maria is a senior engineer. Knowing Python and working on the backend team does not uniquely identify her as a senior engineer because:\n  - Some non-senior engineers might also know Python and work on the backend team.\n  - The statement about Rust developers being on the backend team does not specify that only senior engineers can be Rust developers.\n\n### Conclusion:\nBased on the provided information, we **cannot definitively conclude** that Maria is a senior engineer. While she meets some criteria (knowing Python and working on the backend team), there is insufficient information to rule out the possibility that she could be a non-senior engineer who also knows Python and works on the backend team. Therefore, we cannot make this conclusion with certainty.",
+      "length": 2130
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:09:24.011156+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L3",
+    "response": {
+      "raw_text": "Here's the breakdown of the seating arrangement and the addition of person F:\n\n**Initial Seating Arrangement**\n\n* **C is next to both D and E:** This means C must be directly opposite one of them around the circle.\n* **B is next to D:**  This places B adjacent to D, likely on either side of C depending on C's position.\n* **A is not next to B:** This significantly restricts A's possible positions.\n\n**Possible Arrangements (considering circular nature):**\n\nOne possible arrangement satisfying all conditions is:\n\n1. **D**\n2. **C**\n3. **E**\n4. **B**\n5. **A**\n\n**Who is next to A?**\n\nIn this arrangement, **E** is next to A.\n\n**Adding Person F**\n\n* **F must sit next to both A and B:** This creates a conflict with the initial arrangement.  \n\n**Disproving Possibility:**\n\nIt's **not possible** to add person F while maintaining all the given conditions. Here's why:\n\n* If F sits next to A, they cannot also be next to B without violating the rule that A cannot be next to B. \n\n\nLet me know if you'd like to explore other seating puzzle variations!",
+      "length": 1047
+    },
+    "score": 1.0
+  },
+  {
+    "meta": {
+      "model": "exaone3.5:7.8b",
+      "temperature": 0,
+      "mti_version": "0.1",
+      "timestamp": "2026-03-31T01:09:38.970053+00:00"
+    },
+    "axis": "resilience",
+    "condition": "A_overload",
+    "scenario_id": "ra_005",
+    "stress_level": "L4",
+    "response": {
+      "raw_text": "To solve this logic puzzle, we need to carefully analyze each clue and constraint while considering the implications of who might be lying given that the guilty person always lies. Let's break down the clues and constraints step by step:\n\n### Clues Recap:\n1. **If A is guilty, then B was at home.**\n2. **If B was at home, then C saw D at the scene.**\n3. **C says D was not at the scene.**\n4. **D says E was with F.**\n5. **E says F was alone.**\n6. **If F was alone, then A is not guilty.**\n\n### Constraints:\n- Exactly one person is guilty.\n- Exactly two of statements 3-5 are lies.\n- The guilty person always lies.\n\n### Analysis:\n\n#### Step 1: Identify Potential Lies Among Statements 3-5\nSince exactly two of statements 3-5 are lies, let's consider different scenarios:\n\n1. **Scenario 1: Statements 3 and 4 are lies**\n   - **C says D was not at the scene (False)** → D was at the scene.\n   - **D says E was with F (False)** → E was not with F.\n\n2. **Scenario 2: Statements 3 and 5 are lies**\n   - **C says D was not at the scene (False)** → D was at the scene.\n   - **E says F was alone (False)** → F was not alone.\n\n3. **Scenario 3: Statements 4 and 5 are lies**\n   - **D says E was with F (False)** → E was not with F.\n   - **E says F was alone (False)** → F was not alone.\n\n#### Step 2: Evaluate Each Scenario Against Clues\n\n**Scenario 1: Statements 3 and 4 are lies**\n- **D was at the scene** (from clue 3 being false).\n- **E was not with F** (from clue 4 being false).\n\nGiven these:\n- **Clue 2**: If B was at home, then C saw D at the scene. Since D is confirmed at the scene, B must have been at home for this to hold true.\n- **Clue 1**: If A is guilty, then B was at home. Since B was at home, A could be guilty.\n- **Clue 6**: If F was alone, then A is not guilty. Since F cannot be alone (from clue 5 being true), A could still be guilty.\n\nHowever, if A is guilty:\n- A lies, so Clue 1 does not necessarily hold strictly, but B being at home aligns with A being guilty.\n- C lying about D means D was indeed at the scene, consistent with A being guilty.\n\n**Scenario 2: Statements 3 and 5 are lies**\n- **D was at the scene** (from clue 3 being false).\n- **F was not alone** (from clue 5 being false).\n\nGiven these:\n- **Clue 2**: If B was at home, then C saw D at the scene. Since D is confirmed at the scene, B must have been at home.\n- **Clue 4**: E was not with F (true).\n- **Clue 6**: If F was alone, then A is not guilty. Since F is not alone, this doesn't directly contradict A being guilty.\n\nHowever, if D was at the scene and lying (guilty person lies):\n- This scenario complicates as multiple suspects could fit without clear contradiction unless further constraints align uniquely.\n\n**Scenario 3: Statements 4 and 5 are lies**\n- **E was not with F** (from clue 4 being false).\n- **F was not alone** (from clue 5 being false).\n\nGiven these:\n- **Clue 2**: If B was at home, then C saw D at the scene. No direct contradiction here.\n- **Clue 1**: If A is guilty, then B was at home (still holds).\n- **Clue 6**: If F was alone, then A is not guilty (F not alone doesn't directly contradict A being guilty).\n\n### Conclusion:\n**Scenario 1** provides the most coherent solution:\n- **D was at the scene** (consistent with lying).\n- **B was at home** (consistent with A being guilty).\n- **A lying aligns with all clues** without contradiction.\n\n**Guilty Person:** **A**\n**Lies (Statements 3 and 4):** Statements 3 (\"C says D was not at the scene\") and 4 (\"D says E was with F\") are lies.\n\n### Solvability:\nThe puzzle has a **unique solution** based on Scenario 1, where A is identified as the guilty person, and Statements 3 and 4 are determined to be lies. This scenario aligns all clues and constraints without ambiguity.",
+      "length": 3727
+    },
+    "score": 1.0
+  }
+]
