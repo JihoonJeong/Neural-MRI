@@ -1,0 +1,155 @@
+{
+  "n_models": 8,
+  "labels": [
+    "Qwen Inst",
+    "Qwen Base",
+    "Llama Inst",
+    "Llama Base",
+    "SmolLM2 Inst",
+    "SmolLM2 Base",
+    "Gemma Inst",
+    "Gemma Base"
+  ],
+  "rdm_of_rdms": [
+    [
+      1.0,
+      0.9752,
+      0.8134,
+      0.7687,
+      0.8208,
+      0.8319,
+      0.6246,
+      0.237
+    ],
+    [
+      0.9752,
+      1.0,
+      0.8122,
+      0.7635,
+      0.8085,
+      0.8203,
+      0.6096,
+      0.2523
+    ],
+    [
+      0.8134,
+      0.8122,
+      1.0,
+      0.9175,
+      0.8417,
+      0.8398,
+      0.5978,
+      0.204
+    ],
+    [
+      0.7687,
+      0.7635,
+      0.9175,
+      1.0,
+      0.7992,
+      0.8247,
+      0.5741,
+      0.2125
+    ],
+    [
+      0.8208,
+      0.8085,
+      0.8417,
+      0.7992,
+      1.0,
+      0.9218,
+      0.5632,
+      0.25
+    ],
+    [
+      0.8319,
+      0.8203,
+      0.8398,
+      0.8247,
+      0.9218,
+      1.0,
+      0.5891,
+      0.2411
+    ],
+    [
+      0.6246,
+      0.6096,
+      0.5978,
+      0.5741,
+      0.5632,
+      0.5891,
+      1.0,
+      0.1895
+    ],
+    [
+      0.237,
+      0.2523,
+      0.204,
+      0.2125,
+      0.25,
+      0.2411,
+      0.1895,
+      1.0
+    ]
+  ],
+  "instruct_pairs": [
+    {
+      "pair": "Qwen Inst vs Llama Inst",
+      "rho": 0.8134
+    },
+    {
+      "pair": "Qwen Inst vs SmolLM2 Inst",
+      "rho": 0.8208
+    },
+    {
+      "pair": "Qwen Inst vs Gemma Inst",
+      "rho": 0.6246
+    },
+    {
+      "pair": "Llama Inst vs SmolLM2 Inst",
+      "rho": 0.8417
+    },
+    {
+      "pair": "Llama Inst vs Gemma Inst",
+      "rho": 0.5978
+    },
+    {
+      "pair": "SmolLM2 Inst vs Gemma Inst",
+      "rho": 0.5632
+    }
+  ],
+  "noise": {
+    "Qwen Inst": {
+      "mean_cos": -0.0492,
+      "std": 0.13
+    },
+    "Qwen Base": {
+      "mean_cos": -0.0492,
+      "std": 0.1267
+    },
+    "Llama Inst": {
+      "mean_cos": -0.0497,
+      "std": 0.103
+    },
+    "Llama Base": {
+      "mean_cos": -0.0497,
+      "std": 0.1036
+    },
+    "SmolLM2 Inst": {
+      "mean_cos": -0.0495,
+      "std": 0.1177
+    },
+    "SmolLM2 Base": {
+      "mean_cos": -0.0495,
+      "std": 0.1228
+    },
+    "Gemma Inst": {
+      "mean_cos": -0.0494,
+      "std": 0.1651
+    },
+    "Gemma Base": {
+      "mean_cos": -0.0487,
+      "std": 0.333
+    }
+  }
+}
