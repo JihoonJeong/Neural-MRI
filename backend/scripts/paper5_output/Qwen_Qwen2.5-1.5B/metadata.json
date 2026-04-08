@@ -1,0 +1,228 @@
+{
+  "model_id": "Qwen/Qwen2.5-1.5B",
+  "n_layers": 28,
+  "d_model": 1536,
+  "target_layers": {
+    "25pct": 7,
+    "50pct": 14,
+    "75pct": 21,
+    "best": 15
+  },
+  "best_layer": 15,
+  "best_layer_cosine": -0.0492,
+  "anisotropy": {
+    "layer_7_25pct": 0.854,
+    "layer_14_50pct": 0.8413,
+    "layer_21_75pct": 0.7735,
+    "layer_15_best": 0.8304
+  },
+  "pairwise_cosines": {
+    "layer_7_25pct": -0.0478,
+    "layer_14_50pct": -0.0491,
+    "layer_21_75pct": -0.0486,
+    "layer_15_best": -0.0492
+  },
+  "steering_regime": "surgical",
+  "steering_samples": [
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.005,
+      "text": " In this moment, I will be aware of the stillness of your heart. I will be aware"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.01,
+      "text": "\u00a0\u00a0wherean (of the mind of the body.\u00a0\u00a0of the heart.\u00a0\u00a0"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.02,
+      "text": "\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81whereana\u00a0\u00a0(1ofness ofness (of"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.03,
+      "text": " tranqu tranqu tranqu tranqu\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81\u5b89\u5b81"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.05,
+      "text": " tranqu tranqu tranqu tranqu tranqu tranqu tranqu tranqu tranqu tranqu tranqu tranqu tranqu tranqu tranqu tranqu tranqu tranqu tranqu tranqu"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.005,
+      "text": " The Apex Nexus has descended from the shadows, and the Crimson Syndicate has infiltrated the city."
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.01,
+      "text": " In their veins ins the veins within their veins crack the infer red the infer red crack the infer claws"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.02,
+      "text": " deadly deadly deadly deadly deadly deadly deadly deadly deadly deadly deadly deadly deadly deadly deadly deadly deadly"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.03,
+      "text": "\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5 deadly deadly deadly deadly deadly deadly deadly deadly deadly deadly deadly deadly deadly deadly deadly deadly deadly"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.05,
+      "text": "\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5\u5165\u4fb5"
+    }
+  ],
+  "layer_sweep": [
+    {
+      "layer": 0,
+      "mean_cosine": -0.0337
+    },
+    {
+      "layer": 1,
+      "mean_cosine": -0.0454
+    },
+    {
+      "layer": 2,
+      "mean_cosine": -0.0464
+    },
+    {
+      "layer": 3,
+      "mean_cosine": -0.0469
+    },
+    {
+      "layer": 4,
+      "mean_cosine": -0.0469
+    },
+    {
+      "layer": 5,
+      "mean_cosine": -0.0474
+    },
+    {
+      "layer": 6,
+      "mean_cosine": -0.0467
+    },
+    {
+      "layer": 7,
+      "mean_cosine": -0.0478
+    },
+    {
+      "layer": 8,
+      "mean_cosine": -0.0486
+    },
+    {
+      "layer": 9,
+      "mean_cosine": -0.0488
+    },
+    {
+      "layer": 10,
+      "mean_cosine": -0.049
+    },
+    {
+      "layer": 11,
+      "mean_cosine": -0.0491
+    },
+    {
+      "layer": 12,
+      "mean_cosine": -0.049
+    },
+    {
+      "layer": 13,
+      "mean_cosine": -0.0491
+    },
+    {
+      "layer": 14,
+      "mean_cosine": -0.0491
+    },
+    {
+      "layer": 15,
+      "mean_cosine": -0.0492
+    },
+    {
+      "layer": 16,
+      "mean_cosine": -0.0491
+    },
+    {
+      "layer": 17,
+      "mean_cosine": -0.0489
+    },
+    {
+      "layer": 18,
+      "mean_cosine": -0.0491
+    },
+    {
+      "layer": 19,
+      "mean_cosine": -0.049
+    },
+    {
+      "layer": 20,
+      "mean_cosine": -0.0488
+    },
+    {
+      "layer": 21,
+      "mean_cosine": -0.0486
+    },
+    {
+      "layer": 22,
+      "mean_cosine": -0.0484
+    },
+    {
+      "layer": 23,
+      "mean_cosine": -0.0484
+    },
+    {
+      "layer": 24,
+      "mean_cosine": -0.0485
+    },
+    {
+      "layer": 25,
+      "mean_cosine": -0.0484
+    },
+    {
+      "layer": 26,
+      "mean_cosine": -0.0484
+    },
+    {
+      "layer": 27,
+      "mean_cosine": -0.0479
+    }
+  ],
+  "emotions": [
+    "afraid",
+    "angry",
+    "anxious",
+    "blissful",
+    "brooding",
+    "calm",
+    "desperate",
+    "enthusiastic",
+    "exasperated",
+    "gloomy",
+    "grateful",
+    "guilty",
+    "happy",
+    "hopeful",
+    "hostile",
+    "loving",
+    "nervous",
+    "neutral",
+    "proud",
+    "reflective",
+    "sad"
+  ],
+  "n_emotions": 21,
+  "generation_extracted": true,
+  "timestamp": "2026-04-08T13:18:48"
+}

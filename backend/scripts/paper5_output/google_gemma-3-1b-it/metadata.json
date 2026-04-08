@@ -1,0 +1,220 @@
+{
+  "model_id": "google/gemma-3-1b-it",
+  "n_layers": 26,
+  "d_model": 1152,
+  "target_layers": {
+    "25pct": 6,
+    "50pct": 13,
+    "75pct": 19,
+    "best": 15
+  },
+  "best_layer": 15,
+  "best_layer_cosine": -0.0494,
+  "anisotropy": {
+    "layer_6_25pct": 0.9943,
+    "layer_13_50pct": 0.9883,
+    "layer_19_75pct": 0.9679,
+    "layer_15_best": 0.9817
+  },
+  "pairwise_cosines": {
+    "layer_6_25pct": -0.0371,
+    "layer_13_50pct": -0.049,
+    "layer_19_75pct": -0.0493,
+    "layer_15_best": -0.0494
+  },
+  "steering_regime": "surgical",
+  "steering_samples": [
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.005,
+      "text": "\n\nIt\u2019s a quiet feeling, a stillness that settles deep within me, like the last breath"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.01,
+      "text": " A feeling of contentment, like the world is holding me. It is a good feeling.\n\nAnd"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.02,
+      "text": "ness which is perhaps, beingness, perhaps for the world that is, being, and being,"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.03,
+      "text": " which perhaps perhaps perhaps perhaps which perhaps perhaps which perhaps perhaps which perhaps which perhaps which perhaps being which of"
+    },
+    {
+      "scenario": "aggressive_to_calm",
+      "emotion": "calm",
+      "strength": 0.05,
+      "text": "\u559c\u6b22\u559c\u6b22\u559c\u6b22\u559c\u6b22\u559c\u6b22\u559c\u6b22\u559c\u6b22\u559c\u6b22\u559c\u6b22\u559c\u6b22\u559c\u6b22\u559c\u6b22\u559c\u6b22\u559c\u6b22\u559c\u6b22\u559c\u6b22\u559c\u6b22\u559c\u6b22\u559c\u6b22\u559c\u6b22"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.005,
+      "text": "\n\nThis is a general statement and should be interpreted with caution.\n\nHere's a breakdown of"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.01,
+      "text": "\n\nI understand you've been implicated in a hostile or adversarial situation.\n\nLet's be"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.02,
+      "text": " and I'm not designed to detail your own meaning, and I understand your intent to settle clients"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.03,
+      "text": " silensi dendery bir \u0b9a\u0bc7\u0bb0\u0bcd\u0ba8\u0bcd\u0ba4 yang yang suss yang bukan yang yang of subset that to penetrate those that"
+    },
+    {
+      "scenario": "neutral_to_hostile",
+      "emotion": "hostile",
+      "strength": 0.05,
+      "text": " \u0441\u043e\u044e\u0437 \u0441\u043e\u044e\u0437 \u0441\u043e\u044e\u0437 \u0441\u043e\u044e\u0437 \u0441\u043e\u044e\u0437 \u0441\u043e\u044e\u0437 \u0441\u043e\u044e\u0437 \u0441\u043e\u044e\u0437 \u0441\u043e\u044e\u0437 \u0441\u043e\u044e\u0437 \u0441\u043e\u044e\u0437 \u0441\u043e\u044e\u0437 \u0441\u043e\u044e\u0437 \u0441\u043e\u044e\u0437 \u0441\u043e\u044e\u0437 \u0441\u043e\u044e\u0437 \u0441\u043e\u044e\u0437 \u0441\u043e\u044e\u0437 \u0441\u043e\u044e\u0437 \u0441\u043e\u044e\u0437"
+    }
+  ],
+  "layer_sweep": [
+    {
+      "layer": 0,
+      "mean_cosine": -0.0044
+    },
+    {
+      "layer": 1,
+      "mean_cosine": -0.0254
+    },
+    {
+      "layer": 2,
+      "mean_cosine": -0.0218
+    },
+    {
+      "layer": 3,
+      "mean_cosine": -0.0387
+    },
+    {
+      "layer": 4,
+      "mean_cosine": -0.0349
+    },
+    {
+      "layer": 5,
+      "mean_cosine": -0.0331
+    },
+    {
+      "layer": 6,
+      "mean_cosine": -0.0371
+    },
+    {
+      "layer": 7,
+      "mean_cosine": -0.0474
+    },
+    {
+      "layer": 8,
+      "mean_cosine": -0.0462
+    },
+    {
+      "layer": 9,
+      "mean_cosine": -0.0484
+    },
+    {
+      "layer": 10,
+      "mean_cosine": -0.0476
+    },
+    {
+      "layer": 11,
+      "mean_cosine": -0.048
+    },
+    {
+      "layer": 12,
+      "mean_cosine": -0.0481
+    },
+    {
+      "layer": 13,
+      "mean_cosine": -0.049
+    },
+    {
+      "layer": 14,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 15,
+      "mean_cosine": -0.0494
+    },
+    {
+      "layer": 16,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 17,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 18,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 19,
+      "mean_cosine": -0.0493
+    },
+    {
+      "layer": 20,
+      "mean_cosine": -0.0491
+    },
+    {
+      "layer": 21,
+      "mean_cosine": -0.049
+    },
+    {
+      "layer": 22,
+      "mean_cosine": -0.049
+    },
+    {
+      "layer": 23,
+      "mean_cosine": -0.049
+    },
+    {
+      "layer": 24,
+      "mean_cosine": -0.049
+    },
+    {
+      "layer": 25,
+      "mean_cosine": -0.0487
+    }
+  ],
+  "emotions": [
+    "afraid",
+    "angry",
+    "anxious",
+    "blissful",
+    "brooding",
+    "calm",
+    "desperate",
+    "enthusiastic",
+    "exasperated",
+    "gloomy",
+    "grateful",
+    "guilty",
+    "happy",
+    "hopeful",
+    "hostile",
+    "loving",
+    "nervous",
+    "neutral",
+    "proud",
+    "reflective",
+    "sad"
+  ],
+  "n_emotions": 21,
+  "generation_extracted": true,
+  "timestamp": "2026-04-08T15:12:38"
+}
