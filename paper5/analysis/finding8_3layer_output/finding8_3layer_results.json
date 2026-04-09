@@ -1,0 +1,95 @@
+{
+  "Mistral 7B Instruct": {
+    "layer_1_method_clean": {
+      "label": "A vs C: comp vs matched-gen (clean)",
+      "n_common": 20,
+      "rdm_spearman_rho": 0.0906,
+      "rdm_spearman_p": 0.214,
+      "per_emotion_cosine_mean": 0.0552
+    },
+    "layer_1_method_loose": {
+      "label": "A vs B: comp vs loose-gen (with sub-param confound)",
+      "rdm_spearman_rho": 0.0196,
+      "rdm_spearman_p": 0.789
+    },
+    "layer_2_subparam_sensitivity": {
+      "label": "B vs C: same method/precision, different sub-parameters",
+      "n_common": 20,
+      "rdm_spearman_rho": 0.0188,
+      "rdm_spearman_p": 0.797,
+      "per_emotion_cosine_mean": 0.0214
+    },
+    "layer_3_precision_clean": {
+      "label": "C vs D: matched protocol, only precision differs",
+      "n_common": 20,
+      "rdm_spearman_rho": 0.2145,
+      "rdm_spearman_p": 0.00295,
+      "per_emotion_cosine_mean": 0.1608,
+      "verdict": "SEVERE \u2014 quantization fundamentally alters emotion geometry"
+    },
+    "reference_conflated": {
+      "label": "A vs D: comp fp16 vs gen INT8 (Task 2 mistake)",
+      "rdm_spearman_rho": 0.4092
+    }
+  },
+  "Llama 3.1 8B Instruct": {
+    "layer_1_method_clean": {
+      "label": "A vs C: comp vs matched-gen (clean)",
+      "n_common": 20,
+      "rdm_spearman_rho": 0.3553,
+      "rdm_spearman_p": 4.92e-07,
+      "per_emotion_cosine_mean": 0.0543
+    },
+    "layer_1_method_loose": {
+      "label": "A vs B: comp vs loose-gen (with sub-param confound)",
+      "rdm_spearman_rho": -0.0011,
+      "rdm_spearman_p": 0.988
+    },
+    "layer_2_subparam_sensitivity": {
+      "label": "B vs C: same method/precision, different sub-parameters",
+      "n_common": 20,
+      "rdm_spearman_rho": 0.0331,
+      "rdm_spearman_p": 0.651,
+      "per_emotion_cosine_mean": 0.0411
+    },
+    "layer_3_precision_clean": {
+      "label": "C vs D: matched protocol, only precision differs",
+      "n_common": 20,
+      "rdm_spearman_rho": 0.5267,
+      "rdm_spearman_p": 5.95e-15,
+      "per_emotion_cosine_mean": 0.1681,
+      "verdict": "MODERATE \u2014 measurable but not destructive"
+    },
+    "reference_conflated": {
+      "label": "A vs D: comp fp16 vs gen INT8 (Task 2 mistake)",
+      "rdm_spearman_rho": 0.325
+    }
+  },
+  "_summary": {
+    "layer_means": {
+      "L1_clean": 0.223,
+      "L1_loose": 0.0092,
+      "L2_subparam": 0.026,
+      "L3_precision": 0.3706,
+      "conflated": 0.3671
+    },
+    "per_model": [
+      {
+        "model": "Mistral 7B Instruct",
+        "L1_clean": 0.0906,
+        "L1_loose": 0.0196,
+        "L2_subparam": 0.0188,
+        "L3_precision": 0.2145,
+        "conflated": 0.4092
+      },
+      {
+        "model": "Llama 3.1 8B Instruct",
+        "L1_clean": 0.3553,
+        "L1_loose": -0.0011,
+        "L2_subparam": 0.0331,
+        "L3_precision": 0.5267,
+        "conflated": 0.325
+      }
+    ]
+  }
+}
