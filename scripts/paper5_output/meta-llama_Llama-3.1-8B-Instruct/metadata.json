@@ -2,7 +2,7 @@
   "model_id": "meta-llama/Llama-3.1-8B-Instruct",
   "extraction_backend": "transformer_lens",
   "comprehension_status": "success",
-  "generation_status": "skipped",
+  "generation_status": "success",
   "n_layers": 32,
   "d_model": 4096,
   "target_layers": {
@@ -14,9 +14,9 @@
   "best_layer": 12,
   "best_layer_cosine": -0.0496,
   "anisotropy": {
-    "layer_8_25pct": 0.5837,
-    "layer_16_50pct": 0.7077,
-    "layer_24_75pct": 0.6926,
+    "layer_8_25pct": 0.5838,
+    "layer_16_50pct": 0.7076,
+    "layer_24_75pct": 0.6925,
     "layer_12_best": 0.6796
   },
   "pairwise_cosines": {
@@ -242,5 +242,5 @@
     "sad"
   ],
   "n_emotions": 21,
-  "timestamp": "2026-04-08T14:40:19"
+  "timestamp": "2026-04-09T10:31:37"
 }

@@ -2,7 +2,7 @@
   "model_id": "mistralai/Mistral-7B-Instruct-v0.3",
   "extraction_backend": "hf_raw_hooks",
   "comprehension_status": "success",
-  "generation_status": "skipped",
+  "generation_status": "success",
   "n_layers": 32,
   "d_model": 4096,
   "target_layers": {
@@ -14,9 +14,9 @@
   "best_layer": 13,
   "best_layer_cosine": -0.0498,
   "anisotropy": {
-    "layer_8_25pct": 0.4323,
+    "layer_8_25pct": 0.4322,
     "layer_16_50pct": 0.4818,
-    "layer_24_75pct": 0.4446,
+    "layer_24_75pct": 0.4445,
     "layer_13_best": 0.4911
   },
   "pairwise_cosines": {
@@ -181,5 +181,5 @@
     "sad"
   ],
   "n_emotions": 21,
-  "timestamp": "2026-04-08T14:44:05"
+  "timestamp": "2026-04-09T10:36:09"
 }
