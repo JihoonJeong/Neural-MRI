@@ -1,0 +1,188 @@
+{
+  "Mistral 7B Instruct": {
+    "analysis_A_method_effect": {
+      "label": "fp16 comp vs fp16 gen (precision controlled)",
+      "n_common": 20,
+      "per_emotion_cosine": {
+        "mean": 0.0401,
+        "median": 0.0405,
+        "min": -0.0411,
+        "max": 0.1168,
+        "values": {
+          "afraid": 0.0558,
+          "angry": 0.0017,
+          "anxious": 0.039,
+          "blissful": 0.0315,
+          "brooding": 0.0154,
+          "calm": 0.0634,
+          "desperate": 0.0448,
+          "enthusiastic": 0.0266,
+          "exasperated": 0.0118,
+          "gloomy": 0.0763,
+          "grateful": 0.0139,
+          "guilty": 0.0741,
+          "happy": -0.0125,
+          "hopeful": 0.0497,
+          "hostile": 0.1168,
+          "loving": 0.0737,
+          "nervous": 0.0807,
+          "proud": 0.0412,
+          "reflective": -0.0411,
+          "sad": 0.0398
+        }
+      },
+      "rdm_spearman": {
+        "rho": 0.0196,
+        "p": 0.789
+      },
+      "internal_anisotropy_fp16_comp": -0.0493,
+      "internal_anisotropy_fp16_gen": -0.0523
+    },
+    "analysis_B_precision_effect": {
+      "label": "fp16 gen vs INT8 gen (method controlled)",
+      "n_common": 20,
+      "per_emotion_cosine": {
+        "mean": 0.0166,
+        "median": 0.0351,
+        "min": -0.1008,
+        "max": 0.0929,
+        "values": {
+          "afraid": 0.0364,
+          "angry": 0.0929,
+          "anxious": 0.0196,
+          "blissful": 0.0593,
+          "brooding": 0.0695,
+          "calm": -0.053,
+          "desperate": -0.0863,
+          "enthusiastic": 0.0022,
+          "exasperated": 0.0764,
+          "gloomy": 0.089,
+          "grateful": -0.0174,
+          "guilty": -0.1008,
+          "happy": -0.0075,
+          "hopeful": 0.048,
+          "hostile": -0.0512,
+          "loving": -0.0166,
+          "nervous": 0.0423,
+          "proud": 0.0393,
+          "reflective": 0.0338,
+          "sad": 0.0553
+        }
+      },
+      "rdm_spearman": {
+        "rho": 0.1567,
+        "p": 0.0308
+      },
+      "internal_anisotropy_fp16_gen": -0.0523,
+      "internal_anisotropy_int8_gen": -0.0524
+    },
+    "analysis_C_conflated_reference": {
+      "label": "fp16 comp vs INT8 gen (Task 2 \u2014 conflated)",
+      "rdm_spearman": {
+        "rho": 0.4092,
+        "p": 4.56e-09
+      }
+    },
+    "interaction": {
+      "method_rho": 0.0196,
+      "precision_rho": 0.1567,
+      "conflated_observed_rho": 0.4092,
+      "predicted_multiplicative": 0.0031,
+      "residual": 0.4061,
+      "verdict": "interaction"
+    }
+  },
+  "Llama 3.1 8B Instruct": {
+    "analysis_A_method_effect": {
+      "label": "fp16 comp vs fp16 gen (precision controlled)",
+      "n_common": 20,
+      "per_emotion_cosine": {
+        "mean": 0.0488,
+        "median": 0.0345,
+        "min": -0.134,
+        "max": 0.2266,
+        "values": {
+          "afraid": 0.0103,
+          "angry": 0.202,
+          "anxious": 0.0916,
+          "blissful": -0.0347,
+          "brooding": 0.061,
+          "calm": 0.2266,
+          "desperate": 0.0548,
+          "enthusiastic": 0.0347,
+          "exasperated": 0.1268,
+          "gloomy": 0.0456,
+          "grateful": -0.0142,
+          "guilty": 0.0289,
+          "happy": 0.0421,
+          "hopeful": -0.134,
+          "hostile": -0.0002,
+          "loving": -0.0193,
+          "nervous": 0.0342,
+          "proud": 0.0325,
+          "reflective": 0.1767,
+          "sad": 0.0103
+        }
+      },
+      "rdm_spearman": {
+        "rho": -0.0011,
+        "p": 0.988
+      },
+      "internal_anisotropy_fp16_comp": -0.0488,
+      "internal_anisotropy_fp16_gen": -0.0516
+    },
+    "analysis_B_precision_effect": {
+      "label": "fp16 gen vs INT8 gen (method controlled)",
+      "n_common": 20,
+      "per_emotion_cosine": {
+        "mean": 0.0411,
+        "median": 0.0525,
+        "min": -0.059,
+        "max": 0.1249,
+        "values": {
+          "afraid": 0.0387,
+          "angry": 0.0703,
+          "anxious": 0.0513,
+          "blissful": -0.0153,
+          "brooding": 0.0836,
+          "calm": 0.0578,
+          "desperate": -0.0431,
+          "enthusiastic": -0.0054,
+          "exasperated": 0.0542,
+          "gloomy": 0.0772,
+          "grateful": 0.0771,
+          "guilty": 0.0537,
+          "happy": 0.0967,
+          "hopeful": 0.0224,
+          "hostile": -0.059,
+          "loving": 0.0552,
+          "nervous": 0.1249,
+          "proud": 0.0414,
+          "reflective": -0.0083,
+          "sad": 0.0494
+        }
+      },
+      "rdm_spearman": {
+        "rho": 0.1036,
+        "p": 0.155
+      },
+      "internal_anisotropy_fp16_gen": -0.0516,
+      "internal_anisotropy_int8_gen": -0.0525
+    },
+    "analysis_C_conflated_reference": {
+      "label": "fp16 comp vs INT8 gen (Task 2 \u2014 conflated)",
+      "rdm_spearman": {
+        "rho": 0.325,
+        "p": 4.77e-06
+      }
+    },
+    "interaction": {
+      "method_rho": -0.0011,
+      "precision_rho": 0.1036,
+      "conflated_observed_rho": 0.325,
+      "predicted_multiplicative": -0.0001,
+      "residual": 0.3251,
+      "verdict": "interaction"
+    }
+  }
+}
