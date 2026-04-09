@@ -39,7 +39,7 @@ ALL_MODELS = [
     "meta-llama_Llama-3.2-3B",
     "google_gemma-3-1b-it",
     "google_gemma-3-1b-pt",
-    "mistralai_Mistral-7B-v0.1",
+    "mistralai_Mistral-7B-v0.3",
     "mistralai_Mistral-7B-Instruct-v0.3",
     "meta-llama_Llama-3.1-8B",
     "meta-llama_Llama-3.1-8B-Instruct",
@@ -64,7 +64,7 @@ SHORT_NAMES = {
     "meta-llama_Llama-3.2-3B": "Llama3.2-3B-B",
     "google_gemma-3-1b-it": "Gemma1B-IT",
     "google_gemma-3-1b-pt": "Gemma1B-PT",
-    "mistralai_Mistral-7B-v0.1": "Mistral7B-B",
+    "mistralai_Mistral-7B-v0.3": "Mistral7B-B",
     "mistralai_Mistral-7B-Instruct-v0.3": "Mistral7B-I",
     "meta-llama_Llama-3.1-8B": "Llama3.1-8B-B",
     "meta-llama_Llama-3.1-8B-Instruct": "Llama3.1-8B-I",
@@ -79,7 +79,7 @@ MODEL_SIZES = {
     "meta-llama_Llama-3.2-3B": 3.0,
     "google_gemma-3-1b-it": 1.0,
     "google_gemma-3-1b-pt": 1.0,
-    "mistralai_Mistral-7B-v0.1": 7.0,
+    "mistralai_Mistral-7B-v0.3": 7.0,
     "mistralai_Mistral-7B-Instruct-v0.3": 7.0,
     "meta-llama_Llama-3.1-8B": 8.0,
     "meta-llama_Llama-3.1-8B-Instruct": 8.0,
@@ -236,7 +236,7 @@ def task1_rdm_of_rdms(all_data: dict):
 
     # Check Luca's scenarios
     print("\n  Luca Scenario Check:")
-    mistral_idx = models.index("mistralai_Mistral-7B-v0.1") if "mistralai_Mistral-7B-v0.1" in models else None
+    mistral_idx = models.index("mistralai_Mistral-7B-v0.3") if "mistralai_Mistral-7B-v0.3" in models else None
     if mistral_idx is not None:
         tier1_candidates = ["Qwen_Qwen2.5-1.5B-Instruct", "meta-llama_Llama-3.2-3B-Instruct",
                             "HuggingFaceTB_SmolLM2-1.7B-Instruct"]
