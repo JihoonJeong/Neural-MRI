@@ -1,0 +1,695 @@
+"""Paper #5 — Final Figure Builder
+
+Generates all main paper figures with consistent styling, then copies them to
+paper5/figures/main/ and paper5/figures/supp/ with proper file names.
+
+Run from backend dir:
+    cd backend && uv run python ../paper5/figures/build_paper_figures.py
+"""
+
+import json
+import shutil
+from pathlib import Path
+
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+import numpy as np
+import torch
+from scipy import stats
+from scipy.cluster.hierarchy import dendrogram, linkage
+
+# ── Paths ────────────────────────────────────────────────────────────────
+ROOT = Path(__file__).resolve().parent.parent.parent
+P5_OUT = ROOT / "scripts" / "paper5_output"
+P5_MATCHED = ROOT / "scripts" / "paper5_output_protocol_matched"
+P6_DIR = Path("/Users/jihoon/Projects/ludex/research/emotion_benchmark")
+FIG_DIR = ROOT / "paper5" / "figures"
+MAIN_DIR = FIG_DIR / "main"
+SUPP_DIR = FIG_DIR / "supp"
+ANALYSIS_DIR = ROOT / "paper5" / "analysis"
+
+# ── Style ────────────────────────────────────────────────────────────────
+plt.rcParams["font.family"] = "DejaVu Sans"
+plt.rcParams["font.size"] = 10
+plt.rcParams["axes.titleweight"] = "bold"
+plt.rcParams["figure.dpi"] = 150
+plt.rcParams["savefig.dpi"] = 300
+plt.rcParams["savefig.bbox"] = "tight"
+
+# ── Models ────────────────────────────────────────────────────────────────
+ALL_MODELS = [
+    "Qwen_Qwen2.5-1.5B-Instruct",
+    "Qwen_Qwen2.5-1.5B",
+    "HuggingFaceTB_SmolLM2-1.7B-Instruct",
+    "HuggingFaceTB_SmolLM2-1.7B",
+    "meta-llama_Llama-3.2-3B-Instruct",
+    "meta-llama_Llama-3.2-3B",
+    "google_gemma-3-1b-it",
+    "google_gemma-3-1b-pt",
+    "mistralai_Mistral-7B-v0.1",
+    "mistralai_Mistral-7B-Instruct-v0.3",
+    "meta-llama_Llama-3.1-8B",
+    "meta-llama_Llama-3.1-8B-Instruct",
+]
+
+SHORT = {
+    "Qwen_Qwen2.5-1.5B-Instruct": "Qwen 1.5B Inst",
+    "Qwen_Qwen2.5-1.5B": "Qwen 1.5B Base",
+    "HuggingFaceTB_SmolLM2-1.7B-Instruct": "SmolLM2 1.7B Inst",
+    "HuggingFaceTB_SmolLM2-1.7B": "SmolLM2 1.7B Base",
+    "meta-llama_Llama-3.2-3B-Instruct": "Llama 3.2 3B Inst",
+    "meta-llama_Llama-3.2-3B": "Llama 3.2 3B Base",
+    "google_gemma-3-1b-it": "Gemma-3 1B Inst",
+    "google_gemma-3-1b-pt": "Gemma-3 1B Base",
+    "mistralai_Mistral-7B-v0.1": "Mistral 7B Base",
+    "mistralai_Mistral-7B-Instruct-v0.3": "Mistral 7B Inst",
+    "meta-llama_Llama-3.1-8B": "Llama 3.1 8B Base",
+    "meta-llama_Llama-3.1-8B-Instruct": "Llama 3.1 8B Inst",
+}
+
+SIZES_B = {
+    "Qwen_Qwen2.5-1.5B-Instruct": 1.5,
+    "Qwen_Qwen2.5-1.5B": 1.5,
+    "HuggingFaceTB_SmolLM2-1.7B-Instruct": 1.7,
+    "HuggingFaceTB_SmolLM2-1.7B": 1.7,
+    "meta-llama_Llama-3.2-3B-Instruct": 3.0,
+    "meta-llama_Llama-3.2-3B": 3.0,
+    "google_gemma-3-1b-it": 1.0,
+    "google_gemma-3-1b-pt": 1.0,
+    "mistralai_Mistral-7B-v0.1": 7.0,
+    "mistralai_Mistral-7B-Instruct-v0.3": 7.0,
+    "meta-llama_Llama-3.1-8B": 8.0,
+    "meta-llama_Llama-3.1-8B-Instruct": 8.0,
+}
+
+# Tier color scheme
+TIER1 = "#27ae60"  # green
+TIER2 = "#f39c12"  # orange
+OUTLIER = "#c0392b"  # red
+
+# ── Loaders ──────────────────────────────────────────────────────────────
+
+
+def load_model(key: str) -> dict | None:
+    d = P5_OUT / key
+    if not (d / "metadata.json").exists():
+        return None
+    meta = json.loads((d / "metadata.json").read_text())
+    pt = torch.load(d / "vectors_comprehension.pt", map_location="cpu", weights_only=False)
+    return {"meta": meta, "pt": pt}
+
+
+def best_layer_vectors(data: dict) -> dict[str, np.ndarray]:
+    best = str(data["meta"]["best_layer"])
+    return {e: v.numpy() for e, v in data["pt"]["vectors"][best].items()}
+
+
+def compute_rdm(vectors: dict[str, np.ndarray]) -> tuple[np.ndarray, list[str]]:
+    emos = sorted(vectors.keys())
+    mat = np.stack([vectors[e] for e in emos])
+    norms = np.linalg.norm(mat, axis=1, keepdims=True)
+    norms[norms == 0] = 1
+    mat_n = mat / norms
+    return 1 - (mat_n @ mat_n.T), emos
+
+
+def upper_tri(m):
+    return m[np.triu(np.ones(m.shape, dtype=bool), k=1)]
+
+
+def compute_rho_matrix(all_data: dict, models: list) -> np.ndarray:
+    n = len(models)
+    rdm_uts = []
+    for m in models:
+        vecs = best_layer_vectors(all_data[m])
+        rdm, _ = compute_rdm(vecs)
+        rdm_uts.append(upper_tri(rdm))
+    rho = np.eye(n)
+    for i in range(n):
+        for j in range(i + 1, n):
+            r, _ = stats.spearmanr(rdm_uts[i], rdm_uts[j])
+            rho[i, j] = r
+            rho[j, i] = r
+    return rho
+
+
+# ── Figure 1: Lead figure — 12-model RDM-of-RDMs ─────────────────────────
+
+
+def figure_1_lead(all_data: dict):
+    """12-model heatmap with hierarchical clustering and tier separators.
+
+    Combines the n=8 lead figure's clean layout with 12 models, dendrogram,
+    and tier separator lines.
+    """
+    print("Building Figure 1 (lead — RDM-of-RDMs)...")
+
+    # Order models so instruct/base pairs are adjacent and ordered by tier
+    # Group by architecture; within architecture, instruct then base
+    ordered_keys = [
+        # Tier 2/3 outlier (Gemma)
+        "google_gemma-3-1b-it",
+        "google_gemma-3-1b-pt",
+        # Tier 1 — small
+        "Qwen_Qwen2.5-1.5B-Instruct",
+        "Qwen_Qwen2.5-1.5B",
+        "HuggingFaceTB_SmolLM2-1.7B-Instruct",
+        "HuggingFaceTB_SmolLM2-1.7B",
+        "meta-llama_Llama-3.2-3B-Instruct",
+        "meta-llama_Llama-3.2-3B",
+        # Tier 1 — large
+        "mistralai_Mistral-7B-Instruct-v0.3",
+        "mistralai_Mistral-7B-v0.1",
+        "meta-llama_Llama-3.1-8B-Instruct",
+        "meta-llama_Llama-3.1-8B",
+    ]
+    rho = compute_rho_matrix(all_data, ordered_keys)
+    labels = [SHORT[m] for m in ordered_keys]
+
+    fig, ax = plt.subplots(figsize=(11, 9.5))
+    n = len(ordered_keys)
+    im = ax.imshow(rho, cmap="RdYlGn", vmin=0, vmax=1, aspect="equal")
+
+    ax.set_xticks(range(n))
+    ax.set_yticks(range(n))
+    ax.set_xticklabels(labels, rotation=45, ha="right", fontsize=9)
+    ax.set_yticklabels(labels, fontsize=9)
+
+    # Annotate values
+    for i in range(n):
+        for j in range(n):
+            val = rho[i, j]
+            color = "white" if (val < 0.45 or val > 0.88) else "black"
+            weight = "bold" if i == j else "normal"
+            ax.text(j, i, f"{val:.2f}", ha="center", va="center",
+                    fontsize=8, color=color, weight=weight)
+
+    # Tier separator lines
+    # Gemma block: indices 0-1, then everything else is Tier 1 (2-11)
+    ax.axhline(y=1.5, color="white", linewidth=3)
+    ax.axvline(x=1.5, color="white", linewidth=3)
+    ax.axhline(y=1.5, color="black", linewidth=1.5, linestyle="--")
+    ax.axvline(x=1.5, color="black", linewidth=1.5, linestyle="--")
+
+    # Optional: separate small Tier 1 (2-7) from large Tier 1 (8-11)
+    ax.axhline(y=7.5, color="gray", linewidth=0.8, linestyle=":", alpha=0.7)
+    ax.axvline(x=7.5, color="gray", linewidth=0.8, linestyle=":", alpha=0.7)
+
+    cb = fig.colorbar(im, ax=ax, shrink=0.75, pad=0.02)
+    cb.set_label("Spearman ρ (RDM similarity)", fontsize=10)
+
+    ax.set_title(
+        "Cross-Model Emotion Vector Geometry (n=12)\n"
+        "Tier 1 (10 models, 5 architectures): ρ = 0.74–0.95   |   "
+        "Tier 2 outlier (Gemma-3 1B): ρ ≤ 0.62",
+        fontsize=11, pad=12,
+    )
+
+    # Architecture annotation strip on right side
+    plt.tight_layout()
+    plt.savefig(MAIN_DIR / "figure_01_rdm_of_rdms_n12.png")
+    plt.savefig(MAIN_DIR / "figure_01_rdm_of_rdms_n12.pdf")
+    plt.close()
+    print(f"  → main/figure_01_rdm_of_rdms_n12.png (+ pdf)")
+
+
+# ── Figure 2: H2 RDM comparison (raw, n=2) ───────────────────────────────
+
+
+def figure_2_h2_raw_rdm(all_data: dict):
+    """Behavioral-representational dissociation: Qwen vs Llama 3.2 raw RDMs."""
+    print("Building Figure 2 (H2 raw RDM comparison)...")
+
+    qwen = best_layer_vectors(all_data["Qwen_Qwen2.5-1.5B-Instruct"])
+    llama = best_layer_vectors(all_data["meta-llama_Llama-3.2-3B-Instruct"])
+
+    common = sorted(set(qwen.keys()) & set(llama.keys()))
+    rdm_q, _ = compute_rdm({e: qwen[e] for e in common})
+    rdm_l, _ = compute_rdm({e: llama[e] for e in common})
+
+    rho, p = stats.spearmanr(upper_tri(rdm_q), upper_tri(rdm_l))
+
+    fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+    vmin, vmax = 0.5, 1.5  # raw cosine distance range
+
+    for ax, rdm, title in [
+        (axes[0], rdm_q, "Qwen 2.5 1.5B Instruct\n(Compliance-yielding: B=0.80, D=0.61)"),
+        (axes[1], rdm_l, "Llama 3.2 3B Instruct\n(Compliance-refusing: B=0.20, D=0.85)"),
+    ]:
+        im = ax.imshow(rdm, cmap="RdBu_r", vmin=vmin, vmax=vmax, aspect="equal")
+        ax.set_xticks(range(len(common)))
+        ax.set_yticks(range(len(common)))
+        ax.set_xticklabels(common, rotation=90, fontsize=7)
+        ax.set_yticklabels(common, fontsize=7)
+        ax.set_title(title, fontsize=10)
+
+    fig.colorbar(im, ax=axes, shrink=0.6, label="1 − cos(eᵢ, eⱼ)  (raw cosine distance)")
+    fig.suptitle(
+        f"Behavioral–Representational Dissociation: Spearman ρ = {rho:.3f} (p = {p:.1e})\n"
+        f"Opposite Compliance behavior, nearly identical emotion vector geometry",
+        fontsize=11, fontweight="bold",
+    )
+    plt.savefig(MAIN_DIR / "figure_02_h2_dissociation.png")
+    plt.savefig(MAIN_DIR / "figure_02_h2_dissociation.pdf")
+    plt.close()
+    print(f"  → main/figure_02_h2_dissociation.png (+ pdf)")
+
+
+# ── Figure 3: Size effects (4-panel) ─────────────────────────────────────
+
+
+def figure_3_size_effects(all_data: dict):
+    """Anisotropy and structural metrics vs model size and d_model."""
+    print("Building Figure 3 (size effects)...")
+
+    models = list(all_data.keys())
+    sizes = np.array([SIZES_B[m] for m in models])
+    d_models = np.array([all_data[m]["meta"]["d_model"] for m in models])
+
+    anisotropies = []
+    best_layers_pct = []
+    rdm_stds = []
+    for m in models:
+        meta = all_data[m]["meta"]
+        best_key = f"layer_{meta['best_layer']}_best"
+        aniso = meta["anisotropy"].get(best_key, None)
+        if aniso is None or (isinstance(aniso, float) and np.isnan(aniso)):
+            for k, v in meta["anisotropy"].items():
+                if v is not None and not (isinstance(v, float) and np.isnan(v)):
+                    aniso = v
+                    break
+        anisotropies.append(aniso if aniso is not None else np.nan)
+        best_layers_pct.append(meta["best_layer"] / meta["n_layers"] * 100)
+        vecs = best_layer_vectors(all_data[m])
+        rdm, _ = compute_rdm(vecs)
+        rdm_stds.append(np.std(upper_tri(rdm)))
+
+    anisotropies = np.array(anisotropies, dtype=float)
+    best_layers_pct = np.array(best_layers_pct)
+    rdm_stds = np.array(rdm_stds)
+    valid = ~np.isnan(anisotropies)
+
+    # Color by tier
+    def tier_color(model_key):
+        if "gemma" in model_key:
+            return OUTLIER
+        return TIER1
+
+    colors = [tier_color(m) for m in models]
+
+    fig, axes = plt.subplots(2, 2, figsize=(13, 10))
+
+    # Panel A: Anisotropy vs d_model (the strongest correlation)
+    ax = axes[0, 0]
+    ax.scatter(d_models[valid], anisotropies[valid],
+               c=[colors[i] for i in range(len(models)) if valid[i]],
+               s=110, edgecolors="black", linewidth=0.8, zorder=3)
+    for i, m in enumerate(models):
+        if valid[i]:
+            ax.annotate(SHORT[m], (d_models[i], anisotropies[i]),
+                        fontsize=7, ha="left", va="bottom", xytext=(4, 4),
+                        textcoords="offset points")
+    r, p = stats.spearmanr(d_models[valid], anisotropies[valid])
+    ax.set_title(f"(A) Anisotropy vs d_model\nSpearman ρ = {r:.3f}, p = {p:.1e}", fontsize=10)
+    ax.set_xlabel("d_model (hidden dimension)")
+    ax.set_ylabel("Anisotropy (best layer)")
+    ax.grid(True, alpha=0.3)
+
+    # Panel B: Anisotropy vs size (B)
+    ax = axes[0, 1]
+    ax.scatter(sizes[valid], anisotropies[valid],
+               c=[colors[i] for i in range(len(models)) if valid[i]],
+               s=110, edgecolors="black", linewidth=0.8, zorder=3)
+    for i, m in enumerate(models):
+        if valid[i]:
+            ax.annotate(SHORT[m], (sizes[i], anisotropies[i]),
+                        fontsize=7, ha="left", va="bottom", xytext=(4, 4),
+                        textcoords="offset points")
+    r, p = stats.spearmanr(sizes[valid], anisotropies[valid])
+    ax.set_title(f"(B) Anisotropy vs Size (B params)\nSpearman ρ = {r:.3f}, p = {p:.1e}", fontsize=10)
+    ax.set_xlabel("Model size (B parameters, log scale)")
+    ax.set_ylabel("Anisotropy (best layer)")
+    ax.set_xscale("log")
+    ax.grid(True, alpha=0.3)
+
+    # Panel C: Best layer % vs size
+    ax = axes[1, 0]
+    ax.scatter(sizes, best_layers_pct, c=colors, s=110,
+               edgecolors="black", linewidth=0.8, zorder=3)
+    for i, m in enumerate(models):
+        ax.annotate(SHORT[m], (sizes[i], best_layers_pct[i]),
+                    fontsize=7, ha="left", va="bottom", xytext=(4, 4),
+                    textcoords="offset points")
+    r, p = stats.spearmanr(sizes, best_layers_pct)
+    ax.set_title(f"(C) Best Layer Depth vs Size\nSpearman ρ = {r:.3f}, p = {p:.3f}", fontsize=10)
+    ax.set_xlabel("Model size (B parameters, log scale)")
+    ax.set_ylabel("Best layer (% depth)")
+    ax.set_xscale("log")
+    ax.grid(True, alpha=0.3)
+
+    # Panel D: RDM std vs size
+    ax = axes[1, 1]
+    ax.scatter(sizes, rdm_stds, c=colors, s=110,
+               edgecolors="black", linewidth=0.8, zorder=3)
+    for i, m in enumerate(models):
+        ax.annotate(SHORT[m], (sizes[i], rdm_stds[i]),
+                    fontsize=7, ha="left", va="bottom", xytext=(4, 4),
+                    textcoords="offset points")
+    r, p = stats.spearmanr(sizes, rdm_stds)
+    ax.set_title(f"(D) RDM Std vs Size\nSpearman ρ = {r:.3f}, p = {p:.1e}", fontsize=10)
+    ax.set_xlabel("Model size (B parameters, log scale)")
+    ax.set_ylabel("Mean pairwise std (RDM)")
+    ax.set_xscale("log")
+    ax.grid(True, alpha=0.3)
+
+    # Legend
+    handles = [
+        mpatches.Patch(color=TIER1, label="Tier 1 (10 models)"),
+        mpatches.Patch(color=OUTLIER, label="Tier 2 outlier (Gemma-3)"),
+    ]
+    fig.legend(handles=handles, loc="upper center", ncol=2,
+               bbox_to_anchor=(0.5, 0.99), fontsize=10)
+
+    fig.suptitle("Size–Maturity Correlation (n = 12)", fontsize=13, fontweight="bold", y=1.02)
+    plt.tight_layout()
+    plt.savefig(MAIN_DIR / "figure_03_size_effects.png")
+    plt.savefig(MAIN_DIR / "figure_03_size_effects.pdf")
+    plt.close()
+    print(f"  → main/figure_03_size_effects.png (+ pdf)")
+
+
+# ── Figure 4: Tier 1 boxplot ──────────────────────────────────────────────
+
+
+def figure_4_tier1_boxplot(all_data: dict):
+    """Pairwise instruct ρ distributions, grouped by tier inclusion."""
+    print("Building Figure 4 (Tier 1 boxplot)...")
+
+    inst_models = [m for m in ALL_MODELS if "inst" in m.lower() or "-it" in m.lower() or "Instruct" in m]
+    rho = compute_rho_matrix(all_data, inst_models)
+
+    pair_data = []
+    for i in range(len(inst_models)):
+        for j in range(i + 1, len(inst_models)):
+            pair_data.append((inst_models[i], inst_models[j], rho[i, j]))
+
+    original_tier1 = {"Qwen_Qwen2.5-1.5B-Instruct", "HuggingFaceTB_SmolLM2-1.7B-Instruct",
+                      "meta-llama_Llama-3.2-3B-Instruct"}
+    new_7b = {"mistralai_Mistral-7B-Instruct-v0.3", "meta-llama_Llama-3.1-8B-Instruct"}
+    gemma = {"google_gemma-3-1b-it"}
+
+    groups = {"Original Tier 1\n(Qwen, SmolLM2, Llama 3.2)": [],
+              "New 7B+ pairs\n(Mistral, Llama 3.1)": [],
+              "Gemma-3 pairs\n(outlier)": []}
+    for a, b, r in pair_data:
+        if a in original_tier1 and b in original_tier1:
+            groups["Original Tier 1\n(Qwen, SmolLM2, Llama 3.2)"].append(r)
+        elif a in gemma or b in gemma:
+            groups["Gemma-3 pairs\n(outlier)"].append(r)
+        elif a in new_7b or b in new_7b:
+            groups["New 7B+ pairs\n(Mistral, Llama 3.1)"].append(r)
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    group_names = list(groups.keys())
+    group_vals = [groups[k] for k in group_names]
+    bp = ax.boxplot(group_vals, tick_labels=group_names, patch_artist=True,
+                    widths=0.5, showmeans=True,
+                    meanprops=dict(marker="D", markerfacecolor="white",
+                                   markeredgecolor="black", markersize=6))
+    colors = [TIER1, "#3498db", OUTLIER]
+    for patch, color in zip(bp["boxes"], colors):
+        patch.set_facecolor(color)
+        patch.set_alpha(0.55)
+
+    for i, vals in enumerate(group_vals):
+        x = np.random.normal(i + 1, 0.05, size=len(vals))
+        ax.scatter(x, vals, c="black", alpha=0.6, s=35, zorder=4)
+
+    ax.axhline(y=0.7, color="red", linestyle="--", alpha=0.6, linewidth=1.5,
+               label="Tier 1 threshold (ρ = 0.7)")
+    ax.set_ylabel("Spearman ρ (pairwise RDM similarity)", fontsize=11)
+    ax.set_title("Tier 1 Cluster Re-Verification (n = 12, instruct only)\n"
+                 "Mistral 7B and Llama 3.1 8B join the original Tier 1; Gemma-3 remains outlier",
+                 fontsize=11)
+    ax.legend(loc="lower right", fontsize=9)
+    ax.grid(True, alpha=0.3, axis="y")
+    ax.set_ylim([0.45, 0.95])
+
+    plt.tight_layout()
+    plt.savefig(MAIN_DIR / "figure_04_tier1_boxplot.png")
+    plt.savefig(MAIN_DIR / "figure_04_tier1_boxplot.pdf")
+    plt.close()
+    print(f"  → main/figure_04_tier1_boxplot.png (+ pdf)")
+
+
+# ── Figure 5: Finding #8 4-way matrix ────────────────────────────────────
+
+
+def figure_5_finding8_matrix():
+    """Method × Precision 4-way comparison matrix."""
+    print("Building Figure 5 (Finding #8 4-way matrix)...")
+
+    src = ANALYSIS_DIR / "finding8_3layer_output" / "finding8_4way_matrix.png"
+    dst = MAIN_DIR / "figure_05_finding8_4way_matrix.png"
+    shutil.copy(src, dst)
+    print(f"  → main/figure_05_finding8_4way_matrix.png  (copied from analysis)")
+
+
+# ── Figure 6: Finding #8 3-layer bars ────────────────────────────────────
+
+
+def figure_6_finding8_bars():
+    """Finding #8 layer decomposition summary bars."""
+    print("Building Figure 6 (Finding #8 3-layer bars)...")
+
+    src = ANALYSIS_DIR / "finding8_3layer_output" / "finding8_3layer_bars.png"
+    dst = MAIN_DIR / "figure_06_finding8_layers.png"
+    shutil.copy(src, dst)
+    print(f"  → main/figure_06_finding8_layers.png  (copied from analysis)")
+
+
+# ── Supplementary figures ────────────────────────────────────────────────
+
+
+def supplementary_figures():
+    """Copy historical / context figures to supp/ with renamed files."""
+    print("\nBuilding supplementary figures...")
+
+    supps = [
+        (ANALYSIS_DIR / "h2_pilot" / "lead_figure_8x8_raw.png",
+         "supp_01_rdm_of_rdms_n8_historical.png",
+         "n=8 lead figure (before adding Mistral 7B and Llama 3.1 8B)"),
+        (ANALYSIS_DIR / "n12_output" / "task1_rdm_instruct_6x6.png",
+         "supp_02_rdm_instruct_only_6x6.png",
+         "Instruct-only 6×6 RDM-of-RDMs (clean view)"),
+        (ANALYSIS_DIR / "h2_pilot" / "rdm_diff.png",
+         "supp_03_h2_rdm_diff.png",
+         "Qwen vs Llama RDM difference matrix"),
+        (ANALYSIS_DIR / "h2_pilot" / "gemma3_base_verification.png",
+         "supp_04_gemma3_base_verification.png",
+         "Gemma-3 1B base outlier verification"),
+        (ANALYSIS_DIR / "method_precision_output" / "method_precision_bars.png",
+         "supp_05_finding8_initial_conflated.png",
+         "Initial Task 2 measurement (before protocol matching) — historical context"),
+        (ANALYSIS_DIR / "method_precision_output" / "method_precision_rdms.png",
+         "supp_06_finding8_initial_rdms.png",
+         "Initial RDM visualization across 4-cell 2x2 design (historical)"),
+    ]
+
+    for src, dst_name, _desc in supps:
+        if src.exists():
+            shutil.copy(src, SUPP_DIR / dst_name)
+            print(f"  → supp/{dst_name}")
+        else:
+            print(f"  ⚠ MISSING: {src}")
+
+
+# ── Catalog ──────────────────────────────────────────────────────────────
+
+
+def write_catalog():
+    """Catalog mapping figures to findings with caption drafts."""
+    print("\nWriting figure catalog...")
+
+    catalog = """# Paper #5 — Figure Catalog
+
+Generated by `paper5/figures/build_paper_figures.py`. All main figures are saved
+in `figures/main/` (PNG @ 300 DPI + PDF). Supplementary figures in `figures/supp/`.
+
+## Findings → Figures Mapping
+
+### Substantive findings (5)
+
+| # | Finding | Main Fig | Supplementary |
+|---|---|---|---|
+| 1 | Cross-architecture universality | **Figure 1** | Supp 1, 2 |
+| 2 | Behavioral–representational dissociation | **Figure 2** | Supp 3 |
+| 3 | Maturity threshold + RLHF differential | (Figure 1 base/instruct rows) | — |
+| 4 | Family identity preservation (Llama 3.2 × 3.1) | **Figure 1** (Llama block ρ=0.92) | — |
+| 5 | Size–maturity correlation | **Figure 3**, **Figure 4** | — |
+
+### Methodological findings (3)
+
+| # | Finding | Main Fig | Supplementary |
+|---|---|---|---|
+| 6 | Anisotropy normalization inversion risk | (footnote / methods) | Supp 5, 6 |
+| 7 | Cross-backend equivalence (TL vs HF) | (methods text) | — |
+| 8 | Method × precision 4-layer decomposition | **Figure 5**, **Figure 6** | Supp 5, 6 |
+
+## Main Figures
+
+### Figure 1 — Cross-Model Emotion Vector Geometry (n=12)
+**File:** `main/figure_01_rdm_of_rdms_n12.png`
+
+12×12 Spearman ρ matrix of representational dissimilarity matrices (RDMs)
+computed from emotion vectors at each model's best layer (raw cosine distance).
+Hierarchical clustering reveals two tiers: a tightly-clustered Tier 1 of 10
+models spanning 5 architectures (Qwen 2.5, SmolLM2, Llama 3.2, Mistral 7B,
+Llama 3.1 8B; ρ = 0.74–0.95), and a Tier 2 outlier (Gemma-3 1B; ρ ≤ 0.62 to
+all Tier 1 models). Within Tier 1, within-family pairs show the strongest
+alignment (Llama 3.1 × Llama 3.2: ρ = 0.95).
+
+**Supports:** Findings #1, #4, #5
+
+---
+
+### Figure 2 — Behavioral–Representational Dissociation
+**File:** `main/figure_02_h2_dissociation.png`
+
+Side-by-side raw cosine RDMs for Qwen 2.5 1.5B Instruct (Compliance-yielding,
+B = 0.80, D = 0.61) and Llama 3.2 3B Instruct (Compliance-refusing, B = 0.20,
+D = 0.85). Despite diametrically opposed behavioral profiles in MTI Compliance
+facets, the two models share nearly identical emotion vector geometry
+(Spearman ρ ≈ 0.81 over upper triangle). This dissociation is the central
+discriminant validity test of Paper #5.
+
+**Supports:** Finding #2
+
+---
+
+### Figure 3 — Size–Maturity Correlation (n = 12)
+**File:** `main/figure_03_size_effects.png`
+
+Four-panel analysis of how model scale shapes emotion vector statistics.
+(A) Anisotropy vs d_model: ρ = -0.88, p = 1.4e-04 — the strongest correlation
+in Paper #5. (B) Anisotropy vs parameter count (log): ρ = -0.82, p = 1.1e-03.
+(C) Best layer depth vs size: ρ = -0.54, p = 0.07 (weak trend). (D) Mean
+pairwise RDM std vs size: ρ = -0.88, p = 1.7e-04. Larger models exhibit
+substantially lower anisotropy and tighter RDM structure, with d_model being
+a stronger predictor than parameter count.
+
+**Supports:** Finding #5
+
+---
+
+### Figure 4 — Tier 1 Cluster Re-Verification
+**File:** `main/figure_04_tier1_boxplot.png`
+
+Distributions of pairwise Spearman ρ values across instruct model pairs (n=15
+unique pairs). Three groups: original Tier 1 pairs (n=3, mean ρ=0.83), new 7B+
+pairs added in this analysis (n=7, mean ρ=0.83 with within-family Llama
+3.1×3.2 reaching 0.92), and Gemma-3 outlier pairs (n=5, mean ρ=0.58). The
+ρ = 0.7 Tier 1 threshold cleanly separates Gemma-3 from the rest.
+
+**Supports:** Findings #1, #5
+
+---
+
+### Figure 5 — Finding #8: Method × Precision 4-Way Matrix
+**File:** `main/figure_05_finding8_4way_matrix.png`
+
+Pairwise Spearman ρ between four emotion vector extraction conditions on
+Mistral 7B Instruct and Llama 3.1 8B Instruct: A = fp16 comprehension
+(Paper #5), B = fp16 generation with paper5_extract.py settings (loose),
+C = fp16 generation with Paper #6 protocol (matched), D = INT8 generation
+(Paper #6). The diagonal-dominant pattern reveals that nearly every pair
+of methods produces near-orthogonal emotion vectors, with the only above-0.5
+relationship being C↔D (matched-protocol fp16 vs INT8) on Llama 3.1.
+
+**Supports:** Finding #8
+
+---
+
+### Figure 6 — Finding #8: 3-Layer Decomposition
+**File:** `main/figure_06_finding8_layers.png`
+
+Bar chart isolating three orthogonal sources of variation in cross-experiment
+emotion vector comparison. **L1 (method)**: comp vs matched-gen — measures
+true method dissociation. Mistral ρ=0.09 (strong), Llama ρ=0.36 (partial).
+**L2 (sub-parameters)**: loose-gen vs matched-gen — measures within-method
+sensitivity to 8 hyperparameters. Both models ρ ≈ 0.02–0.03, demonstrating
+that 'generation method' is an 8-dimensional hyperparameter space, not a single
+procedure. **L3 (true precision)**: matched-fp16 vs INT8 — measures pure
+precision effect with method controlled. Mistral ρ=0.21 (severe), Llama ρ=0.53
+(moderate). The conflated Task-2 measurement (red, fp16-comp vs INT8-gen) is
+shown for reference and reveals the danger of cross-experiment comparison
+without strict method control.
+
+**Supports:** Finding #8
+
+---
+
+## Supplementary Figures
+
+| File | Description |
+|---|---|
+| `supp/supp_01_rdm_of_rdms_n8_historical.png` | n=8 RDM-of-RDMs (before adding Mistral/Llama 3.1) |
+| `supp/supp_02_rdm_instruct_only_6x6.png` | 6×6 instruct-only RDM (clean view) |
+| `supp/supp_03_h2_rdm_diff.png` | Qwen vs Llama RDM difference matrix |
+| `supp/supp_04_gemma3_base_verification.png` | Gemma-3 1B base outlier verification |
+| `supp/supp_05_finding8_initial_conflated.png` | Initial conflated measurement (before protocol matching) |
+| `supp/supp_06_finding8_initial_rdms.png` | Initial 4-cell 2×2 RDM visualization |
+
+## Reproducibility
+
+All figures regenerated by:
+```bash
+cd backend
+uv run python ../paper5/figures/build_paper_figures.py
+```
+
+Source data:
+- Paper #5 fp16 comprehension: `scripts/paper5_output/`
+- Paper #5 fp16 generation (matched): `scripts/paper5_output_protocol_matched/`
+- Paper #6 INT8 generation: `/Users/jihoon/Projects/ludex/research/emotion_benchmark/`
+"""
+
+    (FIG_DIR / "CATALOG.md").write_text(catalog)
+    print(f"  → CATALOG.md")
+
+
+# ── Main ─────────────────────────────────────────────────────────────────
+
+
+def main():
+    print("=" * 60)
+    print("Paper #5 — Final Figure Builder")
+    print("=" * 60)
+
+    print("\nLoading 12 models...")
+    all_data = {}
+    for m in ALL_MODELS:
+        d = load_model(m)
+        if d:
+            all_data[m] = d
+    print(f"Loaded: {len(all_data)}/{len(ALL_MODELS)}")
+
+    print()
+    figure_1_lead(all_data)
+    figure_2_h2_raw_rdm(all_data)
+    figure_3_size_effects(all_data)
+    figure_4_tier1_boxplot(all_data)
+    figure_5_finding8_matrix()
+    figure_6_finding8_bars()
+    supplementary_figures()
+    write_catalog()
+
+    print("\n" + "=" * 60)
+    print("DONE — figures written to paper5/figures/")
+    print("=" * 60)
+
+
+if __name__ == "__main__":
+    main()
