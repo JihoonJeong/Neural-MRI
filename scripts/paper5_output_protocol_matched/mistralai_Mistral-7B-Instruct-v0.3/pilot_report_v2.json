@@ -1,0 +1,26 @@
+{
+  "version": "v2_protocol_matched_fp16",
+  "timestamp": "2026-04-09T12:30:27.159201",
+  "model": "mistralai/Mistral-7B-Instruct-v0.3",
+  "precision": "fp16",
+  "n_layers": 32,
+  "hidden_dim": 4096,
+  "extraction_layer": 16,
+  "extraction_position": "mid_generation",
+  "n_emotions": 20,
+  "n_stories_per_emotion": 10,
+  "n_neutral_stories": 10,
+  "max_new_tokens": 256,
+  "do_sample": false,
+  "vector_formula": "(emotion_mean - neutral_mean) / norm",
+  "applies_chat_template": true,
+  "mean_pairwise_cosine": 0.40582966804504395,
+  "pair_checks": {
+    "happy<->sad": 0.4137,
+    "calm<->desperate": 0.5135,
+    "loving<->hostile": 0.3107,
+    "proud<->guilty": 0.5033
+  },
+  "fork_of": "ludex/research/emotion_benchmark/emotion_vector_pilot_v2.py",
+  "delta_from_source": "dtype=fp16 (was int8); model_name parameterized via CLI"
+}
