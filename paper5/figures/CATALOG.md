@@ -12,7 +12,7 @@ in `figures/main/` (PNG @ 300 DPI + PDF). Supplementary figures in `figures/supp
 | 1 | Cross-architecture universality | **Figure 1** | Supp 1, 2 |
 | 2 | Behavioral–representational dissociation | **Figure 2** | Supp 3 |
 | 3 | Maturity threshold + RLHF differential | (Figure 1 base/instruct rows) | — |
-| 4 | Family identity preservation (Llama 3.2 × 3.1) | **Figure 1** (Llama block ρ=0.92) | — |
+| 4 | Family identity preservation (within-family base/instruct pairs) | **Figure 1** (5 mature families ρ ≥ 0.918) | — |
 | 5 | Size–maturity correlation | **Figure 3**, **Figure 4** | — |
 
 ### Methodological findings (3)
@@ -31,10 +31,21 @@ in `figures/main/` (PNG @ 300 DPI + PDF). Supplementary figures in `figures/supp
 12×12 Spearman ρ matrix of representational dissimilarity matrices (RDMs)
 computed from emotion vectors at each model's best layer (raw cosine distance).
 Hierarchical clustering reveals two tiers: a tightly-clustered Tier 1 of 10
-models spanning 5 architectures (Qwen 2.5, SmolLM2, Llama 3.2, Mistral 7B,
-Llama 3.1 8B; ρ = 0.74–0.95), and a Tier 2 outlier (Gemma-3 1B; ρ ≤ 0.62 to
-all Tier 1 models). Within Tier 1, within-family pairs show the strongest
-alignment (Llama 3.1 × Llama 3.2: ρ = 0.95).
+models spanning 5 architectures (Qwen 2.5, SmolLM2, Llama 3.2, Mistral 7B v0.3,
+Llama 3.1 8B), and a Tier 2 outlier (Gemma-3 1B; ρ ≤ 0.62 to all Tier 1 models).
+
+Within-family base/instruct pairs show the strongest alignment, all five mature
+families ρ ≥ 0.918:
+- **Mistral 7B v0.3** base × instruct: ρ = 0.985 (strongest)
+- **Qwen 2.5 1.5B** base × instruct: ρ = 0.975
+- **Llama 3.1 8B** base × instruct: ρ = 0.950
+- **SmolLM2 1.7B** base × instruct: ρ = 0.922
+- **Llama 3.2 3B** base × instruct: ρ = 0.918
+- (Gemma-3 1B base × instruct: ρ = 0.190 — anomaly, see Supp 4)
+
+Cross-generation within-family alignment is slightly lower (Llama 3.2 × Llama
+3.1 instruct pair: ρ = 0.92). The instruct-only Tier 1 ρ range across all C(5,2)
+= 10 pairs is **ρ = 0.74–0.92**.
 
 **Supports:** Findings #1, #4, #5
 
@@ -58,12 +69,13 @@ discriminant validity test of Paper #5.
 **File:** `main/figure_03_size_effects.png`
 
 Four-panel analysis of how model scale shapes emotion vector statistics.
-(A) Anisotropy vs d_model: ρ = -0.88, p = 1.4e-04 — the strongest correlation
-in Paper #5. (B) Anisotropy vs parameter count (log): ρ = -0.82, p = 1.1e-03.
-(C) Best layer depth vs size: ρ = -0.54, p = 0.07 (weak trend). (D) Mean
-pairwise RDM std vs size: ρ = -0.88, p = 1.7e-04. Larger models exhibit
-substantially lower anisotropy and tighter RDM structure, with d_model being
-a stronger predictor than parameter count.
+(A) Anisotropy vs d_model: ρ = -0.882, p = 1.5e-04 — the strongest correlation
+in Paper #5. (B) Anisotropy vs parameter count (log): ρ = -0.820, p = 1.1e-03.
+(C) Best layer depth vs size: ρ = -0.484, p = 0.11 (weak trend; 7B+ models
+cluster at 38–41% depth — Mistral 7B v0.3 base at 40.6%, Llama 3.1 8B at
+37.5%). (D) Mean pairwise RDM std vs size: ρ = -0.891, p = 1.0e-04. Larger
+models exhibit substantially lower anisotropy and tighter RDM structure, with
+d_model being a stronger predictor than parameter count.
 
 **Supports:** Finding #5
 
@@ -72,11 +84,18 @@ a stronger predictor than parameter count.
 ### Figure 4 — Tier 1 Cluster Re-Verification
 **File:** `main/figure_04_tier1_boxplot.png`
 
-Distributions of pairwise Spearman ρ values across instruct model pairs (n=15
-unique pairs). Three groups: original Tier 1 pairs (n=3, mean ρ=0.83), new 7B+
-pairs added in this analysis (n=7, mean ρ=0.83 with within-family Llama
-3.1×3.2 reaching 0.92), and Gemma-3 outlier pairs (n=5, mean ρ=0.58). The
-ρ = 0.7 Tier 1 threshold cleanly separates Gemma-3 from the rest.
+Distributions of pairwise Spearman ρ values across the C(6,2) = 15 instruct
+model pairs. Three groups:
+- **Original Tier 1** (n=3, mean ρ = 0.825): Qwen 2.5 × SmolLM2 × Llama 3.2.
+- **New 7B+ pairs** (n=7, mean ρ = 0.838): all pairs containing Mistral 7B
+  Instruct v0.3 or Llama 3.1 8B Instruct. Group max is the cross-generation
+  Llama 3.2 × Llama 3.1 instruct pair at ρ = 0.92.
+- **Gemma-3 pairs** (n=5, mean ρ = 0.575): Gemma-3 1B IT × each of the 5
+  mature instruct models.
+
+The ρ = 0.7 dashed line is the Tier 1 inclusion threshold; all 5 Gemma pairs
+fall cleanly below it while all 10 mature-model pairs cluster above. Box: IQR
+with median; diamond: mean; dots: individual pair values.
 
 **Supports:** Findings #1, #5
 
@@ -86,12 +105,15 @@ pairs added in this analysis (n=7, mean ρ=0.83 with within-family Llama
 **File:** `main/figure_05_finding8_4way_matrix.png`
 
 Pairwise Spearman ρ between four emotion vector extraction conditions on
-Mistral 7B Instruct and Llama 3.1 8B Instruct: A = fp16 comprehension
-(Paper #5), B = fp16 generation with paper5_extract.py settings (loose),
-C = fp16 generation with Paper #6 protocol (matched), D = INT8 generation
-(Paper #6). The diagonal-dominant pattern reveals that nearly every pair
-of methods produces near-orthogonal emotion vectors, with the only above-0.5
-relationship being C↔D (matched-protocol fp16 vs INT8) on Llama 3.1.
+Mistral 7B Instruct v0.3 and Llama 3.1 8B Instruct: **A** = fp16 comprehension
+(Paper #5), **B** = fp16 generation with `paper5_extract.py` settings (loose
+protocol), **C** = fp16 generation with Paper #6 protocol (matched), **D** =
+INT8 generation (Paper #6). The diagonal-dominant pattern reveals that nearly
+every pair of methods produces near-orthogonal emotion vectors. The only
+above-0.5 off-diagonal relationship is C↔D (matched-protocol fp16 vs INT8)
+on Llama 3.1 (ρ = 0.527); on Mistral 7B v0.3, all four conditions produce
+mutually near-orthogonal vectors (max off-diagonal ρ = 0.41 for the conflated
+A↔D Task-2 measurement).
 
 **Supports:** Finding #8
 
