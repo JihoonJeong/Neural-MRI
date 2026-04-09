@@ -48,3 +48,4 @@ site/
 
 # Misc
 *.log
+!scripts/paper5_output_protocol_matched/**/*.pt
