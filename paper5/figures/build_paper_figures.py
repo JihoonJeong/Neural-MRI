@@ -170,18 +170,19 @@ def figure_1_lead(all_data: dict):
 
     fig, ax = plt.subplots(figsize=(11, 9.5))
     n = len(ordered_keys)
-    im = ax.imshow(rho, cmap="RdYlGn", vmin=0, vmax=1, aspect="equal")
+    # Colorblind-friendly: cividis (perceptually uniform, friendly for all forms)
+    im = ax.imshow(rho, cmap="cividis", vmin=0, vmax=1, aspect="equal")
 
     ax.set_xticks(range(n))
     ax.set_yticks(range(n))
     ax.set_xticklabels(labels, rotation=45, ha="right", fontsize=9)
     ax.set_yticklabels(labels, fontsize=9)
 
-    # Annotate values
+    # Annotate values — cividis is dark at low ρ, light at high ρ
     for i in range(n):
         for j in range(n):
             val = rho[i, j]
-            color = "white" if (val < 0.45 or val > 0.88) else "black"
+            color = "white" if val < 0.55 else "black"
             weight = "bold" if i == j else "normal"
             ax.text(j, i, f"{val:.2f}", ha="center", va="center",
                     fontsize=8, color=color, weight=weight)
@@ -238,7 +239,8 @@ def figure_2_h2_raw_rdm(all_data: dict):
         (axes[0], rdm_q, "Qwen 2.5 1.5B Instruct\n(Compliance-yielding: B=0.80, D=0.61)"),
         (axes[1], rdm_l, "Llama 3.2 3B Instruct\n(Compliance-refusing: B=0.20, D=0.85)"),
     ]:
-        im = ax.imshow(rdm, cmap="RdBu_r", vmin=vmin, vmax=vmax, aspect="equal")
+        # cividis is colorblind-friendly and perceptually uniform
+        im = ax.imshow(rdm, cmap="cividis", vmin=vmin, vmax=vmax, aspect="equal")
         ax.set_xticks(range(len(common)))
         ax.set_yticks(range(len(common)))
         ax.set_xticklabels(common, rotation=90, fontsize=7)
@@ -444,30 +446,145 @@ def figure_4_tier1_boxplot(all_data: dict):
     print(f"  → main/figure_04_tier1_boxplot.png (+ pdf)")
 
 
+# ── Figure 5/6 helpers (Finding #8) ──────────────────────────────────────
+
+
+def _load_finding8_vector_sets(model_name: str):
+    """Load 4 vector sets for a given finding #8 model."""
+    keys = {
+        "Mistral 7B Instruct": {
+            "p5_key": "mistralai_Mistral-7B-Instruct-v0.3",
+            "p5_matched": P5_MATCHED / "mistralai_Mistral-7B-Instruct-v0.3" / "emotion_vectors_v2.pt",
+            "p6_int8": P6_DIR / "emotion_pilot_v2_output" / "emotion_vectors_v2.pt",
+        },
+        "Llama 3.1 8B Instruct": {
+            "p5_key": "meta-llama_Llama-3.1-8B-Instruct",
+            "p5_matched": P5_MATCHED / "meta-llama_Llama-3.1-8B-Instruct" / "emotion_vectors_v2.pt",
+            "p6_int8": P6_DIR / "llama31_inst_gen_output" / "emotion_vectors_v2.pt",
+        },
+    }[model_name]
+
+    # A: fp16 comp
+    d = P5_OUT / keys["p5_key"]
+    meta = json.loads((d / "metadata.json").read_text())
+    pt = torch.load(d / "vectors_comprehension.pt", map_location="cpu", weights_only=False)
+    a = {e: v.numpy() for e, v in pt["vectors"][str(meta["best_layer"])].items()}
+
+    # B: fp16 gen loose
+    pt = torch.load(d / "vectors_generation.pt", map_location="cpu", weights_only=False)
+    b = {e: v.numpy() for e, v in pt["vectors"].items()}
+
+    # C: fp16 gen matched
+    pt = torch.load(keys["p5_matched"], map_location="cpu", weights_only=False)
+    c = {e: v.numpy() for e, v in pt["vectors"].items()}
+
+    # D: INT8 gen matched
+    pt = torch.load(keys["p6_int8"], map_location="cpu", weights_only=False)
+    d_set = {e: v.numpy() for e, v in pt["vectors"].items()}
+
+    return a, b, c, d_set
+
+
+def _post_center(vecs):
+    keys = sorted(vecs.keys())
+    mat = np.stack([vecs[k] for k in keys])
+    mean = mat.mean(axis=0)
+    return {k: vecs[k] - mean for k in keys}
+
+
+def _spearman_rdm(s1, s2):
+    s1c = _post_center(s1)
+    s2c = _post_center(s2)
+    common = sorted(set(s1c.keys()) & set(s2c.keys()))
+    rdm1, _ = compute_rdm({e: s1c[e] for e in common})
+    rdm2, _ = compute_rdm({e: s2c[e] for e in common})
+    rho, _ = stats.spearmanr(upper_tri(rdm1), upper_tri(rdm2))
+    return float(rho)
+
+
 # ── Figure 5: Finding #8 4-way matrix ────────────────────────────────────
 
 
 def figure_5_finding8_matrix():
-    """Method × Precision 4-way comparison matrix."""
+    """Method × Precision 4-way comparison matrix (regenerated for PDF + style)."""
     print("Building Figure 5 (Finding #8 4-way matrix)...")
 
-    src = ANALYSIS_DIR / "finding8_3layer_output" / "finding8_4way_matrix.png"
-    dst = MAIN_DIR / "figure_05_finding8_4way_matrix.png"
-    shutil.copy(src, dst)
-    print(f"  → main/figure_05_finding8_4way_matrix.png  (copied from analysis)")
+    set_labels = ["A: fp16\ncomp", "B: fp16 gen\n(loose)",
+                  "C: fp16 gen\n(matched)", "D: INT8 gen\n(matched)"]
+    fig, axes = plt.subplots(1, 2, figsize=(13.5, 6))
+
+    for ax_idx, model_name in enumerate(["Mistral 7B Instruct", "Llama 3.1 8B Instruct"]):
+        sets = _load_finding8_vector_sets(model_name)
+        n = 4
+        mat = np.eye(n)
+        for i in range(n):
+            for j in range(i + 1, n):
+                rho = _spearman_rdm(sets[i], sets[j])
+                mat[i, j] = rho
+                mat[j, i] = rho
+
+        ax = axes[ax_idx]
+        im = ax.imshow(mat, cmap="cividis", vmin=-0.2, vmax=1)
+        ax.set_xticks(range(n))
+        ax.set_yticks(range(n))
+        ax.set_xticklabels(set_labels, fontsize=9)
+        ax.set_yticklabels(set_labels, fontsize=9)
+        for i in range(n):
+            for j in range(n):
+                color = "white" if mat[i, j] < 0.45 else "black"
+                ax.text(j, i, f"{mat[i, j]:+.2f}", ha="center", va="center",
+                        fontsize=11, color=color, fontweight="bold")
+        ax.set_title(model_name, fontsize=11, fontweight="bold")
+        fig.colorbar(im, ax=ax, shrink=0.8, label="Spearman ρ")
+
+    plt.suptitle("Finding #8: Method × Precision 4-Way Comparison Matrix",
+                 fontsize=12, fontweight="bold")
+    plt.tight_layout()
+    plt.savefig(MAIN_DIR / "figure_05_finding8_4way_matrix.png")
+    plt.savefig(MAIN_DIR / "figure_05_finding8_4way_matrix.pdf")
+    plt.close()
+    print(f"  → main/figure_05_finding8_4way_matrix.png (+ pdf)")
 
 
 # ── Figure 6: Finding #8 3-layer bars ────────────────────────────────────
 
 
 def figure_6_finding8_bars():
-    """Finding #8 layer decomposition summary bars."""
+    """Finding #8 3-layer decomposition summary bars (regenerated for PDF + style)."""
     print("Building Figure 6 (Finding #8 3-layer bars)...")
 
-    src = ANALYSIS_DIR / "finding8_3layer_output" / "finding8_3layer_bars.png"
-    dst = MAIN_DIR / "figure_06_finding8_layers.png"
-    shutil.copy(src, dst)
-    print(f"  → main/figure_06_finding8_layers.png  (copied from analysis)")
+    summary_path = ANALYSIS_DIR / "finding8_3layer_output" / "finding8_3layer_results.json"
+    summary = json.loads(summary_path.read_text())["_summary"]["per_model"]
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    x = np.arange(len(summary))
+    width = 0.18
+    ax.bar(x - 2*width, [r["L1_clean"] for r in summary], width,
+           label="L1: Method (comp vs matched-gen)", color="#0072B2")
+    ax.bar(x - width, [r["L1_loose"] for r in summary], width,
+           label="L1 (loose): comp vs loose-gen", color="#56B4E9")
+    ax.bar(x, [r["L2_subparam"] for r in summary], width,
+           label="L2: Sub-parameters (loose vs matched gen)", color="#E69F00")
+    ax.bar(x + width, [r["L3_precision"] for r in summary], width,
+           label="L3: TRUE precision (fp16 vs INT8 gen)", color="#009E73")
+    ax.bar(x + 2*width, [r["conflated"] for r in summary], width,
+           label="(Reference: Task-2 conflated)", color="#D55E00", alpha=0.6)
+
+    ax.set_xticks(x)
+    ax.set_xticklabels([r["model"] for r in summary], rotation=10, ha="right")
+    ax.set_ylabel("RDM Spearman ρ")
+    ax.set_title("Finding #8: 3-Layer Decomposition", fontsize=12)
+    ax.axhline(y=0.7, color="gray", linestyle="--", alpha=0.5, label="ρ = 0.7 threshold")
+    ax.axhline(y=0, color="black", linewidth=0.5)
+    ax.set_ylim([-0.15, 1.05])
+    ax.legend(loc="upper right", fontsize=8, ncol=1)
+    ax.grid(True, alpha=0.3, axis="y")
+
+    plt.tight_layout()
+    plt.savefig(MAIN_DIR / "figure_06_finding8_layers.png")
+    plt.savefig(MAIN_DIR / "figure_06_finding8_layers.pdf")
+    plt.close()
+    print(f"  → main/figure_06_finding8_layers.png (+ pdf)")
 
 
 # ── Supplementary figures ────────────────────────────────────────────────
