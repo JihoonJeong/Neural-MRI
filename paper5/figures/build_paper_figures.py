@@ -14,6 +14,7 @@ from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import matplotlib.lines as mlines
 import matplotlib.patches as mpatches
 import numpy as np
 import torch
@@ -263,12 +264,19 @@ def figure_2_h2_raw_rdm(all_data: dict):
 
 
 def figure_3_size_effects(all_data: dict):
-    """Anisotropy and structural metrics vs model size and d_model."""
+    """Anisotropy and structural metrics vs model size and d_model.
+
+    Layout solution for label overlap (base/instruct co-locate):
+      - Different markers for base (□ hollow square) vs instruct (● filled circle)
+      - One label per FAMILY (not per model), placed at the mid-point between
+        base and instruct, with smart offset to avoid overlapping the markers
+      - Tier color: Tier 1 (mature) = green, Gemma-3 outlier = red
+    """
     print("Building Figure 3 (size effects)...")
 
     models = list(all_data.keys())
     sizes = np.array([SIZES_B[m] for m in models])
-    d_models = np.array([all_data[m]["meta"]["d_model"] for m in models])
+    d_models_arr = np.array([all_data[m]["meta"]["d_model"] for m in models])
 
     anisotropies = []
     best_layers_pct = []
@@ -293,88 +301,156 @@ def figure_3_size_effects(all_data: dict):
     rdm_stds = np.array(rdm_stds)
     valid = ~np.isnan(anisotropies)
 
-    # Color by tier
-    def tier_color(model_key):
-        if "gemma" in model_key:
-            return OUTLIER
-        return TIER1
-
-    colors = [tier_color(m) for m in models]
-
-    fig, axes = plt.subplots(2, 2, figsize=(13, 10))
-
-    # Panel A: Anisotropy vs d_model (the strongest correlation)
-    ax = axes[0, 0]
-    ax.scatter(d_models[valid], anisotropies[valid],
-               c=[colors[i] for i in range(len(models)) if valid[i]],
-               s=110, edgecolors="black", linewidth=0.8, zorder=3)
-    for i, m in enumerate(models):
-        if valid[i]:
-            ax.annotate(SHORT[m], (d_models[i], anisotropies[i]),
-                        fontsize=7, ha="left", va="bottom", xytext=(4, 4),
-                        textcoords="offset points")
-    r, p = stats.spearmanr(d_models[valid], anisotropies[valid])
-    ax.set_title(f"(A) Anisotropy vs d_model\nSpearman ρ = {r:.3f}, p = {p:.1e}", fontsize=10)
-    ax.set_xlabel("d_model (hidden dimension)")
-    ax.set_ylabel("Anisotropy (best layer)")
-    ax.grid(True, alpha=0.3)
-
-    # Panel B: Anisotropy vs size (B)
-    ax = axes[0, 1]
-    ax.scatter(sizes[valid], anisotropies[valid],
-               c=[colors[i] for i in range(len(models)) if valid[i]],
-               s=110, edgecolors="black", linewidth=0.8, zorder=3)
-    for i, m in enumerate(models):
-        if valid[i]:
-            ax.annotate(SHORT[m], (sizes[i], anisotropies[i]),
-                        fontsize=7, ha="left", va="bottom", xytext=(4, 4),
-                        textcoords="offset points")
-    r, p = stats.spearmanr(sizes[valid], anisotropies[valid])
-    ax.set_title(f"(B) Anisotropy vs Size (B params)\nSpearman ρ = {r:.3f}, p = {p:.1e}", fontsize=10)
-    ax.set_xlabel("Model size (B parameters, log scale)")
-    ax.set_ylabel("Anisotropy (best layer)")
-    ax.set_xscale("log")
-    ax.grid(True, alpha=0.3)
-
-    # Panel C: Best layer % vs size
-    ax = axes[1, 0]
-    ax.scatter(sizes, best_layers_pct, c=colors, s=110,
-               edgecolors="black", linewidth=0.8, zorder=3)
-    for i, m in enumerate(models):
-        ax.annotate(SHORT[m], (sizes[i], best_layers_pct[i]),
-                    fontsize=7, ha="left", va="bottom", xytext=(4, 4),
-                    textcoords="offset points")
-    r, p = stats.spearmanr(sizes, best_layers_pct)
-    ax.set_title(f"(C) Best Layer Depth vs Size\nSpearman ρ = {r:.3f}, p = {p:.3f}", fontsize=10)
-    ax.set_xlabel("Model size (B parameters, log scale)")
-    ax.set_ylabel("Best layer (% depth)")
-    ax.set_xscale("log")
-    ax.grid(True, alpha=0.3)
-
-    # Panel D: RDM std vs size
-    ax = axes[1, 1]
-    ax.scatter(sizes, rdm_stds, c=colors, s=110,
-               edgecolors="black", linewidth=0.8, zorder=3)
-    for i, m in enumerate(models):
-        ax.annotate(SHORT[m], (sizes[i], rdm_stds[i]),
-                    fontsize=7, ha="left", va="bottom", xytext=(4, 4),
-                    textcoords="offset points")
-    r, p = stats.spearmanr(sizes, rdm_stds)
-    ax.set_title(f"(D) RDM Std vs Size\nSpearman ρ = {r:.3f}, p = {p:.1e}", fontsize=10)
-    ax.set_xlabel("Model size (B parameters, log scale)")
-    ax.set_ylabel("Mean pairwise std (RDM)")
-    ax.set_xscale("log")
-    ax.grid(True, alpha=0.3)
-
-    # Legend
-    handles = [
-        mpatches.Patch(color=TIER1, label="Tier 1 (10 models)"),
-        mpatches.Patch(color=OUTLIER, label="Tier 2 outlier (Gemma-3)"),
+    # ── Family grouping (each family = base + instruct pair) ──
+    families = [
+        ("Gemma-3 1B",   "google_gemma-3-1b-pt",            "google_gemma-3-1b-it",            OUTLIER),
+        ("Qwen 2.5 1.5B","Qwen_Qwen2.5-1.5B",               "Qwen_Qwen2.5-1.5B-Instruct",      TIER1),
+        ("SmolLM2 1.7B", "HuggingFaceTB_SmolLM2-1.7B",      "HuggingFaceTB_SmolLM2-1.7B-Instruct", TIER1),
+        ("Llama 3.2 3B", "meta-llama_Llama-3.2-3B",         "meta-llama_Llama-3.2-3B-Instruct", TIER1),
+        ("Mistral 7B v0.3","mistralai_Mistral-7B-v0.3",     "mistralai_Mistral-7B-Instruct-v0.3", TIER1),
+        ("Llama 3.1 8B", "meta-llama_Llama-3.1-8B",         "meta-llama_Llama-3.1-8B-Instruct", TIER1),
     ]
-    fig.legend(handles=handles, loc="upper center", ncol=2,
-               bbox_to_anchor=(0.5, 0.99), fontsize=10)
 
-    fig.suptitle("Size–Maturity Correlation (n = 12)", fontsize=13, fontweight="bold", y=1.02)
+    # Per-family label offset hints (offset points from the mid-point).
+    # (dx, dy, ha, va). Per-panel overrides further refine these below.
+    label_offsets = {
+        "Gemma-3 1B":     (10, -4, "left", "center"),    # right of marker
+        "Qwen 2.5 1.5B":  (-8, 8, "right", "bottom"),    # upper-left
+        "SmolLM2 1.7B":   (10, -4, "left", "center"),    # right
+        "Llama 3.2 3B":   (-8, -10, "right", "top"),     # lower-left
+        "Mistral 7B v0.3":(10, -4, "left", "center"),    # right
+        "Llama 3.1 8B":   (-8, 8, "right", "bottom"),    # upper-left
+    }
+
+    def model_idx(key):
+        return models.index(key)
+
+    def plot_panel(ax, x_arr, y_arr, x_log, x_label, y_label, panel_title,
+                   compute_rho_on, panel_offsets, valid_mask=None):
+        """Helper: plot one panel with family-aware markers and labels.
+
+        - Hollow square (base) + filled circle (instruct), connected by a
+          dashed line in the family color (so the pair is visually grouped
+          even when base/instruct land far apart).
+        - One label per family. Per-panel offset overrides allow tuning when
+          the global default would clip or overlap.
+        """
+        for fam_name, base_key, inst_key, color in families:
+            if base_key not in models or inst_key not in models:
+                continue
+            bi = model_idx(base_key)
+            ii = model_idx(inst_key)
+
+            valid_b = (valid_mask is None or valid_mask[bi]) and not (isinstance(y_arr[bi], float) and np.isnan(y_arr[bi]))
+            valid_i = (valid_mask is None or valid_mask[ii]) and not (isinstance(y_arr[ii], float) and np.isnan(y_arr[ii]))
+
+            # Connect the pair with a dashed line in family color
+            if valid_b and valid_i:
+                ax.plot([x_arr[bi], x_arr[ii]], [y_arr[bi], y_arr[ii]],
+                        color=color, linestyle="--", linewidth=0.9, alpha=0.55, zorder=2)
+
+            if valid_b:
+                ax.scatter(x_arr[bi], y_arr[bi], marker="s", s=85,
+                           facecolors="white", edgecolors=color, linewidth=1.6, zorder=3)
+            if valid_i:
+                ax.scatter(x_arr[ii], y_arr[ii], marker="o", s=95,
+                           facecolors=color, edgecolors="black", linewidth=0.7, zorder=4)
+
+            # Label position: per-panel override > global default
+            if valid_b and valid_i:
+                mid_x = (x_arr[bi] + x_arr[ii]) / 2 if not x_log else np.sqrt(x_arr[bi] * x_arr[ii])
+                mid_y = (y_arr[bi] + y_arr[ii]) / 2
+            elif valid_i:
+                mid_x, mid_y = x_arr[ii], y_arr[ii]
+            elif valid_b:
+                mid_x, mid_y = x_arr[bi], y_arr[bi]
+            else:
+                continue
+
+            dx, dy, ha, va = panel_offsets.get(fam_name, label_offsets[fam_name])
+            ax.annotate(fam_name, (mid_x, mid_y),
+                        fontsize=8, ha=ha, va=va,
+                        xytext=(dx, dy), textcoords="offset points",
+                        color="black", fontweight="medium")
+
+        # Compute and display correlation
+        x_for_corr = x_arr[compute_rho_on] if compute_rho_on is not None else x_arr
+        y_for_corr = y_arr[compute_rho_on] if compute_rho_on is not None else y_arr
+        r, p = stats.spearmanr(x_for_corr, y_for_corr)
+        ax.set_title(f"{panel_title}\nSpearman ρ = {r:.3f}, p = {p:.1e}", fontsize=10)
+        ax.set_xlabel(x_label)
+        ax.set_ylabel(y_label)
+        if x_log:
+            ax.set_xscale("log")
+        ax.grid(True, alpha=0.3)
+        # Add margin so labels don't get clipped at axis edges
+        ax.margins(x=0.12, y=0.10)
+
+    fig, axes = plt.subplots(2, 2, figsize=(13.5, 10.5))
+
+    # Panel-specific overrides for cases where the global default clips or overlaps
+    offsets_A = dict(label_offsets)
+    offsets_A["Qwen 2.5 1.5B"] = (10, -4, "left", "center")  # right side, plenty of room
+    offsets_A["SmolLM2 1.7B"] = (-8, -10, "right", "top")    # below-left to clear Qwen
+
+    offsets_B = dict(label_offsets)
+    offsets_B["Qwen 2.5 1.5B"] = (10, -4, "left", "center")
+    offsets_B["SmolLM2 1.7B"] = (-8, -10, "right", "top")
+    offsets_B["Mistral 7B v0.3"] = (-10, -4, "right", "center")  # left of marker (right edge)
+    offsets_B["Llama 3.1 8B"] = (-10, -4, "right", "center")
+
+    # Panel C and D: Gemma-3 base/instruct have very wide y-range (line is long)
+    offsets_C = dict(label_offsets)
+    offsets_C["Gemma-3 1B"] = (12, 0, "left", "center")
+    offsets_C["SmolLM2 1.7B"] = (12, 0, "left", "center")
+    offsets_C["Mistral 7B v0.3"] = (-10, 8, "right", "bottom")
+    offsets_C["Llama 3.1 8B"] = (-10, -10, "right", "top")
+
+    offsets_D = dict(label_offsets)
+    offsets_D["Gemma-3 1B"] = (12, 0, "left", "center")
+    offsets_D["Mistral 7B v0.3"] = (-10, -10, "right", "top")
+    offsets_D["Llama 3.1 8B"] = (-10, 8, "right", "bottom")
+
+    plot_panel(axes[0, 0], d_models_arr, anisotropies, False,
+               "d_model (hidden dimension)", "Anisotropy (best layer)",
+               "(A) Anisotropy vs d_model", compute_rho_on=valid,
+               panel_offsets=offsets_A, valid_mask=valid)
+
+    plot_panel(axes[0, 1], sizes, anisotropies, True,
+               "Model size (B parameters, log scale)", "Anisotropy (best layer)",
+               "(B) Anisotropy vs Size", compute_rho_on=valid,
+               panel_offsets=offsets_B, valid_mask=valid)
+
+    plot_panel(axes[1, 0], sizes, best_layers_pct, True,
+               "Model size (B parameters, log scale)", "Best layer (% depth)",
+               "(C) Best Layer Depth vs Size", compute_rho_on=None,
+               panel_offsets=offsets_C)
+
+    plot_panel(axes[1, 1], sizes, rdm_stds, True,
+               "Model size (B parameters, log scale)", "Mean pairwise std (RDM)",
+               "(D) RDM Std vs Size", compute_rho_on=None,
+               panel_offsets=offsets_D)
+
+    # Legend with both color and marker semantics
+    legend_handles = [
+        mlines.Line2D([], [], marker="o", linestyle="None", markersize=10,
+                      markerfacecolor=TIER1, markeredgecolor="black",
+                      label="Tier 1 instruct"),
+        mlines.Line2D([], [], marker="s", linestyle="None", markersize=10,
+                      markerfacecolor="white", markeredgecolor=TIER1, markeredgewidth=1.6,
+                      label="Tier 1 base"),
+        mlines.Line2D([], [], marker="o", linestyle="None", markersize=10,
+                      markerfacecolor=OUTLIER, markeredgecolor="black",
+                      label="Gemma-3 outlier instruct"),
+        mlines.Line2D([], [], marker="s", linestyle="None", markersize=10,
+                      markerfacecolor="white", markeredgecolor=OUTLIER, markeredgewidth=1.6,
+                      label="Gemma-3 outlier base"),
+    ]
+    fig.legend(handles=legend_handles, loc="upper center", ncol=4,
+               bbox_to_anchor=(0.5, 1.0), fontsize=9, frameon=False)
+
+    fig.suptitle("Size–Maturity Correlation (n = 12)",
+                 fontsize=13, fontweight="bold", y=1.04)
     plt.tight_layout()
     plt.savefig(MAIN_DIR / "figure_03_size_effects.png")
     plt.savefig(MAIN_DIR / "figure_03_size_effects.pdf")
