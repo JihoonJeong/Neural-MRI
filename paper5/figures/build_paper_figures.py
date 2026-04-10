@@ -489,31 +489,43 @@ def figure_4_tier1_boxplot(all_data: dict):
         elif a in new_7b or b in new_7b:
             groups["New 7B+ pairs\n(Mistral, Llama 3.1)"].append(r)
 
-    fig, ax = plt.subplots(figsize=(10, 6))
+    # Taller figure (6 → 9) so the narrow Original Tier 1 box (range 0.029)
+    # has enough vertical pixels to look like an actual box, not a line.
+    fig, ax = plt.subplots(figsize=(10, 9))
     group_names = list(groups.keys())
     group_vals = [groups[k] for k in group_names]
     bp = ax.boxplot(group_vals, tick_labels=group_names, patch_artist=True,
-                    widths=0.5, showmeans=True,
+                    widths=0.55, showmeans=True,
                     meanprops=dict(marker="D", markerfacecolor="white",
-                                   markeredgecolor="black", markersize=6))
+                                   markeredgecolor="black", markersize=9),
+                    medianprops=dict(color="black", linewidth=1.8),
+                    whiskerprops=dict(linewidth=1.3),
+                    capprops=dict(linewidth=1.3),
+                    boxprops=dict(linewidth=1.3))
     colors = [TIER1, "#3498db", OUTLIER]
     for patch, color in zip(bp["boxes"], colors):
         patch.set_facecolor(color)
         patch.set_alpha(0.55)
 
+    # Wider jitter + bigger dots for better individual-pair visibility
+    np.random.seed(42)  # reproducible jitter positions
     for i, vals in enumerate(group_vals):
-        x = np.random.normal(i + 1, 0.05, size=len(vals))
-        ax.scatter(x, vals, c="black", alpha=0.6, s=35, zorder=4)
+        x = np.random.normal(i + 1, 0.045, size=len(vals))
+        ax.scatter(x, vals, c="black", alpha=0.7, s=55, zorder=5,
+                   edgecolors="white", linewidth=0.6)
 
     ax.axhline(y=0.7, color="red", linestyle="--", alpha=0.6, linewidth=1.5,
                label="Tier 1 threshold (ρ = 0.7)")
-    ax.set_ylabel("Spearman ρ (pairwise RDM similarity)", fontsize=11)
+    ax.set_ylabel("Spearman ρ (pairwise RDM similarity)", fontsize=12)
     ax.set_title("Tier 1 Cluster Re-Verification (n = 12, instruct only)\n"
                  "Mistral 7B and Llama 3.1 8B join the original Tier 1; Gemma-3 remains outlier",
-                 fontsize=11)
-    ax.legend(loc="lower right", fontsize=9)
+                 fontsize=12)
+    ax.legend(loc="lower right", fontsize=10)
     ax.grid(True, alpha=0.3, axis="y")
-    ax.set_ylim([0.45, 0.95])
+    # Tighter y-range (was 0.45-0.95) so the data fills more of the panel
+    ax.set_ylim([0.50, 0.96])
+    # Tick density: every 0.05 for finer reading
+    ax.set_yticks(np.arange(0.50, 0.97, 0.05))
 
     plt.tight_layout()
     plt.savefig(MAIN_DIR / "figure_04_tier1_boxplot.png")
